@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+*.db
+*.sqlite
+match_files/
+backup.sql
+Nowy folder/
+preview_*.html
+static/shooting_chart_preview.html
+static/court_svg_preview.html
+static/court_edit.html

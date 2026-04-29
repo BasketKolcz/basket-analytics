@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "court-edit",
+      "runtimeExecutable": "cmd.exe",
+      "runtimeArgs": ["/c", ".claude\\serve.bat"],
+      "port": 8080,
+      "autoPort": false
+    }
+  ]
+}
