@@ -30,6 +30,15 @@ app.config["SESSION_COOKIE_NAME"] = "basketkolcz_session"
 app.config["PERMANENT_SESSION_LIFETIME"] = 86400 * 30  # 30 dni
 app.config["MAX_CONTENT_LENGTH"] = 16 * 1024 * 1024
 
+@app.before_request
+def _portal_only():
+    if os.environ.get("PORTAL_ONLY", "").lower() != "true":
+        return
+    p = request.path
+    if p == "/portal" or p.startswith("/portal/") or p.startswith("/static/") or p == "/favicon.ico":
+        return
+    return Response("Forbidden", 403)
+
 import functools, hashlib
 
 # ── Dane użytkownika (hashed password) ────────────────────────────────────────
