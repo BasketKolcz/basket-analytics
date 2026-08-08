@@ -17,10 +17,14 @@ os.makedirs(MATCH_FILES_DIR, exist_ok=True)
 
 
 app = Flask(__name__)
-app.secret_key = os.environ.get("SECRET_KEY", "basketkolcz2025secret")
+
+_secret_key = os.environ.get("SECRET_KEY")
+if not _secret_key:
+    raise RuntimeError("SECRET_KEY environment variable is required — set it in your .env file")
+app.secret_key = _secret_key
 
 app.config["SESSION_COOKIE_SAMESITE"] = "Lax"
-app.config["SESSION_COOKIE_SECURE"] = False
+app.config["SESSION_COOKIE_SECURE"] = os.environ.get("SESSION_COOKIE_SECURE", "false").lower() == "true"
 app.config["SESSION_COOKIE_HTTPONLY"] = True
 app.config["SESSION_COOKIE_NAME"] = "basketkolcz_session"
 app.config["PERMANENT_SESSION_LIFETIME"] = 86400 * 30  # 30 dni
@@ -5756,8 +5760,8 @@ def mecz(match_id):
                           for l,g,o,low,gq,oq in cmp_list])
 
     scripts = f"""<script>
-const gtkName = '{gtk_name}';
-const oppName = '{name_opp}';
+const gtkName = {_json.dumps(gtk_name)};
+const oppName = {_json.dumps(name_opp)};
 const CMP_DATA = {cmp_js};
 
 var _cmpCharts = {{}};
@@ -13583,8 +13587,8 @@ def dev_download_app():
 # PORTAL ZAWODNIKA
 # ══════════════════════════════════════════════════════════════════════════════
 
-_PORTAL_LOGIN = "ZAWODNICY_GTK"
-_PORTAL_PASS  = "ZAWODNICY_GTK@2012"
+_PORTAL_LOGIN = os.environ.get("PORTAL_LOGIN", "")
+_PORTAL_PASS  = os.environ.get("PORTAL_PASS", "")
 
 _PORTAL_CSS = """
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -15914,8 +15918,8 @@ def portal_mecz(match_id):
 </div>"""
 
     scripts = f"""<script>
-const gtkName = '{gtk_name}';
-const oppName = '{name_opp}';
+const gtkName = {_json.dumps(gtk_name)};
+const oppName = {_json.dumps(name_opp)};
 const CMP_DATA = {cmp_js};
 var _cmpCharts = {{}};
 (function() {{
