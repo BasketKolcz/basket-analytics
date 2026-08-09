@@ -580,6 +580,19 @@ def init_db():
     cur.close()
 
 
+_db_ready = False
+
+@app.before_request
+def _ensure_db_initialized():
+    global _db_ready
+    if not _db_ready:
+        try:
+            init_db()
+            _db_ready = True
+        except Exception:
+            pass
+
+
 def get_setting(key):
     db = get_db()
     cur = db.cursor()
