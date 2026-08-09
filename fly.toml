@@ -1,5 +1,5 @@
 app            = "basket-analytics"   # must be globally unique — change if taken
-primary_region = "waw"                # Warsaw; nearest Fly region to Poland
+primary_region = "fra"                # Frankfurt; nearest available Fly region to Poland
 
 [build]
   dockerfile = "Dockerfile"

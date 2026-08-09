@@ -9,7 +9,7 @@
 set -euo pipefail
 
 APP="basket-analytics"   # must match the app name in fly.toml; change if taken
-REGION="waw"             # Warsaw — change to your nearest Fly.io region if needed
+REGION="fra"             # Frankfurt — nearest available Fly.io region to Poland
 
 echo "==> Creating app..."
 fly apps create "$APP" --machines
