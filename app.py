@@ -1118,12 +1118,12 @@ def suma_quarters(stats):
     return dict(s)
 
 def calc_kpi(d):
-    fga = d.get("p2a",0) + d.get("p3a",0)
-    pts = d.get("pts",0)
-    poss = max(d.get("poss",1),1)
-    fta = d.get("fta",0); ftm = d.get("ftm",0)
-    pm2 = d.get("p2m",0); pa2 = d.get("p2a",0)
-    pm3 = d.get("p3m",0); pa3 = d.get("p3a",0)
+    fga = (d.get("p2a") or 0) + (d.get("p3a") or 0)
+    pts = d.get("pts") or 0
+    poss = max(d.get("poss") or 1, 1)
+    fta = d.get("fta") or 0; ftm = d.get("ftm") or 0
+    pm2 = d.get("p2m") or 0; pa2 = d.get("p2a") or 0
+    pm3 = d.get("p3m") or 0; pa3 = d.get("p3a") or 0
     def pct(n,d): return f"{n/d:.1%}" if d else "-"
     efg  = (pm2+1.5*pm3)/fga if fga else None
     ts   = pts/(2*(fga+0.44*fta)) if (fga+fta) else None
@@ -1132,7 +1132,7 @@ def calc_kpi(d):
         "ts":    f"{ts:.1%}" if ts else "-",
         "ortg":  f"{pts*100/poss:.1f}",
         "ppp":   f"{pts/poss:.2f}",
-        "topct": f"{d.get('br',0)/poss:.1%}",
+        "topct": f"{(d.get('br') or 0)/poss:.1%}",
         "ftr":   f"{fta/fga:.2f}" if fga else "-",
         "p2_pct":pct(pm2,pa2),
         "p3_pct":pct(pm3,pa3),
