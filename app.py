@@ -13945,7 +13945,7 @@ def _portal_eff_row(lbl, vg, vo):
         wg = "700" if gw else "400"
         wo = "700" if fo>fg else "400"
     except Exception:
-        pg=po=50; cg="#1a6b3c"; co="#9ca3af"; wg=wo="400"
+        pg=po=50; cg="#1a6b3c"; co="#9ca3af"; wg=wo="400"; gw=False; fg=fo=0
     bar = (f'<div class="eff-bar"><div class="eb-g" style="width:{pg}%"></div>'
            f'<div class="eb-d"></div><div class="eb-o" style="width:{po}%"></div></div>')
     gl = "" if gw else " lose"
