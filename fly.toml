@@ -1,0 +1,32 @@
+app            = "basket-analytics"   # must be globally unique — change if taken
+primary_region = "waw"                # Warsaw; nearest Fly region to Poland
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PORTAL_ONLY           = "true"
+  SESSION_COOKIE_SECURE = "true"
+  MATCH_FILES_DIR       = "/data/match_files"
+
+# Secrets — set via CLI, never stored here:
+#   fly secrets set SECRET_KEY=...
+#   fly secrets set PORTAL_LOGIN=...
+#   fly secrets set PORTAL_PASS=...
+#   DATABASE_URL is set automatically by: fly postgres attach
+
+[http_service]
+  internal_port        = 5000
+  force_https          = true
+  auto_stop_machines   = "stop"   # machine suspends when idle, restarts in ~1s on next request
+  auto_start_machines  = true
+  min_machines_running = 0
+
+[[vm]]
+  size   = "shared-cpu-1x"
+  memory = "256mb"
+
+[[mounts]]
+  source       = "match_files"
+  destination  = "/data/match_files"
+  initial_size = "1gb"
