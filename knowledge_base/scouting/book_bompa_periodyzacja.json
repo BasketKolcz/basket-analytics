@@ -1,0 +1,56 @@
+{
+  "_source": "Tudor O. Bompa, G. Gregory Haff — „Periodyzacja. Teoria i metodyka treningu\" (oryg. „Periodization. Theory and Methodology of Training\", wydanie 5). Wydanie polskie: redakcja/przedmowa Jan Kosendiak. 382 strony (skan).",
+  "_comment": "KLASYCZNY PODRĘCZNIK periodyzacji treningu sportowego — jedna z najważniejszych pozycji w teorii treningu na świecie. Pierwsze wydanie 1983; czwarte wydanie (1999) sprzedano w ponad 18 000 egzemplarzy i przetłumaczono na 6 języków. W piątym wydaniu Bompa połączył siły z G. Gregorym Haffem, by scalić klasyczne treści z współczesnymi osiągnięciami nauk o sporcie i fizjologii. Pozycja ogólnosportowa (nie koszykarska) — dostarcza aparatu pojęciowego dla planowania obciążeń, cykli i formy startowej. UWAGA: skan bez warstwy tekstowej; opis oparty na przedmowie redaktora i opisie układu treści — nie na pełnej lekturze rozdziałów.",
+  "_program_use": "Warstwa teoretyczna dla planowania sezonu i interpretacji formy zawodnika w czasie. Praktyczne przełożenie na program: rozdz. 6-9 (roczny plan treningowy, metody poprawiania formy, budowanie cykli) uzasadniają, dlaczego statystyki zawodnika należy czytać w kontekście FAZY SEZONU, a nie jako jednorodny szereg. Rozdz. 5 (odnowa) i pojęcie 'obciążenia skupionego' pomagają interpretować spadki formy. Bezpośrednio łączy się z rundami przygotowawczymi Hucińskiego (Runda 0/I/II/III).",
+
+  "kategoria": "Teoria i metodyka treningu / periodyzacja — podręcznik ogólnosportowy",
+
+  "uklad_tresci": {
+    "_zrodlo": "Wg przedmowy — Bompa i Haff podzielili treść piątego wydania na trzy główne obszary: teorię treningu, periodyzację treningu i metody treningowe.",
+    "czesc_I_teoria_treningu": {
+      "rozdzialy": "1-5",
+      "opis": "Główne zagadnienia treningu: problem bioenergetycznej specyfiki treningu (rozdz. 1), ważność długoterminowego planu treningowego (rozdz. 2), pobudzanie przez trening rozwoju podstawowych umiejętności taktycznych i technicznych oraz zdolności fizycznych (rozdz. 3), zmienne wpływające na kształtowanie planu treningowego (rozdz. 4), znaczenie odnowy w ogólnym procesie treningowym (rozdz. 5).",
+      "rola": "Wiadomości niezbędne trenerowi, uczonemu i sportowcowi do zrozumienia istoty periodyzacji."
+    },
+    "czesc_II_periodyzacja_treningu": {
+      "rozdzialy": "6-9",
+      "opis": "Roczny plan treningowy (rozdz. 6), metody poprawiania formy w wybranych okresach (rozdz. 7), metody budowania różnych cykli treningowych (rozdz. 8), metody racjonalnego planowania treningu (rozdz. 9).",
+      "wyroznik": "Rozdz. 7 łączy wiedzę naukową o wzajemnych zależnościach między bodźcami treningowymi a wynikami sportowymi z praktycznymi informacjami umożliwiającymi sterowanie treningiem tak, by osiągnąć OPTYMALNĄ FORMĘ W OKRESIE ZAWODÓW."
+    },
+    "czesc_III_metody_treningowe": {
+      "rozdzialy": "10-12",
+      "opis": "Rozwój siły i mocy (rozdz. 10), wytrzymałości (rozdz. 11) oraz szybkości i zwinności (rozdz. 12)."
+    }
+  },
+
+  "uwagi_terminologiczne_wydania_polskiego": {
+    "_zrodlo": "Przedmowa redaktora Jana Kosendiaka — istotne przy czytaniu i cytowaniu.",
+    "schlodzenie": "Tłumaczenie ang. „cool-down\" jako „schłodzenie\" — świadoma, kontrowersyjna decyzja redakcyjna. Uzasadnienie: skoro w polszczyźnie przyjęła się „rozgrzewka\" („warm up\") jako element jednostki treningowej, to część końcowa też zasługuje na jednowyrazową nazwę.",
+    "gestosc_treningu": "„Gęstość treningu\" = tłumaczenie ang. „density\" — pojęcie określające proporcje między wysiłkiem a wypoczynkiem w jednostce treningowej lub mikrocyklu.",
+    "obciazenie_skupione": "Nowe pojęcie w wydaniu 5 — obciążenie skupione / napięcie treningowe (definicje w treści książki).",
+    "trening_oporowy": "Redakcja pozostawiła „trening oporowy\" (zamiast „siłowy\"/„wytrzymałościowy\") jako odpowiednik „trening z wykorzystaniem oporu zewnętrznego\".",
+    "sporty_rakietowe": "Termin obejmujący tenis, tenis stołowy, badminton, squash.",
+    "plan_roczny": "Redaktor zwraca uwagę, że w rocznym planie treningowym nie ma POWTARZANIA się faz, a raczej PRZECHODZENIE od fazy do fazy."
+  },
+
+  "znaczenie_dla_koszykowki": {
+    "kontekst_sezonu": "Periodyzacja tłumaczy, dlaczego ten sam zawodnik ma inną dyspozycję w różnych momentach sezonu — istotne przy ocenie serii meczów i przy scoutingu (nie oceniaj z jednego okna czasowego).",
+    "polaczenie_z_hucinskim": "Rundy przygotowawcze Hucińskiego (Runda 0 wprowadzająca, I i II przygotowawcze, III startowa/playoff) to koszykarska aplikacja klasycznego podziału na okres przygotowawczy → startowy → przejściowy.",
+    "sport_zespolowy_a_forma": "Metody „peakingu\" (rozdz. 7) w grach zespołowych z długim sezonem ligowym wymagają innego podejścia niż w sportach z jednym startem docelowym — to napięcie warto mieć na uwadze przy adaptacji.",
+    "odnowa": "Rozdz. 5 — odnowa jako integralna część procesu treningowego, nie dodatek; zbieżne z rozdz. X monografii o olimpizmie (odnowa psychobiologiczna)."
+  },
+
+  "status_zrodla": {
+    "warstwa_tekstowa": "Praktycznie BRAK — skan obrazowy, ekstrakcja pdfplumber dała ~10,6 tys. znaków na 382 strony (głównie artefakty).",
+    "jak_czytac": "Rasteryzacja przez pypdfium2 (skrypt render_bompa.py w scratchpadzie sesji), następnie odczyt stron jako obrazów.",
+    "ograniczenie": "Treść merytoryczna rozdziałów nie została zindeksowana — plik pełni funkcję wpisu bibliograficznego i mapy struktury. W razie potrzeby konkretnego zagadnienia wskazać rozdział do zrasteryzowania."
+  },
+
+  "powiazania": {
+    "book_imopeksis_hucinski.json": "Rundy przygotowawcze i normy prognostyczne Hucińskiego = koszykarska aplikacja periodyzacji.",
+    "book_development_curriculum_jozak.json": "Rozdz. VII tamtej książki (periodyzacja mezocyklu, model treningu, rozplanowanie wg grup wiekowych) korzysta z aparatu Bompy.",
+    "book_olimpizm_gotowosc_startowa.json": "Odnowa psychobiologiczna (rozdz. X) uzupełnia rozdz. 5 o odnowie; makrocykl olimpijski jako czteroletni plan.",
+    "coaching_notes.json": "Sekcja practice_planning (szablon planu treningu) — Bompa dostarcza ram do wypełnienia tego szablonu.",
+    "imopeksis_methodology.json": "Fazy lekcji treningowej (Nauczanie/Doskonalenie/Trenowanie) to mikroskala tego, co Bompa opisuje w skali makro."
+  }
+}

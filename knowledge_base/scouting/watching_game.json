@@ -1,0 +1,252 @@
+{
+  "_source": "Next Draft Foundation — Moduł 1 / PDF: jak-ogladac-mecz-oczami-skauta",
+  "_comment": "Jak oglądać mecz oczami skauta — metodologia obserwacji",
+
+  "kibic_vs_scout": {
+    "kibic_ogląda": ["piłkę", "punkty", "highlights", "wynik"],
+    "scout_ogląda": ["decyzje", "reakcje", "zachowanie bez piłki", "wpływ na grę", "kontekst", "skalowalność umiejętności"],
+    "zasada": "Profesjonalny scouting polega bardziej na zadawaniu właściwych pytań niż szukaniu idealnych odpowiedzi."
+  },
+
+  "1_poza_pilka": {
+    "title": "Na co patrzeć poza piłką?",
+    "note": "To właśnie tam często widać prawdziwy poziom zawodnika.",
+    "obserwuj": [
+      "spacing i ustawienie",
+      "timing ruchów",
+      "reakcje po stracie piłki",
+      "komunikację",
+      "closeouty i rotacje",
+      "aktywność bez piłki",
+      "screening",
+      "cutting",
+      "koncentrację poza akcją",
+      "reakcję na błędy"
+    ],
+    "pytania_kluczowe": [
+      "Czy zawodnik pomaga grze, gdy NIE ma piłki?",
+      "Czy rozumie koszykówkę zespołową?",
+      "Czy podejmuje decyzje szybko i poprawnie?"
+    ]
+  },
+
+  "2_decision_making": {
+    "title": "Decision Making — najważniejsza umiejętność",
+    "zasada": "Talent często przyciąga uwagę. Decyzje wygrywają mecze.",
+    "obserwuj": [
+      "tempo decyzji",
+      "wybór podań",
+      "shot selection",
+      "reakcję pod presją",
+      "grę przeciwko przewadze i pomocy",
+      "decyzje w transition",
+      "decyzje po błędzie"
+    ],
+    "pytania": [
+      "Czy zawodnik upraszcza grę?",
+      "Czy tworzy przewagę czy zabija akcję?",
+      "Czy podejmuje decyzje powtarzalnie?"
+    ]
+  },
+
+  "3_motor_effort": {
+    "title": "Motor / Effort",
+    "zasada": "Motor często przekłada się poziom wyżej lepiej niż część talentu.",
+    "obserwuj": [
+      "jak zawodnik biega",
+      "jak wraca do obrony",
+      "jak reaguje po nieudanej akcji",
+      "czy walczy o 50/50 balls",
+      "czy gra z energią bez piłki",
+      "czy effort jest stały"
+    ],
+    "pytanie": "Czy zawodnik wpływa na grę nawet wtedy, gdy nie trafia?"
+  },
+
+  "4_awareness": {
+    "title": "Awareness i Feel for the Game",
+    "zasada": "Niektórzy zawodnicy 'widzą' grę szybciej niż inni. To często jedna z najbardziej niedocenianych cech.",
+    "obserwuj": [
+      "reakcje defensywne",
+      "anticipation",
+      "positioning",
+      "weak side awareness",
+      "timing pomocy",
+      "czy zawodnik 'czyta' akcję wcześniej"
+    ],
+    "pytanie": "Czy zawodnik rozumie co dzieje się wokół niego?"
+  },
+
+  "5_role_kontekst": {
+    "title": "Role i kontekst",
+    "zasada": "Nie oceniaj zawodnika w próżni.",
+    "scout_musi_rozumiec": [
+      "rolę zawodnika",
+      "system",
+      "poziom ligi",
+      "teammates",
+      "usage",
+      "styl gry zespołu",
+      "oczekiwania trenera"
+    ],
+    "pytania": [
+      "Jak wyglądałby w mniejszej roli?",
+      "Co przełoży się poziom wyżej?",
+      "Czy jego styl gry jest skalowalny?",
+      "Czy pomaga wygrywać?"
+    ]
+  },
+
+  "6_communication_body_language": {
+    "title": "Communication & Body Language",
+    "zasada": "Koszykówka to sport zespołowy. Zachowanie zawodnika ma ogromne znaczenie.",
+    "obserwuj": [
+      "komunikację w obronie",
+      "reakcję na błędy kolegów",
+      "mowę ciała",
+      "kontakt z trenerem",
+      "reakcję na ławkę",
+      "ego i frustrację",
+      "koncentrację po złych akcjach"
+    ],
+    "red_flags": [
+      "opuszczona głowa",
+      "brak effortu po błędzie",
+      "narzekanie",
+      "brak reakcji defensywnej",
+      "negatywny body language"
+    ]
+  },
+
+  "7_jak_notowac": {
+    "title": "Jak notować podczas meczu?",
+    "zasada": "Nie próbuj zapisywać wszystkiego. Notuj co zawodnik robi POWTARZALNIE, nie pojedyncze akcje.",
+    "workflow_plus": ["decyzje", "spacing", "impact", "communication", "defense", "effort"],
+    "workflow_minus": ["shot selection", "awareness", "turnovers", "reakcje", "koncentracja"],
+    "format_notatki": {
+      "zle": "Bardzo dobry zawodnik, który wygląda ciekawie.",
+      "dobrze": "Quick decisions. Good feel. Helps offense without ball. Defensive awareness inconsistent."
+    }
+  },
+
+  "8_czego_nie_oceniac": {
+    "title": "Czego NIE oceniać po jednym meczu?",
+    "nie_oceniaj": ["shooting variance", "pojedynczym hot game", "boxscore", "highlights", "emocjach", "wyniku meczu"],
+    "scout_ocenia": ["proces", "nawyki", "decyzje", "powtarzalność", "skalowalność", "wpływ na wygrywanie"]
+  },
+
+  "9_pytania_podczas_meczu": {
+    "title": "Najważniejsze pytania podczas oglądania meczu",
+    "pytania": [
+      "Czy ten zawodnik pomaga wygrywać?",
+      "W jakiej roli?",
+      "Co przełoży się poziom wyżej?",
+      "Jak wygląda bez piłki?",
+      "Czy podejmuje szybkie i dobre decyzje?",
+      "Czy jego impact jest większy niż statystyki?",
+      "Jak reaguje na adversity?",
+      "Czy chciałbym mieć go w swojej organizacji?"
+    ]
+  },
+
+  "podsumowanie": "Scout nie ogląda tylko tego CO się wydarzyło. Scout próbuje zrozumieć DLACZEGO się wydarzyło i co wydarzy się dalej.",
+
+  "live_vs_wideo": {
+    "_source": "Transkrypcja M2, lekcja 4",
+    "zasada": "Najlepsi scauci korzystają z obu narzędzi. To musi być proces.",
+    "na_zywo": {
+      "zalety": [
+        "Widać energię i komunikację, mowę ciała",
+        "Prawdziwy rozmiar — wzrost i waga często 'przejeżdżone' przez agentów",
+        "Widzisz zawodnika przed meczem — rozgrzewka, podejście, profesjonalizm"
+      ],
+      "uwaga": "Dane wzrostu/wagi z internetu często zawyżone. Centrum o różnicy 2,05 vs 2,15 to ogromna różnica dla scouta — zweryfikuj na żywo."
+    },
+    "wideo": {
+      "zalety": [
+        "Szukanie tendencji, nie pojedynczych akcji",
+        "Możliwość zatrzymania, replay, szczegółowa analiza",
+        "'Dziura scoutingowa' — jedna obserwacja wciąga do głębszej analizy",
+        "Możliwość powrotu do poprzednich meczów"
+      ],
+      "minimum": "Przynajmniej 3 mecze wideo przed wyjazdem na obserwację na żywo."
+    },
+    "sekwencja": ["Statystyki", "Wideo (min. 3 mecze)", "Live", "Wywiad środowiskowy (trener, agent, szatnia)"]
+  },
+
+  "statystyka_bez_pilki": {
+    "_source": "Transkrypcja M2, lekcja 1",
+    "fakt": "Najlepsi gracze NBA grają ~40 minut, ale piłkę w rękach mają tylko ~3 minuty.",
+    "wniosek": "Przez 37 minut zawodnik działa bez piłki. To tam widać prawdziwą wartość — spacing, movement, obrona, komunikacja."
+  },
+
+  "komunikacja_defensywna": {
+    "_source": "Transkrypcja M2, lekcja 2",
+    "zasada": "Najlepsze drużyny są najgłośniejsze.",
+    "obserwuj": [
+      "Czy zawodnik odzywa się w obronie",
+      "Czy komunikuje zmiany krycia",
+      "Czy prowadzi komunikację przy screen",
+      "Czy reaguje głosem na rotacje"
+    ],
+    "uwaga": "Komunikację widać dużo lepiej na żywo niż na wideo — jeden z powodów, żeby wyjeżdżać."
+  },
+
+  "konkretnosc_oceny": {
+    "_source": "Transkrypcja M2, lekcja 1 — Rafał Jujcz",
+    "zasada": "Nie możemy mówić ogólnikowo. 'Zawodnik jest atletyczny' nie znaczy nic.",
+    "jak_oceniac": [
+      "Porównuj do konkretnych zawodników ('tak silny jak Iwica Zubać')",
+      "Licz średnie parametry (wzrost/waga/rozpiętość ramion) dla pozycji w lidze",
+      "Odnosić fizyczność do konkretnego wymiaru, nie ogólnie",
+      "Jeśli scoutujesz Orlen Basket Ligę — bądź ekspertem OBL, porównuj w jej ramach"
+    ]
+  },
+
+  "pierwsze_5_minut": {
+    "_source": "Next Draft Foundation — slajd '5 Rzeczy, Które Sprawdzam w Pierwszych 5 Minutach'",
+    "zasada": "Pierwsze 5 minut meczu ujawnia charakter i nawyki zawodnika — zanim zacznie 'grać dla scouta'.",
+    "5_rzeczy": [
+      {
+        "nr": 1,
+        "id": "decision_making",
+        "nazwa": "DECISION MAKING",
+        "pytanie": "Czy podejmuje dobre decyzje?",
+        "co_obserwuj": "Tempo decyzji, wybór między podaniem a rzutem, reakcja na schemat obrony. Czy decyduje szybko i poprawnie, czy się waha i traci czas?"
+      },
+      {
+        "nr": 2,
+        "id": "reakcja_po_bledzie",
+        "nazwa": "REAKCJA PO BŁĘDZIE",
+        "pytanie": "Jak odpowiada na niepowodzenie?",
+        "co_obserwuj": "Mowa ciała po stracie, pudłu lub złej decyzji. Czy szybko wraca do schematu, czy głowa opada? Red flag: obrażanie się na siebie lub teammatów."
+      },
+      {
+        "nr": 3,
+        "id": "gra_bez_pilki",
+        "nazwa": "GRA BEZ PIŁKI",
+        "pytanie": "Czy pomaga zespołowi bez posiadania?",
+        "co_obserwuj": "Spacing, cutting, screeny, aktywność bez piłki. Czy rozumie, że koszykówka to nie czekanie na piłkę? Czy jest niewidoczny gdy nie ma piłki?"
+      },
+      {
+        "nr": 4,
+        "id": "komunikacja",
+        "nazwa": "KOMUNIKACJA",
+        "pytanie": "Jak wpływa na innych?",
+        "co_obserwuj": "Czy mówi do teammatów, wskazuje ustawienia, komunikuje w obronie? Czy jest obecny głosowo, czy tylko fizycznie?"
+      },
+      {
+        "nr": 5,
+        "id": "body_language",
+        "nazwa": "BODY LANGUAGE",
+        "pytanie": "Jak zachowuje się kiedy nie idzie?",
+        "co_obserwuj": "Postawa, mimika, reakcja na coaching. Czy rośnie pod presją czy spada? Jeden z najtrudniejszych do ocenienia — ale najważniejszy."
+      }
+    ],
+    "scouting_notes_checklist": {
+      "opis": "Checklist 5 kategorii do wypełnienia podczas meczu (widoczny na notatniku scouta w slajdzie)",
+      "kategorie": ["DECISIONS", "EFFORT", "AWARENESS", "IMPACT", "INTANGIBLES"]
+    },
+    "praktyczna_uwaga": "Te 5 rzeczy można sprawdzić w pierwszych 5 minutach — i często wynik tej obserwacji nie zmieni się przez cały mecz. Nawyk to nawyk."
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "_source": "„CZ_S Ocena efektów szkoleniowych i walki sportowej.doc\" (4 godz.) — część specjalistyczna kursu na licencję trenera koszykówki klasy B, Wyższa Szkoła Sportowa im. Kazimierza Górskiego w Łodzi.",
+  "_comment": "NAJWAŻNIEJSZY plik z całego pakietu LIC.B dla programu. Opisuje kompletny, autorski system oceny zawodnika oparty na trzech narzędziach: (1) SPRAWDZIANY TECHNICZNE — rozbicie umiejętności na elementy składowe i punktowanie ich obecności; (2) OBSERWACJE PRZYCZYN — 40 zdarzeń meczowych punktowanych +1/-1, wprowadzanych stopniowo wg klasy szkolnej; (3) STATYSTYKA PRZYCZYN treningowa i meczowa. System jest metodycznie spójny z metodą IMOPEKSIS Hucińskiego (obrony kolorowe, odczucie postępu, zawodnik jako partner).",
+  "_program_use": "BEZPOŚREDNIA ŚCIEŻKA WDROŻENIOWA. „Obserwacje przyczyn\" to w istocie rozszerzony słownik kodów akcji: 40 zdarzeń binarnych (+1/-1) rejestrowanych per zawodnik per kwarta — dokładnie ten sam kształt danych co istniejąca tabela player_stats/timing_stats. Możliwy nowy moduł: arkusz obserwacji meczowej z konfigurowalnym zestawem aktywnych obserwacji (bo wg metodyki wprowadza się tylko 4 nowe rocznie) + karta postępu technicznego zawodnika ze sprawdzianów. UWAGA metodyczna do zaszycia w UI: nie pokazywać zawodnikowi więcej niż kilku zadań naraz — przy 5+5 zadaniach zawodnik rozlicza się tylko z tego, co zrobił dobrze.",
+
+  "kategoria": "LIC.B — ocena i diagnostyka zawodnika",
+  "_prawa_autorskie": "Materiał objęty prawami autorskimi WSS im. K. Górskiego w Łodzi (kopiowanie i dystrybucja bez zezwolenia zabronione). Ten plik to STRUKTURALNE NOTATKI WŁASNE do użytku prywatnego w ramach bazy wiedzy projektu — nie zawiera pełnego przedruku materiału.",
+
+  "sprawdziany_techniczne": {
+    "idea": "Narzędziem pracy trenera są sprawdziany umiejętności technicznych. Umiejętność rozbija się na elementy składowe (np. podanie w miejscu = 20 elementów: chwyt, praca rąk i tułowia, praca nóg), a zawodnik ocenia siebie lub partnera w każdym z nich — budując w ten sposób całą umiejętność.",
+    "start": "Od drugiego roku szkolenia, gdy pojawiają się pierwsze obwody techniczne (II klasa szkoły podstawowej).",
+    "progresja_kto_ocenia": [
+      "Miesiąc 1 — ocenia TRENER (dziecko nie ma jeszcze wiedzy o wszystkich elementach)",
+      "Miesiąc 2 — trener już nie ocenia, tylko PYTA zawodnika, czy dany element wykonał dobrze",
+      "Miesiąc 3 — zawodnik przy pomocy trenera OCENIA INNEGO ZAWODNIKA; na tym etapie staje się partnerem, bo posługuje się tą samą wiedzą co trener",
+      "Kolejne miesiące — zawodnicy oceniają się SAMI, z założeniem że lepszy uczy słabszego"
+    ],
+    "czestotliwosc": "Gdy umiejętność jest w odczuciu dziecka nauczona — sprawdzian powtarzany co 2 miesiące. Nowe umiejętności wchodzą tą samą ścieżką.",
+    "korzysci": [
+      "Zawodnik przez cały miesiąc wie, czego szuka i co poprawia",
+      "Odczuwa własny postęp UWIDOCZNIONY W LICZBACH",
+      "Każdy pracuje wg indywidualnego wzorca modelowego — inne elementy umie, nad innymi musi pracować",
+      "Sprawdzian jest zabierany DO DOMU, żeby dziecko nauczyło umiejętności rodzica — ucząc rodzica uczy się samo, a rodzic rozumie potem obserwacje"
+    ],
+    "zawodnik_starszy": "Jeśli np. 15-latek dopiero zaczyna, musi przejść CAŁY proces sprawdzianowy ze wszystkich umiejętności — przez trening indywidualny. Tylko tak nie będzie miał ograniczeń blokujących grę na poziomie mistrzowskim.",
+    "przyklad_arkusza_rzut": {
+      "rzut_w_kleku": {
+        "max_pkt": 10,
+        "elementy": ["Wolna ręka trzyma dalszy kolec biodrowy", "Piłka leży tylko na palcach", "Palce szeroko", "Kciuki tworzą literę T", "Kciuk ręki rzucającej na wysokości oka", "Łokcie blisko siebie", "Łokieć do końca wyprostowany", "Nadgarstek ściągnięty w dół", "Ręka po rzucie skierowana i zostawiona w kierunku kosza", "Druga ręka tylko podtrzymuje piłkę"]
+      },
+      "rzut_w_staniu": {
+        "max_pkt": 7,
+        "elementy": ["Stopy na szerokości bioder", "Jedna stopa delikatnie z przodu", "Kolana ugięte", "Biodra i barki w jednej płaszczyźnie", "Tułów utrzymany pionowo", "Plecy proste", "Jednoczesny wyprost rąk i nóg"]
+      },
+      "_uwaga": "Punktacja typu 10/10 i 7/7 — zliczenie obecnych elementów. Ta sama logika co rubryka 3/2/1 pkt w Dzienniku Młodych Talentów."
+    }
+  },
+
+  "obserwacja_przyczyn": {
+    "definicja": "Ocena dokonywana przez porównanie techniczno-taktycznych wskaźników gry zawodników w ataku i obronie z MODELOWYMI wskaźnikami najlepszych zespołów klubowych i narodowych. Pokazuje dodatnie i ujemne strony gry, pozwala eliminować powtarzające się błędy.",
+    "dwa_konteksty": {
+      "statystyka_przyczyn_w_treningu": "Informuje o postępach w nauczanym elemencie technicznym. Prowadzona podczas fragmentów gry przez zawodników, którzy AKURAT NIE GRAJĄ — to dla nich trening wiedzy o umiejętności i jej konsekwencjach dla wyniku zespołu.",
+      "statystyka_przyczyn_w_meczu": "Informuje o postępach w nauczaniu kompetencji technicznych; może być potwierdzana na nagraniach video. Daje trenerowi podstawę do zmiany koncepcji treningów; za zagrania pozytywne/negatywne przyznaje się punkty w danym meczu."
+    },
+    "katalog_wg_klasy_szkolnej": {
+      "_zasada": "Obserwacje wprowadzane STOPNIOWO wraz z rocznikiem — dziecko nie ocenia tego, czego jeszcze nie umie.",
+      "II_klasa": ["Podanie +1 / Brak podania -1", "Podanie prawidłowo wykonane +1 / nieprawidłowo -1"],
+      "III_klasa": ["Podanie w biegu prawidłowe +1 / nieprawidłowe -1", "Rzut z miejsca prawidłowy +1 / nieprawidłowy -1", "Bieg z przyśpieszeniem do kontry lub po podaniu +1 / brak -1", "Prawidłowe zatrzymanie +1 / nieprawidłowe -1"],
+      "IV_klasa": ["Prawidłowe obiegnięcie +1 / brak -1", "Prawidłowa obrona czarna +1 / brak -1", "Długie podanie, wyrzut zza linii +1 / brak szybkiego wyrzutu -1", "Kozioł do minięcia +1 / kozioł w miejscu -1", "Rzut z biegu po chwycie +1 / brak chwytu lub kroki -1", "Zbiórka w najwyższym punkcie +1 / brak zbiórki -1"],
+      "V_klasa": ["Prawidłowa ucieczka +1 / brak -1", "Prawidłowa obrona niebieska +1 / brak -1", "Prawidłowe podanie specjalne +1 / nieprawidłowe -1", "Kozioł zdobywający przestrzeń +1 / kozioł w miejscu -1", "Rzut z biegu po koźle +1 / nieprawidłowy -1", "Utrzymanie odległości w grze 1x1 +1 / przegrana 1x1 zawodnika kryjącego piłkę -1", "Prawidłowa obrona pola 3 sekund +1 / brak -1"],
+      "VI_klasa": ["Bieg do szybkiego ataku +1 / brak -1", "Prawidłowe ścięcie +1 / nieprawidłowe -1", "Prawidłowa obrona żółta +1 / brak -1", "Prawidłowy atak 1x1 z piłką przodem do kosza +1 / nieprawidłowy -1", "Prawidłowy atak 1x1 z piłką tyłem do kosza +1 / nieprawidłowy -1", "Prawidłowa obrona ścięcia +1 / brak -1", "Prawidłowe wyjście do rzutu +1 / nieprawidłowe -1", "Prawidłowy rzut z wyskoku +1 / nieprawidłowy -1", "Prawidłowy układ rąk w obronie 1x1 +1 / brak -1", "Prawidłowe zastawienie zawodnika ataku +1 / brak -1"],
+      "dodatkowe": ["Piłka niczyja — wywalczenie żywej piłki +1 / brak walki -1", "Close out (dojście do gracza rzucającego) +1 / brak -1", "Utrzymanie rąk w obronie przy rzucie +1 / opuszczenie rąk -1", "Opóźnienie akcji / utrudnienie szybkiego wznowienia +1 / brak -1", "Zmiana krycia do pierwszego z prawej/lewej +1 / brak -1", "Prawidłowa obrona czerwona (podwojenie) +1 / nieprawidłowa -1", "Dobry faul +1 / zły faul -1", "Komunikacja z partnerem +1 / brak komunikacji -1", "Zajęcie chwilowej pozycji centra +1 / brak -1", "Zajęcie pozycji w rogu boiska +1 / brak -1", "Utrzymanie odległości w ataku (spacing) +1 / nieutrzymanie -1"]
+    },
+    "system_obron_kolorowych": {
+      "czarna": "Obrona zawodnika bez piłki (IV klasa)",
+      "niebieska": "Obrona zawodnika bez piłki — inna odległość/agresja (V klasa)",
+      "zolta": "Obrona zawodnika bez piłki — kolejny wariant (VI klasa)",
+      "czerwona": "Podwojenie (obserwacja dodatkowa)",
+      "_uwaga": "Ten sam system kolorów co plansze Akademii EPS i Dziennik Młodych Talentów — potwierdza wspólny rodowód metodyczny."
+    },
+    "metodyka_wdrazania": {
+      "prog_utrwalenia": "Dziecko zapamiętuje zaobserwowaną sytuację (trwały ślad) po 6 POWTÓRZENIACH — czyli co 6 meczów można dodać kolejną obserwację.",
+      "zalozenie_roczne": "Rok szkoleniowy = 12 meczów ligowych + 12 towarzyskich; zawodnik opanowuje 4 NOWE OBSERWACJE rocznie, utrwalając wcześniejsze.",
+      "harmonogram": "Po 7 latach zawodnik rozumie i ocenia 28 obserwacji; po 10 latach (jako 18-latek) — wszystkie 40.",
+      "arkusz": "Każda kwarta oceniana na OSOBNYM arkuszu; następnie gra każdego zawodnika w poszczególnych kwartach jest sumowana.",
+      "rytual_po_meczu": "Po meczu wybrany zawodnik zabiera obserwacje DO DOMU, żeby je policzyć i mocniej przeżyć sytuację zespołu. Następnego dnia zawodnicy sami omawiają je w szkole — JESZCZE ZANIM trener się z nimi spotka.",
+      "ostrzezenie": "Przy zbyt dużej liczbie zadań meczowych (np. 5 w ataku i 5 w obronie) zawodnik wybierze zawsze elementy pozytywne i rozliczy się tylko z tego, co zrobił dobrze.",
+      "cel_dlugoterminowy": "Dojść do sytuacji, w której każdy zawodnik ma WŁASNE wzorce modelowe. Trener ustala priorytet, hierarchię i wagę umiejętności, a potem wybiera elementy potrzebne do zwycięstwa."
+    },
+    "przyklad_arkusza_wazonego": {
+      "opis": "Arkusz obserwacji technicznych dla zawodnika 13-14 lat — tu obserwacje mają RÓŻNE WAGI, nie tylko ±1.",
+      "pozycje": {"Podanie": "+2", "Podanie celne": "+3", "Niepotrzebny kozioł": "-3", "Minięcie kozłem": "+2", "Zbiórka i wyrzut": "+3"},
+      "kolumny": "Numery zawodników (np. nr 4, 5, 6, 7) + wiersz SUMA",
+      "_program_use": "Wagi konfigurowalne per obserwacja to naturalna cecha modułu — ten sam arkusz ma inne wagi na innym etapie szkolenia."
+    },
+    "efekt_wychowawczy": "Ocena przez obserwację uczy współdziałania, zrozumienia, odpowiedzialności oraz patrzenia na postępy partnera — buduje pozytywne doświadczenia we współpracy."
+  },
+
+  "program_indywidualny": {
+    "definicja": "Korelacja między zrozumieniem i nauczeniem się programu indywidualnego a WEWNĘTRZNĄ CHĘCIĄ podjęcia trudu jego realizacji — w oparciu o samoświadomość i uznanie.",
+    "akcent": "W pracy z zawodnikiem objętym programem indywidualnym szczególną uwagę zwraca się na cechy psychospołeczne, zwłaszcza samoświadomość i samodoskonalenie (motywacja wewnętrzna, koncentracja, pewność siebie, zarządzanie emocjami)."
+  },
+
+  "powiazania": {
+    "book_imopeksis_hucinski.json": "Bliźniacza logika pomiarowa — tam arkusz koncentracji uwagi wykonawczej per kwarta/minuta, tu obserwacje przyczyn per kwarta. Oba systemy sumują per zawodnik i per kwarta.",
+    "imopeksis_methodology.json": "Obrony kolorowe (czarna/niebieska/żółta/czerwona) i 27 umiejętności Dziennika Młodych Talentów pochodzą z tego samego systemu.",
+    "teaching_fundamentals.json": "Elementy techniczne ze sprawdzianów (rzut: łokieć wyprostowany, nadgarstek ściągnięty, ręka zostawiona w kierunku kosza) pokrywają się z punktami coachingowymi konspektów Libicha.",
+    "licb_planowanie_struktura_konspekty.json": "Sprawdziany i obserwacje są narzędziem diagnozy dla opisanych tam procesów nauczania/doskonalenia/trenowania.",
+    "vocabulary/actions.json": "Katalog 40 obserwacji to kandydat na rozszerzenie słownika kodów akcji programu.",
+    "player_evaluation.json": "Warstwa techniczna oceny — uzupełnia filary atletyzm/skills/IQ/charakter/fit o mierzalną diagnostykę wykonania."
+  }
+}

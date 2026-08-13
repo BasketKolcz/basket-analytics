@@ -1,0 +1,599 @@
+{
+  "_source": "Next Draft Foundation — Moduł 2, slajd: Przejście do raportu scoutingowego",
+  "_comment": "Struktura cyfrowego raportu scoutingowego — gotowa do implementacji w app.py",
+  "_program_use": "Szablon dla widoku /scouting/raport lub /zawodnik/<id>/raport. Sekcje = zakładki lub sekcje formularza.",
+
+  "dobry_scout_przed_raportem": {
+    "kroki": [
+      {
+        "id": "obserwuje",
+        "akcja": "OBSERWUJE",
+        "opis": "widzi to, co istotne"
+      },
+      {
+        "id": "analizuje",
+        "akcja": "ANALIZUJE",
+        "opis": "rozumie, co się dzieje"
+      },
+      {
+        "id": "syntetyzuje",
+        "akcja": "SYNTETYZUJE",
+        "opis": "wyciąga trafne wnioski"
+      },
+      {
+        "id": "komunikuje",
+        "akcja": "KOMUNIKUJE JASNO",
+        "opis": "przekazuje konkrety w prosty sposób"
+      }
+    ],
+    "cel_raportu": "Raport ma pomagać podejmować decyzje.",
+    "odbiorcy": ["Trener", "Zarząd", "Organizacja"]
+  },
+
+  "status_zawodnika": {
+    "opis": "Priorytet obserwacji / klasyfikacja zawodnika przez organizację",
+    "typy": {
+      "PRIORITY": "Zawodnik wysoko na liście — aktywna obserwacja, priorytetowa rekomendacja",
+      "SECONDARY": "Zawodnik na liście rezerwowej — obserwuj, ale nie priorytet",
+      "MASTER": "Zawodnik kompletnie przeanalizowany — raport finalny"
+    }
+  },
+
+  "skill_ratings_system": {
+    "skala": {
+      "1": "TERRIBLE",
+      "2": "BAD",
+      "3": "AVG",
+      "4": "GOOD",
+      "5": "GREAT"
+    },
+    "atrybuty": [
+      "ATHL (atletyzm)",
+      "SPD (szybkość)",
+      "SHOOT (rzut)",
+      "FINISH (wykończenie)",
+      "ATTACK (atak, penetracja)",
+      "OREB (zbiórka ofensywna)",
+      "DREB (zbiórka defensywna)",
+      "DEFENSE (obrona)",
+      "PASS (podania)",
+      "HANDLE (kozłowanie)",
+      "MOTOR (silnik, energia)",
+      "PHYSICALITY (fizyczność)",
+      "IQ (koszykarskie IQ)",
+      "TOUGHNESS (twardość, mentalność)"
+    ],
+    "nba_comp": "Zawodnik w NBA, którego gra jest podobna do ocenianego. Punkt odniesienia dla projekcji.",
+    "elite_skill": "Najsilniejsza, wyróżniająca umiejętność zawodnika (np. PLAYMAKING / PICK & ROLL CREATION)"
+  },
+
+  "struktura_raportu": [
+    {
+      "nr": 1,
+      "id": "profil",
+      "nazwa": "Informacje podstawowe",
+      "pola": [
+        "imie_nazwisko",
+        "numer",
+        "pozycja_nba",
+        "wzrost",
+        "waga_lbs",
+        "wiek",
+        "uczelnia_klub",
+        "reka_rzucajaca",
+        "narodowosc",
+        "konferencja",
+        "klasa_college",
+        "rodzinne_miasto",
+        "status (PRIORITY/SECONDARY/MASTER)",
+        "agent",
+        "draft_pick",
+        "obecny_zespol",
+        "data_raportu",
+        "scout"
+      ]
+    },
+    {
+      "nr": 2,
+      "id": "overview",
+      "nazwa": "Overview (Intro/Summary)",
+      "intro_summary": "Podsumowanie zawodnika i drużyny: jak przebiega sezon, ogólny skill set, projekcja NBA i pozycja draftowa.",
+      "obszary": [
+        {
+          "id": "offense",
+          "nazwa": "OFFENSE",
+          "opis": "Offensive skill set, strengths and weaknesses"
+        },
+        {
+          "id": "defense",
+          "nazwa": "DEFENSE",
+          "opis": "Defensive ability, strengths and weaknesses"
+        },
+        {
+          "id": "physical_medical",
+          "nazwa": "PHYSICAL / MEDICAL",
+          "opis": "Athleticism, mobility and body, injuries"
+        },
+        {
+          "id": "mental_background",
+          "nazwa": "MENTAL / BACKGROUND",
+          "opis": "Mental aspect of the game, approach, intangibles, background info"
+        }
+      ],
+      "projekcja_1_9": "Skala 1–9 (LOW → HIGH) — ogólna wartość/potencjał zawodnika",
+      "przyklad": "Wysoki poziom IQ boiskowego. Świetny przegląd pola. Skuteczny w grze bez piłki. Musi poprawić obronę 1 na 1."
+    },
+    {
+      "nr": 3,
+      "id": "mocne_strony",
+      "nazwa": "Mocne strony",
+      "format": "lista punktorów",
+      "przyklad": ["Czytanie gry", "Podania", "Rzut z dystansu", "Decyzje w pick & roll"]
+    },
+    {
+      "nr": 4,
+      "id": "slabe_strony",
+      "nazwa": "Obszary do poprawy",
+      "format": "lista punktorów",
+      "przyklad": ["Obrona 1 na 1", "Atletyzm", "Gra fizyczna"]
+    },
+    {
+      "nr": 5,
+      "id": "rekomendacja",
+      "nazwa": "Rekomendacja",
+      "format": "skala gwiazdkowa + opis",
+      "skala": {
+        "5": "Natychmiastowy impact — podpisz bez wahania",
+        "4": "Dobry zawodnik pasujący do roli",
+        "3": "Warto obserwować — potencjał",
+        "2": "Ryzykowny — wymaga analizy",
+        "1": "Nie pasuje do organizacji"
+      }
+    }
+  ],
+
+  "sekcje_opcjonalne": [
+    {
+      "id": "statystyki",
+      "nazwa": "Stats (sezon)",
+      "pola": ["PTS", "REB", "AST", "STL", "BLK", "3P%", "FG%", "MIN"]
+    },
+    {
+      "id": "kluczowe_akcje",
+      "nazwa": "Kluczowe akcje",
+      "opis": "screenshoty lub opisy konkretnych sytuacji meczowych"
+    },
+    {
+      "id": "ocena_filarow",
+      "nazwa": "Ocena 5 filarów",
+      "opis": "Pełna ocena: atletyzm / umiejętności / Basketball IQ / charakter / fit",
+      "link_do": "player_evaluation.json"
+    },
+    {
+      "id": "historia_obserwacji",
+      "nazwa": "Historia obserwacji",
+      "pola": ["data", "mecz", "liga", "ocena", "uwagi"]
+    }
+  ],
+
+  "format_notatki_scoutingowej": {
+    "zly": "Bardzo dobry zawodnik, który wygląda ciekawie.",
+    "dobry": "Quick decisions. Good feel. Helps offense without ball. Defensive awareness inconsistent.",
+    "zasada": "Krótko, konkretnie, opisuj TENDENCJE a nie pojedyncze akcje"
+  },
+
+  "sekwencja_analizy": {
+    "opis": "Właściwa kolejność pracy z materiałami",
+    "kroki": [
+      "DATA — co mówią liczby? (statystyki, trendy)",
+      "FILM — co dzieje się naprawdę? (video analiza)",
+      "LIVE — jak wygląda w rzeczywistości? (obserwacja na żywo)",
+      "CONTEXT — jaki ma wpływ na zespół i grę?"
+    ]
+  },
+
+  "dwa_rodzaje_raportow": {
+    "_comment": "Dwa główne typy raportów scoutingowych — różne cele, różna struktura",
+
+    "raport_meczowy": {
+      "id": "game_report",
+      "nazwa": "Raport Meczowy (Opponent Scouting Report)",
+      "cel": "Pomóc wygrać najbliższy mecz",
+      "focus": "Jak bronić rywala",
+      "sekcje": [
+        "Kluczowe informacje — tendencje gracza, styl gry, usage",
+        "Zagrożenia — co robi najlepiej (P&R/Transition/Isolation)",
+        "Jak go bronić — konkretne instrukcje defensywne",
+        "Słabe strony — jak go atakować ofensywnie",
+        "Statystyki sezonu (PTS/AST/REB/STL/TO/FG%/3P%/FT%)",
+        "Ostatnie 5 meczów vs podobni przeciwnicy",
+        "Scouting Notes (+ mocne / – słabe)",
+        "Game Plan Priorities (1–4 priorytety)"
+      ],
+      "case_study_john_wall": {
+        "gracz": "John Wall",
+        "pozycja": "PG",
+        "zespol": "Wizards",
+        "mecz": "Wizards vs YOUR TEAM, 20.05.2024",
+        "kluczowe_informacje": [
+          "Primary ball handler, high usage",
+          "Excellent in P&R, especially with spacing",
+          "Attacks the paint, draws fouls",
+          "Struggles against pressure full court"
+        ],
+        "zagrozenia": ["Pick & Roll (spread)", "Transition", "Isolation vs smaller guards"],
+        "jak_bronic": [
+          "ICE P&R — force him sideline",
+          "Show bodies early, don't let him turn the corner",
+          "Full court pressure — make it physical",
+          "Contest pull-up 3s, go under screens",
+          "Don't help off weak side shooters"
+        ],
+        "slabe_strony": [
+          "Outside shooting consistency",
+          "Decision making under pressure",
+          "Defense vs quicker guards"
+        ],
+        "statystyki_sezonu": {
+          "PTS": 20.4, "AST": 8.3, "REB": 3.2, "STL": 1.1, "TO": 3.5,
+          "FG%": 42.1, "3P%": 31.0, "FT%": 76.3
+        },
+        "ostatnie_5_meczow": {
+          "PTS": 22.6, "AST": 7.4, "TO": 3.8, "FG%": 44.2, "3P%": 29.3
+        },
+        "scouting_notes_plus": [
+          "Excellent at drawing fouls",
+          "Very good finisher in traffic",
+          "Creates for others"
+        ],
+        "scouting_notes_minus": [
+          "Forces tough shots late in clock",
+          "Struggles vs length on defense",
+          "Turnovers under pressure"
+        ],
+        "game_plan_priorities": [
+          "Control the P&R",
+          "Limit transition",
+          "Pressure the ball",
+          "Make him a shooter"
+        ]
+      }
+    },
+
+    "raport_transferowy": {
+      "id": "transfer_report",
+      "nazwa": "Raport z Projekcją pod Transfer (Scouting Report)",
+      "cel": "Podjąć decyzję o transferze",
+      "focus": "Czy zawodnik pasuje do nas i ma potencjał",
+      "sekcje": [
+        "Profile Snapshot (wzrost/waga/wingspan/wiek)",
+        "Podsumowanie (free text)",
+        "Mocne strony (bullet list)",
+        "Słabe strony (bullet list)",
+        "Statystyki (liga, sezon, kluczowe liczby)",
+        "Skill Ratings 1–5 (14 atrybutów)",
+        "Projekcja (NBA ROLE / NBA COMP / DRAFT RANGE / UPSIDE)",
+        "Key Questions (3 kluczowe pytania)",
+        "Rekomendacja (TARGET / PASS / MONITOR)",
+        "Elite Skill",
+        "Medical (kontuzje, stan zdrowia)",
+        "Character / Intangibles"
+      ],
+      "case_study_jokic": {
+        "gracz": "Nikola Jokić",
+        "pozycja": "PF / C",
+        "zespol": "Mega Vizura",
+        "wiek_na_datę": "19 lat 4 miesiące (20.05.2024)",
+        "profile_snapshot": {
+          "wzrost": "6'11\" (211 cm)",
+          "waga": "253 lbs (115 kg)",
+          "wingspan": "7'3\""
+        },
+        "podsumowanie": "Nikola Jokić to jeden z najbardziej intrygujących talentów międzynarodowych. Wyjątkowy passer jak na swoją pozycję. Świetne IQ, widzenie gry i touch. Potencjalny future All-Star.",
+        "mocne_strony": [
+          "Wyjątkowe podania z poziomu i z góry",
+          "Świetne czytanie gry i podejmowanie decyzji",
+          "Touch wokół obręczy i rzut z dystansu",
+          "Rozumie spacing i grę zespołową",
+          "Duży potencjał do dalszego rozwoju"
+        ],
+        "slabe_strony": [
+          "Atletyzm i mobilność",
+          "Obrona w pick & roll",
+          "Szybkość lateralna",
+          "Siła w kontakcie",
+          "Powtarzalność koncentracji"
+        ],
+        "statystyki_2013_14_adriatic": {
+          "PTS": 11.1, "REB": 6.2, "AST": 2.5, "BLK": 0.9, "STL": 0.7,
+          "FG%": 57.1, "3P%": 35.0, "FT%": 58.5
+        },
+        "skill_ratings": {
+          "SHOOT": 3, "PASS": 5, "IQ": 5,
+          "FINISH": 4, "HANDLE": 2, "DEF": 2,
+          "REB": 4, "ATHL": 2, "TOUGHNESS": 4
+        },
+        "projekcja": {
+          "nba_role": "Playmaking Big / High IQ Starter",
+          "nba_comp": "Nikola Vučević",
+          "draft_range": "Late 1st – Early 2nd Round",
+          "upside": "All-Star"
+        },
+        "key_questions": [
+          "Jak szybko poprawi atletyzm?",
+          "Czy obrona będzie wystarczająca w NBA?",
+          "Czy utrzyma progres rutynowy?"
+        ],
+        "rekomendacja": "TARGET — Warto zainteresować się wyborem w 1. rundzie (late 1st / early 2nd). Wysoki potencjał na gracza franczyzowego.",
+        "elite_skill": "PLAYMAKING / VISION",
+        "medical": "No major injuries",
+        "character_intangibles": "High basketball IQ, team first, hard worker",
+        "gwiazdki": 4,
+        "lekcja": "Raport z 2013/14 pokazał gracza z ogromnymi brakami atletycznymi, ale unikalnym IQ — dziś trzykrotny MVP NBA."
+      }
+    }
+  },
+
+  "jak_pisac_mocne_strony": {
+    "zasada": "Skup się na tym, co zawodnik robi dobrze i regularnie wpływa na grę.",
+    "dobre_przyklady": [
+      {
+        "label": "Quick Decision Maker",
+        "opis": "Szybko przetwarza i podejmuje właściwe decyzje w ataku pod presją"
+      },
+      {
+        "label": "Versatile Defender",
+        "opis": "Broni na wielu pozycjach, potrafi się przełączać i rozumie zasady rotacji"
+      },
+      {
+        "label": "High Motor",
+        "opis": "Biega w każdej akcji, wysoka energia w ataku i obronie przez cały mecz"
+      },
+      {
+        "label": "Advanced Feel for Spacing",
+        "opis": "Rozumie spacing i timing, otwiera przestrzeń dla siebie i kolegów"
+      },
+      {
+        "label": "Reliable Secondary Creator",
+        "opis": "Potrafi tworzyć akcje dla innych, gdy główna opcja ataku jest zamknięta"
+      }
+    ],
+    "unikaj": ["dobry zawodnik", "utalentowany", "solidny"],
+    "regula": "KONKRET > OGÓLNIK — podawaj konkretne zachowania i przykłady, nie etykiety"
+  },
+
+  "jak_pisac_slabe_strony": {
+    "cel": "Identyfikuj ograniczenia, zanim staną się problemem w NBA.",
+    "co_profesjonalny_raport_robi": [
+      "Pokazuje ograniczenia — nie pomija słabych stron z obawy",
+      "Identyfikuje ryzyko",
+      "Ocenia skalowalność — analizuje, czy zawodnik przeniesie się i będzie funkcjonował na wyższym poziomie"
+    ],
+    "dobre_przyklady": [
+      {
+        "label": "Struggles vs Physicality",
+        "opis": "Ma problemy z utrzymaniem pozycji i wykończeniem akcji przez kontakt z graczami"
+      },
+      {
+        "label": "Inconsistent Shooting Mechanics",
+        "opis": "Jego technika rzutu jest niestabilna, co wpływa na skuteczność"
+      },
+      {
+        "label": "Needs the Ball to Maximize Impact",
+        "opis": "Jego wpływ na grę znacząco spada, gdy nie ma piłki w rękach"
+      },
+      {
+        "label": "Average Lateral Quickness",
+        "opis": "Nie ma wystarczającej szybkości bocznej, co może być problemem w obronie na wyższym poziomie"
+      }
+    ],
+    "uwaga": "KONIECZNIE PODAWAJ PRZYKŁADY — opis + konkretna obserwacja"
+  },
+
+  "projection_statement": {
+    "rola": "Najważniejsza część raportu — łączy wszystkie obserwacje i analizę w jedną jasną prognozę.",
+    "pytanie_kluczowe": "Kim ten zawodnik może być?",
+    "uwzglednia": [
+      {
+        "id": "talent",
+        "nazwa": "TALENT",
+        "opis": "Poziom umiejętności i przewagi, które posiada na tle rówieśników i ligi"
+      },
+      {
+        "id": "wiek",
+        "nazwa": "WIEK",
+        "opis": "Etap rozwoju biologicznego i ile czasu ma jeszcze na progres"
+      },
+      {
+        "id": "rola",
+        "nazwa": "ROLĘ",
+        "opis": "Jaką rolę może pełnić teraz i w przyszłości na poziomie NBA"
+      },
+      {
+        "id": "charakter",
+        "nazwa": "CHARAKTER",
+        "opis": "Mentalność, etyka pracy, odporność, podejście do gry i rozwoju"
+      },
+      {
+        "id": "rozwoj",
+        "nazwa": "ROZWÓJ",
+        "opis": "Tempo progresu i prawdopodobieństwo dalszej poprawy"
+      },
+      {
+        "id": "fit",
+        "nazwa": "FIT",
+        "opis": "Dopasowanie do stylu gry, potrzeb zespołów i systemów NBA"
+      },
+      {
+        "id": "skalowalnosc",
+        "nazwa": "SKALOWALNOŚĆ",
+        "opis": "Czy jego gra przełoży się na wyższy poziom i w ważnych momentach"
+      }
+    ],
+    "scenariusze": {
+      "sufit": "All-Star — maksymalny potencjalny poziom kariery",
+      "najbardziej_realny": "Solidny starter — najczęściej spodziewany wynik",
+      "floor": "Wartościowy gracz rotacji — minimalny scenariusz kariery"
+    },
+    "skala_nba": {
+      "2_way_wing_starter_potential": "Wszechstronny wing grający po obu stronach na poziomie startera",
+      "lottery": "Potencjał draftu w loterii (Top 14)",
+      "late_1st_early_2nd": "Późna 1. runda lub wczesna 2. runda"
+    },
+    "typy_zawodnikow": [
+      "Lead Guard / Primary Playmaker",
+      "2-Way Wing Starter Potential",
+      "High IQ Role Player",
+      "Stretch Big",
+      "Playmaking Big"
+    ],
+    "confidence_level": "Skala gwiazdkowa ★ 1–5 (pewność rekomendacji)",
+    "key_factor": "Jeden kluczowy czynnik, który zdeterminuje maksymalny poziom zawodnika",
+    "case_study_mike_black": {
+      "gracz": "Mike Black #10",
+      "skill_set_overview": {
+        "SHOOTING": 3, "PLAYMAKING": 4, "DEFENSE": 2, "ATHLETICISM": 3, "BASKETBALL_IQ": 4
+      },
+      "projection_text": "Mike Black ma potencjał, aby stać się wszechstronnym 2-way wingiem na poziomie NBA. Jest już teraz solidnym strzelcem i inteligentnym zawodnikiem, który podejmuje dobre decyzje po obu stronach parkietu. Jego rozwój w kreacji i obronie przeciwko silniejszym rywalom zadecyduje o jego suficie.",
+      "scenariusze": {
+        "najbardziej_realny": "solidny starter",
+        "sufit": "All-Star",
+        "floor": "wartościowy gracz rotacji"
+      },
+      "nba_role_projection": "2-WAY WING STARTER POTENTIAL",
+      "nba_comparison": "Mikal Bridges",
+      "draft_projection": "Lottery — Late 1st – Early 2nd",
+      "confidence_level": 3,
+      "key_factor": "Rozwój kreatywności i siły fizycznej zdeterminuje jego maksymalny poziom."
+    },
+    "workflow_raport": "OBSERWUJ → ANALIZUJ → ZAPISZ KONKRETNIE → OCEŃ RYZYKO → PROJECTION STATEMENT (KIM TEN ZAWODNIK MOŻE BYĆ?)"
+  },
+
+  "jak_przekonac_decision_makers": {
+    "czego_chca_wiedziec": [
+      "Czy pomoże wygrywać?",
+      "W jakiej roli?",
+      "Jakie jest ryzyko?",
+      "Czy pasuje do systemu?",
+      "Czy pasuje do szatni?"
+    ],
+    "raport_musi_byc": ["Krótki", "Konkretny", "Praktyczny", "Czytelny"],
+    "cel_scouta": "Pomóc im podjąć LEPSZĄ DECYZJĘ — szybciej i pewniej.",
+    "notatki_kategorie_5_filarow": {
+      "_comment": "Z notesu scouta — notatki organizowane według 5 filarów oceny",
+      "kategorie": ["Obserwacje", "Umiejętności", "Basketball IQ", "Charakter IQ", "Fit / Rola"]
+    }
+  },
+
+  "3_lekcje_modulu_2": [
+    "Najważniejsze rzeczy często dzieją się POZA PIŁKĄ.",
+    "Impact i winning NIE ZAWSZE widać w statystykach.",
+    "Dobry raport POMAGA PODEJMOWAĆ DECYZJE."
+  ],
+  "motto_modulu_2": "Naszym celem jest podejmować lepsze decyzje. Lepsze decyzje prowadzą do wygrywania.",
+
+  "jezyk_raportu": {
+    "_source": "Transkrypcja M2, lekcja 6 — Rafał Jujcz",
+    "zalecenie": "Raporty w zawodowej koszykówce pisze się najczęściej po angielsku.",
+    "dlaczego": [
+      "Język angielski jest mniej opisowy niż polski — pozwala na krótsze formułowanie zdań",
+      "Wiele terminów scoutingowych istnieje tylko po angielsku i nie ma polskiego odpowiednika",
+      "Raport po angielsku może być odczytany przez trenerów i dyrektorów z różnych krajów"
+    ],
+    "praktycznie": "Ucz się terminologii scoutingowej po angielsku — patrz vocabulary.json (47 terminów). W raportach dla polskich klubów możesz pisać po polsku, ale angielskie etykiety przy skill ratings to standard."
+  },
+
+  "ryzyko_w_pozytywnym_raporcie": {
+    "_source": "Transkrypcja M2, lekcja 6",
+    "zasada": "Nawet przy pozytywnej rekomendacji zawsze opisuj ryzyko.",
+    "przyklad": "Świetny zawodnik, 2 lata gramy w Europie na poziomie X, ale zawsze w drugiej połowie sezonu ma dołek formy kondycyjnej.",
+    "wazne": "Ryzyko to nie jest deal breaker — nie oznacza, że tego gracza nie podpisujemy. Ale lepiej wiedzieć z jakimi problemami trzeba się mierzyć zawczasu.",
+    "system_fit": {
+      "info": "Napisz trenerowi jak zawodnik pasuje do systemu — i czy trener musi gdzieś nagiąć swój playbook, założenia, taktykę.",
+      "uwaga": "To nie dyskredytuje zawodnika. Gracz może być wybitny i warto go podpisać — ale trener musi być świadomy korekty, jaką wprowadzi."
+    },
+    "szatnia_fit": "Jeśli mamy na pozycji już kilku doświadczonych starszych — być może warto znaleźć młodego, który zmieni dynamikę i da pozytywną energię szatni.",
+    "rola": "Zawsze napisz, czy widzisz go jako startera czy zmiennika."
+  },
+
+  "bledy_poczatkujacych_scoutow": {
+    "_source": "Transkrypcja M2, lekcja 6",
+    "intro": "Im mniej scout jest doświadczony i im mniej widział, tym bardziej posiłkuje się statystykami. Im więcej doświadczenia, tym bardziej liczy się 'gut feeling' — zdolność syntezy wielu obserwacji w jedno wrażenie.",
+    "bledy": [
+      {
+        "nr": 1,
+        "blad": "Ocenianie po statystykach",
+        "opis": "Statystyki nie zawsze oddają wpływ na grę. Gracz z dobrym boxscore może szkodzić drużynie."
+      },
+      {
+        "nr": 2,
+        "blad": "Ocenianie po highlights",
+        "opis": "Highlights to nie zawsze rzeczywistość. Gracz może mieć 1-2 dobre zagrania, ale słabo funkcjonować przez cały mecz."
+      },
+      {
+        "nr": 3,
+        "blad": "Brak obserwacji off-ball",
+        "opis": "Bez patrzenia na spacing, zaangażowanie, czytanie gry nie widać pełnego obrazu zawodnika."
+      },
+      {
+        "nr": 4,
+        "blad": "Zbyt długi raport",
+        "opis": "Dyrektor, prezes, pierwszy trener nie mają czasu czytać długich raportów. Albo go szybko przelatują, albo tyle treści że nic nie zostaje w głowie."
+      },
+      {
+        "nr": 5,
+        "blad": "Brak podsumowania i rekomendacji",
+        "opis": "Raport bez konkluzji i rekomendacji traci swoją wartość — czytelnik nie wie co z tym zrobić."
+      },
+      {
+        "nr": 6,
+        "blad": "Brak kontekstu",
+        "opis": "Ocena musi wynikać z czegoś — ligi, roli w zespole, systemu, jakości rywala. Bez kontekstu ocena jest bezwartościowa."
+      },
+      {
+        "nr": 7,
+        "blad": "Skupianie się wyłącznie na talencie",
+        "opis": "Im dłużej pracujesz w zawodowej koszykówce, tym bardziej widzisz że to nie sam talent, ale IQ, pracowitość, charakter i potencjał rozwoju decydują czy zawodnik będzie przydatny."
+      }
+    ],
+    "wniosek": "Dobry scout widzi cały obraz, nie tylko to co jest oczywiste."
+  },
+
+  "filozofia_pisania_raportow": {
+    "_source": "Transkrypcja M2, lekcja 4 — Rafał Jujcz, Denver Nuggets",
+    "cytat_rafall": "Dobry raport to nie ten, do którego można jeszcze coś dodać. To ten, z którego już nic nie można usunąć.",
+    "zasady": [
+      "Raport ma być krótki, konkretny, klarowny",
+      "Zakładaj, że czytelnik zawodnika nie widział i go nie zna — bądź opisowy",
+      "Pierwsze zdanie: jak najwięcej informacji żeby czytelnik wyobraził sobie zawodnika",
+      "Nie piszesz książki — nikt nie ma czasu czytać 5–6 stron",
+      "Raport musi kończyć się rekomendacją i wnioskiem",
+      "Proś o feedback — wysyłaj raporty i ucz się na nim"
+    ],
+    "czego_unikac": ["Ogólniki", "Emocjonalne oceny", "Oceny po jednej akcji"]
+  },
+
+  "key_questions_raport_transferowy": {
+    "_source": "Transkrypcja M2, lekcja 5",
+    "definicja": "Pytania otwarte w raporcie transferowym orientujące scouta — co jeszcze zbadać, czego jeszcze nie wiesz.",
+    "cel": "Każdy raport przybliża nas do zrozumienia gracza. Key questions mówią czytelnikowi, na jakim etapie obserwacji jesteśmy i co uzupełnić.",
+    "przyklady_pytan": [
+      "Jak szybko poprawi atletyzm?",
+      "Czy obrona będzie wystarczająca na naszym poziomie?",
+      "Jak reaguje w systemach z innym stylem gry?",
+      "Czy zaakceptuje mniejszą rolę?",
+      "Jak wygląda poza sezonem — praca własna?"
+    ]
+  },
+
+  "projekcja_europejska": {
+    "_source": "Transkrypcja M2, lekcja 5",
+    "typy_projekcji_obl": ["Starter", "Gracz ławki", "Uzupełnienie rotacji"],
+    "porownaj_do_ligi": "Porównaj do konkretnego zawodnika z Orlen Basket Ligi (tego lub poprzedniego sezonu) — daj czytelnikowi punkt odniesienia.",
+    "rekomendacja_finansowa": {
+      "kiedy_uwzglednic": "Kiedy masz już wystarczające doświadczenie w realiach scoutingowych.",
+      "co_wpisac": "Oczekiwana pensja wg agenta lub kwota, jaką organizacja byłaby w stanie zapłacić.",
+      "uwaga": "Element opcjonalny — tylko kiedy masz realne dane z rynku."
+    }
+  }
+}

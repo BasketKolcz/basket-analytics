@@ -1,0 +1,79 @@
+{
+  "_source": "Analiza wdrożeniowa własna (05.08.2026): czy i jak rozwijać platformę edukacyjną Akademii wg profilu STEAM połączonego z IMOPEKSIS. Na podstawie steam_edukacja_framework.json, imopeksis_methodology.json, player_development_clinic_rhoades.json oraz obecnego stanu modułu Akademia w app.py.",
+  "_comment": "ANALIZA: STEAM (rama edukacyjna) + IMOPEKSIS (psychopedagogika) jako kierunek rozwoju platformy edukacyjnej Akademii. Zawiera diagnozę komplementarności, uczciwą ocenę dowodów oraz konkretne propozycje wdrożeniowe.",
+  "_program_use": "Mapa drogowa dla portalu → Akademia. Rozwija istniejące moduły (lekcje, quizy, Player Development 3+3 / kompetencje RÓŻNICA / cele procesowe / tożsamość).",
+  "kategoria": "Analiza wdrożeniowa — STEAM + IMOPEKSIS dla platformy edukacyjnej",
+
+  "teza": "TAK — można spójnie rozwijać platformę wg profilu STEAM + IMOPEKSIS. Obie ramy są KOMPLEMENTARNE i pokrywają się w rdzeniu, który jest dodatkowo najlepiej udokumentowany. STEAM daje sposób ORGANIZACJI treści i myślenia (interdyscyplinarność, ciekawość, refleksja), IMOPEKSIS — warstwę MENTALNO-RELACYJNĄ (motywacja, emocje, relacja trener-zawodnik). Warunek: budować na wspólnym, mocnym rdzeniu, nie na retoryce ruchu.",
+
+  "komplementarnosc": {
+    "co_wnosi_steam": "Rama interdyscyplinarna (nauka+technologia+inżynieria+sztuka+matematyka zastosowane do koszykówki), rutyna refleksji 3-2-1 Most, nastawienie na rozwój (Dweck), motywacja wewnętrzna (Pink: autonomia/mistrzostwo/cel), kompetencje 4K, uczenie przez eksperyment i dociekanie.",
+    "co_wnosi_imopeksis": "Warstwa psychospołeczna: motywacja (MUSZĘ vs MUSISZ), pewność siebie, emocje, koncentracja, spójność, intuicja, skuteczność; relacja trener-zawodnik i arkusz RÓŻNICA (samoocena vs ocena trenera); fazy lekcji treningowej.",
+    "wspolny_rdzen": [
+      "INDYWIDUALIZACJA ścieżki i celów (STEAM: 'projektuj siebie'; IMOPEKSIS: profil zawodnika).",
+      "MOTYWACJA WEWNĘTRZNA (Pink autonomia/mistrzostwo/cel ≈ IMOPEKSIS 'cel jest mój', motywacja wewnętrzna 'obniża postrzeganie wysiłku').",
+      "RELACJA / MENTORING (Pierson 'dzieci uczą się od tych, których lubią' ≈ IMOPEKSIS relacja trener-zawodnik, aktywne słuchanie).",
+      "REFLEKSJA / SAMOOCENA (3-2-1 Most przed/po ≈ arkusz RÓŻNICA i samoocena Hucińskiego).",
+      "EKSPERYMENT / DECYZYJNOŚĆ (STEAM 'ucz się przez próby' ≈ trening decyzyjny/constraints-led z player_development_clinic_rhoades.json)."
+    ]
+  },
+
+  "co_juz_jest_w_platformie": "Portal → Akademia: lekcje + quizy (silnik), zakładka Rozwój (profil 3+3, 8 kompetencji mentalnych z kolumną RÓŻNICA, cel procesowy, tożsamość 'Jestem zawodnikiem, który…'), Ścieżka, Wideo; panel trenera z wpisywaniem 3+3/ocen/celów. To już realizuje część rdzenia (nastawienie na rozwój, cele procesowe, relacja RÓŻNICA).",
+
+  "propozycje_wdrozeniowe": {
+    "1_taksonomia_steam_w_koszykowce": {
+      "idea": "Nowa kategoryzacja/oznaczenie lekcji wg 5 filarów STEAM zastosowanych do koszykówki — pokazuje zawodnikowi, że gra to interdyscyplinarny 'most'.",
+      "mapowanie": {
+        "NAUKA": "fizjologia wysiłku, regeneracja, sen, żywienie",
+        "TECHNOLOGIA": "analiza wideo, statystyki/analytics, AI, tracking",
+        "INŻYNIERIA": "biomechanika ruchu, technika rzutu/kroku, pomiary fizyczne (nawiązanie do szablonu pomiarów)",
+        "SZTUKA": "kreatywność, gra bez piłki, flow, 'czytanie gry', improwizacja",
+        "MATEMATYKA": "eFG%/TS%/decyzje w przewadze, procenty, czas akcji, spacing jako geometria"
+      },
+      "wartosc": "Lekcje już istnieją (Taktyka/Mentalność/Statystyki) — wystarczy nadbudować etykietę STEAM. Niskie ryzyko, spójne z app.py."
+    },
+    "2_rutyna_3_2_1_most": {
+      "idea": "Do lekcji dodać mikro-refleksję 3-2-1: PRZED ('3 skojarzenia / 2 pytania / 1 metafora') i PO ('sprawdź, jak jest teraz'). Zawodnik widzi, jak zmieniło się jego myślenie.",
+      "polaczenie_imopeksis": "Zapis 'przed/po' to odpowiednik kolumny RÓŻNICA — uwidacznia progres i rozjazd percepcji. Zasila zakładkę Rozwój.",
+      "wdrozenie": "Nowe pola przy lekcji (tekst) + widok porównania; lekka rozbudowa tabeli lekcji/wyświetlania."
+    },
+    "3_kregoslup_motywacyjny": {
+      "idea": "Uczynić z nastawienia na ROZWÓJ (Dweck) i motywacji 3.0 (autonomia/mistrzostwo/cel) jawną oś platformy — już częściowo jest (tożsamość + cel procesowy).",
+      "polaczenie_imopeksis": "Cel procesowy (Žalgiris/STEAM 'w Twojej kontroli') + motywacja wewnętrzna IMOPEKSIS ('cel jest mój'). Kompetencje mentalne = obszary do 'mistrzostwa'.",
+      "wdrozenie": "Bez nowej infrastruktury — dopisać język i mikro-treści; ewentualnie 'moje autonomiczne wybory' w celach."
+    },
+    "4_uczenie_przez_eksperyment": {
+      "idea": "Treści promujące ciekawość i próby/błędy: lekcje decyzyjne, 'sprawdź sam' (mini-wyzwania), pytania otwarte zamiast tylko ABCD.",
+      "polaczenie": "Zbieżne z player_development_clinic_rhoades.json (decyzje > powtórzenia) i z 'eksperymentem' STEAM. Silnik quizów już obsługuje pytania otwarte."
+    },
+    "5_mentoring_relacja": {
+      "idea": "Wzmocnić widoczność relacji trener-zawodnik: arkusz RÓŻNICA (już jest) + 'komentarz mentora' do lekcji/celu.",
+      "polaczenie": "Pierson (relacje) + IMOPEKSIS (aktywne słuchanie, 'Co możesz z tym zrobić?')."
+    },
+    "6_kompetencje_4K": {
+      "idea": "Zmapować 4K (kreatywność, kooperacja, komunikacja, krytyczne myślenie) na istniejące kompetencje mentalne i akcenty gry.",
+      "mapowanie": "Kreatywność↔gra bez piłki/flow; Kooperacja↔spójność zespołu; Komunikacja↔obrona 'głośno x3'; Krytyczne myślenie↔decyzyjność/czytanie gry."
+    }
+  },
+
+  "_weryfikacja_zewnetrzna": {
+    "sila_dowodu": "rdzeń mocny, obrzeża słabe — budować na rdzeniu",
+    "co_solidne": "Nastawienie na rozwój (Dweck), motywacja wewnętrzna (Pink/SDT), uczenie oparte na dociekaniu/decyzjach, znaczenie relacji mentor-uczeń, cele procesowe — wszystko z niezależnym wsparciem. To bezpieczny fundament platformy.",
+    "co_slabe_ostrzezenia": [
+      "IMOPEKSIS = 'niszowe' (brak niezależnej walidacji empirycznej) — patrz contested_claims.json. Używać jako spójnej praktyki/języka, NIE jako zwalidowanego pomiaru.",
+      "STEAM jako całość to RUCH edukacyjny, projektowany dla szkoły ogólnej, nie dla rozwoju sportowego — adaptacja jest rozsądna, ale 'nieudowodniona dla koszykówki'. Nie sprzedawać jako 'evidence-based dla elitarnego rozwoju'.",
+      "Antybańka: 'indywidualizacja ścieżki/zainteresowań' ≠ obalony mit 'stylów uczenia się' (contested_claims.json → styl_uczenia_sie_dostosowanie). Różnicować pod ZADANIE i poziom, nie pod rzekomy 'styl'.",
+      "Ryzyko wspólnego rodowodu: IMOPEKSIS i część metodyki (Akademia EPS/Huciński) to jedna szkoła — ich zgodność nie jest niezależnym potwierdzeniem."
+    ],
+    "rekomendacja": "Profil STEAM + IMOPEKSIS jest DOBRYM, spójnym kierunkiem dla platformy edukacyjnej — pod warunkiem oparcia go na wspólnym, udokumentowanym rdzeniu (rozwój/motywacja/relacje/decyzje/refleksja), a traktowania warstw brandowych (sam akronim STEAM, arkusze IMOPEKSIS) jako użytecznego JĘZYKA i STRUKTURY, nie jako dowodu skuteczności."
+  },
+
+  "powiazania": {
+    "steam_edukacja_framework.json": "Rama STEAM.",
+    "steam_publikacja_us_notatki.json": "Źródłowe idee i hasła.",
+    "imopeksis_methodology.json": "Warstwa mentalno-relacyjna (niszowe).",
+    "player_development_clinic_rhoades.json": "Uczenie przez decyzje/eksperyment + indywidualny plan.",
+    "contested_claims.json": "Antybańka: style uczenia się; status IMOPEKSIS.",
+    "modul_akademii_app": "portal/akademia + tabela player_development — miejsce wdrożenia."
+  }
+}

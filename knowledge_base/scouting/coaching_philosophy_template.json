@@ -1,0 +1,198 @@
+{
+  "_source": "Next Draft Foundation — Szablon Projektu Kursowego",
+  "_comment": "Coaching Philosophy Worksheet. Przykładowy materiał do projektu końcowego kursu. Forma dowolna (Word/PPT/Excel/Notion/Canva). Najważniejsze: pokazuje sposób myślenia, proces decyzji i praktyczne użycie wiedzy z kursu.",
+  "_program_use": "Inspiracja do budowy modułu 'Filozofia Trenera/Scouta' w profilu użytkownika systemu.",
+
+  "meta": {
+    "tytul": "Coaching Philosophy",
+    "podtytul": "Moja Filozofia. Moje Wartości. Mój Wpływ.",
+    "brand": "Next Draft Foundation",
+    "cel": "Ustrukturyzowanie osobistej filozofii pracy jako trenera lub scouta."
+  },
+
+  "naglowek_formularza": {
+    "pola": [
+      { "id": "imie_nazwisko",   "label": "Imię i Nazwisko",     "typ": "text" },
+      { "id": "data",            "label": "Data",                 "typ": "date" },
+      { "id": "obecna_rola",     "label": "Obecna Rola / Pozycja","typ": "text" }
+    ]
+  },
+
+  "sekcja_1_moja_misja": {
+    "nr": 1,
+    "id": "moja_misja",
+    "ikona": "target",
+    "nazwa": "MOJA MISJA",
+    "pytania": [
+      "Dlaczego jestem trenerem / skautem?",
+      "Jaki jest mój cel i misja w koszykówce?"
+    ],
+    "pole": { "id": "misja_tekst", "typ": "textarea" }
+  },
+
+  "sekcja_2_moje_wartosci": {
+    "nr": 2,
+    "id": "moje_wartosci",
+    "ikona": "diamond",
+    "nazwa": "MOJE WARTOŚCI",
+    "pytanie": "Jakie wartości są dla mnie najważniejsze w pracy z zawodnikami i współpracy z ludźmi?",
+    "pola": [
+      { "id": "wartosc_1", "label": "1.", "typ": "text" },
+      { "id": "wartosc_2", "label": "2.", "typ": "text" },
+      { "id": "wartosc_3", "label": "3.", "typ": "text" },
+      { "id": "wartosc_4", "label": "4.", "typ": "text" },
+      { "id": "wartosc_5", "label": "5.", "typ": "text" }
+    ]
+  },
+
+  "sekcja_3_moj_wplyw": {
+    "nr": 3,
+    "id": "moj_wplyw",
+    "ikona": "people",
+    "nazwa": "MÓJ WPŁYW",
+    "pytanie": "Jaki wpływ chcę mieć na zawodników, zespół, klub i otoczenie?",
+    "pole": { "id": "wplyw_tekst", "typ": "textarea" }
+  },
+
+  "sekcja_4_przekonania_o_grze": {
+    "nr": 4,
+    "id": "przekonania_o_grze",
+    "ikona": "basketball",
+    "nazwa": "MOJE PRZEKONANIA O GRZE",
+    "podsekcje": [
+      {
+        "id": "atak",
+        "nazwa": "ATAK",
+        "pytania": [
+          "W co wierzę w ofensywie?",
+          "Jak chcę, żeby moja drużyna grała w ataku?"
+        ],
+        "pole": { "typ": "bullet_list", "n": 4 }
+      },
+      {
+        "id": "obrona",
+        "nazwa": "OBRONA",
+        "pytania": [
+          "W co wierzę w defensywie?",
+          "Jak chcę, żeby moja drużyna grała w obronie?"
+        ],
+        "pole": { "typ": "bullet_list", "n": 4 }
+      },
+      {
+        "id": "rozwoj_zawodnika",
+        "nazwa": "ROZWÓJ ZAWODNIKA",
+        "pytania": [
+          "Jak rozwijam zawodników?",
+          "Co jest dla mnie kluczowe w ich rozwoju?"
+        ],
+        "pole": { "typ": "bullet_list", "n": 4 }
+      },
+      {
+        "id": "praca_zespolowa",
+        "nazwa": "PRACA ZESPOŁOWA",
+        "pytania": [
+          "Jak buduję zespół?",
+          "Co jest dla mnie kluczowe w budowaniu kultury?"
+        ],
+        "pole": { "typ": "bullet_list", "n": 4 }
+      },
+      {
+        "id": "podejmowanie_decyzji",
+        "nazwa": "PODEJMOWANIE DECYZJI",
+        "pytania": [
+          "Jak podejmuję decyzje?",
+          "Na czym bazuję jako trener / skaut?"
+        ],
+        "pole": { "typ": "bullet_list", "n": 4 }
+      }
+    ]
+  },
+
+  "sekcja_5_styl_pracy": {
+    "nr": 5,
+    "id": "styl_pracy",
+    "ikona": "calendar",
+    "nazwa": "MÓJ STYL PRACY",
+    "podsekcje": [
+      {
+        "id": "komunikacja",
+        "nazwa": "KOMUNIKACJA",
+        "pytania": ["Jak komunikuję się z zawodnikami, sztabem i innymi?"],
+        "pole": { "typ": "textarea" }
+      },
+      {
+        "id": "przywodztwo",
+        "nazwa": "PRZYWÓDZTWO",
+        "pytania": ["Jaki jestem lider?", "Jak przewodzę zespołowi / grupie?"],
+        "pole": { "typ": "textarea" }
+      },
+      {
+        "id": "organizacja",
+        "nazwa": "ORGANIZACJA",
+        "pytania": ["Jak planuję pracę?", "Jak wygląda moja organizacja na co dzień?"],
+        "pole": { "typ": "textarea" }
+      },
+      {
+        "id": "etos_pracy",
+        "nazwa": "ETOS PRACY",
+        "pytania": ["Jakie nawyki i standardy są nieznegocjowalne w mojej pracy?"],
+        "pole": { "typ": "textarea" }
+      },
+      {
+        "id": "nauka_i_rozwoj",
+        "nazwa": "NAUKA I ROZWÓJ",
+        "pytania": ["Jak się rozwijam?", "Jak chcę się rozwijać w przyszłości?"],
+        "pole": { "typ": "textarea" }
+      }
+    ]
+  },
+
+  "sekcja_6_zasady": {
+    "nr": 6,
+    "id": "moje_zasady",
+    "ikona": "shield",
+    "nazwa": "MOJE ZASADY (NIEPODLEGAJĄCE NEGOCJACJOM)",
+    "pytanie": "Czego zawsze wymagam? Jakie zasady obowiązują w mojej pracy / drużynie?",
+    "pola": [
+      { "id": "zasada_1", "label": "1.", "typ": "text" },
+      { "id": "zasada_2", "label": "2.", "typ": "text" },
+      { "id": "zasada_3", "label": "3.", "typ": "text" },
+      { "id": "zasada_4", "label": "4.", "typ": "text" },
+      { "id": "zasada_5", "label": "5.", "typ": "text" }
+    ]
+  },
+
+  "sekcja_7_wizja_przyszlosci": {
+    "nr": 7,
+    "id": "moja_wizja",
+    "ikona": "telescope",
+    "nazwa": "MOJA WIZJA PRZYSZŁOŚCI",
+    "pytania": [
+      "Gdzie chcę być za 3, 5 i 10 lat?",
+      "Jaką chcę zostawić po sobie markę?"
+    ],
+    "pole": { "id": "wizja_tekst", "typ": "textarea" }
+  },
+
+  "podpis_zaangazowanie": {
+    "id": "podpis",
+    "tekst_intro": "Potwierdzam, że moja filozofia to mój kompas. Będę jej wierny każdego dnia.",
+    "pola": [
+      { "id": "podpis",     "label": "Podpis", "typ": "signature" },
+      { "id": "data_podp",  "label": "Data",   "typ": "date" }
+    ]
+  },
+
+  "cytaty_dolne": [
+    { "tekst": "BĄDŹ SOBĄ. ALE BĄDŹ SOBĄ NA 100%." },
+    { "tekst": "LUDZIE NIE PAMIĘTAJĄ, CO POWIEDZIAŁEŚ." },
+    { "tekst": "PAMIĘTAJĄ, JAKI WPŁYW NA NICH MIAŁEŚ." },
+    { "tekst": "WIZJA BEZ DZIAŁANIA TO TYLKO MARZENIE." }
+  ],
+
+  "uwagi_projektowe": [
+    "Forma projektu jest całkowicie dowolna: Word, PowerPoint, Excel, Notion, Canva lub inna.",
+    "Najważniejsze: projekt pokazuje sposób myślenia, proces podejmowania decyzji i praktyczne użycie wiedzy z kursu.",
+    "To jest przykładowy materiał — służy jako inspiracja i drogowskaz, nie jako obligatoryjny szablon."
+  ]
+}

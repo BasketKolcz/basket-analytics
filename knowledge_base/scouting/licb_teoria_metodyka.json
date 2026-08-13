@@ -1,0 +1,100 @@
+{
+  "_source": "„Teoria i metodyka koszykówka.doc\" — część ogólna kursu na licencję trenera koszykówki klasy B, Wyższa Szkoła Sportowa im. K. Górskiego w Łodzi.",
+  "_comment": "Warstwa teoretyczna kursu: antropomotoryka, rozwój osobniczy, fazy kształtowania nawyków ruchowych, historia koszykówki, bezpieczeństwo zajęć. To materiał podstawowy (egzaminacyjny), ale zawiera jedną rzecz o realnej wartości scoutingowej — mapę OKRESÓW ROZWOJOWYCH z wyznaczonymi „apogeami motoryczności\", czyli oknami największej podatności na uczenie się ruchu.",
+  "_program_use": "Kontekst wiekowy dla oceny zawodników młodzieżowych. „Drugie apogeum motoryczne\" (dziewczęta 10-11, chłopcy 12-13) to okno, w którym uczenie ruchu jest najłatwiejsze — a zaraz po nim skok pokwitaniowy z przejściowym spadkiem sprawności, zwłaszcza u dziewcząt. Wprost tłumaczy, dlaczego wyniki 12-14-latków bywają mylące i nie należy z nich ekstrapolować.",
+
+  "kategoria": "LIC.B — teoria ogólna i antropomotoryka",
+  "_prawa_autorskie": "Materiał objęty prawami autorskimi WSS im. K. Górskiego w Łodzi. Plik zawiera strukturalne notatki własne do użytku prywatnego.",
+
+  "funkcje_wychowania_fizycznego": {
+    "stymulatywna": "pobudzająca",
+    "adaptacyjna": "przystosowawcza",
+    "kompensacyjna": "wyrównawcza",
+    "korektywna": "poprawcza"
+  },
+
+  "motorycznosc": {
+    "antropomotoryka": "Nauka zajmująca się ruchem człowieka.",
+    "rodzaje": {
+      "produkcyjna": "Wytwarzanie dóbr materialnych — związana z pojęciem pracy",
+      "sportowa": "Ruchy zabawowe i sportowe, podnoszące sprawność fizyczną i wzmagające zdrowie",
+      "wyrazowa_ekspresyjna": "Gesty, mimika, pozy ciała, taniec",
+      "czynnosci_samoobslugi": "Jedzenie, mycie się, ubieranie"
+    }
+  },
+
+  "rozwoj_osobniczy": {
+    "ontogeneza": "Proces przemian morfologicznych, fizjologicznych i psychicznych w ciągu całego życia — od zapłodnienia do śmierci.",
+    "ewolucja": "Przewaga zmian anabolicznych nad katabolicznymi (procesów budowy nad rozpadem) — obejmuje okres wewnątrzłonowy, dzieciństwo i młodość, do ok. 20-25 r.ż.",
+    "inwolucja": "Przewaga zmian katabolicznych nad anabolicznymi — starzenie się organizmu."
+  },
+
+  "okresy_rozwojowe_motorycznosci": {
+    "_wartosc_scoutingowa": "Najbardziej użyteczna część tego dokumentu — mapa okien rozwojowych.",
+    "1_noworodek_i_niemowle": {
+      "fazy": ["faza premotoryczna — odruchy bezwarunkowe", "faza promotoryczna — ruchy błędne (nikły związek z rzeczywistością)", "ruchy manipulacyjne — tzw. mała motoryka"],
+      "koniec": "Z chwilą rozpoczęcia chodzenia"
+    },
+    "2_poniemowlecy_1_3_i_przedszkolny_4_7": {
+      "cechy": ["doskonalenie równowagi", "praksje — ruchy celowe związane z przeznaczeniem przedmiotu (ok. 2-3 r.ż.)", "przechodzenie od myślenia konkretno-obrazowego do abstrakcyjnego (intelektualizacja czynności ruchowych)", "nadruchliwość", "spontaniczność", "niska zdolność koncentracji"],
+      "pierwsze_apogeum": "Wysoka harmonia, płynność i poczucie rytmu ruchu — szczególnie w 5-6 r.ż. („złoty okres\", pierwsze apogeum motoryczności)"
+    },
+    "3_mlodszy_wiek_szkolny": {
+      "cechy": ["wstrząs w momencie rozpoczęcia nauki w szkole", "dalszy dynamiczny rozwój", "9-10 r.ż. — znacznie rośnie zdolność koncentracji"],
+      "drugie_apogeum": "ETAP DZIECKA DOSKONAŁEGO (drugie apogeum motoryczne): dziewczęta 10-11 r.ż., chłopcy 12-13 r.ż. — niezwykła łatwość uczenia się ruchów"
+    },
+    "4_pokwitanie_i_wiek_mlodzienczy": {
+      "cechy": [
+        "Burzliwe przemiany w całym ustroju: dziewczęta 10-12 r.ż., chłopcy 12-14 r.ż.",
+        "Skok pokwitaniowy",
+        "Intensywne życie emocjonalne",
+        "Powiększenie dymorfizmu płciowego",
+        "OBNIŻENIE poziomu sprawności u dziewcząt",
+        "Przejściowy brak równowagi między procesami pobudzenia i hamowania",
+        "Zróżnicowanie motoryczności wywołane płcią, trybem życia i aktywnością fizyczną"
+      ],
+      "koniec": "Ok. 20-24 r.ż., gdy poziom sprawności się stabilizuje — charakterystyczna wysoka ekonomia i dostosowanie ruchów do potrzeb"
+    },
+    "5_wiek_dojrzaly_i_starzenie": {
+      "20_40": "Pełnia rozwoju psychicznego i fizycznego",
+      "40_60": "Obniżenie sprawności i zainteresowań ruchowych; skłonność do zaburzeń układu krążenia",
+      "powyzej_60": "Kruchość układu kostnego, wiotczenie mięśni, dysocjacje ruchowe"
+    },
+    "_wnioski_dla_scoutingu": [
+      "Okno największej podatności na naukę techniki (drugie apogeum) wypada PRZED skokiem pokwitaniowym — stąd nacisk metodyki na nauczanie fundamentów w klasach II-VI",
+      "Przejściowy brak równowagi pobudzenia/hamowania w pokwitaniu tłumaczy wahania formy i koncentracji u 12-14-latków",
+      "Obniżenie sprawności u dziewcząt w pokwitaniu to zjawisko rozwojowe, nie regres szkoleniowy",
+      "Różnica ok. 2 lat w terminie tych okien między dziewczętami a chłopcami — istotna przy porównywaniu roczników"
+    ]
+  },
+
+  "fazy_ksztaltowania_nawykow_ruchowych": {
+    "faza_1": "Ogólne opanowanie podstawowego przebiegu ruchu — mała zborność, niska jakość wykonania, zbyt wielki nakład siły (włączanie niepotrzebnych grup mięśniowych i ich nadmierne napięcie). Ruch jest na razie tylko wyobrażony, nie wypróbowany.",
+    "faza_2": "Poprawianie, doskonalenie i różnicowanie — przebieg bardziej zwarty i harmonijny, sterowanie precyzyjniejsze i dokładniej kontrolowane dzięki skierowaniu uwagi na eliminację błędów. Na tym etapie NIE MA jeszcze trwałego nawyku ruchowego.",
+    "faza_3": "Utrwalenie i przystosowanie do zmiennych warunków — stadium AUTOMATYZACJI. Ruchy wyuczone świadomie mogą być wykonywane zarówno bez świadomej kontroli, jak i z pełną świadomością; dochodzi możliwość dostosowania do zmiennych warunków bez naruszenia przebiegu.",
+    "_powiazanie": "Te trzy fazy odpowiadają trójpodziałowi Nauczanie → Doskonalenie → Trenowanie z części specjalistycznej kursu."
+  },
+
+  "historia": {
+    "geneza": "Grudzień 1891 — dr James Naismith, profesor pochodzący z Kanady, wymyślił grę dla osiemnastu uczniów szkoły sportowej YMCA w Springfield (Massachusetts). Pierwszy rzut oddano do kosza na brzoskwinie zwisającego z balustrady balkonu sali gimnastycznej.",
+    "ewolucja": "Przez ponad 120 lat koszykówka ewoluowała pod każdym względem — od przepisów, przez sprzęt i samych zawodników, po rozwiązania techniczno-taktyczne."
+  },
+
+  "bezpieczenstwo_zajec": [
+    "Wywiesić, omówić i skrupulatnie egzekwować przestrzeganie przepisów bezpieczeństwa (regulamin korzystania z sali, hali, pływalni, boiska)",
+    "Znać i przestrzegać przepisy prawne dotyczące organizacji zajęć oraz norm budowy obiektów sportowych",
+    "Zatroszczyć się o właściwy wybór i przygotowanie miejsca do zajęć",
+    "Przygotować sprzęt i przyrządy",
+    "Przed każdymi zajęciami sprawdzić ubiór i obuwie ćwiczących",
+    "Dbać o dyscyplinę",
+    "Zwracać uwagę na bezpieczne odległości ćwiczących względem siebie oraz ścian, kaloryferów itp."
+  ],
+
+  "powiazania": {
+    "licb_planowanie_struktura_konspekty.json": "Fazy kształtowania nawyków ruchowych są teoretyczną podstawą trójpodziału nauczanie/doskonalenie/trenowanie.",
+    "book_development_curriculum_jozak.json": "Newralgiczne okresy rozwoju zdolności motorycznych i wiek biologiczny vs metrykalny — ten sam temat ujęty od strony piłkarskiej akademii.",
+    "imopeksis_methodology.json": "Ścieżka „Dookoła Sportu\" (0-80 lat) to ta sama mapa okresów rozwojowych rozciągnięta na całe życie sportowe.",
+    "projection_fit.json": "Rozwój fizyczny i potencjał ciała — okresy rozwojowe wyjaśniają, dlaczego projekcja z wieku 12-14 lat jest zawodna.",
+    "m7_org_structure_coach_analysis.json": "„U14 ≠ najlepszy senior\" i „dominacja fizyczna = red flag\" — tutaj jest fizjologiczne uzasadnienie."
+  }
+}

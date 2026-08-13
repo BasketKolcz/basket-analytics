@@ -1,0 +1,157 @@
+{
+  "_source": "Cztery dokumenty z folderu SCOUTING/Nowy folder — dwie kompletne realizacje raportu skautingowego przeciwnika: (A) „KOELN SCT.docx\" — raport personalny na mecz z 28.9.2024, niemiecka ProB; (B) „Trefl Team Characteristic.pdf\" + „Trefl Players.pdf\" + „Trefl Players.doc\" (ta sama treść, wersja edytowalna i PDF) — raport na Trefl Sopot, 25.9.2024, PLK.",
+  "_uzupelnienie_zrodel": "Dodano TRZECI przykład: raport na Klaipėdos Neptūnas przygotowany przez sztab Žalgirisu Kowno (play-off, QUARTERFINALS GM4) — ze zdjęć wydruku z wizyty w klubie. Patrz przyklad_C_neptunas_zalgiris.",
+  "_comment": "PRZYKŁADY WZORCOWE do metody opisanej w opponent_scouting_method.json. Trzy różne warsztaty tej samej szkoły: Köln realizuje wytyczne Ulm w 100% (gwiazdki ważności + gwiazdki rzutu + closeout), Trefl kładzie większy nacisk na charakterystykę zespołową i leaderboardy. Razem pokazują pełny zakres gatunku. UWAGA: to materiały robocze klubów zawodowych dotyczące realnych zawodników — plik zawiera opis STRUKTURY i WZORCÓW JĘZYKOWYCH, nie pełny przedruk ocen wszystkich zawodników.",
+  "_program_use": "Wzorzec docelowy dla ewentualnego modułu „Raport przeciwnika\" w programie: pokazuje, jakie pola musi mieć karta zawodnika przeciwnika, jak wygląda depth chart z archetypami, jakie leaderboardy generować automatycznie z bazy (program MA już te dane: 3PT%, FT%, TO, OREB) i — co najważniejsze — że każdy blok kończy się instrukcją taktyczną, której NIE da się wygenerować automatycznie i która musi być polem tekstowym dla trenera.",
+
+  "kategoria": "Skauting przeciwnika (advance scouting) — przykłady wzorcowe",
+
+  "przyklad_A_koeln": {
+    "metryka": "Raport personalny, data meczu 28.9.2024, przeciwnik niemiecki (ProB). 10 zawodników opisanych indywidualnie.",
+    "zakres": "WYŁĄCZNIE personnel report — brak sekcji zespołowej (tę rolę pełni osobny dokument, por. przykład Trefl).",
+    "struktura": {
+      "1_depth_chart": {
+        "uklad": "5 kolumn pozycyjnych PG | SG | SF | PF | C, w każdej zawodnicy od pierwszego składu w dół",
+        "format_wpisu": "#numer NAZWISKO [TAG ARCHETYPU]",
+        "zaobserwowane_tagi": ["PG SCORING", "SPOT UP SHOOTER", "SLASHER", "ENERGY FORWARD", "POST UP BIG", "DRIVER", "LEFTY SHOOTER", "ROLLING BIG"],
+        "_uwaga": "Tag archetypu jest KRÓTKI (1-3 słowa) i od razu mówi, czego się spodziewać. To praktyczny odpowiednik rozbudowanych archetypów z player_archetypes.json."
+      },
+      "2_karta_zawodnika": {
+        "pola_naglowkowe": ["#numer", "IMIĘ I NAZWISKO", "wzrost (np. 1.83)", "RĘCZNOŚĆ (Right / LEFT)", "pozycja", "★ ważności w systemie", "SHOOTING: ★ oceny rzutowej"],
+        "blok_tendencji": "Punktowana lista: typ zawodnika, jakość rzutu za 3, zachowanie w otwartym polu, czy jest celem zasłon bez piłki, opcje w PnR w kolejności 1st/2nd, tendencje w low poście",
+        "metoda_closeoutu": "Wpisana WIELKIMI LITERAMI jako osobna linia — bezpośrednio wyprowadzona z liczby gwiazdek rzutu",
+        "instrukcje_obronne": "2-4 krótkie zdania rozkazujące, np. spowolnij go w transition, zepchnij na słabszą stronę, podążaj za nim przy zasłonach, odetnij mu wizję w PnR",
+        "blok_statystyk": "Pełna linia: MIN, PTS, 2PM, 2PA, 2P%, 3PM, 3PA, 3P%, FTM, FTA, FT%, REB, OREB, DREB, AST, STL, TOV, BLK, F"
+      }
+    },
+    "spojnosc_systemu_gwiazdek": {
+      "_ustalenie": "Mapowanie gwiazdek rzutu na metodę closeoutu jest w tym raporcie zrealizowane BEZ ANI JEDNEGO WYJĄTKU — na 10 zawodników.",
+      "★★★_shooter": "→ RUN OFF & REARVIEW CONTEST (2 zawodników)",
+      "★★_can_shoot_and_drive": "→ STICK HAND CLOSEOUT (6 zawodników)",
+      "★_non_shooter": "→ DOUBTS CLOSEOUT (2 zawodników)",
+      "_wniosek": "To dowód, że system jest w praktyce deterministyczny — a więc nadaje się do zaimplementowania jako reguła, nie jako podpowiedź."
+    },
+    "rozroznienie_dwoch_ocen": "Ważność w systemie (★) i jakość rzutu (SHOOTING ★) to DWIE NIEZALEŻNE skale — zawodnik może być kluczowy dla przeciwnika (★★★), ale słabo rzucać (SHOOTING ★). Program musi je trzymać jako osobne pola."
+  },
+
+  "przyklad_B_trefl_sopot": {
+    "metryka": "Raport na Trefl Sopot, datowany 25.9.2024 (PLK). Dwa dokumenty: „Team Characteristic\" (zespół) + „Players Characteristic\" (personel). Wersja .doc to edytowalne źródło z placeholderami [pic] na zdjęcia zawodników.",
+    "dokument_1_team_characteristic": {
+      "strona_1_sklad_i_leaderboardy": {
+        "depth_chart": "STARTERS (5 zawodników) i BENCH PLAYERS (5 zawodników); każdy z numerem, pozycją (często podwójną typu PG/SG, SF/PF, PF/C), imieniem i nazwiskiem, WZROSTEM i WIEKIEM",
+        "leaderboardy": ["BEST PLAYERS", "BEST 3 PT", "NO/BAD 3 POINT SHOT", "BEST FT", "WORST FT", "BEST 1 ON 1 INSIDE", "BEST 1 ON 1 OUTSIDE", "BEST OFF REBOUNDERS", "MOST TURNOVERS", "LAST SHOTS"],
+        "_uwaga_last_shots": "Kategoria LAST SHOTS = kto bierze rzut w końcówce. Informacja czysto taktyczna, nie statystyczna — kluczowa na ostatnie posiadanie.",
+        "_program_use": "8 z 10 leaderboardów program potrafi wygenerować AUTOMATYCZNIE z player_stats (3PT%, FT%, TO, OREB, PTS). Ręcznego wskazania wymagają tylko BEST 1 ON 1 INSIDE/OUTSIDE i LAST SHOTS."
+      },
+      "strona_2_charakterystyka": {
+        "defense": {
+          "basic_system": "Podstawowy system (np. M2M — man to man)",
+          "full_court": "Ocena presingu i jakości odcięcia podania z autu",
+          "pick_n_roll_defense": "ROZBICIE NA WARIANTY: coverage z 5 osobno dla SIDE PnR i TOP PnR, każdy z opcją 1st i 2nd; osobno podstawowy koncept z 4; adnotacja o możliwej obronie UNDER przeciw słabym/przeciętnym rzucającym",
+          "off_ball_screens": "Sposób obrony zasłon bez piłki",
+          "low_post": "1st odpowiedzialność indywidualna, 2nd podwojenie od ostatniego przy niedopasowaniu"
+        },
+        "offense": {
+          "format": "Lista ponumerowana 1-6, każdy punkt z IMIENNĄ OBSADĄ",
+          "zaobserwowane_kategorie": [
+            "Ogólna charakterystyka zespołu (np. fizyczny, twardy, gra mocno po obu stronach)",
+            "Transition offense — którzy zawodnicy biegną, kto postuje w transition",
+            "Low post — lista głównych celów podania",
+            "Off ball screens — kto z nich korzysta",
+            "PnR z rozbiciem na trzy role: ON BALL (kto rozgrywa), ROLL (kto wchodzi), POP OUT (kto wychodzi na rzut)",
+            "Zbiórka ofensywna — kto atakuje szkło"
+          ],
+          "_zasada": "Nie ma zdań ogólnych bez nazwisk. Każda tendencja zespołowa jest natychmiast przypisana do konkretnych numerów — to jest właśnie to, co czyni raport użytecznym na treningu."
+        }
+      }
+    },
+    "dokument_2_players_characteristic": {
+      "uklad_karty": "Tabela: Name (z numerem i pozycją) | FOTO | MIN | PTS | FG%/2Pt% | 3Pt% | FT% | REB (rozbite DEF-OF oraz suma) | AST | To's | VAL | St Shot",
+      "blok_opisowy": "Punktowana lista tendencji pod blokiem statystycznym",
+      "linia_koncowa": "Wyróżniona instrukcja JAK GO BRONIĆ — 2-4 krótkie polecenia",
+      "wzorce_jezykowe_tendencji": [
+        "Typ zawodnika wielkimi literami (SCORING MINDED PG, SLASHER, DRIVER, LEFTY, STRECH 4/5, PROLL CENTER, SHOOTER + DEFENDER)",
+        "Ręczność i preferowana strona drivu (can go both / better to right / drives better to left)",
+        "PnR w kolejności preferencji (Proll: 1st Drive, 2nd Pull Up J)",
+        "Low post z konkretnym ruchem (finish over left shoulder / right hook preference / likes up and under)",
+        "Ostrzeżenia wykrzyknikowe przy rzeczach krytycznych (LEFTY!!! / Watch out Duck in!!!)",
+        "Ocena obrony zawodnika (Average defender / Poor defender.. PRoll/1x1)"
+      ],
+      "wzorce_jezykowe_instrukcji": [
+        "Tempo: Stop him early in TO / Slow him down in TO / Find him early in TO",
+        "Rzut: Contest his shot / Don't let him find his rhythm",
+        "Kierunek: Shade him right / Take away his left inside",
+        "Zasłony: Force and trail his off ball screens / Bump his cuts",
+        "Zbiórka: Box him out",
+        "Podanie: No easy inside catches / No easy post catches",
+        "Zachęta do atakowania słabego ogniwa: Attack him. Play hard vs him."
+      ],
+      "_uwaga_asymetria": "Instrukcja dla zawodnika o słabej obronie brzmi „ATTACK HIM\" — czyli karta zawodnika przeciwnika zawiera nie tylko wskazówki OBRONNE, ale i OFENSYWNE. To realizacja wytycznej Ulm „WHAT ARE THEIR WEAK LINKS?\"."
+    }
+  },
+
+  "przyklad_C_neptunas_zalgiris": {
+    "metryka": "Wydrukowany raport skautingowy na Klaipėdos Neptūnas, przygotowany przez sztab Žalgirisu Kowno na mecz play-off (nagłówek playbooka: QUARTERFINALS GM4). Źródło: zdjęcia wydruku z wizyty w klubie. 10 kart zawodników na jednej stronie + osobna strona z playbookiem przeciwnika i kluczami do wygranej.",
+    "_wyroznik": "NAJGĘŚCIEJ UPAKOWANY z trzech przykładów — cały skład na JEDNEJ stronie A4, przy zachowaniu pełnej informacji taktycznej. Wprowadza dwa rozwiązania, których nie ma u Kölna ani Trefla: ikony tendencji i system TARGET.",
+    "karta_zawodnika": {
+      "naglowek": "#numer, NAZWISKO, herb klubu, Position, Height, zdjęcie",
+      "ikony_tendencji": {
+        "opis": "Trzy piktogramy z podpisem — natychmiast czytelne bez czytania tekstu",
+        "DRIVES": "RIGHT / LEFT — preferowana strona penetracji",
+        "HAND": "RIGHT / LEFT — ręka kończąca",
+        "POST": "RIGHT / LEFT — strona gry na poście (obecna tylko u zawodników grających tyłem do kosza)"
+      },
+      "blok_statystyk": "Pełna linia boxscore: MIN, FGM-A, 2PM-A, 3PM-A, FTM-A, REB D-O, REB, AS, ST, TO, BS, RBS, PF, RF, PTS, +/-, EFF — wraz z procentami pod wartościami",
+      "strengths_weaknesses": "Ponumerowane listy: zwykle 1-5 mocnych stron i 1-3 słabych, często z liczbą w nawiasie uzasadniającą ocenę (np. „Playmaking (4.6 APG)\", „3PT (287 ATT & 40% – HOT)\", „2nd chance opp (1.5 ORPG)\", „Shot-blocking (1.2 BPG)\")",
+      "etykieta_archetypu": "Jedna linia WIELKIMI LITERAMI podsumowująca zawodnika — zaobserwowane: PLAYMAKING SHOOTER, DRIVER, LEAKOUT SHOOTER, MICROWAVE SNIPER, SHOOTER, LP THREAT & DRIVER, INSIDE-OUT WING, OLD-SCHOOL BIG, INSIDE-OUT BIG, PHYSICAL FARMER",
+      "instrukcja_obronna": "2-4 hasła pod etykietą, np. NO SHOT – NO RIGHT · DENY PG · SEND LEFT INSIDE · UNDER & FOUL · FACE-TO-FACE · NO UNDER · BOX-OUT & OUTRUN · PHYSICAL FRONT · OFF-SCR = UNDER",
+      "special_sets": "Numery setów, w których zawodnik jest głównym adresatem (np. „2 SIDE\", „2 UP\", „32 & SLOB – 3 UP\", „33\", „4 UP & 24\", „25 & 5 DOWN\") — spina kartę zawodnika z playbookiem przeciwnika"
+    },
+    "system_target": {
+      "_waga": "NAJCIEKAWSZY POMYSŁ Z CAŁEGO PRZYKŁADU — trzystopniowa klasyfikacja, kogo atakować w OBRONIE przeciwnika.",
+      "MAIN TARGET": "Główny cel — na nim koncentrujemy atak (u Neptūnasa: #28 Remeikis i #24 Metrikis)",
+      "BIG TARGET": "Duży cel — słaby obrońca, warto go atakować",
+      "TARGET": "Cel — atakowalny",
+      "NOT A TARGET": "Nie atakujemy go — dobry obrońca (u Neptūnasa: #6 Jonkus i #16 Mačiulis)",
+      "_dlaczego_to_dziala": "To jest ODWRÓCENIE perspektywy karty: ta sama karta mówi jednocześnie JAK GO BRONIĆ i CZY GO ATAKOWAĆ. U Kölna i Trefla informacja ofensywna pojawia się tylko wyjątkowo („Attack him\"); tutaj jest sformalizowana w skalę.",
+      "_program_use": "Skala 4-stopniowa, deterministyczna jak gwiazdki Ulm — kandydat na pole w karcie zawodnika przeciwnika, wyliczane lub ustawiane ręcznie na podstawie oceny obrony."
+    },
+    "kody_kolorystyczne": "W instrukcjach pojawiają się słowa GREEN i BLACK (np. „FACE-TO-FACE & BLACK\", „GREEN\") — najpewniej wewnętrzne kody coverage'ów Žalgirisu, nieczytelne bez klucza klubowego. Analogiczne do polskiego systemu obron kolorowych (czarna/niebieska/żółta/czerwona) z licb_ocena_i_obserwacje.json, ale to inny, własny słownik.",
+    "playbook_przeciwnika": {
+      "zawartosc": "Diagramy setów przeciwnika pogrupowane i nazwane: „2 UP & 2 SIDE (Spanoulis + top P/R)\", „4 UP & 4 FLASH (diagonal)\", „5 DOWN (diamond LP)\", „24 (zipper + LP)\", „33 (stagger - flare - LP)\", „SLOB – 3 UP (stagger x Remeikis)\"",
+      "_powiazanie_z_kartami": "Nazwy setów wracają w polu SPECIAL SETS na kartach zawodników — czytający wie od razu, kto jest adresatem którego zagrania."
+    },
+    "keys_to_win": {
+      "_format": "Krótka lista na tej samej stronie co playbook — całość odprawy mieści się w jednym spojrzeniu.",
+      "DEF": ["BOX-OUT", "SHOOTERS = NO SHOT – NO RIGHT", "DENY #6 & PUSH OUT OF SETS"],
+      "OFF": ["TRANSITION", "PAINT TOUCHES & FIND CORNERS", "MAIN TARGETS = #28 & #24"],
+      "_uwaga": "Sześć haseł na cały mecz. To jest realizacja zasady „short videoreport\" z wytycznych Ulm, przeniesiona na papier: pełna analiza istnieje, ale na odprawę idzie sześć punktów."
+    }
+  },
+
+  "roznice_miedzy_warsztatami": {
+    "koeln": "Nacisk na PERSONEL. Formalne gwiazdki (dwie skale), ręczność w nagłówku, pełna linia statystyczna z STL/BLK/F, tagi archetypów w depth charcie. Brak warstwy zespołowej w tym dokumencie.",
+    "trefl": "Nacisk na ZESPÓŁ. Rozbudowana charakterystyka defense/offense z imienną obsadą i rozbiciem PnR na warianty (SIDE/TOP, 1st/2nd), leaderboardy zawodników, wzrost i wiek w depth charcie. Brak formalnych gwiazdek — ich rolę pełni opis słowny.",
+    "wspolny_mianownik": "Obie szkoły: (1) depth chart ze starterami i ławką, (2) tendencje z kolejnością preferencji 1st/2nd, (3) każda obserwacja zakończona instrukcją, (4) blok statystyczny przy każdym zawodniku.",
+    "neptunas_zalgiris": "Nacisk na GĘSTOŚĆ I DECYZYJNOŚĆ. Cały skład na jednej stronie, ikony tendencji zamiast zdań, statystyka uzasadniająca każdą mocną stronę, system TARGET (kogo atakować), spięcie kart z playbookiem przez SPECIAL SETS, całość domknięta sześcioma KEYS TO W.",
+    "_rekomendacja": "Kompletny raport = struktura zespołowa Trefla + formalny system gwiazdek Kölna + system TARGET i ikony tendencji z Žalgirisu. Trefl mówi CO ROBI PRZECIWNIK, Köln mówi JAK BRONIĆ KAŻDEGO, Žalgiris dokłada KOGO ATAKOWAĆ i mieści to na jednej stronie.",
+    "_trzy_skale_oceny_zawodnika_przeciwnika": "Z trzech przykładów wyłaniają się trzy niezależne skale, które warto trzymać osobno: (1) WAŻNOŚĆ w systemie przeciwnika (★-★★★, Köln), (2) JAKOŚĆ RZUTU → metoda closeoutu (★-★★★, Köln/Ulm), (3) ATAKOWALNOŚĆ w obronie (NOT A TARGET → TARGET → BIG TARGET → MAIN TARGET, Žalgiris)."
+  },
+
+  "wnioski_dla_programu": {
+    "pola_karty_zawodnika_przeciwnika": ["numer", "imię i nazwisko", "pozycja (dopuszczalna podwójna)", "wzrost", "wiek", "ręczność", "★ ważności 1-3", "★ rzutu 1-3", "metoda closeoutu (WYLICZANA z ★ rzutu)", "blok statystyk", "tendencje (lista)", "instrukcja obronna (tekst)"],
+    "automatyzowalne_z_bazy": "Blok statystyk i 8 z 10 leaderboardów — program ma już te dane w player_stats. Możliwe wygenerowanie szkieletu raportu jednym kliknięciem.",
+    "wymagajace_trenera": "Tendencje, instrukcje obronne, ocena 1on1 inside/outside, LAST SHOTS, charakterystyka zespołowa i coverage'e PnR — to obserwacja wideo, nie statystyka.",
+    "regula_deterministyczna": "★ rzutu → metoda closeoutu. Jedyna reguła w całym raporcie, którą można w pełni zautomatyzować (potwierdzona na 10/10 zawodników w Kölnie).",
+    "dwa_widoki": "Wytyczne Ulm wymagają long i short videoreportu z TYCH SAMYCH klipów — analogicznie raport powinien mieć widok pełny (sztab) i skrócony (odprawa)."
+  },
+
+  "powiazania": {
+    "opponent_scouting_method.json": "PLIK NADRZĘDNY — wytyczne Ulm, których te dokumenty są realizacją. Tam pełny słownik terminów obronnych (ICE, HEDGE, QUICK SHOW, FLAT, UNDER).",
+    "player_archetypes.json": "Tagi w depth charcie to skrócona forma archetypów.",
+    "position_profiles.json": "Podwójne pozycje (PG/SG, PF/C) w raportach potwierdzają tezę „funkcja > pozycja\".",
+    "schema/tables.json": "player_stats zawiera dane potrzebne do automatycznego wygenerowania bloków statystycznych i leaderboardów.",
+    "scouting_report.json": "Raport rekrutacyjny — inny gatunek, patrz rozroznienie_gatunkowe w pliku metody.",
+    "coaching_notes.json": "Obrona zasłon wg Messiny/Obradovicia/Shiveka — teoria za coverage'ami opisywanymi w tych raportach."
+  }
+}

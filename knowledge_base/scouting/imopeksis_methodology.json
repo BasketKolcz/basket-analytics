@@ -1,0 +1,154 @@
+{
+  "_weryfikacja_zewnetrzna": {
+    "sila_dowodu": "niszowe",
+    "krytyka": "IMOPEKSIS to spójny, przemyślany system PRAKTYKA (prof. Huciński), ale wyszukiwanie zwraca wyłącznie polskie źródła komercyjne/autorskie — BRAK niezależnej walidacji empirycznej w literaturze międzynarodowej. Arkusze pomiarowe i reguła '2-3 empatów na piątkę' nie mają opublikowanego niezależnego potwierdzenia trafności.",
+    "wazne_dla_calej_bazy": "IMOPEKSIS jest JEDNĄ ze szkół metodycznych, NIE neutralnym kręgosłupem, wobec którego mierzy się resztę. Jego zgodność z Akademią EPS to NIE potwierdzenie — Huciński jest współautorem obu. Wspólny rodowód ≠ niezależne źródła.",
+    "szczegoly_i_zrodla": "Patrz contested_claims.json → tezy.imopeksis_jako_system."
+  },
+  "_source": "1) 'Dzienniczek 21.06.2021.pdf' — DZIENNIK MŁODYCH TALENTÓW (opr. Tomasz Wilczewski, Justyna Pytlarczyk, Paweł Lenik; gra planszowa Just Play IMOPEKSIS, ekstratrener.pl). 2) Infografika 'IMOPEKSIS Basketball Clinic — psychospołeczne czynniki decydujące o sukcesie szkoleniowo-sportowym i życiowym' (aut. Tomasz Wilczewski, Justyna Pytlarczyk; ISBN 978-83-944906-4-4). 3) Plansza 'Fazy lekcji treningowej' (Tomasz Wilczewski, Justyna Sosińska). 4) Schemat 'Dookoła Sportu — zdolności i predyspozycje'. 5) Plansze 'Podstawy nauczania koszykówki cz. 1-3' (Akademia EPS / Polish Basketball Clinic).",
+  "_comment": "IMOPEKSIS to autorski polski system psychopedagogiki koszykówki. Nazwa = akronim 8 psychospołecznych czynników sukcesu: Intencje, MOtywacja, PEwność siebie, Emocje, Koncentracja, Spójność, Intuicja, Skuteczność (I-MO-P-E-K-S-I-S). System łączy: trening umiejętności technicznych (27 fundamentów), rozwój mentalny (DISC + czynniki psychospołeczne) i pedagogikę relacji trener-zawodnik. Fundament: trener buduje ŚRODOWISKO, w którym zawodnik rozwija samoskuteczność i spójność. Powiązany z disc_profile_assessment.json (Extended DISC) i teaching_fundamentals.json (konspekty nauczania).",
+  "_program_use": "Referencja metodyczna dla modułu rozwoju zawodnika i planowania treningu. Może zasilić: (a) narzędzie planowania lekcji w 3 fazach (Nauczanie/Doskonalenie/Trenowanie), (b) system diagnozy 27 umiejętności z rubryką 3/2/1 pkt (indywidualna karta postępu zawodnika, 3 poziomy zaawansowania), (c) moduł celów zawodnika (Drzewko celów 7 dni, Koło celów sportowych), (d) checklist czynników psychospołecznych dla trenera. Rubryka 3/2/1 pkt na umiejętność mapuje się na diagnostykę techniczną w karcie zawodnika.",
+
+  "osiem_czynnikow_psychospolecznych": {
+    "_akronim": "IMOPEKSIS = Intencje · MOtywacja · PEwność siebie · Emocje · Koncentracja · Spójność · Intuicja · Skuteczność",
+    "_idea": "8 czynników decydujących o sukcesie szkoleniowo-sportowym i życiowym. Każdy to obszar pracy trenera z zawodnikiem (partnerem). Zwieńczenie: SUKCES · SKUTECZNOŚĆ · SPEŁNIENIE.",
+    "intencje": {
+      "hasło": "szacunek",
+      "zasada": "Zawsze wysłuchaj partnera do końca i zaakceptuj to co czuje i myśli. Nie narzucaj swoich pomysłów, opinii, racji, przekonań i doświadczeń w rozmowie z innymi. Pytaj 'Co możesz z tym zrobić? Zrób jak uważasz'. Przekaż partnerowi decyzję, racje i odpowiedzialność za siebie i innych. Wymuszanie szacunku karami/nagrodami nie prowadzi do rzeczywistego szacunku — Twoja postawa, a nie słowa, budują odczucie rzeczywistego szacunku."
+    },
+    "motywacja": {
+      "hasło": "wewnętrzna",
+      "zasada": "Zaniżaj i dostosowuj poziom trudności zadań, aby partner odczuł osiągalność działania. W drodze do sukcesu podążaj małymi celami. Kieruj celami zespołu, a nie własnymi — sukcesu innych nie przypisuj sobie. Naucz zawodnika czerpać satysfakcję z samodzielnego wyznaczania zadań i planów (samodocenienie). Ogranicz nagrody i kary. Motywacja zwiększa się gdy pomagasz innym (wzajemne nauczanie).",
+      "muszę_vs_musisz": "Motywacja WEWNĘTRZNA = 'MUSZĘ' (napęd z wnętrza). Motywacja ZEWNĘTRZNA = 'MUSISZ' (napęd z zewnątrz). Cel: przesuwać zawodnika ku 'MUSZĘ'."
+    },
+    "pewnosc_siebie": {
+      "hasło": "siebie",
+      "zasada": "Akceptuj ryzykowne decyzje, wyzwania i działania partnerów. Poszerzaj wiedzę i horyzonty, by inspirować rozwój innych. Odrzuć negatywny umysł, zastępuj wizualizacją celu ('tu i teraz'). Pewność siebie wynika z własnej świadomości, wiedzy, umiejętności i nawyków. Każdego dnia wyznacz spójne działania z wiarą w sukces drugiej osoby (Efekt Pigmaliona). Stwórz środowisko, w którym zawodnicy obserwują się, wymieniają spostrzeżenia i wyciągają wnioski."
+    },
+    "emocje": {
+      "hasło": "zarządzanie",
+      "zasada": "W każdym kontakcie z partnerem budujesz wpływ na wzajemne relacje — świadomie nimi zarządzaj. Buduj myśli wspierające, optymistyczne, nastawione na bliski cel. Wczuwaj się w wewnętrzny świat odczuć zawodnika, ale nie przejmuj nad nimi kontroli (to on ma wpływ). Rozumiejąc zachowania innych nabędziesz odporności emocjonalnej (wytrzymałość emocjonalna). Poznaj słabe i mocne strony, zaakceptuj siebie. Zarządzaj emocjami własnymi i innych w zakresie radości, gniewu, strachu, smutku, odrazy."
+    },
+    "koncentracja": {
+      "hasło": "flow",
+      "zasada": "Tylko jasny cel utrzymuje Cię w stanie koncentracji — skupienie na celu jest naprawdę ważne. Jasne, przyjazne i satysfakcjonujące cele pobudzają do wysokiego poziomu koncentracji. Atmosfera niepewności/lęku obniża optymalny poziom skupienia. Masz prawo do braku koncentracji (konstruktywna krytyka). Oddaj wybudzenie i decyzje zawodnikowi — Twoi najbliżsi wiedzą, kiedy skupienie jest potrzebne. W ataku pozwól im grać intuicyjnie, na podświadomości."
+    },
+    "spojnosc": {
+      "hasło": "zespołu",
+      "zasada": "Stwórz środowisko, w którym każdy członek zespołu zna, rozumie i akceptuje swoją rolę oraz role innych. Nigdy nie wyznaczaj lidera — zespół sam go odkryje. Poznaj najlepiej otoczenie i bliskich. Pozwól im mówić, wsłuchaj się w ich potrzeby. Buduj wspólne podejmowanie decyzji, wyznaczanie celów i nauki. Prawdziwe przekonanie każdego członka o jego wartości i znaczeniu dla grupy. Postępuj ze sporami i konfliktami sprawiedliwie i ze zrozumieniem sytuacji."
+    },
+    "intuicja": {
+      "hasło": "czucie",
+      "zasada": "Wraz z doświadczeniem intuicja rozwija się. Aby ją uruchomić — 'wyłącz' ograniczenia, przekonania, złe nastawienia tworzące umysł. Stosuj medytację i trening oddechowy. Pozwól, by wewnętrzny głos poprowadził, korzystaj z tego świadomie. Dostrzegaj i akceptuj sygnały i działaj wobec nich. Nie blokuj wewnętrznego potencjału innych. W silnych emocjach, złej kondycji i złych intencjach uruchomienie intuicji jest utrudnione."
+    },
+    "skutecznosc": {
+      "hasło": "sukces",
+      "zasada": "Twój sukces to moment, w którym to co chcesz powiedzieć sam, mówią za Ciebie inni. Jedyna stała rzecz w życiu to zmiana — bądź kreatywny i otwarty na nowe wyzwania, poglądy, pomysły. Otaczaj się ludźmi bogatymi w doświadczenie życiowe, odrzuć własne ego. Doświadczenie to wyjątkowa lekcja. Spełnienie to stan, gdy poznasz siebie i wybierzesz własną drogę w życiu — i będziesz skuteczny tylko wtedy, gdy będziesz potrzebny innym."
+    },
+    "zasada_pareto": "Rozwój zawodnika = 5 obszarów po 20%: 20% Technika · 20% Taktyka · 20% Motoryka · 20% Żywienie · 20% Psychopedagogika.",
+    "relacja_trener_zawodnik": {
+      "kierunek": "Trener → Zawodnik: nakazy, zakazy, porady, podpowiedzi, pomoc. Oczekiwanie kolejnego kontaktu ~70%/30%.",
+      "trener_powinien": ["Wczuć się w emocje zawodnika", "Odrzucić własne 'cienie'", "Wytrzymać emocjonalnie", "Wysłuchać bez oceny, opinii i porównań", "Odesłać zawodnika do siebie (do samodzielności)"],
+      "trener_nie_moze": ["Przerywać wypowiedzi zawodnika", "Stawiać kontry do racji zawodnika", "Oceniać sposobu działania zawodnika", "Myśleć swoimi sprawami"],
+      "wspolnota_emocjonalna": "Indywidualna Kreacja + Zespołowa Kreacja → Samorealizacja / Samopoczucie / Samostanowienie / Samodziałanie.",
+      "aktywne_sluchanie": "Empatia · Tolerancja · Szacunek · Przyjaźń · Miłość."
+    }
+  },
+
+  "fazy_lekcji_treningowej": {
+    "_zrodlo": "Plansza 'Fazy lekcji treningowej' (Wilczewski/Sosińska) — 3 fazy metodyczne, każda ~9 min, model 'Triduum' (Gramatyka/Logika/Retoryka) i lateralizacja mózgu.",
+    "nauczanie": {
+      "istota": "Przekazanie wiedzy. Mała intensywność, duża powtarzalność, zdobywanie umiejętności.",
+      "cechy": ["Dziecko uczy dziecko", "Obwody techniczne → stacje (7 form stacji)", "Umiejętność rozłożona na części", "Zapominanie (sen) — konsolidacja", "Komunikacja przez elementy techniczne", "Refleksyjność"],
+      "profil": "Zawodnik C+S, trener C+S — trener WSPIERAJĄCY",
+      "triduum": "GRAMATYKA — wrażenia percepcyjne, zbieranie danych",
+      "mozg": "Logika, szczegóły, oddzielanie: słów/myśli/komunikatów (półkula L). Wyobrażenia, obszar całościowy, wydawanie poleceń, komunikacja (półkula P).",
+      "wykres": "Objętość i intensywność/bodźce na stałym, płaskim poziomie."
+    },
+    "doskonalenie": {
+      "istota": "Łączenie i rozwinięcie umiejętności. Bodźce: dołożenie piłki, dodatkowy partner itp.",
+      "cechy": ["Ćwiczenia neuromotoryczne", "Koncentracja = zadanie", "Intensywność = ładunek emocjonalny", "Segmenty ćwiczeń, zabawy", "Przedruch-ruch-poruch"],
+      "profil": "Zawodnik D+I, trener I+C/S/D — trener KREATYWNY, buduje środowisko",
+      "triduum": "LOGIKA — po co? co dają te dwie rzeczy (umiejętności)",
+      "mozg": "Centrowanie mózgu (LT-PT / LP-PP): wrażenia intuicyjne, działanie na małej przestrzeni, kreatywność, impulsy, robienie nowych rzeczy, postrzeganie, działanie do sytuacji; zdolność przewidywania, wybory, akceptacja, studium przypadków, analiza przyszłości.",
+      "wykres": "Fala koncentracji i fala intensywności w przeciwfazie (oscylacja)."
+    },
+    "trenowanie": {
+      "istota": "Środowisko gier / fragmentów gry. Warunki meczowe w warunkach treningowych, utrwalenie nawyku (tętno ~153).",
+      "cechy": ["Gry uproszczone, zadaniowe, neuromotoryczne", "Regulacja obciążeń i intensywności względem odpoczynku (~40%)", "Czynniki stresogenne"],
+      "profil": "Zawodnik D, trener D+S — trener EGZEKUTOR",
+      "triduum": "RETORYKA — ocena sprawczości, którą sami możemy zrobić/wykonać",
+      "mozg": "Centralizacja mózgu, próg pobudzenia motorycznego (LT/PT/LP/PP góra i dół): odczucie siebie w sytuacji, rozumienie siebie i partnera, zgodność działania z własnymi emocjami, rywalizacja; odnalezienie siebie względem partnera.",
+      "wykres": "Fala koncentracji i intensywności zbliżone/zsynchronizowane, odpoczynek 40%."
+    }
+  },
+
+  "dookola_sportu_sciezka_rozwoju": {
+    "_zrodlo": "Schemat 'Dookoła Sportu — zdolności i predyspozycje' (Edukacja / Kreatywność / Organizacja).",
+    "_idea": "Ścieżka rozwoju przez całe życie sportowe, z podziałem na etapy wiekowe. Nakładają się dwa nurty: TRENING SAMOSKUTECZNOŚCI (wczesne etapy) i TRENING SPÓJNOŚCI (późniejsze etapy).",
+    "etapy": [
+      {"wiek": "0-7 lat", "etap": "Nabór i selekcja"},
+      {"wiek": "7-14 lat", "etap": "Technika"},
+      {"wiek": "14-17 lat", "etap": "Taktyka / Motoryka"},
+      {"wiek": "17-24 lata", "etap": "Wprowadzenie"},
+      {"wiek": "24-34 lata", "etap": "Olimpizm"},
+      {"wiek": "34-42 lata", "etap": "Transformacja"},
+      {"wiek": "42-60 lat", "etap": "Eduktor"},
+      {"wiek": "60-80 lat", "etap": "Mentoring"}
+    ],
+    "dwa_nurty": "Trening Samoskuteczności (budowanie sprawczości jednostki, wczesne etapy) → przez Olimpizm → Trening Spójności (budowanie wspólnoty, późne etapy)."
+  },
+
+  "dziennik_mlodych_talentow": {
+    "_opis": "Workbook dla młodego zawodnika (obóz IBC — IMOPEKSIS Basketball Camp). Łączy diagnozę techniczną, cele mentalne, samoocenę DISC i ćwiczenia poznawcze.",
+    "diagnoza_techniczna": {
+      "opis": "Indywidualna diagnoza 27 umiejętności technicznych. 3 poziomy: Poziom I (umiejętności 1-9), Poziom II (10-18), Poziom III (19-27). Każda umiejętność oceniana rubryką 3 pkt / 2 pkt / 1 pkt (punkty coachingowe od najbardziej zaawansowanych do podstawowych). Zawodnik wykonuje próbę i sumuje punkty; dwie diagnozy (przed/po) pokazują POSTĘP.",
+      "planowe_dzialania": "Dla każdej umiejętności/obozu: 1) Część wyrównawcza (elementy do poprawy), 2) Część norma (elementy poprawne), 3) Część progresywna (zwiększanie trudności).",
+      "27_umiejetnosci": [
+        "1. Rzut z miejsca", "2. Podania w miejscu", "3. Poruszanie się bez piłki",
+        "4. Rzut z biegu po podaniu", "5. Podania w biegu", "6. Obiegnięcie",
+        "7. Obrona zawodnika bez piłki (czarna)", "8. Obrona zawodnika z piłką (odległość)",
+        "9. Wyrzut piłki po koszu / wyrzut po zbiórce", "10. Rzut z wyskoku",
+        "11. Podania specjalne z obrońcą", "12. Poruszanie się z piłką",
+        "13. Rzut z biegu po kozłowaniu", "14. Bieg do szybkiego ataku",
+        "15. Poruszanie bez piłki – ucieczka", "16. Obrona zawodnika bez piłki (niebieska)",
+        "17. Obrona zawodnika z piłką – technika 1x1", "18. Zastawienie",
+        "19. Podania w szybkim ataku", "20. Wyjście do rzutu",
+        "21. Obrona ścięcia, obrona obiegnięcia", "22. Zbiórka w ataku",
+        "23. Obrona rzutu i blok", "24. Ścięcie",
+        "25. Obrona zawodnika bez piłki – żółta", "26. Atak 1x1 tyłem do kosza",
+        "27. Obrona centra"
+      ],
+      "_uwaga_obrona_kolorowa": "System obron 'kolorowych': CZARNA (obrona zawodnika bez piłki blisko), NIEBIESKA i ŻÓŁTA (różne odległości/agresja obrony bez piłki wg liczby pozycji od piłki). Odpowiada planszom 'Podstawy nauczania koszykówki cz. 1-3'."
+    },
+    "drzewko_celow_7_dni": {
+      "opis": "Codzienna rutyna celów (7 dni tygodnia). Uczy samodzielnego wyznaczania i ewaluacji celu.",
+      "kroki": [
+        "a) Przed śniadaniem wpisuję cel, który zrealizuję w trakcie dnia",
+        "b) Samodzielnie określam stopień trudności na skali 1-5 (bardzo łatwy → bardzo trudny)",
+        "c) W trakcie dnia realizuję zadanie",
+        "d) Po kolacji określam, czy zostało zrobione tak jak zaplanowałem/am"
+      ],
+      "refleksja_jesli_wykonam": ["Co mogę zrobić lepiej następnego dnia?", "Jak mogę zrobić to lepiej?"],
+      "refleksja_jesli_nie_wykonam": ["Co takiego się stało, że nie wykonałem celu?", "Kto może mi pomóc w realizacji celu jutro?", "Jak mogę to poprawić?", "Co zrobię inaczej?"]
+    },
+    "kolo_celow_sportowych": {
+      "opis": "Wyznaczanie celów w horyzontach czasowych po zakończonym obozie. Dla każdego celu 3 pytania: jaki cel? / komu powiesz że masz cel? / po czym poznasz że go osiągnąłeś?",
+      "horyzonty": ["Najbliższy tydzień", "Najbliższy miesiąc", "Najbliższe 3 miesiące", "Do kolejnego obozu IBC"]
+    },
+    "elementy_dodatkowe": [
+      "Samoocena DISC (analiza zachowań) wpleciona w dziennik — punktacja D/I/S/C",
+      "Wskazówki komunikacji DISC (jak rozmawiać / co robić i czego unikać z osobą stylu D/I/S/C) — patrz disc_profile_assessment.json",
+      "Ćwiczenia poznawcze: zagadki logiczne, 'połącz kropki', wymień 10 elementów przyjaźni",
+      "Koszykarski słownik polsko-angielski A-Z (terminologia)"
+    ]
+  },
+
+  "powiazania": {
+    "teaching_fundamentals.json": "27 umiejętności dziennika rozwija 4 konspekty z teaching_fundamentals.json (chwyty/podania, poruszanie bez piłki, podania w biegu, rzut z biegu). Rubryka 3/2/1 pkt = operacjonalizacja punktów coachingowych.",
+    "disc_profile_assessment.json": "Extended DISC to mentalny filar systemu IMOPEKSIS — profil trener/zawodnik dopasowany do faz lekcji (Nauczanie/Doskonalenie/Trenowanie).",
+    "finxs_mental_assessment.json": "Kolejne narzędzie mentalne (18 kompetencji) — komplementarne do 8 czynników psychospołecznych IMOPEKSIS.",
+    "coaching_notes.json": "Metodyka nauczania (Trunić: najpierw gra, zasady z dziećmi; footwork foundation) rezonuje z fazami lekcji i budowaniem środowiska.",
+    "player_evaluation.json": "Filar 'charakter' + rozwój zawodnika — czynniki psychospołeczne jako checklist mentalny."
+  }
+}

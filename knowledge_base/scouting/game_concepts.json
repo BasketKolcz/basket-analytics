@@ -1,0 +1,234 @@
+{
+  "_source": "Next Draft Foundation — Moduł 2",
+  "_comment": "Taktyczne koncepty obserwacji meczu — off-ball, spacing, timing, processing speed",
+  "_program_use": "Pytania jako checklist live podczas oglądania meczu. Tooltip/pomoc w formularzu scoutingowym.",
+
+  "poza_pilka": {
+    "zasada": "Najlepsi zawodnicy wpływają na mecz, nawet gdy nie mają piłki w rękach.",
+
+    "offense_off_ball": [
+      {
+        "id": "spacing",
+        "nazwa": "Spacing",
+        "pytanie": "Czy utrzymuje odpowiednią odległość i rozciąga grę?"
+      },
+      {
+        "id": "cuts",
+        "nazwa": "Cuts",
+        "pytanie": "Kto, kiedy i jak wykonuje cięcia bez piłki?"
+      },
+      {
+        "id": "screening",
+        "nazwa": "Screening",
+        "pytanie": "Jak ustawia zasłony i otwiera przestrzeń?"
+      },
+      {
+        "id": "timing",
+        "nazwa": "Timing",
+        "pytanie": "Czy jego ruchy są zsynchronizowane z akcją?"
+      },
+      {
+        "id": "movement",
+        "nazwa": "Movement",
+        "pytanie": "Czy porusza się z celem, czy tylko 'krąży'?"
+      },
+      {
+        "id": "extra_pass",
+        "nazwa": "Extra Pass",
+        "pytanie": "Czy podejmuje decyzje korzystne dla zespołu?"
+      }
+    ],
+
+    "defense_off_ball": [
+      {
+        "id": "komunikacja",
+        "nazwa": "Komunikacja",
+        "pytanie": "Czy zawodnicy mówią i ostrzegają się nawzajem?"
+      },
+      {
+        "id": "closeouty",
+        "nazwa": "Closeouty",
+        "pytanie": "Jak zawodnicy wychodzą do rzucającego?"
+      },
+      {
+        "id": "rotacje",
+        "nazwa": "Rotacje",
+        "pytanie": "Czy rotacje są szybkie i zgrane?"
+      },
+      {
+        "id": "pomoc",
+        "nazwa": "Pomoc",
+        "pytanie": "Czy pomoc przychodzi w odpowiednim momencie?"
+      },
+      {
+        "id": "positioning",
+        "nazwa": "Positioning",
+        "pytanie": "Czy zawodnicy są w odpowiednim miejscu?"
+      },
+      {
+        "id": "def_rebounding",
+        "nazwa": "Defensive Rebounding",
+        "pytanie": "Kto blokuje, kto zbiera, kto zabezpiecza?"
+      }
+    ]
+  },
+
+  "spacing": {
+    "pytanie_scouta": "Czy zawodnik pomaga funkcjonować ofensywie?",
+    "dobre_spacing": {
+      "efekty": ["Tworzy przestrzeń", "Ułatwia decyzje", "Poprawia flow ofensywy"]
+    },
+    "zly_spacing": {
+      "efekty": ["'Zapchanie' gry", "Mniej miejsca do ataku", "Trudniejsze decyzje"]
+    },
+    "definicja": "Dobry spacing to nie tylko odległości — to inteligencja, świadomość i samopoświęcenie."
+  },
+
+  "timing_processing_speed": {
+    "pytanie_scouta": "Czy zawodnik pomaga funkcjonować ofensywie?",
+
+    "timing": {
+      "opis": "Umiejętność wyboru KIEDY wykonać akcję",
+      "pytania": [
+        "kiedy wykonuje ruch?",
+        "kiedy podaje?",
+        "kiedy atakuje?"
+      ],
+      "sekwencja": [
+        "RUCH — obserwuje sytuację",
+        "PODANIE — podejmuje decyzję we właściwym momencie",
+        "ATAK — wykonuje akcję z odpowiednim timingiem"
+      ]
+    },
+
+    "processing_speed": {
+      "opis": "Szybkość przetwarzania informacji i podejmowania decyzji",
+      "pytania": [
+        "jak szybko czyta grę?",
+        "jak szybko podejmuje decyzję?",
+        "czy upraszcza grę?"
+      ],
+      "zasada": "wolniejsze czytanie = wolniejsza decyzja | szybsze czytanie = lepsza decyzja",
+      "kluczowe": "0.5 Basketball = szybka decyzja = PRZEWAGA"
+    }
+  },
+
+  "reakcje": {
+    "zasada": "Reakcje mówią bardzo dużo — często ujawniają prawdziwy charakter zawodnika.",
+    "kiedy_obserwowac": [
+      "Po stracie",
+      "Po błędzie",
+      "Po niecelnym rzucie",
+      "Po decyzji sędziego",
+      "Po słabszym początku meczu"
+    ],
+    "co_ujawniaja": [
+      "Mentalność",
+      "Profesjonalizm",
+      "Odporność",
+      "Coachability"
+    ]
+  },
+
+  "winning_impact": {
+    "zasada": "Winning impact często wykracza poza boxscore.",
+    "rownosc": "IMPACT ≠ USAGE",
+    "nie_zawsze_wygrywa": [
+      "Najlepszy scorer",
+      "Najbardziej efektowny zawodnik"
+    ],
+    "bardzo_czesto_wygrywa": [
+      "Connective Players — łączą grę zespołu",
+      "Glue Guys — sklejają drużynę",
+      "Versatile Defenders — elastyczna obrona",
+      "High IQ Role Players — inteligentni gracze roli"
+    ],
+    "pytanie_kluczowe": "Czy zawodnik pomaga funkcjonować ofensywie?"
+  },
+
+  "notatki_z_meczu_checklist": {
+    "_comment": "Widoczne na notesie scouta — kluczowe elementy do notowania podczas meczu (slajd 6.2)",
+    "elementy": [
+      "Ruch bez piłki",
+      "Spacing",
+      "Komunikacja",
+      "Reakcja na podania",
+      "Rotacje w obronie",
+      "Leadership"
+    ],
+    "_program_use": "Szybki checklist w formularzu live-scouting podczas meczu"
+  },
+
+  "statystyki_vs_film": {
+    "statystyki_pomagaja": [
+      "Filtrować kandydatów",
+      "Znajdować trendy",
+      "Porównywać profile"
+    ],
+    "statystyki_nie_pokazuja": [
+      "Decision Making",
+      "Komunikacji",
+      "Spacingu",
+      "Reakcji",
+      "IQ boiskowego"
+    ],
+    "sekwencja_analizy": [
+      "DATA — co mówią liczby?",
+      "FILM — co dzieje się naprawdę?",
+      "LIVE — jak wygląda w rzeczywistości?",
+      "CONTEXT — jaki ma wpływ na zespół i grę?"
+    ],
+    "konkluzja": "Zrozumienie gry wymaga więcej niż liczby."
+  },
+
+  "role_acceptance": {
+    "_source": "Next Draft Foundation — Moduł 3",
+    "definicja": "Najlepsi zawodnicy rozumieją, że ich rola jest ważna dla sukcesu całej drużyny.",
+    "cytat": "Nie każdy talent pomaga wygrywać.",
+    "kluczowe_pytania": [
+      "Czy ma elite skill?",
+      "Czy zaakceptuje rolę?",
+      "Czy może pomagać bez piłki?",
+      "Czy rozumie jak wygrywać?"
+    ],
+    "wniosek": "Zawodnik, który akceptuje swoją rolę, zwiększa szanse drużyny na zwycięstwo."
+  },
+
+  "winning_players": {
+    "_source": "Next Draft Foundation — Moduł 3",
+    "pytania_o_zawodnika": [
+      "Czy pomaga gwiazdom?",
+      "Czy poprawia spacing?",
+      "Czy podejmuje szybkie decyzje?",
+      "Czy może grać bez piłki?",
+      "Czy nie zabiera za dużo z systemu?"
+    ],
+    "kluczowe_pytanie": "Czy poprawia funkcjonowanie całej drużyny?",
+    "winning_player_dna": [
+      "Team First",
+      "Understands role",
+      "Makes right plays",
+      "High Basketball IQ",
+      "Competitive"
+    ],
+    "scouting_notes_kategorie": [
+      "FIT FOR WINNING?",
+      "HELPING STARS",
+      "SPACING IMPACT",
+      "DECISION MAKING",
+      "OFF BALL IMPACT",
+      "SYSTEM IMPACT"
+    ],
+    "cechy_czesto": [
+      "Nie dominują statystyk",
+      "Podejmują dobre decyzje",
+      "Pomagają drużynie funkcjonować",
+      "Grają dla zespołu",
+      "Rozumieją swoją rolę"
+    ],
+    "cytaty": [
+      "Celem nie jest być najlepszym zawodnikiem. Celem jest pomóc drużynie wygrywać.",
+      "Wyniki zaczynają się od właściwych wyborów."
+    ]
+  }
+}

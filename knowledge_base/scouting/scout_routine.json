@@ -1,0 +1,210 @@
+{
+  "_source": "Next Draft Foundation — Moduł 1, transkrypcje video (lekcje 1-4)",
+  "_speaker": "International Scout, Denver Nuggets (14+ lat), Fundacja Next Draft",
+  "_comment": "Rutyna pracy scouta — sezon vs offseason, narzędzia, metodologia",
+
+  "praca_scouta_ogolnie": {
+    "charakter": "Praca 24/7 — dzień, wieczór, weekend. To styl życia, nie zawód 9-17.",
+    "wymagania": "Kluby szukają osób gotowych — z procesem i doświadczeniem. Warto zacząć samemu: 1-2 sezony własnego procesu to duża wartość przy rekrutacji."
+  },
+
+  "sezon_scouting": {
+    "opis": "Głównie zbieranie informacji — budowanie bazy przez cały sezon",
+    "zadania": [
+      "Oglądanie 2-3-4 meczów dziennie (live i video)",
+      "Budowanie raportów na bieżąco",
+      "Monitorowanie postępów zawodnika przez cały sezon",
+      "Autoscouting — oglądanie własnej drużyny i weryfikacja przewidywań",
+      "Regularny kontakt z organizacją (trener, GM)"
+    ],
+    "start": "Zacznij lokalnie — klub OBL, Pierwsza Liga. Poznaj poziom, zdobądź kontakty.",
+    "monitoring_trenera": "Zrozumieć jak trener pracuje, jakich zawodników preferuje — europejscy vs amerykańscy, styl treningów, co wymaga od gracza."
+  },
+
+  "typy_meczu_do_oglądania": {
+    "najlepszy_mecz": "Pokazuje sufit zawodnika — gdzie jest jego maximum",
+    "najgorszy_mecz": "Czy pomaga drużynie nawet gdy mu nie idzie?",
+    "2_3_przecietne": "Daje obraz wartości — co dostaniesz średnio w tym zawodniku",
+    "gamelogs_analiza": [
+      "Jak sobie radził z najlepszą defensywą ligi?",
+      "Jak zagrał w pierwszym meczu po zmianie trenera?",
+      "Jak reaguje na adversity (serie, presja)?"
+    ]
+  },
+
+  "offseason_transferowy": {
+    "opis": "Czas decyzji — mniej oglądania, więcej działania",
+    "workflow_obl": [
+      "Przedłużenia graczy, którzy się sprawdzili",
+      "Zamknięcie trzonu polskich zawodników",
+      "Dopiero potem: profile obcokrajowców + budżet na nich"
+    ],
+    "gleboka_analiza_video": "Wybrany zawodnik rozkładany na czynniki pierwsze — każda sytuacja meczowa",
+    "narzedzia": [
+      "Synergy Sports (platforma pro)",
+      "YouTube",
+      "Instagram",
+      "Wolontariat/staż w klubie w zamian za dostęp do materiałów",
+      "Kontakt z agentami (2-3-4 agentów w sieci)",
+      "Spotkania organizacyjne, wymiana doświadczeń"
+    ]
+  },
+
+  "listy_scoutingowe": {
+    "zasada": "Listy muszą być zawsze gotowe — tablet, komputer, telefon",
+    "wymagania": [
+      "Łatwo dostępne",
+      "Łatwe do filtrowania (np. 10 najlepszych shooterów, 10 atletów)",
+      "Na bieżąco aktualizowane przez cały sezon"
+    ],
+    "analogia": "To jak przygotowanie do matury — nie da się zrobić w jeden weekend. To 4-letni proces ciągłego budowania.",
+    "kiedy_potrzebne": "GM lub trener dzwoni bez ostrzeżenia — lista musi być gotowa od razu"
+  },
+
+  "pytanie_przed_meczem": "Scout zawsze przed wyjazdem/włączeniem meczu zadaje sobie pytania: Co w tym meczu chcę obejrzeć? Czego chcę się dowiedzieć? Po co ten mecz oglądam?",
+
+  "jak_sie_rozwijac": [
+    "Rozmowy i wymiana doświadczeń",
+    "Własne procesy na 1-2 sezony (nawet bez klubu)",
+    "Media społecznościowe — grupy dyskusyjne",
+    "Case study — wybierz kilku zawodników, śledź ich, zadawaj pytania"
+  ],
+
+  "platformy_statystyk": {
+    "_source": "Transkrypcja M3, lekcja 3 — Rafał Jujcz",
+    "real_gm": {
+      "url_opis": "realGM.com",
+      "dostep": "Bezpłatna",
+      "co_znajdziesz": [
+        "Zaawansowane statystyki NBA i lig europejskich",
+        "Statystyki drużyn i zawodników",
+        "Możliwość wpisania konkretnej ligi (np. Liga Polska)"
+      ],
+      "jak_uzywac": "Wpisz ligę, wejdź w zaawansowane statystyki, filtruj zawodników po usage / TS% / AST% itp."
+    },
+    "zasada": "W erze dostępu do informacji — filtrowanie danych robi różnicę, nie sam dostęp."
+  },
+
+  "charakterystyki_na_biurku": {
+    "_source": "Transkrypcja M3, lekcja 2",
+    "co_to": "Dokument z priorytetami na każdą pozycję — stworzony przez scouta na przykładzie własnej organizacji i preferencji trenera.",
+    "jak_stworzyc": [
+      "1. Ustal styl gry i preferencje swojego trenera",
+      "2. Dla każdej pozycji wypisz 1-3 (max 5) najważniejsze priorytety",
+      "3. Uzupełniaj i aktualizuj w trakcie sezonu",
+      "4. Oglądając mecze — szukaj właśnie tych priorytetów"
+    ],
+    "uwaga": "Na początku wystarczy Top 3 priorytety, nie ma potrzeby wchodzić aż na 15 cech.",
+    "cel": "Zawodnik, który spełnia priorytet trenera, będzie przez niego doceniony. Scout, który to rozumie, daje lepsze rekomendacje."
+  },
+
+  "zrodla_poszukiwania_zawodnikow": {
+    "_source": "Next Draft Foundation — slajd 'Gdzie Znaleźć Pierwszych Zawodników?'",
+    "zasada": "Nigdy z jednego źródła.",
+    "klucz": "Miej wiele źródeł. Weryfikuj. Buduj przewagę informacyjną.",
+    "cytat": "Im więcej źródeł, tym większa szansa, że znajdziesz prawidłowego zawodnika.",
+    "kolejnosc_zrodel": {
+      "opis": "Rekomendowana kolejność poszukiwań — od najcenniejszych do publicznych",
+      "kategoria_1_kontakty_i_doswiadczenie": {
+        "nazwa": "Twoje najlepsze kontakty i doświadczenie",
+        "zrodla": [
+          { "nr": 1, "id": "wlasna_baza",         "nazwa": "Własna baza",                          "opis": "Zawodnicy, których już obserwowałeś i masz raporty — najszybsze źródło." },
+          { "nr": 2, "id": "zawodnicy_przeciwko",  "nazwa": "Zawodnicy przeciwko którym pracowałeś", "opis": "Widziałeś ich na żywo, znasz ich poziom w bezpośredniej konfrontacji." },
+          { "nr": 3, "id": "byli_zawodnicy",       "nazwa": "Byli zawodnicy",                       "opis": "Znasz ich charakter, mentalność i zachowanie w szatni — bezcenna informacja." },
+          { "nr": 4, "id": "agenci",               "nazwa": "Agenci",                               "opis": "Buduj relacje z 2-4 agentami — mają dostęp do rynku i informacji o dyspozycyjności zawodników." }
+        ]
+      },
+      "kategoria_2_dane_analityka": {
+        "nazwa": "Dane i analityka",
+        "zrodla": [
+          { "nr": 5, "id": "synergy",  "nazwa": "Synergy Sports",  "opis": "Platforma pro — zaawansowane statystyki situacyjne, lejki play type, split stats." },
+          { "nr": 6, "id": "instat",   "nazwa": "InStat",          "opis": "Wideo + statystyki — popularne w Europie, dostęp do lig europejskich i raportów." },
+          { "nr": 7, "id": "fiba",     "nazwa": "FIBA",            "opis": "Oficjalne statystyki FIBA — wszystkie oficjalne rozgrywki międzynarodowe i ligi." }
+        ]
+      },
+      "kategoria_3_publiczne_zrodla": {
+        "nazwa": "Publiczne źródła i relacje",
+        "zrodla": [
+          { "nr": 8,  "id": "eurobasket",              "nazwa": "EuroBasket",              "opis": "Baza danych zawodników europejskich, historia klubów, statystyki historyczne." },
+          { "nr": 9,  "id": "realgm",                  "nazwa": "RealGM",                  "opis": "Statystyki zaawansowane NBA i Europy — realGM.com, filtrowanie per liga." },
+          { "nr": 10, "id": "rekomendacje_trenerow",   "nazwa": "Rekomendacje trenerów",   "opis": "Trenerzy znają rynek od środka — ich opinia o zawodniku ma duże znaczenie." },
+          { "nr": "10b", "id": "scouting_network",     "nazwa": "Scouting Network",        "opis": "Wymiana informacji z innymi scoutami — buduj sieć, nie rób wszystkiego sam." }
+        ]
+      }
+    },
+    "uwaga_praktyczna": "Publiczne źródła (8-10) są dostępne dla wszystkich — przewaga pochodzi z połączenia ich z własną bazą i relacjami (1-4). Weryfikacja jest kluczowa: informacja z jednego źródła to tylko hipoteza."
+  },
+
+  "zasada_5_5_5": {
+    "_source": "Next Draft Foundation — slajd 'Jak Pracować przez Cały Sezon?' + Zasada 5-5-5",
+    "najtrudniejszy_blad": "Szukanie zawodników dopiero po sezonie.",
+    "zasada_podstawowa": "Profesjonaliści robią to codziennie — scouting to proces 12-miesięczny, nie tylko offseason.",
+    "plan_tygodniowy": {
+      "opis": "Proponowany rytm pracy scouta — jeden tydzień",
+      "dni": [
+        { "dzien": "PONIEDZIAŁEK", "zadanie": "UPDATE LIST",          "opis": "Przejrzyj i zaktualizuj listy zawodników — kto awansował, kto wypadł, co się zmieniło." },
+        { "dzien": "WTOREK",       "zadanie": "OBEJRZYJ 2 ZAWODNIKÓW","opis": "2 mecze/klipy wideo — pełna obserwacja z notatkami i raportem wstępnym." },
+        { "dzien": "ŚRODA",        "zadanie": "DODAJ NOWYCH",         "opis": "Szukaj nowych nazwisk — nowe ligi, transfery, debiutanci. Dodaj do systemu/bazy." },
+        { "dzien": "CZWARTEK",     "zadanie": "BACKGROUND",           "opis": "Intel i background check wybranych zawodników — rozmowy, research, weryfikacja." },
+        { "dzien": "PIĄTEK",       "zadanie": "LIVE GAME",            "opis": "Mecz na żywo — obserwacja priorytetowego zawodnika lub drużyny z listy." },
+        { "dzien": "SOBOTA",       "zadanie": "RAPORT",               "opis": "Pisanie/aktualizacja raportów z tygodnia — ustrukturyzowane notatki do bazy." },
+        { "dzien": "NIEDZIELA",    "zadanie": "PLAN KOLEJNEGO TYGODNIA", "opis": "Przygotuj plan następnego tygodnia — które mecze, którzy zawodnicy, jakie priorytety." }
+      ]
+    },
+    "zasada_5_5_5_tygodniowo": {
+      "tytul": "ZASADA 5-5-5 — każdego tygodnia",
+      "elementy": [
+        { "liczba": 5, "kategoria": "NOWYCH NAZWISK",          "opis": "Dodaj 5 nowych zawodników do radarów — nieznanych, z niższej ligi, rekomendowanych." },
+        { "liczba": 5, "kategoria": "OBEJRZANYCH ZAWODNIKÓW",  "opis": "5 pełnych obserwacji tygodniowo = 260 zawodników rocznie." },
+        { "liczba": 5, "kategoria": "AKTUALIZACJI STARYCH RAPORTÓW", "opis": "Wróć do 5 starych raportów — czy zawodnik się rozwinął, zmienił rolę, trafił na rynek?" }
+      ],
+      "efekt_roczny": "Po roku masz bazę, której większość klubów nie posiada.",
+      "matematyka": "5 obserwacji/tydzień × 52 tygodnie = ~260 zawodników rocznie z aktualnymi raportami."
+    },
+    "scouting_plan_cykl": ["WATCH", "EVALUATE", "ANALYZE", "REPORT", "UPDATE"],
+    "motywacja": "Baza budowana przez 2-3 lata to największa przewaga konkurencyjna scouta. Nie można jej skopiować ani kupić — tylko zbudować."
+  },
+
+  "autoscouting_po_transferze": {
+    "_source": "Next Draft Foundation — Call 2 Q&A (Rafał Jujcz)",
+    "zasada": "Podpisanie zawodnika to nie koniec pracy — to początek weryfikacji.",
+    "co_robic_po_podpisaniu": [
+      "Sprawdź, czy gracz faktycznie gra w przewidzianych zestawieniach",
+      "Sprawdź, czy gra w zaplanowanej roli (minuty, archetyp, styl gry)",
+      "Weryfikuj, czy trener używa go zgodnie z planowanym systemem",
+      "Monitoruj zachowanie w drużynie, dynamikę z kolegami i trenerem"
+    ],
+    "dlaczego_to_wazne": "To nie jest Football Manager — podpisujesz zawodnika i zostajesz z nim 10-12 miesięcy (w NBA kilka lat). Nie możesz tak po prostu powiedzieć 'nie wykorzystujemy go'.",
+    "dla_scouta": "Autoscouting po transferze zamyka pętlę procesu. Scout, który sprawdza wyniki swoich decyzji, uczy się najszybciej. Błąd bez refleksji to stracony intel."
+  },
+
+  "scout_edukuje_trenera": {
+    "_source": "Next Draft Foundation — Call 2 Q&A (Rafał Jujcz)",
+    "zasada": "Dobry scout przychodzi do trenera i mówi mu, CO wygrywa w tej lidze — nie tylko kogo podpisać.",
+    "autoscouting_ligowy": {
+      "co_robi": "Analizuje ostatnie 5 lat ligi: co wpływa na wygrywanie (low post game, physicality, rebounding, pick&roll defense, szybka gra), co nie działa",
+      "efekt": "Trener dostaje kontekst — wie, z czym jego filozofia będzie musiała się zmierzyć w konkretnej lidze"
+    },
+    "zasada_zamknietego_ukladu": "Ligi to zamknięte układy. To co działa w NBA, nie musi działać w PLK i odwrotnie. Twoja przewaga to znajomość lokalnych trendów.",
+    "ruchy_pod_rywali": "Przed play-off okienkiem transferowym ma sens rozmawiać o ruchach pod konkretnych rywali — jeśli dwa główne rywalskie zespoły mają świetnych centrów, to tam właśnie warto się wzmocnić.",
+    "co_scout_powinien_dostarczyc_trenerowi": [
+      "Co wygrywa w tej lidze (trendy ofensywne/defensywne ostatnich 3-5 lat)",
+      "Co NIE działa w tej lidze",
+      "Jakie typy zawodników są niedoceniane/przeszacowane na tym rynku",
+      "Jak rywale budują składy i jakie mają budżety"
+    ],
+    "dla_scouta": "Twoja rola to nie tylko lista zawodników. Jesteś analitykiem rynku — trener ma wizję gry, ty masz kontekst ligi. Połączenie tych dwóch rzeczy daje prawdziwą przewagę."
+  },
+
+  "zrodla_scouting_trenerow": {
+    "_source": "Next Draft Foundation — Call 2 Q&A (Rafał Jujcz — scouting trenerów)",
+    "zasada": "Nie ma dedykowanej strony do scoutingu trenerów — to praca bazująca na obserwacji i relacjach.",
+    "metody": [
+      { "id": "surprise_of_year", "nazwa": "Szukaj niespodzianek ligowych", "opis": "Która drużyna w każdej lidze zrobiła nieoczekiwanie play-offy lub medal? Dlaczego — graczami czy trenerem? Tam szukaj ciekawych trenerów." },
+      { "id": "cliniki_podcasty", "nazwa": "Kliniki i podcasty", "opis": "Slapping the Glass, Basketball Immersion, materiały na Instagramie — dają wgląd w warsztat i filozofię trenera." },
+      { "id": "social_media", "nazwa": "Social media trenera", "opis": "Pierwsze wrażenie jest robione w sieci. Trener który pokazuje swój proces, drille i filozofię — jest łatwiejszy do scouting'u i sam buduje reputację." },
+      { "id": "kontakty", "nazwa": "Kontakty i rekomendacje", "opis": "Pytaj sędziów, scoutów, zawodników: których trenerów dobrze prowadzonych widziałeś? Kto ma ciekawe set-playi, ATOs? Kto co roku robi dobre transfery?" }
+    ],
+    "dla_gm_scouta": "GM może pytać scouta: jakich trenerów obserwowałeś, którzy mają dobry okód ze scoutingu, ciekawe metody? Scout ma naturalną przewagę obserwacji szeroką — wielu trenerów przez rok."
+  }
+}

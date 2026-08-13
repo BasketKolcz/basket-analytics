@@ -1,0 +1,125 @@
+{
+  "_source": "4 konspekty lekcji treningowych (nauczanie fundamentów koszykówki): 1. Chwyty i podania w miejscu / 3. Poruszanie się bez piłki / 4. Podania w biegu / 5. Rzut z biegu (autor m.in. Michał Libich).",
+  "_comment": "Metodyka nauczania fundamentów — gotowe konspekty treningowe z systematyką ćwiczeń, punktami coachingowymi i wskazówkami motorycznymi. Struktura każdego konspektu: nagłówek + 3 fazy (NAUCZANIE → NAUCZANIE W DOSKONALENIU → NAUCZANIE W TRENOWANIU / FRAGMENTACH GRY), każda z PRZEBIEG + PUNKTY COACHINGOWE + Motoryka.",
+  "_program_use": "Materiał dla Akademii (lekcje treningowe / plany jednostek). Baza ćwiczeń fundamentalnych do budowy konspektów. Wzorzec struktury konspektu treningowego (można wykorzystać jako szablon planu jednostki treningowej 90 min).",
+
+  "struktura_konspektu": {
+    "naglowek": ["Trenerzy", "Data i miejsce", "Temat", "Czas zajęć (90 min)", "Drużyna", "Numer treningu", "Liczba zawodników (12)"],
+    "trzy_fazy": [
+      {"nazwa": "NAUCZANIE", "czas": "10 min", "cel": "Wprowadzenie i nauczanie elementu technicznego wolno i dokładnie", "kolor": "zielony"},
+      {"nazwa": "NAUCZANIE W DOSKONALENIU", "czas": "10 min", "cel": "Doskonalenie w ćwiczeniach, zabawach i formach rywalizacyjnych", "kolor": "niebieski"},
+      {"nazwa": "NAUCZANIE W TRENOWANIU / FRAGMENTACH GRY", "czas": "10 min", "cel": "Transfer do gry (1x1, 2x2 ... 5x5, gry zadaniowe)"}
+    ],
+    "elementy_kazdej_fazy": ["PRZEBIEG (opis ćwiczeń / progresja)", "PUNKTY COACHINGOWE (pytania i wskazówki dla zawodnika)", "Motoryka / Wskazówki motoryczne (regulacja intensywności, elementy sprawnościowe)"],
+    "zasada_wiodaca": "Od prostego do złożonego, od wolno i dokładnie do szybko i pod presją; łączenie umiejętności w nowe ćwiczenia; transfer do gry."
+  },
+
+  "konspekty": {
+    "chwyty_podania_w_miejscu": {
+      "temat": "Chwyty i podania w miejscu",
+      "nauczanie": {
+        "progresja_pozycji": ["Podania w klęku (toczenie, słabsza/mocniejsza ręka, znad głowy)", "Podania w pozycji koszykarskiej (jw.)", "Podania w pozycji koszykarskiej z pracą nóg (wykrok w przód, ręka zgodna/przeciwna do nogi)", "Długie podanie baseballowe (lewa/prawa, płasko i kozłem)"]
+      },
+      "doskonalenie_cwiczenia": [
+        "Podania w parach (zmiennie lewa/prawa/znad głowy; partner dyktuje rodzaj; podanie + pivot + przyspieszenie + atak na piłkę)",
+        "Podania w parach z dwoma piłkami (jedna toczona jedna podawana; sekwencje do 4 podań dyktowane przez trenera/partnera)",
+        "Podania w parach ze zmianą pozycji",
+        "Podania w rzędach (po podaniu zmiana pozycji, bieg + zatrzymanie + pivot)",
+        "Podania w trójkątach z 1 / 2 / 3 piłkami (po obwodzie, atak na piłkę, zmiana kierunku na hasło, wołanie imion)",
+        "Czwórki z 1 / 2 / 3 / 4 piłkami (po kwadracie, po obwodzie, kombinacje toczone/podawane)",
+        "Piątki",
+        "Koło (podanie o 1 poz. ręką bliższą, o 2 znad głowy, o 3+ bejsbol; do zawodnika z podniesioną ręką; percepcja — cyfry)",
+        "Trójkąt ze środkowym (chwyt i podanie do innego, z ruchem lewo-prawo)",
+        "Podania na 10 pozycjach (gra punktowa: o 1 poz. = 1 pkt, o 2 = 2 pkt, o 3+ = 3 pkt; rywalizacja drużyn)",
+        "Podania po obrocie o 180° (atak na piłkę, obrót, podanie do drugiego rzędu)"
+      ],
+      "systematyka_doskonalenia": ["Podania słabszą ręką", "mocniejszą ręką", "znad głowy", "z atakiem na piłkę", "kozłem", "bejsbolowe", "bejsbolowe kozłem"],
+      "punkty_coachingowe": ["Ta sama technika słabszą i mocniejszą ręką", "Pamiętaj o wszystkich elementach technicznych", "Zacznij od klęku, potem postawa koszykarska", "Dostosuj odległość do umiejętności", "Podania dwiema piłkami równocześnie", "Zwiększ trudność wprowadzając obrońcę"]
+    },
+
+    "poruszanie_bez_pilki": {
+      "temat": "Poruszanie się bez piłki",
+      "nauczanie_progresja": {
+        "starty": "Nogi równolegle / noga zakroczna / wykroczna, przodem i tyłem, lewa i prawa — bieg, zatrzymanie",
+        "zatrzymania": "Na 1 tempo; na 2 tempa lewa-prawa; na 2 tempa prawa-lewa",
+        "zmiany_tempa": "Wolno→szybko, szybko→wolno, wielokrotna, tempo + kierunek",
+        "zmiany_kierunku": "Przez odbicie (zwrot 180°), przez krok odbicia, przez zatrzymanie z odbiciem nogi wykrocznej/zakrocznej",
+        "piwoty": "Na lewej/prawej nodze, w przód / w tył / kombinacje"
+      },
+      "doskonalenie_zabawy": [
+        "Berek 'uratuj na 1 tempo' (złapany zatrzymuje się w postawie; ratunek przez zatrzymanie + 3 kroki przyspieszenia; warianty na 2 tempa, pivotem, zmianą kierunku)",
+        "Berek 'Kwadraty' (ratunek przez wbiegnięcie do kwadratu i wykonanie zadania)",
+        "Berek w parach / trójkach / czwórkach",
+        "Zabawa 'Cienie' (naśladowanie ruchów prowadzącego — starty, zatrzymania, pivoty, zmiany tempa i kierunku)",
+        "Berek na leżąco (ratunek przez leżenie obok kolegi)",
+        "Segmenty poruszania się (systematyka: starty i zatrzymania → pivoty → zmiana tempa → zmiany kierunków → połączenie wszystkiego)",
+        "Wyścigi rzędów / 'Tik tak' / wyścigi w parach (starty i zatrzymania punktowane, zadania techniczne)",
+        "Zabawa 'Dotknij nogi pivotującego'",
+        "'Berek po pozycjach' (ruch po liniach łamanych z pozycji na pozycję)"
+      ],
+      "fragmenty_gry": [
+        "Gra 1x1 + T (podanie do trenera, uwolnienie się startami/zatrzymaniami/zmianami, chwyt i 1x1; punktacja za otrzymanie piłki i za pozycję)",
+        "Wyścig i gra 1x1 (bieg w pasach ze zmianami kierunku na 'wysepkach', chwyt na poz. 45 i 1x1)",
+        "Gra na 1 kosz bez kozła 'Biegnij do linii' (po podaniu dobiegnięcie do linii + zadanie + powrót; 2x2 → 5x5 z/bez T)",
+        "Gra na 1 kosz bez kozła 'Zmień pozycję' (po podaniu zmiana pozycji / obiegnięcie / ucieczka)"
+      ],
+      "punkty_coachingowe": ["Wolno i dokładnie → potem szybko", "Ćwicz w różnych kierunkach", "Mniej kroków = szybciej", "Łącz umiejętności — twórz nowe ćwiczenia", "Ręce gotowe do chwytu", "Przy pivocie najpierw obrót głowy", "Zatrzymanie pięta-palce"],
+      "motoryka": "Regulacja intensywności liczbą berków; plank / stepowanie / nożyce dla czekających; skoki jedno/obunóż, bieg tyłem, krok odstawno-dostawny."
+    },
+
+    "podania_w_biegu": {
+      "temat": "Podania w biegu",
+      "nauczanie_progresja": ["Podania w klęku (barki i biodra w kierunku biegu; ręka bliższa/dalsza/znad głowy)", "Podania w wykroku", "Podania w marszu (odegranie na tej samej nodze co chwyt)", "Podania w biegu (+ przyspieszenie 3 kroków po podaniu)"],
+      "systematyka_doskonalenia": ["ręka bliższa → znad głowy → ręka dalsza", "w klęku → stojąc → kozłem", "piłka ciężka i lekka w stosunku 1:3", "w marszu → w biegu → ze zmianą tempa → ze zmianą kierunku → tempa i kierunku", "dwiema piłkami", "w 2/3/4/5-kach"],
+      "doskonalenie_cwiczenia": [
+        "Ćwiczenia oswajające/koordynacyjne z piłką (przekładanie pod kolanami, ósemki, za plecami, podrzuty z klaśnięciem, obroty 180/360 z chwytem w najwyższym punkcie)",
+        "Berek z dotknięciem piłki",
+        "'Podaj do partnera' (wyrzut po przekątnej + bieg po prostej, i odwrotnie)",
+        "Podania na odcinku: w równym tempie → z przyspieszeniem 3 kroków → ze zmianą kierunku → ze zmianą tempa i kierunku",
+        "Wyrzut do szybkiego / wyścig w czwórkach",
+        "Podania w trójkach (środkowy podaje ręką bliższą, skrzydła dalszą)",
+        "'Sznurowadło' (podanie + zamiana miejsc)",
+        "'Ósemka' (podanie + ruch w kierunku podania, zajęcie pozycji)"
+      ],
+      "fragmenty_gry": ["Małe gry od połowy (celem podania do najdalszego; rzut liczony za tyle pkt ile podań/zmian pozycji/obiegnięć)", "Gra z wyrzutem", "3 na 3 wahadłowo (krzyżówki, sznurówki, obiegnięcia)", "3x3 z wyprowadzeniem szybkiego ataku 3:0"],
+      "punkty_coachingowe": ["Gotowość rąk do chwytu", "Ściągnięty nadgarstek po podaniu", "Przyspieszenie po podaniu", "Obserwacja dwóch rogów", "Piłka powyżej barku", "Kolejno: zwiększaj odległość → kozłem → podania specjalne → tempo → obrońca bierny → obrońca aktywny"]
+    },
+
+    "rzut_z_biegu": {
+      "temat": "Rzut z biegu",
+      "_autor": "m.in. Michał Libich",
+      "nauczanie_progresja": [
+        "Rzut z biegu po chwycie (po podrzucie, chwyt w 1. kroku = krok zero → 2. krok → 3. krok, z rzutem)",
+        "Rzut z biegu po podaniu (z ręki partnera, po podrzucie, po niskim koźle, z podłoża, z rogu, ze środka)",
+        "Rzut z biegu po kozłowaniu (po niskim szybkim koźle: 1 → 2 → 3+ kozłów)"
+      ],
+      "systematyka_doskonalenia": ["piłka z ręki → po koźle → z podrzutu → z ziemi → po podaniu", "rzut z minięciem obrońcy", "eurostep", "różne wykończenia (lay-up, revers)", "zmiana ręki rzucającej", "różne pozycje i odległości"],
+      "doskonalenie_cwiczenia": [
+        "Segment rzutu z biegu z różnych pozycji (partner-stojak trzyma piłkę na dłoni; nabiegnięcie → chwyt → rzut → zbiórka)",
+        "'Złap inną piłkę' (wyrzut + rzut z biegu + chwyt piłki innej osoby; trener pokazuje liczbę kroków)",
+        "'Pojedynek strzelców' (wywołanie numeru, wyrzut + chwyt po koźle + rzut z biegu)",
+        "Ćwiczenie w parach — rzut z biegu (1./2. krok i krok zerowy, prawa/lewa ręka, obrońca bierny/aktywny)",
+        "Rywalizacja indywidualna na czas (30 s)",
+        "Ćwiczenie w trójkach (2 piłki, zbiórka + wybicie + przyspieszenie, punktacja)"
+      ],
+      "poprawna_technika": ["Obserwacja boiska", "Atak na piłkę w momencie chwytu", "Pierwszy krok długi", "Drugi przyspieszony z biodra", "Piłka szybko uniesiona nad głowę", "Kolano wysoko przy rzucie", "Łokieć do końca wyprostowany", "Nadgarstek miękki, ściągnięty po rzucie", "Lądowanie na dwie nogi!"],
+      "fragmenty_gry": ["Gra 1x1 z podaniem od trenera (liczą się tylko rzuty z biegu i dobitki)", "Gra 1x1 z wyrzucającym", "Gra zadaniowa 3x3 / 5x5 bez kozła (kosze tylko po rzutach z biegu)", "Gra na zasadzie eliminacji"],
+      "punkty_coachingowe": ["Problemy z techniką → wróć do imitacji bez piłki", "Ćwicz obie ręce (słabsza = 2 pkt, mocniejsza = 1 pkt)", "Wolno → stopniowo tempo i odległość", "Obrońca bierny i aktywny", "Różne wykończenia; wyżej: rzut łamany (eurostep)", "'Ćwiczmy więcej słabszą rękę, mocniejsza sama się nauczy'"]
+    }
+  },
+
+  "wspolne_zasady_metodyczne": [
+    "Powtarzalność drilli w tygodniu — nie trać czasu na tłumaczenie zasad, pracuj nad detalami (zbieżne z Trunić/Messina w coaching_notes.json)",
+    "2 wskazówki techniczne jako warunek zaliczenia (np. obrót głowy przy pivocie + zatrzymanie pięta-palce)",
+    "Motoryka wpleciona w ćwiczenia techniczne (plank, skoki, stepowanie dla czekających)",
+    "Percepcja / decyzyjność (obserwacja trenera pokazującego cyfry, wołanie imion, decyzje kierunku)",
+    "Rywalizacja i punktacja jako narzędzie doskonalenia",
+    "Transfer techniki do gry (fragmenty 1x1 → 5x5)"
+  ],
+
+  "powiazania": {
+    "coaching_notes.json": "Filozofia treningu (Messina: teaching vs competing; Trunić: zasady z dziećmi; shooting foundation footwork)",
+    "point_guard_traits.json": "Podania, zmiana tempa ('biegi'), IQ",
+    "finxs_mental_assessment.json": "Ocena mentalna zawodnika (dyscyplina, koncentracja, powtarzalność w treningu)"
+  }
+}

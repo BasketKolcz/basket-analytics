@@ -1,0 +1,104 @@
+{
+  "_weryfikacja_zewnetrzna": {
+    "sila_dowodu": "kwestionowane",
+    "krytyka": "DISC / Extended DISC nie ma potwierdzonej trafności predykcyjnej ani niezależnego wsparcia w recenzowanej literaturze (inaczej niż NEO-PI-R / model pięcioczynnikowy). Podział na 4 typy nadmiernie upraszcza osobowość. Używać jako WSPÓLNEGO JĘZYKA zespołu i punktu startu rozmowy, NIE jako testu diagnostycznego czy predykcyjnego.",
+    "szczegoly_i_zrodla": "Patrz contested_claims.json → tezy.disc_jako_narzedzie_diagnostyczne (zweryfikowane 22.07.2026).",
+    "_zasada": "Ten znacznik NIE unieważnia treści pliku — dodaje warstwę krytyczną. Treść zostaje, bo DISC ma wartość komunikacyjną."
+  },
+  "_source": "1) 'DISC Test 2020.docx' — kwestionariusz samooceny zachowań (instrument DISC, punktacja 4-3-2-1). 2) '181220_182958.76_maciej_grzonkowski.pdf' — pełny raport Extended DISC (Maciej Grzonkowski, działalność gospodarcza, 20.12.2018, styl IDS). 3) Infografika IMOPEKSIS Basketball Clinic (sekcja Extended DISC) oraz plansza 'Fazy lekcji treningowej' (Tomasz Wilczewski, Justyna Sosińska) — dopasowanie profilu trener/zawodnik do faz treningu.",
+  "_comment": "DISC (Extended DISC) to model diagnozy naturalnego stylu zachowania oparty na pracach C.G. Junga i W.M. Marstona. Cztery style: D (Dominujący), I (Inspirujący), S (Stały/Wspierający), C (Analityczny/Sumienny). Model opisuje zachowania, które kosztują NAJMNIEJ energii (styl naturalny) — szczególnie widoczne pod presją, gdy brak czasu na racjonalną analizę. NIE opisuje osobowości, inteligencji, wiedzy ani umiejętności. W koszykówce używany do: dopasowania komunikacji trener↔zawodnik, budowania zespołu (role grupowe), rozumienia reakcji na stres. Uzupełnia finxs_mental_assessment.json (inne narzędzie mentalne) oraz filar 'charakter' w player_evaluation.json.",
+  "_program_use": "Referencja przy module profilu behawioralnego zawodnika/trenera. Framework 4 stylów + wskazówki komunikacyjne mogą zasilić: (a) kartę zawodnika (jak do niego mówić, co go motywuje/demotywuje, reakcje na stres), (b) narzędzie dopasowania stylu trenera do fazy treningu, (c) diagnostykę ról zespołowych przy budowie składu. Kwestionariusz DISC (instrument) można odwzorować jako formularz samooceny z automatycznym wyliczeniem D/I/S/C.",
+
+  "model": {
+    "nazwa": "Extended DISC (analiza behawioralna)",
+    "podstawa_teoretyczna": "Carl Gustav Jung + William Moulton Marston — podział zachowań na 4 style: D I S C. Extended DISC precyzyjnie mierzy natężenie każdego stylu w potencjale respondenta.",
+    "co_mierzy": "Naturalny styl zachowania = reakcje kosztujące najmniej energii, wysiłku i koncentracji, najprzyjemniejsze dla osoby. Widoczny zwłaszcza pod presją.",
+    "czego_NIE_opisuje": "Pełnej osobowości, inteligencji, umiejętności zawodowych, wiedzy, doświadczenia. Nie powinien być jedynym kryterium decyzji personalnych — traktować jako źródło uzupełniające.",
+    "dwa_profile": {
+      "profil_II_naturalny": "Najbardziej komfortowe zachowania (naturalny potencjał).",
+      "profil_I_adaptowany": "Jak osoba czuje, że chce/musi dostosować zachowanie do otoczenia. Różnica profil I vs II = potrzeba adaptacji (kosztuje energię)."
+    },
+    "diament": "Diament Extended DISC pokazuje strefy elastyczności — zaciemnione pola = zachowania naturalne/komfortowe; białe pola = wymagają większej energii i koncentracji. Strzałka (początek→grot) = kierunek i wielkość adaptacji. Brak strzałki = oczekiwania otoczenia zbliżone do naturalnego potencjału.",
+    "osie_diamentu": "C=Myślenie / D=Intuicja / I=Uczucia / S=Percepcja (odpowiedniki jungowskie). Górna oś twarde wyniki (D↔C), dolna stabilność/kontakty (S↔I)."
+  },
+
+  "cztery_style": {
+    "D": {
+      "nazwa": "Dominujący (twarde wyniki, decyzje, zmiana, szybkość)",
+      "opis": "Nieustępliwy, niezależny, pewny siebie, lubi konkurować, wymagający, łatwo i stanowczo podejmuje decyzje. Cień: przytłaczający, nadużywa władzy, agresywny bez ogródek, skoncentrowany na sobie.",
+      "jak_rozpoznac": ["W ciągłym pośpiechu, robi wiele rzeczy naraz", "Bezpośredni, mówi co myśli, może być bezceremonialny", "Wyraża opinię jako fakty, przerywa innym", "Wymagający, pyta 'Co JA z tego będę miał?'", "Bywa niecierpliwy, łatwo się irytuje"],
+      "jak_sie_komunikowac": ["Bądź bezpośredni i konkretny", "Dostarcz alternatyw", "Upewnij się że on 'wygra'", "Działaj szybko — decyzje zapadają szybko", "Nie bądź emocjonalny, nie staraj się dominować", "Dyskusja i walka to 'element gry'"],
+      "nie": ["Nie przechodź do wszystkich szczegółów", "Nie dostarczaj zbyt dużo informacji", "Nie próbuj kontrolować sytuacji", "Nie zwalniaj, nie trać celu z oczu", "Nie traktuj spraw personalnie"],
+      "samodoskonalenie": ["Zwolnij, bądź cierpliwy", "Nie wyciągaj pochopnych wniosków / gwałtownych decyzji", "Słuchaj innych", "Bądź świadomy wpływu na innych", "Nie reaguj przesadnie"]
+    },
+    "I": {
+      "nazwa": "Inspirujący (aktywność, inspiracja, atmosfera, otwartość, zadowolenie)",
+      "opis": "Towarzyski, przekonujący, lubi mówić, otwarty, pełen entuzjazmu i energii. Cień: krzykliwy, traci poczucie czasu, niedyskretny, pobudliwy, postępuje pochopnie.",
+      "jak_rozpoznac": ["Otwarty i przyjacielski, dużo mówi", "Łatwo się ekscytuje, inspirujący", "Mówi o ludziach których zna", "Nie skupia się na szczegółach, skacze z tematu na temat", "Unika twardych faktów"],
+      "jak_sie_komunikowac": ["Bądź przyjazny, nie pomijaj go", "Zaplanuj czas na pogawędki, swobodna atmosfera, żarty mile widziane", "Pozwól mu mówić, okaż uznanie", "Mów o ludziach i uczuciach", "Skróć dystans", "Pamiętaj o kontroli dalszego biegu spraw"],
+      "nie": ["Nie mów o zbyt wielu szczegółach", "Nie zaniedbuj relacji", "Nie podnoś negatywnych aspektów", "Nie bądź zbyt praktyczny ani pesymistą", "Nie wyznaczaj ograniczeń"],
+      "samodoskonalenie": ["Mniej mów, więcej słuchaj", "Nie reaguj emocjonalnie", "Nie obiecuj czego nie dotrzymasz", "Skup się na szczegółach", "Kontroluj dalszy przebieg spraw"]
+    },
+    "S": {
+      "nazwa": "Stały / Wspierający (stabilność, solidność, koleżeństwo, cierpliwość)",
+      "opis": "Dobry słuchacz, wzbudza zaufanie, cierpliwy, spokojny, opanowany. Cień: uparty, unika zmian, nie wyraża opinii, opiera się nowym pomysłom.",
+      "jak_rozpoznac": ["Spokojny, nie ekscytuje się łatwo", "Słucha uważnie, przytakuje, łatwo akceptuje", "Niewymagający, rozważny", "Ma opinię ale nie wyraża publicznie", "Nowe pomysły/zadania sprawiają dyskomfort"],
+      "jak_sie_komunikowac": ["Zwolnij tempo prezentacji", "Buduj zaufanie, skup się na ludziach", "Prezentuj w uporządkowany sposób", "Zdobywaj zaangażowanie krok po kroku", "Bądź szczery, nie dominuj", "Dostarcz precedensów by zredukować niepewność"],
+      "nie": ["Nie zapominaj o złożonych obietnicach", "Nie dokonuj nieoczekiwanych zmian", "Nie bądź nieodpowiedzialny/niecierpliwy", "Nie działaj zbyt szybko"],
+      "samodoskonalenie": ["Bądź bardziej asertywny i 'agresywny'", "Wypowiadaj się, wyrażaj zdanie", "Działaj 'tu i teraz', mniej się zastanawiaj", "Trzymaj emocje pod kontrolą", "Nie bój się zmian"]
+    },
+    "C": {
+      "nazwa": "Analityczny / Sumienny (fakty, zasady, analizy, systemy, krytycyzm)",
+      "opis": "Dokładny, przestrzega zasad, logiczny, ostrożny, formalny, zdyscyplinowany. Cień: unika towarzyskości, nie wyraża opinii, utyka w szczegółach, nie podejmuje ryzyka.",
+      "jak_rozpoznac": ["Powściągliwy, na swój sposób nieśmiały, cichy", "Koncentruje się na szczegółach, zadaje wiele pytań", "Studiuje specyfikacje i informacje pisemne", "Postępuje ostrożnie, niechętnie wyraża odmienne poglądy", "Krytyczny — krytyka oparta na faktach, nie opiniach"],
+      "jak_sie_komunikowac": ["Dostarcz faktów", "Bądź cierpliwy, zwolnij", "Dostarcz mnóstwo szczegółowych informacji", "Kontroluj własne działania", "Nie wywieraj presji", "Skup się na temacie, unikaj tematów o ludziach"],
+      "nie": ["Nie działaj zbyt szybko", "Nie poświęcaj zbyt dużo czasu na 'pogaduszki'", "Nie podchodź zbyt blisko", "Nie oczekuj natychmiastowej decyzji", "Nie trać cierpliwości przy dostarczaniu informacji"],
+      "samodoskonalenie": ["Mów więcej", "Szybciej podejmuj decyzje i działania", "Nie bój się popełniać błędów", "Nie trać z pola widzenia obrazu całości", "Akceptuj niejednoznaczność"]
+    }
+  },
+
+  "role_zespolowe": {
+    "opis": "Osoby o danym stylu naturalnie przyjmują typowe role w zespole. Przykład (styl I) = 'Inspirator'.",
+    "inspirator_I": "Generuje pomysły, chce działać, wysokie zdolności wpływania na grupę. Wierzy w instynkt i spontaniczność, lubi zmiany. Postrzegany jako otwarty i towarzyski, lecz powierzchowny i zaabsorbowany sobą. Lepszy w wymyślaniu i rozpoczynaniu niż w kończeniu. Musi się wyróżniać — nieprzyjemne jest bycie przeciętnym w przeciętnej grupie."
+  },
+
+  "instrument_samooceny": {
+    "nazwa": "DISC Test 2020 — samoocena, analiza zachowań",
+    "metoda": "W każdej grupie wyrażeń przydziel punkty 4-3-2-1: 4 = zachowanie najbardziej Cię charakteryzujące, 1 = najmniej; 3 = prawie najbardziej, 2 = prawie najmniej. Na końcu podlicz sumy D / I / S / C.",
+    "wazna_zasada": "Przed wypełnieniem OKREŚL obszar oceny: rodzinny CZY zawodowy/sportowy — i trzymaj się wyłącznie jednego obszaru (inaczej wynik jest niemiarodajny).",
+    "przyklady_wyrazen": {
+      "D": ["Najważniejszy jest dla mnie wynik", "Jestem pewny siebie", "Zależy mi żeby być najlepszy", "Działam odważnie", "Sam decyduję co robię", "Nikogo się nie boję", "Mam silną wolę"],
+      "I": ["Jestem optymistyczny", "Działam szybko i chętnie", "Jestem pozytywnie nastawiony", "Lubię ludzi", "Działam bez namysłu", "Lubię rozmawiać z ludźmi", "Lubię być zauważony"],
+      "S": ["Lubię spokój i równowagę", "Unikam konfliktów", "Wolę słuchać niż mówić", "Wspieram innych", "Jestem cierpliwy", "Zawsze współpracuję z innymi", "Jestem pokojowo nastawiony"],
+      "C": ["Jestem dokładny", "Robię wszystko dokładnie", "Działam z rozwagą", "Ciężko mnie sprowokować", "Jestem krytyczny i analizuję", "Jestem zorganizowany", "Planuję to co robię"]
+    }
+  },
+
+  "zastosowanie_koszykowka": {
+    "dopasowanie_trener_zawodnik_do_faz": {
+      "_zrodlo": "Plansza 'Fazy lekcji treningowej' (Wilczewski/Sosińska) — każda faza lekcji preferuje inny profil zawodnika i inną postawę trenera.",
+      "nauczanie": "Profil zawodnika C+S, profil trenera C+S — trener WSPIERAJĄCY (mała intensywność, duża powtarzalność, zdobywanie umiejętności).",
+      "doskonalenie": "Profil zawodnika D+I, profil trenera I+C/S/D — trener KREATYWNY, buduje środowisko (łączenie i rozwijanie umiejętności, ładunek emocjonalny).",
+      "trenowanie": "Profil zawodnika D, profil trenera D+S — trener EGZEKUTOR (środowisko gier/fragmentów gry, warunki meczowe, utrwalanie nawyku)."
+    },
+    "budowanie_zespolu": "Świadomość stylów w składzie: mieszaj D (decyzje/lider), I (energia/atmosfera), S (spójność/wsparcie), C (dyscyplina/detal). Zbyt jednorodny profil = ryzyko (np. sami I = chaos bez wykończenia; sami C = paraliż analityczny)."
+  },
+
+  "przyklad_grzonkowski": {
+    "_uwaga": "Konkretny raport Extended DISC — przykład interpretacji, nie wzorzec.",
+    "styl": "IDS",
+    "natezenie": {"I": 60, "D": 25, "S": 15, "C": 0},
+    "atrybuty": "Przystępny, towarzyski, otwarty, pełen inspiracji, uczuciowy, rozmowny, pełen entuzjazmu, niezależny, rzeczowy, ambitny.",
+    "motywatory": ["Dobrzy, aktywni przyjaciele", "Pozytywna, ekscytująca atmosfera", "Zadania dające niezależność", "Otwartość w komunikacji", "Brak obowiązków wymagających dbałości o szczegóły", "Wolność w dyskusji", "Branie pod uwagę jego opinii"],
+    "unika": ["Nudnych, rutynowych czynności", "Odseparowania od innych", "Szczegółowych instrukcji", "Ścisłej kontroli / patrzenia na ręce", "Ograniczeń i zasad", "Osób zorientowanych na fakty"],
+    "reakcje_na_stres": "Dokonuje niedokładnych ocen, działa powierzchownie, pozwala emocjom wpływać na decyzje, upiększa fakty, za bardzo chce być lubiany, robi błędy gdy powinien być dokładny, ekscytuje się bez analizy.",
+    "rola_zespolowa": "Inspirator (generuje pomysły, wpływa na grupę, słaby w kończeniu)."
+  },
+
+  "powiazania": {
+    "finxs_mental_assessment.json": "Drugie narzędzie oceny mentalnej — FinxS mierzy 18 kompetencji sportowych, DISC mierzy 4 style behawioralne. Komplementarne warstwy profilu psychologicznego.",
+    "player_evaluation.json": "Filar 'charakter' — DISC dostarcza języka do opisu stylu zachowania, motywatorów i reakcji na stres zawodnika.",
+    "intel_background.json": "Intel o zawodniku (coachability, body language, jak z nim rozmawiać) — DISC podpowiada styl komunikacji.",
+    "imopeksis_methodology.json": "Extended DISC jest częścią systemu IMOPEKSIS (dopasowanie profilu trener/zawodnik do faz lekcji, kształtowanie nawyku, budowanie pewności siebie)."
+  }
+}

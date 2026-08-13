@@ -1,0 +1,45 @@
+{
+  "_source": "Tadeusz Huciński, Marek Graczyk, Franciszek Makurat, Mieczysław Ciosek, Karol Gryko, Maciej Ręgwelski — „Psychospołeczne uwarunkowania optymalnej gotowości sportowej w olimpizmie\", Wyższa Szkoła Trenerów Sportu w Warszawie, Tczew 2012, ISBN 978-83-935294-0-7. Recenzent: prof. dr hab. Andrzej Jakubik. 156 stron.",
+  "_comment": "Monografia akademicka o psychologii startu i gotowości startowej. W odróżnieniu od książki IMOPEKSIS (praktyczna metoda dla trenera koszykówki) ta pozycja jest naukowym opracowaniem SZERSZYM niż koszykówka — obejmuje sporty indywidualne i zespołowe, opiera się na badaniach empirycznych i materiałach ze Światowych Kongresów Psychologii Sportu (ISSP). Ten sam autor wiodący co IMOPEKSIS.",
+  "_program_use": "Warstwa teoretyczna/uzasadniająca dla modułu mentalnego — tłumaczy DLACZEGO arkusze z book_imopeksis_hucinski.json mierzą to, co mierzą. Najbardziej użyteczne rozdziały dla programu: rutyna przedstartowa (rozdz. III), koncentracja i przerzutność uwagi (rozdz. VII), psychologiczne następstwa niepowodzeń (rozdz. IX) — to ostatnie ma bezpośrednie przełożenie na interpretację serii słabych meczów w profilu zawodnika.",
+
+  "kategoria": "Psychologia sportu — monografia naukowa",
+
+  "kontekst_powstania": {
+    "impuls": "Obserwacje z Igrzysk Olimpijskich w Pekinie 2008 oraz XII Światowy Kongres Psychologii Sportu (ISSP), Marakesz 2009.",
+    "diagnoza_polska": "Wg „Bilansu Olimpijskiego Pekin 2008\" (MSiT) rezerwy wynikowe tkwią głównie w zmianie modelu przygotowania w cyklu czteroletnim — makrocykl musi uwzględniać psychoedukację i wiedzę medyczną.",
+    "case_chiny": "Chiński program przygotowania mentalnego do Pekinu 2008, opracowany w 2000 roku, realizowało 62 psychologów. W końcowej fazie przygotowań był to najważniejszy — i alternatywny wobec dopingu farmakologicznego — element kształtowania gotowości startowej.",
+    "case_wielka_brytania": "W 2004 na Uniwersytecie w Hull opracowano system w formule INTEGRALNEGO TRENINGU SPORTOWEGO (trening sportowy + umiejętności mentalne + nawyki zdrowotne). Efekt: awans z 10. miejsca w Atenach (30 medali) na 4. w Pekinie (47 medali: 19 złotych, 13 srebrnych, 15 brązowych).",
+    "case_polska_wioslarstwo": "Polscy wioślarze od 1997 mają wzorcowy zespół opieki medycznej prowadzący Integralny Trening Sportowy, w tym psychologiczny wg autorskiego programu M. Graczyka — akronim MASTER: Motywacja wewnętrzna, Aktywacja, Symulacja startu, Tendencja dążenia do sukcesu, Emocje pozytywne, Rutyna i Rejestracja. Efekt: złoto w Sydney i Atenach, złoto+srebro i dwa miejsca finałowe w Pekinie.",
+    "ciekawostka_historyczna": "Wg prezydenta ISSP Sidonio Serpy pionierem psychologii sportu był Pierre de Coubertin, który już w 1901 pisał o dwóch rodzajach motywacji sportowców — wewnętrznej i zewnętrznej — a w 1913 zorganizował w Lozannie I Kongres nt. Psychologii i Fizjologii sportu."
+  },
+
+  "struktura": [
+    {"rozdzial": "I", "tytul": "Przygotowanie do startu w zawodach sportowych", "podpunkty": ["Analiza psychologiczna sytuacji startowej sportowca", "Typy przygotowań do walki sportowej", "Pewność siebie", "Mowa wewnętrzna", "Spójność grupy", "Synergia", "Stres i sposoby radzenia sobie ze stresem"]},
+    {"rozdzial": "II", "tytul": "Stan przedstartowy", "podpunkty": ["Powstawanie emocji i inteligencja emocjonalna", "Reakcje fizjologiczne powstające pod wpływem emocji", "Lęk a pobudzenie", "Modele zarządzania emocjami"]},
+    {"rozdzial": "III", "tytul": "Bezpośredni stan przedstartowy", "podpunkty": ["Rutyna przedstartowa"]},
+    {"rozdzial": "IV", "tytul": "Pewność siebie w aspekcie równowagi a zarządzanie emocjami", "podpunkty": ["Proces motywacyjny", "Teorie motywowania", "Nagrody i kary", "Celowość działania"]},
+    {"rozdzial": "V", "tytul": "Optymalna koncentracja na wykonaniu zadania podczas walki sportowej", "podpunkty": ["Wizualizacja a wyobrażenia", "Trening wyobrażeniowy"]},
+    {"rozdzial": "VI", "tytul": "Kontrola operacji techniczno-taktycznych podczas zawodów sportowych", "podpunkty": ["Podejmowanie decyzji"]},
+    {"rozdzial": "VII", "tytul": "Uwaga wykonawcza w koncentracji indywidualnej i zespołowej", "podpunkty": ["Selekcja informacji", "Habituacja", "Funkcje uwagi", "Rola koncentracji", "Antycypacja", "Przerzutność uwagi"]},
+    {"rozdzial": "VIII", "tytul": "Trener a proces szkolenia w zespołowych grach sportowych", "podpunkty": ["Rola trenera w kierowaniu i szkoleniu zespołu sportowego", "Planowanie i proces szkoleniowy", "Współdziałanie członków zespołu i relacje wewnątrzgrupowe", "Udział trenera w sukcesie zespołu: wyniki badań empirycznych"]},
+    {"rozdzial": "IX", "tytul": "Psychologiczne następstwa niepowodzeń sportowych", "podpunkty": ["Rywalizacja, sukcesy i niepowodzenia", "Bezpośrednie następstwa niepowodzeń sportowych", "Odległe następstwa niepowodzeń sportowych"]},
+    {"rozdzial": "X", "tytul": "Odnowa psychobiologiczna", "podpunkty": []}
+  ],
+
+  "kluczowe_pojecia": {
+    "stan_flow": "Optymalny stan psychofizyczny: zawodnik jest przekonany, że jego umiejętności są adekwatne do czekających go wyzwań, cała uwaga skupia się na „tu i teraz\", na nic nie czeka, niczego nie wyprzedza myślą, a wykonywana czynność z trafnym wyborem i decyzją daje takie zadowolenie, że chce się ją wykonywać dla niej samej — nawet jeśli jest trudna lub niebezpieczna.",
+    "obciazenie_gier_zespolowych": "W zespołowych grach sportowych przez ~2 godziny występuje około 200 AKCJI wymagających zmiennej koncentracji i przerzutności uwagi — to wymaga ogromnej odporności psychofizycznej. (Uzasadnia sens pomiaru koncentracji minuta-po-minucie z arkusza Hucińskiego.)",
+    "integralny_trening_sportowy": "Model, w którym obok treningu czysto sportowego uwzględnia się umiejętności mentalne i odpowiednie nawyki zdrowotne. Wg autorów to kierunek, w którym musi iść przygotowanie olimpijskie.",
+    "etapy_startow": "Droga do mistrzostwa prowadzi przez kolejne etapy startów: walka o zwycięstwo w kolejnym tygodniu → walka o sukces w eliminacjach → walka o doroczne mistrzostwo → walka o sukces życiowy. Do ostatniego etapu docierają nieliczni.",
+    "teza_o_wyrownaniu_poziomu": "Minęły lata fascynacji techniką, przygotowaniem motorycznym, fizjologią, biochemią i żywieniem — to, co niegdyś dawało przewagę, jest dziś powszechne. Niewykorzystaną niszą pozostaje trening psychologiczny."
+  },
+
+  "powiazania": {
+    "book_imopeksis_hucinski.json": "Ten sam autor wiodący. Monografia dostarcza naukowego uzasadnienia dla praktycznej metody IMOPEKSIS — szczególnie dla pomiaru koncentracji uwagi wykonawczej (rozdz. VII) i spójności grupy (rozdz. I).",
+    "imopeksis_methodology.json": "Rozdz. I-VII odpowiadają kolejnym czynnikom akronimu IMOPEKSIS.",
+    "finxs_mental_assessment.json": "Kompetencje Pressure Control, Momentary Concentration, Bouncing Back i Preparation mają tu podbudowę teoretyczną (stan przedstartowy, rutyna, następstwa niepowodzeń).",
+    "player_evaluation.json": "Filar 'charakter' — rozdz. IX (następstwa niepowodzeń) pomaga interpretować reakcję zawodnika na serię porażek.",
+    "watching_game.json": "Checklist 'Reakcja po błędzie' ma tu odpowiednik teoretyczny: przerzutność uwagi i habituacja (rozdz. VII)."
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "_source": "„TECHNIKI SOCJOMETRYCZNE.docx\" — materiał z przedmiotu Dydaktyka przedmiotowa, studia podyplomowe AWF Katowice. Uzupełniająco slajdy 32-33 z „Prakseologiczny model wychowania f.pptx\" (diagnoza grupowa, dr Karolina Kostorz, AWF Katowice). Literatura wskazana w materiale: Łobocki (1982) „Metody badań pedagogicznych\", Gracz i Sankowski (1991) „Psychologia działalności sportowej\".",
+  "_comment": "NARZĘDZIE POMIARU RELACJI W ZESPOLE — wypełnia konkretną lukę w tej bazie. Biblioteka miała dotąd instrumenty do pomiaru: profilu mentalnego jednostki (FinxS, DISC), techniki (sprawdziany, 40 obserwacji przyczyn) i odczuć przed/po meczu (arkusz Hucińskiego). NIE MIAŁA niczego do pomiaru STRUKTURY SPOŁECZNEJ zespołu — mimo że spójność grupy jest jednym z 8 czynników IMOPEKSIS, a Huciński opiera na niej regułę budowania piątek. Socjometria jest klasycznym, sprawdzonym narzędziem do tego pomiaru.",
+  "_program_use": "Macierz socjometryczna to tablica N×N (kto kogo wybiera) — strukturalnie ten sam kształt danych co lineup_stats. Możliwy moduł: ankieta socjometryczna → macierz → wyliczone wskaźniki (spoistość, zwartość, integracja) → lista zawodników izolowanych i odrzuconych → podpowiedź przy budowaniu piątek. Kluczowe: wyniki są WRAŻLIWE — patrz sekcja etyka_i_ostrzezenia; moduł musiałby mieć ograniczony dostęp.",
+
+  "kategoria": "Diagnostyka zespołu — pomiar relacji i spójności grupy",
+
+  "czym_jest": {
+    "definicja": "Socjometria to nauka zajmująca się ilościowym mierzeniem właściwości psychicznych cechujących grupę jako całość oraz stosunkami w niej panującymi. Zespół czynności mających na celu poznanie uwarunkowań, istoty i przemian NIEFORMALNYCH związków międzyosobowych w grupach rówieśniczych.",
+    "twórca": "J. L. Moreno — amerykański psychiatra; pierwsze badania podczas I wojny światowej w obozach jeńców, następnie w klasach szkolnych.",
+    "kluczowe_rozroznienie": "Socjometria mierzy strukturę NIEFORMALNĄ — kto kogo faktycznie wybiera — w odróżnieniu od struktury formalnej (kapitan, pierwsza piątka, role wyznaczone przez trenera)."
+  },
+
+  "technika_moreno": {
+    "_status": "Technika podstawowa — pozostałe są w gruncie rzeczy jej odmianami.",
+    "zasada": "Wszystkim członkom grupy zadaje się specjalnie sformułowane pytania dotyczące stosunków społecznych w ŚCIŚLE OKREŚLONYCH sytuacjach.",
+    "nazewnictwo": "Zestaw pytań = test socjometryczny; pojedyncze pytania = kryteria lub sytuacje socjometryczne.",
+    "typy_sytuacji": {
+      "rzeczywiste": "Dotyczą realnego życia grupy — np. wybór samorządu, rozsadzenie, podział na zespoły, rozsadzenie w autokarze",
+      "upozorowane": "Hipotetyczne — np. „załóżmy, że wyjedziemy na obóz i trzeba wystawić wartę\"",
+      "_adaptacja_koszykarska": "Sytuacje rzeczywiste w zespole: z kim chcesz grać w piątce, komu podasz piłkę w ostatniej akcji, z kim chcesz dzielić pokój na wyjeździe, kogo wybierzesz do ćwiczenia w parach, kto powinien zabrać głos w szatni przy kryzysie."
+    },
+    "wybory_pozytywne_i_negatywne": {
+      "pozytywne": "Klasy młodsze 2-3 wybory na pytanie, starsze do 5 wyborów",
+      "negatywne": "Pytania o osoby nielubiane — pozostawia się CAŁKOWITĄ DOWOLNOŚĆ, uznaje się nawet brak odpowiedzi",
+      "ostrzezenie_o_sformulowaniu": "Pytania negatywne mogą wywoływać konflikty i wymagają ostrożnych sformułowań. Materiał podaje wzorcowy przykład: NIE pytaj „z kim najbardziej NIE CHCIAŁBYŚ siedzieć?\", tylko „z kim NAJMNIEJ chciałbyś siedzieć?\" — ta sama informacja, łagodniejsza forma."
+    },
+    "warunki_przeprowadzenia": [
+      "Poprzedzić wyjaśnieniem i uzasadnieniem celowości badań",
+      "Zapewnić o pełnej dyskrecji",
+      "Prowadzić przy 100% obecności grupy",
+      "Najlepiej rozdać gotowe kwestionariusze z pytaniami i miejscem na nazwiska",
+      "Jedno pytanie NIE upoważnia do uogólnień — test musi obejmować kilka kryteriów"
+    ]
+  },
+
+  "pozostale_techniki": {
+    "zgadnij_kto": {
+      "opis": "Uczestnicy wypisują nazwiska tych kolegów, których zachowanie odpowiada podanej charakterystyce (np. koleżeńskość, życzliwość; ewentualnie cechy negatywne: niezdyscyplinowanie, złośliwość, agresywność).",
+      "roznica_wobec_moreno": "U Moreno pytania dotyczą OSOBISTEGO stosunku badanego (sympatia/antypatia). W „Zgadnij kto?\" odpowiedzi opierają się na OGÓLNYM ROZEZNANIU w opinii panującej w grupie. Dlatego bywa zaliczana do technik pseudosocjometrycznych.",
+      "wskazowka_praktyczna": "Jeśli trener nie chce zadawać pytań negatywnych — należy zwrócić uwagę na tych, których NIKT nie wymienił oraz tych z małą liczbą wyborów pozytywnych. To bezpieczniejszy wariant dający podobną informację.",
+      "_wartosc_dla_trenera": "Pozwala porównać, jak grupa postrzega swoich członków, z tym, jak postrzega ich trener — i zobaczyć, gdzie te oceny się rozjeżdżają."
+    },
+    "plebiscyt_zyczliwosci_i_niecheci": {
+      "autorstwo": "Wprowadzona przez Janusza Korczaka, opracowana teoretycznie przez E. Arneckera.",
+      "wyroznik": "W przeciwieństwie do pozostałych technik ZOBOWIĄZUJE do oceny WSZYSTKICH członków grupy, nie tylko wybranych.",
+      "skala_pieciostopniowa": {"++ bardzo lubię": 5, "+ lubię, ale nie bardzo": 4, "0 jest mi obojętny": 3, "- raczej nie lubię": 2, "-- bardzo nie lubię": 1},
+      "procedura": "Skalę przedstawia się badanym BEZ PODAWANIA PUNKTACJI. Każdy podkreśla własne nazwisko (siebie nie ocenia). Nauczyciel zapewnia o dyskrecji.",
+      "_uwaga": "Skala 1-5 daje dane liczbowe, nie tylko binarne wybory — łatwiejsze do agregacji niż czysty test Moreno."
+    },
+    "szeregowanie_rangowe": {
+      "opis": "Uszeregowanie wszystkich członków grupy od najbardziej do najmniej lubianych.",
+      "wada": "Uciążliwe — badani nie zawsze są w stanie zdecydować o kolejności.",
+      "zastosowanie_alternatywne": "Dobrze sprawdza się przy badaniu zainteresowań (np. rankingiem ćwiczeń, zajęć)."
+    },
+    "porownywanie_parami": "Metoda z psychologii eksperymentalnej — porównywanie elementów zbioru parami tak, by uzyskać uszeregowanie wg wartości.",
+    "skale_oszacowan": "Wskazanie członków grupy charakteryzujących się określonym STOPNIEM NATĘŻENIA badanej cechy.",
+    "metody_kombinowane": "Synteza plebiscytu życzliwości z szeregowaniem rangowym — daje pełniejszy obraz hierarchii i struktury powiązań. Materiał zaznacza, że gotowych technik tego typu jeszcze nie ma w powszechnym użyciu."
+  },
+
+  "analiza_wynikow": {
+    "matryca_socjometryczna": {
+      "budowa": "Tablica N×N — wiersze to osoby wybierające, kolumny osoby wybierane. Odpowiedzi na każde pytanie oznacza się innym kolorem lub znakiem; PRAKTYCZNIEJ jest zrobić tyle tabel, ile było pytań. U dołu sumuje się wybory otrzymane przez każdą osobę.",
+      "ograniczenie": "Tabela daje ogólną orientację, ale NIE daje syntetycznego obrazu układu — dlatego potrzebny jest socjogram.",
+      "_program_use": "Ten sam kształt danych co lineup_stats (N×N). Import z ankiety i automatyczne wyliczenie wskaźników byłoby proste."
+    },
+    "socjogram": {
+      "typy": ["nieuporządkowany", "kołowy", "hierarchiczny"],
+      "co_odczytujemy": {
+        "gwiazdy_socjometryczne": "Osoby z największą liczbą wyborów — NIEFORMALNI LIDERZY grupy",
+        "pary": "Wybory odwzajemnione",
+        "paczki": "Grupy tworzące zamknięty krąg — podgrupy wewnątrz zespołu",
+        "lancuchy": "A wybiera B, B wybiera C itd.",
+        "osoby_odrzucone": "Otrzymujące wybory negatywne",
+        "osoby_izolowane": "Przez NIKOGO niewybrane — ani pozytywnie, ani negatywnie"
+      },
+      "_kluczowe_rozroznienie": "ODRZUCONY to nie to samo co IZOLOWANY. Odrzucony jest zauważany (negatywnie), izolowany jest niewidzialny. Dla trenera to dwa zupełnie różne problemy i dwie różne interwencje."
+    },
+    "wskazniki_liczbowe": {
+      "_zastosowanie": "Pozwalają porównywać ze sobą dwie lub więcej grup o zbliżonej liczebności.",
+      "lista": ["wskaźnik pozytywnej lub negatywnej ekspansywności grupy", "wskaźnik SPOISTOŚCI grupy", "wskaźnik ZWARTOŚCI grupy", "wskaźnik INTEGRACJI grupy"],
+      "_uwaga": "Materiał źródłowy wymienia wskaźniki, ale nie podaje wzorów („oblicza się na podstawie specjalnych wzorów\"). Przed wdrożeniem trzeba sięgnąć do Łobockiego (1982).",
+      "_znaczenie_dla_bazy": "To jest brakujące ogniwo wobec IMOPEKSIS: spójność grupy przestaje być pojęciem opisowym i staje się LICZBĄ, którą można śledzić w czasie."
+    },
+    "status_socjometryczny": {
+      "narzedzie": "Tabela krytycznych wartości statusów socjometrycznych Bronfenbrennera",
+      "kategorie": ["status wysoki", "status wyższy od przeciętnego", "status przeciętny", "status niższy od przeciętnego", "status niski"]
+    },
+    "skala_akceptacji_pilkiewicza": {
+      "idea": "Łączy pozycję na skali sympatii ORAZ antypatii — uwzględnia jednocześnie kryteria pozytywne i negatywne.",
+      "piec_kategorii": ["wysoko akceptowani", "średnio akceptowani", "POLARYZUJĄCY AKCEPTACJĘ (jednocześnie lubiani i odrzucani)", "izolowani", "odrzucani"],
+      "_najciekawsza_kategoria": "„Polaryzujący akceptację\" — zawodnik, który ma zarówno silnych zwolenników, jak i silnych przeciwników. W czystym teście Moreno taka osoba może wyglądać przeciętnie (wybory się znoszą); dopiero ta skala ją ujawnia. To typowy profil charyzmatycznego lidera ALBO źródła konfliktu w szatni."
+    },
+    "samoocena_socjometryczna": {
+      "opis": "Modyfikacja Moreno — pyta się każdego, KTO GO WYBIERA, a kto odrzuca.",
+      "wartosc": "Porównanie z wynikiem właściwego badania pokazuje, NA ILE ADEKWATNIE zawodnik postrzega swoją pozycję w grupie.",
+      "_powiazanie": "To dokładny odpowiednik kolumny RÓŻNICA z arkusza Hucińskiego (rozjazd między samooceną zawodnika a oceną trenera) — tylko przeniesiony na relacje z zespołem."
+    }
+  },
+
+  "dlaczego_to_pasuje_do_tej_bazy": {
+    "luka_ktora_wypelnia": "Biblioteka mierzyła jednostkę (FinxS, DISC, sprawdziany, obserwacje przyczyn) i mecz (kodowanie akcji), ale nie mierzyła ZESPOŁU jako struktury społecznej.",
+    "punkty_styku": [
+      {"z_czym": "IMOPEKSIS — czynnik SPÓJNOŚĆ GRUPY", "jak": "Socjometria zamienia go z pojęcia opisowego we wskaźnik liczbowy"},
+      {"z_czym": "Huciński: „Nigdy nie wyznaczaj lidera — zespół sam go odkryje\"", "jak": "Socjogram pokazuje GWIAZDY SOCJOMETRYCZNE, czyli kogo zespół faktycznie wybrał"},
+      {"z_czym": "Huciński: „moja wartość w zespole jest taka, jak postrzegają mnie inni zawodnicy\"", "jak": "To jest dosłownie definicja pozycji socjometrycznej"},
+      {"z_czym": "Huciński: linia pozioma — akceptacja wewnątrz zespołu, ego vs empatia", "jak": "Autor sięga po Extended DISC, który mierzy CECHĘ JEDNOSTKI. Socjometria mierzy RELACJĘ wprost — jest narzędziem właściwszym do tego zadania"},
+      {"z_czym": "Huciński: reguła 2-3 empatów na piątkę", "jak": "Socjometria dostarcza danych potrzebnych do zbudowania takich piątek"},
+      {"z_czym": "Huciński: hierarchia i chronologia w zespole", "jak": "Socjogram ujawnia hierarchię FAKTYCZNĄ, nie deklarowaną"},
+      {"z_czym": "Žalgiris: „every individual of the team is equally important\"", "jak": "Wykrycie osób IZOLOWANYCH to test tej deklaracji"},
+      {"z_czym": "Žalgiris: „keep each other accountable\"", "jak": "Zakłada gęstą sieć relacji — socjometria pokazuje, czy ona istnieje"},
+      {"z_czym": "lineup_building.json", "jak": "Dodaje warstwę społeczną do budowania piątek obok umiejętnościowej"},
+      {"z_czym": "intel_background.json — charakter > talent", "jak": "Pozycja w grupie jest twardym, mierzalnym elementem charakteru"}
+    ]
+  },
+
+  "etyka_i_ostrzezenia": {
+    "_waga": "KRYTYCZNE — to badanie generuje dane wrażliwe o relacjach między konkretnymi osobami.",
+    "zasady": [
+      "Wyniki NIE mogą być ujawniane grupie ani pojedynczym zawodnikom — badani mają zagwarantowaną dyskrecję i to zobowiązanie jest bezwzględne",
+      "Pytania negatywne wymagają szczególnie ostrożnych sformułowań (patrz przykład „najmniej\" zamiast „nie\") lub całkowitej rezygnacji na rzecz wariantu z „Zgadnij kto?\"",
+      "Wynik to zdjęcie SYTUACJI, nie ocena wartości człowieka — status niski nie jest cechą zawodnika, lecz stanem relacji w konkretnej grupie w konkretnym momencie",
+      "Badanie powtarzalne — dopiero porównanie w czasie pokazuje, czy interwencje trenera działają",
+      "W środowisku młodzieżowym: przy pracy z osobami niepełnoletnimi rozważyć poinformowanie rodziców o celu badania"
+    ],
+    "_konsekwencja_dla_programu": "Gdyby to trafiło do aplikacji, moduł musi mieć dostęp ograniczony do trenera głównego — nie może być widoczny w portalu dla zawodników ani rodziców."
+  },
+
+  "powiazania": {
+    "book_imopeksis_hucinski.json": "GŁÓWNE POWIĄZANIE — spójność grupy, hierarchia i chronologia, linia pozioma, reguła 2-3 empatów na piątkę. Socjometria jest brakującym instrumentem do tych koncepcji.",
+    "imopeksis_methodology.json": "Czynnik SPÓJNOŚĆ z akronimu IMOPEKSIS — tu dostaje narzędzie pomiaru.",
+    "lineup_building.json": "Budowanie składu — warstwa społeczna obok umiejętnościowej.",
+    "zalgiris_academy_model.json": "Wartości klubu i team rules zakładają gęstą sieć relacji; socjometria sprawdza, czy ona istnieje.",
+    "zalgiris_coaching_culture.json": "„Keep each other accountable\" — socjometria pokazuje, kto z kim faktycznie ma relację umożliwiającą rozliczanie.",
+    "finxs_mental_assessment.json": "Komplementarne: FinxS mierzy jednostkę, socjometria relacje. Razem dają pełniejszy obraz niż każde osobno.",
+    "disc_profile_assessment.json": "DISC opisuje styl zachowania jednostki; socjometria — jak ten styl jest ODBIERANY przez zespół.",
+    "intel_background.json": "Charakter i pozycja w szatni — socjometria to obiektywizuje.",
+    "motor_testing_battery.json": "Plik siostrzany z tej samej partii materiałów AWF — diagnostyka motoryczna."
+  }
+}

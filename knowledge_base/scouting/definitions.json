@@ -1,0 +1,148 @@
+{
+  "_source": "Next Draft Foundation — Moduł 1",
+  "_comment": "Definicje i filozofia scoutingu",
+
+  "what_is_scouting": [
+    "Identyfikacja talentu",
+    "Ocena aktualnego poziomu zawodnika",
+    "Projekcja przyszłej wartości",
+    "Analiza dopasowania do organizacji",
+    "Ograniczanie ryzyka decyzji personalnych"
+  ],
+
+  "core_mission": "Rolą scouta nie jest tylko znaleźć zawodnika. Rolą scouta jest pomagać organizacji podejmować lepsze decyzje.",
+
+  "key_questions": [
+    "Czy ten zawodnik pomoże wygrywać?",
+    "W jakiej roli?",
+    "Na jakim poziomie?",
+    "Jak będzie wyglądał za 2–3 lata?",
+    "Czy pasuje do naszej organizacji?"
+  ],
+
+  "key_statistic": "Prawie 80% sukcesu drużyny da się przewidzieć latem — analizy zaawansowane",
+
+  "scouting_is_not": [
+    "Oglądanie highlights",
+    "Patrzenie tylko na statystyki ('puste kalorie')",
+    "Szukanie perfekcyjnych zawodników",
+    "Wyrażanie opinii 'podoba mi się / nie podoba'",
+    "Ocenianie po jednym meczu"
+  ],
+
+  "quotes": [
+    "Great teams are built long before the games are played.",
+    "Najlepszy scouting nie polega na przewidywaniu perfekcyjnie. Polega na zmniejszaniu liczby złych decyzji.",
+    "Dobry zawodnik nie zawsze oznacza dobry FIT dla konkretnej organizacji.",
+    "Dobry europejski scouting to połączenie wiedzy o rynku, relacji i zrozumienia potrzeb zespołu.",
+    "Scouting to połączenie analizy, organizacji, komunikacji i relacji.",
+    "Talent otwiera drzwi. Charakter i decyzje decydują, jak długo pozostaną otwarte.",
+    "Często w scoutingu najlepsze decyzje to te, których scout pomógł drużynie NIE podjąć.",
+    "Scout nie ogląda tylko tego CO się wydarzyło — próbuje zrozumieć DLACZEGO i co wydarzy się DALEJ.",
+    "Kibic ogląda wynik. Scout ogląda proces."
+  ],
+
+  "why_scouting_matters": [
+    "Każda organizacja opiera swoją przyszłość na decyzjach personalnych",
+    "Draft, transfery i budowa składu definiują sukces zespołu",
+    "Jedna dobra lub zła decyzja może zmienić przyszłość klubu",
+    "Scouting pomaga minimalizować ryzyko i zwiększać szanse na sukces",
+    "W profesjonalnym sporcie talent to tylko część równania"
+  ],
+
+  "good_scout_traits": [
+    "Rozumie kontekst gry",
+    "Przewiduje role zawodników",
+    "Komunikuje jasno i konkretnie",
+    "Oddziela emocje od analizy",
+    "Rozumie koszykówkę zespołową",
+    "Buduje zaufanie i relacje",
+    "Myśli długoterminowo"
+  ],
+
+  "good_scout_watches_in_game": [
+    "SPACING / DEF ROTATIONS / TRANSITION / MATCHUPS / INTANGIBLES"
+  ],
+
+  "scout_mantra": "Obserwuj. Analizuj. Rozumiej. Przewiduj.",
+
+  "module_1_key_lessons": [
+    "Scouting to PROCES, nie opinia",
+    "KONTEKST jest kluczowy",
+    "TALENT nie gwarantuje sukcesu",
+    "PROJEKCJA jest ważniejsza niż sam boxscore",
+    "Scout WSPIERA proces decyzyjny organizacji",
+    "Koszykówkę trzeba ROZUMIEĆ, nie tylko oglądać"
+  ],
+
+  "evaluation_framework_notes": [
+    "Role / Decisions / Impact / Fit / Upside / IQ / WIN",
+    "CONTEXT OVER STATS"
+  ],
+
+  "lekcje_13_lat_nba": {
+    "_source": "Next Draft Foundation — slajd 'Czego Nauczyło Mnie 13 Lat w NBA?'",
+    "_speaker": "Rafał Jujcz — 13 lat NBA, 5 kontynentów, setki graczy, Front Office Scouting & Analytics",
+    "haslo": "Doświadczenie. Obserwacja. Ciekawość. Pokora.",
+    "5_lekcji": [
+      {
+        "nr": 1,
+        "lekcja": "FIT CZĘSTO WYGRYWA Z TALENTEM.",
+        "opis": "Zawodnik idealnie dopasowany do systemu, trenera i składu wygra z bardziej utalentowanym, który nie pasuje. Fit>Talent to nie slogan — to statystyczna prawidłowość. Szukaj zawodnika do roli, nie roli do zawodnika.",
+        "zastosowanie": "Przed podpisaniem pytaj: czy ten zawodnik pasuje do NASZEGO systemu i składu, nie tylko: czy jest dobry?"
+      },
+      {
+        "nr": 2,
+        "lekcja": "NAJTRUDNIEJ OCENIĆ CHARAKTER.",
+        "opis": "Talent widzisz na boisku. Charakter widzisz w sytuacjach trudnych — strata, kontuzja, zmiana roli. Nawet po 13 latach w NBA to najtrudniejsza część oceny. Charakter decyduje o tym, czy talent zostanie w pełni wykorzystany.",
+        "zastosowanie": "Inwestuj w intel i background — rozmowy z trenerami, teammatami, historię poza boiskiem. Jeden mecz nie wystarczy."
+      },
+      {
+        "nr": 3,
+        "lekcja": "NAJLEPSI ZAWODNICY STALE SIĘ ADAPTUJĄ.",
+        "opis": "Adaptability to najważniejsza cecha skalowalna. Zawodnicy, którzy rozwijają nowe umiejętności lub przyjmują nowe role, mają długie kariery na wysokim poziomie. Brak adaptacji to droga do plateauu.",
+        "zastosowanie": "Pytaj: czy ten zawodnik zmienił swoją grę w ciągu ostatnich 2-3 lat? Czy wzrósł w nowej roli? Adaptacja=klucz (patrz też: projection_fit.json)."
+      },
+      {
+        "nr": 4,
+        "lekcja": "PROCES WYGRYWA Z OPINIĄ.",
+        "opis": "Opinia to instynkt i wrażenie — zmienia się, zależy od nastroju i jednego meczu. Proces to powtarzalny system oceny oparty na wielokrotnej obserwacji, danych i weryfikacji. Długoterminowo proces bije opinię.",
+        "zastosowanie": "Buduj i przestrzegaj swojego procesu scoutingowego. 'Podoba mi się' to punkt startowy, nie konkluzja."
+      },
+      {
+        "nr": 5,
+        "lekcja": "NIGDY NIE PRZESTAWAJ SIĘ UCZYĆ.",
+        "opis": "Koszykówka, analityka i rynek zawodników ciągle ewoluują. Scout, który przestał się uczyć, traci przewagę. Ciekawość i pokora to cechy najlepszych decydentów w sporcie.",
+        "zastosowanie": "Kursy, mentorzy, przypadki graniczne, wymiana z innymi scoutami — nauka jest częścią procesu, nie dodatkiem do niego."
+      }
+    ],
+    "profil_autora": {
+      "doswiadczenie": "13 lat w NBA",
+      "zasieg": "5 kontynentów, setki graczy",
+      "rola": "Front Office — Scouting & Analytics",
+      "cel": "1 cel — wygrywać"
+    }
+  },
+
+  "projekt_koncowy": {
+    "_source": "Next Draft Foundation — slajd 'Projekt Końcowy'",
+    "tytul": "PROJEKT KOŃCOWY — CZAS PRZEŁOŻYĆ TEORIĘ NA PRAKTYKĘ",
+    "termin_oddania": "2026-07-31",
+    "forma": "DOWOLNA — PDF, PowerPoint, Word, Excel, Notion lub inna",
+    "do_wyboru_jedna_z_czterech_prac": [
+      { "id": "scouting_report",  "nazwa": "SCOUTING REPORT",                    "opis": "Przygotuj profesjonalny raport scautingowy wybranego zawodnika.", "szablon": "next_draft_scouting_report_template.json" },
+      { "id": "team_roster",      "nazwa": "TEAM ROSTER STRATEGY",               "opis": "Stwórz plan budowy składu dla wybranego klubu.",                   "szablon": "team_roster_strategy_template.json" },
+      { "id": "player_dev_plan",  "nazwa": "INDIVIDUAL PLAYER DEVELOPMENT PLAN", "opis": "Przygotuj indywidualny plan rozwoju wybranego zawodnika.",         "szablon": "player_development_plan_template.json" },
+      { "id": "coaching_phil",    "nazwa": "COACHING PHILOSOPHY",                "opis": "Stwórz własną filozofię pracy jako trener lub skaut.",             "szablon": "coaching_philosophy_template.json" }
+    ],
+    "co_bedzie_oceniane": [
+      "JAKOŚĆ PROCESU MYŚLENIA",
+      "LOGIKA ARGUMENTACJI",
+      "UMIEJĘTNOŚĆ PODEJMOWANIA DECYZJI",
+      "PRAKTYCZNE ZASTOSOWANIE WIEDZY Z KURSU"
+    ],
+    "kryterium_autora": "NIE SZUKAM 'IDEALNEJ ODPOWIEDZI'. SZUKAM DOBRZE UZASADNIONYCH DECYZJI.",
+    "portfolio_filozofia": "NAJLEPSZYM PORTFOLIO W PROFESJONALNEJ KOSZYKÓWCE NIE JEST CV. SĄ NIM MATERIAŁY, KTÓRE POKAZUJĄ, JAK MYŚLISZ O GRZE I PODEJMUJESZ DECYZJE.",
+    "uwaga_o_szablonach": "Szablony projektów (coaching_philosophy_template.json, player_development_plan_template.json, next_draft_scouting_report_template.json, team_roster_strategy_template.json) są punktem wyjścia — forma projektu pozostaje dowolna."
+  }
+}

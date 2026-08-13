@@ -1,0 +1,159 @@
+{
+  "_source": "'COURSES NOTES / COACHES THOUGHTS' — zbiór notatek z klinik i wykładów trenerów: Kirby Schepp, Ettore Messina, John Calipari, Vance Walberg, Juan Antonio Orenga, Nenad Trunić, Arik Shivek, Sandy Brondello, Juan Orenga, Richard Billant, Dimitris Itoudis, Željko Obradović.",
+  "_comment": "Kompilacja koncepcji trenerskich (offense / defense / shooting / switch defense) od czołowych trenerów. Materiał rozwojowy i referencyjny — uzupełnia game_concepts.json (koncepty taktyczne) o perspektywę treningowo-trenerską.",
+  "_program_use": "Baza wiedzy trenerskiej dla Akademii (lekcje o timingu, spacingu, obronie, rzucie). Kontekst przy analizie stylu gry i koncepcji taktycznych. NIE jest to materiał scoutingowy sensu stricto — to filozofia trenowania.",
+
+  "offense": {
+    "general_principles": {
+      "Kirby Schepp": [
+        "Chcesz być lepszy w koszykówce — graj więcej koszykówki na treningach",
+        "Wszystko, co robimy, potrzebuje kontekstu — najważniejsze są decyzje, które są podejmowane",
+        "Duża część gry składa się z sytuacji losowych (randomness)",
+        "Powtarzalne akcje (shoot, drive, pass) — podejmuj te decyzje szybciej",
+        "Nie dawaj odpowiedzi od razu — daj czas na kreatywność i samodzielne rozwiązanie; potem stwórz środowisko i daj narzędzia do tworzenia"
+      ],
+      "Ettore Messina": {
+        "TIMING": [
+          "Rób coś, gdy coś innego się kończy (do something while something else is finishing)",
+          "Podaj piłkę w momencie, gdy zaczynasz widzieć otwierającego się kolegę",
+          "W ataku zawsze szukaj timingu",
+          "Jak utrzymać timing? Podawaniem w odpowiednim momencie, dobrą zasłoną, dobrym wyborem setów, tworzeniem separacji dla siebie i kolegów",
+          "Obrona łamie timing: agresją, presją, deny, fizyczną obroną na cięciach"
+        ],
+        "SPACING": [
+          "Nie pozwól, by jeden obrońca przeszkadzał dwóm graczom ofensywnym jednocześnie",
+          "W trakcie akcji spacing ciągle się zmienia — ucz graczy czytać i reagować na spacing"
+        ],
+        "filozofia": "Możesz uczyć koszykówki jako sekwencji akcji ALBO przez koncepty — zachęcaj gracza, by czytał grę",
+        "mismatch": "W sytuacji mismatch PG-C (PG z piłką) graj side to side 1v1 — drive w jedną stronę i zmiana kierunku w drugą"
+      },
+      "John Calipari": "Gra zmienia się szybko. Bądź ciekawy, oglądaj mecze, klipy, jeźdź na kliniki — mniej więcej co 5 lat gra się zmienia."
+    },
+    "switch": [
+      "Gdy przeciwnik prawidłowo switchuje, przenieś piłkę do 'single tag' — narożnik przechodzi do high post (od FT do linii 3PT w zależności od zasięgu)",
+      "Gracz z narożnika może też ustawić FLARE SCREEN dla skrzydłowego"
+    ],
+    "dribble_drive_offense_Calipari": [
+      "Szybkość, spacing i to, jak poruszać się szybciej, ale czuć grę wolniej",
+      "Pierwsze 3 kroki się liczą — w ataku i w obronie",
+      "Bez handoffów",
+      "Atakuj kozłem, podnieś się do piłki i natychmiastowy drive do środka",
+      "BACKDOORS ('drops') — pojawiają się, gdy obrońca 'denuje' gracza w narożniku; ważne: podaj przed PAINT LINE",
+      "LOOP — zmiana graczy z piłką między slotami przy linii FT",
+      "NAIL — atak środka linii FT, krótkie podanie do cutera z przeciwnego slotu"
+    ]
+  },
+
+  "defense": {
+    "Ettore Messina": [
+      "Aby grać dobrą obronę, nie możesz być agresywny przez całe 24s ani nie możesz tylko 'containować' przez 24s — w jednej akcji musisz rozumieć, kiedy być agresywnym, a kiedy trzymać (contain)",
+      "Niektóre momenty pracy na stacji nie są kompetytywne — poświęć je nauczaniu (footwork, podania, lepsza pozycja); potem wracaj do wersji live",
+      "Uczestnik musi wiedzieć, DLACZEGO go korygujemy",
+      "Water breaks — podziel na małych i dużych: mali piją, duzi robią drill rzutowy, potem zamiana",
+      "Nie da się patrzeć na wszystko — ustal priorytety (np. w 4v4 SHELL DRILL zawsze patrz na obrońców w polu 3s)",
+      "Najpierw oglądaj cały obraz, potem skup się na szczegółach",
+      "Obrona pick & roll w timeoucie — zostaw decyzję graczom, jak bronić",
+      "Obrona zasłony w niskim poście: obrońca zatrzyma atakującego TYLKO gdy przechodzi ciasno na zasłonie; gdy atakujący idzie szeroko, pomoc tworzy okazję do łatwego podania i otwartego rzutu dla zasłaniającego",
+      "Dobre drużyny na treningu bywają słabe w meczach — bo są dobre w drillach, nie w koszykówce. Trener zna limit: chcemy być dobrą drużyną MECZOWĄ"
+    ],
+    "Vance Walberg": [
+      "Kochaj layupy, lubię rzut za 3. Najlepsza strefa do rzutu na posiadanie to linia rzutów wolnych — im więcej penetruję, tym więcej szans na wymuszenie faula",
+      "Jak wygrać mecz przy słabej skuteczności? Tworząc więcej strat rywala, agresją w ataku i wymuszaniem fauli",
+      "Aby zrobić więcej miejsca do penetracji, gdy obrońca cię 'przykleja' — zrób krok w tył, by otworzyć lukę",
+      "Gdy gracz z piłką penetruje do pola 3s (drag zone), kolega ma być gotowy zareagować (cut / złapanie piłki / zbiórka)"
+    ],
+    "Juan Antonio Orenga (low post)": [
+      "W grze w niskim poście ważna jest równowaga i koordynacja — duzi poruszają się w małej strefie, masz 1-2 kozły do zdobycia kosza",
+      "To jedyna pozycja, gdy grasz tyłem do kosza / nie widzisz kosza",
+      "Współcześni duzi rozciągają grę jako strzelcy za 3",
+      "Repertuar dużego: tyłem do kosza, twarzą do kosza (rzut), kontynuacja P&R / handoff, roll, pop, short roll, dobry pasujący",
+      "Przed każdym treningiem 10-15 min na koordynację; TOUCHSHOOT — wykończenie prostym ramieniem, tylko nadgarstek i palce",
+      "Zanim o umiejętnościach, mów o tym, jak odebrać piłkę w niskim poście (niska pozycja, ręka dalej od obrońcy wyciągnięta)",
+      "Nie jest ważne, by duży miał wiele różnych ruchów — ważne, by miał jeden ruch i jeden ruch przeciwny",
+      "Pierwsza rzecz po odbiorze piłki — obejrzyj boisko"
+    ],
+    "Nenad Trunić": [
+      "Pierwszy cel to nauczyć dzieci grać w koszykówkę — bez taktyki",
+      "Umiejętności są zawsze największym fundamentem w progresie",
+      "Używaj tych samych drilli kilka razy w tygodniu, by nie tracić czasu na tłumaczenie zasad — pracuj nad detalami i opcjami",
+      "Z dziećmi ZASADY są bardzo ważne — ustal własne i bądź konsekwentny"
+    ],
+    "Arik Shivek": [
+      "Grasz obronę nogami, ale też rękami",
+      "Wyznacznik dobrego obrońcy: ile crossoverów i zmian robi atakujący",
+      "Nie możesz być bogaty w taktyce, gdy jesteś biedny w technice",
+      "Świetna drużyna defensywna robi tylko jeden closeout na posiadanie",
+      "Każde 1v1 kończymy zbiórką",
+      "Zdobywaj punkty z obrony — po obronie biegnij kontrę i zdobądź kosz",
+      "Obrona niskiego postu: gdy piłka NAD linią FT = DENY, gdy PONIŻEJ = FRONT"
+    ]
+  },
+
+  "shooting": {
+    "Sandy Brondello": [
+      "Energia z ziemi, moc z mięśni",
+      "Krótki kontakt z podłożem",
+      "Piłka jest częścią ciała — trochę bliżej głowy"
+    ],
+    "Juan Orenga": [
+      "Musisz mieć koordynację, by rzucać poprawnie",
+      "Dzieci muszą nauczyć się kłaść piłkę na środku dłoni, by rzucać prosto"
+    ],
+    "Richard Billant": {
+      "beginners": [
+        "SPOTS SHOOTING — bliska odległość od kosza, zawsze najpierw jednorącz, później oburącz",
+        "Z piłką na ziemi — nauka/doskonalenie celowania",
+        "Rzuty z krzesła / z krzesła do pozycji rzucającej — dla lepszej płynności mechaniki (od FT, można aż za linię 3)",
+        "Można wykonywać z młodszymi — wszystko zależy od ich motoryki"
+      ],
+      "medium": [
+        "Nauka zatrzymania na dwa tempa",
+        "PIVOT przez piętę, piłka na biodrze, obrót twarzą do kosza i rzut",
+        "Doskonalenie przez zatrzymanie na dwa tempa z wyjściem do piłki"
+      ]
+    },
+    "Dimitris Itoudis": [
+      "Czekając na swoją kolej w drillu — ćwicz ballhandling, pracuj z piłką",
+      "Przed użyciem zasłony na piłce zrób fake"
+    ],
+    "kroki_uczenia_dobrych_strzelcow": [
+      "Mechanika rzutu",
+      "Metodyka rzutu",
+      "Rozmowa w drillu o przygotowaniu psychologicznym",
+      "Drill kondycyjny",
+      "Indywidualna taktyka rzutowa — zacznij mecz od ulubionych rzutów; jeśli pudłujesz, idź na drive i rzuty wolne"
+    ],
+    "petrovic_shooting_routine": [
+      "Layup bez kozła",
+      "Layup z jednym kozłem",
+      "Layup ze zmianą kierunku"
+    ],
+    "foundation_footwork": [
+      "Nogi w pozycji równoległej",
+      "Kluczowy punkt — piłka z szerokim kciukiem",
+      "Wszystkie stawy na tej samej linii: kostka — kolano — biodro — bark",
+      "Ugnij kolana, podnieś łokieć",
+      "Piłka ma iść ponad tobą"
+    ]
+  },
+
+  "switch_defense": {
+    "Zeljko Obradovic": [
+      "Switch defense to obrona 5 zawodników",
+      "Ucz graczy być agresywnymi! Duzi atakują piłkę — zwłaszcza gdy ballhandler jest słaby technicznie: podejdź jak najwyżej, zostań niżej w pozycji",
+      "Mali będą przechodzić pod (go under) — muszą 'bumpować': podnieś obie ręce i próbuj zatrzymać dużego przed wejściem w pole 3s",
+      "DENY dużego zależy od pozycji piłki"
+    ]
+  },
+
+  "practice_planning": {
+    "_zrodlo": "'BASKETBALL PRACTICE TEMPLE' — pusty szablon planu treningowego (formularz)",
+    "opis": "Szablon do planowania jednostki treningowej: pole DATA + diagramy boiska (grafiki). Dokument to czysty formularz bez treści merytorycznej — do wypełnienia przez trenera przy planowaniu treningu."
+  },
+
+  "powiazania": {
+    "game_concepts.json": "Koncepty taktyczne M2 (off-ball, spacing, timing) — wspólny język z notatkami Messiny",
+    "point_guard_traits.json": "Cechy i obowiązki rozgrywającego",
+    "modern_basketball.json": "Nowoczesna koszykówka: funkcja > pozycja, rozciąganie gry przez dużych"
+  }
+}

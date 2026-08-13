@@ -11,3 +11,26 @@ preview_*.html
 static/shooting_chart_preview.html
 static/court_svg_preview.html
 static/court_edit.html
+APIKEY/
+
+# Kopie zapasowe (mogą zawierać dane osobowe zawodników — nie do historii gita)
+BACKUPS/
+app.py.backup_*
+
+# Robocze mockupy, eksporty i skrypty ze scratchpada .claude/
+.claude/*.docx
+.claude/*.pptx
+.claude/*.xlsx
+.claude/*.pdf
+.claude/*.html
+.claude/*.png
+.claude/*.txt
+.claude/*.py
+.claude/serve-mockups.bat
+.claude/m2_slides/
+
+# Podglądy wygenerowane podczas sesji
+*_preview.html
+
+# Konfiguracja lokalna MCP (ścieżki specyficzne dla tej maszyny)
+.mcp.json

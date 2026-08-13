@@ -1,0 +1,231 @@
+{
+  "_weryfikacja_zewnetrzna": {
+    "_idea": "Ten plik ma DWA bieguny siły dowodu — nie jest jednolity.",
+    "atkinson_motywacja_osiagniec": {
+      "sila_dowodu": "historycznie ważne, w dużej mierze zastąpione",
+      "krytyka": "Teoria Atkinsona dominowała 1960-1980, w latach 80. ustąpiła teoriom wartości-oczekiwań. Wzór T = M × P × I jest w praktyce nieoperacyjny. Rdzeń nie jest 'obalony', ale rama przestarzała. UWAGA: obserwacja o SAMOUTRUDNIANIU broni się NIEZALEŻNIE od losu teorii i zostaje jako kandydat na red flag."
+    },
+    "lokalizacja_kontroli_rotter": {
+      "sila_dowodu": "obiecujące / ustalone",
+      "uwaga": "TU BAZA MIAŁA RACJĘ. Literatura potwierdza spójny dodatni związek wewnętrznego LOC z wynikiem sportowym oraz niuans, że sporty zespołowe sprzyjają bardziej zewnętrznemu LOC. Najlepiej udokumentowany z 6 konstruktów — dobry kandydat na główny mierzony wskaźnik mentalny."
+    },
+    "szczegoly_i_zrodla": "Patrz contested_claims.json → tezy.atkinson_motywacja_osiagniec ORAZ tezy.lokalizacja_kontroli_loc."
+  },
+  "_source": "„Wybrane psychologiczne czynniki sukcesu.docx\" — opracowanie z przedmiotu Psychologia, studia podyplomowe AWF Katowice. Sześć konstruktów psychologicznych z przywołaniem badań, w tym badań na populacjach sportowych. Autorzy koncepcji cytowani w materiale: J. Atkinson, A. Bandura, M. Scheier i C. Carver, M. Seligman, C.R. Snyder, M. Rosenberg, S. Coopersmith, J.B. Rotter.",
+  "_comment": "WARSTWA TEORETYCZNO-BADAWCZA dla mentalnej części bazy. Uzupełnia to, co baza ma już w formie OBSERWACYJNEJ (lista przejawów poczucia własnej wartości w player_motivation_and_selfworth.json) i PSYCHOMETRYCZNEJ (18 kompetencji FinxS, 8 czynników IMOPEKSIS). Trzy z sześciu konstruktów są w bazie NIEOBECNE: motywacja osiągnięć wg Atkinsona, nadzieja na sukces wg Snydera oraz lokalizacja kontroli wg Rottera. Największa wartość praktyczna: konstrukty mają przypisane BADANIA NA SPORTOWCACH, co pozwala mówić o predykcji, nie tylko o opisie.",
+  "_program_use": "Warstwa pojęciowa, nie danych. Najbardziej wdrożeniowy element to SAMOUTRUDNIANIE jako obserwowalny wzorzec zachowań przed konfrontacją — kandydat na red flag w karcie zawodnika. Drugi: lokalizacja kontroli jako zmienna, którą trening realnie przesuwa (potwierdzone badaniami), więc nadaje się na pomiar test–retest.",
+  "_status_zrodla": "Materiał studencki kompilujący klasyczne koncepcje psychologiczne z przypisami do badań. Przy cytowaniu konkretnych wyników liczbowych na zewnątrz warto sięgnąć do źródeł pierwotnych — opracowanie nie zawsze podaje pełne dane bibliograficzne. Pominięto dane kontaktowe prowadzącego zawarte w plikach źródłowych.",
+
+  "kategoria": "Psychologia sukcesu — konstrukty teoretyczne z badaniami sportowymi",
+
+  "1_motywacja_osiagniec_atkinson": {
+    "_status": "NOWY KONSTRUKT — nieobecny w bazie. Najmocniejszy z całej szóstki pod względem wartości diagnostycznej.",
+    "model": "Działanie ukierunkowane na osiągnięcia jest WYPADKOWĄ DWÓCH PRZECIWSTAWNYCH MOTYWÓW traktowanych jako czynniki osobowościowe.",
+    "dwa_motywy": {
+      "motyw_powodzenia_Ms": "Silnie zaznaczona chęć współzawodnictwa, potrzeba mierzenia się z innymi i osiągania sukcesów",
+      "motyw_unikania_niepowodzenia_Mf": "Silnie zaznaczona obawa przed porażką, wyrażająca się skłonnością do unikania sytuacji współzawodniczych i brakiem wiary w możliwość powodzenia"
+    },
+    "zasada_podstawowa": "Gdy Ms > Mf, jednostka podejmuje działania zmierzające do osiągnięć. Gdy Mf > Ms — unika ich.",
+    "wzor": {
+      "postac": "T = M × P × I",
+      "T": "siła motywacji danej jednostki",
+      "M": "siła motywu (względnie trwała dyspozycja osobowości)",
+      "P": "subiektywne prawdopodobieństwo odniesienia sukcesu lub doznania porażki",
+      "I": "wartość pobudki, jaką niesie ze sobą wykonanie zadania DLA TEJ OSOBY",
+      "_uwaga": "Obie składowe P i I zależą od WCZEŚNIEJSZYCH DOŚWIADCZEŃ jednostki z podobnych sytuacji — nie są cechą stałą."
+    },
+    "piec_praw": {
+      "1_aspiracje": "Osoby z Ms>Mf preferują zadania o ŚREDNIEJ trudności, wykazują większą wytrwałość i większą skuteczność wykonania",
+      "2_wytrwalosc": "Są bardziej wytrwałe przy zadaniu początkowym, gdy Ps jest wysokie, mniej — gdy niskie; dłużej wytrwają przy zadaniach nierozwiązywalnych, nawet mając możliwość wyboru innego",
+      "3_reakcja_na_wynik": {
+        "_waga": "PARADOKS ASPIRACJI — najbardziej diagnostyczne ustalenie z całego materiału, bo przeciwintuicyjne.",
+        "Ms_wieksze": "PODNOSZĄ poziom aspiracji po sukcesie, OBNIŻAJĄ po niepowodzeniu",
+        "Mf_wieksze": "PODNOSZĄ poziom aspiracji po NIEPOWODZENIU, OBNIŻAJĄ po SUKCESIE",
+        "_zastosowanie": "Obserwowalne wprost: zawodnik, który po dobrym meczu nagle stawia sobie niższe cele albo wycofuje się z ambicji, sygnalizuje dominację lęku przed porażką. Nie jest to skromność, tylko mechanizm ochronny."
+      },
+      "4_realizm_aspiracji": "Osoby z Mf>Ms mają aspiracje NIEREALISTYCZNE — albo zbyt wysokie, albo zbyt niskie w stosunku do możliwości. Osoby z Ms>Mf mają aspiracje realistyczne.",
+      "5_wyniki_szkolne": "Przy kontroli poziomu zdolności uczniowie z Ms>Mf mają lepsze wyniki i wykazują większe zainteresowanie zajęciami"
+    },
+    "samoutrudnianie_u_sportowcow": {
+      "_waga": "NAJCENNIEJSZE ZDANIE W CAŁYM MATERIALE — konkretny, obserwowalny wzorzec zachowań.",
+      "opis_ze_zrodla": "U sportowców z dominującą tendencją do unikania niepowodzenia obserwuje się: REAKCJE WYCOFANIA Z ZAWODÓW, SYMULACJĘ KONTUZJI oraz BRAK ODPOWIEDNIEGO PRZYGOTOWANIA DO ZAWODÓW — po to, by móc na ten czynnik zrzucić swoje przyszłe niepowodzenie.",
+      "mechanizm": "Zawodnik z wyprzedzeniem tworzy sobie usprawiedliwienie porażki. Dzięki temu ewentualna przegrana nie zagraża samoocenie („przegrałem, bo byłem kontuzjowany\", a nie „bo jestem gorszy\").",
+      "_dlaczego_to_wazne_dla_bazy": "red_flags.json zawiera sześć flag dotyczących GRY (dominance without efficiency, empty stats, brak scalability, targetable defender, low processing speed, non-playoff archetypes). Żadna nie dotyczy WZORCA ZACHOWAŃ PRZED KONFRONTACJĄ. To jest luka — a zjawisko jest nazwane w literaturze i obserwowalne w gamelogu.",
+      "_jak_to_wykryc": "Nie z pojedynczego zdarzenia, tylko z POWTARZALNOŚCI: czy drobne urazy i absencje korelują z rangą przeciwnika? czy przygotowanie spada przed najtrudniejszymi meczami? Zgodnie z zasadą „incydent vs wzorzec\" z intel_background.json.",
+      "_ostroznosc": "Kontuzje bywają prawdziwe, a spadek formy ma wiele przyczyn. To hipoteza do weryfikacji, nie diagnoza — i w żadnym razie nie zarzut do postawienia zawodnikowi."
+    },
+    "_powiazania_wewnetrzne": "Prawo 4 (aspiracje nierealistyczne — zbyt wysokie ALBO zbyt niskie) to dokładnie ten sam objaw, który baza opisuje w liście poczucia własnej wartości („brak ambitnych celów i cele nierealnie wysokie to TEN SAM objaw\") — tutaj z wyjaśnieniem mechanizmu."
+  },
+
+  "2_poczucie_wlasnej_skutecznosci_bandura": {
+    "definicja": "Przeświadczenie jednostki, że jest w stanie wykonać zachowanie konieczne do uzyskania pożądanego wyniku (A. Bandura).",
+    "charakter": "Odnosi się do działania w DANEJ SYTUACJI lub DANEJ DZIEDZINIE — nie jest cechą globalną.",
+    "co_determinuje": ["jakie wyzwania podejmujemy", "ile wysiłku jesteśmy w stanie włożyć", "wytrwałość", "zdolność przezwyciężania stresu i zniechęcenia w obliczu trudności"],
+    "cztery_zrodla": {
+      "_waga": "Baza mówi o self-efficacy (Žalgiris: „kształtuj poczucie własnej skuteczności\"), ale nie podawała, PRZEZ CO się na nią wpływa. To jest odpowiedź.",
+      "1_wlasne_sukcesy": "Najsilniejsze źródło — sukcesy podwyższają, powtarzające się porażki obniżają",
+      "2_perswazje_werbalne": "W materiale wskazane WPROST: komunikaty trenera",
+      "3_swiadomosc_umiejetnosci": "Znajomość własnych kompetencji i znajomość rozwiązań w danej sytuacji",
+      "4_reakcje_zwrotne": "Pochwały otoczenia, docenienie ze strony środowiska"
+    },
+    "efekt_ochronny": "Osoby o wysokim poczuciu skuteczności, gdy działanie nie przynosi rezultatu, NIE PODDAJĄ SIĘ — wykazują dużą odporność na niepowodzenia, a często potrafią ZWIĘKSZYĆ wysiłek.",
+    "_powiazanie": "Źródło 2 i 4 są w całości w rękach trenera. To czyni self-efficacy zmienną, na którą sztab wpływa bezpośrednio — inaczej niż np. temperament."
+  },
+
+  "3_optymizm_scheier_carver": {
+    "definicja": "Oczekiwanie korzystnego rozwoju wydarzeń w obliczu poważnych problemów życiowych; jako cecha — zgeneralizowane oczekiwanie pozytywnych zdarzeń.",
+    "roznica_optymizm_vs_nadzieja": {
+      "_waga": "Rozróżnienie istotne, bo oba pojęcia bywają mylone.",
+      "optymizm": "Oczekiwanie pomyślnego rozwoju wydarzeń NIEZALEŻNIE od naszych umiejętności",
+      "nadzieja": "Wiąże się z DZIAŁANIAMI służącymi urzeczywistnianiu celu",
+      "_konsekwencja": "Optymizm bez nadziei jest bierny. Dopiero nadzieja (patrz konstrukt 4) dokłada sprawczość."
+    },
+    "cechy_optymistow": ["lepiej przystosowani społecznie", "łatwiej nawiązują kontakty", "swobodnie adaptują się do zmian środowiska i społeczności", "częściej stosują strategie ukierunkowane na UPORANIE SIĘ Z PROBLEMEM"],
+    "roznica_w_radzeniu_sobie": {
+      "optymisci": "Gdy nie mogą poradzić sobie z problemem, przechodzą na strategie skoncentrowane na emocjach — AKCEPTACJA, HUMOR",
+      "pesymisci": "W konfrontacji z sytuacją trudną częściej: ZAPRZECZANIE, ODWRACANIE UWAGI, ZAPRZESTANIE DZIAŁAŃ"
+    },
+    "korelacje": "Dodatnio z wysoką samooceną, poczuciem własnej skuteczności i wewnętrzną lokalizacją kontroli; ujemnie z depresją, bezradnością i lękiem.",
+    "badania_seligmana": {
+      "agenci_ubezpieczeniowi": "200 agentów podzielonych na optymistów i pesymistów. Optymiści w pierwszych 2 latach sprzedali o 37% więcej polis; 10% największych optymistów — o 88% więcej niż 10% największych pesymistów.",
+      "koszykarze_1982_i_baseballisci_1985": {
+        "_waga": "Rzadki przypadek PREDYKCJI WYPRZEDZAJĄCEJ wynik sportowy.",
+        "metoda": "Poziom optymizmu drużyny określano na podstawie obserwacji i punktowania WYPOWIEDZI zawodników.",
+        "wynik": "Drużyna o wyższym poziomie optymizmu osiągała LEPSZE WYNIKI W KOLEJNYM SEZONIE — mimo że w sezonie badawczym było odwrotnie.",
+        "_znaczenie_skautingowe": "Sugeruje, że klimat wypowiedzi zespołu niesie informację predykcyjną niezależną od bieżącego wyniku. Ostrożnie: to badanie sprzed czterech dekad, przywołane w materiale studenckim bez pełnych danych — traktować jako hipotezę wartą uwagi, nie jako ustalony fakt."
+      }
+    }
+  },
+
+  "4_nadzieja_na_sukces_snyder": {
+    "_status": "NOWY KONSTRUKT — nieobecny w bazie.",
+    "definicja": "Przekonanie o posiadaniu kompetencji umożliwiających odniesienie sukcesu; pozytywny stan motywacyjny oparty na dwóch wzajemnie powiązanych rodzajach przekonań (C.R. Snyder).",
+    "dwa_skladniki": {
+      "_waga": "To rozróżnienie mówi, GDZIE INTERWENIOWAĆ — dwie różne diagnozy wyglądające z zewnątrz tak samo.",
+      "myslenie_sprawcze_agency": {
+        "opis": "Przekonanie o sobie jako WYKONAWCY — o możliwości zrealizowania powziętego planu, o SILE WŁASNEJ WOLI. Wytrwałość mimo przeszkód.",
+        "powiazane_z": "samooceną i poczuciem własnej skuteczności"
+      },
+      "myslenie_kierunkowe_pathways": {
+        "opis": "Spostrzeganie siebie jako osoby ZDOLNEJ I ZARADNEJ — będącej w stanie wymyślić lub poznać JEDEN LUB WIĘCEJ skutecznych sposobów prowadzących do celu.",
+        "powiazane_z": "przekonaniem o własnej wiedzy i kompetencji intelektualnej"
+      },
+      "relacja": "Osoby z nadzieją wierzą JEDNOCZEŚNIE, że są w stanie osiągnąć cel (sprawczość) i że potrafią opracować ALTERNATYWNE sposoby jego osiągania (kierunkowość)."
+    },
+    "_zastosowanie_diagnostyczne": {
+      "problem": "Zawodnik „bez zaangażowania\" może mieć dwie zupełnie różne przypadłości.",
+      "brak_sprawczosci": "Widzi drogę, ale nie ma woli, by nią pójść → potrzebuje MOTYWOWANIA (por. macierz POTRAFI × CHCE, ćwiartka POTRAFI + NIE CHCE)",
+      "brak_kierunkowosci": "Ma wolę, ale nie widzi drogi → potrzebuje INSTRUKTAŻU i pokazania wariantów (ćwiartka NIE POTRAFI + CHCE)",
+      "_wniosek": "Bez tego rozróżnienia obie sytuacje wyglądają identycznie i bywają leczone tym samym — zwykle presją, która pomaga tylko w pierwszym przypadku."
+    },
+    "badania": "Nadzieja koreluje dodatnio z powodzeniem szkolnym: wyższymi wynikami w testach osiągnięć, wyższymi średnimi i ocenami końcowymi. W badaniu podłużnym (6 lat) pomiar na początku pierwszego semestru pozwalał przewidywać wyższe oceny sumaryczne, WIĘKSZE prawdopodobieństwo ukończenia studiów i MNIEJSZE prawdopodobieństwo ich przerwania."
+  },
+
+  "5_samoocena": {
+    "_relacja_do_bazy": "UZUPEŁNIA, nie dubluje. player_motivation_and_selfworth.json zawiera listę OBSERWACYJNĄ (co widać w sześciu obszarach). Tu jest warstwa teoretyczno-badawcza: skąd się bierze i CO PRZEWIDUJE.",
+    "definicja": "Zespół sądów i opinii, które osoba odnosi do siebie samej — do aktualnych możliwości fizycznych, psychicznych i społecznych oraz do posiadanego potencjału.",
+    "dwa_kryteria": {
+      "wewnetrzne": "Porównanie JA REALNEGO (sądy o sobie w rzeczywistości) z JA IDEALNYM (jakim chciałbym lub powinienem być). Duża rozbieżność → niska samoocena.",
+      "zewnetrzne": "Porównywanie własnego zachowania, wyglądu, osiągnięć i wyników z innymi ludźmi; opinie i sądy innych o danej osobie."
+    },
+    "cecha_vs_stan": {
+      "_waga": "Rozróżnienie istotne przy interpretacji pomiaru.",
+      "jako_cecha": "Uogólnione poczucie własnej wartości w relacjach interpersonalnych. Wg badań ROŚNIE Z WIEKIEM (wzrost między późnym dzieciństwem a adolescencją, potem stabilizacja lub spadek, ponowny wzrost we wczesnej dorosłości). **Odzwierciedla POZYCJĘ SOCJOMETRYCZNĄ osoby w grupie.**",
+      "jako_stan": "Zmienna pod wpływem nastroju, informacji z otoczenia i AKCEPTACJI W GRUPIE; odzwierciedla aktualnie doświadczany poziom aprobaty społecznej.",
+      "_powiazanie_kluczowe": "Zdanie o pozycji socjometrycznej łączy ten konstrukt wprost z sociometry_team_cohesion.json — samoocena jako cecha nie jest niezależna od struktury grupy, tylko ją odzwierciedla. To argument za łącznym stosowaniem obu narzędzi."
+    },
+    "wysoka_samoocena": {
+      "cechy": ["świadomość mocnych I słabych stron", "w obliczu porażki nie zmienia pozytywnego nastawienia do siebie", "nastawienie na działanie, nie boi się wyzwań", "wytrwałość i zaangażowanie", "większa efektywność w działaniu", "postawa MISTRZOWSKA, niski poziom lęku"],
+      "ryzyko": "Narażenie na PRZECENIANIE możliwości i dobieranie zadań niedostosowanych do aktualnych umiejętności. W obliczu sytuacji zagrażających samoocenie bywa reakcja ZŁOŚCIĄ I AGRESJĄ.",
+      "ustalenia_coopersmitha": "Osoby o wysokiej samoocenie: wyznaczają trudniejsze cele, mniej się boją, odczuwają mniejszy stres, mają mniej objawów psychosomatycznych, słabiej reagują na porażkę i krytykę, mają większe poczucie panowania nad sytuacją, wykazują więcej inwencji i więcej eksplorują. Dominuje u nich MOTYWACJA WEWNĘTRZNA."
+    },
+    "niska_samoocena": {
+      "istota": "Uczucie wstydu wynikające z przekonania o braku zdolności cenionych przez ważne dla nas osoby.",
+      "mechanizm_kluczowy": "Przeważa MOTYW OCHRONY samooceny zamiast jej PODWYŻSZANIA. Głównym celem jest uniknięcie porażki, żeby nie konfrontować się z negatywnymi informacjami o sobie.",
+      "konsekwencja": "Stosowanie licznych STRATEGII SAMOUTRUDNIANIA. **Osoba może zrezygnować z zadania, mimo że ma wysokie kompetencje do jego wykonania** — po to, by chronić się przed ewentualną porażką. Sprawia wtedy wrażenie mało ambitnej i niezaangażowanej, co utrwala niską samoocenę.",
+      "_zastosowanie_skautingowe": "To wyjaśnia zawodnika, który „ma warunki, ale mu się nie chce\". Wycofanie może być objawem ochrony samooceny, nie braku ambicji — i wymaga zupełnie innej interwencji niż presja.",
+      "przetwarzanie_informacji": "Wrażliwość na informacje z zewnątrz, ale ŁATWIEJSZE przyswajanie negatywnych; pozytywne bywają wypierane niedowierzaniem."
+    },
+    "badania": {
+      "franken_popich_1996": "Fundamentem wysokiej samooceny jest DĄŻENIE DO MISTRZOSTWA — osoby o wysokiej samoocenie wybierają zadania trudne",
+      "campbell_1990_markus_nurius_1986": "Osoby o wysokiej samoocenie mają ZRÓŻNICOWANY i STABILNY wizerunek siebie — wiedzą, co jest dla nich ważne, i znają swoje mocne i słabe strony w różnych dziedzinach. Dzięki temu ich obraz siebie nie waha się przy sukcesach i porażkach. Osoby o niskiej samoocenie nie mają tej pewności i nie radzą sobie z negatywną informacją zwrotną.",
+      "dabrowska_1986": "Badanie młodzieży 13-15 lat. W ciągu 2 lat rozwój samooceny u osób uprawiających sport przesuwał się OD ZANIŻANIA własnych możliwości KU SAMOOCENIE ADEKWATNEJ, zbliżonej do realnych osiągnięć. Osoby uprawiające sport mają wyższą samoocenę niż nieuprawiające.",
+      "wielochowski_1984_i_tabaczynska_1983": {
+        "_waga": "Najbardziej bezpośrednio sportowe ustalenie.",
+        "próby": "piłkarze ręczni (Wielochowski) oraz siatkarki (Tabaczyńska)",
+        "wynik": "Zarówno WYSOKOŚĆ, jak i ADEKWATNOŚĆ samooceny pozostają w silnym DODATNIM związku z EFEKTYWNOŚCIĄ GRY.",
+        "_kluczowe_slowo": "ADEKWATNOŚĆ — nie wystarczy wysoka, ma być trafna. To potwierdza notatkę już obecną w bazie, że samoocena ZAWYŻONA jest równie problematyczna jak zaniżona."
+      },
+      "badanie_podluzne": "Na próbie ponad tysiąca osób: pomiar samooceny w adolescencji pozwalał przewidzieć po DZIESIĘCIU LATACH poziom powodzenia ekonomicznego. Adolescenci o niskiej samoocenie częściej opuszczali szkołę, rzadziej studiowali i częściej doświadczali długotrwałego bezrobocia."
+    }
+  },
+
+  "6_lokalizacja_kontroli_rotter": {
+    "_status": "NOWY KONSTRUKT — nieobecny w bazie. Z najlepszym zapleczem badań sportowych z całej szóstki.",
+    "definicja": "Względnie trwałe przekonanie o tym, OD CZEGO ZALEŻĄ wyniki naszego działania. Pojęcie z teorii społecznego uczenia się J.B. Rottera.",
+    "zmiennosc": {
+      "_waga": "Kluczowe dla zastosowania treningowego.",
+      "zasada": "Lokalizacja kontroli kształtuje się w toku SPOŁECZNEGO UCZENIA SIĘ i ULEGA ZMIANOM. Zmiany polegają na przesunięciu z bardziej zewnętrznej ku bardziej wewnętrznej wraz z wiekiem umysłowym i doświadczeniem społecznym.",
+      "mechanizm": "Im większe możliwości wpływu, tym większe prawdopodobieństwo sukcesu, a to sprzyja tworzeniu się zgeneralizowanych oczekiwań kontroli wewnętrznej."
+    },
+    "wewnetrzne_LOC": {
+      "istota": "Sukces lub niepowodzenie zależą od własnego działania. Poczucie PODMIOTOWOŚCI — „człowiek jest kowalem swego losu\".",
+      "cechy": [
+        "lepsze przystosowanie emocjonalne i społeczne",
+        "wyższa samoocena i większa zgodność Ja realnego z Ja idealnym",
+        "większa aktywność w sytuacjach problemowych i trudnych",
+        "dążenie do zdobywania informacji potrzebnych do rozwiązania zadania; skuteczniejsze wykorzystanie starych informacji w nowych sytuacjach",
+        "po niepowodzeniu SZUKAJĄ ALTERNATYWNYCH WARIANTÓW działania",
+        "bardziej liczą się z informacją zwrotną o wynikach",
+        "wysoka motywacja osiągnięć, niezależność, koncentracja na przyszłości",
+        "szybko zapominają o niepowodzeniach, nie rozpamiętują niepochlebnych opinii"
+      ],
+      "atrybucja": "Chętnie przypisują sobie zasługi za sukcesy (atrybucje wewnętrzne), ale uciekają od odpowiedzialności przy porażce (atrybucje zewnętrzne). Materiał określa to jako postawę PROZDROWOTNĄ — chroni przed nadmiernym stresem po przegranej.",
+      "_uwaga_dla_trenera": "Osoby o wewnętrznym LOC są BARDZO TRUDNE DO STEROWANIA, nie podlegają manipulacji i trudno nakłonić je do zmiany poglądów. To nie jest wada — to koszt samodzielności, którą chcemy budować."
+    },
+    "zewnetrzne_LOC": {
+      "istota": "To, co się zdarza, nie zależy od nich. Brak poczucia odpowiedzialności za skutki własnego działania; postawa fatalistyczna „co ma być, to będzie\".",
+      "cechy": [
+        "słabsze dostosowanie emocjonalne, wyższy poziom lęku",
+        "poczucie PRZEDMIOTOWOŚCI — „trybik w wielkiej maszynie\"",
+        "brak zaufania do własnych możliwości; WOLĄ WYKONYWAĆ POLECENIA i mieć jasne komunikaty, niż samemu inicjować",
+        "lękliwość, neurotyczność, częstsza depresja",
+        "niska samoocena i niska motywacja osiągnięć",
+        "łatwiej ulegają presji, większe napięcie",
+        "w sytuacjach problemowych szukają ratunku u innych zamiast działać"
+      ],
+      "_cytat_ze_zrodla": "„Wolą być prowadzone za rączkę i wykonywać polecenia\" — daje im to poczucie bezpieczeństwa, bo nie muszą podejmować decyzji ani brać odpowiedzialności."
+    },
+    "_powiazanie_z_macierza": {
+      "_waga": "Bezpośrednie i użyteczne.",
+      "obserwacja": "Opis wewnętrznego LOC pokrywa się z ćwiartką DELEGOWANIE z macierzy POTRAFI × CHCE (własne cele, ogólny nadzór), a zewnętrznego — z INSTRUOWANIEM (jasne polecenia, ścisły nadzór, komunikacja jednostronna).",
+      "wniosek": "LOC może być czynnikiem wyjaśniającym, DLACZEGO dany zawodnik potrzebuje danego stylu. Macierz opisuje stan bieżący; LOC — trwalszą dyspozycję za nim stojącą."
+    },
+    "badania_sportowe": {
+      "autorzy": "Pietrzyk (sporty zespołowe), Kulas (sporty indywidualne), Pawłowska (żeglarze), Guszkowska (ciężarowcy)",
+      "wynik_1_efekt_treningu": "Już DWUMIESIĘCZNY kontakt z aktywnością sportową wpływa na WZROST wewnętrznego poczucia kontroli. Osoby uprawiające sport — niezależnie od wieku i dyscypliny — przejawiają bardziej wewnętrzne LOC niż rówieśnicy niezwiązani ze sportem.",
+      "wynik_2_predykcja": "Wg badań Pawłowskiej lokalizacja kontroli RÓŻNICUJE POZIOM OSIĄGNIĘĆ SPORTOWYCH — zawodnicy wyższej klasy charakteryzują się bardziej wewnętrznym wymiarem tej właściwości.",
+      "_interpretacja": "Oba wyniki razem są ważne: to nie tylko SELEKCJA (lepsi mają wewnętrzne LOC), ale też EFEKT uprawiania sportu. Czyli zmienna, na którą trening realnie wpływa — a więc sensowna do pomiaru test–retest, inaczej niż cechy stałe.",
+      "_ostroznosc": "Materiał przywołuje badania bez pełnych danych bibliograficznych i lat przy części nazwisk. Kierunek zależności jest spójny w kilku niezależnych próbach, ale konkretne liczby warto zweryfikować u źródła."
+    }
+  },
+
+  "jak_te_konstrukty_sie_lacza": {
+    "_idea": "Sześć konstruktów nie jest niezależnych — materiał wielokrotnie wskazuje korelacje między nimi.",
+    "rdzen": "Wysoka samoocena + wewnętrzne LOC + poczucie własnej skuteczności + optymizm tworzą powiązany zespół. Materiał podaje wprost: optymizm koreluje dodatnio z wysoką samooceną, self-efficacy i wewnętrznym LOC; osoby o wewnętrznym LOC mają wyższą samoocenę i wysoką motywację osiągnięć.",
+    "os_sprawczosci": "Przez wszystkie sześć przewija się jedna oś: PRZEKONANIE O WŁASNYM WPŁYWIE na wynik. Atkinson nazywa to przewagą Ms nad Mf, Bandura — skutecznością, Snyder — sprawczością, Rotter — wewnętrzną lokalizacją kontroli.",
+    "_konsekwencja_praktyczna": "Nie ma sensu mierzyć wszystkich sześciu. Sensowniejsze jest wybranie jednego wskaźnika (najlepiej udokumentowany sportowo jest LOC) i obserwowanie go w czasie."
+  },
+
+  "powiazania": {
+    "player_motivation_and_selfworth.json": "PLIK SIOSTRZANY — tam warstwa OBSERWACYJNA (6 obszarów przejawów poczucia własnej wartości, macierz POTRAFI × CHCE, tabela zachowań prowadzącego), tu TEORETYCZNO-BADAWCZA. Samoutrudnianie z tego pliku wyjaśnia mechanizm stojący za obserwacjami z tamtego.",
+    "red_flags.json": "SAMOUTRUDNIANIE jako kandydat na siódmą flagę — jedyną dotyczącą wzorca zachowań przed konfrontacją, a nie samej gry.",
+    "sociometry_team_cohesion.json": "Samoocena JAKO CECHA odzwierciedla pozycję socjometryczną w grupie — argument za łącznym stosowaniem obu narzędzi.",
+    "finxs_mental_assessment.json": "18 kompetencji FinxS to psychometryczny pomiar zjawisk opisanych tu teoretycznie (m.in. Confidence, Bouncing Back, Goal Focus, Optimism, Pressure Control).",
+    "book_imopeksis_hucinski.json": "Czynniki pewności siebie i motywacji z IMOPEKSIS mają tu podbudowę w klasycznych koncepcjach; „norma zadaniowa świadomie zaniżona\" jest zgodna z prawem Atkinsona o preferencji zadań o średniej trudności.",
+    "book_olimpizm_gotowosc_startowa.json": "Monografia psychologii startu — rozdz. IX o następstwach niepowodzeń sportowych łączy się z reakcją na porażkę opisaną we wszystkich sześciu konstruktach.",
+    "projection_fit.json": "Lokalizacja kontroli jako zmienna różnicująca poziom osiągnięć — potencjalny element projekcji.",
+    "intel_background.json": "Zasada „incydent vs wzorzec\" — konieczna przy weryfikacji hipotezy o samoutrudnianiu.",
+    "watching_game.json": "Reakcja po błędzie — konstrukty 1, 5 i 6 opisują mechanizmy stojące za tym, co widać na parkiecie."
+  }
+}

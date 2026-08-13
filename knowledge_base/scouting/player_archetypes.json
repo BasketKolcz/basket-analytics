@@ -1,0 +1,476 @@
+{
+  "_source": "Next Draft Foundation — Moduł 3",
+  "_comment": "Archetypy graczy — 7 typów + profil Go To Guy",
+  "_program_use": "Dropdown/select w raporcie scoutingowym. Archetype = tag zawodnika. Go To Guy = osobny checklist.",
+
+  "player_archetype_framework": {
+    "_comment": "Tabela archetypów — skala wpływu 1-5 (●)",
+    "archetypy": [
+      {
+        "id": "shot_creator",
+        "archetype": "SHOT CREATOR",
+        "role": "PRIMARY BALL HANDLER",
+        "primary_function": "Tworzenie przewag z piłką",
+        "impact_on_winning": 5
+      },
+      {
+        "id": "3d_wing",
+        "archetype": "3&D WING",
+        "role": "SPACING DEFENDER",
+        "primary_function": "Spacing + obrona na obwodzie",
+        "impact_on_winning": 3
+      },
+      {
+        "id": "versatile_forward",
+        "archetype": "VERSATILE FORWARD",
+        "role": "CONNECTOR",
+        "primary_function": "Łączy linie, broni wielu pozycji",
+        "impact_on_winning": 3
+      },
+      {
+        "id": "rim_protector",
+        "archetype": "RIM PROTECTOR",
+        "role": "ANCHOR",
+        "primary_function": "Obrona obręczy, obrona wysokiego P&R",
+        "impact_on_winning": 4
+      },
+      {
+        "id": "switchable_big",
+        "archetype": "SWITCHABLE BIG",
+        "role": "SWITCHER",
+        "primary_function": "Broni wielu pozycji, zmienia wszystko",
+        "impact_on_winning": 3
+      },
+      {
+        "id": "energy_defender",
+        "archetype": "ENERGY DEFENDER",
+        "role": "ENERGY SPECIALIST",
+        "primary_function": "Energia, presja, zmiana tempa",
+        "impact_on_winning": 3
+      },
+      {
+        "id": "spacing_big",
+        "archetype": "SPACING BIG",
+        "role": "STRETCH BIG",
+        "primary_function": "Rozciąga obronę, spacing z wysokiej pozycji",
+        "impact_on_winning": 3
+      }
+    ]
+  },
+
+  "go_to_guy": {
+    "_comment": "Pełny profil Go To Guy — najważniejszy archetype w ofensywie",
+    "definicja": "Zawodnik będący główną opcją ofensywną drużyny w decydujących momentach.",
+    "kluczowe_pytanie": "Czy jest w stanie być główną opcją w decydujących momentach?",
+
+    "cechy": [
+      {
+        "id": "offensive_hub",
+        "nazwa": "OFFENSIVE HUB",
+        "opis": "Centralny punkt ataku. Wszystko przychodzi przez niego."
+      },
+      {
+        "id": "system_creator",
+        "nazwa": "SYSTEM CREATOR",
+        "opis": "Tworzy grę dla siebie i innych. Napędza ofensywę."
+      },
+      {
+        "id": "manipulation_help",
+        "nazwa": "MANIPULATION OF HELP DEFENSE",
+        "opis": "Czyta i przyciąga pomoc, a następnie ją karze."
+      },
+      {
+        "id": "elite_dm",
+        "nazwa": "ELITE DECISION MAKING",
+        "opis": "Najwyższej klasy podejmowanie decyzji pod presją i w każdej sytuacji."
+      }
+    ],
+
+    "profil_uzytkowy": {
+      "tworzenie_gry": 4,
+      "skutecznosc": 4,
+      "czytanie_obrony": 5,
+      "decision_making": 5,
+      "wplyw_na_zespol": 5
+    },
+
+    "mocne_strony": [
+      "Tworzy przewagi z niczego",
+      "Przyciąga uwagę obrony",
+      "Znajduje najlepsze rozwiązania",
+      "Potrafi zakończyć akcję w izolacji",
+      "Skuteczny w P&R oraz w grze 1 na 1",
+      "Bierze odpowiedzialność w kluczowych momentach"
+    ],
+
+    "obszary_do_weryfikacji": [
+      "Skuteczność rzutowa (TS%, eFG%)",
+      "Straty (TO%)",
+      "Dominacja bez efektywności",
+      "Wpływ na współpracowników",
+      "Reakcja na podwajanie i różne schematy",
+      "Kondycja i obciążenie w długiej roli",
+      "Skalowalność w różnych ustawieniach"
+    ],
+
+    "dane_do_sprawdzenia": [
+      {"stat": "USG%", "opis": "Usage Rate"},
+      {"stat": "AST%", "opis": "Assist Rate"},
+      {"stat": "AST/TO", "opis": "Assist to Turnover"},
+      {"stat": "PTS/75 POSS", "opis": "Punkty na 75 posiadań"},
+      {"stat": "CLUTCH PPP", "opis": "Punkty na posiadanie — ostatnie 5 min"},
+      {"stat": "TO%", "opis": "Turnover Percentage"},
+      {"stat": "EPM/LEBRON", "opis": "Wpływ na wygrywanie"}
+    ],
+
+    "pytania_scoutingowe": [
+      "Czy jest w stanie stworzyć dobrą akcję z niczego?",
+      "Jak reaguje obrona na jego grę? Czy przyciąga pomoc?",
+      "Czy podejmuje właściwe decyzje pod presją i w końcówkach?",
+      "Czy jego obecność poprawia efektywność innych?",
+      "Jak radzi sobie przeciwko podwajaniu i różnym schematom?",
+      "Czy może być główną opcją w zespole walczącym o najwyższe cele?"
+    ],
+
+    "klucz_scoutingowy": [
+      "NIE TYLKO STATYSTYKI — LICZY SIĘ WPŁYW",
+      "WNOSI WARTOŚĆ W KAŻDYM POSIADANIU",
+      "MYŚLI SZYBCIEJ NIŻ OBRONA",
+      "PODSTAWA WYGRYWANIA"
+    ],
+
+    "konkluzja": "Prawdziwy Go To Guy zmienia przebieg meczu i podnosi poziom całego zespołu."
+  },
+
+  "role_profiles": {
+
+    "floor_general": {
+      "id": "floor_general",
+      "nazwa": "FLOOR GENERAL",
+      "kluczowe_pytanie": "Czy poprawia funkcjonowanie całej piątki?",
+      "cechy": [
+        { "id": "organizacja_gry", "nazwa": "ORGANIZACJA GRY", "opis": "Zarządza atakiem i ustawia zespół." },
+        { "id": "leadership", "nazwa": "LEADERSHIP", "opis": "Prowadzi na boisku, wpływa na innych." },
+        { "id": "tempo", "nazwa": "TEMPO", "opis": "Kontroluje tempo gry i rytm zespołu." },
+        { "id": "decision_making", "nazwa": "DECISION MAKING", "opis": "Podejmuje szybkie, dobre decyzje." },
+        { "id": "kontrola_meczu", "nazwa": "KONTROLA MECZU", "opis": "Ma wpływ na przebieg i wynik spotkania." }
+      ],
+      "profil_uzytkowy": {
+        "organizacja": 5,
+        "leadership": 4,
+        "tempo": 4,
+        "decision_making": 5,
+        "kontrola_meczu": 4
+      },
+      "mocne_strony": [
+        "Czyta grę przed innymi",
+        "Ustawia zawodników w najlepszych pozycjach",
+        "Tworzy przewagi dla kolegów",
+        "Redukuje błędy zespołu",
+        "Utrzymuje dyscyplinę i spokój",
+        "Podnosi jakość całego ataku"
+      ],
+      "obszary_do_weryfikacji": [
+        "Stosunek asyst do strat (AST/TO)",
+        "Tempo gry z nim na boisku",
+        "Wpływ na efektywność zespołu",
+        "Decision making pod presją",
+        "Kontrola w kluczowych momentach",
+        "Komunikacja i zarządzanie piątką"
+      ],
+      "dane_do_sprawdzenia": [
+        { "stat": "AST%", "opis": "Assist Rate" },
+        { "stat": "TO%", "opis": "Turnover Rate" },
+        { "stat": "AST/TO", "opis": "Stosunek asyst do strat" },
+        { "stat": "OFF RATING z nim", "opis": "Efektywność ofensywna z nim na boisku" },
+        { "stat": "OFF RATING bez niego", "opis": "Efektywność ofensywna bez niego" },
+        { "stat": "CLUTCH STATS", "opis": "Decyzje w końcówkach" }
+      ],
+      "pytania_scoutingowe": [
+        "Czy rozumie grę na poziomie zespołowym?",
+        "Czy tworzy przewagi dla innych?",
+        "Czy kontroluje tempo?",
+        "Czy podejmuje dobre decyzje pod presją?",
+        "Czy wpływa na wynik meczu?",
+        "Czy jego obecność poprawia funkcjonowanie całej piątki?"
+      ],
+      "nota": "Nie musi być najczęściej zdobywającym — ale musi sprawiać, że zespół gra lepiej."
+    },
+
+    "high_usage_guard": {
+      "id": "high_usage_guard",
+      "nazwa": "HIGH USAGE GUARD",
+      "ryzyko": "DOMINACJA BEZ EFEKTYWNOŚCI LUB SCALABILITY",
+      "cechy": [
+        { "id": "duzo_pilki", "nazwa": "DUŻO PIŁKI W RĘKACH", "opis": "Duża odpowiedzialność za inicjowanie akcji i kończenie." },
+        { "id": "kreowanie_przewag", "nazwa": "KREOWANIE PRZEWAG", "opis": "Atakuje obronę, tworzy sytuacje dla siebie i innych." },
+        { "id": "pick_roll_creator", "nazwa": "PICK & ROLL CREATOR", "opis": "Napędza grę w P&R, maksymalizuje akcje dwójkowe." },
+        { "id": "scoring_pressure", "nazwa": "SCORING PRESSURE", "opis": "Stwarza stałe zagrożenie rzutowe i kreuje presję na obronę." }
+      ],
+      "profil_uzytkowy": {
+        "inicjowanie_akcji": 4,
+        "kreowanie_przewag": 4,
+        "pick_roll": 4,
+        "scoring": 5,
+        "wplyw_na_zespol": 4
+      },
+      "mocne_strony": [
+        "Tworzy przewagi w izolacji i w P&R",
+        "Przyciąga uwagę obrońców",
+        "Generuje punkty dla siebie i innych",
+        "Nie boi się brać odpowiedzialności w kluczowych momentach",
+        "Dobra kontrola tempa gry",
+        "Potrafi wygrać mecz atakiem"
+      ],
+      "obszary_do_weryfikacji": [
+        "Efektywność rzutowa (TS%, eFG%)",
+        "Selekcja rzutów i decyzji",
+        "Straty a kreowanie",
+        "Zaangażowanie w obronę",
+        "Wpływ bez piłki",
+        "Scalability — czy działa obok innych talentów?",
+        "Reakcja na podwojenia i zmiany obrony"
+      ],
+      "dane_do_sprawdzenia": [
+        { "stat": "USG%", "opis": "Usage Rate" },
+        { "stat": "TS%", "opis": "True Shooting" },
+        { "stat": "AST/TO", "opis": "Assist to Turnover" },
+        { "stat": "PTS/75 POSS", "opis": "Punkty na 75 posiadań" },
+        { "stat": "DEF IMPACT", "opis": "Obrona" },
+        { "stat": "TEAM IMPACT", "opis": "Wygrywność zawodnika" },
+        { "stat": "SCALABILITY", "opis": "Obok gwiazd" }
+      ],
+      "pytania_scoutingowe": [
+        "Czy potrafi tworzyć przewagi przeciw różnym obrońcom?",
+        "Czy jego wpływ na grę wynika tylko z posiadania piłki?",
+        "Czy podejmuje dobre decyzje pod presją?",
+        "Czy jego efektywność utrzymuje się przeciw lepszym obrońcom?",
+        "Czy może być obok gwiazd i w mocnych lineupach?",
+        "Czy ma wpływ na wynik, nawet gdy nie trafia?"
+      ],
+      "kluczowa_idea": "WINNING IMPACT często wykracza poza statystyki.",
+      "nota": "Wysokie użycie piłki ma sens tylko wtedy, gdy przynosi wartość drużynie i zwycięstwa."
+    },
+
+    "elite_shooting_wing": {
+      "id": "elite_shooting_wing",
+      "nazwa": "ELITE SHOOTING WING",
+      "opis": "Jeden z najbardziej pożądanych profili.",
+      "kluczowe_pytanie": "Czy jego obecność sprawia, że atak działa lepiej?",
+      "cechy": [
+        { "id": "spacing", "nazwa": "SPACING", "opis": "Otwiera przestrzeń dla zespołu." },
+        { "id": "gravity", "nazwa": "GRAVITY", "opis": "Przyciąga uwagę obrony nawet bez piłki." },
+        { "id": "movement_shooting", "nazwa": "MOVEMENT SHOOTING", "opis": "Strzela w ruchu, po cięciach i akcji." },
+        { "id": "scalable_archetype", "nazwa": "SCALABLE ARCHETYPE", "opis": "Dopasowuje się do różnych lineupów i systemów." }
+      ],
+      "profil_uzytkowy": {
+        "spacing": 4,
+        "gravity": 4,
+        "movement_shooting": 4,
+        "scalable_archetype": 4
+      },
+      "mocne_strony": [
+        "Rozciąga obronę na całym parkiecie",
+        "Grozi z każdego miejsca za 3",
+        "Skuteczny po podaniach i w ruchu",
+        "Wysoka efektywność bez piłki",
+        "Pasuje do gwiazd i systemów",
+        "Szybkie podejmowanie decyzji"
+      ],
+      "obszary_do_weryfikacji": [
+        "Skuteczność rzutowa (3P%, eFG%)",
+        "Selekcja rzutów",
+        "Aktywność bez piłki",
+        "Obrona na skrzydle",
+        "Kondycja i powtarzalność",
+        "Wpływ na wygrywanie (plus/minus)"
+      ],
+      "dane_do_sprawdzenia": [
+        { "stat": "3P%", "opis": "Skuteczność za 3" },
+        { "stat": "3PA RATE", "opis": "Udział rzutów za 3" },
+        { "stat": "CATCH & SHOOT 3P%", "opis": "Po podaniu" },
+        { "stat": "MOVEMENT 3P%", "opis": "W ruchu" },
+        { "stat": "SPACING IMPACT", "opis": "Przestrzeń dla zespołu" },
+        { "stat": "PLUS/MINUS", "opis": "Wpływ na wynik" }
+      ],
+      "pytania_scoutingowe": [
+        "Czy zapewnia spacing na poziomie NBA / top level?",
+        "Czy obrona musi go szanować?",
+        "Czy potrafi trafiać po podaniach?",
+        "Czy porusza się po parkiecie z odpowiednią intensywnością?",
+        "Czy jego archetype skaluje się obok gwiazd?",
+        "Czy broni na odpowiednim poziomie?"
+      ],
+      "nota": "Największa wartość: spacing, który tworzy przewagi w każdej akcji."
+    },
+
+    "versatile_role_player": {
+      "id": "versatile_role_player",
+      "nazwa": "VERSATILE ROLE PLAYER",
+      "kluczowa_idea": "WINNING IMPACT często wykracza poza statystyki.",
+      "cechy": [
+        { "id": "glue_guy", "nazwa": "GLUE GUY", "opis": "Łączy ludzi, trzyma zespół razem." },
+        { "id": "connector", "nazwa": "CONNECTOR", "opis": "Łączy akcje, zawodników i system." },
+        { "id": "quick_decisions", "nazwa": "QUICK DECISIONS", "opis": "Podejmuje dobre decyzje szybko i bez wahania." },
+        { "id": "versatility", "nazwa": "VERSATILITY", "opis": "Może bronić wielu pozycji i grać różne role." },
+        { "id": "winning_habits", "nazwa": "WINNING HABITS", "opis": "Robi małe rzeczy, które prowadzą do zwycięstw." }
+      ],
+      "profil_uzytkowy": {
+        "wplyw_na_zespol": 4,
+        "laczenie_akcji": 4,
+        "decyzje": 4,
+        "wszechstronnosc": 5,
+        "nawyki_zwyciezcy": 5
+      },
+      "mocne_strony": [
+        "Poprawia funkcjonowanie całej piątki",
+        "Wypełnia luki w składzie",
+        "Gra bez potrzeby posiadania piłki",
+        "Dobrze czyta sytuacje",
+        "Elastyczny w systemie i match-upach",
+        "Robi brudną robotę",
+        "Podnosi poziom energii zespołu"
+      ],
+      "obszary_do_weryfikacji": [
+        "Skuteczność w rzutach otwartych",
+        "Decision making pod presją",
+        "Obrona w izolacjach",
+        "Zdolność do gry w różnych rolach",
+        "Kondycja i powtarzalność wysiłku",
+        "Reakcja na zmiany w meczu"
+      ],
+      "dane_do_sprawdzenia": [
+        { "stat": "+/-", "opis": "Wpływ na wynik" },
+        { "stat": "DEFLECTIONS", "opis": "Zmiany posiadania" },
+        { "stat": "SCREEN ASSISTS", "opis": "Pomaga tworzyć" },
+        { "stat": "LOOSE BALLS", "opis": "Walka o piłkę" },
+        { "stat": "MATCHUP FLEX", "opis": "Różne pozycje" },
+        { "stat": "WIN SHARES", "opis": "Wpływ na zwycięstwa" }
+      ],
+      "pytania_scoutingowe": [
+        "Czy robi rzeczy, których nie widać w statystykach?",
+        "Czy jego obecność poprawia funkcjonowanie piątki?",
+        "Czy potrafi grać różne role bez spadku jakości?",
+        "Czy podejmuje szybkie i dobre decyzje?",
+        "Czy rozumie swoją rolę i akceptuje ją?",
+        "Czy ma nawyki zwycięzcy każdego dnia?"
+      ],
+      "nota": "Najlepsi zawodnicy nie zawsze robią najwięcej, ale wpływają na najwięcej."
+    },
+
+    "skilled_forward": {
+      "id": "skilled_forward",
+      "nazwa": "SKILLED FORWARD",
+      "kluczowa_idea": "WINNING IMPACT często wykracza poza statystyki.",
+      "cechy": [
+        { "id": "mismatch_creator", "nazwa": "MISMATCH CREATOR", "opis": "Wykorzystuje przewagi w grze 1 na 1 w ataku." },
+        { "id": "passing_feel", "nazwa": "PASSING FEEL", "opis": "Widzi grę, potrafi tworzyć przewagi dla innych." },
+        { "id": "face_up_game", "nazwa": "FACE-UP GAME", "opis": "Grozi z kozła, z półdystansu i za 3 punkty." },
+        { "id": "lineup_flexibility", "nazwa": "LINEUP FLEXIBILITY", "opis": "Pasuje do różnych ustawień i obok różnych graczy." }
+      ],
+      "profil_uzytkowy": {
+        "tworzenie_przewag": 4,
+        "podania": 5,
+        "skutecznosc": 4,
+        "elastycznosc": 4,
+        "wplyw_na_zespol": 4
+      },
+      "mocne_strony": [
+        "Atakuje mismatche skutecznie",
+        "Dobre podania z gry",
+        "Grozi z różnych poziomów",
+        "Podejmuje dobre decyzje w ataku",
+        "Może pełnić różne role w zależności od składu"
+      ],
+      "obszary_do_weryfikacji": [
+        "Skuteczność rzutowa (TS%, eFG%)",
+        "Konsekwencja w obronie",
+        "Reakcja na kontakt i presję",
+        "Decyzje pod presją",
+        "Aktywność bez piłki",
+        "Wpływ na wygrywanie (plus/minus)"
+      ],
+      "dane_do_sprawdzenia": [
+        { "stat": "TS% / eFG%", "opis": "Skuteczność" },
+        { "stat": "AST%", "opis": "Assist Rate" },
+        { "stat": "USG%", "opis": "Usage Rate" },
+        { "stat": "PPP", "opis": "Points Per Possession" },
+        { "stat": "LINEUP FIT", "opis": "Net Rating w lineupach" },
+        { "stat": "DEF RATING", "opis": "Obrona" },
+        { "stat": "PLUS/MINUS", "opis": "Wpływ na wynik" }
+      ],
+      "pytania_scoutingowe": [
+        "Czy potrafi stworzyć przewagę w ataku?",
+        "Czy widzi i wykorzystuje możliwości podania?",
+        "Czy jego gra w ataku jest różnorodna i groźna?",
+        "Czy pasuje do różnych ustawień i obok różnych graczy?",
+        "Czy jego obecność przekłada się na lepsze wyniki zespołu?",
+        "Czy podejmuje dobre decyzje w kluczowych momentach?"
+      ],
+      "nota": "Największą wartość mają zawodnicy, którzy robią innych lepszymi."
+    },
+
+    "modern_big": {
+      "id": "modern_big",
+      "nazwa": "MODERN BIG",
+      "kluczowa_idea": "MODERN BIG = DECISION MAKER, NIE TYLKO SCREENER.",
+      "cechy": [
+        { "id": "mobility", "nazwa": "MOBILITY", "opis": "Porusza się płynnie. Biega parkiet, zmienia tempo gry." },
+        { "id": "spacing", "nazwa": "SPACING", "opis": "Rozciąga grę rzutem z dystansu. Otwiera przestrzeń dla innych." },
+        { "id": "short_roll_passing", "nazwa": "SHORT-ROLL PASSING", "opis": "Tworzy przewagi z gry 2 na 2. Widzi grę i znajduje dobrych zawodników." },
+        { "id": "switchability", "nazwa": "SWITCHABILITY", "opis": "Broni w różnych ustawieniach. Potrafi przełączyć się na obwód." },
+        { "id": "rim_protection", "nazwa": "RIM PROTECTION", "opis": "Chroni obręcz. Zmienia rzuty i wpływa na decyzje rywali." }
+      ],
+      "profil_uzytkowy": {
+        "mobility": 4,
+        "spacing": 4,
+        "short_roll_passing": 5,
+        "switchability": 4,
+        "rim_protection": 5
+      },
+      "mocne_strony": [
+        "Tworzy przewagi z pozycji wysokiej",
+        "Podejmuje dobre decyzje w grze 2 na 2",
+        "Rozciąga grę i otwiera parkiet",
+        "Mobilny i aktywny w ataku oraz obronie",
+        "Broni w różnych ustawieniach",
+        "Chroni obręcz i zmienia rzuty",
+        "Podnosi sufit zespołu"
+      ],
+      "obszary_do_weryfikacji": [
+        "Skuteczność rzutowa (3P%, eFG%)",
+        "Obrona w sytuacjach switch / P&R",
+        "Short-roll decision making",
+        "Timing pomocy i rotacji",
+        "Siła i utrzymanie pozycji pod koszem",
+        "Wpływ na wynik (plus/minus)",
+        "Faule i dyscyplina"
+      ],
+      "dane_do_sprawdzenia": [
+        { "stat": "3P%", "opis": "Spacing Impact" },
+        { "stat": "AST/TO", "opis": "Z wysokiej pozycji" },
+        { "stat": "SHORT-ROLL PPP", "opis": "Points Per Possession" },
+        { "stat": "BLK% / RIM CONTEST %", "opis": "Ochrona obręczy" },
+        { "stat": "SWITCH DEFENSE", "opis": "Skuteczność w switchach" },
+        { "stat": "LINEUP IMPACT", "opis": "Net Rating w lineupach" },
+        { "stat": "PLUS/MINUS", "opis": "Wpływ na wynik" }
+      ],
+      "pytania_scoutingowe": [
+        "Czy jest w stanie rozciągnąć grę za 3 punkty?",
+        "Czy tworzy przewagi z gry 2 na 2?",
+        "Czy podejmuje dobre decyzje w short-rolu?",
+        "Czy może bronić w różnych ustawieniach?",
+        "Czy chroni obręcz i zmienia rzuty?",
+        "Jaki ma realny wpływ na wygrywanie?"
+      ],
+      "nota": "Najwyższa wartość pochodzi z decyzji, nie z ustawienia na zasłonie."
+    }
+  },
+
+  "klucz_scautingowy_wspolny": [
+    "NIE TYLKO STATYSTYKI — LICZY SIĘ WPŁYW",
+    "WNOSI WARTOŚĆ W KAŻDYM POSIADANIU",
+    "MYŚLI SZYBCIEJ NIŻ OBRONA",
+    "PODSTAWA WYGRYWANIA"
+  ]
+}

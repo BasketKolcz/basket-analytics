@@ -1,0 +1,86 @@
+{
+  "_source": "Next Draft Foundation — Moduł 1, transkrypcje video (lekcje 3-4)",
+  "_comment": "Porównanie scoutingu NBA vs Europa — różnice w ocenie i podejściu",
+
+  "nba": {
+    "mechanizm": "Draft — napływ głównie młodych graczy (19-23 lata), gracze rozwojowi",
+    "co_oceniamy": "Potencjał, upside — jak będzie wyglądał za 2-3-4 lata",
+    "kluczowe_czynniki": ["Warunki fizyczne (ciało)", "Ceiling — gdzie gracz może dojść", "Długoterminowe kontrakty"],
+    "g_league": "Liga rozwojowa pozwala na wieloletnie śledzenie i development",
+    "okienko": "Dłuższy horyzont — można projekcjować przez kilka lat",
+    "player_development": "Scouting nie kończy się na transferze — wręcz ZACZYNA się po podpisaniu (ćwiczenia, wykorzystanie, line-upy)"
+  },
+
+  "europa": {
+    "co_oceniamy": "Gotowość — czy zawodnik pomoże wygrywać OD RAZU",
+    "kluczowe_czynniki": ["IQ koszykarskie", "Doświadczenie", "Osobowość / charakter", "Stabilność na danym poziomie"],
+    "wspinaczka_po_drabinie": "Zawodnik musi przejść etapy weryfikacji — rzadko 'przeskakuje' poziomy w Europie",
+    "presja": "Presja wygranej 'tu i teraz' — trudno ryzykować z graczami bez doświadczenia europejskiego",
+    "ruki_problem": "Wielu trenerów nie chce pracować z 'rukami' (debiutantami w Europie) — preferują sprawdzonych"
+  },
+
+  "wspolne_roznice": {
+    "NBA_ceiling_vs_EUROPA_floor": "NBA patrzy na ceiling (sufit), Europa patrzy na floor (stabilność i gotowość)",
+    "czas": "NBA = wieloletnia projekcja; Europa = okienko transferowe, presja sezonu",
+    "ryzyko": "NBA może sobie pozwolić na draft ryzykancki; Europa minimalizuje ryzyko"
+  },
+
+  "ogolne_spostrzezenia": {
+    "stat_80_procent": "Prawie 80% sukcesu drużyny da się przewidzieć latem — to pokazuje wagę scoutingu i transferów",
+    "przyklad_jokic": "Nikola Jokić — jeden dobry transfer zmienił całą trajektorię organizacji: wyniki, finanse, wartość klubu",
+    "centymetry": "W zawodowym basketie najwięcej płaci się za centymetry (wysocy center) — niektóre kluby szukają przewagi omijając tę walkę",
+    "chemia_szatni": "Nawet najlepiej utalentowana drużyna bez chemii i synergii nie wygra. Scouting musi uwzględniać szatnię."
+  },
+
+  "co_pyta_scout_w_europie": [
+    "Czy ten zawodnik pomoże nam teraz, w tym sezonie?",
+    "Czy jego umiejętności przeniosą się na naszą ligę?",
+    "Czy pasuje do stylu gry naszego trenera?",
+    "Czy mieści się w budżecie i daje więcej wartości niż kosztuje (VALUE)?",
+    "Jak odnajdzie się w nowym mieście, kraju, kulturze?"
+  ],
+
+  "case_study_jokic": {
+    "_source": "Next Draft Foundation — slajd 'Case Study: Nikola Jokić'",
+    "tytul": "CASE STUDY: NIKOLA JOKIĆ",
+    "haslo": "SKILLS AGE. IQ SCALES.",
+    "kontekst": "Jokić jest najlepszym przykładem zawodnika, którego większość scoutów nie doceniła — bo szukali atletyzmu zamiast funkcji.",
+    "dlaczego_wiekszosci_umknol": {
+      "opis": "Czerwone flagi, które widziała większość scoutów:",
+      "czerwone_flagi": [
+        { "id": "przecietny_atleta",    "tekst": "Przeciętny atleta — brak wybuchowości i fizycznych atrybutów typowego centra" },
+        { "id": "brak_eksplozywnosci",  "tekst": "Brak eksplozywności — nie skakał wysoko, nie biegał szybko" },
+        { "id": "wolny",                "tekst": "Wolny — jeden z wolniejszych w lidze pod względem pierwszego kroku" },
+        { "id": "nie_wygladal_jak_gwiazda", "tekst": "Nie wyglądał jak gwiazda — sylwetka, ciało, sposób poruszania się" }
+      ],
+      "lekcja": "Tradycyjna ocena atletyzmu i wyglądu na boisku całkowicie zasłoniła to, co naprawdę ważne."
+    },
+    "co_nuggets_zobaczyli_inaczej": {
+      "opis": "Denver Nuggets wybrali go w 2. rundzie draftu 2014 (pick 41). Widzieli to, co inni przeoczyli:",
+      "cechy_kluczowe": [
+        { "id": "iq",               "nazwa": "IQ",              "opis": "Wyjątkowe rozumienie gry — przewiduje akcje, zanim się wydarzą" },
+        { "id": "decyzje",          "nazwa": "DECYZJE",         "opis": "Podejmuje właściwe decyzje w każdej sytuacji — pass first mentality" },
+        { "id": "vision",           "nazwa": "VISION",          "opis": "Peryferyjne widzenie i czytanie przestrzeni na poziomie rozgrywającego" },
+        { "id": "touch",            "nazwa": "TOUCH",           "opis": "Miękkie ręce — zarówno w podaniu jak i w kończeniu pod koszem" },
+        { "id": "feel_for_game",    "nazwa": "FEEL FOR THE GAME", "opis": "Intuicyjne rozumienie rytmu gry, presji, momentów — cos niezmierzalnego" },
+        { "id": "wyjatkowe_porownanie", "nazwa": "WYJĄTKOWE PORÓWNANIE", "opis": "Profil bez precedensu — nie pasował do żadnego istniejącego archetypu centra" }
+      ]
+    },
+    "statystyki_nba_2023_24": {
+      "sezon": "2023/24",
+      "ppg": 26.4,
+      "rpg": 12.4,
+      "apg": 9.0,
+      "fg_pct": 58.3,
+      "osiagniecia": ["3× NBA MVP", "Mistrz NBA 2023", "Zmienił sposób, w jaki gramy w koszykówkę"]
+    },
+    "lekcje_scoutingowe": [
+      "Atletyzm to NARZĘDZIE, nie CEL — liczy się to, do czego go używasz (IQ, decyzje, impact)",
+      "Skills Age — umiejętności nie starzeją się tak szybko jak atletyzm; IQ Scales — inteligencja przenosi się na każdy poziom",
+      "Zawodnik bez precedensu jest trudny do wyceny — to często oznacza okazję dla tych, którzy potrafią ocenić funkcję",
+      "Jeden dobry transfer (jak Jokić z draftu 2. rundy) zmienia całą trajektorię organizacji: wyniki, finanse, wartość klubu",
+      "Czerwone flagi atletyczne mogą być zasłoną dla wyjątkowego IQ i feel for the game — zawsze pytaj: co ROBI na boisku, nie jak WYGLĄDA"
+    ],
+    "zastosowanie_w_scoutingu": "Przy ocenie każdego zawodnika zadaj pytanie: 'Co by zobaczył skaut Nuggets?' Zanim odrzucisz zawodnika za brak atletyzmu — sprawdź jego IQ, decyzje i impact."
+  }
+}

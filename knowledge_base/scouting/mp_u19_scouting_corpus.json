@@ -1,0 +1,94 @@
+{
+  "_source": "4 pliki .docx z folderu SCOUTING/MP U19 (sezon 2024/25) — własne raporty skautingowe: Energa 1LO Trefl Sopot, AK Stal Ostrów Wielkopolski, Exact Forestall Śląsk Wrocław, Profbud Legia Warszawa.",
+  "_comment": "KORPUS MŁODZIEŻOWY — 4 zespoły, 38 zawodników z Mistrzostw Polski U19. Ten sam autor, ten sam szablon i ta sama metodyka co korpus 2LM, więc oba zbiory są BEZPOŚREDNIO PORÓWNYWALNE. Kluczowa przewaga tego korpusu: 100% pokrycia wzrostem, wiekiem i opisem — czego w 2LM brakowało. Kluczowe ograniczenie: to 4 CZOŁOWE zespoły, czyli próba elitarna, a nie przekrój U19.",
+  "_program_use": "Benchmark młodzieżowy oraz — najważniejsze — materiał do PORÓWNAŃ MIĘDZYPOZIOMOWYCH z korpusem 2LM. Odpowiada na pytanie „jak elita U19 wypada na tle seniorskiej 2 ligi?\", które jest realnym pytaniem przy planowaniu ścieżki zawodnika. Zbiór danych: knowledge_base/datasets/mp_u19_players_2024_25.json.",
+
+  "kategoria": "Korpus skautingowy młodzieżowy — dane referencyjne i normy",
+
+  "zakres_korpusu": {
+    "rozgrywki": "Mistrzostwa Polski U19, sezon 2024/25",
+    "zespolow": 4,
+    "zawodnikow": 38,
+    "zespoly": ["1. Energa 1LO Trefl Sopot", "2. AK Stal Ostrów Wielkopolski", "3. Exact Forestall Śląsk Wrocław", "4. Profbud Legia Warszawa"],
+    "_status_proby": "PRÓBA ELITARNA, NIE POPULACJA. Cztery zespoły to czołówka MP U19 — normy poniżej opisują najlepszych zawodników rocznika, nie przeciętny poziom U19. To zasadnicza różnica wobec korpusu 2LM, gdzie mamy komplet 15/15 zespołów, czyli populację.",
+    "profil_fizyczny": {
+      "wzrost_cm": {"min": 178, "mediana": 194.5, "max": 207},
+      "wiek": {"min": 16, "mediana": 18, "max": 18, "rozklad": {"16 lat": 2, "17 lat": 14, "18 lat": 22}},
+      "_uwaga": "Ponad jedna trzecia składów (16 z 38) to zawodnicy MŁODSI od górnego limitu kategorii — czyli grający „w górę\". To istotny kontekst przy ocenie ich statystyk."
+    }
+  },
+
+  "schemat_raportu": {
+    "_zgodnosc": "IDENTYCZNY z korpusem 2LM — ten sam szablon PLAYERS BLANK.docx i ta sama metodyka (patrz opponent_scouting_method.json).",
+    "roznica_na_plus": "Komórka NAME jest tu TRÓJLINIJKOWA i ustandaryzowana: „#nr POZYCJA\" ¶ „IMIĘ NAZWISKO\" ¶ „190cm/17yo\". W korpusie 2LM wzrost i wiek pojawiały się nieregularnie, głównie w sekcji STARTERS. Ten format jest lepszy i wart utrwalenia w szablonie.",
+    "kolumny": ["NAME (#nr + pozycja + nazwisko + wzrost/wiek)", "FOTO", "MIN", "PTS", "FG%", "3PT%", "FT%", "REB (DEF+OFF oraz suma)", "AST", "ST / TO", "+/-", "SHOT ⃝"],
+    "sekcje_zespolowe": ["STARTERS", "10 leaderboardów: BEST PLAYERS | BEST 3PT | NO/BAD 3PT | BEST FT | WORST FT | BEST 1x1 INSIDE | BEST 1x1 OUTSIDE | BEST OFF REB. | MOST TURNOVERS | LAST SHOTS", "TEAM CHARACTERISTIC: OFFENSE | DEFENSE"],
+    "_uwaga_parsowania": "Tak jak w 2LM — komórki REB i ST/TO są dwulinijkowe. Czytać akapity wewnątrz komórki osobno."
+  },
+
+  "normy_mp_u19_top4_2024_25": {
+    "_podstawa": "38 zawodników z 4 czołowych zespołów. Wartości procentowe liczone z pominięciem zer (brak prób).",
+    "PTS":  {"n": 37, "P25": 5.6,  "MED": 8.8,  "P75": 12.0, "P90": 16.8},
+    "FG%":  {"n": 37, "P25": 40.9, "MED": 44.0, "P75": 55.0, "P90": 60.8},
+    "3PT%": {"n": 26, "P25": 21.9, "MED": 33.3, "P75": 39.8, "P90": 47.8},
+    "FT%":  {"n": 36, "P25": 50.0, "MED": 69.1, "P75": 82.2, "P90": 95.5},
+    "REB":  {"n": 34, "P25": 2.6,  "MED": 4.0,  "P75": 6.5,  "P90": 7.5},
+    "AST":  {"n": 37, "P25": 0.6,  "MED": 1.5,  "P75": 2.7,  "P90": 4.4},
+    "ST":   {"n": 37, "P25": 0.4,  "MED": 0.8,  "P75": 1.2,  "P90": 1.9},
+    "TO":   {"n": 37, "P25": 1.0,  "MED": 1.3,  "P75": 1.7,  "P90": 2.0}
+  },
+
+  "porownanie_miedzypoziomowe_u19_vs_2lm": {
+    "_waga": "NAJCENNIEJSZA CZĘŚĆ tego pliku — dwa korpusy tego samego autora, w tym samym szablonie, z tego samego sezonu.",
+    "_zastrzezenie": "Porównujemy ELITĘ U19 (4 czołowe zespoły) z CAŁĄ 2LM (15/15 zespołów, od liderów po głębokie ławki). To porównanie czołówki jednego poziomu ze średnią drugiego — nie dwóch średnich. Każdy wniosek trzeba czytać z tym zastrzeżeniem.",
+    "mediany": {
+      "PTS":  {"U19_top4": 8.8,  "2LM_cala_liga": 7.8,  "roznica": "+1.0"},
+      "FG%":  {"U19_top4": 44.0, "2LM_cala_liga": 40.9, "roznica": "+3.1"},
+      "3PT%": {"U19_top4": 33.3, "2LM_cala_liga": 30.0, "roznica": "+3.3"},
+      "FT%":  {"U19_top4": 69.1, "2LM_cala_liga": 68.7, "roznica": "+0.4"},
+      "REB":  {"U19_top4": 4.0,  "2LM_cala_liga": 4.0,  "roznica": "0.0"},
+      "AST":  {"U19_top4": 1.5,  "2LM_cala_liga": 1.5,  "roznica": "0.0"},
+      "ST":   {"U19_top4": 0.8,  "2LM_cala_liga": 1.0,  "roznica": "-0.2"},
+      "TO":   {"U19_top4": 1.3,  "2LM_cala_liga": 1.7,  "roznica": "-0.4"}
+    },
+    "wnioski": [
+      "SKUTECZNOŚĆ: elita U19 jest skuteczniejsza od przeciętnego seniora 2LM zarówno z gry (+3,1 pkt proc.), jak i za 3 (+3,3). Najlepsi juniorzy nie odstają technicznie od poziomu 2 ligi.",
+      "RZUTY WOLNE: praktycznie identyczne mediany (69,1 vs 68,7) — to obszar, w którym wiek nie daje przewagi ani jednej, ani drugiej grupie. Obie są słabe.",
+      "ZBIÓRKA I ASYSTY: mediany identyczne (4,0 i 1,5) — role na boisku rozkładają się podobnie niezależnie od poziomu.",
+      "STRATY: pozornie dramatyczna różnica (P90: 2,0 w U19 vs 3,8 w 2LM). NIE INTERPRETOWAĆ jako „juniorzy tracą mniej piłek\" — to najpewniej artefakt doboru próby (elitarni ball handlerzy vs cała liga wraz z zawodnikami o słabym handlingu) i innej liczby meczów w podstawie. Wymaga weryfikacji przed użyciem.",
+      "PRZECHWYTY: niższe w U19 (0,8 vs 1,0) — możliwy efekt bardziej zdyscyplinowanej obrony w czołowych zespołach młodzieżowych albo po prostu mniejszej liczby chaotycznych posiadań."
+    ],
+    "wzorzec_potwierdzony_na_dwoch_poziomach": {
+      "pozycje_podwojne": "U19: 15/38 = 39% · 2LM: ~40%. Niemal identyczny udział pozycji podwójnych (PG/SG, PF/C, SG/SF, SF/PF) na obu poziomach.",
+      "_znaczenie": "To najmocniejszy wzorzec w obu korpusach — powtarza się niezależnie od poziomu i wieku. Empiryczne wsparcie dla tezy „funkcja > pozycja\" z modern_basketball.json: zawodnicy nie mieszczą się w jednej pozycji ani w młodzieży, ani u seniorów."
+    }
+  },
+
+  "jakosc_danych": {
+    "_ocena": "WYRAŹNIE WYŻSZA niż w korpusie 2LM.",
+    "bledy_zapisu": "BRAK — żadna wartość procentowa nie przekracza 100 (w 2LM były 3 takie błędy z brakującym przecinkiem dziesiętnym).",
+    "kompletnosc": "38/38 zawodników ma wzrost, wiek ORAZ opis tekstowy. W 2LM opisy miało 115/162, a wzrost i wiek były niesystematyczne.",
+    "zera_to_brak_prob": "3PT% = 0 u 11 zawodników, FT% = 0 u 1 — traktować jako brak prób, nie zerową skuteczność.",
+    "braki": "1 zawodnik bez wartości PTS.",
+    "_wniosek": "Raporty U19 są lepiej prowadzone niż 2LM. Jeśli korpus 2LM ma być podstawą wzorców, warto go uzupełnić do tego standardu — zwłaszcza o wzrost i wiek w komórce NAME."
+  },
+
+  "uwagi_do_wyliczania_wzorcow": [
+    "Nie łączyć obu korpusów w jedną pulę — inny poziom rozgrywek i inny status próby (elita vs populacja).",
+    "Przy porównaniach zawsze podawać, że U19 to 4 czołowe zespoły, a nie przekrój kategorii.",
+    "Wiek 16-18 lat w próbie oznacza, że część statystyk pochodzi od zawodników grających „w górę\" — przy analizach rozwojowych warto rozbić normy po roczniku (16/17/18).",
+    "Zera w kolumnach procentowych wykluczać ze średnich skuteczności.",
+    "Rankingi skuteczności wymagają progu minimalnej liczby prób — tak samo jak w 2LM."
+  ],
+
+  "powiazania": {
+    "datasets/mp_u19_players_2024_25.json": "ZBIÓR DANYCH do tego opisu — 38 rekordów z wiekiem i wzrostem.",
+    "2lm_scouting_corpus.json": "KORPUS SIOSTRZANY — ten sam autor, szablon i sezon, poziom seniorski. Podstawa porównań międzypoziomowych.",
+    "datasets/2lm_players_2024_25.json": "Dane seniorskie do zestawień.",
+    "opponent_scouting_method.json": "Metoda, którą raporty realizują (wytyczne Ulm ProB).",
+    "modern_basketball.json": "39-40% pozycji podwójnych na obu poziomach = empiryczne wsparcie tezy „funkcja > pozycja\".",
+    "projection_fit.json": "Porównanie U19 vs 2LM to konkretny materiał do projekcji przejścia junior→senior; M5 opisuje tę tranzycję jakościowo, tu jest jej warstwa liczbowa.",
+    "licb_teoria_metodyka.json": "Okresy rozwojowe — kontekst dla rozkładu wieku 16-18 lat i ostrożności przy ekstrapolacji.",
+    "m7_org_structure_coach_analysis.json": "Skauting w akademii, „U14 ≠ najlepszy senior\" — ten korpus pozwala sprawdzić tezę na realnych liczbach U19."
+  }
+}

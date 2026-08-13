@@ -1,0 +1,49 @@
+{
+  "_comment": "Kluczowe funkcje JavaScript w app.py — inline w f-stringach",
+
+  "program_zawodnicy": {
+    "setPer(mode)":      "'game'|'36'|'40'|'100' — przelicza per-min stats",
+    "setStatMode(mode)": "'avg'|'sum' — przełącznik Średnie/Sumaryczne",
+    "sortZaw(col)":      "sortowanie po indeksie komórki (0-based)"
+  },
+
+  "portal_stats": {
+    "setPer_p(mode)":    "odpowiednik setPer dla portalu",
+    "setStatMode_p(mode)":"odpowiednik setStatMode dla portalu",
+    "sortP(col)":        "sortowanie tabeli portalu"
+  },
+
+  "charts": {
+    "switchMetric(metric)": "przełącza wykres zawodnika — dostępne metryki:",
+    "metrics": ["PTS","AST","REB","OREB","DREB","STL","BLK","TO","FIN","EFG","TS","USG"],
+    "titles_pl": {
+      "PTS":"Punkty","AST":"Asysty","REB":"Rebounds",
+      "OREB":"Off. Reb","DREB":"Def. Reb",
+      "STL":"Przechwyty","BLK":"Bloki","TO":"Straty","FIN":"Wykończenia",
+      "EFG":"eFG%","TS":"TS%","USG":"USG%"
+    }
+  },
+
+  "thead_indices_zawodnicy": {
+    "_note": "0-based indeksy dla sortZaw() i sortP()",
+    "0":"Zawodnik","1":"MIN","2":"G","3":"PTS",
+    "4":"2PT-M","5":"2PT-A","6":"3PT-M","7":"3PT-A","8":"FT-M","9":"FT-A",
+    "10":"ZB-A(oreb)","11":"ZB-O(dreb)","12":"ZB-S",
+    "13":"AST","14":"TO","15":"STL","16":"BLK","17":"FD",
+    "18":"eFG%","19":"TS%","20":"USG%"
+  },
+
+  "data_attributes": {
+    "_note": "data-* na wierszach tbody zawodników",
+    "attrs": ["data-n","data-min","data-pts","data-p2m","data-p2a",
+              "data-p3m","data-p3a","data-ftm","data-fta",
+              "data-oreb","data-dreb","data-ast","data-to",
+              "data-stl","data-blk","data-fd"]
+  },
+
+  "python_helpers": {
+    "_avg(v)":  "dzieli przez n (liczbę meczów) — używane w tbody zawodników",
+    "_a(v)":    "odpowiednik dla portalu",
+    "f1(v)":    "format 1 miejsce po przecinku"
+  }
+}

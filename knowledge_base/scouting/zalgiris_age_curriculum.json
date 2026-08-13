@@ -1,0 +1,186 @@
+{
+  "_source": "Zdjęcia slajdów z prezentacji akademii Žalgirisu Kowno: U6-U8 GOALS, WEEKLY TRAINING PLAN U6-U8, U9-U10 GOALS, „GAME TO GAME\" PLAN U9-U10 (warianty 4 i 5 dni), U11-U13 GOALS, „GAME TO GAME\" PLAN U11-U13 (warianty 5 i 6 dni), U14-U15 GOALS, U16-U18 GOALS.",
+  "_comment": "KOMPLETNE CURRICULUM WIEKOWE od U6 do U18 — cele szkoleniowe dla każdego przedziału wiekowego ORAZ gotowe rozkłady tygodnia treningowego z procentowym podziałem czasu. To najbardziej konkretny materiał programowy w całej tej bazie: nie mówi „rozwijaj technikę\", tylko podaje, co dokładnie w którym wieku i ile procent jednostki na to przeznaczyć. UWAGA: odczytane ze zdjęć slajdów — tabele przepisane ręcznie, warto zweryfikować przed wdrożeniem.",
+  "_program_use": "Wzorzec dla modułu planowania szkolenia w akademii: (a) lista celów per rocznik jako checklist kompetencji do diagnozy, (b) szablony jednostki treningowej z procentowym podziałem części, (c) model „GAME TO GAME\" — plan zależny od LICZBY DNI między meczami, nie od dnia tygodnia. Ten trzeci punkt to najciekawszy pomysł organizacyjny: zamiast jednego sztywnego planu tygodniowego mają WARIANTY na 4, 5 i 6 dni przerwy.",
+
+  "kategoria": "Curriculum wiekowe akademii — cele i rozkłady treningu U6-U18",
+
+  "_zasada_naczelna": "Curriculum jest zbudowane wokół dwóch osi: (1) CO uczyć — lista celów rosnąca wraz z wiekiem, z wyraźnym podziałem na umiejętności indywidualne i taktyczne od U9 wzwyż; (2) JAK rozłożyć czas — procentowy podział jednostki, zmieniający się z wiekiem.",
+
+  "cele_wg_przedzialow_wiekowych": {
+    "U6_U8": {
+      "_charakter": "Wyłącznie fundament ruchowy i techniczny. BRAK warstwy taktycznej — nie pojawia się ani jedno pojęcie zespołowe.",
+      "cele": [
+        "Poprawny bieg (przodem/tyłem)",
+        "Zmiana kierunku",
+        "Zmiana rytmu",
+        "Ball handling OBIEMA rękami",
+        "Step stop i jump stop",
+        "Pivoty (obroty)",
+        "Jab step / cross dribble",
+        "Layup MOCNIEJSZĄ ręką",
+        "Podanie MOCNIEJSZĄ ręką (z miejsca)",
+        "Podstawy rzutu",
+        "Podstawy gry 1-on-1"
+      ],
+      "_uwaga": "Na tym etapie świadomie tylko MOCNA ręka (layup i podanie). Słabsza ręka wchodzi dopiero w U9-U10 — to celowa sekwencja, nie przeoczenie."
+    },
+    "U9_U10": {
+      "umiejetnosci_indywidualne": [
+        "Zwody kozłem: in/out, między nogami, za plecami, spin",
+        "Layup SŁABSZĄ ręką",
+        "Power layup",
+        "Podania: słabszą ręką z miejsca, słabszą ręką po koźle, transition off-pass",
+        "Rzut z półdystansu po koźle",
+        "Step stop i jump stop",
+        "Obrona 1-on-1: poprawna pozycja i kroki dostawne",
+        "Podstawy zbiórki i box-outu"
+      ],
+      "umiejetnosci_taktyczne": ["3 x 0", "Read & React", "Give & Go", "Spacing"],
+      "_uwaga": "Tu po raz pierwszy pojawia się kolumna TACTICAL SKILLS — i od razu z konceptami (read & react, spacing), a nie z zagrywkami."
+    },
+    "U11_U13": {
+      "umiejetnosci_indywidualne": [
+        "Kombinacje zwodów",
+        "Layupy",
+        "„Eurostep\", „reverse layup\", „floater\"",
+        "Podania",
+        "Po zwodach — jedną ręką, podstawy „handoff\"",
+        "Rzut z półdystansu po otrzymanym podaniu",
+        "„Step stop\", „jump stop\"",
+        "Obrona 1x1",
+        "Closeout mocną ręką, „deny\", „bump\" cuts, „box out\""
+      ],
+      "umiejetnosci_taktyczne": ["Podstawy „shell box\"", "Podstawy ataku zespołowego", "3x0 / 4x0, „opens\", „cuts\", „back door\"", "Podstawy szybkiego ataku"]
+    },
+    "U14_U15": {
+      "_przelom": "TU WCHODZI PICK & ROLL — zarówno w obronie, jak i w ataku. To wyraźna cezura w curriculum.",
+      "umiejetnosci_indywidualne": [
+        "Layupy po podaniu BEZ kozła",
+        "Zwody przy dużej prędkości",
+        "Podania: słabszą ręką po koźle, znad głowy, podanie w presingu lub pułapce",
+        "Rzut: po podaniu w ruchu, w ruchu ze zwodem, rzut za 3 z miejsca (spot)"
+      ],
+      "umiejetnosci_taktyczne": [
+        "Podstawy obrony P&R: „Flat\", „Side\", „Step Out\", „Trap\", „Under\"",
+        "P&R w ataku",
+        "Shell Box",
+        "Obrona 5x5: poruszanie względem piłki, help & recover, obrona zasłon",
+        "Atak 5x5: „spacing\", zasłony bez piłki",
+        "Szybki atak",
+        "Transition offense"
+      ],
+      "_uwaga": "Nazwy coverage'ów P&R z U14 wracają w zasadach seniorskich (zalgiris_playing_principles.json) — ten sam słownik od 14. roku życia do pierwszej drużyny."
+    },
+    "U16_U18": {
+      "umiejetnosci_indywidualne": [
+        "Zwody",
+        "Rzut (2PT, 3PT po koźle, po zasłonach, przy dużej prędkości)",
+        "Zasłony",
+        "Ruchy na poście",
+        "Podania",
+        "Kontrola prędkości",
+        "Zmiana kierunku",
+        "Obrona „men to men\""
+      ],
+      "umiejetnosci_taktyczne": ["Obrona strefowa", "Decision making", "Presing na całym / połowie boiska", "Rotacje obronne"],
+      "_uwaga": "Strefa i presing pojawiają się DOPIERO w U16-U18 — najpóźniej ze wszystkich elementów taktycznych. Wcześniej wyłącznie krycie indywidualne."
+    },
+    "_linia_rozwojowa": {
+      "layup": "U6-U8 mocna ręka → U9-U10 słabsza ręka + power layup → U11-U13 eurostep/reverse/floater → U14-U15 po podaniu bez kozła",
+      "podanie": "U6-U8 mocna ręka z miejsca → U9-U10 słabsza ręka z miejsca i po koźle → U11-U13 handoff → U14-U15 znad głowy i w presingu",
+      "obrona": "U9-U10 pozycja i kroki 1x1 → U11-U13 closeout, deny, bump, box out + shell box → U14-U15 P&R DEF i 5x5 help & recover → U16-U18 strefa, presing, rotacje",
+      "rzut": "U6-U8 podstawy → U9-U10 półdystans po koźle → U11-U13 półdystans po podaniu → U14-U15 3PT z miejsca → U16-U18 3PT po koźle i po zasłonach",
+      "_wniosek": "Każda umiejętność ma wyraźną, wieloletnią progresję. Nic nie pojawia się nagle — element wchodzi w wersji najprostszej i wraca co 2-3 lata w trudniejszym wariancie."
+    }
+  },
+
+  "rozklady_jednostki_treningowej": {
+    "_kluczowa_obserwacja": "Struktura jednostki ZMIENIA SIĘ Z WIEKIEM: U6-U8 ma CZTERY części (20/30/30/20%), od U9 wzwyż TRZY części (20/60/20%). Wraz z wiekiem środek jednostki się konsoliduje — z dwóch bloków po 30% robi się jeden blok 60%.",
+
+    "U6_U8_plan_tygodniowy": {
+      "format": "3 treningi w tygodniu (plan tygodniowy, nie „game to game\" — na tym etapie nie ma jeszcze rytmu meczowego)",
+      "podzial": "1. część 20% · 2. część 30% · 3. część 30% · 4. część 20%",
+      "dzien_1": {"1_20%": "Warm up games", "2_30%": "Physical preparation", "3_30%": "Dribble, Pass, Pivots", "4_20%": "Shooting, Jab/Cross"},
+      "dzien_2": {"1_20%": "Warm up games", "2_30%": "Physical preparation", "3_30%": "Layup, Jab/Cross, Shooting", "4_20%": "Pass, Dribble"},
+      "dzien_3": {"1_20%": "Warm up games", "2_30%": "Physical preparation", "3_30%": "1x1, Step stop, Jump stop, Shooting", "4_20%": "Pivots, Layup"},
+      "_uwagi": [
+        "Rozgrzewka to ZAWSZE gry (warm up games) — nigdy ćwiczenia formalne",
+        "Przygotowanie fizyczne obecne w KAŻDEJ jednostce i to aż 30% czasu",
+        "Elementy techniczne rotują między częścią 3. i 4. — to, co w dniu 1. było głównym tematem, w dniu 2. wraca jako uzupełnienie"
+      ]
+    },
+
+    "model_game_to_game": {
+      "_idea": "NAJCIEKAWSZY POMYSŁ ORGANIZACYJNY. Od U9 plan nie jest „tygodniowy\", tylko zależny od LICZBY DNI MIĘDZY MECZAMI. Klub ma gotowe warianty na 4, 5 i 6 dni przerwy.",
+      "_dlaczego_to_dziala": "Realny kalendarz młodzieżowy nie jest regularny — raz gra się co 4 dni, raz co 6. Sztywny plan tygodniowy w takich warunkach zawsze się rozjeżdża; warianty rozwiązują to systemowo.",
+      "_program_use": "Gotowy model dla planera treningu: użytkownik wybiera liczbę dni do następnego meczu, system podpowiada rozkład."
+    },
+
+    "U9_U10_game_to_game_4_dni": {
+      "podzial": "1. część (rozgrzewka) 20% · 2. część 60% · 3. część 20%",
+      "dzien_1": {"rozgrzewka": "Running (ladder/barriers)", "glowna_60%": "Physical preparation", "koncowa_20%": "Shooting"},
+      "dzien_2": {"rozgrzewka": "Pass", "glowna_60%": "1x1 shooting (technique)", "koncowa_20%": "Physical preparation"},
+      "dzien_3": {"rozgrzewka": "Dribble", "glowna_60%": "Pass, 1x1, shooting (layup)", "koncowa_20%": "Physical preparation"},
+      "dzien_4": {"rozgrzewka": "Games", "glowna_60%": "„Spacing\" 3x0 / 3x3, fast break", "koncowa_20%": "5x5"}
+    },
+
+    "U9_U10_game_to_game_5_dni": {
+      "dzien_1": {"rozgrzewka": "Running (ladder/barriers)", "glowna_60%": "Physical preparation", "koncowa_20%": "Shooting"},
+      "dzien_2": {"rozgrzewka": "Body control", "glowna_60%": "Physical preparation", "koncowa_20%": "1x1"},
+      "dzien_3": {"rozgrzewka": "Pass", "glowna_60%": "Dribble, 1x1, shooting (layup)", "koncowa_20%": "Physical preparation"},
+      "dzien_4": {"rozgrzewka": "Dribble", "glowna_60%": "Pass „read & react\", 2x2 / 3x3", "koncowa_20%": "Shooting"},
+      "dzien_5": {"rozgrzewka": "Games", "glowna_60%": "4x0 / 4x4 „spacing\"", "koncowa_20%": "5x5, shooting"},
+      "_uwaga": "Dodatkowy dzień nie jest doklejany na końcu — cały plan się PRZEBUDOWUJE. Przy 5 dniach dochodzi „body control\" i pojawia się 2x2/3x3 przed przejściem do 4x4."
+    },
+
+    "U11_U13_game_to_game_5_dni": {
+      "_uklad_slajdu": "Kolumny podane w kolejności: 1. dzień (dzień po meczu), 2. dzień, 5. dzień, 3. dzień (WOLNY), 4. dzień — czyli tabela pokazuje dni w kolejności funkcjonalnej, nie chronologicznej.",
+      "dzien_1_po_meczu": {"rozgrzewka": "Running (ladder/barriers)", "glowna_60%": "Physical preparation", "koncowa_20%": "Shooting"},
+      "dzien_2": {"rozgrzewka": "Pivots", "glowna_60%": "Physical preparation (dominant load)", "koncowa_20%": "1x1"},
+      "dzien_3": "DZIEŃ WOLNY",
+      "dzien_4": {"rozgrzewka": "Dynamic with ball", "glowna_60%": "1x1, 2x2 „handoff\", 3x3 spacing", "koncowa_20%": "Physical preparation (core)"},
+      "dzien_5": {"rozgrzewka": "Games", "glowna_60%": "Fast break", "koncowa_20%": "5x5, shooting"},
+      "_uwaga": "Pojawia się zaplanowany DZIEŃ WOLNY oraz rozróżnienie obciążeń: „dominant load\" w 2. dniu i „core\" w 4."
+    },
+
+    "U11_U13_game_to_game_6_dni": {
+      "dzien_1_po_meczu": {"rozgrzewka": "Drills with ball", "glowna_60%": "Physical preparation (RECOVERY)", "koncowa_20%": "Shooting"},
+      "dzien_2": {"rozgrzewka": "Static with ball", "glowna_60%": "Physical preparation (dominant load)", "koncowa_20%": "Shooting"},
+      "dzien_3": {"rozgrzewka": "Pivots", "glowna_60%": "1x1", "koncowa_20%": "Physical preparation (core)"},
+      "dzien_4": "DZIEŃ WOLNY (day off)",
+      "dzien_5": {"rozgrzewka": "Dribble", "glowna_60%": "Fast break, shell box", "koncowa_20%": "Shooting"},
+      "dzien_6": {"rozgrzewka": "Games", "glowna_60%": "5x5", "koncowa_20%": "Shooting"},
+      "_uwaga_kluczowa": "Przy 6 dniach pierwszy dzień po meczu to REGENERACJA („physical preparation – recovery\"), a rzut (shooting) pojawia się w części końcowej KAŻDEGO z pięciu dni treningowych. Im dłuższa przerwa, tym więcej powtórzeń rzutowych."
+    },
+
+    "wnioski_z_rozkladow": [
+      "Przygotowanie fizyczne jest w KAŻDEJ jednostce na każdym poziomie wiekowym — nie jest dodatkiem",
+      "Rozgrzewka ma zawsze przypisany temat techniczny (pass, dribble, pivots, body control), nie jest ogólna",
+      "Ostatni dzień przed meczem to zawsze GAMES w rozgrzewce i gra 5x5 w części głównej lub końcowej",
+      "Rzut (shooting) wraca praktycznie codziennie, najczęściej w części końcowej",
+      "Dni wolne są ZAPLANOWANE w wariantach 5- i 6-dniowych, nie wynikają z braku sali",
+      "Obciążenie fizyczne jest różnicowane opisowo: recovery / dominant load / core"
+    ]
+  },
+
+  "wnioski_dla_wlasnej_pracy": [
+    "Sekwencja mocna ręka → słabsza ręka rozłożona na 2 przedziały wiekowe (U6-U8 → U9-U10)",
+    "Taktyka zespołowa startuje dopiero w U9-U10 i to od konceptów (read & react, spacing), nie od zagrywek",
+    "Pick & roll wchodzi dopiero w U14-U15 — wcześniej ani razu",
+    "Strefa i presing najpóźniej ze wszystkiego, w U16-U18",
+    "Struktura jednostki: 4 części u najmłodszych, 3 części od U9 (konsolidacja bloku głównego do 60%)",
+    "Plan zależny od liczby dni do meczu, nie od dnia tygodnia — model do skopiowania wprost"
+  ],
+
+  "powiazania": {
+    "zalgiris_academy_model.json": "Warstwa organizacyjna akademii — skala (ok. 1000 dzieci, 56 grup), sztab, infrastruktura, profile zawodników.",
+    "zalgiris_coaching_culture.json": "Metodyka prowadzenia treningu (drill types), warstwa mentalna i kulturowa.",
+    "zalgiris_playing_principles.json": "Zasady gry pierwszej drużyny/zespołów rozwojowych — słownik coverage'ów P&R z U14-U15 wraca tam bez zmian.",
+    "imopeksis_methodology.json": "Ścieżka „Dookoła Sportu\" i 27 umiejętności Dziennika Młodych Talentów — polski odpowiednik curriculum wiekowego; warto zestawić progresje.",
+    "licb_teoria_metodyka.json": "Okresy rozwojowe i apogea motoryczności — teoretyczne uzasadnienie, dlaczego U6-U8 to wyłącznie fundament ruchowy.",
+    "book_development_curriculum_jozak.json": "Piłkarski odpowiednik: etapy U6-U21 z przypisanymi treściami — ta sama filozofia LTAD w innej dyscyplinie.",
+    "teaching_fundamentals.json": "Konspekty nauczania fundamentów — polski warsztat o tym samym poziomie szczegółowości.",
+    "oom_talent_id_corpus.json": "Zawodnicy 12-13 lat (U14) — dokładnie przedział, w którym u Žalgirisu wchodzi P&R."
+  }
+}

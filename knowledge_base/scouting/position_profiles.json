@@ -1,0 +1,165 @@
+{
+  "_source": "Next Draft Foundation — Moduł 3",
+  "_comment": "Charakterystyki scoutingowe na poszczególne pozycje — priorytety dla każdej roli",
+  "_program_use": "Select pozycji w formularzu scoutingowym → automatycznie podpowiada priorytetowe cechy do oceny. Każda lista = ordered checklist.",
+
+  "zasada": "Każda pozycja ma inne priorytety. Dobry scout wie, na co patrzyć — i dlaczego.",
+  "uwaga": "Nie chodzi o sztywne ramy, ale o zrozumienie priorytetów dla trenera i organizacji.",
+
+  "dlaczego_wazne": [
+    "Poznajesz priorytety każdej pozycji",
+    "Lepiej budujesz zespół i chemię",
+    "Dobierasz zawodników do systemu",
+    "Zwiększasz szanse na wygrywanie",
+    "Podejmujesz lepsze decyzje scoutingowe"
+  ],
+
+  "pozycje": {
+    "PG": {
+      "nazwa": "POINT GUARD",
+      "priorytety": [
+        "Tworzenie przewag",
+        "Czytanie gry",
+        "Kontrola tempa",
+        "Podejmowanie decyzji",
+        "Gra 1 na 1",
+        "Komunikacja",
+        "IQ / Wizja gry",
+        "Zasięg podań",
+        "Obrona obwodu",
+        "Zarządzanie pick & roll",
+        "Efektywność rzutowa",
+        "Stabilność pod presją",
+        "Doświadczenie",
+        "Fizyczność",
+        "Wszechstronność"
+      ],
+      "projekcja_m5": {
+        "_comment": "Co skaluje się poziom wyżej dla PG — NDF M5",
+        "najwazniejsze": ["Decision Making", "Paint Touches", "Pick & Roll Reads", "Shooting", "IQ", "Pace Control", "Defense", "Toughness"],
+        "cechy_zawodnika": ["Czyta grę 2-3 ruchy do przodu", "Kontroluje tempo meczu", "Tworzy dla siebie i innych", "Podejmuje szybkie i dobre decyzje", "Zna swoje narzędzia i wie, jak ich użyć"],
+        "szukaj": ["Gry pod presją", "Szybkich decyzji", "Manipulowania tempem", "Organizowania innych"],
+        "red_flag": "High Usage bez impactu",
+        "klucz": "Na wyższym poziomie nie wystarczy być szybkim. Musisz być mądry.",
+        "cytat": "Najwięksi PG nie tylko grają. Oni zarządzają grą.",
+        "idealny_profil": ["Myśli szybciej", "Widzi więcej", "Kontroluje tempo", "Podnosi innych", "Broni swojego", "Wytrzymuje presję"]
+      }
+    },
+    "SG": {
+      "nazwa": "SHOOTING GUARD",
+      "priorytety": [
+        "Tworzenie własnego rzutu",
+        "Rzut z obwodu",
+        "Catch & shoot",
+        "Ruch bez piłki",
+        "Gra w tranzycji",
+        "Finiszowanie",
+        "Obrona na obwodzie",
+        "Lateral quickness",
+        "Czytanie akcji",
+        "IQ / Decyzje",
+        "Umiejętność gry 1 na 1",
+        "Konsekwencja",
+        "Fizyczność",
+        "Doświadczenie",
+        "Wszechstronność"
+      ],
+      "projekcja_m5": {
+        "_comment": "Co skaluje się poziom wyżej dla SG — NDF M5",
+        "najwazniejsze": ["Shooting Versatility", "Movement Without Ball", "Reading Screens", "Spacing Value", "Quick Decisions", "Competitiveness"],
+        "cechy_zawodnika": ["Tworzy przestrzeń dla innych", "Czyta grę 1 krok do przodu", "Szybkie decyzje = przewaga", "Ruch bez piłki to podstawa współczesnego SG", "Efektywny w każdej sytuacji, a nie tylko z piłką"],
+        "szukaj": ["Catch & Shoot", "Footwork", "Grania bez kozła", "Reakcji na closeout"],
+        "red_flag": "ISO heavy, efekt niski",
+        "klucz": "Wielu scorerów nie umie funkcjonować bez piłki.",
+        "idealny_profil": ["Strzela z różnych pozycji", "Nieustanny ruch bez piłki", "Czyta obronę", "Rozciąga grę", "Podejmuje szybkie mądre decyzje", "Konkurencyjny w każdej akcji"]
+      }
+    },
+    "SF": {
+      "nazwa": "SMALL FORWARD",
+      "priorytety": [
+        "Wszechstronność",
+        "Obrona wielu pozycji",
+        "Ruch bez piłki",
+        "Rzut z dystansu",
+        "Finiszowanie",
+        "Atletyzm",
+        "Przejście do kontrataku",
+        "Umiejętność kreacji",
+        "Rebounding",
+        "IQ / Czytanie gry",
+        "Podejmowanie decyzji",
+        "Długość / zasięg",
+        "Fizyczność",
+        "Doświadczenie",
+        "Efektywność"
+      ],
+      "projekcja_m5": {
+        "_comment": "SF/Wing — najbardziej poszukiwany profil na rynku — NDF M5",
+        "najwazniejsze": ["Versatility", "Size + Mobility", "Shooting", "Defense", "Running the Floor", "IQ", "Adaptability"],
+        "cechy_zawodnika": ["Mobilny na tyle, by bronić wiele pozycji", "Strzelba z każdego poziomu", "Gra z energią w transition, nadal skuteczny w pozycji", "Broni 1-4 pozycji, przeszkadza, nie odpuszcza", "Czyta grę, podejmuje dobre decyzje", "Pasuje do każdego stylu gry i systemu"],
+        "najbardziej_poszukiwane_archetypy": ["Two-Way Wing", "Scalable Role Player"],
+        "dlaczego_poszukiwany": ["Pasuje do każdego lineapu", "Może zmieniać rolę bez utraty efektywności", "Skaluje się ze wzrostem poziomu gry"],
+        "pytanie_kluczowe": "Czy może pomagać lineupom obok lepszych graczy?",
+        "idealny_profil": ["Nie potrzebuje piłki, by być skuteczny", "Dostarcza pozytywnych zagrań", "Podnosi poziom lineapu, a nie tylko swoje statystyki", "Gotowy na brudną pracę", "Adaptuje się szybko", "Pomaga wygrywać"]
+      }
+    },
+    "PF": {
+      "nazwa": "POWER FORWARD",
+      "priorytety": [
+        "Gra tyłem do kosza",
+        "Zbiórki",
+        "Obrona w strefie podkosza",
+        "Finiszowanie w pomalowanym",
+        "Rzut z półdystansu",
+        "Ustawianie zasłon",
+        "Mobilność",
+        "Aktywność bez piłki",
+        "Komunikacja",
+        "Zasięg / długość",
+        "Doświadczenie",
+        "Wszechstronność",
+        "Wytrzymałość"
+      ],
+      "projekcja_m5": {
+        "_comment": "PF — Nowoczesny 4-man — co skaluje się poziom wyżej",
+        "najwazniejsze": ["Playmaking", "Shooting", "Footspeed", "Switching", "Rebounding Motor", "Decision Making"],
+        "cechy_zawodnika": ["Gra z głową, widzi boisko, tworzy przewagi", "Krótki roll — podania, które nie są oczywiste", "Space — rozciąga obronę rzutem", "Wszechstronność — może bronić 2-5, grać w różnych ustawieniach", "Szybkość nóg — nadąża za grą, chroni w pick & roll", "Walka na tablicach — energia, pozycja, drugie szanse"],
+        "szukaj": ["Short Roll Passing", "Spacing", "Mobility", "Versatility"],
+        "trend": "Shooting 4 → Playmaking/Shooting 4",
+        "gracze_europejscy": "W nowoczesnym baskecie na pozycji 4 pojawia się coraz więcej graczy europejskich — mają fundamenty koszykówki (short roll, decyzje, zasłony, IQ) które predysponują ich do roli 'drugiego rozgrywającego na boisku'.",
+        "dlaczego_wazne": ["Otwiera boisko dla innych", "Podnosi poziom całej piątki", "Dopasowuje się do nowoczesnej obrony", "Zwiększa przewagi w ataku", "Skaluje się na wyższym poziomie"],
+        "cytat": "Nowoczesny 4 nie tylko rzuca. On myśli, czyta i wpływa na grę."
+      }
+    },
+    "C": {
+      "nazwa": "CENTER",
+      "priorytety": [
+        "Obrona obręczy",
+        "Zbiórki",
+        "Gra w post-up",
+        "Finiszowanie",
+        "Ustawianie zasłon",
+        "Ręce / wykończenie",
+        "Poruszanie się bokiem",
+        "Siła fizyczna",
+        "Zasięg / długość",
+        "Komunikacja",
+        "IQ / Czytanie gry",
+        "Fizyczność",
+        "Doświadczenie",
+        "Wszechstronność",
+        "Wytrzymałość"
+      ],
+      "projekcja_m5": {
+        "_comment": "C — co daje wartość dzisiaj — NDF M5",
+        "najwazniejsze": ["Rim Protection", "Feet", "Changing Ends", "Hands", "Rebounding Instincts", "Screen Setting", "Versatility"],
+        "cechy_zawodnika": ["Chroni obręcz — zmienia rzuty, wpływa na grę", "Mobilność — porusza się w przestrzeni, nie tylko w polu 3s", "Zmienia końce — biega, żeby być we właściwym miejscu", "Instynkt do zbiórki — czyta, reaguje, kończy posiadania", "Ustawia zasłony — tworzy przewagi dla innych", "Uniwersalność — broni różnych zawodników, różne style"],
+        "szukaj": ["Małych przewag — robi różnicę szczegółami", "Mobility — lateral movement, recovery", "Defensywnego impactu — nie tylko bloki, ale wpływ", "Decyzji pod presją — szybkie, proste, skuteczne"],
+        "co_go_wyroznia": ["Zamyka pomalowane", "Nie gubi się w rotacjach", "Komunikuje i organizuje", "Fizyczność i wytrzymałość"],
+        "zaslony_jako_asysta": "Dobre zasłony można de facto liczyć i zapisywać jako asysta dla scorerów. Center, który ustawia świetne zasłony, tworzy przewagi dla rzucających — analogicznie do podań w ataku.",
+        "klucz": "Dzisiejszy Center musi przetrwać w spacingu.",
+        "dlaczego_wazne": ["Spacing to rzeczywistość", "Centrzy muszą dostosować się", "Przetrwanie = wartość", "Wpływ na zwycięstwa"]
+      }
+    }
+  }
+}

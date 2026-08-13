@@ -1,0 +1,246 @@
+{
+  "_source": "Next Draft Foundation — Moduł 2, bonusy: Scouting Vocabulary (część 1/2 i 2/2)",
+  "_comment": "Mini słownik profesjonalnych określeń scoutingowych EN→PL z wyjaśnieniem praktycznym",
+  "_program_use": "Tooltips/podpowiedzi w formularzach scoutingowych, pomoc kontekstowa przy wypełnianiu kart.",
+
+  "czesc_1": [
+    {
+      "en": "Connective player",
+      "pl": "zawodnik łączący grę",
+      "praktycznie": "Gracz, który poprawia funkcjonowanie zespołu poprzez decyzje, passing, spacing i flow ofensywy"
+    },
+    {
+      "en": "Scalable skill",
+      "pl": "skalowalna umiejętność",
+      "praktycznie": "Skill, który powinien przekładać się na wyższy poziom gry"
+    },
+    {
+      "en": "Processing speed",
+      "pl": "szybkość przetwarzania gry",
+      "praktycznie": "Jak szybko zawodnik czyta sytuację i podejmuje decyzje"
+    },
+    {
+      "en": "Rim pressure",
+      "pl": "presja na obręcz",
+      "praktycznie": "Umiejętność regularnego atakowania pomalowanego i generowania przewagi przy obręczy"
+    },
+    {
+      "en": "Translatable defense",
+      "pl": "obrona przekładalna poziom wyżej",
+      "praktycznie": "Obrona oparta na mobilności, IQ i effort, która ma szansę działać także na wyższym poziomie"
+    },
+    {
+      "en": "Role acceptance",
+      "pl": "akceptacja roli",
+      "praktycznie": "Gotowość zawodnika do funkcjonowania w konkretnej roli, dla dobra zespołu"
+    },
+    {
+      "en": "Weak-side awareness",
+      "pl": "świadomość po słabej stronie",
+      "praktycznie": "Czy zawodnik rozumie rotacje, spacing i pomoc defensywną poza piłką"
+    },
+    {
+      "en": "High motor",
+      "pl": "wysoki motor / energia",
+      "praktycznie": "Stały effort, aktywność i intensywność gry przez cały mecz"
+    },
+    {
+      "en": "Feel for the game",
+      "pl": "czucie gry",
+      "praktycznie": "Naturalne rozumienie rytmu, spacingu i flow meczu"
+    },
+    {
+      "en": "Shot creation",
+      "pl": "kreowanie rzutu",
+      "praktycznie": "Umiejętność stworzenia sobie przewagi i rzutu z kozła"
+    },
+    {
+      "en": "Secondary creator",
+      "pl": "drugi kreator",
+      "praktycznie": "Zawodnik wspierający primary ball handler w kreacji gry"
+    },
+    {
+      "en": "Decision maker",
+      "pl": "decyzyjny zawodnik",
+      "praktycznie": "Gracz podejmujący szybkie i właściwe decyzje z piłką"
+    },
+    {
+      "en": "3&D player",
+      "pl": "skrzydłowy 3&D",
+      "praktycznie": "Zawodnik aktywny głównie na rzucie za 3 i defensywie"
+    },
+    {
+      "en": "Switchability",
+      "pl": "możliwość switchowania",
+      "praktycznie": "Zdolność bronienia kilku pozycji po switchach"
+    },
+    {
+      "en": "POA defense (Point of Attack)",
+      "pl": "obrona punktu ataku",
+      "praktycznie": "Obrona zawodnika z piłką na początku akcji"
+    },
+    {
+      "en": "Closeout",
+      "pl": "closeout",
+      "praktycznie": "Wyjście do rzucającego po podaniu"
+    },
+    {
+      "en": "Help defense",
+      "pl": "pomoc defensywna",
+      "praktycznie": "Reakcja defensywna poza bezpośrednim kryciem"
+    },
+    {
+      "en": "Advantage basketball",
+      "pl": "koszykówka przewagi",
+      "praktycznie": "Wykorzystywanie nawet małych przewag w spacingu i decision making"
+    },
+    {
+      "en": "Ball dominant",
+      "pl": "dominujący piłką",
+      "praktycznie": "Zawodnik potrzebujący dużo posiadań i piłki w rękach"
+    },
+    {
+      "en": "Off-ball movement",
+      "pl": "ruch bez piłki",
+      "praktycznie": "Cuts, relocations, spacing i aktywność poza piłką"
+    },
+    {
+      "en": "Versatility",
+      "pl": "wszechstronność",
+      "praktycznie": "Umiejętność funkcjonowania w różnych rolach i ustawieniach"
+    }
+  ],
+
+  "czesc_2": [
+    {
+      "en": "NBA body / frame",
+      "pl": "rama fizyczna pod NBA",
+      "praktycznie": "Potencjał fizyczny do rozwoju siły i gry na wyższym poziomie"
+    },
+    {
+      "en": "Live dribble passing",
+      "pl": "passing z kozła",
+      "praktycznie": "Kreowanie podań bez zatrzymywania kozła"
+    },
+    {
+      "en": "Touch",
+      "pl": "czucie przy wykończeniu",
+      "praktycznie": "Naturalna miękkość ręki przy floaterach, layupach i rzucie"
+    },
+    {
+      "en": "Functional athleticism",
+      "pl": "funkcjonalny atletyzm",
+      "praktycznie": "Atletyzm, który realnie pomaga w grze, a nie tylko wygląda efektownie"
+    },
+    {
+      "en": "Defensive playmaker",
+      "pl": "playmaker defensywny",
+      "praktycznie": "Zawodnik tworzący przewagę w obronie poprzez przechwyty, rotacje i anticipation"
+    },
+    {
+      "en": "Glue guy",
+      "pl": "glue guy / spoiwo zespołu",
+      "praktycznie": "Zawodnik poprawiający funkcjonowanie drużyny bez dużego usage"
+    },
+    {
+      "en": "Winning player",
+      "pl": "winning player",
+      "praktycznie": "Gracz, którego styl gry pomaga zespołowi wygrywać"
+    },
+    {
+      "en": "NBA ready",
+      "pl": "gotowy na NBA",
+      "praktycznie": "Zawodnik przygotowany fizycznie i mentalnie do gry od razu"
+    },
+    {
+      "en": "Upside",
+      "pl": "potencjał rozwojowy",
+      "praktycznie": "Maksymalny możliwy poziom zawodnika w przyszłości"
+    },
+    {
+      "en": "Floor",
+      "pl": "minimalny poziom",
+      "praktycznie": "Najbardziej bezpieczny / scenariusz minimalnej kariery"
+    },
+    {
+      "en": "Ceiling",
+      "pl": "sufit",
+      "praktycznie": "Maksymalny potencjalny poziom kariery"
+    },
+    {
+      "en": "Translatable shooting",
+      "pl": "rzut przekładający się wyżej",
+      "praktycznie": "Shooting mechanics i shot profile, które powinny działać na wyższym poziomie"
+    },
+    {
+      "en": "Advantage creator",
+      "pl": "creator przewagi",
+      "praktycznie": "Zawodnik regularnie generujący przewagi dla ofensywy"
+    },
+    {
+      "en": "Pace manipulation",
+      "pl": "kontrolowanie tempa",
+      "praktycznie": "Umiejętność zmiany rytmu gry zamiast grania tylko szybko"
+    },
+    {
+      "en": "Tagging the roller",
+      "pl": "tagowanie rollującego",
+      "praktycznie": "Pomoc defensywna przeciwko rollującemu centerowi po picku"
+    },
+    {
+      "en": "Nail help",
+      "pl": "pomoc z nala",
+      "praktycznie": "Pomoc defensywna z centralnej części boiska przy centrze penetracji"
+    },
+    {
+      "en": "Short roll playmaking",
+      "pl": "kreacja z short rolla",
+      "praktycznie": "Podejmowanie decyzji po otrzymaniu piłki po krótkim rolu"
+    },
+    {
+      "en": "Low man",
+      "pl": "low man",
+      "praktycznie": "Najniższy ustawiony obrońca odpowiedzialny za pomoc przy obręczy"
+    },
+    {
+      "en": "Kill spot",
+      "pl": "ulubione miejsce na boisku",
+      "praktycznie": "Strefa, z której zawodnik jest najbardziej efektywny"
+    }
+  ],
+
+  "czesc_3_transkrypcje_m2": [
+    {
+      "en": "0.5 basketball",
+      "pl": "koszykówka pół sekundy",
+      "praktycznie": "Gra w jeszcze szybszym tempie niż standardowe; podejmowanie poprawnych decyzji natychmiast, zanim obrona zdąży reagować. 'Granie instynktownie.'"
+    },
+    {
+      "en": "Scouting hole",
+      "pl": "dziura scoutingowa",
+      "praktycznie": "Moment, gdy jedna obserwacja wciąga scouta do głębszej analizy wideo — np. 'ciekawe, jak radzi sobie w pick & roll z lewej strony z prawą ręką' — i nagle wracasz do wielu meczów żeby to zweryfikować."
+    },
+    {
+      "en": "Finish line",
+      "pl": "produkt końcowy / punkt docelowy",
+      "praktycznie": "Jaka jest fizyczność, styl gry i rola na docelowym poziomie (np. NBA). Scout musi znać finish line ligi, do której rekomenduje zawodnika."
+    },
+    {
+      "en": "NBA Comp",
+      "pl": "odpowiednik w NBA",
+      "praktycznie": "Zawodnik NBA, którego styl gry, fizyczność lub charakter przypomina ocenianego zawodnika. Punkt odniesienia dla czytelnika raportu. Zawsze zaznacz, w jakim aspekcie (styl/ciało/mental)."
+    },
+    {
+      "en": "Coachability",
+      "pl": "podatność na coaching",
+      "praktycznie": "Czy zawodnik przyjmuje uwagi, słucha trenera schodząc z boiska, pyta asystentów, chce rozumieć raport scoutingowy. Jedno z najtrudniejszych do przewidzenia."
+    },
+    {
+      "en": "Gravity",
+      "pl": "grawitacja koszykarska",
+      "praktycznie": "Wpływ, jaki obecność zawodnika wywiera na obronę — dobry szuter stojący w rogu sprawia, że obrona przesuwa się inaczej, nawet gdy piłki w rękach nie ma."
+    }
+  ],
+
+  "nota": "Znajomość języka scoutingu pomaga pisać lepsze raporty i podejmować lepsze decyzje."
+}

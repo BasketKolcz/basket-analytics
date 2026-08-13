@@ -1,0 +1,1125 @@
+{
+  "_source": "Next Draft Foundation — Moduł 6",
+  "_comment": "Workflow scouta: organizacja pracy, listy zawodników, proces decyzyjny NBA, offseason",
+
+  "kluczowa_lekcja": "Organizacja pracy jest często równie ważna jak sama ocena talentu. Offseason to wynik dobrze przeprowadzonego sezonu.",
+
+  "glowny_cel_modulu": "Pokazać uczestnikom: jak wygląda realna organizacja pracy profesjonalnego scouta, jak budować własny workflow, jak zarządzać informacją i czasem, jak używać analytics jako narzędzia wspierającego decyzje, jak stworzyć prosty system scoutingowy możliwy do wdrożenia od razu w klubie.",
+
+  "scouting_to_nie_ogladanie_meczow": {
+    "filozofia": "Profesjonalny scouting to NIE oglądanie meczów dla samego oglądania. To zarządzanie informacją.",
+    "cytat": "The best scouts are elite information managers.",
+    "co_to_jest": [
+      "filtrowanie informacji",
+      "zarządzanie czasem",
+      "budowanie procesów",
+      "podejmowanie decyzji pod presją",
+      "współpraca z front office",
+      "przewidywanie przyszłości"
+    ]
+  },
+
+  "dlaczego_workflow_jest_kluczowy": {
+    "problem_wiekszosc_scoutow": [
+      "ogląda za dużo przypadkowych meczów",
+      "robi notatki bez systemu",
+      "wraca do tych samych analiz",
+      "gubi informacje",
+      "nie potrafi priorytetyzować"
+    ],
+    "prawda_przewaga_profesjonalnych": [
+      "SYSTEM — powtarzalny, skuteczny proces",
+      "ORGANIZACJA — strukturalny zarząd informacją",
+      "PROCES DECYZYJNY — gotowość do szybkiej decyzji w każdym momencie"
+    ],
+    "wniosek": "Dobry scout nie tylko dobrze ocenia graczy. Dobry scout zarządza informacją."
+  },
+
+  "sezon_scouta": {
+    "off_season": {
+      "opis": "Przygotowanie i budowanie bazy",
+      "aktywnosci": [
+        "TRANSFERY — analiza rynku i śledzenie ruchów",
+        "DRAFT — scouting młodych zawodników",
+        "SUMMER LEAGUE — obserwacje live nowych podpisań",
+        "BUDOWA WATCH LIST — tworzenie listy zawodników do śledzenia",
+        "ANALIZA ROSTERÓW — przegląd składów ligowych",
+        "FREE AGENTS — identyfikacja dostępnych zawodników",
+        "ANALYTICS REVIEW — analiza danych sezonu"
+      ]
+    },
+    "in_season": {
+      "opis": "Aktywne śledzenie i aktualizacja",
+      "aktywnosci": [
+        "LIVE SCOUTING — obserwacje meczów na żywo",
+        "VIDEO SCOUTING — analiza nagrań wideo",
+        "AKTUALIZACJA RAPORTÓW — bieżące uzupełnianie profili",
+        "BACKGROUND / INTEL — zbieranie informacji pozaboiskowo",
+        "MONITOROWANIE TRENDÓW — śledzenie zmian formy i ról",
+        "INJURY TRACKING — monitorowanie kontuzji i powrotów"
+      ]
+    },
+    "deadline_playoff_push": {
+      "opis": "Szybkie decyzje pod presją czasu",
+      "aktywnosci": [
+        "SHORT LISTY — finalne listy gotowe do decyzji",
+        "SCOUTING POD KONKRETNY FIT — celowane obserwacje pod bieżące potrzeby",
+        "SZYBKIE DECYZJE — gotowość do działania w oknie transferowym",
+        "EMERGENCY REPLACEMENTS — plany awaryjne i szybkie podpisania"
+      ]
+    }
+  },
+
+  "analytics_jako_filtr": {
+    "najtrudniejszy_blad": "Analytics nie służą do tego, żeby powiedzieć: 'ten gracz jest dobry'.",
+    "do_czego_sluza": [
+      "zawężania puli zawodników",
+      "znajdowania trendów",
+      "wykrywania value",
+      "zadawania lepszych pytań",
+      "oszczędzania czasu scoutów"
+    ],
+    "zasada": {
+      "analytics": "pomagają znaleźć KOGO oglądać",
+      "film": "pomaga zrozumieć DLACZEGO działa lub nie działa"
+    },
+    "mantra": "Miej plan. Filtruj inteligentnie. Oglądaj świadomie. Sprawdzaj kontekst. Podejmuj lepsze decyzje.",
+    "wazne": "Analytics jako filtr — NIE JAKO ODPOWIEDŹ. Scout interpretuje dane, nie jest przez nie zastępowany."
+  },
+
+  "modul6_tematy": [
+    "Jak organizować swoją pracę i budować własny workflow skauta",
+    "Jak tworzyć i aktualizować listy zawodników przez cały sezon",
+    "Jak wygląda proces podejmowania decyzji w klubach i organizacjach NBA",
+    "Jak zarządzać informacjami, scoutingiem i intel",
+    "Jak przygotować się do offseason i procesu budowania składu",
+    "Jak priorytetyzować zawodników oraz efektywnie filtrować rynek",
+    "Dlaczego organizacja jest równie ważna jak ocena talentu"
+  ],
+
+  "scout_workflow_zasady": [
+    "Prowadź system list przez cały sezon — nie tylko w offseason",
+    "Aktualizuj profile po każdym meczu, transferze lub rozmowie",
+    "Priorytetyzuj rynek przez pryzmat konkretnych potrzeb organizacji",
+    "Zarządzaj informacją: co masz, czego brakuje, co jest nieaktualne",
+    "Każdy raport ma datę ważności — stara informacja może zaszkodzić",
+    "Offseason to wynik przygotowania przez cały rok, nie sprint w maju"
+  ],
+
+  "player_list_types": {
+    "long_list": {
+      "opis": "Szeroka lista potencjalnych kandydatów — bez zbędnych filtrów na tym etapie",
+      "cel": "Nie pominąć dobrego zawodnika zbyt wcześnie",
+      "liczba": "30–100 nazwisk w zależności od roli",
+      "zrodla": ["statystyki", "rekomendacje kontaktów", "obserwacje", "baza danych"]
+    },
+    "short_list": {
+      "opis": "Zawężona lista po wstępnej selekcji — zawodnicy realnie do wzięcia pod uwagę",
+      "cel": "Skupić zasoby (czas, budżet, scouting) na najlepszych opcjach",
+      "liczba": "5–15 nazwisk",
+      "filtry": ["budzet", "dostepnosc", "fit do systemu", "wiek i perspektywa"]
+    },
+    "priority_list": {
+      "opis": "Top 2–3 opcje z rekomendacją i rankingiem",
+      "cel": "Gotowość do szybkiej decyzji w oknie transferowym",
+      "zawartosc": ["rekomendacja główna", "opcja zapasowa", "option C (wildcard)"]
+    },
+    "watch_list": {
+      "opis": "Zawodnicy wart obserwowania w przyszłości — za młodzi, za drodzy, zły timing",
+      "cel": "Pamięć instytucjonalna o obiecujących graczach",
+      "aktualizacja": "Minimum raz na sezon — weryfikuj czy coś się zmieniło"
+    }
+  },
+
+  "lista_management_przez_sezon": {
+    "preseason": [
+      "Zdefiniuj potrzeby organizacji na ten sezon",
+      "Zbuduj długą listę wstępną (long list) dla każdej prioritetowej roli",
+      "Zidentyfikuj zawodników na expirujących kontraktach"
+    ],
+    "w_sezonie": [
+      "Aktualizuj obserwacje po każdych 5–10 meczach",
+      "Notuj zmiany ról — czy zawodnik gra inaczej niż w poprzednim sezonie?",
+      "Śledź kontuzje i powroty na parkiet",
+      "Monitoruj kontrakty: kto wchodzi w wolny rynek w połowie sezonu?",
+      "Buduj intel przez kontakty — każda rozmowa to potencjalna informacja"
+    ],
+    "pre_offseason": [
+      "Zamknij long listy — czas na selekcję",
+      "Przygotuj short listy gotowe do prezentacji",
+      "Weryfikuj dostępność: kto faktycznie jest do wzięcia?",
+      "Przygotuj materiały do wewnętrznych prezentacji (film + raport + stats)"
+    ],
+    "offseason": [
+      "Aktywuj siatkę kontaktów",
+      "Negocjuj w oparciu o wcześniej przygotowane priorytety",
+      "Dokumentuj każdą rozmowę i ofertę",
+      "Po podpisaniu — autoscouting: zweryfikuj czy rola pasuje do oczekiwań"
+    ]
+  },
+
+  "nba_decision_making_process": {
+    "uczestnicy": [
+      "Owner / Ownership — zatwierdza budżet, ostatnie słowo w dużych decyzjach",
+      "President of Basketball Operations — strategia długoterminowa",
+      "General Manager — operacyjna odpowiedzialność za transakcje",
+      "Head Coach — fit do systemu, character feedback, rola w rotacji",
+      "Assistant Coaches — specjalistyczna ocena (obrona, rzuty, PnR etc.)",
+      "Director of Scouting — koordynacja departamentu scoutingu",
+      "Scouts (Pro/Amateur/International) — raporty i rekomendacje",
+      "Analytics — dane, modele, salary cap projection",
+      "Medical Staff — ocena ryzyka kontuzji i historii zdrowotnej",
+      "Capologist — salary cap, struktura kontraktów"
+    ],
+    "hierarchia_decyzji": {
+      "mala_transakcja": "GM + Head Coach",
+      "srednia_transakcja": "GM + Coach + Ownership briefing",
+      "duza_transakcja": "Pełne war room — wszyscy uczestnicy"
+    },
+    "war_room_zasady": [
+      "Scout prezentuje kandydata — film + stats + fit",
+      "Analytics waliduje lub kwestionuje dane",
+      "Coach ocenia fit do systemu i rotację",
+      "Medical daje zielone/czerwone światło",
+      "GM agreguje wszystkie opinie i rekomenduje",
+      "Owner zatwierdza budżet"
+    ],
+    "scout_rola_w_procesie": "Scout to GŁOS zawodnika w organizacji. Twoim zadaniem jest rzetelnie przedstawić obraz gracza — nie sprzedać go, ale rzetelnie ocenić."
+  },
+
+  "informacja_management": {
+    "typy_informacji": {
+      "twarda": "Statystyki, nagrania, dane biometryczne — weryfikowalna",
+      "miekka": "Intel od kontaktów, character assessment — wymaga weryfikacji z wielu źródeł",
+      "wewnetrzna": "Dane organizacji — salary cap, priorytety, okno transferowe"
+    },
+    "zasady_zarzadzania": [
+      "Każda informacja ma datę — stale aktualizuj",
+      "Jedno źródło to za mało — weryfikuj z minimum 2-3 niezależnych kontaktów",
+      "Oddzielaj fakty od opinii — notuj kto powiedział co",
+      "Informacja poufna = traktujesz jako poufną nawet gdy nie musisz",
+      "Zły intel jest gorszy niż brak intelu"
+    ],
+    "systemy_notatek": [
+      "Gamelog z datą i meczu",
+      "Player profile (aktualizowany)",
+      "Intel log — kto, kiedy, co powiedział",
+      "Contract tracker — daty wygaśnięcia, opcje, klauzule"
+    ]
+  },
+
+  "priorytetyzacja_rynku": {
+    "filtr_podstawowy": [
+      "Czy pasuje do roli którą szukamy?",
+      "Czy mieści się w budżecie?",
+      "Czy jest dostępny (kontrakt, wiek, motywacja)?",
+      "Czy pasuje do systemu trenera?"
+    ],
+    "filtr_zaawansowany": [
+      "Czy skaluje się do wyższego poziomu?",
+      "Czy character i fit do szatni jest właściwy?",
+      "Czy jest lepszy od tego co już mamy?",
+      "Jaki jest koszt alternatywny tego wyboru?"
+    ],
+    "bledy_priorytetyzacji": [
+      "Sexy name bias — znane nazwisko zamiast dobrego kandydata",
+      "Recency bias — ocena na podstawie ostatnich 3 meczów",
+      "Confirmation bias — szukanie potwierdzenia decyzji już podjętej",
+      "Sunk cost — trzymanie się kandydata bo już dużo czasu w niego zainwestowałeś"
+    ]
+  },
+
+  "codzienna_praca_scouta": {
+    "poranne_rutyny": [
+      "Przegląd wyników (gamelog update)",
+      "Sprawdzenie transferów i newsy ligowe",
+      "Aktualizacja list priorytetów"
+    ],
+    "podstawowe_narzedzia": [
+      "System notatek (cyfrowy lub papierowy — liczy się konsekwencja)",
+      "Baza wideo (Synergy, InStat, YouTube)",
+      "Arkusze kontraktów (Spotrac, Eurobasket, BallinEurope)",
+      "Sieć kontaktów (agenci, trenerzy, inni skauci)"
+    ],
+    "tygodniowy_rytm": {
+      "pn_wt": "Analiza wyników weekendu, update gamelog",
+      "sr_cz": "Oglądanie zaplanowanych meczów (live lub video)",
+      "pt": "Pisanie raportów, aktualizacja profili",
+      "sb_nd": "Obserwacje live (gdy możliwe)"
+    },
+    "zasada_fundamentalna": "Skaut który nie ma systemu, traci zawodników — nie dlatego że ich nie widział, ale dlatego że zapomniał co widział."
+  },
+
+  "offseason_preparation_checklist": [
+    "Zidentyfikuj potrzeby według pozycji i roli",
+    "Sprawdź salary cap i dostępny budżet",
+    "Zaktualizuj all long lists — usuń niedostępnych",
+    "Zweryfikuj short listy z Head Coachem",
+    "Przygotuj war room materials (film cut + raport + salary range)",
+    "Ustal BATNA — co jeśli top opcja odpadnie?",
+    "Plan B i Plan C gotowe zanim zacznie się rynek",
+    "Kontakty z agentami wykonane z wyprzedzeniem",
+    "Po transferze — autoscouting: czy rola jest zgodna z oczekiwaniami?"
+  ],
+
+  "prosty_filtr_scoutingowy_przyklad": {
+    "szukamy": "Modern Wing / Combo Guard",
+    "zasada": "Analytics pomagają znaleźć KOGO oglądać. Film pomaga zrozumieć DLACZEGO działa lub nie działa.",
+    "4_podstawowe_wskazniki": [
+      {
+        "nr": 1,
+        "stat": "3PT ATTEMPTS",
+        "pytanie": "Czy zawodnik naprawdę jest shooterem?",
+        "uwaga": "Nie tylko % — ale volume.",
+        "prog": "5+ 3PA/G"
+      },
+      {
+        "nr": 2,
+        "stat": "FTA (FREE THROW ATTEMPTS)",
+        "pytanie": "Czy generuje presję na obręcz? Czy jest agresywny?",
+        "prog": "2.5+ FTA/G"
+      },
+      {
+        "nr": 3,
+        "stat": "ORTG (OFFENSIVE RATING)",
+        "pytanie": "Czy jego obecność pomaga ofensywie?",
+        "prog": "110+"
+      },
+      {
+        "nr": 4,
+        "stat": "AST/TO (ASSIST TO TURNOVER)",
+        "pytanie": "Czy podejmuje dobre decyzje?",
+        "prog": "1.5+"
+      }
+    ],
+    "proces_4_kroki": [
+      "1. FILTRUJ — użyj analytics, aby zawęzić pulę zawodników",
+      "2. OGLĄDAJ — zrozum kontekst, styl gry, decyzje, intencje",
+      "3. WERYFIKUJ — obserwuj na żywo, zbieraj dodatkowe informacje",
+      "4. DECYDUJ — podejmuj decyzje z pełnym kontekstem i świadomością"
+    ],
+    "konkluzja": "ANALYTICS ZAWĘŻA. SCOUTING WYJAŚNIA. DECYZJE WYGRYWAJĄ."
+  },
+
+  "jak_ustawiac_parametry_w_praktyce": {
+    "przyklad_profil": "Rotation Wing",
+    "cel": "Znaleźć zawodników, którzy mogą wnieść wartość od razu jako role playerzy w nowoczesnej NBA.",
+    "zasada_filtrowania": "Ustaw progi tak, aby odsiać 80%. Nie tak, aby znaleźć idealnego zawodnika.",
+    "minimalne_progi": [
+      {
+        "nr": 1,
+        "parametr": "3PT ATTEMPTS",
+        "co_mierzy": "Ile trójek oddaje na mecz.",
+        "dlaczego_wazne": "Współczesna NBA = przestrzeń i zagrożenie z dystansu.",
+        "prog": "5+ PER GAME"
+      },
+      {
+        "nr": 2,
+        "parametr": "FT RATE / FTA",
+        "co_mierzy": "Jak często trafia na linię rzutów wolnych.",
+        "dlaczego_wazne": "Wskaźnik agresji, presji na obręcz i tworzenia przewag.",
+        "prog": "SOLID PRESSURE RIM (np. FT Rate ≥ 20%)"
+      },
+      {
+        "nr": 3,
+        "parametr": "ORTG (OFFENSIVE RATING)",
+        "co_mierzy": "Jak efektywna jest ofensywa, gdy zawodnik jest na boisku.",
+        "dlaczego_wazne": "Pokazuje realny wpływ na zdobywanie punktów przez zespół.",
+        "prog": "110+"
+      },
+      {
+        "nr": 4,
+        "parametr": "AST/TO (ASSIST TO TURNOVER)",
+        "co_mierzy": "Stosunek asyst do strat.",
+        "dlaczego_wazne": "Wskaźnik jakości decyzji i kontroli gry.",
+        "prog": "POZYTYWNY RATIO (> 1.0)"
+      }
+    ],
+    "workflow": [
+      "1. USTAW PROGI — zdefiniuj minimalne wymagania",
+      "2. ZAWĘŹ PULĘ — odsieje zawodników, którzy nie spełniają kryteriów",
+      "3. OGLĄDAJ — skup się tylko na tych, którzy przeszli filtr",
+      "4. ZROZUM KONTEKST — film i live scouting wyjaśniają dlaczego"
+    ],
+    "mantra": "FILTRUJ MĄDRZE. SKAUTUJ SKUTECZNIE."
+  },
+
+  "jak_profesjonalne_kluby_uzywaja_analytics": {
+    "kluczowa_zasada": "Analytics NIE zastępują scoutingu.",
+    "analytics_rola": [
+      "pomagają zadawać pytania",
+      "wykrywają trendy",
+      "pomagają znaleźć value",
+      "eliminują bias",
+      "zawężają scouting pool"
+    ],
+    "film_odpowiada_na": [
+      "czy skill jest realny?",
+      "czy decyzje się skalują?",
+      "czy liczby mają kontekst?"
+    ],
+    "scouting_notes_film": ["SPACING", "SHOT QUALITY", "DECISION MAKING", "TRANSITION IMPACT", "DEFENSIVE INTENSITY", "REBOUNDING", "EFFORT"],
+    "key_questions_po_danych": [
+      "Jakie rzuty oddaje?",
+      "Czy volume przełoży się poziom wyżej?",
+      "Czy FTA wynika z atletyzmu czy IQ?",
+      "Czy ORTG jest efektem systemu?",
+      "Jak wygląda decision making pod presją?"
+    ],
+    "przyklad_player_profile_stats": {
+      "3PA_per_game": 6.3,
+      "FTA_per_game": 4.2,
+      "ORTG": 114.7,
+      "AST_TO": 1.6
+    },
+    "podsumowanie": {
+      "formula": "ANALYTICS DAJĄ KIERUNEK. SCOUTING DAJE PRAWDĘ.",
+      "cel": "znaleźć właściwych zawodników, nie tylko dużą liczbę nazwisk",
+      "efekt": "lepsze decyzje, większa przewaga",
+      "przewaga": "informacja + kontekst + weryfikacja = wygrywaj"
+    }
+  },
+
+  "nba_vs_europa_analytics": {
+    "klucz": "Europa wymaga większej interpretacji danych.",
+    "nba": [
+      "ogromne działy analytics",
+      "tracking data",
+      "player movement",
+      "lineup data",
+      "predictive models",
+      "Synergy + Second Spectrum"
+    ],
+    "europa": [
+      "mniej danych",
+      "mniej trackingu",
+      "większe znaczenie video i live scouting",
+      "większa rola kontekstu ligi",
+      "większa nieprzewidywalność rosterów"
+    ],
+    "implikacje_dla_scouta_w_europie": [
+      "MNIEJ DANYCH — musisz więcej oglądać",
+      "WIĘCEJ KONTEKSTU — liga, rola, system są kluczowe",
+      "WIĘKSZA ROLA SCOUTINGU — film i live zastępują tracking",
+      "WIĘKSZA NIEPRZEWIDYWALNOŚĆ — roster niestabilny, role się zmieniają"
+    ],
+    "scouting_notes_europa": ["SYSTEM CONTEXT", "ROLE DEFINITION", "LEAGUE PACE", "COMPETITION LEVEL", "PLAYER BACKGROUND"],
+    "key_questions_europa": [
+      "Czy umiejętności przeniosą się na wyższy poziom?",
+      "Czy liczby mają kontekst ligowy?",
+      "Jaką rolę pełni w swoim zespole?",
+      "Jak radzi sobie pod presją?",
+      "Czy pasuje do naszego systemu?"
+    ],
+    "player_comparison_przewagi": {
+      "nba_lepsze": ["DATA VOLUME", "TRACKING COVERAGE", "LINEUP DATA", "PREDICTIVE MODELS"],
+      "europa_lepsze": ["CONTEXT DEPENDENCY", "ROSTER STABILITY"]
+    }
+  },
+
+  "watch_listy_serce_organizacji": {
+    "opis": "Watch listy to SERCE organizacji scoutingowej — pamięć instytucjonalna żywego rynku.",
+    "typowe_watch_listy": [
+      "NBA prospects",
+      "transfer targets",
+      "buyout market",
+      "under-the-radar players",
+      "emergency options",
+      "future tracking",
+      "specific role archetypes"
+    ],
+    "przyklady_role_based": [
+      "Stretch 4",
+      "Defensive wing",
+      "Backup creator",
+      "Switchable big"
+    ],
+    "struktura_wpisu_watch_list": [
+      "PROFILE — podstawowe dane i oceną",
+      "TEAM FIT — dopasowanie do składu",
+      "ROLE — rola w rotacji",
+      "UPSIDE — potencjał wzrostu",
+      "CONTRACT — status kontraktu i dostępność",
+      "MEDICAL — historia zdrowotna",
+      "NOTES — notatki scoutingowe"
+    ],
+    "watch_list_dashboard_kolumny": ["PLAYER", "CATEGORY", "ROLE", "PRIORITY (gwiazdki)", "NOTES"],
+    "zasada": "Każda dobra organizacja ma watch listy kategoryzowane według roli — nie tylko według nazwisk. Gdy rynek się otwiera, wiesz dokładnie kogo szukasz."
+  },
+
+  "organizacja_skautingu_w_polskich_warunkach": {
+    "realia_polskiego_klubu": [
+      "ograniczony budżet",
+      "mały sztab",
+      "brak pełnoetatowego scouta",
+      "trenerzy przeciążeni bieżącą pracą",
+      "decyzje transferowe robione 'na szybko'"
+    ],
+    "dlatego_kluczowe_sa": [
+      "organizacja informacji",
+      "prosty workflow",
+      "regularna komunikacja",
+      "zaangażowanie całego sztabu"
+    ],
+    "cytat": "W polskich warunkach przewagę ma ten, kto lepiej zorganizowany.",
+    "konkluzja": "DOBRY SCOUTING TO NIE KWESTIA PIENIĘDZY, ALE SYSTEMU, DYSCYPLINY I KOMUNIKACJI.",
+    "scouting_dashboard_przyklad": {
+      "watch_list_players": 23,
+      "reports_updated": 18,
+      "games_watched": 42
+    }
+  },
+
+  "jak_zaangazowac_sztab_w_trakcie_roku": {
+    "zasada": "Każdy może dostarczać value.",
+    "role_sztabu": {
+      "trener_glowny": [
+        "profil potrzebnych zawodników",
+        "wymagania systemowe",
+        "role w rosterze"
+      ],
+      "asystenci": [
+        "live observations",
+        "analiza video",
+        "tracking ligi",
+        "raporty po meczach"
+      ],
+      "trener_przygotowania_motorycznego": [
+        "durability",
+        "movement quality",
+        "injury history"
+      ],
+      "akademia": [
+        "monitoring młodych graczy",
+        "future tracking",
+        "charakter i work ethic"
+      ]
+    },
+    "nasz_system_nasze_potrzeby": ["DEFENSE", "TRANSITION", "SHOOTING", "SPACING", "DECISION MAKING", "REBOUNDING"],
+    "role_w_rosterze_przyklad": [
+      "PRIMARY CREATOR",
+      "3&D WING",
+      "VERSATILE BIG",
+      "BACKUP PG",
+      "ENERGY / DEFENDER"
+    ],
+    "konkluzja": "ZAANGAŻOWANY SZTAB TO LEPSZE DECYZJE.",
+    "efekty": {
+      "wspolny_cel": "budujemy zespół, nie tylko oglądamy",
+      "komunikacja": "regularna, konkretna, bez szumu",
+      "efekt": "lepsze decyzje dziś, lepsza organizacja jutro"
+    }
+  },
+
+  "jak_zorganizowac_skauting_w_praktyce_4_filary": {
+    "konkluzja": "DOBRY SYSTEM TO NIE DODATEK. TO PRZEWAGA KONKURENCYJNA.",
+    "lancuch": "WSPÓLNA PRACA → LEPSZE DECYZJE → LEPSZY ZESPÓŁ → LEPSZE WYNIKI",
+    "filar_1_watch_listy": {
+      "podzial_kryteria": ["pozycje", "role", "poziomy budżetowe", "short-term/long-term", "first team/academy"],
+      "przyklady": ["PLK guards", "Young Polish wings", "Import bigs", "Players under radar", "Future U19 prospects"],
+      "atrybuty_wpisu": ["POSITION", "ROLE", "BUDGET LEVEL", "TIMELINE", "TEAM LEVEL"]
+    },
+    "filar_2_raporty_po_meczach": {
+      "co_po_kazdym_meczu": [
+        "2-3 obserwacje",
+        "update trendów",
+        "status zawodnika",
+        "nowe informacje charakterologiczne",
+        "clipy video"
+      ],
+      "klucz": "Krótko, konkretnie, regularnie."
+    },
+    "filar_3_baza_danych": {
+      "nawet_prosta": ["Google Sheets", "Notion", "Airtable", "Excel"],
+      "powinna_zawierac": [
+        "profil zawodnika",
+        "raporty",
+        "analytics",
+        "kontrakt",
+        "agent",
+        "background/intel",
+        "status obserwacji"
+      ]
+    },
+    "filar_4_regularne_spotkania": {
+      "profesjonalna_koszykowka": {
+        "czestotliwosc": "minimum raz tygodniowo",
+        "tematy": ["rynek", "potrzeby rosterowe", "injury updates", "potencjalne okazje", "scouting przeciwników"]
+      },
+      "akademia_mlodzież": {
+        "czestotliwosc": "minimum raz miesięcznie",
+        "tematy": ["rozwój zawodników", "future projections", "monitoring charakteru", "plan rozwoju", "status talentów"]
+      }
+    }
+  },
+
+  "moj_proces_scoutingowy_7_krokow": {
+    "filozofia": "SCOUTING TO PROCES, NIE JEDNORAZOWE DZIAŁANIE. KONSEKWENCJA + CIEKAWOŚĆ + OBIEKTYWIZM = PRZEWAGA.",
+    "cytat": "Im lepszy proces, tym lepsze decyzje.",
+    "kroki": [
+      {
+        "nr": 1,
+        "nazwa": "ANALYTICS SCREENING",
+        "szczegoly": ["dane liczbowe", "filtry statystyczne", "porównania", "identyfikacja value"],
+        "lekcja": "Zawsze różne konteksty."
+      },
+      {
+        "nr": 2,
+        "nazwa": "2-3 MECZE VIDEO",
+        "szczegoly": ["najlepszy mecz", "najgorszy mecz", "przeciętny mecz"],
+        "lekcja": "Dobre pytania prowadzą do lepszych decyzji."
+      },
+      {
+        "nr": 3,
+        "nazwa": "TWORZENIE PYTAŃ",
+        "szczegoly": [
+          "jakie ma role?",
+          "jak reaguje pod presją?",
+          "jakie są jego ograniczenia?",
+          "czy pasuje do naszego systemu?"
+        ]
+      },
+      {
+        "nr": 4,
+        "nazwa": "LIVE SCOUTING",
+        "szczegoly": ["obserwacja na żywo", "weryfikacja pytań", "mowa ciała", "podejmowanie decyzji", "wpływ na grę"],
+        "lekcja": "Nic nie zastąpi obserwacji na żywo."
+      },
+      {
+        "nr": 5,
+        "nazwa": "BACKGROUND / INTEL",
+        "szczegoly": [
+          "rozmowy z agentami, trenerami, ludźmi z ligi",
+          "charakter",
+          "work ethic",
+          "historia kontuzji",
+          "sytuacja osobista"
+        ],
+        "lekcja": "Kontekst ma ogromne znaczenie."
+      },
+      {
+        "nr": 6,
+        "nazwa": "FINAL PROJECTION",
+        "szczegoly": [
+          "projekcja w naszym systemie",
+          "fit rosterowy",
+          "upside vs floor",
+          "ryzyko/reward",
+          "rekomendacja"
+        ],
+        "lekcja": "Decyzja oparta na całości informacji."
+      },
+      {
+        "nr": 7,
+        "nazwa": "AKTUALIZACJA RAPORTU",
+        "szczegoly": [
+          "aktualizacja danych po nowych meczach",
+          "zmiana statusu",
+          "nowe informacje",
+          "świeże wnioski"
+        ],
+        "lekcja": "Raport żyje. Aktualizuj go regularnie."
+      }
+    ],
+    "scouting_notes_checklist": ["OBSERVATIONS", "QUESTIONS", "STRENGTHS", "WEAKNESSES", "COMPARISONS", "FIT", "POTENTIAL", "RISK"]
+  },
+
+  "harmonogram_skautingu_klub_plk": {
+    "klucz": "Scouting nie może zaczynać się po sezonie. Najlepsze kluby budują rynek przez cały rok.",
+    "zasada": "Nie oglądaj wszystkiego. Oglądaj rynki, z których REALNIE możesz podpisać zawodnika.",
+    "formula": "PLAN + RYNEK + NETWORKING = PRZEWAGA.",
+    "podzial_obserwacji": {
+      "polska_plk": [
+        "monitoring zawodników kontraktowych",
+        "obserwacja zmian roli",
+        "under-the-radar players",
+        "Polacy pod przyszły sezon"
+      ],
+      "i_liga_ii_liga_u19": [
+        "future tracking",
+        "młodzi gracze",
+        "value contracts",
+        "emergency depth"
+      ]
+    },
+    "targetowanie_lig_zagranicznych": {
+      "target_a_realistyczne_rynki": {
+        "ligi": ["Cypr", "Wielka Brytania", "Szwecja", "Finlandia", "Belgia", "Austria"],
+        "dlaczego": [
+          "poziom zbliżony do dolnej/mid PLK",
+          "bardziej realistyczne oczekiwania finansowe",
+          "gracze często gotowi na step-up",
+          "możliwość znalezienia value"
+        ]
+      },
+      "target_b_wyzszy_poziom": {
+        "ligi": ["BNXT League", "ABA League", "Bundesliga ProA", "France Pro B", "NCAA/G League fringe"],
+        "cel": [
+          "monitorować potencjalne okazje",
+          "buyout situations",
+          "spadki wartości rynkowej"
+        ]
+      }
+    },
+    "bottom_zasady": [
+      "SKUP SIĘ NA REALNYCH OPCJACH",
+      "ZNAJ RYNEK LEPIEJ NIŻ KONKURENCJA",
+      "BUDUJ RELACJE I ZDOBYWAJ INFORMACJE",
+      "AKTUALIZUJ BAZĘ DANYCH REGULARNIE"
+    ]
+  },
+
+  "roczny_workflow_skautingowy_obl": {
+    "klucz": "W kwietniu klub powinien już wiedzieć KOGO CHCE PODPISAĆ. Nie dopiero zaczynać scouting.",
+    "formula": "PLAN PRZEZ CAŁY ROK + CIĄGŁY MONITORING + NETWORKING I RELACJE + TARGETOWANE RYNKI + DANE I ANALIZA = DECYZJE PRZED OKNEM TRANSFEROWYM",
+    "fazy": {
+      "wrzesien_listopad": {
+        "nazwa": "BUDOWANIE RYNKU",
+        "aktywnosci": [
+          "aktualizacja watch list",
+          "rozmowy z agentami",
+          "analiza lig targetowanych",
+          "tworzenie profili potrzeb"
+        ],
+        "spotkania": {
+          "czestotliwosc": "co 2 tygodnie",
+          "tematy": ["potrzeby rosterowe", "update rynku", "status obserwacji"]
+        },
+        "networking": {
+          "opis": "regularny kontakt z agentami",
+          "pytania": ["dostępność", "buyout", "oczekiwania finansowe", "charakter zawodnika"]
+        }
+      },
+      "grudzien_styczen": {
+        "nazwa": "MID-SEASON SCOUTING",
+        "aktywnosci": [
+          "identyfikacja value",
+          "monitoring sytuacji kontraktowych",
+          "injury replacements",
+          "pierwsze short listy"
+        ]
+      },
+      "luty_marzec": {
+        "nazwa": "KONKRETNE TARGETOWANIE",
+        "cel": "Top 5 targets na każdą pozycję.",
+        "kazdy_zawodnik_powinien_miec": [
+          "scouting report",
+          "analytics profile",
+          "background / intel",
+          "widełki finansowe",
+          "status kontraktu",
+          "ocenę fitu"
+        ]
+      },
+      "kwiecien_maj": {
+        "nazwa": "FINALIZACJA RYNKU",
+        "aktywnosci": [
+          "live scouting",
+          "final board",
+          "backup options",
+          "przygotowanie off-season"
+        ],
+        "final_board": "Ranking Top 5 kandydatów na każdą pozycję z oceną gwiazdkową"
+      }
+    }
+  },
+
+  "notatki_jak_nie_utonac_w_informacji": {
+    "problem": {
+      "nazwa": "CHAOS NOTATEK = UTRATA PRZEWAGI.",
+      "objawy": [
+        "dane w różnych miejscach",
+        "brak spójnego formatu",
+        "trudność w porównaniu",
+        "duplikacja informacji",
+        "dezaktualizacja",
+        "szukanie zamiast analizować"
+      ]
+    },
+    "system_profesjonalisty": {
+      "jednolity_format_raportow": "te same sekcje, ta sama kolejność, łatwe porównanie",
+      "tagging": "liga, pozycja, rola, typ zawodnika, źródło, poziom priorytetu",
+      "kolorystyka": "wizualne oznaczenia ważności, pozycji, poziomu zainteresowania",
+      "statusy_graczy": ["obserwacja", "zainteresowany", "negocjacje", "cel główny", "zakontraktowany"],
+      "daty_aktualizacji": "zawsze aktualna informacja — widać kiedy i co się zmieniło",
+      "wersjonowanie_opinii": "ewolucja oceny zawodnika w czasie"
+    },
+    "tagging_przyklady": {
+      "liga": "BBL",
+      "pozycja": "SF/PF",
+      "rola": "3&D Wing",
+      "typ": "Import",
+      "priorytet": "A",
+      "zrodlo": "Agent"
+    },
+    "kolorystyka_przyklady": {
+      "cel_glowny": "czerwony",
+      "zainteresowany": "pomarańczowy",
+      "monitorowany": "zielony",
+      "niski_priorytet": "szary"
+    },
+    "przykladowa_karta_zawodnika": {
+      "pozycja": "SF/PF",
+      "wzrost_cm": 198,
+      "wiek": 27,
+      "kraj": "Wielka Brytania",
+      "klub": "London Lions (BBL)",
+      "status": "ZAINTERESOWANY",
+      "priorytet_gwiazdki": 4,
+      "zrodlo": "LIVE",
+      "wersja": "v2.3",
+      "analytics": { "PRG": 12.4, "TS%": "58%", "RPG": 5.1, "3P%": "34%", "APG": 2.3, "AST%": "16%" },
+      "ocena_fitu_kategorie": ["System", "Rola w zespole", "Fit ogólny"]
+    },
+    "klucz": "KAŻDA NOTATKA MUSI BYĆ MOŻLIWA DO ODNALEZIENIA W 30 SEKUND.",
+    "benefity": ["SZYBKO ZNAJDŹ", "ŁATWO PORÓWNAJ", "OSZCZĘDZAJ CZAS", "PODEJMUJ LEPSZE DECYZJE", "BUDUJ PRZEWAGĘ"]
+  },
+
+  "baza_skautingowa_fundament_nowoczesnego_klubu": {
+    "cel": "JEDNO ŹRÓDŁO PRAWDY.",
+    "klucz": "DOBRA BAZA TO NIE LUKSUS. TO PRZEWAGA KONKURENCYJNA.",
+    "co_powinna_zawierac": {
+      "player_info": "dane osobowe, pozycja, wiek, wzrost, zasięg",
+      "contract_info": "status kontraktu, długość, opcje, buyout",
+      "agent": "dane agenta, agencja, historia współpracy",
+      "analytics": "statystyki, advanced stats, trendy",
+      "scouting_reports": "raporty po meczach, oceny, notatki",
+      "background_intel": "charakter, work ethic, doświadczenie, reputacja",
+      "video_clips": "mecze, akcje, breakdowny, play types",
+      "projection": "potencjał, rozwój, ścieżka kariery",
+      "fit": "dopasowanie do systemu, roli, kultury",
+      "injury_history": "kontuzje, czas absencji, powrót do formy"
+    },
+    "przykladowa_karta_bazy": {
+      "zawodnik": "Jamal Harrison",
+      "pozycja": "SG/SF",
+      "wiek": 25,
+      "wzrost_cm": 198,
+      "waga_kg": 95,
+      "kraj": "Wielka Brytania",
+      "klub": "London Lions (BBL)",
+      "ogolna_ocena": "78/100",
+      "status": "ZAINTERESOWANY",
+      "contract_info": {
+        "status": "Kontraktowy",
+        "dlugosc": "1+1",
+        "opcja_klubu": true,
+        "buyout_eur": 25000,
+        "wazny_do": "30.06.2025"
+      },
+      "agent": {
+        "imie": "Marko Petrovic",
+        "agencja": "EuroPro Sports"
+      },
+      "analytics_sezon_2324": { "PPG": 14.8, "TS%": "61%", "RPG": 4.2, "3P%": "36%", "APG": 3.6, "AST%": "22%" },
+      "projekcja": [
+        "2024/25: Starter w PLK / EuroCup",
+        "2025/26: Solidny gracz rotacji",
+        "Potencjał: Rozwój jako scorer"
+      ],
+      "fit_kategorie": ["System offense", "System defense", "Rola w zespole", "Kultura klubu"]
+    },
+    "dlaczego_warto": {
+      "oszczednosc_czasu": "wszystkie informacje w jednym miejscu",
+      "lepsze_decyzje": "pełny obraz zawodnika, nie tylko highlights",
+      "lepsza_komunikacja": "cały sztab pracuje na tych samych danych",
+      "przewaga_rynkowa": "szybsze reakcje, lepsze okazje",
+      "bezpieczenstwo_danych": "historia, wersjonowanie, transparentność"
+    },
+    "bottom": ["UPORZĄDKOWANE DANE", "SZYBKI DOSTĘP", "AKTUALNOŚĆ", "BEZPIECZEŃSTWO", "LEPSZE WYNIKI SPORTOWE"]
+  },
+
+  "nowoczesne_narzedzia_w_scoutingu": {
+    "profesjonalny_scouting_polaczenie": "video + analytics + organizacja danych + komunikacja",
+    "cytat": "Technology helps scouts work faster. Thinking helps scouts work better.",
+    "klucz": "Nowoczesny scouting nie polega na 'jednym źródle prawdy'. Najlepsze organizacje łączą: analytics, video, live scouting, background/intel, workflow organizacyjny.",
+    "narzedzia": {
+      "synergy_sports": {
+        "opis": "Najpopularniejsze narzędzie video scoutingowe",
+        "umozliwia": [
+          "oglądanie każdego possession",
+          "filtrowanie akcji",
+          "scouting przeciwników",
+          "analiza pick & roll",
+          "shot profile",
+          "transition/off-ball tracking",
+          "szybkie tworzenie clipów"
+        ],
+        "dlaczego_elite": "Scout nie ogląda chaosu. Scout filtruje konkretne sytuacje.",
+        "zasieg": "NBA, top europejskie ligi"
+      },
+      "instat": {
+        "opis": "Bardzo popularne w Europie",
+        "mocne_strony": [
+          "statystyki",
+          "video",
+          "clipping",
+          "raporty meczowe",
+          "monitoring lig europejskich",
+          "łatwy dostęp do niższych lig"
+        ],
+        "zasieg": "Europa — od PLK po niższe ligi"
+      },
+      "second_spectrum": {
+        "opis": "Głównie NBA",
+        "daje": [
+          "player movement",
+          "spacing analysis",
+          "speed",
+          "defensive coverage",
+          "lineup tendencies",
+          "advanced predictive models"
+        ],
+        "klucz": "To już nie tylko statystyki. To analiza zachowań na boisku."
+      },
+      "hudl_fastdraw_fastscout": {
+        "opis": "Najczęściej używane przez trenerów i sztaby",
+        "pomagaja": [
+          "przygotowywać scouting przeciwnika",
+          "tworzyć playbooki",
+          "budować prezentacje video",
+          "organizować clipy"
+        ]
+      },
+      "google_sheets_notion_airtable": {
+        "opis": "Niedoceniane narzędzia — często fundament organizacji scoutingu",
+        "sluza_do": [
+          "watch list",
+          "scouting databases",
+          "statusów zawodników",
+          "aktualizacji raportów",
+          "workflow management"
+        ],
+        "uwaga": "Prosty arkusz prowadzony konsekwentnie bije drogie narzędzie bez systemu."
+      }
+    },
+    "najlepsze_organizacje_lacza": ["analytics", "video", "live scouting", "background/intel", "workflow organizacyjny"]
+  },
+
+  "zarzadzanie_czasem_i_podrozami": {
+    "kluczowe_pytanie": "CZY TEN WYJAZD DAJE MI PRZEWAGĘ INFORMACYJNĄ?",
+    "haslo": "ZARZĄDZAJ ŚWIADOMIE.",
+    "4_komponenty": {
+      "kalendarz": "plan meczów, obserwacji, spotkań i raportów",
+      "budzet": "koszty podróży, noclegów, biletów, analiza ROI",
+      "energia": "regeneracja, sen, dieta, balans praca–życie",
+      "logistyka": "loty, hotele, transport, wizy, strefy czasowe"
+    },
+    "zasady": [
+      "PLANUJ Z WYPRZEDZENIEM I BĄDŹ ELASTYCZNY.",
+      "DBAJ O ENERGIĘ — TO TWOJE NARZĘDZIE.",
+      "ŁĄCZ MECZE, SPOTKANIA I NETWORKING.",
+      "ANALIZUJ ROI KAŻDEGO WYJAZDU.",
+      "PRIORYTETYZUJ — NIE WSZYSTKO MA TĘ SAMĄ WAGĘ."
+    ]
+  },
+
+  "jak_nie_zgubic_informacji_w_chaosie_sezonu": {
+    "profesjonalizm": "Najlepsze organizacje są obsesyjne na punkcie procesu.",
+    "pelny_obieg_informacji": "Zbieraj → Porządkuj → Analizuj → Decyduj → Aktualizuj → Powtarzaj",
+    "system_6_elementow": {
+      "codzienny_update": "krótkie notatki po meczach, szybkie wnioski, aktualizacje statusów",
+      "weekly_review": "przegląd obserwacji, nowych informacji, zmian w rankingach",
+      "monthly_re_ranking": "aktualizacja list targetów, zmiany priorytetów",
+      "centralizacja_danych": "jedno miejsce, jeden format, łatwy dostęp dla całego zespołu",
+      "backup_notatek": "regularne kopie zapasowe, ochrona przed utratą danych",
+      "checklisty_procesowe": "standaryzacja działań, żadnego kroku nie pomijasz"
+    },
+    "rytm_pracy": {
+      "codziennie": "zbieraj informacje i aktualizuj notatki",
+      "tygodniowo": "analizuj, porównuj i wyciągaj wnioski",
+      "miesiecznie": "aktualizuj rankingi i priorytety",
+      "systematycznie": "korzystaj z checklisty, trzymaj się procesu",
+      "bezpiecznie": "backupuj dane regularnie",
+      "centralnie": "przechowuj wszystko w jednym miejscu"
+    },
+    "efekty": [
+      "szybsze decyzje",
+      "lepsza jakość informacji",
+      "mniej błędów",
+      "oszczędność czasu",
+      "lepsza współpraca w zespole",
+      "przewaga nad konkurencją"
+    ]
+  },
+
+  "najwieksze_bledy_mlodych_scoutow": {
+    "ostrzezenie": "Błędy kosztują czas, reputację i przewagę.",
+    "konkluzja": "SKAUTING TO NIE ZBIERANIE INFORMACJI. TO PODEJMOWANIE LEPSZYCH DECYZJI.",
+    "bledy": [
+      {
+        "nr": 1,
+        "nazwa": "BRAK SYSTEMU",
+        "opis": "Działanie bez procesu prowadzi do przypadkowych decyzji."
+      },
+      {
+        "nr": 2,
+        "nazwa": "ZA DUŻO OPINII, ZA MAŁO PROCESU",
+        "opis": "Opinie bez struktury nie mają wartości decyzyjnej."
+      },
+      {
+        "nr": 3,
+        "nazwa": "CHAOS NOTATEK",
+        "opis": "Nieuporządkowane notatki = utrata kluczowych informacji."
+      },
+      {
+        "nr": 4,
+        "nazwa": "ZAKOCHIWANIE SIĘ W TALENTACH",
+        "opis": "Emocje zabijają obiektywizm i prowadzą do błędnych wyborów."
+      },
+      {
+        "nr": 5,
+        "nazwa": "IGNOROWANIE FITU",
+        "opis": "Najlepszy talent, który nie pasuje, nie pomoże drużynie wygrać."
+      },
+      {
+        "nr": 6,
+        "nazwa": "BRAK AKTUALIZACJI OPINII",
+        "opis": "Rynek się zmienia. Twoje opinie też muszą."
+      },
+      {
+        "nr": 7,
+        "nazwa": "OGLĄDANIE HIGHLIGHTÓW ZAMIAST PEŁNYCH MECZÓW",
+        "opis": "Highlights kłamią. Kontekst pokazuje prawdę."
+      }
+    ],
+    "zasady_naprawcze": [
+      "Miej proces i trzymaj się go.",
+      "Bądź obiektywny i krytyczny.",
+      "Aktualizuj regularnie swoje oceny.",
+      "Myśl jak organizacja, nie jak fan.",
+      "Pełen obraz zawsze wygrywa."
+    ]
+  },
+
+  "monthly_scouting_meeting_template": {
+    "przeznaczenie": "DLA KLUBÓW / AKADEMII — STRUKTURA SPOTKANIA, KTÓRA TRZYMA PROCES W RYZACH.",
+    "cel_spotkania": "LEPSZE DECYZJE. LEPSZY ROSTER. PRZEWAGA.",
+    "regularnosc": "JEDNO SPOTKANIE MIESIĘCZNIE. Regularność = Przewaga.",
+    "konkluzja": "PROCES TWORZY PRZEWAGĘ. SPOTKANIA ZMIENIAJĄ INFORMACJĘ W DZIAŁANIE.",
+    "kto_powinien_byc": ["Dyrektor Sportowy", "Trener", "Scouting", "Analityk", "Medical", "GM"],
+    "agenda_6_punktow": [
+      {
+        "nr": 1,
+        "temat": "UPDATE RYNKU",
+        "punkty": [
+          "co dzieje się na rynku?",
+          "kluczowe trendy",
+          "zmiany w ligach",
+          "nowe nazwiska"
+        ]
+      },
+      {
+        "nr": 2,
+        "temat": "TOP RISERS / FALLERS",
+        "punkty": [
+          "kto się rozwija?",
+          "kto zrobił skok?",
+          "kto traci wartość?",
+          "największe zmiany miesiąca"
+        ]
+      },
+      {
+        "nr": 3,
+        "temat": "INJURY TRACKING",
+        "punkty": [
+          "kluczowi zawodnicy kontuzjowani",
+          "timeline powrotów",
+          "wpływ na wartość",
+          "ryzyka i okazje"
+        ]
+      },
+      {
+        "nr": 4,
+        "temat": "POTRZEBY ROSTEROWE",
+        "punkty": [
+          "aktualne potrzeby drużyny",
+          "priorytety pozycyjne",
+          "profil zawodnika",
+          "dopasowanie do stylu gry"
+        ]
+      },
+      {
+        "nr": 5,
+        "temat": "SHORT LISTY",
+        "punkty": [
+          "krótka lista celów",
+          "priorytety A / B / C",
+          "uzasadnienie wyborów",
+          "alternatywy"
+        ]
+      },
+      {
+        "nr": 6,
+        "temat": "NEXT ACTIONS",
+        "punkty": [
+          "następne kroki",
+          "kto co robi?",
+          "deadlines",
+          "kolejne spotkanie"
+        ]
+      }
+    ],
+    "scouting_notes_checklist": [
+      "MARKET UPDATE",
+      "RISERS / FALLERS",
+      "INJURY TRACKING",
+      "ROSTER NEEDS",
+      "SHORT LISTS",
+      "NEXT ACTIONS"
+    ]
+  },
+
+  "final_takeaway_m6": {
+    "tytul": "ELITE SCOUTING = ELITE ORGANIZATION",
+    "mantra": "TALENT EVALUATION WITHOUT WORKFLOW = CHAOS.",
+    "haslo": "TO TWOJA PRZEWAGA. UŻYWAJ JEJ KAŻDEGO DNIA.",
+    "cykl_sukcesu": [
+      "LEPSZE DECYZJE",
+      "PRZEWAGA INFORMACYJNA",
+      "LEPSZE DOPASOWANIE",
+      "SILNIEJSZA ORGANIZACJA",
+      "WIĘKSZA WARTOŚĆ ZAWODNIKÓW"
+    ],
+    "najlepszy_scout_6_cech": [
+      {
+        "nr": 1,
+        "cecha": "FILTRUJE INFORMACJE",
+        "opis": "Oddziela sygnał od szumu."
+      },
+      {
+        "nr": 2,
+        "cecha": "ZARZĄDZA CZASEM",
+        "opis": "Inwestuje czas tam, gdzie daje największą przewagę."
+      },
+      {
+        "nr": 3,
+        "cecha": "MA PROCES",
+        "opis": "Powtarzalny, skalowalny, skuteczny."
+      },
+      {
+        "nr": 4,
+        "cecha": "UŻYWA ANALYTICS MĄDRZE",
+        "opis": "Dane wspierają decyzje, ich nie zastępują."
+      },
+      {
+        "nr": 5,
+        "cecha": "AKTUALIZUJE OPINIE",
+        "opis": "Rynek się zmienia. Opinie też muszą."
+      },
+      {
+        "nr": 6,
+        "cecha": "POTRAFI WSPÓŁPRACOWAĆ Z ORGANIZACJĄ",
+        "opis": "Scout to część zespołu. Wspólny cel = sukces."
+      }
+    ],
+    "bottom": [
+      "Myśl systemowo.",
+      "Obserwuj szeroko.",
+      "Filtruj mądrze.",
+      "Aktualizuj regularnie.",
+      "Współpracuj skutecznie.",
+      "Dostarczaj wartość."
+    ]
+  }
+}

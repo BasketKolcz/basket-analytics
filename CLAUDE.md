@@ -48,13 +48,14 @@ Plik dokumentacji projektu wczytywany automatycznie przez Claude na początku ka
 
 ### Kolumny thead (0-based index dla sortZaw)
 ```
-0: Zawodnik  1: MIN  2: G  3: PTS
-4: 2PT-M  5: 2PT-A  (brak %)  6: 3PT-M  7: 3PT-A  8: FT-M  9: FT-A
-10: ZB-A (oreb)  11: ZB-O (dreb)  12: ZB-S (suma)
-13: AST  14: TO  15: STL  16: BLK  17: FD
-18: eFG%  19: TS%  20: USG%
+0: Zawodnik  1: MIN(szac.)  2: S5  3: G  4: PTS
+5: 2PT-M/A  6: 2PT%  7: 3PT-M/A  8: 3PT%  9: FT-M/A  10: FT%
+11: ZB-A (oreb)  12: ZB-O (dreb)  13: ZB-S (suma)
+14: AST  15: TO  16: STL  17: BLK  18: FD
+19: eFG%  20: TS%  21: USG%
 ```
-Kolumna **FIN usunięta**. ZB ma 3 podkolumny: A | O | S.
+**S5** = ile razy zawodnik startował (pierwsza piątka) — kolumna 2, zawsze raw count.
+Domyślne sortowanie: `sortZaw(4)` (PTS). ZB ma 3 podkolumny: A | O | S.
 
 ### JS — kluczowe funkcje
 ```javascript

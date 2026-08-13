@@ -1,0 +1,60 @@
+{
+  "_source": "dr Romeo Jozak (dyrektor techniczny), mgr Ivan Kepcija — „PROGRAM ROZWOJU\" (Development Curriculum), Chorwacka Federacja Piłki Nożnej, Zagrzeb 2018. Słowo wstępne: Slaven Bilić. 244 strony.",
+  "_comment": "UWAGA — to książka o PIŁCE NOŻNEJ, nie o koszykówce. Trafiła do biblioteki jako materiał o FILOZOFII DŁUGOTERMINOWEGO ROZWOJU ZAWODNIKA (LTAD) i budowie akademii — te warstwy są międzydyscyplinarne i przenoszą się na koszykówkę wprost. Autorzy zbudowali akademię GNK Dinamo Zagrzeb (jedna z najbardziej „urodzajnych\" na świecie), potem pracowali w Legii Warszawa (Jozak — trener, Kepcija — dyrektor techniczny). Rozdziały czysto piłkarskie (elementy techniczne, formacje, wskaźniki posiadania) mają dla koszykówki wartość ANALOGII, nie kopiowania.",
+  "_program_use": "Wzorzec dla modułu rozwoju zawodnika i polityki akademii: (a) etapy wiekowe z przypisanymi treściami szkoleniowymi, (b) okresy krytyczne dla zdolności motorycznych i inteligencji techniczno-taktycznej, (c) wiek biologiczny vs metrykalny — bezpośrednio istotne przy ocenie zawodników młodzieżowych, (d) EFEKT WZGLĘDNEGO WIEKU (relative age effect) — realny błąd selekcyjny, który program mógłby wykrywać porównując miesiąc urodzenia zawodników w rosterze.",
+
+  "kategoria": "Rozwój długoterminowy (LTAD) / metodyka szkolenia — dyscyplina: piłka nożna",
+
+  "autorzy": {
+    "romeo_jozak": "Ur. 1972, Rijeka. Absolwent Wydziału Kinezjologii w Zagrzebiu. W wieku 35 lat przejął Akademię GNK Dinamo Zagrzeb, po ~7 latach został Dyrektorem Technicznym Chorwackiej Federacji Piłki Nożnej (2013). Instruktor Techniczny UEFA, członek Komitetu Technicznego UEFA. Magister psychologii sportu, doktorat z piłki nożnej, tytuł profesora w wieku 44 lat. Licencja UEFA Pro. Później szkoleniowiec Legii Warszawa.",
+    "ivan_kepcija": "Ur. 1982, Pula. Ekonomia (Zagrzeb), socjologia (Holy Names University), magister nauk sportowych (Saint Mary's College of California). Licencje UEFA „A\" i USSF „A\". Wicedyrektor Akademii Dinama Zagrzeb, asystent w reprezentacji Chorwacji U-19 (ME U-19 2016). Później Dyrektor Techniczny w Legii Warszawa."
+  },
+
+  "struktura": [
+    {"rozdzial": "I", "tytul": "Fundamenty programu rozwoju", "tresc": ["Długoterminowy rozwój zawodnika", "Newralgiczne okresy dla rozwoju zdolności motorycznych i funkcjonalnych", "Optymalne okresy kształtowania inteligencji technicznej i taktycznej", "Przegląd wieku biologicznego", "Zasady treningu sportowego", "Zasady kształtowania zdolności motorycznych", "Pięć fundamentalnych przesłanek rozwoju"]},
+    {"rozdzial": "II", "tytul": "Cztery główne obszary rozwoju piłkarskiego", "tresc": ["Technika (etapy nauczania elementów technicznych, elementy techniczne)", "Taktyka (główne momenty meczu, fazy meczu, analiza taktyki, warunki treningu, cele szczegółowe, od 1na1 do 11na11, formacje/systemy gry, styl gry)"]},
+    {"rozdzial": "III", "tytul": "Wskaźniki sukcesu techniczno-taktycznego", "tresc": ["Posiadanie", "Progresywne posiadanie", "Jak osiągnąć progresywne posiadanie", "Ewolucja wskaźników statystycznych"]},
+    {"rozdzial": "IV", "tytul": "Zasady i wymagania", "tresc": ["Zasady atakowania", "Uniwersalne zasady techniczno-taktyczne", "Zasady specyficzno-sytuacyjne", "Wymagania trenera w ataku", "Wymogi w defensywie w warunkach specyficznych i sytuacyjnych"]},
+    {"rozdzial": "V", "tytul": "Wiek a etapy rozwoju", "tresc": ["Etap wprowadzający U-6 do U-7", "Etap 1: U-8 do U-11", "Etap 2: U-12 do U-15", "Etap 3: U-16 do U-19", "Etap seniorski: U-21 i starsi"]},
+    {"rozdzial": "VI", "tytul": "Metodologia treningu", "tresc": []},
+    {"rozdzial": "VII", "tytul": "Periodyzacja zasad i wymogów techniczno-taktycznych", "tresc": ["Periodyzacja mezocyklu", "Model treningu", "Rozplanowanie czasowe treningu ze względu na grupę wiekową"]},
+    {"rozdzial": "VIII", "tytul": "Kryteria selekcji zawodników", "tresc": ["Efekt względnego wieku", "Testowanie"]}
+  ],
+
+  "piec_fundamentalnych_przeslanek_rozwoju": {
+    "_motto": "„Ci, którzy wiedzą, robią. Ci, którzy rozumieją, nauczają.\" — Arystoteles",
+    "_teza": "Aby robić postępy w wieloletnim procesie rozwoju, zawodnik musi przebywać w ŚRODOWISKU z jak największą liczbą elementów ten rozwój umożliwiających.",
+    "I_cechy_zawodnika": "Indywidualna „jakość\" zawodnika — talent i pasja — oraz dobór odpowiedniej dla niego grupy/drużyny.",
+    "II_jakosc_szkolenia": "Zawodnik może rozwijać się bez trenera, ale wolniej. Trener = KATALIZATOR POSTĘPU. Powinien identyfikować wyzwania stawiane przez grę i odtwarzać je fragmentarycznie na treningu. Cechy personalne trenera muszą być dopasowane do wieku i płci grupy.",
+    "III_jakosc_programu_szkolenia": "Dopasowany do wieku, oparty na dowodach empirycznych program jako wytyczna procesu treningowego.",
+    "IV_rywalizacja_w_zespole": {
+      "zasada": "Codzienna rywalizacja z kolegami napędza grę i trening na granicy możliwości.",
+      "pulapka": "Gracze, którzy STALE DOMINUJĄ w swoich drużynach, są pozbawieni bodźca do opuszczania strefy komfortu — i w niej pozostają. Nie doskonalą się tak szybko, jak mogliby przy odpowiednim poziomie rywalizacji.",
+      "blad_akademii": "Przykład błędu: wybieranie 15-20 najbardziej utalentowanych zawodników z 3-4 roczników i tworzenie z nich jednej drużyny. Efekt — najstarsi członkowie nie rywalizowali na adekwatnym poziomie i mimo nieprzeciętnego talentu nie robili postępów. Korzyść odnoszą tylko młodsi.",
+      "_transfer_do_koszykowki": "Bezpośrednio istotne przy ocenie zawodnika dominującego w słabym zespole/lidze — echo red flagu 'dominance without efficiency' z red_flags.json i ostrzeżenia o dominacji fizycznej w akademii jako red flag (m7)."
+    },
+    "V_rywalizacja_w_rozgrywkach": {
+      "zasada": "Ciągła stymulacja meczami na wysokim poziomie. Wymagający przeciwnik „nie wybacza\" błędu, więc wyrównany mecz daje trenerowi i zawodnikom świetny feedback.",
+      "ostrzezenie": "Niektóre kategorie wiekowe bywają całkowicie zdominowane przez konkretne kluby — trzeba zachować proporcję między chęcią współzawodnictwa a dążeniem do zwycięstwa."
+    },
+    "rola_meczu": "Mecz musi być postrzegany jako FRAGMENT PLANU ROZWOJU zawodnika i drużyny — jest formą rywalizacji, ale też formą treningu i przestrzenią do nauki. Podczas meczu ocenia się poziom zdolności, które następnie rozwija się na treningu."
+  },
+
+  "koncepty_przenosne_na_koszykowke": {
+    "wiek_biologiczny_vs_metrykalny": "Rozdz. 1.4 — ocena dojrzałości biologicznej zamiast metrykalnej. Kluczowe przy scoutingu młodzieżowym: wcześnie dojrzali fizycznie dominują dziś, ale niekoniecznie później.",
+    "efekt_wzglednego_wieku": "Rozdz. 8.1 (relative age effect) — zawodnicy urodzeni na początku roku kalendarzowego są nadreprezentowani w selekcji, bo są starsi w obrębie rocznika. Systemowy błąd doboru.",
+    "newralgiczne_okresy": "Rozdz. 1.2-1.3 — okna czasowe optymalne dla rozwoju konkretnych zdolności motorycznych oraz inteligencji techniczno-taktycznej.",
+    "progresja_warunkow": "Rozwijanie techniki najpierw w warunkach IZOLOWANYCH, potem UPROSZCZONYCH, wreszcie MECZOWYCH — dokładnie ta sama trójfazowość co „Nauczanie → Doskonalenie → Fragmenty gry\" w konspektach Libicha i fazach lekcji IMOPEKSIS.",
+    "automatyzacja": "Na najwyższym poziomie większość zachowań zachodzi PODŚWIADOMIE, stąd konieczność automatyzacji jak największej liczby zachowań — zbieżne z tezą Hucińskiego o grze „na podświadomości\" zamiast „na świadomości\".",
+    "slabsza_strona": "Przykład lewonożnego zawodnika zmuszonego do gry prawą nogą: słabsza strona znacząco ZAWĘŻA SPEKTRUM ROZWIĄZAŃ i pozwala przeciwnikowi go „ustawić\". W koszykówce = słabsza ręka (por. punkt coachingowy „słabsza ręka = 2 pkt\" w teaching_fundamentals.json)."
+  },
+
+  "powiazania": {
+    "teaching_fundamentals.json": "Trójfazowa progresja nauczania (izolowane → uproszczone → meczowe) jest wspólna.",
+    "imopeksis_methodology.json": "Etapy wiekowe U-6…U-21 to piłkarski odpowiednik ścieżki „Dookoła Sportu\"; gra „na podświadomości\" to wspólna teza.",
+    "book_bompa_periodyzacja.json": "Rozdz. VII (periodyzacja mezocyklu, model treningu) opiera się na aparacie pojęciowym Bompy.",
+    "red_flags.json": "Pułapka zawodnika stale dominującego w słabym otoczeniu.",
+    "projection_fit.json": "Wiek biologiczny, efekt względnego wieku i rozwój fizyczny — bezpośrednio zasilają rozdział o projekcji rozwoju fizycznego.",
+    "m7_org_structure_coach_analysis.json": "Skauting w akademii: „dominacja fizyczna = red flag\", „U14 ≠ najlepszy senior\" — ta książka daje temu podbudowę metodyczną."
+  }
+}

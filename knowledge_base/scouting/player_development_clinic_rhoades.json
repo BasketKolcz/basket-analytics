@@ -1,0 +1,79 @@
+{
+  "_source": "Notatki własne użytkownika z kliniki Next Draft Foundation — prowadzący Jimmy Rhoades, temat Player Development. Wgrane 03.08.2026 (transkrypcja z podsumowania w zrzutach ekranu).",
+  "_comment": "FILOZOFIA I PRAKTYKA ROZWOJU INDYWIDUALNEGO (Player Development) wg kliniki NDF Jimmy'ego Rhoadesa. 10 zasad + myśl przewodnia + refleksja końcowa. Rdzeń: Player Development to ŚRODOWISKO i SYSTEM (plan + feedback + indywidualizacja), nie zestaw coraz trudniejszych ćwiczeń. Uzupełnia modelowe materiały o rozwoju w bazie (zalgiris_academy_model, projection_fit, player_development_plan_template) o spójny, praktyczny dekalog trenera rozwoju.",
+  "_program_use": "BEZPOŚREDNIE przełożenie na moduł Akademii (portal → Rozwój / panel trenera → Rozwój zawodników, tabela player_development): zasada 2 = profil 3+3 (mocne/słabe/cele) i jego regularna aktualizacja; zasada 10 = mierzenie postępu (statystyki treningowe, raporty okresowe) i pokazywanie go zawodnikowi; zasada 6 = zakładka Wideo (film przed treningiem + listy do samodzielnego oglądania); zasada 3 = trzy pytania jako szablon przy zakładaniu profilu rozwoju. Kandydat na treść lekcji w platformie edukacyjnej.",
+  "kategoria": "Rozwój indywidualny zawodnika (Player Development) — Next Draft Foundation",
+
+  "mysl_przewodnia": "Najlepszy Player Development zaczyna się nie od ćwiczeń, ale od stworzenia środowiska z jasnym planem, regularnym feedbackiem i indywidualnym podejściem.",
+
+  "dziesiec_zasad": {
+    "1_system_nie_dodatek": {
+      "teza": "Player Development to system, a nie dodatkowy trening.",
+      "rozwiniecie": "Największym błędem jest traktowanie rozwoju indywidualnego jako dodatkowych 20 minut po treningu. PD powinien być elementem funkcjonowania całego klubu — od sztabu szkoleniowego, przez przygotowanie motoryczne, po fizjoterapeutów. Trener rozwoju spina te elementy i dba o spójność procesu. Nawet w małym klubie warto wyznaczyć JEDNĄ osobę odpowiedzialną za koordynację rozwoju."
+    },
+    "2_indywidualny_plan": {
+      "teza": "Każdy zawodnik potrzebuje własnego planu rozwoju.",
+      "rozwiniecie": "Nie istnieje jeden program dla całej drużyny. Każdy zawodnik ma określone mocne strony, obszary do poprawy oraz jasno zdefiniowane cele na najbliższe tygodnie i miesiące. Plan aktualizowany regularnie na podstawie treningów, meczów i wideo — NIE dokument stworzony raz na początku sezonu.",
+      "_uwaga_antybankowa": "To indywidualizacja PLANU i CELÓW (różne potrzeby, poziomy, priorytety) — forma dobrze uzasadniona. NIE mylić z obalonym mitem dopasowania metody do 'stylu uczenia się' (patrz contested_claims.json → styl_uczenia_sie_dostosowanie)."
+    },
+    "3_trzy_pytania": {
+      "teza": "Zadawaj trzy pytania przed rozpoczęciem pracy z zawodnikiem.",
+      "pytania": [
+        "Co pozwoli temu zawodnikowi grać więcej JUŻ TERAZ?",
+        "Jaka będzie jego największa przewaga na NAJWYŻSZYM poziomie?",
+        "Co może OGRANICZYĆ jego karierę za kilka lat?"
+      ],
+      "rozwiniecie": "Model budowania planu oparty na trzech pytaniach rozwija jednocześnie umiejętności potrzebne dziś ORAZ przygotowuje zawodnika do kolejnych etapów kariery (teraz / sufit / ryzyko)."
+    },
+    "4_trening_jak_menu": {
+      "teza": "Buduj trening jak menu, a nie sztywny scenariusz.",
+      "rozwiniecie": "Środowisko zmienia się każdego dnia (zmęczenie, powrót po urazie, tylko 15 min przed treningiem). Zamiast jednego rozpisanego treningu — zestaw krótkich MODUŁÓW na 5/15/30/45 min, dowolnie łączonych. Elastyczność pozwala wykorzystać każdą okazję do rozwoju."
+    },
+    "5_umiejetnosci_wartosci": {
+      "teza": "Rozwijaj umiejętności, które zwiększają wartość każdego zawodnika.",
+      "rozwiniecie": "Niezależnie od pozycji istnieją kompetencje niemal zawsze podnoszące wartość rynkową. Rhoades wskazał: skuteczny catch-and-shoot, wykończenie pod koszem, atakowanie closeoutów, podejmowanie decyzji w przewadze. Na tych fundamentach budować znaczną część treningów indywidualnych i małych grup.",
+      "_powiazanie": "Pokrywa się z 'cechami skalowalnymi' z projection_fit.json i logiką wartości z m7_org_structure (VALUE = TALENT + FIT + SCARCITY)."
+    },
+    "6_wideo_co_tydzien": {
+      "teza": "Wideo powinno być elementem każdego tygodnia.",
+      "rozwiniecie": "Film to nie tylko analiza po meczu. Najlepszy efekt: pokazać zawodnikowi konkretne rozwiązanie PRZED treningiem i natychmiast przełożyć je na ćwiczenie na parkiecie. Do tego regularna analiza najlepszych zawodników świata i krótkie listy materiałów do samodzielnego oglądania."
+    },
+    "7_decyzje_nie_powtorzenia": {
+      "teza": "Rozwijaj zawodnika poprzez decyzje, a nie tylko powtórzenia.",
+      "rozwiniecie": "Coraz mniej miejsca na 2x0 / 3x0 wg sztywnego schematu. Większą wartość mają małe gry, ćwiczenia z przewagą liczbową i sytuacje wymagające decyzji pod presją. Zawodnik uczy się nie tylko techniki, ale przede wszystkim GRY.",
+      "_uwaga_antybankowa": "Zgodne z aktualnym nurtem uczenia motorycznego (podejście oparte na grze / constraints-led): trening decyzyjny i zmienny sprzyja transferowi do meczu. To jedna z mocniej udokumentowanych tez w tym zestawie."
+    },
+    "8_nie_tylko_atak": {
+      "teza": "Trening indywidualny nie kończy się na ataku.",
+      "rozwiniecie": "W wielu klubach PD = rzuty i kozłowanie. Równie szczegółowo planować rozwój OBRONY: obrona closeoutów, poruszanie po zasłonach, ochrona obręczy, zachowania w końcówkach akcji — dobrane do roli zawodnika."
+    },
+    "9_role_trenera_rozwoju": {
+      "teza": "Trener rozwoju pełni znacznie więcej ról niż prowadzenie treningów.",
+      "role": ["szkoleniowiec", "nauczyciel", "mentor", "psycholog", "lustro pokazujące prawdę o grze", "osoba stawiająca trudne wymagania i wyprowadzająca ze strefy komfortu"],
+      "rozwiniecie": "To JAKOŚĆ RELACJI często decyduje o skuteczności całego procesu rozwoju."
+    },
+    "10_mierz_postep": {
+      "teza": "Mierz postęp i pokazuj zawodnikowi efekty.",
+      "rozwiniecie": "Rozwój musi być widoczny. Proste narzędzia: statystyki treningowe, analiza wideo, raporty okresowe, regularne rozmowy. Gdy zawodnik widzi konkretne liczby i dowody własnego postępu — rośnie motywacja, odpowiedzialność i zaufanie do procesu.",
+      "_powiazanie": "Spójne z 'process vs outcome goals' i pomiarem test-retest (zalgiris_coaching_culture, psychological_success_factors → LOC). W platformie: raporty okresowe = przegląd 3+3, statystyki = zakładka Start."
+    }
+  },
+
+  "refleksja_koncowa": "Nowoczesny Player Development nie polega na wymyślaniu coraz bardziej skomplikowanych ćwiczeń. Polega na stworzeniu środowiska, w którym każdy zawodnik każdego dnia wykonuje pracę najlepiej dopasowaną do swoich potrzeb, otrzymuje regularny feedback i dokładnie rozumie DLACZEGO wykonuje dane ćwiczenie oraz JAK ma mu ono pomóc stać się lepszym koszykarzem. Podejście oparte na indywidualizacji, analizie i świadomym planowaniu — główne przesłanie kliniki Next Draft z Jimmym Rhoadesem.",
+
+  "_weryfikacja_zewnetrzna": {
+    "sila_dowodu": "wiedza praktyka / klinika — w większości spójna z badaniami",
+    "co_dobrze_udokumentowane": "Trening decyzyjny/oparty na grze (zasada 7) i indywidualizacja planu i celów (zasady 2, 10) mają wsparcie w literaturze uczenia motorycznego i motywacji. Rola relacji i feedbacku (zasada 9) zgodna z kulturą Žalgirisu.",
+    "na_co_uwazac": "To zestaw praktyczny (jeden prowadzący, brak bibliografii). Konkretne listy umiejętności (zasada 5) to opinia ekspercka, nie wynik badań. NIE utożsamiać indywidualizacji planu z obalonym dopasowaniem do 'stylu uczenia się'.",
+    "odsylacz": "contested_claims.json → styl_uczenia_sie_dostosowanie"
+  },
+
+  "powiazania": {
+    "zalgiris_academy_model.json": "Profil 3+3 + kultura feedbacku ('challenged but capable') — praktyczny szkielet dla zasad 2, 9, 10.",
+    "player_development_plan_template.json": "Szablon planu rozwoju = operacjonalizacja zasad 2 i 3.",
+    "projection_fit.json": "Cechy skalowalne = umiejętności zwiększające wartość (zasada 5).",
+    "game_concepts.json": "Trening decyzyjny i gra bez piłki (zasady 7, 8).",
+    "contested_claims.json": "Antybańkowy odsyłacz: indywidualizacja planu ≠ mit stylów uczenia się.",
+    "modul_akademii_app": "player_development (tabela) + portal/akademia zakładki Rozwój/Wideo/Start = wdrożenie zasad 2, 6, 10 w programie."
+  }
+}

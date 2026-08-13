@@ -1,0 +1,308 @@
+{
+  "_source": "Next Draft Foundation — Moduł 2",
+  "_module": "Jak oglądać mecz jak profesjonalista + raport scoutingowy",
+  "_comment": "4 filary oceny zawodnika podczas meczu — gotowe do użycia w formularzu scoutingowym",
+  "_program_use": "Każdy filar = sekcja formularza. Każda cecha = pole oceny 1-10 + pole notatek. Pytania diagnostyczne = tooltip/placeholder.",
+
+  "filary": [
+    {
+      "id": "atletyzm",
+      "nr": 1,
+      "nazwa": "Atletyzm i fizyczność",
+      "nazwa_en": "Athleticism & Physical Tools",
+      "pytanie_projekcyjne": "Czy jego fizyczność przełoży się na wyższy poziom?",
+      "cechy": [
+        {
+          "id": "szybkosc",
+          "nazwa": "Szybkość",
+          "nazwa_en": "Speed",
+          "opis": "pierwszy krok, przyspieszenie"
+        },
+        {
+          "id": "eksplozywnosc",
+          "nazwa": "Eksplozywność",
+          "nazwa_en": "Explosiveness",
+          "opis": "wyskok, zmiana tempa"
+        },
+        {
+          "id": "mobilnosc",
+          "nazwa": "Mobilność",
+          "nazwa_en": "Mobility",
+          "opis": "zakres ruchu, zwinność"
+        },
+        {
+          "id": "balans",
+          "nazwa": "Balans",
+          "nazwa_en": "Balance",
+          "opis": ""
+        },
+        {
+          "id": "frame",
+          "nazwa": "Długość i frame",
+          "nazwa_en": "Length & Frame",
+          "opis": "wzrost, rozpiętość ramion, budowa ciała"
+        },
+        {
+          "id": "kontakt_fizyczny",
+          "nazwa": "Kontakt fizyczny",
+          "nazwa_en": "Physical Contact",
+          "opis": "siła, odporność na kontakt"
+        },
+        {
+          "id": "wytrzymalosc",
+          "nazwa": "Wytrzymałość",
+          "nazwa_en": "Stamina",
+          "opis": "poziom energii przez cały mecz"
+        }
+      ]
+    },
+    {
+      "id": "umiejetnosci",
+      "nr": 2,
+      "nazwa": "Umiejętności koszykarskie",
+      "nazwa_en": "Basketball Skills",
+      "zasada": "Skill musi być oceniany w kontekście roli i poziomu gry.",
+      "cechy": [
+        {
+          "id": "shooting",
+          "nazwa": "Shooting",
+          "nazwa_en": "Shooting",
+          "opis": "rzut z dystansu, catch-and-shoot, off-dribble"
+        },
+        {
+          "id": "passing",
+          "nazwa": "Passing",
+          "nazwa_en": "Passing",
+          "opis": "wybór podań, vision, kreatywność w podaniu"
+        },
+        {
+          "id": "ball_handling",
+          "nazwa": "Ball Handling",
+          "nazwa_en": "Ball Handling",
+          "opis": "prowadzenie piłki, dribbling w różnych sytuacjach"
+        },
+        {
+          "id": "finishing",
+          "nazwa": "Finishing",
+          "nazwa_en": "Finishing",
+          "opis": "wykończenie przy koszu, pod kontaktem, lewą i prawą ręką"
+        },
+        {
+          "id": "defense",
+          "nazwa": "Defense",
+          "nazwa_en": "Defense",
+          "opis": "obrona 1v1, rotacje, closeouty, intensywność"
+        },
+        {
+          "id": "footwork",
+          "nazwa": "Footwork",
+          "nazwa_en": "Footwork",
+          "opis": "praca nóg w ataku i obronie, kroki, pivoty"
+        },
+        {
+          "id": "versatility",
+          "nazwa": "Versatility",
+          "nazwa_en": "Versatility",
+          "opis": "elastyczność — ile pozycji może obsłużyć, ile ról pełnić"
+        }
+      ]
+    },
+    {
+      "id": "basketball_iq",
+      "nr": 3,
+      "nazwa": "Basketball IQ",
+      "nazwa_en": "Basketball IQ",
+      "cytat": "Basketball IQ często oddziela dobrych zawodników od wygrywających zawodników.",
+      "cechy": [
+        {
+          "id": "decision_making",
+          "nazwa": "Decision Making",
+          "nazwa_en": "Decision Making",
+          "opis": "podejmuje właściwe decyzje szybciej niż obrońca"
+        },
+        {
+          "id": "reading_the_game",
+          "nazwa": "Reading the Game",
+          "nazwa_en": "Reading the Game",
+          "opis": "czyta sytuację, przewiduje i rozumie co wydarzy się za chwilę"
+        },
+        {
+          "id": "spacing",
+          "nazwa": "Spacing",
+          "nazwa_en": "Spacing",
+          "opis": "wie jak ustawić się i wykorzystać przestrzeń, żeby pomóc zespołowi"
+        },
+        {
+          "id": "timing",
+          "nazwa": "Timing",
+          "nazwa_en": "Timing",
+          "opis": "timing cięć, screenów, podań, rzutów"
+        },
+        {
+          "id": "reakcje",
+          "nazwa": "Reakcje",
+          "nazwa_en": "Reactions",
+          "opis": "reakcje na zmiany w grze, na ruch obrońcy"
+        },
+        {
+          "id": "processing_speed",
+          "nazwa": "Processing Speed",
+          "nazwa_en": "Processing Speed",
+          "opis": "analizuje, decyduje i działa w ułamku sekundy"
+        },
+        {
+          "id": "adaptacja",
+          "nazwa": "Adaptacja",
+          "nazwa_en": "Adaptability",
+          "opis": "dostosowuje się do zmieniających się warunków meczu"
+        }
+      ]
+    },
+    {
+      "id": "charakter",
+      "nr": 4,
+      "nazwa": "Charakter i mentalność",
+      "nazwa_en": "Character & Mentality",
+      "kluczowe_pytanie": "Jak zawodnik zachowuje się, gdy mecz nie idzie po jego myśli?",
+      "cechy": [
+        {
+          "id": "motor",
+          "nazwa": "Motor",
+          "nazwa_en": "Motor",
+          "pytanie": "Czy gra z energią przez cały czas?"
+        },
+        {
+          "id": "profesjonalizm",
+          "nazwa": "Profesjonalizm",
+          "nazwa_en": "Professionalism",
+          "pytanie": "Czy dba o detale, jest skoncentrowany, traktuje grę poważnie?"
+        },
+        {
+          "id": "body_language",
+          "nazwa": "Body Language",
+          "nazwa_en": "Body Language",
+          "pytanie": "Co mówi jego mowa ciała? Pewność siebie, frustracja, zaangażowanie?"
+        },
+        {
+          "id": "reakcje_na_bledy",
+          "nazwa": "Reakcje na błędy",
+          "nazwa_en": "Reaction to Mistakes",
+          "pytanie": "Jak reaguje po stracie, złym rzucie, błędzie?"
+        },
+        {
+          "id": "coachability",
+          "nazwa": "Coachability",
+          "nazwa_en": "Coachability",
+          "pytanie": "Czy przyjmuje uwagi? Czy chce się uczyć i poprawiać?"
+        },
+        {
+          "id": "competitiveness",
+          "nazwa": "Competitiveness",
+          "nazwa_en": "Competitiveness",
+          "pytanie": "Czy chce wygrywać? Jak wygląda jego nastawienie w kluczowych momentach?"
+        },
+        {
+          "id": "role_acceptance",
+          "nazwa": "Role Acceptance",
+          "nazwa_en": "Role Acceptance",
+          "pytanie": "Czy rozumie i akceptuje swoją rolę w zespole?"
+        }
+      ]
+    },
+    {
+      "id": "fit",
+      "nr": 5,
+      "nazwa": "Fit i rola w zespole",
+      "nazwa_en": "Team Fit & Role",
+      "kluczowe_pytanie": "Czy ten zawodnik może funkcjonować w zwycięskim środowisku?",
+      "lancuch_wartosci": [
+        "Uzupełnia zespół",
+        "Wzmacnia system",
+        "Pasuje do kultury",
+        "Zwiększa szanse na wygrane"
+      ],
+      "pytania_fit": [
+        "Czy jego skillset pomaga wygrywać?",
+        "Czy potrafi grać bez piłki?",
+        "Czy pasuje do systemu?",
+        "Jaka jest jego optymalna rola?",
+        "Czy jego gra jest skalowalna?"
+      ],
+      "role_w_zespole": [
+        {
+          "id": "shooter",
+          "nazwa": "Shooter",
+          "opis": "rozciąga obronę"
+        },
+        {
+          "id": "slasher",
+          "nazwa": "Slasher",
+          "opis": "atakuje przestrzeń"
+        },
+        {
+          "id": "playmaker",
+          "nazwa": "Playmaker",
+          "opis": "tworzy grę dla innych"
+        },
+        {
+          "id": "defender",
+          "nazwa": "Defender",
+          "opis": "chroni zespół"
+        },
+        {
+          "id": "finisher",
+          "nazwa": "Finisher",
+          "opis": "kończy akcje"
+        }
+      ]
+    }
+  ],
+
+  "final_takeaway_m2": {
+    "definicja": "Profesjonalny scouting to połączenie:",
+    "skladniki": [
+      {
+        "id": "talent",
+        "nazwa": "Talent",
+        "opis": "Umiejętności i predyspozycje, które tworzą potencjał"
+      },
+      {
+        "id": "impact",
+        "nazwa": "Wpływ na wygrywanie",
+        "opis": "Jak zawodnik wpływa na wynik i przewagę zespołu"
+      },
+      {
+        "id": "mentalnosc",
+        "nazwa": "Mentalność",
+        "opis": "Charakter, motor i podejście, które napędzają rozwój i zwycięstwa"
+      },
+      {
+        "id": "projekcja",
+        "nazwa": "Projekcja",
+        "opis": "Jak jego gra może się rozwijać na wyższym poziomie"
+      },
+      {
+        "id": "fit_srodowisko",
+        "nazwa": "Fit w konkretnym środowisku",
+        "opis": "Czy pasuje do systemu, kultury i potrzeb konkretnego zespołu"
+      }
+    ],
+    "konkluzja": "To połączenie decyduje o tym, czy zawodnik stanie się kluczem do sukcesu."
+  },
+
+  "skala_ocen": {
+    "1-3": "Poniżej poziomu — wyraźne braki",
+    "4-5": "Przeciętny — wymaga pracy",
+    "6-7": "Ponadprzeciętny — solidny na tym poziomie",
+    "8-9": "Bardzo dobry — przeniesie się wyżej",
+    "10": "Elitarny"
+  },
+
+  "ocena_ogolna_skala": {
+    "A": "Natychmiastowy impact — podpisz",
+    "B": "Dobry zawodnik pasujący do roli",
+    "C": "Projekt / potencjał (głównie NBA)",
+    "D": "Obserwuj — wróć później",
+    "F": "Nie pasuje do organizacji"
+  }
+}

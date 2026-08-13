@@ -1,0 +1,171 @@
+{
+  "_source": "Trzy dokumenty części specjalistycznej kursu na licencję trenera koszykówki klasy B, Wyższa Szkoła Sportowa im. K. Górskiego w Łodzi: (1) „CZ_S Planowanie procesu szkoleniowego.doc\" (4 godz.), (2) „CZ_S Struktura treningu, metody, formy i środki treningowe stosowane w koszykówce.doc\" (2 godz.), (3) „CZ_S Warsztaty praktyczne.doc\" (8 godz., 4 konspekty).",
+  "_comment": "Rdzeń metodyczny kursu LIC.B: jak PLANOWAĆ proces szkoleniowy, jak jest ZBUDOWANY trening (nauczanie → doskonalenie → trenowanie) i jak to wygląda w praktyce (konspekty warsztatowe oparte na obwodach technicznych). Dokument cytuje wprost Bompę i Haffa (2010) przy definicji trenowania.",
+  "_program_use": "Ramy dla ewentualnego modułu planowania treningu: cykle tygodniowe z podziałem części na wyrównawczą / normę / progresywną, czasy poszczególnych bloków, i kryterium zmiany ćwiczenia oparte na ODCZUCIU POSTĘPU zawodnika, nie na kalendarzu. Trójpodział części lekcji (wyrównawcza/norma/progresywna) jest tożsamy z „planowymi działaniami\" z Dziennika Młodych Talentów — to spójna konwencja do zaszycia w UI planera.",
+
+  "kategoria": "LIC.B — planowanie i struktura procesu szkoleniowego",
+  "_prawa_autorskie": "Materiały objęte prawami autorskimi WSS im. K. Górskiego w Łodzi. Plik zawiera strukturalne notatki własne do użytku prywatnego — konspekty NIE są przedrukowane w całości, ujęto ich schemat i wybrane przykłady.",
+
+  "planowanie_procesu_szkoleniowego": {
+    "definicja": "Planowanie sportowe = zespół wiążących dyrektyw organizacji sportowej ustalających porządek pracy na określony okres, tak by zapewnić ciągłość, długofalowość i sterowalność procesem szkolenia.",
+    "teza": "Proces szkolenia nie może być zbiorem zdarzeń przypadkowych. Bez planowania trener i zawodnik nie znając celu nie umieją ocenić wyniku, więc nie mogą kontrolować ani prowadzić procesu. „Spontaniczność w pracy trenera nie powinna mieć miejsca.\"",
+    "sekwencja": "PROGNOZA (umożliwia obranie celu) → CEL → PROGRAM → PLAN (rozwinięcie programu).",
+    "szesc_cech_planu": {
+      "celowosc": "Plan ma prowadzić do celu w określonym terminie. UWAGA: pełna realizacja planu przy braku efektów NIE jest podstawą do pozytywnej oceny. Istotą treningu jest osiąganie celów, a nie realizacja planu — stąd plan trzeba kontrolować i rewidować.",
+      "elastycznosc": "Możliwość korekt w trakcie realizacji; plan musi być ugruntowany poznawczo i racjonalnie.",
+      "wewnetrzna_zgodnosc": "Bez sprzeczności i elementów uniemożliwiających realizację.",
+      "wykonalnosc": "Skoordynowanie zamierzeń z aktualnymi możliwościami zawodników i trenera — dzięki temu plan jest komunikatywny i operatywny.",
+      "przejrzystosc_strukturalna": "Jednoznaczny i zrozumiały zarówno dla trenera, jak i zawodnika.",
+      "ekonomicznosc": "Osiąganie celu przez małe działania, które można szybko i łatwo wykonać."
+    },
+    "_podbudowa_teoretyczna_prakseologia": {
+      "_zrodlo_dodane": "Pierwotnie: „Prakseologiczny model wychowania fizycznego.pptx\" (dr Karolina Kostorz, AWF Katowice). ROZSZERZONE o tekst źródłowy: Stanisław Strzyżewski — „Proces kształcenia i wychowania w kulturze fizycznej\", AWF Katowice 2013 (257 stron, rozdz. 2 i 3). Dalsza literatura: Pszczołowski (1987) „Mała encyklopedia prakseologii\", Ziemski (1973) „Problemy dobrej diagnozy\", Demel & Skład (1970) „Teoria wychowania fizycznego dla pedagogów\".",
+      "_po_co_tu_jest": "Sekwencja planowania opisana wyżej w tym pliku (prognoza → cel → program → plan) oraz rozdział Hucińskiego „Planowanie, prognozowanie, diagnozowanie i realizacja w procesie szkoleniowym\" (book_imopeksis_hucinski.json) to w obu przypadkach zastosowania JEDNEGO, nazwanego modelu teoretycznego. Ten wpis nazywa go, podaje bibliografię i — po dodaniu tekstu źródłowego — opisuje sam model, a nie tylko odsyła do niego.",
+      "trzy_czlony_modelu": {
+        "_zrodlo": "Strzyżewski 2013, rozdz. 3",
+        "opis": "Model nazywa się prakseologicznym, bo sporządzono go zgodnie z zasadami prakseologii i ma służyć OPTYMALIZACJI procesu. Członami działania są: SPRAWCA (podmiot) — SPRAWCA POŚREDNI (narzędzie) — TWORZYWO (przedmiot).",
+        "_przelozenie_sportowe": "W układzie szkolnym: społeczeństwo (sprawca) → szkolnictwo (narzędzie) → dzieci i młodzież (tworzywo). W akademii sportowej odpowiednio: klub i jego filozofia → sztab szkoleniowy → zawodnicy. Uwaga interpretacyjna: określenie „tworzywo\" jest terminem prakseologicznym opisującym pozycję w łańcuchu działania, a nie stosunek do zawodnika — sam Strzyżewski w rozdz. 2 definiuje rolę prowadzącego za Demelem jako „mądrego doradcy i przyjaciela\", nie instruktora."
+      },
+      "role_zawodowe_prowadzacego": {
+        "_zrodlo": "Strzyżewski 2013, rozdz. 2.1, za M. Demelem",
+        "definicja_demela": "Nie instruktor ćwiczeń cielesnych, lecz „mądry doradca i przyjaciel młodzieży, który NA PODSTAWIE RZETELNEJ DIAGNOZY indywidualnych potrzeb i możliwości UKŁADA Z UCZNIEM program jego pracy nad sobą\" — uczy, jak prowadzić samokontrolę i mierzyć własne postępy.",
+        "trzy_powinnosci": ["rozumieć kulturę fizyczną i proces wychowania", "opanować warsztat", "stać się WZOREM DO NAŚLADOWANIA"],
+        "_powiazanie": "Trzecia powinność to dokładnie zasada kongruencji ze slajdu Žalgirisu: „nie możesz wymagać od zawodników tego, czego sam nie robisz — incongruence is a silent culture killer\". Ta sama teza, dwa niezależne źródła."
+      },
+      "prakseologia": "Teoria sprawnego działania (gr. práksis — działanie). Nazywana „gramatyką czynu\" lub metodologią ogólną; poszukuje uogólnień odnoszących się do wszelkich form świadomego i celowego działania rozpatrywanego ze względu na SPRAWNOŚĆ, i konstruuje dyrektywy praktyczne — nakazy, zakazy, zalecenia i przestrogi dotyczące wzmagania sprawności.",
+      "lancuch_skutecznego_dzialania": {
+        "_autor": "Strzyżewski (2013)",
+        "ogniwa": ["1. DIAGNOZA I PROGNOZA — wykrywanie potrzeb, generowanie motywacji", "2. PROGRAMOWANIE", "3. REALIZACJA", "4. OCENA WYNIKÓW (ewaluacja)"],
+        "zasada": "Na wszystkich szczeblach czynności sprawcze powinny przebiegać zgodnie z kolejnością tych ogniw."
+      },
+      "rozroznienie_pszczolowskiego": {
+        "_waga": "Najczystsze sformułowanie różnicy między trzema pojęciami, które w praktyce trenerskiej bywają mylone.",
+        "diagnoza": "Odnosi się do TERAŹNIEJSZOŚCI — jaki jest stan rzeczy",
+        "prognoza": "Odnosi się do PRZYSZŁOŚCI i odpowiada na pytanie: CO BĘDZIE",
+        "plan": "Odnosi się do przyszłości i odpowiada na pytanie: CO ZROBIMY",
+        "cytat_ziemskiego": "„Nie należy oddzielać diagnozy od prognozy, gdyż niemożliwa jest racjonalna prognoza bez zbadania i wyjaśnienia stanu rzeczy ją poprzedzającego\" (Ziemski 1973)."
+      },
+      "piec_etapow_diagnozy": [
+        "1. Rozpoznanie warunków osobniczych (fizycznych i osobowościowych) oraz pozaosobniczych (materialnych, społecznych)",
+        "2. Wyjaśnienie GENEZY stwierdzonych faktów i relacji między członkami zespołu",
+        "3. Wyjaśnienie ZNACZENIA stwierdzonego faktu z punktu widzenia realizowanych celów",
+        "4. Ustalenie FAZY ROZWOJU — nie powtórne stwierdzenie stanu, lecz określenie, ILE FAZ ZOSTAŁO DO POKONANIA i ile czasu to zajmie",
+        "5. PROGNOZOWANIE rozwoju — racjonalne przewidywanie z uwzględnieniem naturalnych procesów: wzrastania, zmienności proporcji ciała, dynamiki przyrostu sprawności (z wykorzystaniem norm i siatek centylowych)"
+      ],
+      "trzy_zakresy_diagnozy": {
+        "_autor": "wg M. Demela (1970)",
+        "indywidualna": "Cechy morfotyczne i funkcjonalne, odporność, reaktywność, cechy charakterologiczne, zainteresowania",
+        "grupowa": "Zwartość grupy i interakcje między członkami, istnienie grup nieformalnych i ich liderów, osoby wymagające szczególnej opieki — narzędzie wskazane wprost: BADANIA SOCJOMETRYCZNE (patrz sociometry_team_cohesion.json)",
+        "srodowiskowa": "Nastawienie otoczenia, warunki materialne, tradycje, klimat społeczny"
+      },
+      "rodzaje_prognozy": ["krótkoterminowa — cel operacyjny", "średnioterminowa — np. na koniec sezonu", "długoterminowa — cel etapowy"],
+      "warunek_trafnosci": "Trafna prognoza wymaga rozważenia KILKU WARIANTÓW działań i wyboru optymalnego; zależy przede wszystkim od wiedzy o człowieku i jego rozwoju.",
+      "cytat_zamykajacy": "„Ważne jest przecież nie to, jakimi ludzie są, lecz to, jakimi mogą się stawać\" — Bogdan Suchodolski (za: Strzyżewski 2013).",
+      "zasada_trwalosci": {
+        "_zrodlo": "Strzyżewski 2013, rozdz. 2.2 — zasada E",
+        "dwa_aspekty": "Zasadę trwałości rozważa się w aspekcie FIZYCZNYM i OSOBOWOŚCIOWYM. Ważniejszy jest osobowościowy, bo decyduje nie tylko o trwałości postawy wobec kultury fizycznej, ale w konsekwencji także o trwałości sprawności i zdrowia.",
+        "konsekwencja": "Główny akcent kłaść nie tylko na ugruntowanie wyników nauczania motorycznego, ale na kształtowanie cech osobowości, które zadecydują o TRWAŁEJ, samodzielnej aktywności przez całe życie.",
+        "_powiazanie": "To jest ta sama teza co „YOUTH SYSTEM LEGACY\" Žalgirisu — „trophies fade; talents thrive, our legacy is their success\" — oraz co ścieżka „Dookoła Sportu\" z IMOPEKSIS, rozciągnięta na całe życie sportowe."
+      },
+      "_rozwiniecie_w_osobnych_plikach": "Dwa rozdziały Strzyżewskiego opracowano osobno, bo mają samodzielną wartość warsztatową: style kierowania pracą uczniów (rozdz. 2.3) i siedem rodzajów czynności nauczycielskich (rozdz. 6.2.3) — patrz coaching_styles_and_actions.json. Metodyka planu rocznego i cyklu tematycznego (rozdz. 5) — patrz training_plan_methodology.json.",
+      "_czego_swiadomie_nie_przeniesiono": "Z prezentacji i z książki pominięto realia polskiej szkoły — zwolnienia z WF, grupy dyspanseryjne, szkolną służbę zdrowia, współpracę z Radą Rodziców, podstawę programową. Treści nieprzenośne na akademię koszykarską."
+    },
+    "powtarzalnosc": {
+      "liczba_powtorzen": "Przyjmuje się ok. 3000 POWTÓRZEŃ do nauczenia umiejętności technicznej.",
+      "wyznacznik_powtarzalnosci": "Ale liczba powtórzeń nie jest jedyną wykładnią. Właściwym kryterium jest moment, gdy trener zauważa u zawodnika ODCZUCIE POSTĘPU — trwałą zmianę względem początku pracy („odczucie przeżycia\").",
+      "zasada_niezmieniania_cwiczen": "Trener nie może zmieniać ćwiczeń wedle własnego uznania. Ćwiczenie utrzymuje się do momentu, gdy zawodnik nie musi się zastanawiać, jak je wykonać — wtedy wchodzi NA PODŚWIADOMOŚĆ, sam wyciąga z ćwiczenia nowe możliwości, likwiduje lęki i stres, buduje pewność siebie.",
+      "efekt_spoleczny": "Pewność w tych elementach pozwala myśleć o partnerze — zawodnik rozumie jego braki, zwiększa tolerancję, stara się podnieść jego wartość. Ocena własna zaczyna ważyć więcej niż ocena trenera: „postęp jest zawodnika, a nie trenera\".",
+      "roznicowanie": "Gdy większość odczuwa postęp, dla pozostałych wprowadza się TRENING INDYWIDUALNY, żeby wyrównać odczucie."
+    },
+    "cykl_tygodniowy_przyklad": {
+      "grupa": "Zawodnicy 13-14 lat, 3 jednostki × 90 min (pon./śr./pt.)",
+      "struktura_czesci": ["wyrównawcza (bloki ~7-8 min)", "norma (bloki ~15 min)", "progresywna (bloki ~5-10 min)"],
+      "przyklad_poniedzialek": "Rzut z miejsca 7' (wyrównawcza) → Podanie w miejscu 8' (wyrównawcza) → Obrona czarna 15' (norma) → Długie podanie/wybicie 15' (norma) → Atak 1x1 z piłką 15' (norma) → Gra 2x2 15' (norma) → Obrona niebieska 10' (progresywna) → Szkoła rzutów 5' (progresywna) = 90 min",
+      "_zasada": "Te same umiejętności wracają w kolejnych dniach w innej roli (to, co w poniedziałek było normą, w środę bywa wyrównawczą) — rotacja zapewnia powtarzalność bez znużenia."
+    },
+    "plan_roczny": {
+      "czesc_opisowa": ["Generalne zadania stojące przed zawodnikami w roku", "Środki, przy pomocy których trener chce osiągnąć cel", "Wyjściowy poziom wyników podlegający wytrenowaniu", "Obsada kadry szkoleniowej", "Sprzęt i urządzenia sportowe"],
+      "czesc_graficzna": ["Ilość treningów w poszczególnych okresach", "Ilość zgrupowań i zawodów różnych typów", "Terminarz badań lekarskich i kursów", "Propozycje pracy treningowej w rozbiciu na 12 miesięcy i 52 tygodnie"],
+      "zasada_zapisu": "Unikać rozbudowanych form opisowych — operować konkretami: liczbami, terminami, miejscami realizacji.",
+      "elementy_rocznego_planu_szkolenia": ["sprawność ogólna", "technika", "taktyka", "testy", "sprawdziany", "rodzaje i typy zawodów", "badania lekarskie", "trening indywidualny", "teoria dyscypliny i przepisów gry", "zgrupowania", "leczenie", "urlopy"]
+    },
+    "sytuacje_specjalne_w_lekcji": [
+      "10 min — rozegranie piłki z autów z jednoczesną grą w ataku na 6-8 podań (zadanie dodatkowe: minięcie przy pięciu faulach zespołu przeciwnego)",
+      "20 min — kontrola przez nagrywanie video i ocenę w wybranym elemencie, w celu odczucia postępu",
+      "20 min — gry sytuacji trudnych: minuta do końca zespół przegrywa 6 pkt / 3 min do końca wygrywa 8 pkt / 30 s przegrywa 3 pkt",
+      "Raz w tygodniu — sprawdzian w sytuacji meczu kontrolnego (po czterech treningach i meczu zawodnicy wracają z informacją o swoim postępie)",
+      "Zdobycie kosza po rzucie sędziowskim lub po straconym koszu po 1-2 podaniach",
+      "Sytuacje obronne — match-up, podwojenie (obrona czerwona)"
+    ],
+    "_program_use_sytuacje_trudne": "Scenariusze „sytuacji trudnych\" (czas × różnica punktowa) to gotowa definicja clutch — program mógłby raportować skuteczność zawodnika w takich oknach."
+  },
+
+  "struktura_treningu": {
+    "definicja_treningu": "Wieloletni, specjalnie zorganizowany proces pedagogiczny, w ramach którego zawodnik uczy się, doskonali i trenuje umiejętności techniczne i taktyczne, kształtując też sprawność fizyczną, osobowość i cechy psychospołeczne.",
+    "szeroka_specjalizacja": "Dążenie do maksymalnego wykorzystania własnego potencjału w aspekcie psychologicznym, technicznym i fizycznym. Jeśli któryś element nie zostanie rozwinięty, zawodnik napotka BLOKADĘ techniczną, psychiczną lub motoryczną.",
+
+    "nauczanie": {
+      "definicja": "Proces zdobywania i poznawania nowych umiejętności technicznych wraz z ich elementami — wprowadzenie wiedzy i nawyku ruchowego.",
+      "cecha": "Permanentna potrzeba wykonywania SPRAWDZIANÓW w celu obserwacji postępu.",
+      "kiedy_zakonczone": "Nauczanie elementu można uznać za zakończone dopiero wtedy, gdy zawodnik prawidłowo zastosuje go w WALCE SPORTOWEJ oraz poczuje posługiwanie się nim jako naturalne i własne.",
+      "forma_obwodow_technicznych": "Układ metodyczny ćwiczeń, w którym dziecko przechodzi od najłatwiejszego do najtrudniejszego albo uczy się umiejętności w chronologicznej kolejności ruchów.",
+      "zalety_psychologiczne": [
+        "Odczucie postępu od razu — start od elementu prostego daje przyjemność, element trudny stanowi wyzwanie",
+        "Zawodnik RYWALIZUJE TYLKO ZE SOBĄ, nie jest porównywany z innymi",
+        "Trening wiedzy przygotowuje go do bycia równorzędnym partnerem trenera",
+        "Praca w parach/trójkach zwiększa EMPATIĘ — poprawiając partnera uczy się sam"
+      ],
+      "piec_faz": [
+        "Faza 1 — trening wiedzy: zawodnicy uczą się KOLEJNOŚCI ćwiczeń w obwodzie",
+        "Faza 2 — znając kolejność, koncentrują się na TECHNICE wykonania",
+        "Faza 3 — zawodnicy NAWZAJEM SIĘ POPRAWIAJĄ (znają już i technikę, i kolejność)",
+        "Faza 4 — wykonują SEGMENTY METODYCZNE, na które składają się całe obwody",
+        "Faza 5 — wykonują elementy w małych fragmentach gry / grze szkolnej / uproszczonej / właściwej. Jeśli technika prawidłowa — gra trwa; jeśli nie — powrót do obwodu lub pojedynczej stacji"
+      ]
+    },
+
+    "doskonalenie": {
+      "definicja": "Doskonalenie posiadanych umiejętności przez ich ŁĄCZENIE, zwiększanie intensywności lub wprowadzanie dodatkowych zmiennych. Cel: wyższy poziom posługiwania się elementami i własna KREACJA w rozwiązywaniu sytuacji.",
+      "narzedzie_oceny": "Testy oceniające SZYBKOŚĆ wykonania umiejętności (w odróżnieniu od sprawdzianów jakościowych w nauczaniu).",
+      "przyklad_laczenia": "Bieg do szybkiego ataku + atak 1x1 + powrót do obrony z utrzymaniem zawodnika z piłką (transmisja). Inna zmienna: czynniki zewnętrzne (hałas na sali) lub bierny/aktywny obrońca.",
+      "kompetencje_zdobywane": ["samodzielność w działaniu", "indywidualna kreacja", "rozumienie przyczyn i skutków", "dostrzeganie przeciwieństw sytuacji", "ocena wagi dokonywanych działań"],
+      "zdrowy_egoizm": "Zawodnik lepszy technicznie pomaga słabszemu, bo wie, że ten ma INNE predyspozycje, które odpowiednio wykorzystane pozwolą mu się realizować i pomogą drużynie wygrywać.",
+      "piec_obszarow": [
+        "Obszar 1 — obwody doskonalące (segmenty) łączące dwa lub więcej obwodów z nauczania",
+        "Obszar 2 — obwody z wykorzystaniem zmiennych zewnętrznych (np. 1x1 z biernym lub aktywnym obrońcą)",
+        "Obszar 3 — obwody ze zwiększoną objętością w zakresie doskonalonego elementu",
+        "Obszar 4 — wyrównywanie indywidualnych predyspozycji między zawodnikami",
+        "Obszar 5 — elementy w małych fragmentach gry z utrzymaniem WSKAŹNIKA KONCENTRACJI; jeśli coś nie działa, zawodnik przechodzi w łatwiejszy obszar, aby koncentracja wróciła"
+      ],
+      "wskaznik_koncentracji": "Do obserwacji meczowej i treningowej używa się wskaźników koncentracji — utrzymania prawidłowych działań przez jak najdłuższy czas. (Zbieżne z arkuszem koncentracji uwagi wykonawczej Hucińskiego, premiującym serie.)"
+    },
+
+    "trenowanie": {
+      "definicja": "Proces długotrwały obejmujący zmienne fizjologiczne, psychiczne i społeczne. Utrzymanie poprawności wykonywania umiejętności przy stopniowo rosnących obciążeniach → adaptacja i wzrost cech motorycznych. (Autorzy powołują się na Bompa T., Haff G. 2010.)",
+      "warunek_wejscia": "Może się rozpocząć DOPIERO gdy zawodnik trwale nabył i prawidłowo wykorzystuje umiejętności techniczne.",
+      "narzedzie": "Forma obwodowa ZESPOŁOWA — przez dobór liczby umiejętności w obwodzie ustala się intensywność i objętość lekcji.",
+      "przyklad": "Obwód poruszania się w obronie z pięciu stacji różnych kroków obronnych w intensywności 1:4 — pracując nad techniką kształtuje się wytrzymałość szybkościową.",
+      "planowanie": "Trener łączy umiejętności z jednego lub wielu obszarów i dobiera intensywność/objętość wymaganą dla etapu szkolenia: przygotowawczego, startowego i play-off."
+    }
+  },
+
+  "warsztaty_konspekty": {
+    "opis": "4 konspekty warsztatowe (8 godz.) pokazujące praktyczną realizację metodyki obwodowej.",
+    "schemat_konspektu": "Każdy konspekt dzieli się na części: WYRÓWNAWCZĄ → NORMĘ TRENINGOWĄ → (progresywną), a w każdej naprzemiennie: OBWÓD TECHNICZNY → ZABAWA → OBWÓD TECHNICZNY. Każda pozycja ma przypisany czas.",
+    "zasada_progresji_w_obwodzie": "Ta sama umiejętność ćwiczona najpierw w pozycji niskiej/uproszczonej, potem w docelowej — np. podania: najpierw W KLĘKU w parach (toczenie → podanie kozłem → podanie bezpośrednie, lewa/prawa/znad głowy), potem STOJĄC w parach ta sama sekwencja ośmiu ćwiczeń.",
+    "przyklad_obwodu_rzutu": "Rzut z miejsca w klęku przed ścianą: 3 palce lewa → 3 palce prawa → cała ręka lewa → cała ręka prawa → cały rzut obie ręce lewa → cały rzut obie ręce prawa. Następnie ten sam obwód w staniu, z pracą nóg.",
+    "rola_zabaw": "Zabawy (np. „Dogonić piłkę\", „Bądź dokładny\") osadzają element techniczny w formie zadaniowej — z wyraźnym poleceniem, by zwracać uwagę na prawidłowe wykonanie WSZYSTKICH elementów technicznych.",
+    "_uwaga": "Konspekty są bardzo szczegółowe (pełne listy ćwiczeń z czasami). W tym pliku ujęto ich SCHEMAT i zasadę budowy, nie pełną treść."
+  },
+
+  "efekt_koncowy": "Jeżeli planowanie prowadzone jest zgodnie z tą metodyką, uruchamia się mechanizm samorealizacji: zawodnik najpierw UZNAJE koncepcję i formę pracy, potem AKCEPTUJE w niej siebie i sytuacje, następnie zaczyna LUBIĆ to co robi, a sympatia zmienia się w pasję.",
+
+  "powiazania": {
+    "licb_ocena_i_obserwacje.json": "Sprawdziany i obserwacje przyczyn to narzędzia diagnozy dla opisanych tu procesów — obie części kursu tworzą całość.",
+    "imopeksis_methodology.json": "Trójpodział Nauczanie/Doskonalenie/Trenowanie jest tu rozwinięty metodycznie (5 faz + 5 obszarów); plansza „Fazy lekcji treningowej\" to jego skrócona, plakatowa wersja z dodaną warstwą DISC i lateralizacji.",
+    "book_bompa_periodyzacja.json": "Materiał wprost cytuje Bompa & Haff 2010 przy definicji trenowania; etapy przygotowawczy/startowy/play-off to aparat periodyzacji.",
+    "book_imopeksis_hucinski.json": "Rundy sezonu (0/I/II/III) u Hucińskiego i etapy przygotowawczy/startowy/play-off tutaj to ta sama konstrukcja.",
+    "teaching_fundamentals.json": "Konspekty Libicha mają identyczną trójfazową strukturę (nauczanie → doskonalenie → fragmenty gry) i tę samą logikę punktów coachingowych.",
+    "coaching_notes.json": "Sekcja practice_planning — pusty szablon planu treningu; tutejszy cykl tygodniowy pokazuje, czym go wypełnić."
+  }
+}

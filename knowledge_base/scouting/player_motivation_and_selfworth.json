@@ -1,0 +1,240 @@
+{
+  "_weryfikacja_zewnetrzna": {
+    "sila_dowodu": "obalone (dot. JEDNEGO punktu: 'dostosuj metody do sposobu/stylu uczenia się')",
+    "krytyka": "Hipoteza dopasowania nauczania do zadeklarowanego 'stylu uczenia się' (meshing) NIE ma replikowalnego wsparcia — to neuromit. Sama INDYWIDUALIZACJA (różne tempo, poziom, potrzeby) jest słuszna; błędna jest tylko wersja 'przypisz styl uczenia i pod niego optymalizuj'. Różnicuj metody pod ZADANIE, nie pod rzekomy styl.",
+    "zasieg": "Dotyczy WYŁĄCZNIE tego jednego punktu w zasady_motywowania. Reszta pliku (macierz POTRAFI×CHCE, poczucie własnej wartości, style komunikowania) NIE jest tym objęta.",
+    "szczegoly_i_zrodla": "Patrz contested_claims.json → tezy.styl_uczenia_sie_dostosowanie."
+  },
+  "_source": "Materiały z przedmiotu Pedagogika, studia podyplomowe AWF Katowice: (1) „a_m2_LS_graf_3.pdf\" — tabela diagnostyczna POTRAFI × CHCE ze stylami pracy i wskaźnikami; (2) „Motywowanie.pptx\" (25 slajdów, dr Sylwia Szopa) — poziomy i rodzaje motywacji, tabela zachowań prowadzącego, zasady motywowania; (3) „Poczucie własnej wartości.pdf\" (28 stron) — przejawy niskiego i wysokiego poczucia własnej wartości. ROZSZERZONE o materiały z przedmiotu Psychologia, AWF Katowice: „PSYCHOLOGIA- zagadnienia.docx\" (trzy style komunikowania), „PYTANIA i ODPOWIEDZI.docx\" (reakcje stresowe i psychoregulacja — opracowanie własne użytkownika), „PROFIL- Przygotowanie Pedagogiczne.docx\" (profil kompetencji prowadzącego).",
+  "_comment": "DWA NARZĘDZIA DOTYCZĄCE POJEDYNCZEGO ZAWODNIKA: (a) macierz POTRAFI × CHCE, która mówi, JAK PROWADZIĆ konkretną osobę w zależności od jej kompetencji i chęci; (b) lista obserwacyjna poczucia własnej wartości w sześciu obszarach. Baza miała dotąd narzędzia zespołowe (socjometria), psychometryczne (FinxS, DISC) i techniczne (sprawdziany), ale nie miała prostego, obserwacyjnego narzędzia do decyzji „jak dziś poprowadzić tego zawodnika\".",
+  "_program_use": "Macierz POTRAFI × CHCE nadaje się na pole w karcie zawodnika: dwie wartości binarne (kompetencja / chęć) → wyliczany zalecany styl prowadzenia. Tabela źródłowa ma kolumnę na imię i nazwisko — jest pomyślana jako ARKUSZ ROBOCZY wypełniany dla całej grupy, nie jako sam schemat. Lista poczucia własnej wartości to checklist obserwacyjny, komplementarny wobec „5 rzeczy w 5 minut\" z watching_game.json.",
+  "_prawa_autorskie": "Materiały dydaktyczne AWF Katowice. Plik zawiera notatki strukturalne, nie przedruk slajdów.",
+
+  "kategoria": "Diagnostyka zawodnika — motywacja i poczucie własnej wartości",
+
+  "macierz_potrafi_chce": {
+    "_status": "NAJCENNIEJSZY ELEMENT TEJ PARTII. Adaptacja przywództwa sytuacyjnego na grunt edukacyjny — cztery ćwiartki z przypisanym stylem pracy ORAZ ze wskaźnikami diagnostycznymi pozwalającymi zaklasyfikować konkretną osobę.",
+    "_charakter_narzedzia": "Tabela źródłowa zawiera kolumnę „imię i nazwisko\" — to arkusz roboczy do wypełnienia dla całej grupy, a nie sam diagram pojęciowy.",
+
+    "nie_potrafi_nie_chce": {
+      "styl": "INSTRUOWANIE",
+      "wskazniki_kompetencyjne": ["braki w podstawowych umiejętnościach", "słabo rozwinięta motoryka", "nie rozumie poleceń", "kłopot z koncentracją uwagi", "często przerywa pracę", "nie potrafi wrócić do przerwanego zadania"],
+      "wskazniki_motywacyjne": ["odmawia wykonania zadania", "łatwo się zniechęca", "nie słucha wskazówek", "łatwo się rozprasza", "zajmuje się innymi rzeczami"],
+      "dzialania_prowadzacego": ["inicjuje zadania", "stosuje ścisły nadzór", "na bieżąco koryguje błędy", "komunikacja JEDNOSTRONNA — instrukcje, polecenia, nakazy"]
+    },
+    "nie_potrafi_chce": {
+      "styl": "COACHING",
+      "wskazniki_kompetencyjne": "te same braki co wyżej",
+      "wskazniki_motywacyjne": ["czyta/słucha polecenia nawet kilka razy", "słucha wskazówek", "angażuje się w pracę", "jest skoncentrowany", "zadaje pytania", "wyszukuje informacje"],
+      "dzialania_prowadzacego": ["jest DORADCĄ, który oferuje pomoc", "komunikacja DWUKIERUNKOWA", "angażuje w planowanie działań", "wzmacnia pewność siebie"]
+    },
+    "potrafi_nie_chce": {
+      "styl": "MOTYWOWANIE",
+      "wskazniki_kompetencyjne": ["dobrze opanowane podstawowe umiejętności", "dobrze rozwinięta motoryka", "rozumie polecenia", "koncentruje się na zadaniu", "wykonuje zadania od początku do końca", "potrafi wrócić do przerwanego zadania"],
+      "wskazniki_motywacyjne": "te same objawy niechęci co w ćwiartce pierwszej",
+      "dzialania_prowadzacego": ["rozpoznaje mocne i słabe strony podopiecznego", "w razie potrzeby służy pomocą i PROWADZI DO SAMODZIELNOŚCI", "rozpoznaje potrzeby", "wspiera, zachęca, ułatwia i przekonuje"]
+    },
+    "potrafi_chce": {
+      "styl": "DELEGOWANIE",
+      "dzialania_prowadzacego": ["STOPNIOWO ROZSZERZA ODPOWIEDZIALNOŚĆ zawodnika", "sprawuje OGÓLNY nadzór nad działaniami", "wyraża zgodę na realizowanie celów postawionych PRZEZ ZAWODNIKA", "monitoruje"]
+    },
+
+    "_dlaczego_to_domyka_luke_w_bazie": {
+      "_waga": "Macierz rozstrzyga ustalenie, które w bazie było zapisane jako zaskakujące, ale niewyjaśnione.",
+      "problem": "coaching_styles_and_actions.json podaje za badaniami J. Wojtowicza, że demokratyczny styl kierowania treningiem osób WYSOKO wytrenowanych prowadzi do BUMELOWANIA, a u słabo wytrenowanych daje bardzo dobre wyniki. Samo w sobie brzmi to przeciwintuicyjnie.",
+      "wyjasnienie": "Macierz pokazuje, że „poziom wytrenowania\" to tylko jedna z dwóch osi. Zaawansowany i CHĘTNY potrzebuje DELEGOWANIA (własne cele, ogólny nadzór) — demokratyczna dyskusja jest dla niego zbędnym obciążeniem i stąd bumelowanie. Zaawansowany, ale NIECHĘTNY potrzebuje MOTYWOWANIA, nie swobody. Słabo wytrenowany i chętny korzysta z COACHINGU, czyli z komunikacji dwukierunkowej — i to on odnosił korzyść ze stylu demokratycznego.",
+      "wniosek": "Styl dobiera się do PARY (kompetencja, chęć), nie do samego poziomu zaawansowania."
+    },
+    "_relacja_do_innych_narzedzi_w_bazie": {
+      "vs_drill_types_zalgirisu": "Drill types opisują ĆWICZENIE (teaching/learning/competing), macierz opisuje ZAWODNIKA. Ten sam drill może wymagać instruowania jednego zawodnika i delegowania drugiemu.",
+      "vs_disc": "DISC opisuje trwały styl zachowania; macierz opisuje STAN — kompetencja i chęć zmieniają się w czasie i zależą od zadania. Macierz jest narzędziem bieżącym, DISC długoterminowym.",
+      "vs_profil_3_3_zalgirisu": "Profil 3 mocne + 3 słabe wskazuje CZEGO uczyć; macierz wskazuje JAK prowadzić w trakcie uczenia."
+    }
+  },
+
+  "motywacja": {
+    "_zrodlo": "Motywowanie.pptx",
+    "definicja": "Ogół czynników pobudzających do działania — wpływających na jego KIERUNEK i INTENSYWNOŚĆ.",
+
+    "trzy_poziomy": {
+      "1_podporzadkowanie": "Wykonuje to, co każe przełożony, tak jakby sam nie potrafił myśleć i nie miał uzdolnień",
+      "2_identyfikacja_celu": "Rodzi się pragnienie osiągnięcia celu. Warunek przejścia na ten poziom: WYRAŹNE ZAKOMUNIKOWANIE korzyści płynących z rezultatu",
+      "3_zaangazowanie": "Uważa cel ZA WŁASNY. Warunek: musi pojąć, że jest jedyną osobą, której powierzono zadanie, i poczuć, że dobra praca leży w jego interesie",
+      "_relacja_do_imopeksis": "IMOPEKSIS operuje parą MUSZĘ (wewnętrzna) vs MUSISZ (zewnętrzna). Ta skala dokłada STOPIEŃ POŚREDNI — identyfikację celu — który jest realną ścieżką przejścia od jednego do drugiego. Sama dychotomia nie mówi, jak przejść."
+    },
+    "rodzaje": {
+      "wewnetrzna": {
+        "definicja": "Działania mające wartość samą w sobie, sprawiające przyjemność i zadowolenie",
+        "korzysci": ["źródło zadowolenia i radości", "sprawne wykonywanie pracy", "OBNIŻA POSTRZEGANIE WYSIŁKU", "podwyższa zainteresowanie działaniem (czynnik umysłowy)", "zwiększa szacunek do własnej działalności (czynnik uczuciowy)"],
+        "_uwaga": "„Obniża postrzeganie wysiłku\" to mocna teza treningowa — ta sama praca subiektywnie mniej kosztuje, gdy motywacja jest wewnętrzna."
+      },
+      "zewnetrzna": {"definicja": "Działanie pod przymusem zewnętrznym", "funkcje": ["kontrolna", "informacyjna"]},
+      "dodatnia": "Dążenie do osiągnięcia celu przez zaspokojenie potrzeb",
+      "ujemna": "Unikanie nieprzyjemności, porażek, przykrych następstw"
+    },
+    "aspekty": {
+      "jakosciowy": "KIERUNEK dążeń — czym się kieruje i dlaczego podejmuje takie a nie inne działania",
+      "ilosciowy": "SIŁA dążenia — jak ważne są cele, jak bardzo mu zależy, ile wysiłku wkłada"
+    },
+    "zmiennosc_w_czasie": {
+      "obserwacja": "Motywacja zmienia się w trakcie roku oraz WRAZ Z WIEKIEM — młodsi chętniej się uczą i wykazują większe zainteresowanie; w wyższych klasach obserwuje się obniżenie lub brak motywacji do jakiegokolwiek wysiłku.",
+      "czynniki_pozaszkoleniowe": ["włączenie się w nieformalną grupę rówieśniczą", "zmieniająca się sytuacja rodzinna", "podjęte leczenie i przyjmowane leki", "okres dorastania — rozchwianie emocjonalne i zmiany w funkcjonowaniu psychofizycznym"],
+      "_znaczenie_dla_skautingu": "Spadek motywacji u 14-16-latka może nie mieć nic wspólnego z treningiem ani z trenerem. Lista czynników pozaszkoleniowych to przypomnienie, żeby nie interpretować każdego regresu jako problemu szkoleniowego."
+    }
+  },
+
+  "zachowania_prowadzacego_a_motywacja": {
+    "_zrodlo": "Motywowanie.pptx — tabela dwukolumnowa",
+    "_format": "Siedem par: po lewej zachowanie PODNOSZĄCE motywację, po prawej OSŁABIAJĄCE. Nadaje się na listę kontrolną do autoanalizy po jednostce.",
+    "pary": [
+      {"podnosi": "Określenie celów zajęć i zwrócenie uwagi na ich praktyczne znaczenie", "oslabia": "Niepodanie celów; brak odniesienia do praktycznego wykorzystania"},
+      {"podnosi": "Stawianie pytań inspirujących, rozbudzających zainteresowanie tematem", "oslabia": "Odpowiadanie sobie na własne pytania albo odpowiadają zawsze ci sami; pytania tylko o odtworzenie przekazanej treści"},
+      {"podnosi": "Zainteresowanie tematem, angażowanie się w działania zawodników, wspólne cieszenie się z sukcesów", "oslabia": "Przekazywanie wiedzy i oczekiwanie odtworzenia; ocenianie tylko efektu bez uczestnictwa w procesie; przyjmowanie sukcesu jako oczywistości"},
+      {"podnosi": "Częste upewnianie się, czy rozumieją treści i wiedzą, co mają zrobić", "oslabia": "Brak upewniania się, że rozumieją"},
+      {"podnosi": "Chętne udzielanie wsparcia w sytuacjach trudnych", "oslabia": "Niezauważanie trudności lub sygnalizowanie NIEZADOWOLENIA z ich pojawienia się"},
+      {"podnosi": "Wykorzystywanie błędów jako ważnego elementu procesu uczenia się", "oslabia": "Krytykowanie błędów, wyrażanie niezadowolenia"},
+      {"podnosi": "Świętowanie nawet drobnych sukcesów", "oslabia": "Rzadkie wyrażanie zadowolenia, niedostrzeganie drobnych postępów"}
+    ],
+    "_powiazanie": "Para szósta (błąd jako element uczenia vs krytyka błędu) to dokładnie ten sam mechanizm, przed którym ostrzega slajd Žalgirisu BE MINDFUL WITH FEEDBACK — „jeśli błędy są karane zamiast traktowane jako nauka, zawodnicy grają bezpiecznie i przestają się rozwijać\"."
+  },
+
+  "zasady_motywowania": {
+    "_zrodlo": "Motywowanie.pptx — jedenaście punktów, tu wybrane najbardziej przenośne",
+    "wybrane": [
+      "Nawiąż pozytywny kontakt emocjonalny",
+      "Zastanów się, czy dla CIEBIE to, czego uczysz, jest interesujące",
+      "Zwracaj uwagę na werbalny i POZAWERBALNY sposób komunikowania się",
+      "Pamiętaj, że każdy potrzebuje doświadczyć sukcesu",
+      "Kształtuj poczucie własnej SKUTECZNOŚCI",
+      "Uświadamiaj zależność PRACA → WYNIK",
+      "Stosuj metody dostosowane do sposobu uczenia się danej osoby",
+      "Uwzględniaj zainteresowania"
+    ],
+    "zaleznosc_praca_wynik": {
+      "elementy": ["Dziel się swoimi metodami pracy", "Opisując postępy, podkreślaj ROZWÓJ", "Tłumacz, że błędy są wskazówką, nad czym trzeba popracować — i że pomożesz", "NIE UŻYWAJ określenia „udało się\" — podkreślaj, że sukces jest efektem WŁOŻONEGO WYSIŁKU"],
+      "_waga": "Ostatni punkt to atrybucja wysiłkowa w jednym zdaniu. „Udało się\" przypisuje wynik szczęściu; „popracowałeś na to\" przypisuje go działaniu zawodnika. Spójne z hasłem Žalgirisu „no magic – just extra work\"."
+    },
+    "informacja_zwrotna_dwustronnie": {
+      "dla_zawodnika": ["uświadamia osiągnięte postępy", "wskazuje na PROCESOWY charakter uczenia się", "pozwala zapobiec części błędów", "wskazuje, co wymaga jeszcze poprawy", "mobilizuje do analizy własnego procesu uczenia się"],
+      "dla_prowadzacego": ["włącza zawodnika w doskonalenie warunków uczenia się", "umożliwia skuteczną INDYWIDUALIZACJĘ", "jest elementem rozpoznawania potrzeb i możliwości", "buduje płaszczyznę współpracy", "tworzy atmosferę BEZPIECZEŃSTWA"],
+      "_powiazanie": "Ta sama dwustronność co kolumna RÓŻNICA w arkuszu Hucińskiego i zasada „ocena ma wartość diagnostyczną w obie strony\" z kryteriów Skalika."
+    }
+  },
+
+  "poczucie_wlasnej_wartosci": {
+    "_zrodlo": "Poczucie własnej wartości.pdf",
+    "_status": "GOTOWA LISTA OBSERWACYJNA — sześć obszarów, w każdym przejawy niskiego i wysokiego poczucia własnej wartości. Nadaje się do użytku skautingowego, nie tylko wychowawczego.",
+    "samoocena": {"typy": ["adekwatna do rzeczywistego stanu", "zaniżona", "zawyżona"], "_uwaga": "Samoocena to najlepiej zbadany składnik poczucia własnej wartości. Uwaga: ZAWYŻONA jest równie problematyczna jak zaniżona — baza koncentrowała się dotąd na budowaniu pewności siebie, nie na jej nadmiarze."},
+
+    "1_sytuacje_zadaniowe": {
+      "niskie": ["nie stawia sobie ambitnych celów ALBO stawia cele zbyt wysokie, powyżej możliwości", "wycofuje się przed nowymi zadaniami („to nie dla mnie\", „ja tego nie potrafię\")", "niepewność co do poprawności wykonania, ciągła potrzeba potwierdzenia przez autorytet", "nie zgłasza własnych propozycji, nawet gdy je ma", "często pyta o pozwolenie przed rozpoczęciem czynności"],
+      "wysokie": ["stawia ambitne cele, ale NA MIARĘ możliwości", "chętnie podejmuje nowe wyzwania („spróbuję\", „zobaczę, jak mi pójdzie\")", "pracuje samodzielnie po upewnieniu się co do zrozumienia instrukcji", "samodzielnie podejmuje decyzje, czasem aż do samowoli", "chętnie zgłasza własne pomysły"],
+      "_uwaga_diagnostyczna": "Brak ambitnych celów ORAZ cele nierealistycznie wysokie to TEN SAM objaw — oba chronią przed konfrontacją z rzeczywistą miarą."
+    },
+    "2_reakcja_na_sukces_i_niepowodzenie": {
+      "niskie": ["przypisuje SOBIE winę za niepowodzenie, a czynnikom ZEWNĘTRZNYM sukces („miałem szczęście\")", "generalizuje pojedyncze niepowodzenie na wszystko („jestem do niczego\")", "wycofuje się po pierwszej trudności"],
+      "wysokie": ["obiektywnie analizuje przyczyny albo przypisuje sobie zasługę za sukces, a czynnikom zewnętrznym odpowiedzialność za porażkę", "traktuje niepowodzenia jako zdarzenia INCYDENTALNE", "ponawia próby, stara się przezwyciężać trudności"],
+      "_znaczenie_dla_skautingu": "To jest obserwowalne w meczu i pokrywa się z pozycją „Reakcja po błędzie\" z watching_game.json — tutaj ma konkretne wskaźniki, nie samą nazwę."
+    },
+    "3_reakcja_na_pochwaly_i_krytyke": {
+      "niskie": ["silna reakcja emocjonalna na krytykę — usprawiedliwianie się albo agresja wobec krytykującego", "zaprzecza pochwałom, wyszukuje mankamenty, wskazuje lepszych od siebie", "podejrzliwość wobec życzliwości („musi czegoś chcieć\")"],
+      "wysokie": ["rzeczowo odnosi się do krytyki, spokojnie analizuje jej zasadność; przyznaje się do błędu albo ignoruje krytykę nietrafną", "zaprzecza komplementom tylko gdy uzna je za nieprawdziwe; częściej dziękuje", "przyjmuje oznaki sympatii w naturalny sposób"],
+      "_powiazanie": "Bezpośrednio operacjonalizuje wartość Žalgirisu „ACCEPTS FEEDBACK\" — pokazuje, jak wygląda jej brak."
+    },
+    "4_obraz_siebie_i_porownywanie": {
+      "niskie": ["nadmierna koncentracja na własnych błędach i słabościach", "przecenianie zalet innych przy porównywaniu", "nie potrafi cieszyć się z cudzych sukcesów, deprecjonuje je, okazuje zawiść"],
+      "wysokie": ["koncentruje się na mocnych stronach, ale przyznaje się do wad, gdy sytuacja tego wymaga", "obiektywnie podchodzi do zalet i wad — własnych i cudzych", "pozytywnie lub neutralnie przyjmuje cudze sukcesy"],
+      "_znaczenie_zespolowe": "Trzeci wskaźnik przy niskim poczuciu wartości to bezpośrednie zagrożenie dla spójności zespołu — łączy się z socjometrią i z zasadą „supports teammates\"."
+    },
+    "5_poczucie_akceptacji": {
+      "niskie": ["wysoka, czasem „głodowa\" potrzeba akceptacji — domaga się ciągłej uwagi i pochwał (np. przeszkadza, żeby zwrócić na siebie uwagę)", "przy akceptacji działa na miarę zdolności, PRZY JEJ BRAKU ZNACZNIE PONIŻEJ MOŻLIWOŚCI, zachowuje się biernie"],
+      "wysokie": ["umiarkowana potrzeba akceptacji — przyjmuje pochwały pozytywnie, ale się ich nie domaga", "działa na PODOBNYM poziomie niezależnie od akceptacji otoczenia (jedynie niewielkie obniżenie motywacji)"],
+      "_najwazniejszy_wskaznik_projekcyjny": "To jest najbardziej scoutingowa pozycja z całej listy: mówi, JAK BARDZO ZAWODNIK JEST UZALEŻNIONY OD ZEWNĘTRZNEJ WALIDACJI. Ma bezpośrednie przełożenie na projekcję przy zmianie klubu, trenera lub roli — zawodnik z niskim poczuciem wartości w nowym, chłodnym środowisku spadnie znacznie poniżej swojego poziomu. Łączy się z „projekcją środowiska\" z projection_fit.json."
+    },
+    "6_zachowanie_wobec_siebie_i_innych": {
+      "niskie": ["ignoruje własne potrzeby, ulega innym, zachowuje się NIEASERTYWNIE", "postawa minimalistyczna („trzeba się cieszyć tym, co jest\")", "niechęć do samopoznania — lęk przed ujawnieniem słabości", "niechętnie mówi o sobie i swoich uczuciach"],
+      "wysokie": ["dąży do zaspokojenia własnych potrzeb, zachowuje się ASERTYWNIE, podejmuje działania samorealizacyjne", "postawa maksymalistyczna", "chętnie analizuje siebie, prowadzi autorefleksję", "otwarcie mówi o sobie, przyznaje się do emocji pozytywnych i negatywnych"],
+      "_powiazanie": "„Niechęć do samopoznania\" jest bezpośrednią przeszkodą we wszystkich narzędziach samooceny, na których opiera się ta baza — sprawdziany Hucińskiego, Dziennik Młodych Talentów, profil 3+3, Indeks Zuchory. Zawodnik z niskim poczuciem wartości będzie te narzędzia sabotował."
+    },
+    "wymiary_srodowiska": {
+      "_opis": "Środowisko oceniane jest w trzech wymiarach: życzliwość–nieżyczliwość · sensowność–bezsensowność · kontrola–brak kontroli.",
+      "skutki": "Wiążą się z funkcjonowaniem: aktywnym uczestnictwem lub biernością · przejawianiem aspiracji lub ich brakiem · wytrwałością lub jej brakiem.",
+      "_program_use": "Trzy wymiary to gotowa, krótka ankieta klimatu w zespole — komplementarna wobec socjometrii, która mierzy relacje między zawodnikami, a nie stosunek do środowiska."
+    }
+  },
+
+  "style_komunikowania": {
+    "_zrodlo_dodane": "„PSYCHOLOGIA- zagadnienia.docx\" — przedmiot Psychologia, studia podyplomowe AWF Katowice. Tabela trzech stylów w czterech wymiarach.",
+    "_po_co": "Baza ma DISC (trwały styl zachowania) i kulturę informacji zwrotnej Žalgirisu, ale nie miała modelu ASERTYWNOŚCI. Ten model jest użyteczny w trzech sytuacjach: rozmowa z zawodnikiem, rozmowa z rodzicem, oraz autoanaliza własnego sposobu prowadzenia.",
+
+    "bierny_pasywny": {
+      "charakterystyka": "Brak bezpośredniej ekspresji uczuć, myśli i życzeń. Podporządkowywanie swoich potrzeb potrzebom innych. Pomniejszanie znaczenia własnych wypowiedzi. Trudność z proszeniem o pomoc. OCZEKIWANIE, ŻE INNI SIĘ DOMYŚLĄ. Zgadzanie się na coś nawet wbrew sobie.",
+      "werbalnie": "Unikanie mówienia o rzeczywistych pragnieniach; mówienie o sobie nieokreślenie lub wcale; pozwalanie, by inni decydowali",
+      "niewerbalnie": "Chętniej działa, niż się wypowiada, licząc, że inni odgadną zamiary; głos cichy i nieśmiały; unikanie kontaktu wzrokowego; duży dystans; ciągłe napięcie",
+      "uczucia": "Zatroskanie, poczucie bycia zranionym lub wykorzystanym, niezadowolenie z siebie; nerwowość, którą potem ma sobie za złe",
+      "pozorna_korzysc": "Unikanie niewygodnych sytuacji, konfliktów i konfrontacji; brak konieczności brania odpowiedzialności za decyzje"
+    },
+    "asertywny": {
+      "charakterystyka": "Jasne komunikowanie myśli, uczuć i życzeń. Dba o poszanowanie swoich praw ORAZ szanuje prawa i uczucia innych. Słucha uważnie, dając odczuć, że wysłuchał. Otwarty na negocjacje i kompromisy, ale NIE KOSZTEM własnych praw i godności. Umie zaczynać i kończyć rozmowy. Radzi sobie z krytyką bez wrogiego ani obronnego nastawienia.",
+      "werbalnie": "Szczere wyrażanie pragnień, myśli i uczuć; komunikacja taktowna i z humorem; WYPOWIEDZI W PIERWSZEJ OSOBIE; własne decyzje z poszanowaniem drugiej strony",
+      "niewerbalnie": "Potrafi słuchać; spokojny i pewny siebie; mówi jasno i konkretnie; patrzy wprost, ale nie natarczywie; ręce i ciało odprężone; głowa prosto, lekkie pochylenie ku rozmówcy",
+      "uczucia": "Pewność i poczucie sukcesu; dobre samopoczucie ZARÓWNO PRZED, JAK I PO rozmowie; szacunek do siebie i rozmówcy; działania zorientowane na cel",
+      "_uwaga": "Wyróżnik asertywności: „dobrze przed i po rozmowie\". Styl bierny daje ulgę przed, ale poczucie wykorzystania po; agresywny odwrotnie."
+    },
+    "agresywny": {
+      "charakterystyka": "Dobrze wyraża, co myśli, czuje i czego chce — ale KOSZTEM praw i uczuć innych. Tendencja do poniżania. Atakowanie oskarżeniami i żalami. Wyniosły styl bycia i manifestowanie siły.",
+      "werbalnie": "Mówienie o swoich pragnieniach bez uwzględniania innych; częste użycie formy „TY\" w celu obrażania i przypisywania winy",
+      "niewerbalnie": "Przemyślana prezentacja; głos donośny i roszczeniowy; spojrzenie spod przymkniętych powiek, natarczywe i chłodne; napastowanie rozmówcy; zaciśnięte pięści, wskazywanie palcem",
+      "uczucia": "Próżność i poczucie bycia lepszym; ekstremalna wola kontroli; czasem wstyd z powodu własnego egoizmu"
+    },
+    "_zastosowanie_trenerskie": "Trzy style opisują też sposób prowadzenia zespołu. Warto zauważyć zbieżność ze stylami kierowania z coaching_styles_and_actions.json: agresywny odpowiada nadużyciu stylu autokratycznego, bierny — liberalnego (bardzo niska wydajność), asertywny jest odpowiednikiem demokratycznego stosowanego świadomie. Różnica: style kierowania dotyczą DECYZJI, style komunikowania — SPOSOBU MÓWIENIA.",
+    "_powiazanie": "„Wypowiedzi w pierwszej osobie\" (asertywny) vs „forma TY w celu przypisania winy\" (agresywny) to konkretna, sprawdzalna różnica językowa — użyteczna przy korekcie błędu, gdzie Strzyżewski wymaga, by zawodnik nie stracił wiary we własne siły."
+  },
+
+  "reakcje_stresowe_i_psychoregulacja": {
+    "_zrodlo_dodane": "„PYTANIA i ODPOWIEDZI.docx\" — opracowanie własne użytkownika z przedmiotu Psychologia, AWF Katowice.",
+    "siedem_reakcji_stresowych": {
+      "_charakter": "Lista objawów OBSERWOWALNYCH — użyteczna przed meczem i w okresie startowym.",
+      "lista": [
+        "senność, ospałość, powtarzające się ziewanie",
+        "odrętwienie, zesztywnienie mięśni",
+        "dolegliwości żołądkowo-jelitowe, częste korzystanie z toalety",
+        "brak apetytu LUB nadmierny apetyt",
+        "nadpotliwość",
+        "pobudzenie organizmu",
+        "odczucie podekscytowania i podniecenia"
+      ],
+      "_uwaga_interpretacyjna": "Lista obejmuje objawy z OBU biegunów pobudzenia — zarówno senność i odrętwienie, jak i pobudzenie i podekscytowanie. To istotne: stres przedstartowy nie zawsze wygląda na nerwowość; równie często wygląda na apatię. Ziewający zawodnik przed ważnym meczem niekoniecznie jest niewyspany."
+    },
+    "cztery_metody_obnizania_pobudzenia": [
+      "techniki relaksacyjne i technika wyobrażeniowa",
+      "ćwiczenia relaksujące — joga, automasaż, masaż tkanek głębokich",
+      "umiejętność ODCZYTYWANIA KOMUNIKATÓW WŁASNEGO CIAŁA",
+      "zmiana kierunku myśli — muzyka, gry"
+    ],
+    "_powiazanie": "Uzupełnia rozdz. II i III monografii o olimpizmie (stan przedstartowy, rutyna przedstartowa, modele zarządzania emocjami) o poziom konkretnych, obserwowalnych objawów. Trzecia metoda — odczytywanie sygnałów ciała — jest zbieżna z czynnikiem INTUICJA z IMOPEKSIS."
+  },
+
+  "profil_kompetencji_prowadzacego": {
+    "_zrodlo_dodane": "„PROFIL- Przygotowanie Pedagogiczne.docx\" — opracowanie z przedmiotu Psychologia, AWF Katowice.",
+    "_charakter": "Lista kontrolna kompetencji w czterech kategoriach. Nadaje się do autooceny trenera i do rozmowy rozwojowej ze sztabem — nie jako narzędzie oceniania, tylko jako mapa obszarów.",
+    "wiedza_i_umiejetnosci": ["metodyka prowadzenia zajęć", "budowa ciała — anatomia, fizjologia", "psychologia rozwojowa", "praca z osobami ze szczególnymi potrzebami", "zdobywanie informacji o prowadzonej grupie", "psychologia społeczna", "wiedza z zakresu prowadzonej dyscypliny", "warsztat pracy", "planowanie i organizacja zajęć", "bezpieczeństwo zajęć", "umiejętność POKAZU"],
+    "komunikacja_interpersonalna": ["motywowanie innych", "poznanie potrzeb podopiecznego", "dobór sposobu komunikacji i wpływu — INDYWIDUALIZACJA", "perswazja", "postawa, mowa ciała, autoprezentacja", "wzmacnianie postaw", "przekaz informacji i DOSTOSOWANIE GO do danej grupy"],
+    "umiejetnosci_spoleczne": ["wychwytywanie i rozwiązywanie konfliktów w grupie", "empatia", "wyrozumiałość, cierpliwość, tolerancja", "obiektywizm i sprawiedliwość"],
+    "cechy_osobowe": ["postawy prozdrowotne", "dbałość o wygląd, sylwetkę, higienę", "kreatywność", "otwartość na rozwój", "optymizm życiowy", "otwartość na drugą osobę", "przewidywanie działań i ich konsekwencji", "radzenie sobie ze stresem", "zarządzanie emocjami", "reagowanie na zmiany i adaptacja do nich"],
+    "_obserwacja": "Kategoria „cechy osobowe\" zawiera pozycje, które trener ma REPREZENTOWAĆ, a nie tylko posiadać — postawy prozdrowotne, dbałość o sylwetkę, optymizm. To praktyczne rozwinięcie zasady kongruencji Žalgirisu („nie możesz wymagać od zawodników tego, czego sam nie robisz\") oraz trzeciej powinności prowadzącego u Strzyżewskiego („stać się wzorem do naśladowania\")."
+  },
+
+  "powiazania": {
+    "psychological_success_factors.json": "PLIK SIOSTRZANY — tam warstwa teoretyczno-badawcza (Atkinson, Bandura, Snyder, Rotter, Rosenberg) wyjaśniająca mechanizmy stojące za obserwacjami z tego pliku; w szczególności SAMOUTRUDNIANIE tłumaczy zawodnika, który „ma warunki, ale mu się nie chce\".",
+    "coaching_styles_and_actions.json": "GŁÓWNE POWIĄZANIE — macierz POTRAFI × CHCE wyjaśnia ustalenie Wojtowicza o bumelowaniu zaawansowanych przy stylu demokratycznym; tam też typologia obserwacji i błędy wychowawcze z tej samej partii materiałów. Style komunikowania zestawić ze stylami kierowania.",
+    "imopeksis_methodology.json": "Motywacja MUSZĘ vs MUSISZ — trzy poziomy dokładają stopień pośredni (identyfikacja celu), czyli realną ścieżkę przejścia.",
+    "book_imopeksis_hucinski.json": "Pewność siebie jako czynnik psychospołeczny; kolumna RÓŻNICA w arkuszu odczuć = dwustronność informacji zwrotnej.",
+    "zalgiris_coaching_culture.json": "BE MINDFUL WITH FEEDBACK, „accepts feedback\", building identity, „no magic – just extra work\" — lista przejawów poczucia własnej wartości pokazuje, jak wygląda brak tych postaw.",
+    "watching_game.json": "„Reakcja po błędzie\" i „Body Language\" z 5 rzeczy w 5 minut — obszar 2 i 3 tej listy dają im konkretne wskaźniki.",
+    "projection_fit.json": "Projekcja środowiska — obszar 5 (uzależnienie od akceptacji) jest zmienną projekcyjną przy zmianie klubu.",
+    "sociometry_team_cohesion.json": "Obszar 4 (zawiść wobec cudzych sukcesów) i 5 (potrzeba uwagi) mają odzwierciedlenie w strukturze socjometrycznej.",
+    "finxs_mental_assessment.json": "Kompetencje Confidence, Bouncing Back i Enjoyment — to samo zjawisko mierzone psychometrycznie zamiast obserwacyjnie.",
+    "motor_testing_battery.json": "Plik z tej samej rodziny materiałów AWF — diagnostyka motoryczna."
+  }
+}

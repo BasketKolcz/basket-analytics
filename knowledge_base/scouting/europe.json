@@ -1,0 +1,68 @@
+{
+  "_source": "Next Draft Foundation — Moduł 1",
+  "_comment": "Specyfika skautingu w Europie",
+
+  "subtitle": "Budowa zespołu w ograniczonych warunkach i pod potrzeby trenera",
+
+  "scout_role_in_europe": [
+    "Wsparcie head coacha i organizacji",
+    "Monitorowanie rynku zawodników",
+    "Identyfikacja dostępnych i realistycznych opcji",
+    "Analiza dopasowania do stylu gry i budżetu"
+  ],
+
+  "european_scouting_is": [
+    "Praca głównie w offseason",
+    "Monitorowanie rynku transferowego",
+    "Rozmowy z agentami i środowiskiem",
+    "Budowanie list i alternatywnych opcji",
+    "Analiza dostępności zawodników",
+    "Szukanie value przy ograniczonym budżecie"
+  ],
+
+  "biggest_challenges": [
+    "Ograniczone budżety",
+    "Mała liczba zmian w sezonie",
+    "Różnice stylu gry między ligami",
+    "Ograniczona dostępność najlepszych zawodników",
+    "Presja wyniku 'tu i teraz'"
+  ],
+
+  "key_principle": "W Europie często nie chodzi o znalezienie najlepszego zawodnika. Chodzi o znalezienie najlepszego możliwego fitu w realnych warunkach organizacji.",
+
+  "success_formula": "Dobry europejski scouting to połączenie wiedzy o rynku, relacji i zrozumienia potrzeb zespołu.",
+
+  "wzrost_plac_polakow": {
+    "_source": "Next Draft Foundation — Call 2 Q&A (Kosma Kołcz + Rafał Jujcz)",
+    "obserwacja": "Ten sam zawodnik może zarabiać 6 000 PLN w PLK i 20 000 PLN w 1.Lidze — to kompletnie różne rynki o innych parametrach wyceny.",
+    "co_determinuje_wartosc": [
+      "Popyt rynkowy (limity na zawodników krajowych)",
+      "Wpływ na zwycięstwo w konkretnej lidze",
+      "Doświadczenie i wiek",
+      "Minimalizacja ryzyka (zawodnik sprawdzony w tej lidze)",
+      "Timing okienka transferowego",
+      "Agent, który umie to sprzedać"
+    ],
+    "implikacja_strategiczna": {
+      "problem": "Nie chodzi o samo wydawanie pieniędzy, ale o alokację budżetu w ramach filozofii.",
+      "pytanie_kluczowe": "Na której pozycji i za jakie cechy jesteśmy gotowi przepłacić?",
+      "wybor_szeroki_vs_waski": "Szeroki skład vs wąski — to decyzja filozoficzna, nie tylko finansowa.",
+      "polska_specyfika": "Wartościowi Polacy zapewniają, że drużyna nie jest 100% transferowa — gdy zagraniczny zawodnik zawiedzie, Polak jest."
+    },
+    "lekcja_scouta": "Znajomość rynku (kto ile zarabia, dlaczego) jest częścią warsztatu scouta w Europie. Bez niej nie ocenisz realnie, czy zawodnik jest value czy overpaid."
+  },
+
+  "polscy_gracze_fundament": {
+    "_source": "Next Draft Foundation — Call 2 Q&A (Michał Gabyński + Rafał Jujcz — awans PLK case)",
+    "zasada": "W Polsce: krok 1 — ile mamy kasy. Krok 2 — domestic players, bo to fundament.",
+    "dlaczego_polacy_sa_fundamentem": [
+      "Zapewniają ciągłość — zawodnik z Turcji może odejść po 3 meczach, jeśli dostanie lepszą ofertę",
+      "Zmniejszają ryzyko transferowe w trakcie sezonu",
+      "Często głębiej zintegrrowani z kulturą organizacji",
+      "W PLK/1.Lidze: limity na obcokrajowców sprawiają, że dobry Polak rozwiązuje problem całej pozycji"
+    ],
+    "limit_obcokrajowcow": "Jeśli nie masz dobrego krajowca na pozycji X, być może musisz wystawić dwie zagraniczne piątki — co pożera budżet i ogranicza rotację.",
+    "przyklad_legia": "Legia świadomie bierze nieoczywistych Polaków (Tomaszewski, Andrzejewski) — oszczędza środki na zagranicznych, szuka u nich X-factor i rozwój.",
+    "dla_scouta": "W polskich realiach domestic players to element strategiczny, nie tylko koszt. Scout który nie rozumie limitu krajowców nie zrozumie dlaczego klub przepłaca za 'zwykłego' Polaka."
+  }
+}

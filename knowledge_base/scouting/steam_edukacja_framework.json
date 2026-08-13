@@ -1,0 +1,72 @@
+{
+  "_source": "Analiza własna systemu STEAM na podstawie publikacji Uniwersytetu Śląskiego „3-2-1… Zaprojektuj siebie! O relacjach, rozwoju i budowaniu mostów. STEAM – przepływ wartości – edukacja, człowiek, przyszłość” (red. dr Magdalena Christ, prof. UŚ, Katowice 2026, ISBN 978-83-226-4707-3) oraz powszechnie znanych źródeł ram edukacyjnych. Wgrane 05.08.2026.",
+  "_comment": "FRAMEWORK EDUKACYJNY STEAM — pojęcia, filary, rutyny myślowe i zasady pedagogiczne. Osobno od notatek z konkretnej książki (steam_publikacja_us_notatki.json) i od analizy wdrożeniowej dla platformy (steam_imopeksis_platforma_analiza.json).",
+  "_program_use": "Meta-rama dla platformy edukacyjnej Akademii (portal → Akademia). STEAM daje sposób organizacji treści (interdyscyplinarność) i rutynę refleksji (3-2-1 Most); łączy się z warstwą mentalną IMOPEKSIS. Szczegóły wdrożenia w steam_imopeksis_platforma_analiza.json.",
+  "kategoria": "Rama edukacyjna — STEAM (edukacja, rozwój, myślenie interdyscyplinarne)",
+
+  "czym_jest_steam": {
+    "akronim": "Science · Technology · Engineering · Arts · Mathematics (Nauka · Technologia · Inżynieria · Sztuka · Matematyka)",
+    "steam_vs_stem": "STEAM = STEM + Arts (A). 'A' to nie tylko sztuka plastyczna — to szeroko rozumiane dziedziny artystyczne i HUMANISTYCZNE, które zmieniają kształt technologii i myślenia w nauce. STEAM jest 'upgrade'em' STEM wynikającym ze zrozumienia, że kreatywność i człowiek są w centrum.",
+    "teza_kluczowa": "STEAM to NIE zestaw przedmiotów, lecz SPOSÓB MYŚLENIA — odwaga łączenia tego, co na pierwszy rzut oka do siebie nie pasuje; integracja dziedzin w celu rozumienia i przekształcania świata.",
+    "metafory_z_publikacji": ["most między dziedzinami", "zestaw narzędzi do budowania przyszłości", "przyprawy w kuchni (niezauważane, ale bez nich całość nie smakuje)", "konstelacja gwiazd", "misja kosmiczna (współpraca ludzi o różnych kompetencjach)"]
+  },
+
+  "piec_filarow_zywioly": {
+    "_idea": "W publikacji każdy filar opisano przez 4 klasyczne żywioły (Ziemia/Woda/Powietrze/Ogień) — poetyckie, ale trafne ujęcie.",
+    "NAUKA": "Świat nie potrzebuje magii, by fascynować — wystarczy patrzeć z uwagą. Nauka mierzy, analizuje, porównuje; nie wierzy w cuda.",
+    "TECHNOLOGIA": "Ciekawość, która dojrzała i zaczęła działać. Przetwarzanie potencjałów w funkcje służące człowiekowi. U źródła każdego wynalazku: ciekawość, jak coś działa.",
+    "INŻYNIERIA": "Przekładanie wyobraźni na rzeczywistość; nadawanie światu struktury. Każda konstrukcja to kompromis między przewidywalnym a ograniczeniami.",
+    "SZTUKA": "Nie służy wyjaśnianiu świata, lecz temu, byśmy chcieli patrzeć dłużej. Pyta nie 'jak to działa?', lecz 'co to w nas porusza?'. 'Zanim nauczyliśmy się rozumieć świat, najpierw próbowaliśmy go poczuć.'",
+    "MATEMATYKA": "Nie opisuje świata — porządkuje go, nadaje rytm i sens. Język nauki; niezbędna w modelowaniu zjawisk fiz./chem./biol./med."
+  },
+
+  "rutyna_3_2_1_most": {
+    "pochodzenie": "Rutyna 'widocznego myślenia' (Visible Thinking) z Harvard Project Zero, wariant '3-2-1 Bridge'. W publikacji zastosowana jako klamra spajająca.",
+    "struktura": {
+      "3_skojarzenia": "Dopisz 3 pierwsze skojarzenia z tematem. Nie zastanawiaj się długo — pomyśl, napisz, przejdź dalej.",
+      "2_pytania": "Co Cię w związku z tym ciekawi? Czego chcesz się dowiedzieć?",
+      "1_metafora": "„Temat jest jak…” (dokończ zdanie)."
+    },
+    "mechanika": "Wykonuje się DWUKROTNIE: 'na początku mostu' (przed poznaniem tematu) i 'po drugiej stronie mostu' (po). Porównanie obu ujawnia, JAK zmieniło się myślenie — 'most' między stanem wiedzy przed i po.",
+    "wartosc": "Uwidacznia proces uczenia się i jego zmianę; zgodne z nastawieniem na rozwój; łatwe do zastosowania w lekcji/treningu."
+  },
+
+  "idee_fundamentalne": {
+    "nastawienie_na_rozwoj_dweck": "Carol Dweck: nastawienie na ROZWÓJ vs na TRWAŁOŚĆ. Cechy nie są 'kartami od losu', lecz punktem wyjścia; każdy może się zmieniać i doskonalić. [Dobrze udokumentowane w literaturze — patrz _weryfikacja_zewnetrzna.]",
+    "motywacja_3_0_pink": "Daniel Pink (Drive): 3 czynniki motywacji WEWNĘTRZNEJ — AUTONOMIA, MISTRZOSTWO, POCZUCIE CELU.",
+    "relacje_i_mentorzy_pierson": "Rita Pierson (TED 'Every kid needs a champion'): dzieci nie uczą się od osób, których nie lubią. Efektywne uczenie = obserwacja + naśladowanie + działanie przy wsparciu mistrzów-mentorów budzących sympatię.",
+    "relacje_harvard": "Harvard Study of Adult Development: dobre RELACJE czynią nas zdrowszymi i szczęśliwszymi.",
+    "kompetencje_4K": "Kreatywność · Kooperacja · Komunikacja · Krytyczne myślenie (Creativity, Cooperation, Communication, Critical thinking).",
+    "kompetencje_przyszlosci": "Nie zapamiętywanie informacji, lecz: krytyczna analiza informacji, rozwiązywanie problemów, praca zespołowa, gotowość do CIĄGŁEGO uczenia się.",
+    "lifelong_learning": "Uczenie się przez całe życie — dyplom to nie koniec, lecz nowy etap; ciągłe aktualizowanie wiedzy i narzędzi.",
+    "dwa_pytania_shaw": "Postawa twórcza łączy 'DLACZEGO?' (analiza, rozumienie świata) i 'DLACZEGO NIE?' (eksperyment, marzenie o tym, czego jeszcze nie było)."
+  },
+
+  "zasady_pedagogiczne": [
+    "CIEKAWOŚĆ jako silnik — 'nauka zaczyna się od zadawania pytań'; dziecięce 'dlaczego?' jako protonaukowe.",
+    "EKSPERYMENT = ciekawość wdrożona w sposób KONTROLOWANY (powtarzalny, bezpieczny); przywraca trudną wiedzę doświadczeniu zmysłów.",
+    "INTERDYSCYPLINARNOŚĆ — 'najciekawsze rzeczy dzieją się za płotem'; wiedza to sieć powiązań, nie zbiór luźnych faktów.",
+    "REALNE PROBLEMY i zastosowania — 'od badań do sali lekcyjnej'; teoria łączona z praktyką.",
+    "MENTORING / TUTORING — relacja mistrz–uczeń; jedna osoba potrafi zmienić stosunek do przedmiotu.",
+    "PRÓBY I BŁĘDY — droga nie jest liniowa; 'to nie był plan'; porażka jako element procesu.",
+    "METODY AKTYWNE — design thinking, gamifikacja/grywalizacja, LEGO Serious Play, sketchnoting/myślenie wizualne, Odyseja Umysłu, pedagogika przygody/leśna.",
+    "AUTONOMIA I SPRAWCZOŚĆ — uczeń bierze odpowiedzialność za wybór; włączanie młodych w realny obieg wiedzy wzmacnia poczucie sprawczości.",
+    "CZŁOWIEK W CENTRUM — nawet w najbardziej 'technicznych' obszarach (kosmos, AI) kluczowy jest dobrostan i psychika człowieka; miejsce psychologii w STEAM."
+  ],
+
+  "_weryfikacja_zewnetrzna": {
+    "sila_dowodu": "zróżnicowana — rama uznana, składowe różnie udokumentowane",
+    "dobrze_udokumentowane": "Nastawienie na rozwój (Dweck) i motywacja wewnętrzna (autonomia/mistrzostwo/cel, Pink/SDT Deci-Ryan) mają solidne wsparcie. Uczenie oparte na dociekaniu/eksperymencie i znaczenie relacji nauczyciel–uczeń również. Kompetencje 4K są szeroko rekomendowane (OECD, P21).",
+    "na_co_uwazac": "STEAM jako całość to RUCH edukacyjny i rama organizacyjna, nie pojedyncza 'zwalidowana metoda' — siła dowodu zależy od konkretnego wdrożenia. Część twierdzeń o efektach STEAM to entuzjazm ruchu, nie mocne RCT. Publikacja UŚ jest inspiracyjno-popularyzatorska (zbiór esejów), nie metaanalizą.",
+    "uwaga_antybankowa": "Nie utożsamiać 'indywidualizacji ścieżki/zainteresowań' (słuszne) z obalonym mitem 'stylów uczenia się' — patrz contested_claims.json → styl_uczenia_sie_dostosowanie."
+  },
+
+  "powiazania": {
+    "steam_publikacja_us_notatki.json": "Źródłowa książka — 27 esejów i szczegóły.",
+    "steam_imopeksis_platforma_analiza.json": "Jak STEAM + IMOPEKSIS mogą kształtować platformę edukacyjną Akademii.",
+    "imopeksis_methodology.json": "Warstwa mentalno-relacyjna (psychopedagogika) — komplementarna do STEAM; wspólne: motywacja wewnętrzna, relacja trener-zawodnik, refleksja.",
+    "zalgiris_coaching_culture.json": "Mental performance, process vs outcome goals, building identity — pokrywa się z Dweck/Pink.",
+    "player_development_clinic_rhoades.json": "Trening decyzyjny i indywidualizacja = STEAM-owe uczenie przez eksperyment i dociekanie.",
+    "contested_claims.json": "Antybańka: indywidualizacja ≠ style uczenia się."
+  }
+}

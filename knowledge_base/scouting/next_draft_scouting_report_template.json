@@ -1,0 +1,180 @@
+{
+  "_source": "Next Draft Foundation — Szablon Projektu Kursowego",
+  "_comment": "Scouting Report — uproszczony raport scoutingowy Next Draft Foundation. Inny od scouting_form.json (który jest 9-sekcyjnym formularzem przez rolę). Ten arkusz to klasyczny raport zawodnika z oceną ogólną 1-5, statystykami, comps i rekomendacją z priorytetem/tier.",
+  "_program_use": "Inspiracja do raportu zawodnika w /zawodnik/<id> lub nowego modułu /scout/raport. Może uzupełniać scouting_form.json jako 'szybki raport' vs 'głęboki formularz roli'.",
+
+  "meta": {
+    "tytul": "Scouting Report",
+    "brand": "Next Draft Foundation",
+    "cytat_dolny": "Nie chodzi o to, żeby znać wszystko. Chodzi o to, żeby zadawać właściwe pytania i podejmować lepsze decyzje.",
+    "rozroznienie_od_scouting_form": "scouting_form.json = 9 sekcji przez rolę (Archetyp/Offensive Role/Scalability/itp.). Ten plik = klasyczny raport z oceną 1-5 per kategorię + statystyki + rekomendacja tier 1-2-3."
+  },
+
+  "naglowek_formularza": {
+    "pola": [
+      { "id": "data_raportu", "label": "Data Raportu", "typ": "date" },
+      { "id": "scout",        "label": "Scout",        "typ": "text" }
+    ]
+  },
+
+  "profil_zawodnika": {
+    "zdjecie": { "id": "zdjecie", "label": "Zdjęcie Zawodnika", "typ": "image" },
+    "dane_podstawowe": [
+      { "id": "imie_nazwisko",    "label": "Imię i Nazwisko",   "typ": "text" },
+      { "id": "pozycja",          "label": "Pozycja",           "typ": "text" },
+      { "id": "wiek",             "label": "Wiek",              "typ": "number" },
+      { "id": "wzrost",           "label": "Wzrost",            "typ": "text" },
+      { "id": "waga",             "label": "Waga",              "typ": "text" },
+      { "id": "narodowosc",       "label": "Narodowość",        "typ": "text" },
+      { "id": "obecny_klub_liga", "label": "Obecny Klub / Liga","typ": "text" },
+      { "id": "kontrakt_do",      "label": "Kontrakt do",       "typ": "text" }
+    ],
+    "bio_background": {
+      "id": "bio",
+      "nazwa": "BIO / BACKGROUND",
+      "pola": [
+        { "id": "data_urodzenia",      "label": "Data Urodzenia",      "typ": "date" },
+        { "id": "miejsce_urodzenia",   "label": "Miejsce Urodzenia",   "typ": "text" },
+        { "id": "agent",               "label": "Agent",               "typ": "text" },
+        { "id": "poprzednie_kluby",    "label": "Poprzednie Kluby",    "typ": "text" },
+        { "id": "informacje_dodatkowe","label": "Informacje Dodatkowe","typ": "textarea" }
+      ]
+    }
+  },
+
+  "sekcja_1_ogolna_ocena": {
+    "nr": 1,
+    "id": "ogolna_ocena",
+    "ikona": "star",
+    "nazwa": "OGÓLNA OCENA",
+    "kategorie_1_5": [
+      { "id": "potencjal",           "label": "POTENCJAŁ (1-5)",                   "skala": "1-5" },
+      { "id": "umiejetnosci",        "label": "UMIEJĘTNOŚCI (1-5)",                "skala": "1-5" },
+      { "id": "atletyzm",            "label": "ATLETYZM (1-5)",                    "skala": "1-5" },
+      { "id": "mentalnosc",          "label": "MENTALNOŚĆ (1-5)",                  "skala": "1-5" },
+      { "id": "dopasowanie_druzyny", "label": "DOPASOWANIE DO NASZEJ DRUŻYNY (1-5)", "skala": "1-5" }
+    ],
+    "podsumowanie_ogolne": { "id": "podsumowanie", "label": "Podsumowanie ogólne", "typ": "textarea" }
+  },
+
+  "sekcja_2_styl_gry_mocne_strony": {
+    "nr": 2,
+    "id": "mocne_strony",
+    "ikona": "chart",
+    "nazwa": "STYL GRY / MOCNE STRONY",
+    "pole": { "typ": "bullet_list", "n": 5 }
+  },
+
+  "sekcja_3_slabe_strony": {
+    "nr": 3,
+    "id": "slabe_strony",
+    "ikona": "warning",
+    "nazwa": "SŁABE STRONY / OBSZARY DO POPRAWY",
+    "pole": { "typ": "bullet_list", "n": 5 }
+  },
+
+  "sekcja_4_statystyki": {
+    "nr": 4,
+    "id": "statystyki",
+    "ikona": "stats",
+    "nazwa": "STATYSTYKI (SEZON / OSTATNIE DOSTĘPNE DANE)",
+    "kolumny_tabeli": ["KATEGORIA", "WARTOŚĆ", "UWAGI"],
+    "wiersze": [
+      { "id": "min_mecz",  "label": "MIN / MECZ" },
+      { "id": "pkt_mecz",  "label": "PKT / MECZ" },
+      { "id": "ast_mecz",  "label": "AST / MECZ" },
+      { "id": "reb_mecz",  "label": "REB / MECZ" },
+      { "id": "stl_mecz",  "label": "STL / MECZ" },
+      { "id": "blk_mecz",  "label": "BLK / MECZ" },
+      { "id": "to_mecz",   "label": "TO / MECZ"  },
+      { "id": "fg_pct",    "label": "FG%"        },
+      { "id": "p3_pct",    "label": "3P%"        },
+      { "id": "ft_pct",    "label": "FT%"        }
+    ]
+  },
+
+  "sekcja_5_kluczowe_zagrania": {
+    "nr": 5,
+    "id": "kluczowe_zagrania",
+    "ikona": "notes",
+    "nazwa": "KLUCZOWE ZAGRANIA / ROLE W ZESPOLE",
+    "pole": { "typ": "bullet_list", "n": 5 }
+  },
+
+  "sekcja_6_charakter": {
+    "nr": 6,
+    "id": "charakter_mentalnosc",
+    "ikona": "people",
+    "nazwa": "CHARAKTER / MENTALNOŚĆ / PROFESJONALIZM",
+    "pole": { "typ": "bullet_list", "n": 4 }
+  },
+
+  "sekcja_7_porownanie_comps": {
+    "nr": 7,
+    "id": "porownanie_comps",
+    "ikona": "compare",
+    "nazwa": "PORÓWNANIE / COMPS",
+    "zawodnicy": [
+      {
+        "id": "comp_1",
+        "label": "ZAWODNIK 1",
+        "pola": [
+          { "id": "comp1_nazwa",   "label": "Imię i Nazwisko", "typ": "text" },
+          { "id": "comp1_dlaczego","label": "Dlaczego?",       "typ": "textarea" }
+        ]
+      },
+      {
+        "id": "comp_2",
+        "label": "ZAWODNIK 2",
+        "pola": [
+          { "id": "comp2_nazwa",   "label": "Imię i Nazwisko", "typ": "text" },
+          { "id": "comp2_dlaczego","label": "Dlaczego?",       "typ": "textarea" }
+        ]
+      }
+    ]
+  },
+
+  "sekcja_8_fit_w_druzynie": {
+    "nr": 8,
+    "id": "fit_w_druzynie",
+    "ikona": "puzzle",
+    "nazwa": "FIT W NASZEJ DRUŻYNIE",
+    "dlaczego_pasuje": {
+      "label": "DLACZEGO PASUJE?",
+      "pole": { "typ": "bullet_list", "n": 4 }
+    },
+    "potencjalne_ryzyka": {
+      "label": "POTENCJALNE RYZYKA",
+      "pole": { "typ": "bullet_list", "n": 4 }
+    }
+  },
+
+  "sekcja_rekomendacja": {
+    "nr": "R",
+    "id": "rekomendacja",
+    "ikona": "target",
+    "nazwa": "REKOMENDACJA",
+    "opcje_rekomendacji": [
+      { "id": "podpisac_natychmiast", "label": "PODPISAĆ NATYCHMIAST" },
+      { "id": "mocny_kandydat",       "label": "MOCNY KANDYDAT"       },
+      { "id": "monitorowac",          "label": "MONITOROWAĆ"          },
+      { "id": "opcja_awaryjna",       "label": "OPCJA AWARYJNA"       },
+      { "id": "nie_rekomenduje",      "label": "NIE REKOMENDUJE"      }
+    ],
+    "uzasadnienie": { "id": "uzasadnienie", "label": "Uzasadnienie rekomendacji", "typ": "textarea" },
+    "priorytet_tier": {
+      "id": "priorytet_tier",
+      "label": "PRIORYTET / TIER",
+      "opcje": [1, 2, 3],
+      "opis": { "1": "TOP — aktywnie ścigamy", "2": "Obserwujemy", "3": "Lista awaryjna" }
+    },
+    "komentarz_dodatkowy": { "id": "komentarz_dodatkowy", "typ": "textarea" }
+  },
+
+  "uwagi_projektowe": [
+    "Forma projektu jest całkowicie dowolna: Word, PowerPoint, Excel, Notion, Canva lub inna.",
+    "Najważniejsze: projekt pokazuje sposób myślenia, proces podejmowania decyzji i praktyczne użycie wiedzy z kursu.",
+    "To jest przykładowy materiał — służy jako inspiracja i drogowskaz, nie jako obligatoryjny szablon.",
+    "Pełniejszy formularz oceny przez rolę: scouting_form.json (9 sekcji: Archetyp, Offensive Role, itp.)"
+  ]
+}

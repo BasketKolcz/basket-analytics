@@ -1,0 +1,125 @@
+{
+  "_source": "„SCOUTING REPORT GUIDELINES - Ulm ProB.pdf\" — wytyczne tworzenia raportu skautingowego przeciwnika, ratiopharm Ulm (niemiecka ProB). 2 strony: (1) Defensive Tendencies, (2) Personnel Report Guidelines.",
+  "_comment": "METODA tworzenia raportu ADVANCE SCOUTING (skauting przeciwnika przed meczem). To INNY GATUNEK niż scouting_report.json w tej bazie — tamten dotyczy oceny zawodnika pod KONTRAKT/DRAFT (czy go pozyskać), ten dotyczy przygotowania zespołu DO KONKRETNEGO MECZU (jak go pokonać). Różne pytanie, różny odbiorca, różna struktura. Dokument pochodzi z profesjonalnego klubu niemieckiego i jest w pełni zrealizowany w przykładach — patrz opponent_scouting_examples.json.",
+  "_program_use": "Najbardziej wdrożeniowy element to SYSTEM GWIAZDEK z przypisaną odpowiedzią taktyczną: ocena rzutu 1-3★ mapuje się DETERMINISTYCZNIE na metodę closeoutu. To gotowy, zamknięty słownik do modułu raportu przeciwnika — trzy poziomy, trzy instrukcje, zero swobody interpretacyjnej. Druga wdrożeniowa rzecz: dwupoziomowy videoreport (long/short z TYCH SAMYCH klipów) — sugeruje, że raport powinien mieć dwa widoki tej samej treści, a nie dwie osobne treści.",
+
+  "kategoria": "Skauting przeciwnika (advance scouting) — metoda",
+
+  "rozroznienie_gatunkowe": {
+    "_waga": "Kluczowe dla porządku w bazie wiedzy.",
+    "advance_scouting_ten_plik": {
+      "pytanie": "JAK POKONAĆ ten zespół w najbliższym meczu?",
+      "odbiorca": "Własny sztab i zawodnicy",
+      "horyzont": "Jeden mecz",
+      "produkt": "Depth chart + charakterystyka zespołu + paperscout każdego zawodnika + klipy wideo",
+      "jednostka": "Zespół przeciwnika jako system + personel jako zestaw słabych i mocnych ogniw"
+    },
+    "recruitment_scouting_scouting_report_json": {
+      "pytanie": "CZY POZYSKAĆ tego zawodnika?",
+      "odbiorca": "GM / dyrektor sportowy",
+      "horyzont": "Sezon lub kariera",
+      "produkt": "Raport z projekcją, fit, tier, rekomendacją",
+      "jednostka": "Pojedynczy zawodnik w oderwaniu od najbliższego meczu"
+    },
+    "wspolne": "Oba używają tej samej obserwacji meczowej i tego samego słownika archetypów — ale wnioski wyciągają w przeciwnych kierunkach."
+  },
+
+  "czesc_1_defensive_tendencies": {
+    "naglowek": "„OPPONENT DEFENSIVE POSSESSIONS\" — PLEASE ANSWER THESE QUESTIONS",
+    "_idea": "Raport jest zbudowany jako LISTA PYTAŃ, na które skaut MUSI odpowiedzieć — nie jako dowolny opis. To wymusza kompletność i porównywalność raportów między meczami.",
+    "conception_work": [
+      "WHO IS THEIR TRANSITION DEF? DO THEY CRASH THE GLASS HEAVY? (kto wraca do obrony / czy mocno atakują zbiórkę ofensywną)",
+      "P&R COVERAGE WITH 5 (jak bronią pick and rolla z piątką)",
+      "P&R COVERAGE WITH 4 (jak bronią pick and rolla z czwórką)",
+      "POST UP DEFENSE? TRAPS / DOUBLES?",
+      "ZONE DEF? WHAT KIND? WHEN? (czy grają strefę, jaką, kiedy)",
+      "PRESS DEFENSE? WHAT KIND? WHEN?",
+      "ANYTHING SPECIAL YOU SEE?"
+    ],
+    "how_to_attack": [
+      "WHAT ARE THEIR WEAK LINKS? PERSONNEL AND CONCEPTIONALLY? (słabe ogniwa — osobowe I koncepcyjne)",
+      "ATTACK P&R COVERAGE WITH 5 – HOW?",
+      "ATTACK P&R COVERAGE WITH 4 – HOW?",
+      "ZONE OFF – DO THEY PLAY ZONE?",
+      "PRESS BREAK – DO WE NEED TO BE PREPARED?",
+      "POST UP – HAVE THEY GOT A WEAK LINK?"
+    ],
+    "_zasada_konstrukcyjna": "Każde pytanie z CONCEPTION WORK ma odpowiadające mu pytanie z HOW TO ATTACK. Diagnoza nigdy nie stoi sama — zawsze ma przypisaną receptę.",
+    "videowork": {
+      "regula": "Do każdego zdiagnozowanego elementu: 1 KLIP pokazujący UDANĄ OBRONĘ PRZECIWNIKA + 1 pokazujący „HOW TO ATTACK\"",
+      "elementy_obowiazkowe": ["P&R DEFENSE WITH 5", "P&R DEFENSE WITH 4", "OFF SCREEN DEFENSE", "POST DEFENSE"],
+      "elementy_warunkowe": ["PRESS DEFENSE (only if necessary)", "ZONE DEFENSE (only if necessary)", "ANYTHING SPECIAL YOU SEE (only if necessary)"],
+      "_uwaga": "Podział na obowiązkowe i warunkowe („only if necessary\") chroni raport przed rozdęciem — pokazujesz strefę tylko wtedy, gdy przeciwnik ją faktycznie gra."
+    }
+  },
+
+  "czesc_2_personnel_report": {
+    "kroki": [
+      "CREATE REPORT „ON PAPIER\" — USE ATTACHED LAYOUT (stały layout, nie dowolny)",
+      "CREATE DEPTH CHART — CATEGORIZE PLAYERS IN STARTER & BACKUPS",
+      "CREATE PAPERSCOUT — karta zawodnika"
+    ],
+    "system_gwiazdek_waznosc": {
+      "pytanie": "HOW IMPORTANT IS PLAYER WITHIN SYSTEM (jak ważny jest zawodnik w systemie przeciwnika)",
+      "★": "NOT IMPORTANT PLAYERS",
+      "★★": "ROLE PLAYERS",
+      "★★★": "MOST IMPORTANT PLAYERS"
+    },
+    "system_gwiazdek_rzut": {
+      "_waga": "NAJBARDZIEJ WDROŻENIOWY ELEMENT CAŁEJ METODY — ocena rzutowa ma PRZYPISANĄ metodę obrony.",
+      "pytanie": "CATEGORIZE SHOOTING – SUGGEST CLOSE OUT METHOD",
+      "★": {"opis": "NON SHOOTER", "closeout": "DOUBTS CLOSE OUT", "sens": "Nie wybiegasz na niego — zostawiasz dystans, bo rzutu nie odda"},
+      "★★": {"opis": "CAN SHOOT & DRIVE", "closeout": "STICK HAND CLOSEOUT", "sens": "Wychodzisz z wyciągniętą ręką — musisz respektować i rzut, i drive"},
+      "★★★": {"opis": "SHOOTER", "closeout": "RUN OFF & REARVIEW CONTEST", "sens": "Zbiegasz go z linii rzutu i kontestujesz z tyłu — priorytetem jest niedopuszczenie do rzutu"}
+    },
+    "pozostale": "LIST UP MAIN STRENGTHS AND SPECIALTIES",
+    "videowork_dwupoziomowy": {
+      "videowork_1_long": "LONG VIDEOREPORT — 5-6 klipów na każdego STARTERA + 6th MAN; 3-4 klipy na BACKUPÓW",
+      "videowork_2_short": "SHORT VIDEOREPORT — 2-3 klipy na STARTERA + 6th MAN; 1-2 klipy na BACKUPÓW",
+      "regula_kluczowa": "USE SAME CLIPS AS IN VIDEOWORK 1 — krótki raport to PODZBIÓR długiego, nie osobny materiał",
+      "_interpretacja": "Długi raport dla sztabu i indywidualnego przygotowania, krótki na odprawę przedmeczową. Ta sama prawda w dwóch dawkach.",
+      "_program_use": "Wprost sugeruje UI: jeden zestaw klipów z flagą „short\" — dwa widoki, jedno źródło."
+    }
+  },
+
+  "anatomia_kompletnego_raportu": {
+    "_zrodlo": "Wyprowadzona z wytycznych + obu zrealizowanych przykładów.",
+    "1_depth_chart": "Tabela 5 pozycji (PG/SG/SF/PF/C) × głębokość składu, każdy zawodnik z numerem, nazwiskiem i TAGIEM ARCHETYPU w nawiasie kwadratowym",
+    "2_team_characteristic_defense": "Podstawowy system, obrona całego boiska, coverage PnR z 5 i z 4 (z rozbiciem na 1st/2nd opcję), obrona zasłon bez piłki, obrona low postu",
+    "3_team_characteristic_offense": "Ponumerowana lista tendencji zespołowych, KAŻDA Z IMIENNĄ OBSADĄ (kto biega w transition, kto postuje, kto stawia i kto korzysta z zasłon, kto rolluje a kto popuje, kto atakuje zbiórkę)",
+    "4_leaderboardy": "Rankingi zawodników w kategoriach: best players, best 3PT, no/bad 3PT shot, best FT, worst FT, best 1on1 inside, best 1on1 outside, best off. rebounders, most turnovers, last shots (kto bierze ostatni rzut)",
+    "5_paperscout_per_zawodnik": "Numer, nazwisko, wzrost, RĘCZNOŚĆ, pozycja, ★ ważności, ★ rzutu, blok statystyk, punktowana lista tendencji, metoda closeoutu, INSTRUKCJA JAK GO BRONIĆ",
+    "_zasada_naczelna": "Każda informacja o przeciwniku kończy się INSTRUKCJĄ DLA NAS. Raport nigdy nie jest samym opisem."
+  },
+
+  "slownik_terminow_obronnych": {
+    "_kontekst": "Terminologia coverage'ów PnR i obrony występująca w raportach — przydatna jako słownik dla programu.",
+    "ICE": "Zepchnięcie PnR do linii bocznej / niedopuszczenie do użycia zasłony (side PnR)",
+    "QUICK SHOW": "Krótkie pokazanie się dużego na rozgrywającym i szybki powrót",
+    "HEDGE": "Wyjście dużego przed zasłonę, agresywne zatrzymanie piłki",
+    "FLAT": "Duży cofnięty, nie wychodzi wysoko — oddaje rzut z dystansu",
+    "UNDER": "Przejście obrońcy pod zasłoną — stosowane vs słabi rzucający",
+    "TRAP / DOUBLE": "Podwojenie",
+    "DENY / FOLLOW": "Odcięcie podania / podążanie za zawodnikiem przy zasłonach bez piłki",
+    "LOCK AND TRAIL": "Przyklejenie się i podążanie za rzucającym przy zasłonie bez piłki",
+    "SHADE HIM RIGHT/LEFT": "Ustawienie się tak, by zmusić do słabszej strony",
+    "BOX HIM OUT": "Zastawienie przy zbiórce",
+    "DOUBTS CLOSEOUT / STICK HAND CLOSEOUT / RUN OFF & REARVIEW CONTEST": "Trzy metody dobiegu wg oceny rzutowej ★/★★/★★★",
+    "TO (skrót w raportach)": "TRANSITION OFFENSE — uwaga: NIE turnover; w blokach statystycznych straty oznaczane są jako To's/TOV",
+    "LP": "Low post",
+    "CsC": "Coast to coast",
+    "SPAIN PNR": "Pick and roll z dodatkową zasłoną tylną na rolującego",
+    "DUCK IN": "Wejście dużego na pozycję pod koszem przy zmianie strony piłki",
+    "LEAK OUT": "Ucieczka do kontry jeszcze przed zakończeniem akcji obronnej"
+  },
+
+  "powiazania": {
+    "opponent_scouting_examples.json": "Dwie pełne realizacje tej metody — Köln (ProB) i Trefl Sopot (PLK).",
+    "scouting_report.json": "GATUNEK POKREWNY, ALE INNY — tamten to raport rekrutacyjny (czy pozyskać zawodnika), ten to raport przedmeczowy (jak pokonać zespół). Patrz sekcja rozroznienie_gatunkowe.",
+    "scouting_form.json": "Oficjalny arkusz oceny zawodnika (9 sekcji) — narzędzie rekrutacyjne, komplementarne do paperscoutu.",
+    "player_archetypes.json": "Tagi archetypów w depth charcie ([SLASHER], [ROLLING BIG], [SPOT UP SHOOTER]) to praktyczny, skrócony wariant archetypów z tamtego pliku.",
+    "game_concepts.json": "Koncepty M2 (spacing, timing, off-ball) są tu zoperacjonalizowane jako konkretne pytania do przeciwnika.",
+    "coaching_notes.json": "Notatki z klinik o obronie zasłon (Messina, Obradović, Shivek) opisują dokładnie te coverage'e, które raport diagnozuje.",
+    "m7_org_structure_coach_analysis.json": "Analiza trenera i DNA drużyny — advance scouting to jej praktyczne zastosowanie mecz po meczu."
+  }
+}

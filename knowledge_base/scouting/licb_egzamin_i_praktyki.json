@@ -1,0 +1,84 @@
+{
+  "_source": "Dwa dokumenty organizacyjne kursu na licencję trenera koszykówki klasy B, WSS im. K. Górskiego w Łodzi: „ZESTAWY PYTAŃ lic. B.doc\" (25 zestawów egzaminacyjnych) oraz „zaświadczenia o praktykach.doc\" (blankiet zaświadczenia).",
+  "_comment": "Warstwa egzaminacyjno-administracyjna kursu. Wartość merytoryczna leży w SAMEJ STRUKTURZE zestawów: 25 zestawów × 8 pytań, gdzie sześć pierwszych pytań jest zawsze tym samym szablonem zastosowanym do kolejnej umiejętności technicznej, a dwa ostatnie dotyczą psychopedagogiki i nauk o sporcie. To de facto spis treści całego programu szkolenia — lista 25 umiejętności, które kurs uznaje za kanon.",
+  "_program_use": "Lista 25 umiejętności to gotowa taksonomia elementów technicznych — bardzo bliska 27 umiejętnościom z Dziennika Młodych Talentów i planszom Akademii EPS. Nadaje się jako słownik referencyjny dla modułu diagnozy technicznej (kategorie umiejętności w karcie zawodnika). Szablon 6 pytań pokazuje, jakie ATRYBUTY każdej umiejętności warto trzymać w bazie: obwód nauczania, elementy techniczne, różnicowanie programowe, zabawa, ćwiczenie doskonalące, powiązana zdolność motoryczna.",
+
+  "kategoria": "LIC.B — egzamin i dokumentacja kursu",
+  "_prawa_autorskie": "Materiały objęte prawami autorskimi WSS im. K. Górskiego w Łodzi. Plik zawiera strukturalne notatki własne do użytku prywatnego.",
+
+  "struktura_zestawu_egzaminacyjnego": {
+    "liczba_zestawow": 25,
+    "pytan_w_zestawie": 8,
+    "szablon_pytan": {
+      "1": "Opisz obwód techniczny nauczania umiejętności [X]",
+      "2": "Wymień elementy techniczne umiejętności [X]",
+      "3": "Opisz różnicę programową w nauczaniu umiejętności [X]",
+      "4": "Opisz zabawę wykorzystującą umiejętność [X]",
+      "5": "Opisz ćwiczenie doskonalące umiejętność [X]",
+      "6": "Opisz, w jaki sposób należy kształtować dowolną zdolność motoryczną z wykorzystaniem umiejętności [X]",
+      "7": "Pytanie z zakresu PSYCHOPEDAGOGIKI (zmienne w każdym zestawie)",
+      "8": "Pytanie z zakresu NAUK O SPORCIE — anatomia, biomechanika, fizjologia, żywienie (zmienne)"
+    },
+    "_wniosek": "Pytania 1-6 potwierdzają, że każda umiejętność jest w tym systemie opisana sześcioma tymi samymi wymiarami — od obwodu nauczania, przez elementy składowe, po powiązaną zdolność motoryczną."
+  },
+
+  "kanon_25_umiejetnosci": [
+    "1. Podania w miejscu",
+    "2. Rzut z miejsca",
+    "3. Indywidualne poruszanie się bez piłki",
+    "4. Podania w biegu",
+    "5. Obrona zawodnika bez piłki — obrona „czarna\"",
+    "6. Obrona zawodnika bez piłki — kolejny wariant (niebieska)",
+    "7. Obrona zawodnika bez piłki — kolejny wariant (żółta)",
+    "8. Obrona ścięcia",
+    "9. Obrona zawodnika z piłką",
+    "10. Rzut z biegu po podaniu",
+    "11. Rzut z biegu po koźle",
+    "12. Poruszanie się w ataku bez piłki (wariant 1)",
+    "13. Poruszanie się w ataku bez piłki (wariant 2)",
+    "14. Zbiórka i wyrzut piłki",
+    "15. Zastawienie",
+    "16. Wyjście do rzutu",
+    "17. Gra 1x1 przodem do kosza",
+    "18. Gra 1x1 tyłem do kosza",
+    "19. Obrona pola 3 sekund",
+    "20. Kozłowanie w miejscu",
+    "21. Kozłowanie w biegu",
+    "22. Rzut z wyskoku",
+    "23. Podania (zakres specjalny)",
+    "24. Bieg do szybkiego ataku",
+    "25. Zbiórka w ataku"
+  ],
+
+  "przykladowe_pytania_psychopedagogiczne": [
+    "Opisz sposoby kształtowania koncentracji u zawodnika",
+    "Opisz sposoby budowania pozytywnych intencji u zawodnika i w zespole",
+    "Opisz sposoby budowania motywacji wewnętrznej",
+    "Opisz sposoby budowania pewności siebie u zawodnika",
+    "Opisz sposoby zarządzania własnymi emocjami i emocjami zawodnika",
+    "Co to jest stres, jakie jest jego podłoże i jak sobie z nim radzić"
+  ],
+  "_uwaga_psychopedagogika": "Pytania 7. odwzorowują wprost czynniki IMOPEKSIS (intencje, motywacja, pewność siebie, emocje, koncentracja) — potwierdza to, że kurs LIC.B jest osadzony w tej samej szkole metodycznej.",
+
+  "przykladowe_pytania_nauki_o_sporcie": [
+    "Wymień, jakie mięśnie są najbardziej wykorzystywane w czasie gry w koszykówkę; podaj przykłady ruchów z użyciem tych partii mięśniowych",
+    "Wymień wartości biomechaniczne w koszykówce; podaj przykład ruchu wpływającego na poprawę szybkości zawodnika",
+    "Opisz, w jaki sposób należy suplementować zawodnika w procesie budowania siły",
+    "Opisz, w jaki sposób reaguje układ nerwowy w procesie nauczania nowego nawyku ruchowego"
+  ],
+
+  "zaswiadczenie_o_praktykach": {
+    "charakter": "Blankiet administracyjny (pusty formularz) — bez treści merytorycznej.",
+    "pola": ["imię i nazwisko", "miejscowość i data", "nazwa instytucji i adres", "miejsce na opis odbytej praktyki", "miejsce na podpis/pieczęć"],
+    "_uwaga": "Zachowane w indeksie wyłącznie dla kompletności — dokument nie wnosi wiedzy dziedzinowej."
+  },
+
+  "powiazania": {
+    "licb_planowanie_struktura_konspekty.json": "Pytania 1 i 5 (obwód nauczania, ćwiczenie doskonalące) odsyłają wprost do opisanych tam procesów i konspektów.",
+    "licb_ocena_i_obserwacje.json": "Pytanie 2 (elementy techniczne umiejętności) to dokładnie zawartość arkuszy sprawdzianowych.",
+    "imopeksis_methodology.json": "Kanon 25 umiejętności pokrywa się w większości z 27 umiejętnościami Dziennika Młodych Talentów (te same obrony kolorowe, ścięcie, zastawienie, wyjście do rzutu, 1x1 przodem/tyłem).",
+    "teaching_fundamentals.json": "Konspekty Libicha realizują pytania 1-6 dla czterech z tych umiejętności.",
+    "book_imopeksis_hucinski.json": "Pytania psychopedagogiczne to bezpośrednie odwzorowanie rozdziałów tej książki.",
+    "licb_przepisy_gry.json": "Przepisy stanowią odrębny obszar egzaminacyjny kursu."
+  }
+}

@@ -1,0 +1,1148 @@
+{
+  "_source": "Next Draft Foundation — Moduł 7 (slajdy video + transkrypty audio 8 lekcji, lektor: Rafał Jóć, International Scout Denver Nuggets)",
+  "_topics": "Rola scouta w organizacji, struktura decyzyjna klubu, relacja GM-Scout-Trener, analiza trenera i jego preferencji, komunikacja z decydentami, wartość zawodnika, widełki zarobków Europa",
+  "_transkrypty_zrodla": [
+    "1. Struktura decyzyjna klubu i rola scouta",
+    "2. Zrozumieć trenera",
+    "3. Scouting pod system gry",
+    "4. Polityka klubu i współpraca z trenerami",
+    "5. Wycena zawodnika",
+    "6. Dlaczego scouci się mylą",
+    "7. Scouting i rozwój talentu w Akademii",
+    "8. Dlaczego fit ma znaczenie (final)"
+  ],
+
+  "rola_scouta_w_organizacji": {
+    "klucz": "Scout ≠ niezależny ekspert. Scout = narzędzie wspierające decyzje.",
+    "filtr_organizacji": {
+      "zasada": "Każda decyzja przechodzi przez FILTR ORGANIZACJI.",
+      "co_to_znaczy": "Scout nie podejmuje decyzji. Scout pomaga organizacji podejmować lepsze decyzje.",
+      "implikacja_praktyczna": "Twoja wartość = jakość informacji i rekomendacji, które trafiają do decydentów, nie sam fakt bycia na meczu."
+    },
+    "departamenty_organizacji": [
+      "właściciel",
+      "GM",
+      "head coach",
+      "dział analytics",
+      "scouting",
+      "performance / medical"
+    ],
+    "takeaway": "Scout pomaga organizacji podejmować lepsze decyzje."
+  },
+
+  "struktura_decyzyjna_klubu": {
+    "hierarchia": [
+      "OWNER",
+      "GM",
+      "HEAD COACH",
+      "SCOUTING + ANALYTICS",
+      "FINAL DECISION"
+    ],
+    "kto_za_co_odpowiada": {
+      "OWNER": {
+        "odpowiada_za": ["budżet", "kierunek organizacji", "presja wyniku"]
+      },
+      "GM": {
+        "odpowiada_za": ["roster construction", "kontrakty", "strategia"]
+      },
+      "HEAD_COACH": {
+        "odpowiada_za": ["system gry", "rotacja", "zaufanie do zawodników"]
+      },
+      "SCOUTING": {
+        "odpowiada_za": ["ewaluacja", "projekcja", "rekomendacje"]
+      },
+      "ANALYTICS": {
+        "odpowiada_za": ["trendy", "modele", "dane wspierające decyzje"]
+      }
+    },
+    "wniosek": "Scout i analityk to filtr danych, nie decydent końcowy. Rozumienie hierarchii pozwala skutecznie komunikować rekomendacje."
+  },
+
+  "relacja_gm_scout_head_coach": {
+    "trzy_perspektywy": {
+      "GM": {
+        "patrzy_na": ["wartość rynkową", "asset management", "timeline organizacji", "ryzyko kontraktu"],
+        "ikona_myślenia": "inwestycja, długoterminowa strategia finansowa"
+      },
+      "COACH": {
+        "patrzy_na": ["kto pomoże wygrywać dziś", "execution", "role", "zaufanie", "charakter"],
+        "ikona_myślenia": "czy mogę wygrać z tym zawodnikiem teraz"
+      },
+      "SCOUT": {
+        "patrzy_na": ["talent", "upside", "fit", "projekcja rozwoju"],
+        "ikona_myślenia": "kim zawodnik może być, nie tylko kim jest teraz"
+      }
+    },
+    "elite_scout": {
+      "definicja": "ELITE SCOUT: Rozumie perspektywę wszystkich stron.",
+      "co_to_znaczy_w_praktyce": "Gdy rekomenujesz zawodnika, musisz odpowiedzieć na pytania GM-a (wartość/kontrakt), trenera (rola/zaufanie) i własne (talent/projekcja). Jedna rekomendacja — trzy języki."
+    }
+  },
+
+  "czego_szuka_trener": {
+    "mit_obalony": "Trener nie szuka 'najbardziej utalentowanego' zawodnika.",
+    "co_trener_szuka": [
+      "zawodników do konkretnej roli",
+      "ludzi, którym może ufać",
+      "egzekucji systemu",
+      "decyzji pod presją",
+      "stabilności",
+      "komunikacji",
+      "profesjonalizmu"
+    ],
+    "kluczowe_cechy_wg_trenera": [
+      "ROLE FIT",
+      "TRUST",
+      "EXECUTION",
+      "TOUGHNESS",
+      "COMMUNICATION",
+      "STABILITY",
+      "PROFESSIONALISM"
+    ],
+    "najwazniejsze_pytanie_trenera": "\"Czy mogę wygrać z tym zawodnikiem?\"",
+    "lancuch_wygranej": ["SYSTEM", "PEOPLE", "PROCESS", "RESULTS"],
+    "implikacja_dla_scouta": "Raport musi odpowiedzieć na pytanie trenera, nie tylko na twoje. Zawodnik 'utalentowany' bez jasnej roli = trudna sprzedaż. Zawodnik z rolą + zaufaniem + execution = łatwa rozmowa."
+  },
+
+  "jak_analizowac_trenera": {
+    "cel": "Nie możesz dobrze scoutować zawodników, jeśli nie rozumiesz trenera.",
+    "process": ["ZROZUM SYSTEM", "ZROZUM TRENERA", "ZROZUM PRIORYTETY WYGRYWANIA"],
+    "cztery_metody": {
+      "1_obserwuj_trening": {
+        "co_obserwowac": [
+          "reakcje na błędy",
+          "komunikację z zawodnikami",
+          "tempo treningu",
+          "poziom detali",
+          "czego trener NIE toleruje",
+          "które elementy powtarza najczęściej"
+        ],
+        "pytania_do_zadania": [
+          "Czy trener ceni execution czy kreatywność?",
+          "Czy preferuje veterans czy upside?",
+          "Czy ufa zawodnikom podejmującym ryzyko?",
+          "Jak reaguje na brak effortu?",
+          "Jak ważna jest defense/spacing/pace?"
+        ]
+      },
+      "2_analizuj_historie_wspolpracy": {
+        "cel": "Z jakimi zawodnikami współpraca działała? Szukaj wzorców.",
+        "wzorce_do_szukania": [
+          "profile fizyczne",
+          "mentalność",
+          "rola",
+          "decision making",
+          "poziom profesjonalizmu"
+        ],
+        "red_flags_w_historii": [
+          "brak role acceptance",
+          "niski basketball IQ",
+          "słaba komunikacja",
+          "brak dyscypliny",
+          "problematyczny charakter"
+        ]
+      },
+      "3_rozmawiaj_z_asystentami": {
+        "dlaczego": "Asystenci często wiedzą najwięcej.",
+        "czego_sie_dowiedziec": [
+          "czego trener naprawdę szuka",
+          "jakie profile lubi",
+          "jakie są frustracje sztabu",
+          "komu trener ufa",
+          "jak wygląda communication style"
+        ],
+        "czego_coach_potrzebuje_przyklady": [
+          "więcej shootingu",
+          "lepszych decision makers",
+          "toughness",
+          "stabilności",
+          "leadershipu"
+        ]
+      },
+      "4_regularne_spotkania_z_trenerem": {
+        "zasada": "Elite scouting = constant alignment.",
+        "o_co_pytac": [
+          "czego potrzebuje roster?",
+          "które role są problemem?",
+          "co nie działa?",
+          "jak zmienia się system?",
+          "czego brakuje lineup?"
+        ]
+      }
+    }
+  },
+
+  "wymogi_trenera_profile_i_system": {
+    "zasada": "Scout musi znać DNA drużyny.",
+    "musisz_wiedziec": [
+      "jaki styl gry chce trener",
+      "jakie tempo gra drużyna",
+      "jakie profile są potrzebne",
+      "czego trener NIE toleruje",
+      "kto jest fundamentem zespołu"
+    ],
+    "dna_druzyny_elementy": ["system", "timing", "spacing / obrona", "profile zawodników"],
+    "przyklady_systemu_a_profil": {
+      "BALL_DOMINANT_GUARD": "→ potrzeba cutterów i shootingu",
+      "SWITCHING_DEFENSE": "→ potrzeba mobility i versatility",
+      "GRA_PRZEZ_CENTRA": "→ potrzeba spacingu wokół",
+      "SZYBKIE_TEMPO": "→ potrzeba decision makers"
+    },
+    "takeaway": "Nie scoutujesz zawodnika. Scoutujesz zawodnika dla konkretnego systemu."
+  },
+
+  "scouting_pod_system_gry": {
+    "zasada": "Ten sam zawodnik może wyglądać inaczej w różnych systemach.",
+    "kluczowe_pytania": [
+      "Czy jego skillset się skaluje?",
+      "Czy może pomagać bez piłki?",
+      "Czy jego obrona przetrwa wyższy poziom?",
+      "Czy system ukrywa jego słabości?"
+    ],
+    "context_matters": "Usage ≠ winning impact",
+    "porownanie_systemow": {
+      "SYSTEM_A_wolne_tempo_izolacje": {
+        "cechy": ["wysokie usage", "dużo piłki w rękach", "kreacja z piłką", "statystyki na plus"],
+        "efekt": "Wygląda lepiej (statystyki) — ale czy jest efektywniejszy?"
+      },
+      "SYSTEM_B_szybkie_tempo_team_basketball": {
+        "cechy": ["mniej piłki w rękach", "gra bez piłki", "decyzje pod presją", "wpływ na wygrane"],
+        "efekt": "Bardziej efektywny (winning impact) — mimo gorszych liczb"
+      }
+    },
+    "patrz_szerzej": {
+      "ROLA_W_SYSTEMIE": "A nie tylko liczby",
+      "JAK_TWORZY_WARTOSC": "Dla zespołu, nie tylko dla siebie",
+      "DOPASOWANIE_DO_FILOZOFII": "Trenera i organizacji",
+      "EFEKTYWNOSC_W_KONTEKSCIE": "I na wyższym poziomie"
+    },
+    "zadanie_scouta": "SYSTEM ZMIENIA OBRAZ ZAWODNIKA. Zadanie scouta: oddzielić talent od kontekstu."
+  },
+
+  "how_to_build_roster": {
+    "my_philosophy": {
+      "TEMPO": "Szybkość podejmowania decyzji",
+      "SPACING": "4-Out Mindset",
+      "DEFENSE": "Dyscyplina, komunikacja, wysiłek",
+      "TEAM_FIRST": "Rola > Statystyki",
+      "WINNING": "Nawyki wygrywają"
+    },
+    "profil_per_pozycja_import": {
+      "opis": "Import Players — Profiles (tabela dla PLK/I.Liga)",
+      "PG": {
+        "kategoria": "HANDLER",
+        "play_style_focus": "Play Up Tempo",
+        "primary_actions": "Slashing & Paint Touch",
+        "team_value": "PR Player: AST & Court Vision",
+        "shooting": "3pt Shooting: Spot / Dribble",
+        "defensive_focus": "Ball Pressure"
+      },
+      "SG": {
+        "kategoria": "OFF BALL PLAYER",
+        "play_style_focus": "3pt Shooting: Spot / Dribble",
+        "primary_actions": "PR (& ISO) Scorer",
+        "team_value": "Average Defender",
+        "shooting": "-",
+        "defensive_focus": "-"
+      },
+      "SF": {
+        "kategoria": "OFF BALL PLAYER",
+        "play_style_focus": "3pt Shooting",
+        "primary_actions": "Off Screen / Cut",
+        "team_value": "Rebounder (Off. / Def.)",
+        "shooting": "Shift to #4",
+        "defensive_focus": "-"
+      },
+      "PF": {
+        "kategoria": "OFF BALL PLAYER",
+        "play_style_focus": "3pt Shooting",
+        "primary_actions": "IQ – Extra PG",
+        "team_value": "LP / Punish Switches",
+        "shooting": "Rebounder (Off. / Def.)",
+        "defensive_focus": "Shift to #5"
+      },
+      "C": {
+        "kategoria": "BIG",
+        "play_style_focus": "Leaper",
+        "primary_actions": "Rebounder (Off. / Def.)",
+        "team_value": "Rim Protector",
+        "shooting": "Multiple PR D",
+        "defensive_focus": "-"
+      }
+    },
+    "kto_jest_kluczowy": {
+      "PRIMARY_PLAYMAKER": "Ustala tempo, tworzy przewagi",
+      "PRIMARY_SCORER": "Punktuje na każdym poziomie",
+      "DEFENSIVE_ANCHOR": "Nadaje charakter obronie",
+      "LEADER_VOICE": "Prowadzi zespół na boisku",
+      "SYSTEM_FIT_GUYS": "Wypełniają role, łączą wszystko"
+    },
+    "pytania_do_trenera_przy_budowie_skladu": {
+      "ROTATION": "Jaki jest plan rotacji? (9 + 1 Jolly)",
+      "MARKETS": "Z jakich rynków najczęściej pozyskujemy zawodników?",
+      "STYLE_OF_PLAY": "Jaki jest dominujący styl gry w lidze?",
+      "USA_POLISH": "Ilu zawodników z paszportem USA/Polska posiadamy? (Przykłady: Groselle, Petrasek, J. Washington)",
+      "2ND_DIVISION": "Jaki poziom 2. ligi warto monitorować pod kątem lokalnych talentów?",
+      "NCAA_PIPELINE": "Czy są polscy zawodnicy w NCAA kończący ścieżkę rozwoju?"
+    }
+  },
+
+  "jak_przedstawiac_rekomendacje": {
+    "zasada": "Scout nie sprzedaje opinii. Scout dostarcza decyzję.",
+    "final_message": "DOSTARCZ STRUKTURĘ, UZASADNIJ DECYZJĘ. POMÓŻ ORGANIZACJI WYGRAĆ.",
+    "struktura_7_krokow": {
+      "1_kim_jest_zawodnik": {
+        "opis": "Kim jest zawodnik?",
+        "elementy": ["Podstawowe informacje", "Tło koszykarskie", "Statystyki / osiągnięcia", "Kontekst (liga, rola, zespół)"]
+      },
+      "2_jaka_jest_jego_rola": {
+        "opis": "Jaka jest jego rola?",
+        "elementy": ["Primary role", "Secondary role", "W systemie ofensywnym", "W systemie defensywnym"]
+      },
+      "3_co_daje_od_razu": {
+        "opis": "Co daje od razu?",
+        "elementy": ["Mocne strony", "Co wniesie do zespołu", "Impact w pierwszym sezonie"]
+      },
+      "4_jakie_sa_ryzyka": {
+        "opis": "Jakie są ryzyka?",
+        "elementy": ["Słabe strony", "Red flags", "Ryzyka zdrowotne", "Ryzyka rozwoju", "Poziom niepewności"]
+      },
+      "5_jak_wyglada_projekcja": {
+        "opis": "Jak wygląda projekcja?",
+        "elementy": ["Floor / Ceiling", "Najbardziej prawdopodobny scenariusz", "Oś czasu rozwoju", "Porównania (comps)"]
+      },
+      "6_czy_pasuje_do_organizacji": {
+        "opis": "Czy pasuje do organizacji?",
+        "elementy": ["Fit do systemu gry", "Fit do kultury", "Potrzeby zespołu", "Timeline organizacji"]
+      },
+      "7_final_recommendation": {
+        "opis": "Final Recommendation",
+        "elementy": ["Rekomendacja końcowa", "Poziom pewności", "Zalecane działania"]
+      }
+    }
+  },
+
+  "jak_mowic_do_trenera_i_gm": {
+    "zasada": "Coach i GM słyszą różne rzeczy.",
+    "elite_communication": "Mów językiem odbiorcy.",
+    "jezyk_coacha": ["trust", "role", "matchups", "execution", "consistency"],
+    "jezyk_gm": ["value", "kontrakt", "upside", "timeline", "asset management"],
+    "praktyczna_implikacja": "Ta sama rekomendacja wymaga dwóch wersji: dla trenera (rola/matchupy/zaufanie) i dla GM-a (wartość rynkowa/kontrakt/upside). Scout, który mówi jednym językiem do wszystkich, traci wpływ na decyzje."
+  },
+
+  "praktyczne_porady_relacja_z_trenerem": {
+    "temat": "Jak budować zaufanie z trenerem",
+    "7_zasad": [
+      "1. Najpierw słuchaj",
+      "2. Poznaj filozofię trenera",
+      "3. Pytaj o role, nie nazwiska",
+      "4. Dawaj krótkie i konkretne informacje",
+      "5. Nie walcz o ego",
+      "6. Aktualizuj opinię",
+      "7. Rozumiej presję wyniku"
+    ],
+    "najwazniejsze_pytanie": "\"Czego potrzebujesz, żeby wygrywać?\"",
+    "komentarz": "Pytanie o rolę (nie o konkretne nazwisko) pozwala scoutowi zostawić przestrzeń na propozycję, a nie bronić jednego kandydata."
+  },
+
+  "miesieczne_spotkanie_scoutingowe": {
+    "nazwa": "Monthly Alignment Meeting",
+    "cel": "Aktualizacja potrzeb drużyny i alignment scoutingowy",
+    "struktura_6_krokow": {
+      "1_podsumowanie_ostatniego_miesiaca": {
+        "co_dzialalo": ["lineups", "role", "chemistry", "spacing", "communication"],
+        "co_nie_dzialalo": ["problemy matchupowe", "brak skillsetów", "rotacja", "execution"]
+      },
+      "2_aktualne_potrzeby_rosteru": {
+        "pytanie": "Czy zmieniły się priorytety?",
+        "potrzebujemy": ["shootingu?", "size?", "ball handlingu?", "defense versatility?", "leadershipu?", "energy z ławki?"]
+      },
+      "3_analiza_profili_zawodnikow": {
+        "MUST_HAVE": "cechy kluczowe dla systemu",
+        "NICE_TO_HAVE": "dodatkowe upsidy",
+        "RED_FLAGS": "czego unikamy?"
+      },
+      "4_rozwoj_aktualnych_zawodnikow": {
+        "pytania": ["KTO IDZIE W GÓRĘ?", "KTO STOI W MIEJSCU?", "KTO POTRZEBUJE INNEJ ROLI?"],
+        "rozmowa_o": ["confidence", "workload", "role acceptance", "progression"]
+      },
+      "5_scouting_update": {
+        "scout_przedstawia": ["nowe nazwiska", "update rynku", "zmiany wartości zawodników", "injury updates", "emerging prospects"]
+      },
+      "6_alignment_check": {
+        "najwazniejsze_pytania": [
+          "Czy dalej budujemy w tym samym kierunku?",
+          "Czy system się zmienia?",
+          "Czy potrzeby rosteru się zmieniły?",
+          "Czy scouting i coaching są aligned?"
+        ]
+      }
+    },
+    "final_takeaway": "Elite organizations: komunikują się regularnie, aktualizują potrzeby, i utrzymują alignment między scoutingiem a trenerem."
+  },
+
+  "polityka_i_realia_organizacyjne": {
+    "zasada": "Scouting to nie tylko koszykówka.",
+    "prawda": "Najlepszy zawodnik nie zawsze zostaje podpisany.",
+    "czynniki_wplywajace_na_decyzje": [
+      "BUDŻET",
+      "AGENT",
+      "WŁAŚCICIEL",
+      "TIMING RYNKU",
+      "KONTUZJE",
+      "PRESJA WYNIKU",
+      "RELACJE",
+      "EGO",
+      "STRATEGIA ORGANIZACJI"
+    ],
+    "realia_rynkowe": {
+      "salary_cap": "ogranicza opcje niezależnie od oceny talentu",
+      "agent_chce_gwarancji": "może blokować deal mimo dobrego fitu",
+      "wlasciciel_ma_inny_plan": "decyzje polityczne nadpisują ocenę sportową",
+      "kontuzja": "zmiana planów w ostatniej chwili",
+      "dobre_relacje": "więcej okazji — networking = przewaga informacyjna",
+      "presja_na_wyniki": "skraca horizon decyzyjny (short-termizm)"
+    },
+    "implikacja_dla_scouta": "Scout musi rozumieć kontekst organizacyjny, nie tylko oceniać talent. Rekomendacja bez uwzględnienia budżetu, agenta i strategii właściciela = rekomendacja oderwana od rzeczywistości."
+  },
+
+  "jak_wyliczyc_wartosc_zawodnika": {
+    "formula": "VALUE = TALENT + FIT + SCARCITY + MARKET TIMING",
+    "najwiekszy_blad": "Ocena zawodnika w oderwaniu od rynku.",
+    "finalny_wniosek": "Nie każdy dobry zawodnik jest dobry DLA CIEBIE. Liczy się kontekst, rynek i strategia.",
+    "trzy_filary": {
+      "1_poziom_sportowy": {
+        "komponenty": ["IMPACT", "PRODUCTION", "EFFICIENCY", "SCALABILITY", "PLAYOFF TRANSLATION"],
+        "zasada": "Ważne nie tylko co zawodnik robi, ale jak przekłada się to na zwycięstwa."
+      },
+      "2_wiek_i_potencjal": {
+        "mlodszy_zawodnik": {
+          "cechy": ["większy upside", "potencjalny asset", "możliwość rozwoju"],
+          "ryzyko": "większe (mniej przewidywalny)"
+        },
+        "starszy_zawodnik": {
+          "cechy": ["większa przewidywalność", "doświadczenie", "leadership"],
+          "ryzyko": "mniejsze (znany produkt)"
+        },
+        "zasada": "Wiek wpływa na ryzyko, potencjał i wartość rynkową."
+      },
+      "3_scarcity": {
+        "zasada": "Czego brakuje na rynku — to często najbardziej wpływa na cenę.",
+        "drogie_profile_przyklad": ["Elite PG", "Mobilny Center", "Elite Shooting", "Two-Way Wings"]
+      }
+    }
+  },
+
+  "w_koszykowce_kosztuje": {
+    "zasada_rynkowa": "Rynek nie płaci za potencjał. Rynek płaci za to, czego nie może łatwo znaleźć. SCARCITY = VALUE",
+    "dlaczego_drodzy": "Bo trudno ich zastąpić.",
+    "cztery_drogie_profile": {
+      "ELITE_PG": {
+        "cechy": ["decision making", "control game", "leadership", "late game execution"]
+      },
+      "SIZE_AND_MOBILITY_C": {
+        "cechy": ["rim protection", "switchability", "vertical spacing"]
+      },
+      "ELITE_SHOOTING": {
+        "cechy": ["spacing zawsze ma wartość"]
+      },
+      "TWO_WAY_WINGS": {
+        "cechy": ["najrzadszy profil w nowoczesnej koszykówce"]
+      }
+    },
+    "rynek_placi_za": {
+      "RARITY": "rzadkość na rynku",
+      "SCALABILITY": "możliwość rozwoju i skalowania",
+      "PLAYOFF_SURVIVAL": "zdolność do gry w najważniejszych momentach",
+      "VERSATILITY": "wielowymiarowość i elastyczność",
+      "RELIABILITY": "niezawodność i dostępność"
+    }
+  },
+
+  "jak_dowiadywac_sie_o_zarobkach": {
+    "filozofia": "INFORMACJE TO WALUTA. BUDUJ KONTA, DAWAJ WARTOŚĆ, BĄDŹ DYSKRETNY.",
+    "trzy_metody": {
+      "1_relacje_i_networking": {
+        "zrodla": ["Agenci", "GM-owie", "Trenerzy", "Inni scoutowie", "Zawodnicy"],
+        "zasada": "Relacje zawsze wygrywają z danymi publicznymi."
+      },
+      "2_buduj_reputacje": {
+        "z_kim_dziela_sie_informacjami": ["profesjonalnymi", "dyskretnymi", "wartościowymi"],
+        "zasada": "Zanim ktoś powie Ci coś ważnego, musi Ci zaufać."
+      },
+      "3_nie_pytaj_wprost_o_pieniadze": {
+        "zamiast": "\"Ile zarabia?\"",
+        "pytaj": [
+          "\"Jaki tier finansowy?\"",
+          "\"Jaki rynek?\"",
+          "\"Jakie były oczekiwania?\"",
+          "\"EuroCup level salary?\"",
+          "\"Rotation money czy starter money?\""
+        ],
+        "zasada": "Bądź inteligentny, nie nachalny. Informacje przychodzą do tych, którzy nie wyglądają jak sprawdzający cennik."
+      }
+    },
+    "widełki_zaleza_od": [
+      "PASZPORTU", "WIEKU", "DOŚWIADCZENIA", "EUROPEJSKIEGO RESUME",
+      "POZIOMU LIGI", "AVAILABILITY", "TIMINGU RYNKU"
+    ]
+  },
+
+  "orientacyjne_poziomy_rynku_europa": {
+    "_uwaga": "Orientacyjne widełki zarobków — zależą od wielu czynników (paszport/wiek/doświadczenie/dostępność/negocjacje)",
+    "poziomy": {
+      "PLK_sredni_starter": {
+        "wynagrodzenie": "ok. 3–8 tys. € miesięcznie",
+        "profil": ["solidny zawodnik rotacji", "ograniczony impact", "mniej doświadczenia międzynarodowego"]
+      },
+      "TOP_PLK": {
+        "wynagrodzenie": "10–20 tys. € miesięcznie+",
+        "profil": ["kluczowy zawodnik zespołu", "większy impact na wynik", "doświadczenie i stabilność"]
+      },
+      "EUROCUP": {
+        "wynagrodzenie": "150–500 tys. € za sezon",
+        "profil": ["regularna rotacja", "międzynarodowe doświadczenie", "wysoki poziom sportowy", "widoczność na rynku"]
+      },
+      "EUROLEAGUE": {
+        "wynagrodzenie": "500 tys. € – kilka mln € netto za sezon",
+        "profil": ["topowy poziom sportowy", "duża presja i oczekiwania", "ekspozycja międzynarodowa", "ograniczona liczba miejsc = wysoka cena"]
+      }
+    },
+    "czynniki_wplywajace_na_wynagrodzenie": [
+      "PERFORMANCE (wpływ na wynik)",
+      "FIT (dopasowanie do zespołu)",
+      "POTENCJAŁ I ROZWÓJ",
+      "DOSTĘPNOŚĆ NA RYNKU",
+      "PODAŻ VS POPYT NA DANE PROFILE"
+    ],
+    "zasady": [
+      "KONTRAKT ≠ WARTOŚĆ. Zawsze oceniaj: czy daje więcej niż kosztuje.",
+      "Rynek płaci za rzadkość, nie tylko za talent.",
+      "Widełki zależą też od: paszportu / okna transferowego / negocjacji i relacji"
+    ]
+  },
+
+  "dlaczego_dobrzy_skauci_nie_trafiaja": {
+    "zasada": "Dobra ewaluacja ≠ sukces transferu.",
+    "takeaway": "Scouting ocenia prawdopodobieństwo. Nie przewiduje przyszłości.",
+    "7_powodow_niepowodzenia_transferu": {
+      "1_zly_fit": "Nie pasuje do systemu lub kultury",
+      "2_brak_cierpliwosci": "Za mało czasu na rozwój i adaptację",
+      "3_zmiana_trenera": "Nowy trener, nowa filozofia, nowe priorytety",
+      "4_zla_rola": "Niewłaściwa rola ogranicza potencjał",
+      "5_problemy_mentalne": "Mindset, dojrzałość, koncentracja, dyscyplina",
+      "6_chaos_organizacyjny": "Brak struktury, niestabilność, złe decyzje",
+      "7_brak_developmentu": "Brak planu, zasobów lub konsekwencji w rozwoju"
+    }
+  },
+
+  "scouting_nie_tylko_identyfikacja_talentu": {
+    "zasada_elite": "SCOUTING NIE KOŃCZY SIĘ NA ZNALEZIENIU ZAWODNIKA.",
+    "prawda": "Dobry scouting bez dobrego developmentu i integracji często kończy się niepowodzeniem.",
+    "najwiekszy_blad_organizacji": "Wiele klubów dobrze znajduje zawodnika, ale źle go wykorzystuje.",
+    "efekty_bledu": ["zły fit", "chaos komunikacyjny", "brak confidence", "brak role clarity", "development stagnation"],
+    "3_filary_elite_scoutingu": {
+      "1_player_identification": {
+        "komponenty": ["identyfikacja talentu", "ewaluacja", "projekcja", "fit do organizacji", "character/mindset", "basketball IQ", "physical profile"]
+      },
+      "2_player_development": {
+        "pytania_do_organizacji": [
+          "Czy rozwija mocne strony?",
+          "Czy poprawia słabości?",
+          "Czy buduje confidence?",
+          "Czy daje odpowiednią rolę?",
+          "Czy tworzy plan rozwoju?"
+        ]
+      },
+      "3_lineup_integration": {
+        "pytanie": "Czy zawodnik został dobrze wykorzystany?",
+        "elementy": ["odpowiednie lineups", "spacing", "role clarity", "chemistry", "usage", "partnerzy na boisku", "odpowiedni system gry"]
+      }
+    },
+    "top_to_bottom_synergy": {
+      "lancuch": ["WŁAŚCICIEL", "GM", "TRENER", "SCOUTING", "ANALYTICS", "PLAYER DEVELOPMENT", "PERFORMANCE STAFF"],
+      "zasada": "ALIGNED ORGANIZACJA = LEPSZE DECYZJE = WIĘKSZA SZANSA NA SUKCES"
+    },
+    "zawodnik_powinien_slyszec_te_sama_wizje_od_wszystkich": [
+      "jaka jest jego rola?",
+      "czego się od niego oczekuje?",
+      "jak ma pomagać wygrywać?",
+      "jak wygląda jego development plan?"
+    ]
+  },
+
+  "elite_alignment_cwiczenia": {
+    "zasada_najlepszych_organizacji": "Nie tylko scoutują talent. Tworzą wspólny język organizacji.",
+    "cytat": "ALIGNMENT CREATES CLARITY. CLARITY CREATES WINNING.",
+    "regularnie_synchronizuja": ["SCOUTING", "HEAD COACH", "GM", "ANALYTICS", "PLAYER DEVELOPMENT"],
+    "7_cwiczen_i_praktyk": {
+      "1_role_and_priorities_board": {
+        "kto": "Coach + GM + Scouting",
+        "co_ukladaja": ["priorytety rosteru 1–12", "role każdego zawodnika", "must-have skills", "czego brakuje lineupom"],
+        "pytania": ["kto zamyka mecze?", "kto może grać playoff minutes?", "kto skaluje się obok gwiazd?", "kto jest replacement level?", "gdzie mamy redundancy?"]
+      },
+      "2_lineup_identity_exercise": {
+        "cel": "Organizacja definiuje jakie lineups chce mieć",
+        "typy_lineup": {
+          "ALL_SWITCH": ["versatility", "mobility", "size"],
+          "SHOOTING": ["spacing", "quick decisions"],
+          "BIG": ["rebounding", "physicality"],
+          "SMALL_FAST": ["pace", "transition", "pressure"]
+        },
+        "pytania": ["jakie lineups wygrywają?", "czego brakuje?", "które lineups survive in playoffs?"]
+      },
+      "3_player_archetype_meeting": {
+        "zasada": "Scout nie przedstawia nazwisk. Scout przedstawia profile.",
+        "przyklad": ["backup PG organizer", "switchable wing", "mobile rim protector", "elite movement shooter"],
+        "elite_org_zasada": "Najpierw definiują potrzebę, potem szukają nazwisk."
+      },
+      "4_what_we_dont_want": {
+        "cel": "Bardzo ważne ćwiczenie: czego nie chcemy?",
+        "red_flags": ["low IQ", "poor communication", "poor role acceptance", "non-shooters", "poor conditioning", "low professionalism"],
+        "zasada": "Często łatwiej: określić czego unikać, niż czego szukać."
+      },
+      "5_playoff_translation_discussion": {
+        "zasada": "Każdy zawodnik musi przejść filtr playoff basketball.",
+        "pytania": [
+          "Czy przetrwa switching?",
+          "Czy może być targetowany?",
+          "Czy pomaga bez piłki?",
+          "Czy da się go ukryć defensywnie?",
+          "Czy jego skillset skaluje się pod presją?"
+        ],
+        "wniosek": "PLAYOFFY WERYFIKUJĄ PRAWDZIWĄ WARTOŚĆ ZAWODNIKA."
+      },
+      "6_development_alignment": {
+        "cel": "Wszyscy muszą wiedzieć: jak rozwijamy zawodnika.",
+        "ustala": ["role short term", "role long term", "priorities skillowe", "development checkpoints", "communication plan"],
+        "zasada": "Jasny plan = lepszy rozwój = większa wartość."
+      },
+      "7_monthly_alignment_meeting": {
+        "agenda": ["SCOUTING UPDATE", "ZMIANY RYNKU", "PROBLEMY ROSTERU", "EMERGING NEEDS", "CHEMISTRY CONCERNS", "ROLE CHANGES"]
+      }
+    }
+  },
+
+  "moje_najwieksze_pomylki_i_lekcje": {
+    "filozofia": "Każdy scout popełnia błędy. Najważniejsze: czy potrafisz się z nich uczyć.",
+    "cytat": "Scouting is not about being perfect. It's about learning faster than the market.",
+    "zasada": "DOBRY WYBÓR? → LEKCJA. ZŁY WYBÓR? → JESZCZE WIĘKSZA LEKCJA.",
+    "case_study_nurkic_vs_jokic": {
+      "blad_scouta": "Zbyt duży fokus na fizyczności, gotowości, upside atletycznym",
+      "niedocenione_u_jokica": ["środowisko", "mentalność", "emocjonalna stabilność", "consistency", "podejście do rozwoju"],
+      "lekcja": "Talent bez stabilności nie zawsze wygrywa."
+    },
+    "case_study_juancho_hernangomez": {
+      "blad_scouta": "Zachłyśnięcie się workoutami, treningami indywidualnymi, shootingiem bez presji",
+      "problem_game_translation": ["physical pressure", "decyzje w prawdziwej grze", "impact bez komfortowych warunków"],
+      "lekcja": "Workout player ≠ winning player."
+    },
+    "case_study_facu_campazzo": {
+      "problem": "Nie chodziło o talent.",
+      "problemem_byl": ["fit", "potrzeby rosteru", "size", "physicality", "defensywny matchup level NBA"],
+      "lekcja": "Nie każdy dobry zawodnik jest dobrym zawodnikiem dla TWOJEGO zespołu."
+    },
+    "najwieksza_lekcja_scoutingu": {
+      "nie_oceniaj_tylko": ["talentu", "statystyk", "workoutów"],
+      "ocen_takze": ["środowisko", "mentalność", "rolę", "scalability", "reakcje pod presją", "fit do organizacji"]
+    },
+    "elite_scouts": "Nie unikają błędów. Elite scouts uczą się szybciej od innych."
+  },
+
+  "case_study_talent_vs_fit": {
+    "pytanie": "Masz wybrać: bardziej utalentowanego zawodnika VS mniej utalentowanego, ale idealnie pasującego do systemu.",
+    "profil_A_bardziej_utalentowany": {
+      "talent": "★★★★★", "potencjal": "★★★★☆", "umiejetnosci": "★★★★☆",
+      "doswiadczenie": "★★☆☆☆", "fit_do_systemu": "★☆☆☆☆"
+    },
+    "profil_B_lepszy_fit": {
+      "talent": "★★☆☆☆", "potencjal": "★★☆☆☆", "umiejetnosci": "★★★☆☆",
+      "doswiadczenie": "★★★☆☆", "fit_do_systemu": "★★★★★"
+    },
+    "pytania_decyzyjne": [
+      "Kto pomoże bardziej?",
+      "Short term vs long term?",
+      "Co zrobi trener?",
+      "Co zrobi GM?",
+      "Co jest ważniejsze dla organizacji?"
+    ],
+    "wniosek": "Fit do systemu często wygrywa z surowym talentem — szczególnie w krótkim terminie i w europejskich realiach."
+  },
+
+  "case_study_coach_request_scouting": {
+    "sytuacja": "Coach mówi: Potrzebuję: BACKUP PG, SHOOTING WING, MOBILE BIG",
+    "cel": "Znaleźć nie tylko talent, ale odpowiedź na potrzeby trenera.",
+    "profile_rol": {
+      "BACKUP_PG": ["kontrola tempa", "decyzje pod presją", "Pick & Roll zarządzanie", "nie traci piłek", "organizuje z ławki"],
+      "SHOOTING_WING": ["3PT threat", "ruch bez piłki", "atak z różnych pozycji", "broni na obwodzie", "wszechstronność"],
+      "MOBILE_BIG": ["biega w transition", "broni w przestrzeni", "gra 1 na 1 w ataku", "aktywny na zbiórkach", "ustawia screeny i rolluje"]
+    },
+    "twoje_zadanie_4_pytania": {
+      "1_jakie_profile_szukasz": "Jakie cechy są kluczowe? Jakie są must-have, a jakie nice-to-have?",
+      "2_pytania_do_trenera": "Jakie są priorytety systemu? Jakie non-negotiables? Jakich sytuacji brakuje w składzie?",
+      "3_czego_unikasz": "Jakich typów zawodników nie pasują do systemu? Jakie ryzyka są nie do zaakceptowania?",
+      "4_idealny_fit": "Jak zawodnik wpływa na wygrywanie od pierwszego dnia? Jak rozwija się w tym systemie?"
+    }
+  },
+
+  "skauting_w_akademii": {
+    "temat": "Kogo naprawdę rozwijać — talent evaluation w młodzieżowej koszykówce",
+    "najwiekszy_blad": "Ocenianie tylko tego, kto jest najlepszy DZISIAJ.",
+    "takeaway": "Największy talent U14 nie zawsze będzie najlepszym seniorem.",
+    "elite_youth_scouting_ocen": [
+      "potencjał rozwoju",
+      "mindset",
+      "szybkość uczenia",
+      "reakcję na coaching",
+      "motor i work ethic",
+      "decision making",
+      "adaptability",
+      "upside fizyczny"
+    ],
+    "pytania_dla_trenera_akademii": [
+      "Kto rozwija się najszybciej?",
+      "Kto kocha koszykówkę?",
+      "Kto reaguje dobrze na trudność?",
+      "Kto ma cechy skalowalne na wyższy poziom?",
+      "Kto pomaga wygrywać bez piłki?"
+    ],
+    "red_flags_akademia": [
+      "dominacja fizyczna bez skillu",
+      "brak coachability",
+      "ego",
+      "słaba koncentracja",
+      "brak nawyków pracy"
+    ],
+    "co_liczy_sie_dlugoterminowo": ["CHARAKTER", "NAWYKI", "INTELIGENCJA BOISKOWA", "PRACA", "ROZWÓJ"]
+  },
+
+  "zarzadzanie_talentem_sciezka_rozwoju": {
+    "zasada": "Development musi być zaplanowany.",
+    "wniosek": "Najlepsze akademie: Nie rozwijają 'gwiazd'. Rozwijają profesjonalistów.",
+    "kazdy_zawodnik_powinien_miec": [
+      "indywidualny plan rozwoju",
+      "jasno określoną rolę",
+      "priorytety skillowe",
+      "cele krótko- i długoterminowe",
+      "monitoring progresu"
+    ],
+    "development_pathway": {
+      "U14_U16_fundamenty": ["decision making", "skill development", "ruch bez piłki", "spacing", "habits"],
+      "U17_U19_specjalizacja": ["role", "physicality", "tactical understanding", "efficiency"],
+      "SENIOR_PRO_translation": ["impact basketball", "role acceptance", "consistency", "winning habits"]
+    }
+  },
+
+  "praktyczne_sposoby_rozwijania_talentu": {
+    "zasada": "Talent rozwija się przez ekspozycję.",
+    "takeaway": "Development = environment + habits + repetitions.",
+    "4_narzedzia": {
+      "VIDEO_WORK": ["analiza własnych meczów", "nauka decision making", "klipy bez piłki", "budowanie basketball IQ"],
+      "OGLADANIE_PLK_1LM": {
+        "cel": "Ucz zawodników jak wygląda senior basketball",
+        "elementy": ["tempo seniorów", "spacing", "komunikacja", "role players", "physicality"]
+      },
+      "TRENINGI_ZE_STARSZYMI_PRO": {
+        "opis": "Największy przyspieszacz rozwoju",
+        "elementy": ["tempo decyzji", "kontakt fizyczny", "adaptacja", "learning through struggle"]
+      },
+      "PRACA_INDYWIDUALNA": {
+        "opis": "Nie tylko skill workout",
+        "elementy": ["footwork", "reads", "finishing", "shooting under pressure", "game situations"]
+      }
+    }
+  },
+
+  "final_takeaway_m7": {
+    "haslo": "ELITE SCOUTING = ELITE ALIGNMENT",
+    "final_quote": "Talent matters. But fit, trust and alignment win.",
+    "najlepsi_scoutowie": [
+      "rozumieją organizację",
+      "rozumieją trenera",
+      "rozumieją role",
+      "rozumieją fit",
+      "potrafią komunikować rekomendacje",
+      "pomagają organizacji podejmować lepsze decyzje"
+    ],
+    "elite_alignment_checklist": ["ORGANIZACJA", "TRENER", "ROLE", "FIT", "KOMUNIKACJA", "LEPSZE DECYZJE"],
+    "wizja_organizacji": {
+      "filary": ["VISION", "CULTURE", "PLAYER DEVELOPMENT", "WINNING"],
+      "procesy": ["TALENT IDENTIFICATION", "DEVELOPMENT PATHWAY", "ROLE CLARITY", "WINNING TOGETHER"]
+    }
+  },
+
+  "bonus_indywidualny_plan_rozwoju": {
+    "_typ": "szablon — formularz do wypełnienia",
+    "slogan": "PLAN. PRACUJ. ANALIZUJ. ROŚNIJ.",
+    "pola_naglowka": ["Zawodnik", "Pozycja", "Data", "Trener", "Zespół/Akademia", "Sezon"],
+    "7_sekcji": {
+      "1_mocne_strony": "Lista 5 mocnych stron zawodnika",
+      "2_priorytety_skillowe": "Priorytet 1–5 (umiejętności do pracy)",
+      "3_weekly_focus": {
+        "opis": "Tydzień 1–4: Focus Techniczny / Focus Taktyczny / Focus Mentalny i Nawyki"
+      },
+      "4_video_goals": [
+        "Co chcę poprawić w mojej grze?",
+        "Jakie sytuacje chcę lepiej rozumieć?",
+        "Jakie klipy chcę regularnie analizować?",
+        "Czego chcę unikać?"
+      ],
+      "5_physical_goals": ["Siła", "Szybkość", "Wytrzymałość", "Mobilność", "Cel fizyczny na ten kwartał"],
+      "6_mental_goals": [
+        "Moje nawyki",
+        "Jak chcę reagować na błędy?",
+        "Moja rutyna przed meczem / treningiem",
+        "Na czym chcę zbudować pewność siebie?",
+        "Mój mentalny cel na ten kwartał"
+      ],
+      "7_quarterly_review": {
+        "czestotliwosc": "co 3 miesiące",
+        "pytania": ["Co poszło dobrze?", "Nad czym muszę jeszcze pracować?", "Moje największe lekcje", "Plan na kolejny kwartał"]
+      }
+    },
+    "tracker_nawykow": {
+      "dni": ["PN", "WT", "ŚR", "CZW", "PT", "SB", "ND"],
+      "kategorie": ["TRENING DODATKOWY", "ANALIZA WIDEO", "PRACA NAD SŁABOŚCIAMI", "MOBILNOŚĆ / REGENERACJA", "MENTALNA RUTYNA"]
+    },
+    "cytat": "ROZWÓJ TO CODZIENNE DECYZJE. MAŁE KROKI. DUŻE WYNIKI."
+  },
+
+  "bonus_roster_building_board": {
+    "_typ": "szablon — formularz do wypełnienia",
+    "slogan": "BUILD THE RIGHT TEAM. RIGHT ROLES. RIGHT FIT.",
+    "pola_naglowka": ["TEAM", "DATE", "SYSTEM/STYLE", "COACH"],
+    "tabela_pozycji": {
+      "pozycje": ["PG (Point Guard)", "SG (Shooting Guard)", "SF (Small Forward)", "PF (Power Forward)", "C (Center)"],
+      "wiersze_oceny": ["ROLE", "SHOOTING (1-5★)", "CREATION (1-5★)", "DEFENSE (1-5★)", "BASKETBALL IQ (1-5★)", "LEADERSHIP (1-5★)", "AGE", "AGE CURVE (wykres 18-34+)"]
+    },
+    "dolna_sekcja": {
+      "roster_notes_priorities": "3 punkty notatek",
+      "team_needs": "Lista 1-6 potrzeb",
+      "balance_check": [
+        "SHOOTING BALANCE",
+        "CREATION BALANCE",
+        "DEFENSIVE BALANCE",
+        "ATHLETICISM",
+        "EXPERIENCE / LEADERSHIP",
+        "AGE CURVE HEALTHY"
+      ]
+    }
+  },
+
+  "t_denver_nuggets_skala_organizacji": {
+    "_zrodlo": "Transkrypt 1 — Struktura decyzyjna",
+    "front_office": "Ponad 40 osób w szeroko rozumianym front office Denver Nuggets.",
+    "scoutowie": "Ponad 20 scoutów — trudno zmieścić się w jednym pomieszczeniu, o spotkaniu na żywo nie wspominając.",
+    "wnioski_dla_scoutow": [
+      "Im większa organizacja, tym ważniejszy jest dobry flow informacji.",
+      "Łatwo wpaść w szum informacyjny — trzeba umieć zebrać myśli i przekazywać je precyzyjnie.",
+      "Dobry raport i umiejętność przekonywania do swojej wizji to fundament w profesjonalnej organizacji.",
+      "Brak organizacji pracy = błędy, pomijanie ważnych danych."
+    ],
+    "implikacja_dla_mniejszych_klubow": "Nawet w mniejszych ligach (PLK, I liga) te same zasady — scout, który nie umie komunikować wiedzy, nie jest przydatny niezależnie od umiejętności oceny zawodnika."
+  },
+
+  "t_trener_najblizej_ogniska": {
+    "_zrodlo": "Transkrypt 1 — Struktura decyzyjna",
+    "metafora": "Trener jest NAJBLIŻEJ OGNISKA — może być poparzony.",
+    "co_to_oznacza": "Trener jest na linii frontu, codziennie z zawodnikami, rozmawia z nimi, widzi ich w trudnych momentach — stąd jego perspektywa jest bardziej subiektywna niż scoutów.",
+    "trener_jako_straznik_szatni": "Trener stoi na straży szatni: komunikacja, profesjonalizm, atmosfera między zawodnikami — to jego odpowiedzialność.",
+    "dlaczego_trener_moze_byc_subiektywny": [
+      "Codzienna ekspozycja na zachowanie zawodnika — jedna sytuacja może wpłynąć na opinię.",
+      "Ocenia przez pryzmat osobowości i przywar, nie tylko koszykówki.",
+      "Pracuje pod presją wyniku — chce bezpieczeństwa i spokoju.",
+      "Dlatego woli zawodnika 'trudnego' w obsłudze zastąpić prostszym w prowadzeniu, nawet gorszym koszykarsko."
+    ],
+    "implikacja_dla_scouta": "Nie zakładaj, że trener chce najlepszego talentu. Trener chce gracza, któremu może ufać, który nie będzie problemem i który egzekwuje system."
+  },
+
+  "t_konflikty_z_braku_komunikacji": {
+    "_zrodlo": "Transkrypt 1 — Struktura decyzyjna",
+    "glowna_przyczyna_konfliktow": "Konflikty między scoutem, GM i trenerem wynikają NIE ze złej woli, ale z braku komunikacji, braku zrozumienia wzajemnej perspektywy i braku regularnych spotkań.",
+    "rozwiazanie": [
+      "System regularnych spotkań (monthly alignment meetings).",
+      "Wspólny język — każda strona musi rozumieć, czego szuka druga.",
+      "Scout musi wejść w buty trenera i GM-a — czytać ich perspektywy."
+    ],
+    "zasada_wazna": "GM nie chce słyszeć tego co scout. GM chce słyszeć odpowiedzi na swoje pytania. Trener nie chce listy talentów. Trener chce odpowiedzi: 'Czy z tym graczem mogę wygrywać?'"
+  },
+
+  "t_jak_absorbuja_informacje_decydenci": {
+    "_zrodlo": "Transkrypt 4 — Polityka klubu i współpraca z trenerami",
+    "obserwacja": "Każdy GM, z którym Rafał Jóć pracował, w INNY sposób absorbował wiedzę i rekomendacje.",
+    "rozne_formaty": [
+      "Głosówki / voice messages",
+      "Face-to-face meetings",
+      "Maile z raportami"
+    ],
+    "wniosek_dla_scouta": "Nie narzekaj, że szef nie czyta twoich rekomendacji. Dostosuj FORMAT do odbiorcy — to jest część twojej pracy.",
+    "praktyczna_zasada": "Dobry scout robi wszystko, żeby pomóc organizacji — w tym komunikuje swoje rekomendacje w sposób najłatwiej przyswajalny przez konkretną osobę."
+  },
+
+  "t_leverage_trenera_i_relacja": {
+    "_zrodlo": "Transkrypt 4 — Polityka klubu i współpraca z trenerami",
+    "leverage_trenera": "Trener ma narzędzia: minuty, zmiany, rotacje, line-upy, wykorzystanie gracza — czyli decyduje o sukcesie KAŻDEGO zawodnika.",
+    "kluczowa_zasada": "NIGDY nie rywalizuj z trenerem. To zawsze toksyczne.",
+    "dlaczego_rywalizacja_jest_zla": [
+      "Trener i scout muszą patrzeć w tym samym kierunku.",
+      "Jeśli walczą o ego, to organizacja przegrywa.",
+      "Trener GM prezes — nie mogą ze sobą walczyć."
+    ],
+    "prawo_weta": {
+      "opis": "Praktyka 'veto right' — dobra zasada w relacji scout–dyrektor sportowy–trener.",
+      "zasada_1": "Nie podpisywać zawodnika, którego trener KATEGORYCZNIE odrzuca.",
+      "zasada_2": "Nie podpisywać zawodnika, wobec którego dyrektor sportowy / scouting mówi KATEGORYCZNIE NIE.",
+      "powod": "Obie strony mają swoje racje. Narzucanie decyzji tworzy środowisko 'udowadniania', kto miał rację — to niszczy organizację.",
+      "wyjatki": "Czasami jedna strona ma informacje, których druga nie widzi — dlatego veto musi być kategoryczne, nie rutynowe."
+    },
+    "jak_budowac_zaufanie_trenera_szczegoly": [
+      "Pokaż, że znasz i rozumiesz filozofię trenera ZANIM zaproponujesz zawodnika.",
+      "Oglądaj treningi, pytaj asystentów, patrz z jakimi graczami trener dobrze pracuje.",
+      "Nie narzucaj konkretnych nazwisk — pytaj o ROLE i PROFILE.",
+      "Dawaj 2-3 konkretne, krótkie rekomendacje — nie zalewaj 30 nazwiskami.",
+      "'Więcej' nie zawsze znaczy 'lepiej'.",
+      "Przyznawaj się do złych rekomendacji — to buduje wiarygodność.",
+      "Potrafi zrobić krok w tył i powiedzieć: 'Widzę twoją rację, zróbmy jak chcesz.'"
+    ]
+  },
+
+  "t_timing_kontraktu_ten_sam_zawodnik": {
+    "_zrodlo": "Transkrypt 5 — Wycena zawodnika",
+    "przyklad_konkretny": {
+      "ten_sam_zawodnik_center": {
+        "MAJ": "120 000 € — dużo propozycji, dobra pozycja negocjacyjna",
+        "SIERPIEN": "80 000 € — opcji jest mniej, rynek się uspokoił",
+        "LUTY_w_sezonie": "150 000 € — otwiera się miejsce po kontuzji, pilna potrzeba"
+      },
+      "wniosek": "TEN SAM ZAWODNIK — a timing rynku i moment sezonu kompletnie zmieniają cenę."
+    },
+    "implikacja_dla_scouta": [
+      "Monitoruj rynek przez cały rok, nie tylko w oknie transferowym.",
+      "Zawodnik podpisany w odpowiednim czasie kosztuje znacznie mniej.",
+      "Bądź gotowy PRZED potrzebą — szukanie w chaosie (np. po kontuzji) to droższe rozwiązanie."
+    ],
+    "sztucznosc_rynku": "Rynek koszykarski jest sztuczny i trudny do przewidzenia — sterowany przez agentów, timing i aktualne zapotrzebowanie na dane profile. Dobry scout to rozumie i uwzględnia w rekomendacjach."
+  },
+
+  "t_jak_pytac_o_zarobki_techniki": {
+    "_zrodlo": "Transkrypt 5 — Wycena zawodnika",
+    "blad_poczatkujacych": "Wielu scoutów od razu pyta ile ktoś zarabia — to nachalność, która zamyka drzwi.",
+    "inteligentne_pytania_zamiast_kwoty": [
+      "Jakie były oczekiwania finansowe zawodnika?",
+      "Czy to jest poziom finansowy EuroCupu?",
+      "Z jakiego rynku zawodnik, jakie widełki?",
+      "Czy to był rotation money czy starter money?",
+      "Jaki jest poziom tego kontraktu — PLK top tier czy solidny starter?"
+    ],
+    "zasada": "Bądź ciekawy i zainteresowany, ale nie daj wrażenia, że celem całej rozmowy jest sprawdzenie cennika.",
+    "jak_informacje_przychodza": "Do tych, którzy są dyskretni, wartościowi i godni zaufania. Najpierw zbuduj zaufanie, potem informacje same przychodzą.",
+    "zrodla_dostepne_dla_nowych": [
+      "Fora dyskusyjne",
+      "Dziennikarze specjalizujący się w transferach",
+      "Osoby z rodziny lub znajomych grające zawodowo",
+      "Od jednej kwoty do drugiej — przybliżenie zakresu"
+    ]
+  },
+
+  "t_czynniki_wartosci_zawodnika_szczegolow": {
+    "_zrodlo": "Transkrypt 5 — Wycena zawodnika",
+    "europejskie_realia_vs_nba": "W NBA pensje są jawne. Europa: prywatne — wymagają networkingu.",
+    "paszport_i_obywatelstwo": {
+      "zasada": "Paszport europejski lub rodzimy jest w wielu ligach znacznie cenniejszy.",
+      "dlaczego": "Liczba 'obcokrajowców' w składzie jest regulowana — lokalny paszport = większa wartość na papierze."
+    },
+    "doswiadczenie_europejskie_vs_usa": {
+      "gracz_po_college_g_league": "Jeszcze nie grał w Europie — inne środowisko, język, styl gry. To jest dodatkowe ryzyko.",
+      "gracz_z_europejskim_cv": "Zna realia, dostosował się, sprawdzony. Dlatego kosztuje więcej."
+    },
+    "kiedy_nie_placisz_za_talent": [
+      "Płacisz za RZADKOŚĆ paszportu (strategiczny fit w składzie).",
+      "Płacisz za PODAŻ-POPYT (mało graczy tego profilu na rynku).",
+      "Płacisz za WPŁYW NA CAŁY SKŁAD (podpisanie go otwiera slot dla zagranicznego na innej pozycji)."
+    ],
+    "dostepnosc_gracza": "Historia kontuzji i dostępność = ogromny czynnik. Gracz, który jest zdrowy i dostępny przez cały sezon, wart więcej niż utalentowany ale kontuzjogenny."
+  },
+
+  "t_nagrywanie_spotkan_scoutingowych": {
+    "_zrodlo": "Transkrypt 6 — Dlaczego scouci się mylą",
+    "praktyka_denver_nuggets": "Denver Nuggets nagrywa KAŻDE spotkanie scoutingowe.",
+    "cel_nie_jest_kara": "Nie po to, żeby potem wytykać palcami kto się pomylił.",
+    "cel_jest": "Żeby wrócić do procesu myślowego — jaka była decyzja, co wiedzieliśmy, co przeoczyliśmy — i wyciągnąć lekcję.",
+    "filozofia": "ZŁY WYBÓR = JESZCZE WIĘKSZA LEKCJA niż dobry wybór.",
+    "implikacja_dla_kazdego_scouta": "Prowadź własne notatki z każdej rekomendacji. Wracaj po sezonie. Pytaj: co przewidziałem dobrze, co źle, dlaczego?"
+  },
+
+  "t_trzy_lekcje_scouta_penel_szczegoly": {
+    "_zrodlo": "Transkrypt 6 — Dlaczego scouci się mylą",
+    "_uwaga": "Osobiste doświadczenia Rafała Jócia z Denver Nuggets — szczegóły z transkryptu",
+    "lekcja_1_nurkic_vs_jokic": {
+      "sytuacja": "Pierwszy sezon Jócia w Denver Nuggets — rekomendował zarówno Nurkicia jak i Jokicia, ale uważał że NURKIĆ osiągnie większy sukces.",
+      "powody_bledu": "Nurkić był bardziej gotowy fizycznie, bardziej atletyczny. Jokić wydawał się 'less ready'.",
+      "co_niedoceniono_u_jokica": [
+        "Środowisko (świetni bracia, stabilna rodzina)",
+        "Atmosfera wokół niego",
+        "Stabilność emocjonalna",
+        "Podejście do własnego rozwoju",
+        "Ludzie CHCIELI z nim pracować",
+        "Ludzie CHCIELI dawać mu szanse"
+      ],
+      "lekcja": "Za bardzo skupił się na TALENCIE bez uwzględnienia STABILNOŚCI i ŚRODOWISKA. Jokić miał idealne warunki do rozkwitu — i to okazało się ważniejsze niż atletyzm."
+    },
+    "lekcja_2_hernan_gomez": {
+      "sytuacja": "Scout 'zachłysnął się' workoutem i treningiem indywidualnym.",
+      "co_widzial": "Idealny obraz: świetne warunki fizyczne, gracja, shooting — wszystko piękne na treningu.",
+      "czego_nie_widzial": "Gracz nie radził sobie pod FIZYCZNĄ PRESJĄ W MECZACH. Końcówki, decyzje w ważnych momentach, rywalizacja na żywo = zupełnie inny poziom.",
+      "lekcja": "WORKOUT PLAYER ≠ WINNING PLAYER. Nie oceniaj gracza przez pryzmat treningu indywidualnego — gra meczowa to zupełnie inny kontekst."
+    },
+    "lekcja_3_campazzo": {
+      "sytuacja": "Dobra rekomendacja — Denver wykupił Campazzo z Realu Madryt. Pomógł nawet jako starter w playoff — przyczynił się do wygranej z Portland w pierwszej rundzie.",
+      "dlaczego_lekcja": "Mimo tego Campazzo nie pozostał w Denver na dłużej.",
+      "co_nie_gralo": [
+        "Fit do potrzeb roasteru długoterminowo",
+        "Size",
+        "Physicality na poziomie NBA",
+        "Matchupy defensywne"
+      ],
+      "lekcja": "Czasami chodzi NIE o talent, ale o FIT, potrzeby rosteru, rozmiar, fizyczność i poziom ligi. Dobra rekomendacja krótkookresowo nie zawsze jest dobrą inwestycją długookresową."
+    }
+  },
+
+  "t_trzy_poziomy_scoutingu": {
+    "_zrodlo": "Transkrypt 6 — Dlaczego scouci się mylą",
+    "zasada": "Scouting NIE kończy się na znalezieniu zawodnika. Wręcz — tam się zaczyna.",
+    "poziom_1_identyfikacja": {
+      "co_to_jest": "Ewaluacja talentu, projekcja, ocena fitu do organizacji",
+      "komentarz": "To jest NAJPROSTSZA rzecz — to co większość uważa za cały scouting."
+    },
+    "poziom_2_rescouting": {
+      "co_to_jest": "Po podpisaniu zawodnika — ciągła aktualizacja oceny",
+      "pytania": [
+        "Czy ma coś więcej niż myślałem?",
+        "Czy coś oceniłem źle?",
+        "Jak adaptuje się do nowego systemu?"
+      ]
+    },
+    "poziom_3_optymalne_wykorzystanie": {
+      "co_to_jest": "Czy organizacja w pełni wykorzystuje potencjał zawodnika?",
+      "pytania": [
+        "Czy lineups są odpowiednie dla tego gracza?",
+        "Czy ma jasną rolę i oczekiwania?",
+        "Czy jest dobra chemia w drużynie?",
+        "Czy system gry jest dobry DLA TEGO zawodnika?",
+        "Czy partnerzy na boisku mu służą?"
+      ],
+      "komentarz": "Jedno to znaleźć dobry talent. Drugie to optymalnie go wykorzystać. Wiele organizacji robi pierwsze dobrze, a drugie fatalne."
+    }
+  },
+
+  "t_stat_u18_kadra_narodowa": {
+    "_zrodlo": "Transkrypt 7 — Scouting i rozwój talentu w Akademii",
+    "statystyka": "Tylko POŁOWA zawodników z NBA grających jako 'international players' była w swoich KADRACH NARODOWYCH do lat 18.",
+    "co_to_oznacza": [
+      "Późny rozkwit jest normą, nie wyjątkiem.",
+      "Gracz nieobecny w U18 kadrze może być lepszy od każdego kto był.",
+      "Nie oceniaj kariery na podstawie juniorskich wyborów.",
+      "ROZWÓJ TRWA CAŁY CZAS."
+    ],
+    "implikacja_dla_scoutow_akademii": "Skautując młodzieżowców — nie szukaj 'gotowych'. Szukaj tych z POTENCJAŁEM ROZWOJU. Słaby U16 może być fenomenalnym seniorem."
+  },
+
+  "t_akademia_red_flags_pozorne_zalety": {
+    "_zrodlo": "Transkrypt 7 — Scouting i rozwój talentu w Akademii",
+    "blad_powszechny": "Za dużo ocenia się DOMINACJĘ FIZYCZNĄ na poziomie młodzieżowym — która jest czerwoną flagą, nie zaletą.",
+    "co_wygladajak_zaleta_ale_jest_red_flagiem": [
+      "Gracz dominuje fizycznie (bo jest rok starszy lub szybciej dojrzał) → za 2 lata inni go przegonią",
+      "Gracz ma dużo ego → trudny w prowadzeniu seniorskim",
+      "Gracz ma ze sobą komunikację (zamknięty, nie słucha) → nie przyjmie roli",
+      "Gracz nie ma dobrych nawyków pracy → nie będzie się rozwijał",
+      "Gracz jest 'nie łatwy do prowadzenia' → na wyższym poziomie to eliminacja"
+    ],
+    "prawdziwe_zalety_u14_u18": [
+      "Szybkość uczenia się",
+      "Mindset — jak reaguje na błędy i trudności",
+      "Decision making pod presją",
+      "Miłość do koszykówki (kto kocha grę — to widać)",
+      "Pomoc drużynie BEZ PIŁKI",
+      "Coachability — czy przyjmuje feedback"
+    ],
+    "5_pytan_dla_trenera_akademii_szczegoly": {
+      "1": "Kto z moich graczy ROZWIJA SIĘ NAJSZYBCIEJ? (nie: kto jest teraz najlepszy)",
+      "2": "Kto KOCHA koszykówkę najbardziej?",
+      "3": "Kto NAJLEPIEJ REAGUJE NA TRUDNOŚCI?",
+      "4": "Kto ma cechy i umiejętności, które PRZYDADZĄ SIĘ I SPRAWDZĄ NA WYŻSZYM POZIOMIE?",
+      "5": "Kto POMAGA MI WYGRYWAĆ BEZ PIŁKI?"
+    }
+  },
+
+  "t_case_study_talent_vs_fit_cwiczenie_mentalne": {
+    "_zrodlo": "Transkrypt 7 — Scouting i rozwój talentu w Akademii",
+    "opis_cwiczenia": "Ćwiczenie mentalne — wybierz zawodnika. Patrz z trzech perspektyw: scout, GM, trener.",
+    "scenariusz": {
+      "ZAWODNIK_A": "Dużo bardziej utalentowany, ale gorzej pasuje do systemu trenera.",
+      "ZAWODNIK_B": "Mniej utalentowany, ale ŚWIETNIE pasuje do systemu trenera."
+    },
+    "pytania_do_cwiczenia": [
+      "Kto pomoże Ci bardziej JUŻ TERAZ?",
+      "Kto jest inwestycją DŁUGOTERMINOWĄ?",
+      "Co by zrobił TRENER — kogo by wybrał i dlaczego?",
+      "Co by zrobił GM — kogo by wybrał i dlaczego?",
+      "Co jest ważniejsze dla organizacji TU I TERAZ?"
+    ],
+    "cel_cwiczenia": "Zrozumieć, że te same informacje o graczu prowadzą do różnych decyzji w zależności od roli i perspektywy decydenta. Scout musi widzieć wszystkie perspektywy naraz.",
+    "wniosek_scouta": "Fit do systemu CZĘSTO wygrywa z surowym talentem — szczególnie krótkoterminowo. Ale to zależy od timeline organizacji. Elastyczność w myśleniu = wartość scouta."
+  },
+
+  "t_case_study_coach_mowi_czego_potrzebuje": {
+    "_zrodlo": "Transkrypt 7 — Scouting i rozwój talentu w Akademii",
+    "sytuacja": "Trener mówi: 'Potrzebuję: BACKUP BIG, SHOOTING WING, MOBILE BIG'.",
+    "zadanie_scouta_krok_po_kroku": {
+      "krok_1": "ROZBIJ ROLE na umiejętności i archetypy — co konkretnie oznacza każda rola?",
+      "krok_2": "Określ jakie CECHY SĄ KLUCZOWE dla każdego profilu.",
+      "krok_3": "Zapytaj trenera: jaki jest nasz system, czego brakuje w składzie, czego będziemy unikać.",
+      "krok_4": "Zdefiniuj IDEALNY ZAWODNIK dla tej roli.",
+      "krok_5": "DOPIERO POTEM szukaj nazwisk."
+    },
+    "zasada_ogolna": "Najpierw POTRZEBA, potem NAZWISKA. Nie odwrotnie. Scout, który zaczyna od nazwisk, a potem dopasowuje potrzebę — pracuje odwrotnie.",
+    "praktyczny_przykład_backup_big": {
+      "co_to_znaczy_szczegolowo": [
+        "Egzekwuje P&R i P&P",
+        "Zbiera defensywnie bez popełniania fauli",
+        "Może bronić na obwodzie w switching",
+        "Gra twardą obronę indywidualną",
+        "Nie musi kreować — musi wykonywać"
+      ]
+    }
+  },
+
+  "t_finalna_definicja_elite_scouta": {
+    "_zrodlo": "Transkrypt 8 — Dlaczego fit ma znaczenie (final)",
+    "cytat_dokladny": "Najlepszy scouting to przede wszystkim organizacja, która ma świetną synchronizację.",
+    "najlepszy_scout_definicja": [
+      "Rozumie swoją organizację",
+      "Rozumie trenera i czego oczekuje",
+      "Jest partnerem dla trenera — ułatwia pracę",
+      "Jest pierwszym filtrem — rozumie co pasuje do trenera i drużyny",
+      "Wie jak rekomendacje przekazywać",
+      "Pomaga organizacji podejmować lepsze decyzje"
+    ],
+    "wartosc_niezamierzonej_rekomendacji": "Nawet jeśli rekomendacja dotyczy zawodnika, którego ty byś osobiście nie wybrał — ale wiesz, że W TYM DANYM MOMENCIE pomoże klubowi — to jest OGROMNA wartość scouta.",
+    "ostatnia_mysl": "Scouting to nie samotna opinia. To część procesu podejmowania decyzji. Rozumienie tego jest fundamentem.",
+    "do_zobaczenia": "Moduł 7 — dużo wiedzy, dużo praktyki. Ta wiedza nie zostanie przyswojona bez PRAKTYKI i ĆWICZEŃ z twojej strony."
+  },
+
+  "tresci_modulowe_opis": {
+    "modul_7_zakres": [
+      "jak analizować trenera i jego preferencje",
+      "jak określić styl gry i filozofię szkoleniowca",
+      "jak scoutować zawodników pod konkretny system i potrzeby zespołu",
+      "jak rozmawiać z trenerem i General Managerem",
+      "jak przedstawiać rekomendacje, aby miały realny wpływ na decyzje klubu",
+      "wyliczanie wartości zawodnika",
+      "widełki zarobków w różnych ligach w Europie"
+    ],
+    "bonusy": [
+      "Individual Player Development Plan (formularz)",
+      "Team Roster Strategy (formularz)"
+    ]
+  }
+}

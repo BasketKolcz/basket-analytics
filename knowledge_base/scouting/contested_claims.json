@@ -1,0 +1,107 @@
+{
+  "_source": "Audyt krytyczny bazy wiedzy, 22.07.2026 — na wyraźne życzenie użytkownika: „nie chcę, aby knowledge_base stał się zamkniętą bańką filtrującą wiedzę, żeby udowadniać aktualne przekonania. Chcę pełen obraz, łącznie z kontrowersjami\". Każda teza zweryfikowana wyszukiwaniem w literaturze (WebSearch, lipiec 2026); źródła podane przy każdej pozycji.",
+  "_comment": "REJESTR TEZ SPORNYCH — celowe przeciwieństwo bańki. Analogia do red_flags.json, ale wycelowany DO WEWNĄTRZ: wskazuje, które twierdzenia w tej bazie są w literaturze kwestionowane, obalone albo niszowe, oraz które są solidne. Baza domyślnie HARMONIZOWAŁA źródła (93 markery zgodności do 54 sporu, 0 zewnętrznego kontrapunktu przed tym audytem). Ten plik to koryguje. Nie usuwa żadnej treści — dodaje warstwę krytyczną nad istniejącą.",
+  "_program_use": "Warstwa metapoznawcza. Przy każdym cytowaniu narzędzia z tej bazy — sprawdź tu jego siłę dowodu. Szczególnie ważne przy projektach zewnętrznych (NextDraft, prezentacja przed klubem), gdzie ktoś kompetentny może podważyć powołanie się na słabe narzędzie.",
+
+  "kategoria": "Meta — krytyczna ocena tez zawartych w bazie",
+
+  "_skala_sily_dowodu": {
+    "ustalone": "dobrze udokumentowane w niezależnej literaturze — można się powoływać",
+    "obiecujace": "są dowody, ale ograniczone lub niejednoznaczne",
+    "niszowe": "spójne i użyteczne, ale bez niezależnej walidacji — jeden autor / lokalny obieg",
+    "kwestionowane": "literatura ma poważne zastrzeżenia do konstrukcji lub trafności",
+    "obalone": "w tym konkretnym zastosowaniu wykazano, że nie działa",
+    "rama_normatywna": "nie teza empiryczna do falsyfikacji, tylko sposób porządkowania myślenia — oceniać przez użyteczność, nie prawdziwość"
+  },
+
+  "_uwaga_metodologiczna_o_bazie": {
+    "problem_wspolnego_rodowodu": "Baza wielokrotnie opisuje zgodność Hucińskiego (IMOPEKSIS), Akademii EPS i planszy 'Podstawy nauczania koszykówki' jako niezależne potwierdzenie tej samej tezy. TO BŁĄD: Huciński jest współautorem materiałów Akademii EPS — to JEDNA szkoła metodyczna, nie trzy niezależne źródła. Ich wzajemna zgodność niczego nie dowodzi. Przy czytaniu pól 'powiazania' i 'zbieżne z' trzymać to w pamięci.",
+    "asymetria_harmonizacji": "Przed tym audytem baza zawierała ok. 93 markery budowania spójności ('zbieżne', 'to samo', 'potwierdza') wobec ~54 markerów sporu i ZERO odwołań do zewnętrznego kontrapunktu. To strukturalna tendencja do jednomyślności — ten plik jest jej przeciwwagą."
+  },
+
+  "tezy": {
+
+    "disc_jako_narzedzie_diagnostyczne": {
+      "gdzie_w_bazie": ["disc_profile_assessment.json", "book_abc_osobowosci_disc.json", "finxs_mental_assessment.json", "imopeksis_methodology.json (dopasowanie profili do faz lekcji)"],
+      "teza_bazy": "DISC / Extended DISC / persolog jako narzędzie do diagnozy zawodnika i dopasowania stylu prowadzenia; FinxS jako pomiar 18 kompetencji mentalnych.",
+      "sila_dowodu": "kwestionowane",
+      "krytyka_zewnetrzna": "DISC nie ma trafności predykcyjnej — profil nie przewiduje skuteczności w roli ani wyniku. Brakuje niezależnego wsparcia w recenzowanej literaturze, w odróżnieniu od narzędzi walidowanych (NEO-PI-R, model pięcioczynnikowy). Podział na 4 typy nadmiernie upraszcza osobowość. FinxS i Extended DISC to komercyjne rozwinięcia tej samej rodziny — dziedziczą te same zastrzeżenia.",
+      "co_z_tego_zostaje": "DISC jest użyteczny jako WSPÓLNY JĘZYK zespołu i punkt startu rozmowy — nie jako test diagnostyczny czy predykcyjny. Zdanie obronne nie do zbicia: 'używam tego jako języka komunikacji, nie jako pomiaru'.",
+      "co_z_tego_wypada": "Konstrukcja 'dopasowanie profilu DISC trenera i zawodnika do faz lekcji treningowej' (imopeksis_methodology) przestaje być metodą, a staje się hipotezą roboczą.",
+      "zrodla": ["https://thepracticalpsych.com/blog/disc-personality-types", "https://www.truity.com/public/documents/TechReport-DISC.pdf"]
+    },
+
+    "imopeksis_jako_system": {
+      "gdzie_w_bazie": ["imopeksis_methodology.json", "book_imopeksis_hucinski.json", "book_olimpizm_gotowosc_startowa.json", "13 cytowań w polach powiazania — najczęściej linkowany węzeł bazy"],
+      "teza_bazy": "IMOPEKSIS jako spójny system rozwoju mentalnego (8 czynników psychospołecznych) z gotowymi arkuszami pomiarowymi i regułami (np. 2-3 empatów na piątkę).",
+      "sila_dowodu": "niszowe",
+      "krytyka_zewnetrzna": "Wyszukiwanie zwraca WYŁĄCZNIE polskie źródła komercyjne i autorskie: imopeksis.pl, EkstraTrener.pl, Allegro, katalog AWF, notka na PZKosz. BRAK niezależnej walidacji empirycznej w literaturze międzynarodowej. To spójny, przemyślany system PRAKTYKA (prof. Huciński, trener klasy mistrzowskiej), ale jeden autor i lokalny obieg. Arkusze pomiarowe i reguła '2-3 empatów na piątkę' nie mają opublikowanego niezależnego potwierdzenia trafności.",
+      "co_z_tego_zostaje": "Wartość praktyczna i warsztatowa — jako przemyślana filozofia pracy z zawodnikiem. Wiele jego zasad (motywacja wewnętrzna, samodzielność, gra 'na podświadomości') ma pokrycie w niezależnych, mocniejszych konstruktach (poczucie skuteczności Bandury, wewnętrzne LOC).",
+      "co_z_tego_wypada": "Status neutralnego KRĘGOSŁUPA bazy. IMOPEKSIS jest JEDNĄ ze szkół, nie wspólnym mianownikiem, wobec którego mierzy się resztę. Jego zgodność z Akademią EPS nie jest potwierdzeniem — to ten sam autor.",
+      "zrodla": ["https://imopeksis.pl/", "https://katalog.awf-bp.edu.pl/index.php?001=vtls005596213"]
+    },
+
+    "test_bracea_uzdolnienia_ruchowe": {
+      "gdzie_w_bazie": ["motor_testing_battery.json"],
+      "teza_bazy": "Test Brace'a mierzy WRODZONE uzdolnienia ruchowe niezależnie od budowy ciała; opisany jako 'najważniejsza pozycja' i odpowiedź na red flag 'dominacja fizyczna'.",
+      "sila_dowodu": "kwestionowane",
+      "krytyka_zewnetrzna": "Trafność testów motor educability w PRZEWIDYWANIU uczenia się ruchu NIE ZOSTAŁA ustalona. Iowa-Brace: słaba struktura czynnikowa (5 czynników wyjaśnia ~6,7% wariancji), korelacja ~0,30 z IQ. Kluczowa teza bazy — że mierzy uzdolnienie 'niezależne od budowy ciała i wieku' — to dokładnie to, czego nie udało się potwierdzić.",
+      "co_z_tego_zostaje": "Użyteczność jako POMIAR WZGLĘDNY (test-retest u własnego zawodnika, rozkład we własnej grupie) — dokładnie tak, jak już zapisano w motor_testing_battery.json. Nie jako obiektywny pomiar 'wrodzonego talentu'.",
+      "co_z_tego_wypada": "Mocne twierdzenie o mierzeniu wrodzonych uzdolnień niezależnych od fizyczności. Normy z lat 40.-60. są dodatkowo przestarzałe dla dzisiejszej populacji.",
+      "zrodla": ["https://open.library.ubc.ca/soa/cIRcle/collections/ubctheses/831/items/1.0077258", "https://revistaretos.org/index.php/retos/article/download/106612/79233/430657"]
+    },
+
+    "styl_uczenia_sie_dostosowanie": {
+      "gdzie_w_bazie": ["player_motivation_and_selfworth.json (zasady_motywowania, pkt 'Stosuj metody dostosowane do sposobu uczenia się dziecka')"],
+      "teza_bazy": "Dostosuj metody nauczania do sposobu/stylu uczenia się danej osoby.",
+      "sila_dowodu": "obalone",
+      "krytyka_zewnetrzna": "Hipoteza dopasowania ('meshing') — że dostosowanie nauczania do zadeklarowanego stylu uczenia się poprawia wyniki — NIE MA replikowalnego wsparcia. Przy rygorystycznych kryteriach efekty są bliskie zeru i nieistotne. Klasyfikowana jako NEUROMIT, mimo że wierzy w nią większość nauczycieli.",
+      "co_z_tego_zostaje": "INDYWIDUALIZACJA jako taka jest słuszna (różne tempo, różny poziom, różne potrzeby). Błędna jest tylko wersja 'przypisz zawodnikowi styl uczenia i pod niego dobieraj metodę'. Różnicuj metody dla urozmaicenia i dopasowania do ZADANIA, nie do rzekomego stylu.",
+      "co_z_tego_wypada": "Sama koncepcja 'stylu uczenia się' jako cechy, pod którą się optymalizuje.",
+      "zrodla": ["https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2023.1147498/full", "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6113575/"]
+    },
+
+    "atkinson_motywacja_osiagniec": {
+      "gdzie_w_bazie": ["psychological_success_factors.json (konstrukt 1)", "player_motivation_and_selfworth.json (odniesienie)"],
+      "teza_bazy": "Model Atkinsona (Ms vs Mf, wzór T = M × P × I) jako narzędzie diagnostyczne motywacji osiągnięć.",
+      "sila_dowodu": "historycznie ważne, w dużej mierze zastąpione",
+      "krytyka_zewnetrzna": "Teoria dominowała 1960-1980, w latach 80. ustąpiła miejsca teoriom wartości-oczekiwań (expectancy-value). Wzór T = M × P × I jest w praktyce nieoperacyjny (siły motywów nie mierzy się bezpośrednio). Rdzeń nie jest 'obalony', ale rama jest przestarzała.",
+      "co_z_tego_zostaje": "Obserwacja o SAMOUTRUDNIANIU u sportowców (symulacja kontuzji, brak przygotowania jako z góry przygotowane usprawiedliwienie) broni się NIEZALEŻNIE od losu teorii Atkinsona i pozostaje wartościowa jako kandydat na red flag. Paradoks aspiracji (podnoszenie/obniżanie celów po sukcesie/porażce) to obserwowalny wzorzec, nawet jeśli aparat teoretyczny się zestarzał.",
+      "zrodla": ["https://personality-project.org/revelle/publications/revelle.michaels.pdf", "https://education.stateuniversity.com/pages/2250/Motivation.html"]
+    },
+
+    "lokalizacja_kontroli_loc": {
+      "gdzie_w_bazie": ["psychological_success_factors.json (konstrukt 6)"],
+      "teza_bazy": "Wewnętrzne LOC wiąże się z wyższym poziomem osiągnięć sportowych; sport przesuwa LOC ku wewnętrznej.",
+      "sila_dowodu": "obiecujace / ustalone",
+      "krytyka_zewnetrzna": "TU BAZA MIAŁA RACJĘ. Literatura potwierdza spójny dodatni związek wewnętrznego LOC z wynikiem sportowym i z wyższym poczuciem skuteczności, w wielu kontekstach. Potwierdza się też niuans zapisany w bazie: zawodnicy sportów ZESPOŁOWYCH wykazują bardziej zewnętrzne LOC niż indywidualnych (współdzielona odpowiedzialność, dynamika grupy) — to ważne dla koszykówki.",
+      "co_z_tego_zostaje": "Wszystko. To najlepiej udokumentowany z sześciu konstruktów psychologicznych w bazie — dobry kandydat na główny mierzony wskaźnik mentalny (test-retest).",
+      "zrodla": ["https://digitalcommons.bryant.edu/cgi/viewcontent.cgi?article=1029&context=honors_management", "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6719094/"]
+    }
+  },
+
+  "tezy_spoza_bazy_nie_dodawac": {
+    "_idea": "Rzeczy, które pojawiły się w materiałach źródłowych użytkownika (zdjęcia, notatki), ale ŚWIADOMIE NIE weszły do bazy — i nie powinny.",
+    "mehrabian_7_38_55": {
+      "co_to": "'Słowa 7% / głos 38% / mowa ciała 55%' — pojawiło się w notatkach z pedagogiki (zdjęcie Google Doc, niewprowadzone).",
+      "sila_dowodu": "obalone",
+      "krytyka_zewnetrzna": "Miejska legenda. Oryginalne badania Mehrabiana dotyczyły WYŁĄCZNIE komunikatów NIESPÓJNYCH EMOCJONALNIE (pojedyncze słowo o zabarwieniu uczuciowym). Sam Mehrabian wielokrotnie protestował przeciw uogólnianiu tych proporcji na komunikację w ogóle. Nie stosować.",
+      "zrodla": ["https://www.polygraph.pl/vol/2019-2/european-polygraph-2019-no2-amsel.pdf", "https://bigthink.com/the-learning-curve/the-7-38-55-rule-debunking-the-golden-ratio-of-conversation/"]
+    }
+  },
+
+  "_status_audytu": {
+    "wykonano": "Węzeł DISC + IMOPEKSIS + jednoznaczne mity (styl uczenia, Mehrabian) + Atkinson + Brace + LOC — 6 tez w bazie i 1 spoza, wszystkie zweryfikowane online.",
+    "do_zrobienia": "Pozostałe pliki nie przeszły jeszcze przeglądu krytycznego. Kandydaci do sprawdzenia w kolejnej turze: normy testów Zuchory/Denisiuka (aktualność), teza o 'apogeach motorycznych' i wieku biologicznym, badania sportowe cytowane w psychological_success_factors bez pełnej bibliografii (Wielochowski, Tabaczyńska, Dąbrowska), 'winning impact' i archetypy z modułów NDF.",
+    "zasada_na_przyszlosc": "Przy każdym NOWYM źródle domyślne pytanie brzmi 'co przemawia PRZECIW?', a nie 'z czym to jest zbieżne'. Zgodność dwóch źródeł sprawdzać pod kątem wspólnego rodowodu."
+  },
+
+  "powiazania": {
+    "disc_profile_assessment.json": "Główny cel etykiety 'kwestionowane' — patrz teza disc_jako_narzedzie_diagnostyczne.",
+    "imopeksis_methodology.json": "Etykieta 'niszowe' + korekta statusu kręgosłupa bazy.",
+    "motor_testing_battery.json": "Test Brace'a — 'kwestionowane'.",
+    "psychological_success_factors.json": "Atkinson (zastąpiony) vs LOC (ustalone) — dwa bieguny w jednym pliku.",
+    "player_motivation_and_selfworth.json": "Styl uczenia się — 'obalone'.",
+    "red_flags.json": "Ten plik to red_flags wycelowane do wewnątrz bazy; samoutrudnianie z Atkinsona to kandydat na red flag skierowany na zewnątrz."
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_comment": "Słownik statystyk koszykarskich — skróty EN/PL używane w app.py i bazie danych",
+  "stats": {
+    "PTS":  { "pl": "Punkty",            "col": "pts"  },
+    "AST":  { "pl": "Asysty",            "col": "ast"  },
+    "REB":  { "pl": "Zbiórki (suma)",    "col": "reb"  },
+    "OREB": { "pl": "Zbiórki ofensywne", "col": "oreb" },
+    "DREB": { "pl": "Zbiórki defensywne","col": "dreb" },
+    "STL":  { "pl": "Przechwyty",        "col": "stl"  },
+    "BLK":  { "pl": "Bloki",             "col": "blk"  },
+    "TO":   { "pl": "Straty",            "col": "br"   },
+    "FD":   { "pl": "Faule wymuszone",   "col": "fd"   },
+    "FIN":  { "pl": "Wykończenia",       "col": "finishes" },
+    "MIN":  { "pl": "Minuty",            "col": "min"  },
+    "G":    { "pl": "Mecze",             "col": "g"    },
+    "2PTM": { "pl": "Rzuty 2pkt trafione","col": "p2m" },
+    "2PTA": { "pl": "Rzuty 2pkt próby",  "col": "p2a"  },
+    "3PTM": { "pl": "Rzuty 3pkt trafione","col": "p3m" },
+    "3PTA": { "pl": "Rzuty 3pkt próby",  "col": "p3a"  },
+    "FTM":  { "pl": "Rzuty wolne trafione","col": "ftm"},
+    "FTA":  { "pl": "Rzuty wolne próby", "col": "fta"  }
+  },
+  "advanced": {
+    "eFG%": { "pl": "Effective FG%",     "formula": "(p2m + 1.5*p3m) / (p2a + p3a)" },
+    "TS%":  { "pl": "True Shooting%",    "formula": "pts / (2 * (p2a + p3a + 0.44*fta))" },
+    "USG%": { "pl": "Usage Rate%",       "formula": "team possessions based" }
+  },
+  "per_modes": {
+    "game": "Per Mecz (średnia)",
+    "36":   "Per 36 minut",
+    "40":   "Per 40 minut",
+    "100":  "Per 100 posiadań"
+  },
+  "stat_modes": {
+    "avg": "Średnie",
+    "sum": "Sumaryczne"
+  },
+  "rebounds_display": {
+    "note": "Zbiórki wyświetlane jako 3 podkolumny: A (oreb) | O (dreb) | S (suma)",
+    "thead_labels": ["ZB-A", "ZB-O", "ZB-S"]
+  }
+}
