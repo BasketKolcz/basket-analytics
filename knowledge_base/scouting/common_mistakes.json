@@ -1,0 +1,162 @@
+{
+  "_source": "Next Draft Foundation — Moduł 1, transkrypcje video (lekcje 1-4)",
+  "_comment": "Błędy początkujących scoutów + case study",
+
+  "bledy_poczatkujacych_scoutow": [
+    {
+      "blad": "Oglądanie piłki",
+      "opis": "Najwięcej dzieje się z dala od piłki — spacing, rotacje defensywne, cutting, ustawienie"
+    },
+    {
+      "blad": "Zakochanie się w talencie",
+      "opis": "Gracz może być utalentowany, ale nieregularny, emocjonalnie rozchwiany. Liczy się powtarzalność, nie talent jednorazowy"
+    },
+    {
+      "blad": "Ocenianie po jednym meczu",
+      "opis": "Jeden mecz może być hot game lub wyjątkowo zły. Scout patrzy na tendencje i nawyki, nie na pojedynczy wynik"
+    },
+    {
+      "blad": "Niezrozumienie kontekstu drużyny i roli",
+      "opis": "Gracz inaczej wygląda z wąską rotacją i dużymi minutami vs wchodząc z ławki. Rola kształtuje statystyki"
+    },
+    {
+      "blad": "Scouting tylko na podstawie statystyk",
+      "opis": "'Puste kalorie' — statystyki nabite, które mało znaczą. Duże numery w słabej drużynie nie przenoszą się automatycznie"
+    },
+    {
+      "blad": "Opisywanie WSZYSTKIEGO, nie najważniejszego",
+      "opis": "Dobry scout upraszcza chaos — identyfikuje to, co naprawdę ma znaczenie dla konkretnego trenera i systemu gry"
+    },
+    {
+      "blad": "Szukanie perfekcyjnych zawodników",
+      "opis": "W NBA nie ma perfekcyjnych graczy — tym bardziej w Europie i Polsce. Ważne: co zawodnik robi DOBRZE i jak pasuje do organizacji"
+    },
+    {
+      "blad": "Niebezbalansowanie emocji",
+      "opis": "Emocje muszą być (intuicja), ale trzeba oddzielić je od faktów i tendencji. Warto odczekać 48h po meczu przed pisaniem raportu"
+    }
+  ],
+
+  "puste_kalorie": {
+    "definicja": "Statystyki nabite bez realnego wpływu na wygrywanie",
+    "przyklad": "Duże numery w słabym zespole z wysokim usage — te same liczby mogą nie pojawić się po przejściu do lepszej drużyny z mniejszą rolą"
+  },
+
+  "case_study_ben_shung": {
+    "zawodnik": "Ben Shung",
+    "sytuacja_a": "Legia Warszawa — wchodził z ławki, ok. 10+ punktów, klub z aspiracjami mistrzowskimi",
+    "sytuacja_b": "Miasto Szkła Krosno — drużyna po spadku z Ligi, zupełnie inna rola i statystyki",
+    "lekcja": "Ten sam zawodnik, ta sama liga — kompletnie inne statystyki w innym kontekście. Słabszy zespół = więcej piłki w rękach, więcej usage, lepsze statystyki. Scout NIE powinien patrzeć tylko na statystyki.",
+    "kluczowe_pytanie": "Jak zawodnik będzie wyglądał w LEPSZEJ drużynie, w MNIEJSZEJ ROLI i pod WIĘKSZĄ PRESJĄ?"
+  },
+
+  "kluczowe_pytania_projektywne": [
+    "Czy styl gry zawodnika przeniesie się do lepszej drużyny?",
+    "Czy poradzi sobie w bardziej ułożonej, taktycznej koszykówce?",
+    "Jak gra bez piłki? Czy potrafi zagrać jako straper?",
+    "Czy rozumie spacing?",
+    "Jak podejmuje decyzje w różnych warunkach?"
+  ],
+
+  "lineup_building_perspective": {
+    "zasada": "Zawodnicy są od siebie zależni — nie można oceniać ich w izolacji od zestawień",
+    "przyklady": [
+      "Jak jedynka (PG) uzupełni się z dwójką (SG)?",
+      "Czy ta piątka będzie miała chemię i synergię?",
+      "Power play: rozgrywający + center jako fundament ofensywy"
+    ],
+    "przestroga": "Nawet idealny zawodnik na papierze może nie pasować do stylu gry trenera lub do charakteru szatni"
+  },
+
+  "case_study_cam_thomas": {
+    "zawodnik": "Cam Thomas",
+    "temat": "Gdy produkcja i scoring nie wystarczą",
+    "profil": {
+      "pozycja": "SG",
+      "wzrost_cm": 191,
+      "waga_kg": 95,
+      "reka": "prawa",
+      "draft": "27. pick (2021)",
+      "zespol_draftujacy": "Brooklyn Nets",
+      "obecny_zespol": "Milwaukee Bucks"
+    },
+    "produkcja": {
+      "prg_2223": 22.5,
+      "prg_2324": 24.7,
+      "nota": "40+ point games przed 24 rokiem życia. Bardzo wysoka produkcja w młodym wieku."
+    },
+    "mocne_strony": [
+      "Elite scoring i shot creation",
+      "Tworzy własny rzut z kozła",
+      "Potrafi trafiać trudne rzuty"
+    ],
+    "obszary_do_poprawy": [
+      "Defense i impact bez piłki",
+      "Decyzje i playmaking",
+      "Organizacja gry",
+      "Nieregularność i koncentracja"
+    ],
+    "kluczowy_wniosek": "Mimo dużego talentu i wysokiej produkcji, Cam Thomas nie był elementem wygrywającego zespołu. Brooklyn Nets oddali go bez żalu do Milwaukee Bucks.",
+    "powody_transferu": [
+      "Niepasujący do systemu i długoterminowej wizji",
+      "Brak impactu na wygrywanie poza scoringiem",
+      "Wysoka produkcja, niska wartość dla zespołu"
+    ],
+    "lekcja": "SCORER TO NIE TO SAMO CO WINNING PLAYER. NBA to liga wygrywania. Rynek weryfikuje wszystko."
+  },
+
+  "scorer_vs_winning_player": {
+    "zasada": "Scoring to tylko jeden wymiar wartości zawodnika.",
+    "winning_players_czesto": [
+      "Connective Players",
+      "Glue Guys",
+      "Versatile Defenders",
+      "High IQ Role Players"
+    ],
+    "kluczowe": "IMPACT ≠ USAGE. Winning impact często wykracza poza boxscore."
+  },
+
+  "kibicowskie_opinie": {
+    "_source": "Next Draft Foundation — Call 2 Q&A (Michał Gabyński + Rafał Jujcz)",
+    "zasada": "DON'T TALK BASKETBALL WITH NON-BASKETBALL PEOPLE.",
+    "cytat_gabanskiego": "Don't talk basketball with non-basketball people.",
+    "mechanizm": "Kibice idą z TAD-em — jeden lider opinii w komentarzach, reszta się dopisuje, echo chamber. Nikt nie ocenia zawodnika w kontekście drużyny, roli, oczekiwań trenera ani systemu.",
+    "dlaczego_opinie_kibicow_mylidia": [
+      "Kibic widzi wynik, nie proces",
+      "Kibic nie zna roli zawodnika wyznaczonej przez trenera",
+      "Kibic nie widzi screena, który nie trafia do boxscore",
+      "Kibic nie wie, że gracz jest dedykowany do konkretnych matchupów"
+    ],
+    "przyklad_adam_chrycien": {
+      "zawodnik": "Adam Chryścień",
+      "produkcja_w_boxscore": "Bliskie zera punkty w wielu meczach",
+      "realna_wartosc": "Leader zasłon w kadrze — 60-80 zasłon per mecz na Eurobasket. Najlepsi gracze bez piłki zliczani screen assists.",
+      "lekcja": "Zawodnik z zerem punktów może wygrać mecz. Kibic widzi przegapiony foul ofensywny. Staff widzi 59 dobrych zasłon i +/- całego zestawu."
+    },
+    "przyklad_anwil_zigademont": "Anwil podpisał Ziga Dimca konkretnie pod matchupy — nieoczywista decyzja dla kibiców, ale spójna z pomysłem trenera.",
+    "dla_scouta": "Oceniaj zawodników wyłącznie w kontekście drużyny, line-upu, archetypu i oczekiwań trenera. Kibicowska narracja jest dodatkowym szumem, ale nie jest intel — weryfikuj ją danymi i rozmowami ze środowiskiem."
+  },
+
+  "sexy_upside_names_trap": {
+    "_source": "Next Draft Foundation — Call 2 Q&A (Rafał Jujcz — Maxwell Luis case)",
+    "nazwa_pulapki": "'Sexy upside names' — zawodnicy na kredyt.",
+    "definicja": "Zawodnicy, którzy na wyrost dostają hype, buzz i fame — bo wyglądają jak koszykarze. Za mało doświadczenia, za mało gry na wysokim poziomie, za dużo oczekiwań z powodu atletyzmu i sylwetki.",
+    "case_study_maxwell_luis": {
+      "zawodnik": "Maxwell Lewis",
+      "uczelnia": "Pepperdine (słaby program NCAA)",
+      "draft": "Lakers — podpisany pomimo słabego college programu",
+      "red_flag_na_papierze": "Mało doświadczenia, mało gry na wysokim poziomie, nie grał u zwycięskich trenerów",
+      "intel_off_record": "Fatalny charakter — przyswajanie wiedzy na niskim poziomie, problemy z funkcjonowaniem w drużynie, brak profesjonalizmu. Tofa Zbursza — opuścił klub w połowie sezonu.",
+      "wynik": "Odbił się od NBA, aktualnie London Lions — Europa bez wyraźnego progresu",
+      "lekcja_dla_scouta": "Jeśli video+statystyki nie tłumaczą braku sukcesów mimo dobrego ciała → szukaj odpowiedzi w intel i background. Tam jest zazwyczaj powód."
+    },
+    "dobra_uczelnia_jako_indykator": {
+      "zasada": "Statystycznie, zawodnik grający nawet z końca ławki w Duke ma większą szansę niż go-to guy z Pepperdine.",
+      "dlaczego": "Dobry program = środowisko zwycięskie od pierwszego dnia, trener wymagający, wysoka presja, umiejętność funkcjonowania w systemie",
+      "analogia": "Dyplom renomowanej uczelni vs prywatna szkoła online — oboje mają dyplom, ale wiedza i nawyki są kompletnie różne.",
+      "wyjasnienie_NBA": "NBA często draftuje projekty (second round = high upside bets) — inna cierpliwość niż Europa. Europa ocenia przez pryzmat wpływu na wygrywanie TU I TERAZ."
+    },
+    "nba_vs_europa_cierpliwosc": "Lakers trzymali Lewisa, dawali mu szansę. Tofa Zbursza od razu go odcięła gdy nie pasował — w Polsce/Europie inna cierpliwość i kryteria oceny.",
+    "dla_scouta": "Zanim dasz się wciągnąć atletyzmowi i hype — sprawdź: gdzie grał, u jakich trenerów, jak długo, jakie środowisko zwycięskie, co Intel mówi o charakterze. Piękne ciało bez profesjonalizmu to ryzyko, nie asset."
+  }
+}

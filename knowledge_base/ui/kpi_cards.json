@@ -1,0 +1,25 @@
+{
+  "_comment": "Specyfikacja KPI Flip Cards — dashboard główny",
+  "component": "kpi-flip-cards",
+  "preview_file": "preview_kpi_flip.html",
+  "layout": "grid · 7 kolumn · gap 10px",
+  "cards": [
+    { "key": "PPG",  "pl": "Punkty",           "front": "avg/mecz", "back": "suma sezonu" },
+    { "key": "AST",  "pl": "Asysty",            "front": "avg/mecz", "back": "suma sezonu" },
+    { "key": "REB",  "pl": "Zbiórki",           "front": "avg/mecz", "back": "suma sezonu" },
+    { "key": "STL",  "pl": "Przechwyty",        "front": "avg/mecz", "back": "suma sezonu" },
+    { "key": "BLK",  "pl": "Bloki",             "front": "avg/mecz", "back": "suma sezonu" },
+    { "key": "TO",   "pl": "Straty",            "front": "avg/mecz", "back": "suma sezonu" },
+    { "key": "FD",   "pl": "Faule wymuszone",   "front": "avg/mecz", "back": "suma sezonu" }
+  ],
+  "colors": {
+    "front_bg":    "#fff",
+    "front_val":   "#1a2b4a",
+    "front_lbl":   "#9ca3af",
+    "back_bg":     "linear-gradient(135deg, #1a2b4a, #253d66)",
+    "back_val":    "#fff",
+    "back_metric": "#c9a340",
+    "back_lbl":    "rgba(255,255,255,.55)"
+  },
+  "animation": "rotateY(180deg) · 0.5s cubic-bezier(.4,0,.2,1) · on hover"
+}

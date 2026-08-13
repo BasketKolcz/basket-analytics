@@ -1,0 +1,49 @@
+{
+  "_weryfikacja_zewnetrzna": {
+    "sila_dowodu": "kwestionowane",
+    "krytyka": "To popularna psychologia — teoretyczny fundament modelu DISC, który w literaturze naukowej nie ma potwierdzonej trafności predykcyjnej. Wartość książki jest terminologiczno-komunikacyjna, nie diagnostyczna.",
+    "szczegoly_i_zrodla": "Patrz contested_claims.json → tezy.disc_jako_narzedzie_diagnostyczne."
+  },
+  "_source": "Lothar Seiwert, Friedbert Gay — „ABC osobowości. Lepsze zrozumienie siebie i innych dzięki poznaniu typów zachowań Dominującego (D), Inicjatywnego (I), Stałego (S) oraz Krytycznego (K)\". Wstęp: Brian Tracy. Ilustracje: Werner „Tiki\" Küstenmacher. Wydanie polskie: Persolog Polska Sp. z o.o., 2012 (wyd. I, czerwiec 2012), tłum. Zuzanna Sierotnik. © 1996 Autorzy / persolog GmbH, Remchingen, Niemcy. 134 strony (skan).",
+  "_comment": "KSIĄŻKA ŹRÓDŁOWA modelu DISC w wersji persolog® (niem. DISG: Dominant / Initiativ / Stetig / Gewissenhaft → pol. D / I / S / K). To komercyjny bestseller psychologii popularnej — teoretyczny fundament pod narzędzia DISC używane w materiałach IMOPEKSIS. UWAGA: skan bez warstwy tekstowej (OCR niedostępny w środowisku), dlatego opis oparty na stronach tytułowych, redakcyjnych i wstępie — nie na pełnej treści. Jako pozycja objęta prawem autorskim NIE jest tu streszczana rozdziałami; plik pełni funkcję wpisu bibliograficznego i mapowania terminologii.",
+  "_program_use": "Referencja terminologiczna i bibliograficzna. Kluczowa wartość praktyczna: MAPOWANIE LITER — polskie wydanie persolog używa D/I/S/K, podczas gdy Extended DISC i materiały anglojęzyczne używają D/I/S/C. Przy budowie jakiegokolwiek modułu DISC w programie trzeba tę rozbieżność obsłużyć, bo w materiałach użytkownika występują OBIE konwencje.",
+
+  "kategoria": "Osobowość / DISC — źródło modelu",
+
+  "model": {
+    "nazwa_pl": "Model osobowości persolog® (ABC osobowości)",
+    "cztery_typy_zachowan": {
+      "D": "Dominujący (niem. Dominant, ang. Dominance)",
+      "I": "Inicjatywny (niem. Initiativ, ang. Influence)",
+      "S": "Stały (niem. Stetig, ang. Steadiness)",
+      "K": "Krytyczny (niem. Gewissenhaft, ang. Conscientiousness/Compliance)"
+    },
+    "mapowanie_liter": {
+      "uwaga": "KRYTYCZNE dla spójności danych w programie.",
+      "persolog_pl": "D / I / S / K",
+      "extended_disc_i_ang": "D / I / S / C",
+      "zasada": "Czwarta litera to ta sama kategoria: K (Krytyczny) ≡ C (Compliance/Conscientiousness). Pierwsze trzy litery są zbieżne w obu konwencjach.",
+      "gdzie_wystepuje_ktora": "K/persolog — ta książka. C — raport Extended DISC (Grzonkowski), test DISC 2020, materiały FinxS i anglojęzyczne."
+    },
+    "zastosowanie_deklarowane": "Rozpoznanie własnego dominującego typu zachowania i typów otoczenia w celu lepszej komunikacji, samozrozumienia i skuteczności — w pracy, w rodzinie i w wychowaniu dzieci."
+  },
+
+  "kontekst_wydawniczy": {
+    "seria": "Pozycja z nurtu popularnej psychologii zarządzania (persolog / Verlag für Managementsysteme).",
+    "wstep": "Brian Tracy (Brian Tracy International, Solana Beach, USA) — rekomenduje książkę jako narzędzie rozumienia siebie i otoczenia, wskazując na jej zastosowanie zarówno wobec współpracowników, jak i dzieci.",
+    "motto_ksiazki": "Cytat Paula Heyse (laureat Nagrody Nobla w dziedzinie literatury za rok 1910) o tym, że szczęście daje człowiekowi robienie tego, do czego został stworzony."
+  },
+
+  "status_zrodla": {
+    "warstwa_tekstowa": "BRAK — plik to skan obrazowy (134 strony, ~0 znaków tekstu przy ekstrakcji pdfplumber).",
+    "jak_czytac": "Strony można rasteryzować przez pypdfium2 (skrypt render_abc.py w scratchpadzie sesji) i czytać jako obrazy. Skan jest obrócony o 90°.",
+    "ograniczenie": "Treść merytoryczna rozdziałów nie została zindeksowana. W razie potrzeby konkretnego fragmentu — wskazać stronę do zrasteryzowania."
+  },
+
+  "powiazania": {
+    "disc_profile_assessment.json": "GŁÓWNE powiązanie — tamten plik zawiera operacyjny opis 4 stylów, instrument samooceny 4-3-2-1 i zastosowanie w koszykówce; ta książka jest jego źródłem teoretycznym.",
+    "book_imopeksis_hucinski.json": "Huciński odsyła do Extended DISC przy ocenie „linii poziomej\" (akceptacja wewnątrz zespołu, ego vs empatia).",
+    "imopeksis_methodology.json": "Dopasowanie profili trener↔zawodnik do faz lekcji treningowej opiera się na tym modelu.",
+    "finxs_mental_assessment.json": "Inne narzędzie tego samego rodowodu (FinxS/Extended DISC) — 18 kompetencji sportowych."
+  }
+}

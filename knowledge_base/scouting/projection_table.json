@@ -1,0 +1,130 @@
+{
+  "_source": "Next Draft Foundation — Moduł 2, bonus: Projection Table",
+  "_comment": "Tabela OBSERWACJA → WNIOSEK → CZY PRZENIESIE SIĘ WYŻEJ. Narzędzie projekcyjne scouta.",
+  "_program_use": "Checklist w formularzu scoutingowym — scout zaznacza obserwacje, system podpowiada wnioski i poziom ryzyka.",
+  "motto": "Myśl jak scout. Łącz obserwacje z wnioskami i patrz w przyszłość.",
+  "footer": "Dobry scout nie ocenia tylko tego, co widać. Łączy fakty, rozumie grę | patrzy w przyszłość.",
+
+  "tabela": [
+    {
+      "obserwacja": "Szybko podejmuje decyzje",
+      "wniosek": "processing speed / understanding gry",
+      "projekcja": "TAK — skalowalne do wyższego poziomu",
+      "pozytywna": true
+    },
+    {
+      "obserwacja": "Dobrze porusza się bez piłki",
+      "wniosek": "understanding of spacing",
+      "projekcja": "TAK — pomaga funkcjonować w lepszej ofensywie",
+      "pozytywna": true
+    },
+    {
+      "obserwacja": "Regularnie komunikuje się w obronie",
+      "wniosek": "awareness + leadership",
+      "projekcja": "TAK — ważne w winning environment",
+      "pozytywna": true
+    },
+    {
+      "obserwacja": "Reaguje dobrze po błędach",
+      "wniosek": "odporność mentalna",
+      "projekcja": "TAK — pomaga utrzymać stabilność",
+      "pozytywna": true
+    },
+    {
+      "obserwacja": "Atakuje closeout bez zawahania",
+      "wniosek": "quick processing + decisiveness",
+      "projekcja": "TAK — przenosi się na wyższym poziomie",
+      "pozytywna": true
+    },
+    {
+      "obserwacja": "Potrzebuje dużo kozła do kreacji",
+      "wniosek": "ograniczona skalowalność ofensywna",
+      "projekcja": "CZĘŚCIOWO — zależy od roli",
+      "pozytywna": null
+    },
+    {
+      "obserwacja": "Gubi koncentrację poza piłką",
+      "wniosek": "inconsistent awareness",
+      "projekcja": "RYZYKO na wyższym poziomie",
+      "pozytywna": false
+    },
+    {
+      "obserwacja": "Świetnie broni kilka pozycji",
+      "wniosek": "defensive versatility",
+      "projekcja": "BARDZO skalowalne",
+      "pozytywna": true
+    },
+    {
+      "obserwacja": "Nie potrafi grać bez piłki",
+      "wniosek": "ball-dominant profile",
+      "projekcja": "Ograniczony fit w lepszych zespołach",
+      "pozytywna": false
+    },
+    {
+      "obserwacja": "Regularnie wykonuje extra pass",
+      "wniosek": "team-oriented decision making",
+      "projekcja": "TAK — wspiera winning basketball",
+      "pozytywna": true
+    },
+    {
+      "obserwacja": "Ma problemy pod presją fizyczną",
+      "wniosek": "lack of physicality",
+      "projekcja": "Może być problem na wyższym poziomie",
+      "pozytywna": false
+    },
+    {
+      "obserwacja": "Dobrze kończy akcje mimo kontaktu",
+      "wniosek": "touch + strength + balance",
+      "projekcja": "Dobrze przekłada się poziom wyżej",
+      "pozytywna": true
+    },
+    {
+      "obserwacja": "Bardzo aktywny na deskach",
+      "wniosek": "motor + anticipation",
+      "projekcja": "Zwykle skalowalne",
+      "pozytywna": true
+    },
+    {
+      "obserwacja": "Gra z wysokim tempem, ale bez kontroli",
+      "wniosek": "chaos instead of pace",
+      "projekcja": "Ryzyko turnovers wyżej",
+      "pozytywna": false
+    },
+    {
+      "obserwacja": "Czyta rotacje defensywne wcześniej niż inni",
+      "wniosek": "advanced basketball IQ",
+      "projekcja": "Bardzo translatable",
+      "pozytywna": true
+    },
+    {
+      "obserwacja": "Jego energia wpływa na zespół",
+      "wniosek": "intangibles / competitiveness",
+      "projekcja": "Cenione w winning teams",
+      "pozytywna": true
+    },
+    {
+      "obserwacja": "Słabo reaguje na decyzje sędziego",
+      "wniosek": "emotional instability",
+      "projekcja": "Potencjalne ryzyko mentalne",
+      "pozytywna": false
+    },
+    {
+      "obserwacja": "Potrafi uprościć grę",
+      "wniosek": "understands role and efficiency",
+      "projekcja": "Bardzo wartościowe wyżej",
+      "pozytywna": true
+    },
+    {
+      "obserwacja": "Regularnie podejmuje złe rzuty",
+      "wniosek": "poor shot selection",
+      "projekcja": "Trudne do ukrycia na wyższym poziomie",
+      "pozytywna": false
+    },
+    {
+      "obserwacja": "Poprawia grę kolegów",
+      "wniosek": "connective impact",
+      "projekcja": "TAK — ważne w lepszych drużynach",
+      "pozytywna": true
+    }
+  ]
+}

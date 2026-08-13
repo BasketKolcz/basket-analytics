@@ -1,0 +1,57 @@
+{
+  "_source": "Dwa materiały o rozgrywającym: (1) 'Cechy dobrego rozgrywającego' — Steve Smiley (Sheridan College, Wyoming), tłum. Tomasz Niedbalski (WKK Wrocław); (2) 'POINT GUARD' — notatka o odpowiedzialnościach gracza nr 1 (atak / obrona).",
+  "_comment": "Profil i cechy idealnego rozgrywającego (PG). Łączy 10 cech Steve'a Smileya z listą obowiązków PG w ataku i w obronie. Uzupełnienie do position_profiles.json (PG) i lineup_building.json.",
+  "_program_use": "Formularz oceny PG / karta scoutingowa pozycji 1 → checklist cech przywódczych i obowiązków. Tooltip / rozwinięcie priorytetów PG z position_profiles.json. Materiał edukacyjny w Akademii (lekcja o rozgrywającym).",
+
+  "kim_jest_rozgrywajacy": {
+    "definicja": "Gracz na pozycji nr 1 musi być przedłużeniem ręki trenera na boisku oraz musi posiadać cechy przywódcze. To prawdziwy lider zespołu.",
+    "fundament_mentalny": "Musi być emocjonalnie stały oraz silny psychicznie.",
+    "klucz": "PG nie tylko gra — on organizuje, prowadzi i zarządza grą zespołu."
+  },
+
+  "10_cech_dobrego_rozgrywajacego": {
+    "_zrodlo": "Steve Smiley (Sheridan College, Wyoming), tłum. Tomasz Niedbalski (WKK Wrocław)",
+    "cechy": [
+      {"nr": 1, "cecha": "Rządzi GŁOSEM", "opis": "Komunikuje się głośno i pewnie — organizuje kolegów, ustawia obronę, kieruje atakiem. Głos to jego pierwsze narzędzie przywództwa."},
+      {"nr": 2, "cecha": "Jest PRZYKŁADEM", "opis": "Prowadzi przez własne zachowanie i etykę pracy. To, co robi PG, robi cała drużyna."},
+      {"nr": 3, "cecha": "Ma DOBRE relacje z trenerem", "opis": "Jest łącznikiem między trenerem a zespołem. Rozumie system i przekazuje intencje trenera na boisko."},
+      {"nr": 4, "cecha": "Myśli najpierw o PODANIU", "opis": "Pass-first mentality — najpierw szuka lepiej ustawionego kolegi, kreuje dla innych, dopiero potem myśli o własnym rzucie."},
+      {"nr": 5, "cecha": "Wysokie koszykarskie IQ", "opis": "Czyta grę, rozumie sytuacje, podejmuje szybkie i trafne decyzje. Widzi kilka ruchów do przodu."},
+      {"nr": 6, "cecha": "Przygotowany KONDYCYJNIE", "opis": "Ma bazę fizyczną, by grać w wysokim tempie przez cały mecz i utrzymywać intensywność w obronie i ataku."},
+      {"nr": 7, "cecha": "Podaje DOKŁADNIE", "opis": "Precyzja podań — piłka trafia do kolegi w odpowiednim momencie i miejscu, gotowa do wykończenia."},
+      {"nr": 8, "cecha": "Oddaje RZUTY z wolnej pozycji", "opis": "Nie unika otwartych rzutów. Kiedy obrona odpuszcza, musi karać — inaczej gra pięć na cztery."},
+      {"nr": 9, "cecha": "Posiada 'BIEGI'", "opis": "Zmiana tempa (change of pace) — potrafi zwolnić i przyspieszyć, manipulując rytmem, by rozbić obronę."},
+      {"nr": 10, "cecha": "Posiada 'MOTOR'", "opis": "Nieustanna energia i zaangażowanie — motor napędowy zespołu przez cały mecz."}
+    ]
+  },
+
+  "odpowiedzialnosc_w_ataku": [
+    "Jak najszybciej wychodzi do pierwszego podania po zbiórce w obronie — organizowanie szybkiego ataku",
+    "Szybko transferuje piłkę na pole ataku (przez podanie lub kozłowanie)",
+    "Szybko i bezpiecznie kreuje przewagi na boisku",
+    "Organizuje atak pozycyjny, jeśli próba szybkiego ataku się nie powiodła",
+    "Kontroluje piłkę, używa zwodów, 'bawi się' obrońcami",
+    "Kreuje czyste pozycje rzutowe dla partnerów (asysty)",
+    "Szuka najlepiej ustawionych partnerów gotowych do rzutu",
+    "Kontroluje i zmienia rytm meczu",
+    "W trudnych sytuacjach bierze na siebie ciężar gry i oddaje rzuty do kosza (np. pod koniec meczu)",
+    "Sprawia, że trener i koledzy z zespołu czują spokój i mają pełne zaufanie, kiedy posiada piłkę"
+  ],
+
+  "odpowiedzialnosc_w_obronie": [
+    "Pierwszy obrońca w transmisji defensywnej (asekuracja)",
+    "Naciska mocno na piłkę — intensywność obrony zależy od niego",
+    "Organizuje grę w defensywie (woła, co jest grane)",
+    "Nie pozwala na penetrację do środka",
+    "Odcina od podań gracza w odległości jednego podania",
+    "Przewiduje (antycypuje)",
+    "Zna zasady pomocy i rotacji",
+    "Potrafi wymusić faule w ataku"
+  ],
+
+  "powiazania": {
+    "position_profiles.json": "PG — priorytety pozycji (15 cech) + projekcja_m5 (Decision Making, Pace Control)",
+    "lineup_building.json": "Rola PG w konstrukcji składu: Organizer / Creator / Defender",
+    "player_archetypes.json": "Profile ról: Floor General, High Usage Guard"
+  }
+}

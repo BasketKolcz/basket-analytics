@@ -1,0 +1,137 @@
+{
+  "_source": "Zdjęcia slajdów z prezentacji akademii Žalgirisu Kowno: DRILL TYPES, ŽALGIRIS KAUNAS TEAM RULES, MENTAL PERFORMANCE INCLUDES TRAINING, SET CLEAR GOALS, FOCUS ON BUILDING IDENTITY, „WHAT YOU WANT TO SEE ON GAME DAY…\", „YOU CAN'T DEMAND THINGS FROM YOUR PLAYERS…\", BE MINDFUL WITH FEEDBACK.",
+  "_comment": "WARSTWA METODYCZNA I KULTUROWA — jak prowadzić trening i jak budować kulturę zespołu. To dopełnienie dwóch pozostałych plików Žalgirisu: curriculum mówi CZEGO uczyć, zasady gry mówią JAK GRAĆ, a ten plik mówi JAK PRACOWAĆ Z LUDŹMI. Najmocniejszy element to typologia ćwiczeń (drill types), która rozstrzyga praktyczny dylemat trenera: kiedy przerwać ćwiczenie, a kiedy nie.",
+  "_program_use": "Warstwa najmniej „programowalna\", ale najważniejsza przy projektowaniu modułu planowania treningu: każde ćwiczenie w planie powinno mieć przypisany TYP (teaching / learning / competing), bo od tego zależy zachowanie trenera. To pojedyncze pole w szablonie ćwiczenia, które porządkuje całą jednostkę. Dodatkowo rozróżnienie outcome vs process goals jest wprost stosowalne w module celów zawodnika.",
+
+  "kategoria": "Metodyka prowadzenia treningu i kultura zespołu",
+
+  "drill_types": {
+    "_waga": "NAJBARDZIEJ PRAKTYCZNY ELEMENT — rozstrzyga, kiedy trener ma przerywać ćwiczenie, a kiedy się powstrzymać.",
+    "TEACHING": {
+      "zachowanie_trenera": "Zatrzymaj ćwiczenie, gdy widzisz coś, co ci się nie podoba, i popraw to",
+      "fokus": "Skup się na DETALACH",
+      "kiedy": "Faza wprowadzania nowej umiejętności"
+    },
+    "LEARNING": {
+      "zachowanie_trenera": "Daj im czas, żeby sami do tego doszli. Dawaj informację zwrotną w biegu, ALE NIE PRZERYWAJ ćwiczenia",
+      "fokus": "Samodzielne dochodzenie do rozwiązania",
+      "kiedy": "Faza utrwalania i rozumienia"
+    },
+    "COMPETING": {
+      "zachowanie_trenera": "Obserwuj i daj im PRZESTRZEŃ NA BŁĄD. Po ćwiczeniu możesz zrobić omówienie (debrief)",
+      "fokus": "Rywalizacja bez ingerencji",
+      "kiedy": "Faza sprawdzania pod presją"
+    },
+    "_dlaczego_to_wazne": "Trzy typy ćwiczeń = trzy różne role trenera: KOREKTOR (przerywa i poprawia) → DORADCA (podpowiada w biegu) → OBSERWATOR (milczy, omawia po). Najczęstszy błąd trenerski to zachowanie z pierwszego typu w ćwiczeniu trzeciego typu — ciągłe przerywanie rywalizacji.",
+    "_powiazanie": "Spójne z warstwą feedbacku: przestrzeń na błąd w fazie COMPETING to praktyczna realizacja zasady „nie karz błędów, traktuj je jako naukę\".",
+    "_program_use": "Pole „typ ćwiczenia\" w szablonie jednostki treningowej — trzy wartości, jednoznaczna konsekwencja dla zachowania prowadzącego."
+  },
+
+  "kultura_informacji_zwrotnej": {
+    "_zrodlo": "Slajd BE MINDFUL WITH FEEDBACK (powtórzony z poprzedniej partii — opisany też w zalgiris_academy_model.json)",
+    "teza": "Informacja zwrotna ma budować kompetencję, ale źle podana działa odwrotnie.",
+    "trzy_bledy": [
+      "Feedback tylko o tym, co złe → zawodnik czuje, że zawodzi",
+      "Niemożliwe do spełnienia standardy → zawodnik przestaje próbować",
+      "Karanie błędów zamiast traktowania ich jako nauki → zawodnik gra bezpiecznie i przestaje się rozwijać"
+    ],
+    "dobry_feedback": "Równoważy szczerość z nadzieją i zaufaniem; pokazuje, co wymaga pracy ORAZ co się poprawia; zawodnik ma czuć się WYZWANY, ALE ZDOLNY — nie pokonany",
+    "narzedzie": "Feedback sandwich"
+  },
+
+  "team_rules": {
+    "_zrodlo": "Slajd ŽALGIRIS KAUNAS TEAM RULES — 11 zasad",
+    "zasady": [
+      "BE ON TIME — bądź punktualny",
+      "EVERY INDIVIDUAL OF THE TEAM IS EQUALLY IMPORTANT — każdy w zespole jest tak samo ważny",
+      "RESPECT EACH OTHER AND ALL MEMBERS OF THE TEAM (DRIVER, DOCTOR, ETC.) — szanuj wszystkich członków zespołu, także kierowcę i lekarza",
+      "DON'T CHEAT, NO SHORTCUTS — nie oszukuj, żadnych dróg na skróty",
+      "KEEP EACH OTHER ACCOUNTABLE — wzajemnie się rozliczajcie",
+      "TAKE CARE OF YOUR BODY — dbaj o swoje ciało",
+      "BE SUPPORTIVE — wspieraj",
+      "TAKE RESPONSIBILITY AND DO NOT MAKE EXCUSES — bierz odpowiedzialność, nie szukaj wymówek",
+      "HONESTY IS KEY. TELL EACH OTHER THE TRUTH — szczerość jest kluczowa, mówcie sobie prawdę",
+      "LOOK IN THE EYES WHENEVER WE TALK TO EACH OTHER — patrzcie sobie w oczy podczas rozmowy",
+      "PLAY AND PRACTICE WITH PASSION — graj i trenuj z pasją"
+    ],
+    "_obserwacje": [
+      "Zasada o szacunku wymienia WPROST kierowcę i lekarza — to celowe rozszerzenie „zespołu\" poza zawodników i trenerów",
+      "„Keep each other accountable\" przenosi egzekwowanie zasad na ZAWODNIKÓW, nie tylko na trenera",
+      "„Look in the eyes\" to jedyna zasada dotycząca fizycznego sposobu komunikacji — konkret zamiast ogólnika o „dobrej komunikacji\"",
+      "Zasady są w większości behawioralne i sprawdzalne (punktualność, kontakt wzrokowy), a nie deklaratywne"
+    ],
+    "_relacja_do_wartosci": "Uzupełniają slajd „What defines a Zalgiris player\" (5 wartości) — tamte definiują POSTAWĘ, te definiują ZACHOWANIA."
+  },
+
+  "mental_performance": {
+    "_zrodlo": "Slajd MENTAL PERFORMANCE INCLUDES TRAINING",
+    "obszary_treningu_mentalnego": ["Focus (koncentracja)", "Confidence (pewność siebie)", "Emotional regulation (regulacja emocji)", "Decision-making (podejmowanie decyzji)", "Grit (upór/wytrwałość)", "Motor (napęd wewnętrzny)", "Resilience (odporność)", "Leadership (przywództwo)"],
+    "_kluczowe_zalozenie": "Slajd mówi „mental performance INCLUDES TRAINING\" — te osiem obszarów jest TRENOWALNYCH, nie wrodzonych. To ta sama teza, którą stawia Huciński w IMOPEKSIS (obalenie mitu „jest jaki jest i już się nie zmieni\").",
+    "_porownanie_z_baza": "Zestaw pokrywa się w dużej części z czynnikami IMOPEKSIS (koncentracja, pewność siebie, emocje) oraz z kompetencjami FinxS (Momentary Concentration, Bouncing Back, Discipline). Žalgiris dokłada Motor i Leadership."
+  },
+
+  "set_clear_goals": {
+    "horyzonty": "Codzienne, tygodniowe, miesięczne, na sezon",
+    "outcome_goals": {
+      "definicja": "Skupione na WYNIKU KOŃCOWYM",
+      "problem": "W dużej mierze poza twoją bezpośrednią kontrolą — zależą od przeciwników, sędziów i innych czynników"
+    },
+    "process_goals": {
+      "definicja": "Skupione na DZIAŁANIACH I ZACHOWANIACH, które kontrolujesz w danym momencie",
+      "zaleta": "W pełni w twojej kontroli i to one faktycznie napędzają wynik"
+    },
+    "_wniosek": "Rozróżnienie proste, ale rozstrzygające: cel typu „wygrać mecz\" jest outcome, cel typu „każde posiadanie z pełną energią\" jest process. Klub uczy zawodnika stawiać te drugie.",
+    "_program_use": "Moduł celów zawodnika powinien wymuszać wybór typu celu (outcome / process) i zachęcać do process goals. Zbieżne z „normą zadaniową\" Hucińskiego (cel świadomie zaniżony, by zawodnik miał przyjemność z wykonania).",
+    "_powiazanie": "Uzupełnia „Drzewko celów na 7 dni\" z Dziennika Młodych Talentów (imopeksis_methodology.json) — tam jest rutyna codzienna, tu typologia celów."
+  },
+
+  "focus_on_building_identity": {
+    "_idea": "Budowanie TOŻSAMOŚCI zamiast wymuszania zachowań.",
+    "przyklady_sformulowan": [
+      "„We are the type of team that brings energy every possession regardless of the score.\" (Jesteśmy zespołem, który wnosi energię w każdym posiadaniu, niezależnie od wyniku.)",
+      "„I am the type of player or coach who does the extra work when nobody is counting.\" (Jestem zawodnikiem/trenerem, który wykonuje dodatkową pracę, gdy nikt nie liczy.)"
+    ],
+    "zasada": "Zbuduj alter ego, które nie PRÓBUJE ciężko pracować, ale które JEST pracowite.",
+    "_mechanizm": "Przesunięcie z „co robię\" na „kim jestem\" — zachowanie wynikające z tożsamości jest trwalsze niż zachowanie wymuszone dyscypliną.",
+    "_uwaga_jezykowa": "Konstrukcja „We are the type of team that…\" / „I am the type of player who…\" to gotowy szablon zdaniowy do pracy z zespołem."
+  },
+
+  "przenoszenie_na_mecz": {
+    "_zrodlo": "Slajd „WHAT YOU WANT TO SEE ON GAME DAY, YOU NEED TO RELENTLESSLY REPEAT IN PRACTICE\"",
+    "teza": "To, co chcesz zobaczyć w dniu meczu, musisz BEZLITOŚNIE POWTARZAĆ na treningu.",
+    "co_powtarzac": ["Adversity training (trening w przeciwnościach)", "Grit", "Focus", "Communication"],
+    "cztery_etapy_opanowania": "Od ZROZUMIENIA umiejętności → przez ZAPAMIĘTANIE jej → do WYKONYWANIA NATURALNIE → aż po UTRZYMANIE JEJ POD PRESJĄ",
+    "_waga": "Czwarty etap („sustaining it under pressure\") jest zwykle pomijany w opisach nauczania — a to on decyduje o transferze na mecz.",
+    "_powiazanie": "Odpowiada trzem fazom kształtowania nawyku ruchowego z licb_teoria_metodyka.json (opanowanie → różnicowanie → automatyzacja), ale DOKŁADA czwarty etap: odporność na presję. To istotne uzupełnienie polskiej teorii.",
+    "_powiazanie_2": "„Adversity training\" i „sytuacje trudne\" z planowania Hucińskiego (minuta do końca, przegrywamy 6 pkt) to ta sama idea."
+  },
+
+  "kongruencja_trenera": {
+    "_zrodlo": "Slajd „YOU CAN'T DEMAND THINGS FROM YOUR PLAYERS THAT YOU DON'T DO YOURSELF\"",
+    "teza_glowna": "Nie możesz wymagać od zawodników rzeczy, których sam nie robisz.",
+    "ostrzezenie": "INCONGRUENCE IS A SILENT CULTURE KILLER — niespójność jest cichym zabójcą kultury.",
+    "zasada_koncowa": "We take responsibility for EVERYTHING. (Bierzemy odpowiedzialność za wszystko.)",
+    "_waga": "To jest zwornik całej warstwy kulturowej: wszystkie wcześniejsze zasady (punktualność, szczerość, dodatkowa praca, przyjmowanie feedbacku) obowiązują TRENERA w takim samym stopniu jak zawodnika. Bez tego reszta jest listą życzeń.",
+    "_symetria_zobowiazan": "W materiałach Žalgirisu konsekwentnie widać dwustronność: zawodnik ma „accept feedback\", trener ma „be mindful with feedback\"; zawodnik ma robić extra work, trener też; zawodnik ma być punktualny — i trener."
+  },
+
+  "synteza_dla_wlasnej_pracy": [
+    "Każde ćwiczenie w planie ma przypisany typ: TEACHING (przerywam i poprawiam) / LEARNING (podpowiadam w biegu) / COMPETING (milczę, omawiam po)",
+    "Cele zawodnika dzielone na outcome i process — pchać w stronę process",
+    "Tożsamość zamiast wymuszania: „jestem zawodnikiem, który…\" zamiast „musisz…\"",
+    "Czwarty etap nauczania: utrzymanie umiejętności POD PRESJĄ — planować go osobno",
+    "Zasady zespołu behawioralne i sprawdzalne, nie deklaratywne",
+    "Wszystko, czego wymagasz od zawodnika, obowiązuje ciebie — inaczej kultura cicho umiera"
+  ],
+
+  "powiazania": {
+    "zalgiris_academy_model.json": "Warstwa organizacyjna i wartości klubu („what defines a Zalgiris player\").",
+    "zalgiris_age_curriculum.json": "Curriculum U6-U18 — drill types stosuje się do każdego ćwiczenia w tych planach.",
+    "zalgiris_playing_principles.json": "Zasady gry oraz slajd MENTAL APPROACH (10 haseł) — komplementarny wobec tutejszej warstwy kulturowej.",
+    "book_imopeksis_hucinski.json": "Trenowalność cech mentalnych, norma zadaniowa, sytuacje trudne, wizja coacha wg Whitmore'a („coach organizuje myślenie, nie przekazuje wiedzy\") — bardzo bliskie drill type LEARNING.",
+    "imopeksis_methodology.json": "8 czynników psychospołecznych vs 8 obszarów mental performance; Drzewko celów vs outcome/process goals.",
+    "finxs_mental_assessment.json": "18 kompetencji mentalnych — narzędzie pomiaru dla obszarów wymienionych w mental performance.",
+    "licb_teoria_metodyka.json": "3 fazy kształtowania nawyku ruchowego — Žalgiris dokłada czwarty etap (pod presją).",
+    "coaching_philosophy_template.json": "Szablon filozofii trenera — materiał Žalgirisu to gotowy przykład jej wypełnienia."
+  }
+}

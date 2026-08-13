@@ -1,0 +1,176 @@
+{
+  "_source": "Next Draft Foundation — Moduł 3, Arkusz Scoutingowy",
+  "_comment": "Oficjalny arkusz oceny zawodnika przez rolę — Next Draft Foundation. Gotowy do implementacji w app.py.",
+  "_program_use": "Formularz /koder lub /scout w app.py. Każda sekcja = osobna karta z polem notatek i oceną 1-5. Bottom panel = finalne werdykty.",
+
+  "meta": {
+    "tytul": "Arkusz Scoutingowy — Ocena Zawodnika przez Rolę",
+    "zasada": "Oceń zawodnika przez to, co robi na boisku — nie gdzie stoi."
+  },
+
+  "naglowek_formularza": {
+    "pola": [
+      { "id": "imie_nazwisko", "label": "Imię i Nazwisko Zawodnika", "typ": "text" },
+      { "id": "data", "label": "Data", "typ": "date" },
+      { "id": "scout", "label": "Scout", "typ": "text" }
+    ]
+  },
+
+  "panel_lewy": {
+    "dane_podstawowe": [
+      { "id": "wiek", "label": "Wiek", "typ": "number" },
+      { "id": "wzrost_waga", "label": "Wzrost / Waga", "typ": "text" },
+      { "id": "pozycja", "label": "Pozycja (Pozycje)", "typ": "text" },
+      { "id": "reka", "label": "Ręka preferowana", "typ": "select", "opcje": ["Prawa", "Lewa", "Obie"] },
+      { "id": "zespol_liga", "label": "Zespół / Liga", "typ": "text" }
+    ],
+    "szybki_poglad": {
+      "opis": "Szybki podgląd — 5-gwiazdkowe oceny",
+      "kategorie": [
+        { "id": "talent", "label": "TALENT", "skala": "1-5" },
+        { "id": "pracowitość", "label": "PRACOWITOŚĆ / ETYKA", "skala": "1-5" },
+        { "id": "iq", "label": "INTELIGENCJA KOSZYKARSKA", "skala": "1-5" },
+        { "id": "charakter", "label": "CHARAKTER", "skala": "1-5" },
+        { "id": "potencjal", "label": "POTENCJAŁ (UPSIDE)", "skala": "1-5" }
+      ]
+    },
+    "notatki_ogolne": { "id": "notatki_ogolne", "label": "Notatki ogólne", "typ": "textarea" }
+  },
+
+  "sekcje_oceny": [
+    {
+      "nr": 1,
+      "id": "archetyp",
+      "ikona": "target",
+      "nazwa": "ARCHETYP",
+      "pytanie": "Jaki jest jego główny archetyp / rozwija się w innym?",
+      "pola": [
+        { "id": "archetyp_dopasowanie", "label": "DOPASOWANIE", "typ": "rating", "skala": "1-5" },
+        { "id": "archetyp_notatki", "label": "NOTATKI", "typ": "textarea" }
+      ]
+    },
+    {
+      "nr": 2,
+      "id": "offensive_role",
+      "ikona": "offensive",
+      "nazwa": "OFFENSIVE ROLE",
+      "pytanie": "Jaką rolę pełni w ataku? Jak tworzy przewagi dla siebie i innych?",
+      "pola": [
+        { "id": "offensive_dopasowanie", "label": "DOPASOWANIE", "typ": "rating", "skala": "1-5" },
+        { "id": "offensive_notatki", "label": "NOTATKI", "typ": "textarea" }
+      ]
+    },
+    {
+      "nr": 3,
+      "id": "defensive_role",
+      "ikona": "shield",
+      "nazwa": "DEFENSIVE ROLE",
+      "pytanie": "Jaką rolę pełni w obronie? Jak wpływa na zespół po stronie defensywnej?",
+      "pola": [
+        { "id": "defensive_dopasowanie", "label": "DOPASOWANIE", "typ": "rating", "skala": "1-5" },
+        { "id": "defensive_notatki", "label": "NOTATKI", "typ": "textarea" }
+      ]
+    },
+    {
+      "nr": 4,
+      "id": "scalability",
+      "ikona": "chart",
+      "nazwa": "SCALABILITY",
+      "pytanie": "Czy jego gra skaluje się na wyższy poziom? (liga, rola, jakość zespołu)",
+      "pola": [
+        { "id": "scalability_dopasowanie", "label": "DOPASOWANIE", "typ": "rating", "skala": "1-5" },
+        { "id": "scalability_notatki", "label": "NOTATKI", "typ": "textarea" }
+      ]
+    },
+    {
+      "nr": 5,
+      "id": "playoff_viability",
+      "ikona": "trophy",
+      "nazwa": "PLAYOFF VIABILITY",
+      "pytanie": "Czy jego gra jest skuteczna w play-off? Czy przetrwa w trudnych meczach?",
+      "pola": [
+        { "id": "playoff_dopasowanie", "label": "DOPASOWANIE", "typ": "rating", "skala": "1-5" },
+        { "id": "playoff_notatki", "label": "NOTATKI", "typ": "textarea" }
+      ]
+    },
+    {
+      "nr": 6,
+      "id": "versatility",
+      "ikona": "arrows",
+      "nazwa": "VERSATILITY",
+      "pytanie": "W ilu aspektach gry wnosi wartość? Czy może grać różne role?",
+      "pola": [
+        { "id": "versatility_dopasowanie", "label": "DOPASOWANIE", "typ": "rating", "skala": "1-5" },
+        { "id": "versatility_notatki", "label": "NOTATKI", "typ": "textarea" }
+      ]
+    },
+    {
+      "nr": 7,
+      "id": "decision_making",
+      "ikona": "brain",
+      "nazwa": "DECISION MAKING",
+      "pytanie": "Jak podejmuje decyzje? Czy czyta grę i kontroluje tempo?",
+      "pola": [
+        { "id": "decision_dopasowanie", "label": "DOPASOWANIE", "typ": "rating", "skala": "1-5" },
+        { "id": "decision_notatki", "label": "NOTATKI", "typ": "textarea" }
+      ]
+    },
+    {
+      "nr": 8,
+      "id": "winning_impact",
+      "ikona": "team",
+      "nazwa": "WINNING IMPACT",
+      "pytanie": "Jaki ma wpływ na wygrywanie? Ile wnosi wartości, których nie widać w statystykach?",
+      "pola": [
+        { "id": "winning_dopasowanie", "label": "DOPASOWANIE", "typ": "rating", "skala": "1-5" },
+        { "id": "winning_notatki", "label": "NOTATKI", "typ": "textarea" }
+      ]
+    },
+    {
+      "nr": 9,
+      "id": "ideal_lineup_fit",
+      "ikona": "puzzle",
+      "nazwa": "IDEAL LINEUP FIT",
+      "pytanie": "W jakim ustawieniu i z jakim typem graczy wygląda najlepiej?",
+      "pola": [
+        { "id": "lineup_dopasowanie", "label": "DOPASOWANIE", "typ": "rating", "skala": "1-5" },
+        { "id": "lineup_notatki", "label": "NOTATKI", "typ": "textarea" }
+      ]
+    }
+  ],
+
+  "dodatkowe_uwagi": {
+    "id": "dodatkowe_uwagi",
+    "label": "Dodatkowe uwagi",
+    "typ": "textarea"
+  },
+
+  "panel_dolny": {
+    "werdykt": {
+      "pytanie": "Czy jego gra pomaga wygrywać?",
+      "opcje": [
+        { "id": "tak", "label": "TAK" },
+        { "id": "raczej_tak", "label": "RACZEJ TAK" },
+        { "id": "raczej_nie", "label": "RACZEJ NIE" },
+        { "id": "nie", "label": "NIE" }
+      ],
+      "dlaczego": { "id": "dlaczego", "label": "Dlaczego?", "typ": "text" }
+    },
+    "podsumowanie": { "id": "podsumowanie_scouta", "label": "Podsumowanie scouta", "typ": "text" },
+    "pewnosc_oceny": {
+      "id": "pewnosc_oceny",
+      "label": "Pewność oceny",
+      "typ": "rating",
+      "skala": "1-5",
+      "opis_skali": { "1": "NISKA", "5": "WYSOKA" }
+    }
+  },
+
+  "implementacja_uwagi": [
+    "9 sekcji = 9 kart w 2 rzędach (5 + 4), każda z pytaniem, ratingiem 1-5 i polem notatek",
+    "Panel lewy: zdjęcie/sylwetka + dane podstawowe + szybki podgląd 5 kategorii",
+    "Panel dolny: checkbox werdykt (TAK/RACZEJ TAK/RACZEJ NIE/NIE) + pewność oceny",
+    "Skala pomiaru: gwiazdki 1-5 jak w przykładzie. Domyślnie puste (☆☆☆☆☆)",
+    "Drukowany arkusz + wersja cyfrowa w app.py jako /koder lub moduł scoutingowy"
+  ]
+}

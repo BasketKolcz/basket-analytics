@@ -1,0 +1,87 @@
+{
+  "_source": "Next Draft Foundation — Moduł 1",
+  "_comment": "Role scoutów i obowiązki",
+
+  "front_office_hierarchy_nba": [
+    "Owner / Ownership",
+    "President of Basketball Operations",
+    "General Manager (GM)",
+    "Assistant GM",
+    "Scouting Department | Analytics | Medical | Coaching Staff"
+  ],
+
+  "scouting_department_roles": [
+    "Director of Scouting",
+    "College Scouts",
+    "International Scouts",
+    "Pro Scouts",
+    "Video / Analytics Support"
+  ],
+
+  "international_scout": {
+    "main_role": "Identyfikacja i ocena talentu poza USA w celu wspierania GM i front office w długoterminowym budowaniu składu",
+    "responsibilities": [
+      "Ogląda zawodników na całym świecie",
+      "Przygotowuje raporty i projekcje",
+      "Wspiera proces draftowy i transferowy",
+      "Pomaga organizacji podejmować decyzje",
+      "Monitoruje rozwój zawodników przez lata"
+    ],
+    "must_do": [
+      "Ograniczać ryzyko",
+      "Poprawiać jakość decyzji",
+      "Dostarczać kontekst i projekcję",
+      "Pomagać organizacji myśleć długoterminowo"
+    ],
+    "daily_duties": [
+      "Identyfikacja talentu",
+      "Oglądanie meczów live i video",
+      "Tworzenie raportów scoutingowych",
+      "Budowa watch list",
+      "Analiza projekcji zawodników",
+      "Background / intel gathering",
+      "Komunikacja z front office",
+      "Monitorowanie postępów zawodników",
+      "Podróże i networking"
+    ]
+  },
+
+  "druga_kariera_po_graniu": {
+    "_source": "Slajdy warsztatowe — Druga kariera w koszykówce",
+    "zasada": "Zacznij myśleć wcześniej. Największy błąd: zaczynać za późno.",
+    "mozliwe_sciezki": [
+      {
+        "id": "trener",
+        "nazwa": "TRENER",
+        "opis": "Praca bezpośrednio z zawodnikami — coaching, system, development"
+      },
+      {
+        "id": "skaut",
+        "nazwa": "SKAUT",
+        "opis": "Ocena zawodników, raporty, intel gathering, podróże i networking"
+      },
+      {
+        "id": "video",
+        "nazwa": "VIDEO",
+        "opis": "Analiza wideo, editing, prezentacje dla sztabu i zawodników"
+      },
+      {
+        "id": "gm_dyrektor",
+        "nazwa": "GM / DYREKTOR SPORTOWY",
+        "opis": "Budowanie drużyny, transfery, kontrakty, strategia organizacji"
+      },
+      {
+        "id": "agent",
+        "nazwa": "AGENT",
+        "opis": "Reprezentacja zawodników, negocjacje kontraktów, kariera menedżerska"
+      },
+      {
+        "id": "skill_coach",
+        "nazwa": "SKILL COACH",
+        "opis": "Indywidualny trening umiejętności, praca z zawodnikami poza treningami drużynowymi"
+      }
+    ],
+    "kiedy_zaczac": "Podczas gry — nie po zakończeniu kariery. Każdy rok gry to potencjalny networking i budowanie reputacji.",
+    "dla_scouta": "Zawodnik planujący drugą karierę jako scout/GM powinien już w czasie gry budować relacje, obserwować organizacje i uczyć się języka scoutingu."
+  }
+}

@@ -1,0 +1,689 @@
+{
+  "_source": "Next Draft Foundation — Moduł 3",
+  "_comment": "Budowanie składu przez nowoczesną soczewkę pozycyjną — cechy składu, diagnoza, versatility",
+  "_program_use": "Analiza lineupu, rekrutacja, decyzje rotacyjne, porównywanie składów — tooltips i sekcje w raporcie.",
+
+  "skuteczne_cechy_skladu": {
+    "zasada": "Identyfikowanie skutecznych cech składu jest bardziej efektywne przy wykorzystaniu nowoczesnych pozycji.",
+    "klucz_pomiaru": {
+      "doskonaly": { "label": "DOSKONAŁY", "kolor": "zielony" },
+      "przecietny": { "label": "PRZECIĘTNY", "kolor": "zółty" },
+      "slaby": { "label": "SŁABY", "kolor": "czerwony" }
+    },
+    "cechy": [
+      {
+        "id": "playmaking",
+        "nr": 1,
+        "nazwa_pl": "TWORZENIE AKCJI",
+        "nazwa_en": "PLAYMAKING",
+        "opis": "Zdolność do atakowania kosza i tworzenia sytuacji rzutowych dla innych."
+      },
+      {
+        "id": "spacing",
+        "nr": 2,
+        "nazwa_pl": "PRZESTRZEŃ",
+        "nazwa_en": "SPACING",
+        "opis": "Zdolność do rozciągania obrony poza linię trzech punktów."
+      },
+      {
+        "id": "rebounding",
+        "nr": 3,
+        "nazwa_pl": "ZBIÓRKI",
+        "nazwa_en": "REBOUNDING",
+        "opis": "Zdolność do kończenia akcji poprzez zabezpieczenie zbiórki."
+      },
+      {
+        "id": "defensive_ability",
+        "nr": 4,
+        "nazwa_pl": "UMIEJĘTNOŚCI OBRONNE",
+        "nazwa_en": "DEFENSIVE ABILITY",
+        "opis": "Zdolność do elastycznego ograniczania skuteczności ofensywnej przeciwnika."
+      }
+    ]
+  },
+
+  "pozycja_vs_funkcja": {
+    "tytul": "Dlaczego tradycyjne pozycje nie zawsze oddają role zawodników?",
+    "zasady": [
+      {
+        "id": "pozycja_ne_funkcja",
+        "nazwa": "POZYCJA ≠ FUNKCJA",
+        "opis": "Dwóch zawodników na tej samej pozycji może pełnić zupełnie inne role w ataku i obronie."
+      },
+      {
+        "id": "kontekst_ma_znaczenie",
+        "nazwa": "KONTEKST MA ZNACZENIE",
+        "opis": "System, partnerzy i schemat gry wpływają na to, jaką rolę zawodnik faktycznie pełni na boisku."
+      },
+      {
+        "id": "role_sa_plynne",
+        "nazwa": "ROLE SĄ PŁYNNE",
+        "opis": "Zawodnicy często zmieniają odpowiedzialność w zależności od posiadania, ustawienia i potrzeb drużyny."
+      }
+    ],
+    "wniosek": "Lepsze zrozumienie roli zawodnika = lepsze decyzje w treningu, rekrutacji i budowaniu zespołu.",
+    "mantra": "Patrz na role, nie na etykiety.",
+    "case_study_orlando": {
+      "zespol": "Orlando Magic",
+      "sezon": "2020–2021",
+      "przyklad_tradycyjny": {
+        "opis": "Tradycyjne pozycje",
+        "sklad": [
+          { "zawodnik": "Anthony", "pozycja": "Point Guard" },
+          { "zawodnik": "Ross", "pozycja": "Shooting Guard" },
+          { "zawodnik": "Bacon", "pozycja": "Small Forward" },
+          { "zawodnik": "Vucevic", "pozycja": "Power Forward" },
+          { "zawodnik": "Birch", "pozycja": "Center" }
+        ],
+        "net_rtg": -65.7,
+        "minuty": 50
+      },
+      "przyklad_nowoczesny": {
+        "opis": "Rzeczywiste role",
+        "sklad": [
+          { "zawodnik": "Anthony", "rola": "High-Usage Guard" },
+          { "zawodnik": "Ross", "rola": "Elite-Shooting Wing" },
+          { "zawodnik": "Bacon", "rola": "High-Usage Guard" },
+          { "zawodnik": "Vucevic", "rola": "Traditional Center" },
+          { "zawodnik": "Birch", "rola": "Traditional Center" }
+        ],
+        "net_rtg": -65.7,
+        "minuty": 50
+      },
+      "lekcja": "Zawodnik na tej samej pozycji może mieć całkowicie inny wpływ na grę."
+    }
+  },
+
+  "diagnoza_skladu": {
+    "tytul": "Jak odpowiednia diagnoza zmienia efektywność całej piątki",
+    "zasada": "Zastosowanie współczesnej soczewki pozycyjnej pozwala lepiej dopasować zawodników do ich mocnych stron, co zwiększa efektywność całego zespołu.",
+    "lancuch": [
+      "LEPSZA DIAGNOZA",
+      "LEPSZE DOPASOWANIE",
+      "LEPSZE WYNIKI"
+    ],
+    "efekty_nowoczesnego_dopasowania": [
+      "Więcej przestrzeni",
+      "Więcej opcji w ataku",
+      "Lepsza obrona na obwodzie",
+      "Wyższy Net RTG / lepsze rezultaty"
+    ],
+    "case_study_bucks": {
+      "zespol": "Milwaukee Bucks",
+      "kluczowa_zmiana": {
+        "out": { "zawodnik": "Lopez", "rola": "Traditional Big", "wady": ["Paint Presence (brak perimeter mobility)"] },
+        "in": { "zawodnik": "Connaughton", "rola": "Versatile Role Player", "zalety": ["Space Behind 3", "Defensive Versatility"] },
+        "opis": "Przesunięcie Lopéza na ławkę i wprowadzenie Connaughtona do pierwszej piątki zapewniło więcej przestrzeni, wszechstronności i obrony — co przełożyło się na wyraźnie lepsze rezultaty."
+      },
+      "przed": {
+        "opis": "Tradycyjne dopasowanie — mniejsza przestrzeń, mniejsza wszechstronność",
+        "sklad": [
+          { "zawodnik": "Lopez", "rola": "Traditional Big" },
+          { "zawodnik": "Middleton", "rola": "Skilled Forward" },
+          { "zawodnik": "Antetokounmpo", "rola": "Offensive Engine" },
+          { "zawodnik": "Holiday", "rola": "Versatile Role Player" },
+          { "zawodnik": "Tucker", "rola": "Versatile Role Player" }
+        ],
+        "cechy_skladu": {
+          "playmaking": "ok",
+          "spacing": "slabe",
+          "rebounding": "slabe",
+          "versatility": "ok"
+        },
+        "net_rtg": 10.7,
+        "minuty": 259
+      },
+      "po": {
+        "opis": "Nowoczesne dopasowanie — więcej przestrzeni, więcej możliwości, lepsza obrona",
+        "sklad": [
+          { "zawodnik": "Connaughton", "rola": "Versatile Role Player" },
+          { "zawodnik": "Middleton", "rola": "Skilled Forward" },
+          { "zawodnik": "Antetokounmpo", "rola": "Offensive Engine" },
+          { "zawodnik": "Holiday", "rola": "Versatile Role Player" },
+          { "zawodnik": "Tucker", "rola": "Versatile Role Player" }
+        ],
+        "cechy_skladu": {
+          "playmaking": "ok",
+          "spacing": "ok",
+          "rebounding": "ok",
+          "versatility": "doskonale"
+        },
+        "net_rtg": 18.0,
+        "minuty": 100
+      }
+    }
+  },
+
+  "versatility_wins": {
+    "tytul": "Dlaczego Versatility wygrywa w nowoczesnej koszykówce?",
+    "powody": [
+      {
+        "id": "wiecej_opcji_defensywnych",
+        "nazwa": "VERSATILE PLAYERS",
+        "opis": "Dają trenerowi więcej opcji defensywnych i neutralizują zagrożenia przeciwnika."
+      },
+      {
+        "id": "spacing_bez_utraty_defensywy",
+        "nazwa": "UTRZYMUJĄ SPACING BEZ UTRATY DEFENSYWY",
+        "opis": "Potrafią zagrozić rzutem i podejmować dobre decyzje bez piłki."
+      },
+      {
+        "id": "ukrywanie_matchupow",
+        "nazwa": "POMAGAJĄ UKRYWAĆ SŁABSZE MATCHUPY",
+        "opis": "Dzięki elastyczności pozycyjnej redukują mismatch'e i słabe punkty zespołu."
+      },
+      {
+        "id": "zmiana_lineupow",
+        "nazwa": "POZWALAJĄ TRENEROWI ZMIENIAĆ LINEUPY BEZ ZMIANY JAKOŚCI GRY",
+        "opis": "Więcej kombinacji = większa przewaga taktyczna w trakcie meczu."
+      }
+    ],
+    "klucz": "Im więcej lineup options daje zawodnik, tym łatwiej budować zwycięski roster.",
+    "lineup_options": [
+      "SWITCH EVERYTHING",
+      "SHOOTING LINEUP",
+      "DEFENSIVE LINEUP",
+      "SMALL LINEUP"
+    ],
+    "lancuch_wplywu": [
+      "LEPSZA OBRONA",
+      "LEPSZY SPACING",
+      "ŁATWIEJSZE DOPASOWANIE",
+      "WIĘCEJ SZANS NA ZWYCIĘSTWO"
+    ],
+    "zasada": "Większa elastyczność = większa przewaga",
+    "cytat": "Versatility increases lineup survivability."
+  },
+
+  "budowanie_jako_puzzle": {
+    "_source": "Next Draft Foundation — slajd 'Budowanie Składu to Układanie Puzzli'",
+    "tytul": "BUDOWANIE SKŁADU TO UKŁADANIE PUZZLI",
+    "filozofia": "Nie potrzebujesz pięciu idealnych zawodników. Potrzebujesz pięciu, którzy uzupełniają swoje mocne i słabe strony.",
+    "przyklady_uzupelniania": [
+      {
+        "id": "pg_sg_komplement",
+        "zawodnik_a": { "pozycja": "PG", "slabosci": ["słabszy rzut"], "mocne": ["świetny organizator"] },
+        "zawodnik_b": { "pozycja": "SG", "mocne": ["elitarny shooter"] },
+        "wynik": "PROBLEM ZNIKA — słaby rzut PG nie ma znaczenia gdy SG jest elitarnym strzelcem."
+      },
+      {
+        "id": "c_pf_komplement",
+        "zawodnik_a": { "pozycja": "CENTER", "slabosci": ["słaby post-up"], "mocne": ["elite rim protection"] },
+        "zawodnik_b": { "pozycja": "PF", "mocne": ["stretch four — otwiera spacing"] },
+        "wynik": "LEPSZY FIT — słabość posta centra nie boli, gdy PF otwiera boisko rzutem za 3."
+      }
+    ],
+    "najwazniejsza_zasada": "Nie oceniaj zawodników w próżni. Oceniaj ich w kontekście drużyny, którą budujesz.",
+    "dobry_gm_skaut_wygrywa_bo": [
+      "Wie, na jakie kompromisy może sobie pozwolić (wada krytyczna vs wada akceptowalna)",
+      "Potrafi odróżnić wadę krytyczną od wady akceptowalnej w kontekście konkretnego składu",
+      "Buduje zespół, w którym mocne strony jednych maskują słabości drugich"
+    ],
+    "pytanie_kluczowe": "Czy ta wada zawodnika jest krytyczna dla NASZEGO systemu, czy możemy ją pokryć innymi graczami?"
+  },
+
+  "filozofia_gry_krok1": {
+    "_source": "Next Draft Foundation — slajd 'Krok 1: Najpierw Filozofia Gry'",
+    "tytul": "KROK 1 — NAJPIERW FILOZOFIA GRY",
+    "zasada": "Nie rozmawiamy jeszcze o nazwiskach. Najpierw filozofia.",
+    "opis": "To filozofia określa profil zawodników, a nie odwrotnie. Zanim zaczniesz szukać zawodników, musisz wiedzieć, jaką drużynę chcesz zbudować.",
+    "pytania_do_odpowiedzi": [
+      { "id": "jak_gramy",       "pytanie": "Jak chcemy grać?",                    "opis": "Styl gry, tempo, systemy ofensywne i defensywne — co jest naszą filozofią?" },
+      { "id": "nasza_przewaga",  "pytanie": "Co ma być naszą przewagą?",           "opis": "Co robimy lepiej niż rywale? Na czym budujemy tożsamość?" },
+      { "id": "lepiej_niz_budzet","pytanie": "Co chcemy robić lepiej niż budżet?", "opis": "W co inwestujemy ograniczone zasoby — szybkość, obrona, spacing, depth?" },
+      { "id": "wartosci",        "pytanie": "Jakie wartości ma mieć drużyna?",     "opis": "Hardwork, selflessness, accountability — co jest nienegocjowalne?" },
+      { "id": "szatnia",         "pytanie": "Jakich ludzi chcemy mieć w szatni?",  "opis": "Charakter, kompatybilność, dojrzałość — profil osobowości zawodnika." }
+    ],
+    "przyklad_filozofii": {
+      "opis": "Przykładowe odpowiedzi definiujące profil zawodników:",
+      "atak": {
+        "elementy": ["Szybkie tempo", "Dużo transition", "Spacing", "Pick & Roll"],
+        "co_oznacza_dla_rekrutacji": "Szukasz zawodników: szybkich w biegu, zdolnych do rzutu z dystansu (spacing), potrafiących grać P&R po obu stronach."
+      },
+      "obrona": {
+        "elementy": ["Agresja", "Switch 1-4", "Pressing po zdobytym koszu"],
+        "co_oznacza_dla_rekrutacji": "Szukasz zawodników: atletycznych defensywnie, zdolnych do krycia wielu pozycji (switch), wysokiego IQ obronnego."
+      }
+    },
+    "5_filarow_filozofii": ["TOŻSAMOŚĆ", "PRZEWAGA", "CHARAKTER", "LUDZIE", "SZATNIA"],
+    "kolejnosc_kroków": "Krok 1: Filozofia Gry → Krok 2: Roster Construction (role) → szukanie zawodników do ról"
+  },
+
+  "roster_construction_krok2": {
+    "_source": "Next Draft Foundation — slajd 'Krok 2: Budujemy Roster Construction'",
+    "tytul": "KROK 2 — ROSTER CONSTRUCTION",
+    "zasada": "Nie wpisujemy nazwisk. Najpierw role.",
+    "opis": "Budowanie składu zaczyna się od zdefiniowania ról, które drużyna potrzebuje — dopiero potem szukasz zawodników do tych ról.",
+    "role_per_pozycja": [
+      { "pozycja": "PG",     "profil": "ORGANIZER + DECISION MAKER" },
+      { "pozycja": "SG",     "profil": "SCORER" },
+      { "pozycja": "SF",     "profil": "MOVEMENT SHOOTER" },
+      { "pozycja": "PF",     "profil": "3&D WING" },
+      { "pozycja": "C",      "profil": "RIM PROTECTOR" },
+      { "pozycja": "IMPORT", "profil": "UPSIDE PLAYER" },
+      { "pozycja": "IMPORT", "profil": "ELITE ROLE PLAYER" }
+    ],
+    "roster_plan_elementy": [
+      "TOŻSAMOŚĆ",
+      "SYSTEM",
+      "STYLE OF PLAY",
+      "ROLE",
+      "PROFILE",
+      "COMPATIBILITY",
+      "DEPTH"
+    ],
+    "priorytety_rekrutacji": ["FIT", "CHARACTER", "SKILLS", "UPSIDE"],
+    "pytanie_do_grupy": "Która pozycja jest dla Was najważniejsza? Dlaczego?",
+    "team_roles_diagram": {
+      "opis": "Schemat ról na boisku (widoczny na tablicy w slajdzie)",
+      "role": {
+        "PG": "ORGANIZER + DECISION MAKER",
+        "SG": "MOVEMENT SHOOTER",
+        "SF": "3&D WING",
+        "PF": "CONNECTOR",
+        "C": "RIM PROTECTOR"
+      },
+      "uwaga": "Role mogą być przypisane do różnych pozycji w zależności od filozofii — np. Movement Shooter może grać na SG lub SF."
+    }
+  },
+
+  "warsztat_case_study_plk": {
+    "_source": "Next Draft Foundation — slajd 'Warsztat Praktyczny: Case Study PLK'",
+    "tytul": "WARSZTAT PRAKTYCZNY — CASE STUDY PLK",
+    "haslo": "Jak zbudować drużynę w 6 tygodni?",
+    "zalozenia": {
+      "liga": "Awans z 1. Ligi do PLK",
+      "czas": "Początek czerwca — 6 tygodni na budowę składu",
+      "zasoby_ludzkie": "Brak dyrektora sportowego — trener/skaut robi wszystko",
+      "zadanie": "Zbudować cały zespół od podstaw"
+    },
+    "punk_startowy": {
+      "zostaja": {
+        "opis": "Zawodnicy, którzy zostają w składzie",
+        "liczba_polskich": 3,
+        "mlody_u23": 1,
+        "razem": 4,
+        "uwaga": "To twój trzon — buduj wokół nich tożsamość"
+      },
+      "do_zakontraktowania": {
+        "lacznie": "8-9 nowych zawodników",
+        "obcokrajowcy": 6,
+        "polacy_lub_naturalizowani": "2-3",
+        "uwaga": "Obcokrajowcy = jakość, Polacy = stabilność i znajomość ligi"
+      }
+    },
+    "cel": "Zbudować KONKURENCYJNY zespół w PLK — nie tylko przetrwać sezon, ale rywalizować.",
+    "klucz_sukcesu": [
+      { "id": "tozsamosc",      "nazwa": "TOŻSAMOŚĆ",        "pytanie": "Jak chcemy grać? Co ma nas wyróżniać?" },
+      { "id": "fit_systemowy",  "nazwa": "FIT SYSTEMOWY",    "pytanie": "Czy każdy zawodnik pasuje do naszego stylu gry?" },
+      { "id": "charakter",      "nazwa": "CHARAKTER",        "pytanie": "Czy ci ludzie razem stworzą dobrą szatnię?" },
+      { "id": "upside",         "nazwa": "UPSIDE",           "pytanie": "Czy zawodnicy mają potencjał do wzrostu w PLK?" },
+      { "id": "budzet",         "nazwa": "BUDŻET",           "pytanie": "Czy konstrukcja budżetowa jest zrównoważona i elastyczna?" }
+    ],
+    "plan_6_krokow": [
+      { "krok": 1, "nazwa": "PROFIL DRUŻYNY",       "opis": "Najpierw filozofia gry — styl, tożsamość, priorytety. Co chcemy robić na boisku?" },
+      { "krok": 2, "nazwa": "PROFILE ZAWODNIKÓW",   "opis": "Zdefiniuj role jakich potrzebujesz. Nie nazwiska — ROLE i cechy na każdą z nich." },
+      { "krok": 3, "nazwa": "LISTA KANDYDATÓW",     "opis": "Do każdej roli przypisz listę kandydatów z różnych źródeł (własna baza + agenci + dane + publiczne)." },
+      { "krok": 4, "nazwa": "SCOUTING",             "opis": "Obejrzyj candidatów — wideo + live. Zweryfikuj czy profil zgadza się z tym, co widzisz na boisku." },
+      { "krok": 5, "nazwa": "ROZMOWY",              "opis": "Intel i background — rozmowy z trenerami, agentami, byłymi teammatami. Sprawdź charakter i szatnię." },
+      { "krok": 6, "nazwa": "DECYZJE",              "opis": "Podejmij decyzje w kolejności: trzon polskich → kluczowe role obcokrajowców → depth." }
+    ],
+    "priorytety_przy_ograniczonym_czasie": [
+      "Zacznij od razu od kroku 1 — filozofia przed nazwiskami",
+      "Polskich zawodników: najpierw przedłużenia sprawdzonych, potem nowi",
+      "Obcokrajowcy: najpierw zamknij 2-3 kluczowe role, potem depth",
+      "Nie spiesz się z decyzjami B-tier — złe podpisanie na 6 tygodniach kosztuje cały sezon",
+      "Buduj relacje z agentami równolegle — nie czekaj aż skończy się scouting"
+    ],
+    "lekcja": "Scouting pod presją czasu wzmacnia błędy. Jeśli nie masz filozofii, każdy wolny zawodnik wygląda jak dobry zawodnik."
+  },
+
+  "profile_zawodnikow_krok3": {
+    "_source": "Next Draft Foundation — slajd 'Krok 3: Najpierw Profil, Potem Nazwiska'",
+    "tytul": "KROK 3 — PROFILE ZAWODNIKÓW",
+    "zasada": "Najpierw profil. Potem nazwiska.",
+    "mantra": "Najlepsi skauci nie szukają najlepszych zawodników. Szukają zawodników, którzy pasują do naszego systemu.",
+    "framework_profilu": {
+      "must_have": {
+        "nazwa": "MUST HAVE",
+        "opis": "Absolutne kryteria — bez tego nie ma mowy",
+        "zastosowanie": "Cechy, które zawodnik MUSI posiadać, aby w ogóle go rozważać. Ich brak automatycznie wyklucza."
+      },
+      "nice_to_have": {
+        "nazwa": "NICE TO HAVE",
+        "opis": "Dodatkowe atuty — plus, nie konieczność",
+        "zastosowanie": "Cechy pożądane, które podnoszą wartość zawodnika, ale przy braku nie dyskwalifikują."
+      },
+      "deal_breakers": {
+        "nazwa": "DEAL BREAKERS",
+        "opis": "Czego nie akceptujemy — tego nie chcemy w drużynie",
+        "zastosowanie": "Cechy lub zachowania automatycznie wykluczające zawodnika — nawet jeśli reszta profilu jest dobra."
+      }
+    },
+    "przyklad_pg": {
+      "pozycja": "PG — Point Guard",
+      "must_have": ["Pick & Roll", "Decision Making", "Leadership"],
+      "must_have_komentarz": "BEZ TEGO NIE MA MOWY.",
+      "nice_to_have": ["Pull Up 3"],
+      "nice_to_have_komentarz": "DODATKOWY PLUS, NIE KONIECZNOŚĆ.",
+      "deal_breakers": ["Turnover Machine", "Non Shooter"],
+      "deal_breakers_komentarz": "TEGO NIE CHCEMY W DRUŻYNIE."
+    },
+    "pelny_proces_roster_building": [
+      { "krok": 1, "nazwa": "FILOZOFIA",           "opis": "Styl gry" },
+      { "krok": 2, "nazwa": "ROSTER CONSTRUCTION", "opis": "Role i potrzeby" },
+      { "krok": 3, "nazwa": "PROFILE ZAWODNIKÓW",  "opis": "Archetypy i cechy" },
+      { "krok": 4, "nazwa": "NAZWISKA",            "opis": "Lista kandydatów" },
+      { "krok": 5, "nazwa": "SCOUTING",            "opis": "Weryfikacja" },
+      { "krok": 6, "nazwa": "DECYZJA",             "opis": "Kto pasuje?" }
+    ]
+  },
+
+  "tworzymy_profile_krok3_pg": {
+    "_source": "Next Draft Foundation — slajd 'Krok 3: Tworzymy Profile Zawodników'",
+    "tytul": "KROK 3 — TWORZYMY PROFILE ZAWODNIKÓW (rozgrywający — pełny przykład)",
+    "zasada": "TO SAMO ROBIMY DLA KAŻDEJ POZYCJI.",
+    "przyklad_pg_rozszerzony": {
+      "pozycja": "ROZGRYWAJĄCY — PG",
+      "musi_miec": ["Pick & Roll", "Leadership", "Decision Making", "Defense"],
+      "nice_to_have": ["Pull-Up 3", "Size", "Experience in Europe"],
+      "deal_breakers": ["Dużo Strat", "Brak Rzutu", "Słaba Mentalność"],
+      "roznica_vs_poprzedni_przyklad": "Dodano Defense do Must Have; Size i Experience in Europe do Nice To Have; Słaba Mentalność jako deal breaker (obok Dużo Strat i Brak Rzutu)."
+    },
+    "player_profile_karta": {
+      "opis": "Format karty profilu zawodnika — wzorzec dokumentacji",
+      "pola_podstawowe": {
+        "Position": "PG",
+        "Type": "Organizer + Decision Maker",
+        "Role": "Starter",
+        "Focus": "Pick & Roll / Defense / Leadership"
+      },
+      "key_traits_oceny": {
+        "opis": "Rating 1-5 gwiazdek dla kluczowych cech — przykład PG",
+        "cechy": [
+          { "cecha": "Pick & Roll",      "ocena": "4/5" },
+          { "cecha": "Decision Making",  "ocena": "3.5/5" },
+          { "cecha": "Defense",          "ocena": "3.5/5" },
+          { "cecha": "Leadership",       "ocena": "2.5/5" },
+          { "cecha": "Shooting",         "ocena": "2/5" },
+          { "cecha": "Physical Tools",   "ocena": "1.5/5" }
+        ],
+        "uwaga": "Niski rating Shooting (2/5) = akceptowalny kompromis jeśli inne cechy muszą-mieć są silne"
+      }
+    }
+  },
+
+  "pierwsza_lista_krok4": {
+    "_source": "Next Draft Foundation — slajd 'Krok 4: Skąd Bierzemy Pierwszą Listę?'",
+    "tytul": "KROK 4 — SKĄD BIERZEMY PIERWSZĄ LISTĘ?",
+    "zasada": "NIE OGLĄDAMY JESZCZE MECZÓW. NAJPIERW BUDUJEMY BAZĘ NAZWISK.",
+    "cel": "SZEROKA I JAK NAJPEŁNIEJSZA LISTA ZAWODNIKÓW DO DALSZEJ WERYFIKACJI.",
+    "pamietaj": "NAJPIERW NAZWISKA, POTEM WERYFIKACJA.",
+    "zrodla": [
+      { "nr": 1,  "id": "wlasne_notatki",         "nazwa": "Własne notatki",                          "typ": "wewnętrzne" },
+      { "nr": 2,  "id": "zawodnicy_przeciwko",      "nazwa": "Zawodnicy przeciwko którym pracowaliśmy", "typ": "wewnętrzne" },
+      { "nr": 3,  "id": "rekomendacje_trenerow",    "nazwa": "Rekomendacje trenerów",                   "typ": "relacje" },
+      { "nr": 4,  "id": "rekomendacje_agentow",     "nazwa": "Rekomendacje agentów",                    "typ": "relacje" },
+      { "nr": 5,  "id": "synergy",                  "nazwa": "Synergy",                                 "typ": "platforma_pro" },
+      { "nr": 6,  "id": "instat",                   "nazwa": "InStat",                                  "typ": "platforma_pro" },
+      { "nr": 7,  "id": "fiba",                     "nazwa": "FIBA",                                    "typ": "publiczne" },
+      { "nr": 8,  "id": "eurobasket",               "nazwa": "EuroBasket",                              "typ": "publiczne" },
+      { "nr": 9,  "id": "realgm",                   "nazwa": "RealGM",                                  "typ": "publiczne" },
+      { "nr": 10, "id": "scouting_network",          "nazwa": "Scouting Network",                        "typ": "relacje" }
+    ],
+    "jak_budowac_liste": {
+      "zasady": ["SZEROKO", "BEZ UPRZEDZEŃ", "Z RÓŻNYCH ŹRÓDEŁ", "BEZ ANALIZY MECZOWEJ", "NA TYM ETAPIE"],
+      "opis": "Na etapie budowania pierwszej listy NIE oglądamy jeszcze meczów. Zbieramy szeroko nazwiska z różnych źródeł bez wstępnej selekcji. Analiza i weryfikacja zaczynają się dopiero po zbudowaniu bazy."
+    },
+    "player_database_format": {
+      "kolumny": ["#", "Name", "Pos", "Country", "Age", "League"],
+      "opis": "Prosta baza nazwisk — bez ocen, bez raportów. Tylko podstawowe dane identyfikacyjne na tym etapie."
+    },
+    "kolejnosc_krokow_pelna": "Krok 3 (Profile) → Krok 4 (Pierwsza Lista) → Krok 5 (Pierwsza Selekcja: filtr 60→5) → Krok 6 (Scouting 4 etapy)"
+  },
+
+  "pierwsza_selekcja_krok5": {
+    "_source": "Next Draft Foundation — slajd 'Krok 5: Pierwsza Selekcja'",
+    "tytul": "KROK 5 — PIERWSZA SELEKCJA",
+    "zasada": "NIE OGLĄDAMY 500 ZAWODNIKÓW. NAJPIERW FILTR.",
+    "opis": "Filtrowanie to nie odrzucanie. To oszczędzanie czasu na to, co naprawdę ważne.",
+    "lekcja": "DOBRY FILTR = LEPSZE DECYZJE PÓŹNIEJ",
+    "proces_selekcji": [
+      { "etap": 1, "liczba": 60,           "opis": "Pierwsza lista — wszyscy pasujący kandydaci spełniający kryteria geograficzne/pozycyjne/wiekowe" },
+      { "etap": 2, "liczba": 20,           "opis": "Po filtrach statystycznych i wstępnym video — zostawiasz tych z prawdziwym potencjałem fitu" },
+      { "etap": 3, "liczba": 10,           "opis": "Po głębszej analizie danych i dłuższym video — priorytetowi kandydaci" },
+      { "etap": 4, "liczba": 5,            "opis": "Finalna shortlista — ci, których poddasz pełnemu scoutingowi" },
+      { "etap": 5, "liczba": "PEŁNY SCOUTING", "opis": "Dopiero teraz: pełna obserwacja video + live + background + fit" }
+    ],
+    "przyklad_filtru_pg": {
+      "pozycja": "PG",
+      "filtry": ["Europa", "Wiek 24–30", "Starter", "Dobry AST/TO", "Skuteczny Shooter", "Podobny Styl Gry"],
+      "opis": "Przykład: szukasz PG — nie oglądasz 500 graczy, tylko tych co przejdą przez filtr"
+    },
+    "zasada_filtrowania": "Filtrowanie nie zastępuje scouting — daje scoutingowi właściwy cel. Nie odrzucasz talentów, wybierasz gdzie inwestujesz czas."
+  },
+
+  "scouting_4_etapy_krok6": {
+    "_source": "Next Draft Foundation — slajd 'Krok 6: Dopiero Teraz Zaczyna Się Scouting'",
+    "tytul": "KROK 6 — DOPIERO TERAZ ZACZYNA SIĘ SCOUTING",
+    "zasada": "KAŻDY ZAWODNIK PRZECHODZI PRZEZ 4 ETAPY.",
+    "ostrzezenie": "TALENT BEZ DOPASOWANIA BARDZO CZĘSTO KOŃCZY SIĘ ZŁYM TRANSFEREM.",
+    "mantra": "NIE SZUKAMY NAJLEPSZEGO ZAWODNIKA. SZUKAMY NAJLEPSZEGO DOPASOWANIA.",
+    "4_etapy": [
+      {
+        "nr": 1,
+        "nazwa": "VIDEO",
+        "pytanie": "Jak naprawdę gra?",
+        "opis": "Obserwacja film — nie highlights, a pełne mecze. Sprawdzasz jak funkcjonuje w systemie, podejmuje decyzje, reaguje na adversity."
+      },
+      {
+        "nr": 2,
+        "nazwa": "DANE",
+        "pytanie": "Czy liczby potwierdzają obserwację?",
+        "opis": "Statystyki jako weryfikacja tego co widziałeś na video — nie jako punkt startowy. Dane mają potwierdzać lub kwestionować obserwację."
+      },
+      {
+        "nr": 3,
+        "nazwa": "BACKGROUND",
+        "pytanie": "Kim jest jako człowiek?",
+        "opis": "Intel i charakter — rozmowy z trenerami, teammatami, agentami. Jak zachowuje się poza boiskiem, w trudnych momentach, w szatni?"
+      },
+      {
+        "nr": 4,
+        "nazwa": "FIT",
+        "pytanie": "Czy pasuje do naszej drużyny?",
+        "opis": "Ostatnie pytanie — czy to, co wiemy z video/danych/backgroundu, składa się na dobry fit do naszego systemu, trenera i składu?"
+      }
+    ],
+    "cykl": "VIDEO → DANE → BACKGROUND → FIT",
+    "przyklad_notatek_scouta": {
+      "mocne": ["Pick & Roll", "Decision Making", "Shooting"],
+      "slabosci": ["Turnovers", "Defensive Consistency"],
+      "overall_potential": "4/5 gwiazdek"
+    },
+    "przyklad_profilu_zawodnika": {
+      "wiek": 25,
+      "wzrost_cm": 185,
+      "pozycja": "PG",
+      "charakter": { "Leadership": true, "Work Ethic": true, "Team First": true, "Coachability": true }
+    }
+  },
+
+  "ranking_tier_krok7": {
+    "_source": "Next Draft Foundation — slajd 'Krok 7: Ranking Zamiast Jednej Listy'",
+    "tytul": "KROK 7 — RANKING ZAMIAST JEDNEJ LISTY",
+    "zasada": "NIGDY jedna lista od 1 do 20. ZAMIAST TEGO: Tier system.",
+    "powod": "BO ZAWODNICY CODZIENNIE PODPISUJĄ KONTRAKTY. LISTA MUSI BYĆ ELASTYCZNA.",
+    "tier_system": {
+      "tier_1": {
+        "nazwa": "TIER 1",
+        "opis": "NATYCHMIAST PODPISUJEMY",
+        "liczba_miejsc": 5,
+        "co_to_znaczy": "Zawodnik w pełni spełnia profil, fit jest jasny, możemy działać natychmiast gdy jest dostępny."
+      },
+      "tier_2": {
+        "nazwa": "TIER 2",
+        "opis": "BARDZO DOBRZY",
+        "liczba_miejsc": 5,
+        "co_to_znaczy": "Solidni kandydaci z dobrym profilem — rozważamy jeśli Tier 1 zostanie zamknięty lub niedostępny."
+      },
+      "tier_3": {
+        "nazwa": "TIER 3",
+        "opis": "OPCJE AWARYJNE",
+        "liczba_miejsc": 5,
+        "co_to_znaczy": "Backup plan — gorszy fit lub niepewność, ale do rozważenia przy ograniczonym rynku/budżecie."
+      }
+    },
+    "priorytety_przy_decyzji": ["FIT", "CHARACTER", "SKILLS", "POTENTIAL"],
+    "notatki_praktyczne": ["Dostępność", "Budżet", "Potrzeby Zespołu", "Terminy"],
+    "dlaczego_nie_jedna_lista": "Ranking linearny (1-20) zakłada, że zawodnicy są dostępni w tej samej chwili. Rzeczywistość jest dynamiczna — tier system pozwala działać elastycznie gdy rynek się zmienia."
+  },
+
+  "idealny_zawodnik_filozofia": {
+    "_source": "Next Draft Foundation — slajd 'Idealny Zawodnik Nie Istnieje'",
+    "tytul": "IDEALNY ZAWODNIK NIE ISTNIEJE",
+    "haslo": "SZUKASZ NAJLEPSZEGO DOPASOWANIA, NIE PERFEKCJI.",
+    "zasada": "KAŻDY TRANSFER JEST KOMPROMISEM.",
+    "kluczowe_pytanie": "NA JAKIE KOMPROMISY JESTEŚ GOTOWY?",
+    "zmiana_perspektywy": {
+      "nie_pytaj": "Czy ten zawodnik jest idealny?",
+      "pytaj_tylko": "Czy jego mocne strony są ważniejsze od jego słabości?"
+    },
+    "przyklad_pg": {
+      "pozycja": "PG — Point Guard",
+      "mocne": ["Świetny Lider", "Świetny Pick & Roll", "Świetna Obrona"],
+      "slabosci": ["Tylko 31% za 3"],
+      "pytanie": "CZY TO DYSKWALIFIKUJE?",
+      "odpowiedz": "TO ZALEŻY OD RESZTY SKŁADU.",
+      "wniosek": "Jeśli reszta składu ma shooterów — 31% za 3 u PG jest akceptowalne. Jeśli nie ma — to deal breaker."
+    },
+    "zasada_budowania_zespolu": "BUDUJ ZESPÓŁ, W KTÓRYM MOCNE STRONY JEDNYCH MASKUJĄ SŁABOŚCI DRUGICH.",
+    "lancuch_teamowy": ["UZUPEŁNIAJCIE SIĘ", "CHROŃCIE SŁABOŚCI", "WYKORZYSTUJCIE MOCNE STRONY", "WYGRYWAJCIE JAKO ZESPÓŁ"],
+    "kontekst_druzyny": "NIE OCENIAJ ZAWODNIKÓW W PRÓŻNI. OCENIAJ ICH W KONTEKŚCIE DRUŻYNY, KTÓRĄ BUDUJESZ.",
+    "zwiazek_z_budowanie_jako_puzzle": "Bezpośrednie rozwinięcie zasady 'budowanie_jako_puzzle' — kompromis jest świadomym wyborem, nie porażką."
+  },
+
+  "nowy_klub_problem": {
+    "_source": "Next Draft Foundation — slajd 'Nowy Klub = Nowy Problem'",
+    "tytul": "NOWY KLUB = NOWY PROBLEM",
+    "opis": "Dlaczego scouting musi się zacząć PRZED ofertą pracy.",
+    "scenariusz_czerwiec": {
+      "opis": "Wyobraź sobie: dostajesz nową robotę w czerwcu.",
+      "warunki": [
+        "zmieniasz klub",
+        "zmieniasz ligę",
+        "awansujesz poziom wyżej",
+        "zostajesz HC",
+        "dyrektor sportowy nie istnieje",
+        "jest połowa czerwca",
+        "za 5 tygodni pierwszy trening"
+      ]
+    },
+    "co_slyszysz": "POTRZEBUJEMY ZAWODNIKÓW.",
+    "typowa_reakcja": "Większość trenerów zaczyna wtedy wpisywać nazwiska na RealGM.",
+    "blad": "TO ZDECYDOWANIE ZA PÓŹNO.",
+    "lekcja": "Baza i proces muszą być gotowe PRZED tym momentem. Scouting to praca 12-miesięczna, nie tylko offseason.",
+    "przyklad_listy_transferowej": ["PG ?", "S&D Wing ?", "Rim Protector ?", "Scorer ?"],
+    "nawiazanie": "Dlatego budujemy bazę przez cały rok (zasada_5_5_5) i mamy gotowe profile zanim pojawi się oferta (profile_zawodnikow_krok3)."
+  },
+
+  "rekrutacja_od_filozofii": {
+    "_source": "Next Draft Foundation — slajd 'Rekrutacja Zaczyna Się od Filozofii'",
+    "tytul": "REKRUTACJA ZACZYNA SIĘ OD FILOZOFII. NIGDY OD NAZWISK.",
+    "pierwsze_pytanie": "NAJPIERW: JAK CHCEMY GRAĆ?",
+    "mantra": "NIE SZUKASZ NAJLEPSZYCH ZAWODNIKÓW. SZUKASZ ZAWODNIKÓW, KTÓRZY PASUJĄ DO SPOSOBU GRY.",
+    "haslo": "SYSTEM > TALENT",
+    "pytania_o_styl_gry": [
+      "Jakie TEMPO chcemy grać?",
+      "Jak budujemy SPACING?",
+      "Czy gramy na SWITCH? Czy DROP?",
+      "Czy PRESSING po zdobytym koszu?",
+      "MOTION OFFENSE czy ISOLATION?",
+      "MŁODZI z potencjałem czy DOŚWIADCZENI?",
+      "Cel: DEVELOPMENT czy WIN NOW?"
+    ],
+    "nasza_filozofia_5_elementow": [
+      "TOŻSAMOŚĆ — kim jesteśmy jako drużyna?",
+      "WARTOŚCI — co jest dla nas nienegocjowalne?",
+      "STYL GRY — jak gramy na obu połowach boiska?",
+      "ROLA ZAWODNIKÓW — czego oczekujemy od każdego z nich?",
+      "KULTURA — jak zachowujemy się w szatni i poza boiskiem?"
+    ],
+    "zwiazek_z_filozofia_krok1": "Rozwinięcie filozofia_gry_krok1 — dodaje konkretne pytania taktyczne i 5 elementów filozofii drużynowej (Tożsamość/Wartości/Styl/Rola/Kultura)."
+  },
+
+  "roster_construction_role": {
+    "_source": "Next Draft Foundation — slajd 'Zacznij od Roster Construction'",
+    "tytul": "ZACZNIJ OD ROSTER CONSTRUCTION — NIE OD ZAWODNIKÓW",
+    "pierwsze_pytanie": "NAJPIERW ODPOWIEDZ: JAKICH LUDZI POTRZEBUJĘ?",
+    "opis": "TO JEST WŁAŚNIE TWORZENIE PROFILI.",
+    "zasada": "KAŻDA POZYCJA = PROFIL, NIE NAZWISKO",
+    "styl_gry_fundament": ["TEMPO", "SPACING", "AGRESJA", "TRANSITION", "WARTOŚCI"],
+    "role_per_pozycja": [
+      { "pozycja": "PG", "pelna_nazwa": "Point Guard",    "role": ["Organizer", "Creator", "Defender"] },
+      { "pozycja": "SG", "pelna_nazwa": "Shooting Guard", "role": ["Movement Shooter", "Secondary Handler"] },
+      { "pozycja": "SF", "pelna_nazwa": "Small Forward",  "role": ["3&D"] },
+      { "pozycja": "PF", "pelna_nazwa": "Power Forward",  "role": ["Connector", "Switchability"] },
+      { "pozycja": "C",  "pelna_nazwa": "Center",         "role": ["Rim Protector", "Short Roll Passer"] }
+    ],
+    "kluczowe_pytanie": "Nie: 'Czy ten zawodnik jest dobry?' Ale: 'Czy spełnia profil, który zdefiniowałem dla tej roli w moim systemie?'",
+    "zwiazek_z_roster_construction_krok2": "Rozwinięcie roster_construction_krok2 — konkretne role per pozycja (PG=Organizer/Creator/Defender, SG=Movement Shooter/Secondary Handler, SF=3&D, PF=Connector/Switchability, C=Rim Protector/Short Roll Passer)."
+  },
+
+  "profesjonalny_scouting_podsumowanie": {
+    "_source": "Next Draft Foundation — slajd 'Podsumowanie: Profesjonalny Scouting Wygląda Tak'",
+    "tytul": "PROFESJONALNY SCOUTING — PODSUMOWANIE 10 KROKÓW",
+    "haslo": "PLAN. ANALIZA. DECYZJA. WYGRYWAMY.",
+    "cytat_kluczowy": "DOBRZY ZAWODNICY WYGRYWAJĄ MECZE. DOPASOWANI ZAWODNICY WYGRYWAJĄ SEZONY.",
+    "mantra": "NIE SZUKAMY GWIAZD. SZUKAMY ZAWODNIKÓW, KTÓRZY PASUJĄ DO NASZEGO PLANU.",
+    "process_beats_talent": true,
+    "10_krokow": [
+      { "krok": 1,  "nazwa": "FILOZOFIA",           "opis": "Kim chcemy być? Co jest naszą przewagą?" },
+      { "krok": 2,  "nazwa": "STYL GRY",             "opis": "Tempo/Spacing/Switch/Pressing/Win Now vs Development?" },
+      { "krok": 3,  "nazwa": "ROSTER CONSTRUCTION",  "opis": "Jakich ról potrzebujemy? Profil każdej pozycji." },
+      { "krok": 4,  "nazwa": "PROFILE ZAWODNIKÓW",   "opis": "Must Have / Nice To Have / Deal Breakers per rola." },
+      { "krok": 5,  "nazwa": "LISTA NAZWISK",        "opis": "Pierwsza selekcja: 60→20→10→5 przez filtr." },
+      { "krok": 6,  "nazwa": "VIDEO",                "opis": "Jak naprawdę gra? Pełne mecze, nie highlights." },
+      { "krok": 7,  "nazwa": "STATYSTYKI",           "opis": "Czy liczby potwierdzają obserwację z video?" },
+      { "krok": 8,  "nazwa": "BACKGROUND",           "opis": "Kim jest jako człowiek? Intel i charakter." },
+      { "krok": 9,  "nazwa": "FIT",                  "opis": "Czy pasuje do naszej drużyny, systemu, trenera?" },
+      { "krok": 10, "nazwa": "DECYZJA",              "opis": "Podejmij decyzję. Tier 1/2/3 — działaj elastycznie." }
+    ],
+    "5_filarow": ["ANALIZA", "DANE", "LUDZIE", "DOPASOWANIE", "ZESPÓŁ"],
+    "uwaga": "Kroki 1–5 to PREPARATION (przed szukaniem zawodnika). Kroki 6–10 to EVALUATION (ocena konkretnych kandydatów)."
+  },
+
+  "liga_reachability_procenty": {
+    "_source": "Next Draft Foundation — Call 2 (Rafał Jujcz, prezentacja 10 kroków)",
+    "zasada": "Profil zawodnika jest ideałem — w realu procent realizacji zależy od poziomu ligi.",
+    "progi_realizacji_profilu": [
+      { "liga": "NBA",     "procent": "90–95%", "opis": "Najbliżej idealnego — największy rynek, największy budżet, największy wybór." },
+      { "liga": "Euroliga", "procent": "~70%",  "opis": "Dobry wybór, ale zawężony dostępnością i konkurencją o graczy." },
+      { "liga": "PLK",     "procent": "~60%",  "opis": "Częste kompromisy — budżet, dostępność, poziom rynku." },
+      { "liga": "1.Liga i niżej", "procent": "<50%", "opis": "Będą kompromisy. Często poświęcenie — jeśli nie wiesz jakiego profilu szukasz, skład do siebie nie pasuje." }
+    ],
+    "implikacja": "Nie szukasz 'najlepszego zawodnika' — szukasz najlepszego dopasowania w twoich realnych warunkach. Procenty pokazują, że im niżej, tym ważniejsza elastyczność Must Have vs Nice To Have.",
+    "dla_scouta": "Przed tworzeniem profilu spytaj: na jakim poziomie gramy? Twój filtr 'Must Have' musi być realny dla tego rynku — inaczej zawsze będziesz niezadowolony z opcji, które masz."
+  },
+
+  "import_struktura_2_2_2": {
+    "_source": "Next Draft Foundation — Call 2 (Rafał Jujcz, kontekst 6 importów w PLK/Europa)",
+    "zasada": "6 importów to nie 6 takich samych typów kontraktów — to świadoma struktura ryzyka.",
+    "schemat": {
+      "2_go_to_guys": {
+        "rola": "Go-to guys — liderzy, decydenci końcówek, gwiazdy składu",
+        "opis": "Sprawdzeni, niezawodni — to na nich budujesz filozofię gry. Najdrożsi. Maksymalny fit z systemem."
+      },
+      "2_stabilni": {
+        "rola": "Stable role players — solidne, przewidywalne 12-15 minut",
+        "opis": "Zawodnicy na których możesz polegać niezależnie od formy. Dają drużynie ciągłość i balans."
+      },
+      "2_zakłady": {
+        "rola": "Upside bets / zakłady",
+        "opis": "Ryzykujesz — mogą zaskoczyć albo nie. Niższy kontrakt, ale wyższy potencjał. Różnicują budżet i przynoszą element X."
+      }
+    },
+    "dlaczego_ta_struktura": "Skład zbudowany tylko z go-to guys jest za drogi i nierealistyczny. Tylko z zakładami — zbyt nieprzewidywalny. Mieszanka daje stabilność + potencjał + ekonomię budżetu.",
+    "dla_scouta": "Oceniając zawodnika zawsze pytaj: do której kategorii pasuje w naszym składzie? Zakład dla jednego klubu (brak doświadczenia, wysokie upside) może być stabilnym graczem dla innego (gdzie profil jest prostszy)."
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "_source": "15 plików .docx z folderu SCOUTING/2LM/PLAYERS (sezon 2024/25) — własne raporty skautingowe WSZYSTKICH zespołów 2 Ligi Mężczyzn, grupa południowa. Plus szablon „PLAYERS BLANK.docx\", arkusz „STATYSTYKI ZAWODNICY.xlsx\" i „2LM PLAYERS UNDER 2007r..pdf\" (folder nadrzędny).",
+  "_comment": "KOMPLETNY KORPUS SKAUTINGOWY JEDNEJ LIGI — 15 zespołów, 162 zawodników, jeden sezon, jeden autor, jeden szablon. To czyni go materiałem REFERENCYJNYM: pozwala liczyć normy ligowe i benchmarkować zawodnika względem rozkładu, a nie względem intuicji. Metodycznie raporty realizują wzorzec z opponent_scouting_method.json (te same leaderboardy co raport Trefl Sopot).",
+  "_program_use": "Dwa zastosowania. (1) NORMY: percentyle poniżej odpowiadają na pytanie „czy ta wartość jest dobra w tej lidze?\" — mogą zasilić kolorowanie/oznaczanie wartości w tabelach zawodników. (2) WZORZEC RAPORTU: schemat kolumn i sekcji jest gotowym modelem dla modułu raportu przeciwnika. Sam zbiór danych leży w knowledge_base/datasets/2lm_players_2024_25.json (maszynowo czytelny).",
+
+  "kategoria": "Korpus skautingowy ligi — dane referencyjne i normy",
+
+  "zakres_korpusu": {
+    "liga": "2 Liga Mężczyzn (2LM), sezon 2024/25",
+    "zespolow": 15,
+    "zawodnikow": 162,
+    "zespoly": [
+      "1. KS Cracovia 1906", "2. MKKS Rybnik", "3. MKS Dąbrowa Górnicza", "4. KS 27 Katowice",
+      "5. AZS AWF Mickiewicz Katowice", "6. AZS AGH Kraków", "7. Niedźwiadki Przemyśl",
+      "8. BS Polonia Bytom", "9. TS Wisła Kraków", "10. AK Iskra Częstochowa",
+      "11. KKS Tarnowskie Góry", "12. ZKS Stal Stalowa Wola", "13. Basket Hills Bielsko-Biała",
+      "14. UJK Kielce", "15. Zagłębie Sosnowiec"
+    ],
+    "_wartosc": "Kompletność ligi jest tu kluczowa — przy 15/15 zespołów normy są policzone na POPULACJI, nie na próbie."
+  },
+
+  "schemat_raportu": {
+    "_zrodlo": "PLAYERS BLANK.docx + 15 realizacji",
+    "sekcja_1_players_characteristic": {
+      "kolumny": ["NAME (#nr + pozycja + imię i nazwisko)", "FOTO", "MIN", "PTS", "FG%", "3PT%", "FT%", "REB (DEF+OFF oraz suma)", "AST", "ST / TO", "+/-", "SHOT (marker ⃝)"],
+      "wiersz_opisu": "Pod każdym wierszem statystycznym osobny wiersz z opisem: tendencje ofensywne, jakość rzutu, opcje w PnR (1st/2nd), zachowanie w low poście, ocena obrony — zakończone INSTRUKCJĄ dla nas",
+      "_uwaga_parsowania": "Komórki REB i ST/TO są DWULINIJKOWE (REB: „3,8+1,3\" ¶ „5,1\"; ST/TO: „0,5\" ¶ „1,1\"). Naiwna ekstrakcja skleja je w bezsensowne liczby typu „3,8+1,35,1\". Trzeba czytać akapity wewnątrz komórki osobno."
+    },
+    "sekcja_2_team_characteristic": {
+      "starters_i_bench": "Skład podstawowy i ławka; przy zawodniku często wzrost i wiek (np. „183cm/30yo\")",
+      "leaderboardy": ["BEST PLAYERS", "BEST 3PT", "NO/BAD 3PT", "BEST FT", "WORST FT", "BEST 1x1 INSIDE", "BEST 1x1 OUTSIDE", "BEST OFF REB.", "MOST TURNOVERS", "LAST SHOTS"],
+      "charakterystyka": "Blok OFFENSE | DEFENSE",
+      "_uwaga": "Zestaw 10 leaderboardów jest IDENTYCZNY jak w raporcie na Trefl Sopot — potwierdza przyjęcie tej samej metodyki (patrz opponent_scouting_examples.json)."
+    },
+    "_uwaga_o_szablonie": "PLAYERS BLANK.docx nie jest czysty — zawiera pozostałości po raporcie „KADRA PL U14\" (nazwiska, kluby, wyróżnienia OOM). Przy tworzeniu nowego raportu z tego szablonu trzeba je usunąć, inaczej wyciekną do dokumentu."
+  },
+
+  "normy_ligowe_2lm_2024_25": {
+    "_podstawa": "154 zawodników z 14 zespołów o średnich sezonowych (BEZ KS Cracovia — patrz ostrzeżenie o jednostkach). Wartości procentowe liczone z pominięciem zer (brak prób).",
+    "_jak_czytac": "P25 = dolny kwartyl (słabo w tej lidze), MED = mediana (typowy zawodnik), P75 = górny kwartyl (wyraźnie powyżej średniej), P90 = czołówka ligi.",
+    "PTS":  {"n": 131, "P25": 4.6,  "MED": 7.8,  "P75": 11.7, "P90": 14.5, "max": 26.5},
+    "FG%":  {"n": 129, "P25": 33.3, "MED": 40.9, "P75": 49.0, "P90": 59.3, "max": 100.0},
+    "3PT%": {"n": 100, "P25": 22.1, "MED": 30.0, "P75": 38.1, "P90": 50.0, "max": 100.0},
+    "FT%":  {"n": 122, "P25": 53.0, "MED": 68.7, "P75": 78.2, "P90": 92.8, "max": 100.0},
+    "REB":  {"n": 119, "P25": 2.5,  "MED": 4.0,  "P75": 5.5,  "P90": 7.6,  "max": 15.0},
+    "AST":  {"n": 131, "P25": 0.8,  "MED": 1.5,  "P75": 2.5,  "P90": 3.5,  "max": 8.8},
+    "ST":   {"n": 130, "P25": 0.5,  "MED": 1.0,  "P75": 1.5,  "P90": 2.0,  "max": 6.0},
+    "TO":   {"n": 129, "P25": 1.0,  "MED": 1.7,  "P75": 2.7,  "P90": 3.8,  "max": 6.3},
+    "_interpretacje_praktyczne": [
+      "Mediana punktowa 2LM to ~7,8 pkt — zawodnik z 12 pkt jest już w górnym kwartylu ligi",
+      "3PT% powyżej 38% plasuje w górnym kwartylu, powyżej 50% w czołówce (P90)",
+      "Mediana FT% to zaledwie ~69% — to niska liga rzutów wolnych, co ma konsekwencje taktyczne (faulowanie jest tańsze niż w wyższych ligach)",
+      "Mediana asyst 1,5 przy medianie strat 1,7 — przeciętny zawodnik 2LM ma AST/TO poniżej 1,0",
+      "Maksima 100% w FG%/3PT%/FT% to zawodnicy o znikomej liczbie prób — przy budowie rankingów trzeba wprowadzić PRÓG MINIMALNEJ LICZBY PRÓB",
+      "Rozstęp REB od 2,5 (P25) do 7,6 (P90) — zbiórka silnie różnicuje zawodników, dobra oś do profilowania pozycji"
+    ]
+  },
+
+  "rozklad_pozycji": {
+    "_podstawa": "154 zawodników, zapis pozycji z raportów",
+    "PG": 26, "PF": 25, "C": 20, "PG/SG": 20, "PF/C": 16, "SG": 16,
+    "SG/SF": 14, "SF/PF": 8, "SF": 6, "SG/PF": 2, "PG/SF": 1,
+    "_obserwacja": "Pozycje PODWÓJNE stanowią ~40% zapisów (PG/SG, PF/C, SG/SF, SF/PF). To empiryczne potwierdzenie tezy „funkcja > pozycja\" z modern_basketball.json — sam autor raportów nie potrafi (i nie chce) przypisać zawodnika do jednej pozycji.",
+    "_uwaga": "SF jako pozycja czysta jest najrzadsza (6) — skrzydłowi są opisywani głównie jako hybrydy SG/SF lub SF/PF."
+  },
+
+  "slownik_etykiet_opisowych": {
+    "_kontekst": "Częstość etykiet w opisach zawodników (154 zawodników). To de facto roboczy słownik archetypów autora — użyteczny jako lista kontrolna przy opisywaniu nowego zawodnika.",
+    "typ_zawodnika": {"SHOOTER": 37, "DEFENDER": 25, "DRIVER": 21, "REBOUNDER": 19, "SCORER": 6, "SLASHER": 5, "TANK PLAYER": 3, "ENERGY": 2},
+    "tendencje_techniczne": {"LOW POST": 23, "CsC (coast to coast)": 22, "SPOT UP": 21, "PULL UP": 14, "BOX OUT": 10, "CATCH AND SHOOT": 6, "FLOATER": 6, "LEFTY": 6, "PUMP FAKE": 5},
+    "_wzorzec_opisu": "Dominujący schemat: TYP ZAWODNIKA wielkimi literami – konkret techniczny – ocena skuteczności z liczbą z zeszłego sezonu – opcje PnR w kolejności 1st/2nd – zdanie końcowe z instrukcją obronną.",
+    "_najczestsza_etykieta": "SHOOTER (37 wystąpień) — ale mediana 3PT% w lidze to tylko 30%, więc etykieta bywa nadużywana względem rozkładu. Przy wyliczaniu wzorców warto skonfrontować etykietę opisową z liczbą."
+  },
+
+  "ostrzezenia_przed_wyliczaniem_wzorcow": {
+    "_waga": "KRYTYCZNE — przeczytać przed jakąkolwiek agregacją.",
+    "1_niejednorodne_jednostki": {
+      "problem": "KS Cracovia (plik 1) zawiera dane z POJEDYNCZEGO MECZU, pozostałe 14 zespołów — ŚREDNIE SEZONOWE.",
+      "dowod": "U Cracovii wszystkie PTS są liczbami całkowitymi (17, 11, 8, 7, 5, 3, 2, 0), suma zespołu to 53 pkt (przy 57,8-93,2 u pozostałych), a wszystkie +/- są ujemne (-1 do -23) — typowe dla jednego przegranego meczu.",
+      "skutek": "Wrzucenie Cracovii do wspólnej puli zaniża normy i miesza dwie różne wielkości.",
+      "rozwiazanie": "W zbiorze danych każdy zespół ma pole „jednostka\" (srednie_sezonowe / pojedynczy_mecz). Filtrować przed agregacją."
+    },
+    "2_zera_to_brak_prob": {
+      "problem": "3PT% = 0 u 31 zawodników, FT% = 0 u 9. W większości oznacza BRAK PRÓB, nie zerową skuteczność.",
+      "skutek": "Wliczenie ich do średniej zaniża skuteczność ligową.",
+      "rozwiazanie": "Traktować 0 w kolumnach procentowych jako NULL, chyba że wiadomo, że próby były."
+    },
+    "3_bledy_zapisu_procentow": {
+      "problem": "Trzy wartości miały BRAK PRZECINKA DZIESIĘTNEGO: FG% 4538 (→45,38), FT% 755 (→75,5), FT% 1000 (→100,0).",
+      "wykrywanie": "Każda wartość procentowa > 100 jest błędem zapisu.",
+      "naprawa": "Wstawić separator tak, by wynik ≤ 100 — najpierw jedno miejsce dziesiętne, dwa dopiero gdy jedno daje > 100.",
+      "status": "Poprawione w knowledge_base/datasets/2lm_players_2024_25.json, oryginały odnotowane w polu _poprawki."
+    },
+    "4_nierowna_kompletnosc": {
+      "problem": "Kompletność opisów jest bardzo różna: Cracovia 8/8, Rybnik 10/10, ale Polonia Bytom 1/10, Zagłębie Sosnowiec 1/9, Basket Hills 3/12, UJK Kielce 4/11. Trzech zawodników nie ma żadnych statystyk.",
+      "skutek": "Analizy oparte na tekście opisów będą silnie obciążone w stronę zespołów opisanych szczegółowo.",
+      "rozwiazanie": "Przy analizie jakościowej raportować pokrycie; przy ilościowej korzystać z kolumn liczbowych, które są kompletne w ~85%."
+    },
+    "5_maksima_bez_progu_prob": {
+      "problem": "FG%, 3PT% i FT% osiągają 100% u zawodników o znikomej liczbie prób.",
+      "rozwiazanie": "Każdy ranking skuteczności musi mieć próg minimalnej liczby prób albo minimalnych minut."
+    }
+  },
+
+  "jak_uzywac_do_porownan": {
+    "zbior_danych": "knowledge_base/datasets/2lm_players_2024_25.json — 15 zespołów, 162 rekordy zawodników, pola liczbowe + lista linii opisu.",
+    "typowe_pytania": [
+      "Czy zawodnik X jest ponadprzeciętny w 2LM? → porównaj jego PTS/REB/AST z percentylami powyżej",
+      "Jaki jest profil pozycji w tej lidze? → grupuj po polu „pozycja\", licz mediany per pozycja",
+      "Które zespoły są rozegraniowe, a które izolacyjne? → sumy AST per zespół vs mediana ligi",
+      "Czy etykieta SHOOTER pokrywa się z 3PT%? → skonfrontuj obecność słowa w „opis\" z wartością p3_pct",
+      "Benchmark dla własnego zawodnika → percentyl w rozkładzie 2LM zamiast oceny intuicyjnej"
+    ],
+    "rozszerzenie": "W folderze są też „STATYSTYKI ZAWODNICY.xlsx\" (PLAYERS/) oraz w katalogu głównym projektu „2_liga_mezczyzn_statystyki.xlsx\", „2liga_rocznik_2006_2010.xlsx\", „2liga_rocznik_2010_2014.xlsx\" — te same zawodnicy w ujęciu tabelarycznym i rocznikowym. Połączenie po numerze i nazwisku pozwoliłoby wzbogacić korpus o pełne statystyki i wiek."
+  },
+
+  "powiazania": {
+    "datasets/2lm_players_2024_25.json": "ZBIÓR DANYCH do tego opisu — maszynowo czytelny, z poprawkami i polem „jednostka\".",
+    "opponent_scouting_method.json": "Metoda, którą te raporty realizują (wytyczne Ulm ProB).",
+    "opponent_scouting_examples.json": "Raport na Trefl Sopot ma IDENTYCZNY zestaw 10 leaderboardów — wspólny rodowód metodyczny.",
+    "modern_basketball.json": "40% pozycji podwójnych to empiryczne potwierdzenie tezy „funkcja > pozycja\".",
+    "player_evaluation.json": "Normy ligowe dają liczbową podstawę dla filaru „skills\" — ocena przestaje być intuicyjna.",
+    "europe.json": "Realia niższych lig polskich — 2LM jako poziom odniesienia przy ocenie reachability.",
+    "projection_fit.json": "Percentyle 2LM to punkt wyjścia do projekcji przejścia zawodnika na wyższy poziom."
+  }
+}

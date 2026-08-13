@@ -1,0 +1,406 @@
+{
+  "_source": "Stanisław Strzyżewski — „Proces kształcenia i wychowania w kulturze fizycznej\", AWF Katowice 2013 (257 stron): rozdz. 2.3 Style kierowania pracą uczniów, rozdz. 6.2.3 Rodzaje czynności nauczycielskich. Uzupełniająco: Krystyna Górna-Łukasik, Wiesław Garbaciak — „Szkolne wychowanie fizyczne\", AWF Katowice (250 stron), rozdz. V Metody realizacji zadań ruchowych (przytacza systematykę Strzyżewskiego 1996). ROZSZERZONE o: notatki własne użytkownika z wykładów Dydaktyki przedmiotowej, AWF Katowice („23.10.2021.docx\", zajęcia 23.10 i 06.11.2021) — formy organizacyjne prowadzenia zajęć, formy podziału i porządkowe, wybór zastępowego, uwagi o osnowie. ORAZ o materiały z przedmiotu Pedagogika, AWF Katowice: „PEDAGOGIKA.docx\" (narzędzia poznawania — typologia obserwacji, wywiadu i ankiety) i „PEDAGOGIKA-notatki..docx\" (błędy wychowawcze prowadzącego i rodziców). ORAZ o materiały z przedmiotu Podstawy dydaktyki, AWF Katowice (dr Ewa Przybyła): „5-2020 zasady.pptx\" (9 zasad nauczania wg Okonia i Kupisiewicza), „4-2020 system współczesny.pptx\" i „7-2020 metody.pptx\" (kształcenie wielostronne Okonia, mono-metodyczność, recepcja wykładu, pokaz z instruktażem, gry dydaktyczne).",
+  "_comment": "JAK PROWADZIĆ — warstwa, której baza dotąd nie miała w usystematyzowanej formie. Trzy niezależne siatki pojęciowe: (1) STYL KIEROWANIA grupą, (2) RODZAJ CZYNNOŚCI wykonywanej przez prowadzącego w danym momencie, (3) STOPIEŃ OKREŚLENIA ZADANIA i wynikająca z niego metoda. Każda działa na innej osi niż typologia drill types Žalgirisu (teaching/learning/competing) i wszystkie trzy są wobec niej komplementarne. Materiał wyróżnia się tym, że przy stylach kierowania podaje WYNIKI BADAŃ, a nie same definicje.",
+  "_program_use": "Warstwa pojęciowa, nie danych. Najbardziej wdrożeniowy element to pole „metoda realizacji\" w szablonie ćwiczenia — obok pola „typ ćwiczenia\" (drill type Žalgirisu) daje dwuwymiarowy opis: CO robi trener × ILE SWOBODY ma zawodnik. Zestawienie obu w planie jednostki pokazałoby, czy trening nie jest przypadkiem w całości reproduktywny.",
+  "_prawa_autorskie": "Obie pozycje to książki naukowe AWF Katowice objęte prawem autorskim. Plik zawiera STRUKTURALNE NOTATKI WŁASNE — systematyki, definicje robocze i wnioski — nie przedruk rozdziałów. Cytaty ograniczone do pojedynczych zdań kluczowych.",
+
+  "kategoria": "Metodyka prowadzenia zajęć — style kierowania, czynności, metody",
+
+  "style_kierowania": {
+    "_zrodlo": "Strzyżewski 2013, rozdz. 2.3",
+    "_rama": "Rola prowadzącego jako kierownika procesu ma dwie grupy funkcji: (a) funkcje związane z ZADANIEM — ustalanie celu i środków, koordynacja działań, kontrola wykonania; (b) funkcje związane z RELACJAMI wewnątrzgrupowymi.",
+
+    "autokratyczny": {
+      "opis": "Kierownik sam ustala cele i środki, ocenia bez uzasadniania, nie uczestniczy w czynnościach grupy, częściej stosuje kary niż nagrody.",
+      "skutki_empiryczne": [
+        "Jakość pracy stosunkowo WYSOKA pod nadzorem, NISKA gdy nadzoru brak — świadczy o braku motywacji wewnętrznej",
+        "Niska oryginalność pomysłów uczniów",
+        "Reakcja na ten styl: AGRESJA albo APATIA",
+        "Z grup kierowanych autokratycznie (sekcje sportowe, kółka) młodzież CZĘSTO REZYGNUJE"
+      ]
+    },
+    "demokratyczny": {
+      "opis": "Kierownik przedstawia różne możliwości, grupa sama decyduje o celu i środkach; wyniki ocenia obiektywnie i UZASADNIA oceny; często sam bierze udział w czynnościach grupy; posługuje się raczej nagrodami niż karami. W praktyce ujawnia się w PODMIOTOWYM traktowaniu ucznia.",
+      "skutki_empiryczne": [
+        "Wysoka motywacja do wykonywania zadań",
+        "Wysoka oryginalność rozwiązań",
+        "Przyjazne stosunki wewnątrzgrupowe, atrakcyjna przynależność do grupy",
+        "Brak tendencji do rezygnowania z uczestnictwa bez ważnych powodów"
+      ],
+      "ograniczenie_wiekowe": "Wg materiału styl demokratyczny daje się w pełni stosować dopiero w klasach wyższych szkoły podstawowej."
+    },
+    "liberalny": {
+      "opis": "Kierownik pozostawia zupełną swobodę, udziela rad tylko na prośbę, nie uczestniczy w działalności grupy, wstrzymuje się od ocen i rzadko komentuje.",
+      "skutki_empiryczne": ["Bardzo niska wydajność pracy"]
+    },
+
+    "dwa_ustalenia_niebanalne": {
+      "_waga": "To jest najcenniejsza część tego rozdziału — wnioski, które przeczą prostemu założeniu „demokratyczny zawsze lepszy\".",
+      "badania_wojtowicza": {
+        "ustalenie": "Demokratyczny styl kierowania treningiem osób o WYSOKIM poziomie wytrenowania prowadzi do BUMELOWANIA trenowanych. U osób na NISKIM poziomie wytrenowania ten sam styl dawał bardzo dobre wyniki — lepiej nabywali umiejętności, byli pozytywniej ustosunkowani do zajęć i trenera, bardziej wierzyli we własne możliwości.",
+        "wniosek_praktyczny": "Styl trzeba różnicować wg POZIOMU WYTRENOWANIA grupy, nie tylko wg wieku czy fazy nauczania. Grupa zaawansowana wymaga większej struktury, początkująca — większej autonomii. To odwrotnie, niż podpowiada intuicja."
+      },
+      "badania_muldera_i_stemerdinga": {
+        "ustalenie": "W SYTUACJI ZAGROŻENIA ludzie wolą być kierowani w sposób autokratyczny niż demokratyczny.",
+        "wniosek_praktyczny": "W sytuacjach ryzyka (ćwiczenia na przyrządach, pływanie, elementy siłowe, praca z dużym obciążeniem) prowadzący powinien przejść na styl autokratyczny — i jest to zgodne z oczekiwaniem samych ćwiczących, nie wbrew niemu."
+      },
+      "_rozstrzygniecie_paradoksu_wojtowicza": {
+        "_zrodlo": "Macierz POTRAFI × CHCE — patrz player_motivation_and_selfworth.json",
+        "problem": "Ustalenie Wojtowicza (demokratyczny styl u zaawansowanych → bumelowanie) brzmi przeciwintuicyjnie, dopóki traktuje się poziom wytrenowania jako jedyną zmienną.",
+        "wyjasnienie": "Poziom wytrenowania to tylko JEDNA z dwóch osi. Druga to CHĘĆ. Zaawansowany i chętny potrzebuje DELEGOWANIA (własne cele, ogólny nadzór) — demokratyczna dyskusja jest dla niego zbędnym obciążeniem i stąd bumelowanie. Zaawansowany, ale niechętny potrzebuje MOTYWOWANIA, nie swobody. Słabo wytrenowany, ale chętny korzysta z COACHINGU, czyli komunikacji dwukierunkowej — i to on odnosił korzyść z demokratycznego stylu w badaniach Wojtowicza.",
+        "wniosek": "Styl dobiera się do PARY (kompetencja, chęć), nie do samego zaawansowania. Pełna macierz ze wskaźnikami diagnostycznymi znajduje się w player_motivation_and_selfworth.json."
+      }
+    },
+
+    "_relacja_do_bazy": "Baza ma dopasowanie trener↔zawodnik do faz lekcji przez DISC (imopeksis_methodology.json: Nauczanie C+S trener wspierający / Doskonalenie D+I kreatywny / Trenowanie D egzekutor). Ten materiał dokłada DRUGĄ ZMIENNĄ: poziom wytrenowania grupy. Razem dają macierz — faza lekcji × zaawansowanie grupy."
+  },
+
+  "zasady_nauczania": {
+    "_zrodlo_dodane": "„5-2020 zasady.pptx\" — Podstawy dydaktyki, dr Ewa Przybyła, AWF Katowice. Zasady wg W. Okonia i C. Kupisiewicza.",
+    "_status": "WARSTWA NADRZĘDNA nad metodami i formami. Baza miała dużo o TYM, JAK prowadzić (metody, formy, czynności, style), ale nie miała ani jednego zestawu ZASAD — czyli tego, czego nie wolno naruszyć niezależnie od wybranej metody.",
+
+    "1_pogladowosci": {
+      "istota": "Opieranie nauczania na bezpośrednim poznaniu, nie na samym słowie",
+      "zagrozenie_werbalizm": "WERBALIZM — stosowanie metod opartych na słowie, w których dominuje przekazywanie gotowych wiadomości. Skutek: przyswajanie SŁÓW BEZ ZROZUMIENIA ich znaczenia; operowanie dźwiękami wyuczonymi na pamięć, które nie powodują rozwoju myślenia.",
+      "_przelozenie_koszykarskie": "Zawodnik, który potrafi bezbłędnie powtórzyć nazwę coverage'u, ale nie rozpoznaje sytuacji na parkiecie. Realny problem przy odprawach i tablicy."
+    },
+    "2_swiadomego_i_aktywnego_udzialu": {
+      "istota": "Świadome i samodzielne uczestnictwo w procesie",
+      "cel_zasady": "OGRANICZENIE ZALEŻNOŚCI uczącego się od prowadzącego",
+      "_powiazanie": "Zbieżne z ćwiartką DELEGOWANIE z macierzy POTRAFI × CHCE oraz z „zawodnikiem jako partnerem\" u Hucińskiego."
+    },
+    "3_przystepnosci": {
+      "istota": "Stopniowanie trudności",
+      "reguly": ["od łatwego do trudnego", "od tego, co znane i bliskie, do tego, co dalsze i nieznane", "uwzględnianie różnic w TEMPIE PRACY i stopniu zaawansowania (indywidualizacja)", "dobieranie treści, metod i środków tak, by optymalnie wykorzystać możliwości rozwojowe"],
+      "_powiazanie": "Progresja izolowane → uproszczone → meczowe (book_development_curriculum_jozak.json) i 5 faz nauczania z LIC.B to zastosowania tej zasady."
+    },
+    "4_indywidualizacji_i_uspolecznienia": {
+      "istota": "Równoczesne uwzględnianie różnic indywidualnych i pracy zespołowej",
+      "_ilustracja_ze_zrodla": "Slajd ilustruje zasadę obrazkiem: „aby zapewnić sprawiedliwy wybór, wszyscy dostaniecie ten sam test — musicie wspiąć się na to drzewo\". Pointa: jednakowe kryterium dla różnych organizmów nie jest sprawiedliwe.",
+      "_napiecie_praktyczne": "Zasada zawiera wbudowaną sprzeczność — indywidualizacja i uspołecznienie ciągną w przeciwne strony. To samo napięcie co u Hucińskiego przy budowaniu piątek (ego vs empatia)."
+    },
+    "5_systematycznosci": {
+      "istota": "Realizacja procesu w logicznym porządku",
+      "reguly": ["określać wyjściowy stan wiedzy", "systematycznie nawiązywać do materiału opanowanego", "realizować treści w kolejności zgodnej z logiką przedmiotu", "przedstawić STRUKTURĘ materiału — podzielić na sensowne fragmenty i po opanowaniu każdego wracać do całości"]
+    },
+    "6_trwalosci_wiedzy": {
+      "reguly": ["aktywizować podczas zaznajamiania z NOWYM materiałem", "stosować ćwiczenia utrwalające", "utrwalaniu sprzyja systematyzowanie, łączenie w całości, klasyfikowanie", "łączyć informacje w logiczne STRUKTURY", "stosować systematyczną kontrolę wyników"]
+    },
+    "7_operatywnosci_wiedzy": {
+      "_waga": "NAJCELNIEJSZA Z DZIEWIĘCIU dla tej bazy.",
+      "teza": "WIEDZA PRZYSWOJONA = WIEDZA BIERNA. Operatywność to umiejętność POSŁUGIWANIA SIĘ wiedzą.",
+      "na_czym_polega": "Wdrażanie do dostrzegania, formułowania i samodzielnego rozwiązywania problemów teoretycznych i praktycznych; uczący się sam szuka pomysłów, uzasadnia je w świetle posiadanej wiedzy, wybiera najlepszy, sprawdza i ocenia rezultat. Polega na uczeniu się przez ODKRYWANIE.",
+      "_powiazanie": "To dokładnie różnica, którą Huciński opisuje jako grę „na świadomości\" vs „na podświadomości\" — tylko nazwana od strony dydaktycznej. Zbieżne też z „decision making\" jako celem U16-U18 u Žalgirisu."
+    },
+    "8_laczenia_teorii_z_praktyka": {
+      "cel": "Przekonanie uczącego się o UŻYTECZNOŚCI wiedzy, co sprzyja wyzwalaniu pozytywnej motywacji",
+      "mechanizm": "Odwołanie do praktyki sprawia, że wiedza teoretyczna staje się bardziej zrozumiała, potrzebna i TRWALSZA",
+      "_powiazanie": "Pokrywa się z pierwszą parą z tabeli motywacyjnej (player_motivation_and_selfworth.json): „określenie celów i zwrócenie uwagi na ich praktyczne znaczenie\"."
+    },
+    "9_efektywnosci": "Zasada dotycząca relacji między nakładem a rezultatem procesu",
+    "_podzial_alternatywny_kruszewskiego": "K. Kruszewski porządkuje zasady inaczej — wg tego, czego dotyczą: motywacji uczącego się · materiału nauczania · pracy uczącego się · czynności prowadzącego · zharmonizowania systemów pedagogicznych · stosunków społecznych w grupie · warunków zewnętrznych. Przydatne jako lista kontrolna obszarów przy analizie nieudanej jednostki."
+  },
+
+  "ksztalcenie_wielostronne_okonia": {
+    "_zrodlo_dodane": "„4-2020 system współczesny.pptx\" i „7-2020 metody.pptx\" — teoria kształcenia wielostronnego Wincentego Okonia (1914-2011).",
+    "_waga": "SZÓSTY WYMIAR — jedyny w tej bazie opisujący TRYB UCZENIA SIĘ ZAWODNIKA, a nie zachowanie prowadzącego ani konstrukcję zadania.",
+    "trzy_sfery_i_aktywnosci": {
+      "umyslowa_intelektualna": "uczenie przez PRZYSWAJANIE wiedzy oraz uczenie przez ODKRYWANIE",
+      "emocjonalna": "uczenie się przez PRZEŻYWANIE",
+      "praktyczna": "uczenie się przez DZIAŁANIE"
+    },
+    "cztery_rownoprawne_drogi": ["przyswajanie", "odkrywanie", "przeżywanie", "działanie"],
+    "_zasada": "Cztery drogi są RÓWNOPRAWNE i integralne — kształcenie powinno angażować wszystkie trzy sfery osobowości, nie tylko intelektualną.",
+    "aspekty_w_kazdej_sferze": "W każdej ze sfer występuje aspekt ASYMILACYJNY (poznawczy — przyswajanie) i TWÓRCZY (odkrywanie).",
+    "_dlaczego_to_wazne_dla_bazy": "Wszystkie pozostałe siatki w tym pliku opisują stronę prowadzącego (czynność, styl, forma) albo konstrukcję zadania (metoda, drill type). Żadna nie opisuje KANAŁU, którym zawodnik przyswaja. „Przeżywanie\" jako osobna, równoprawna droga tłumaczy, dlaczego IMOPEKSIS kładzie nacisk na „odczucie przeżycia sytuacji treningowej\" i dlaczego Huciński czyni z niego kryterium zmiany ćwiczenia — to nie miękki dodatek, tylko jeden z czterech kanałów uczenia się.",
+    "cechy_dydaktyki_wspolczesnej": ["elastyczność", "wszechstronność", "jedność uczenia się i nauczania"],
+    "_uczenie_aktywne": "Materiał podaje wyróżniki uczenia się aktywnego i efektywnego: PRZETWARZA informacje, a nie przyswaja · INTERPRETUJE wiedzę, a nie gromadzi · ROZWIĄZUJE problemy, a nie odtwarza · doskonali umiejętności."
+  },
+
+  "siedem_rodzajow_czynnosci_nauczycielskich": {
+    "_zrodlo": "Strzyżewski 2013, rozdz. 6.2.3",
+    "_idea": "Rozbicie pracy prowadzącego na siedem rozróżnialnych typów czynności. To DROBNIEJSZA SIATKA niż trzy drill types Žalgirisu i działa na innej osi: Žalgiris odpowiada „kiedy przerwać ćwiczenie\", ta typologia — „jaką czynność właśnie wykonuję\".",
+
+    "1_przygotowawcze": {
+      "istota": "Przygotowanie warunków pomyślnej realizacji zadania — podział na grupy, ustawienie, przygotowanie sprzętu i miejsca.",
+      "zasada": "Dokonywane ZAWSZE we współpracy prowadzącego z ćwiczącymi, nie za nich.",
+      "podstawa": "Umiejętność operowania formami organizacyjnymi i środkami dydaktycznymi."
+    },
+    "2_motywujace": {
+      "istota": "Skierowanie uwagi, zainteresowania i sił na wykonanie zadania. Ściśle powiązane z procesami uczuciowymi.",
+      "teza_mocna": "Wszelkie objawy niechęci, lekceważenia obowiązku i niedbałego wykonywania zadań wynikają PRZEDE WSZYSTKIM z nieumiejętnego stosowania zabiegów motywujących przez prowadzącego. (Materiał przenosi odpowiedzialność na trenera, nie na zawodnika.)",
+      "struktura": [
+        "Wywołanie zainteresowania zadaniem przez ukazanie jego ważności lub przydatności",
+        "INDYWIDUALNE wywołanie potrzeby podjęcia pracy nad zadaniem",
+        "Stosowanie dodatkowych bodźców (pochwały, uwagi, nakazy)",
+        "Ocenianie WYSIŁKU i zachęcanie do pokonywania trudności — przez pomaganie, dodatkowe wyjaśnienie, porównywanie"
+      ],
+      "indywidualizacja": "Konieczna, bo każdy przejawia różny poziom motywacji wobec tych samych zadań — siła motywacji zależy od miejsca danego celu w indywidualnej HIERARCHII CELÓW ŻYCIOWYCH (Obuchowski)."
+    },
+    "3_informujace": {
+      "istota": "Przekazanie nowej dla ćwiczącego wiadomości.",
+      "struktura_ogolna": ["Orientacja co do poziomu wiedzy grupy na dany temat", "Podanie nowych informacji", "Podsumowanie, wyeksponowanie spraw węzłowych, powiązanie z wiedzą wcześniejszą", "Kontrola stopnia zrozumienia i wyjaśnienie wątpliwości"],
+      "struktura_przy_nauczaniu_ruchu": ["Podanie nazwy i znaczenia czynności", "Zwięzły opis (słowna ilustracja ruchu)", "Rzeczowe objaśnienie związków między elementami"],
+      "pokaz": "W kulturze fizycznej dużą rolę informacyjną odgrywa POKAZ RUCHU; wg badań W. Nawrockiej najlepsze rezultaty daje MIESZANA INSTRUKCJA SŁOWNO-POKAZOWA.",
+      "zaleznosc_od_metody": "Przy metodzie naśladowczo-ścisłej prowadzący podaje WSZYSTKIE potrzebne informacje; przy metodzie problemowej ŚWIADOMIE JE OGRANICZA, by wzmóc samodzielność.",
+      "trzy_zrodla_zaklocen": ["prowadzący", "warunki obiektywne", "ćwiczący"],
+      "najczestsze_bledy_prowadzacego": ["ciche i niewyraźne mówienie", "używanie niezrozumiałych pojęć", "niewłaściwe stanowisko i kierunek głosu"],
+      "zasada": "Informacja ma być jasna i dostatecznie szczegółowa, ale NIE przeładowana treściami drugorzędnymi. Informacja nadana jest zawsze większa od przyjętej.",
+      "_uzupelnienie_z_dydaktyki_ogolnej": {
+        "_zrodlo": "„7-2020 metody.pptx\", AWF Katowice",
+        "recepcja_wykladu": "RECEPCJA TREŚCI WYKŁADU WYNOSI 20-50%. Konkretna liczba warta zapamiętania przy odprawie przedmeczowej i pracy przy tablicy — połowa przekazu w najlepszym razie dociera.",
+        "_konsekwencja": "Uzasadnia rozwiązania stosowane w klubach: krótki videoreport (2-3 klipy zamiast 5-6) z wytycznych Ulm oraz sześć haseł KEYS TO W u Žalgirisu. Ograniczanie przekazu nie jest uproszczeniem, tylko dostosowaniem do realnej recepcji.",
+        "pokaz_z_objasnieniem_i_instruktazem": {
+          "istota": "Demonstracja czynności, jej KOLEJNOŚCI i prawidłowości wykonania",
+          "regula_dla_czynnosci_zlozonych": "Przy czynnościach złożonych pokaz powinien obejmować demonstrację KOLEJNYCH FAZ, a nie całości naraz",
+          "_powiazanie": "Spójne z ustaleniem Nawrockiej (wyżej) o mieszanej instrukcji słowno-pokazowej oraz z progresją nauczania z konspektów Libicha."
+        },
+        "czego_unikac_w_przekazie": "Materiał podaje cztery antywzorce wykładu: „podręcznikowy\" (oparty na jednym, nie zawsze aktualnym źródle) · gawędziarski (płynny, ale ubogi merytorycznie) · monotonny i nużący (przeładowany złożonymi treściami) · monotematyczny (wąska dziedzina, przegląd własnych osiągnięć prowadzącego)."
+      }
+    },
+    "4_kontrolne": {
+      "istota": "Analiza WYNIKU działania. „Kontrola to stwierdzenie stanu rzeczywistego, jego ocena i wyciągnięcie wniosków co do dalszego działania przez porównanie z posiadanym WZORCEM\".",
+      "blad_wyniku": "Kontrola powinna koncentrować się na rozbieżności między CELEM a rzeczywiście osiągniętym wynikiem — to miara błędu wyniku. Błąd wyniku jest proporcjonalny do rozbieżności między programem czynności powstałym w myśli ćwiczącego a czynnością rzeczywiście wykonaną.",
+      "kluczowa_konsekwencja": "Sam ćwiczący MOŻE TĘ ROZBIEŻNOŚĆ ZAOBSERWOWAĆ I OCENIĆ — stąd czynnościowe ujęcie pracy otwiera drogę do samokontroli i samooceny.",
+      "_uwaga_z_przypisu": "Materiał zaznacza, że uwagi o ograniczonej kontroli dotyczą obowiązkowych lekcji WF — w sekcjach i klubach sportowych SKRUPULATNE kontrolowanie wszystkich elementów składających się na wynik jest NIEODZOWNE."
+    },
+    "5_naprowadzajace": {
+      "istota": "Pomaganie w samodzielnej pracy skierowanej na cel — podsuwanie myśli, wskazówek, doradzanie sposobów działania.",
+      "kiedy": "W fazie opanowywania nowych informacji i umiejętności oraz przed i w trakcie rozwiązywania zadań problemowych.",
+      "gradacja_wg_metody": "NAJWIĘKSZA pomoc przy metodach odtwórczych („prowadzenie za rączkę\"), MNIEJSZA przy proaktywnych, NAJMNIEJSZA przy twórczych (problemowa).",
+      "_powiazanie": "To jest dokładnie ta sama gradacja co drill types Žalgirisu — tylko opisana od strony ilości wsparcia, a nie momentu przerwania."
+    },
+    "6_korekcyjne": {
+      "istota": "Poprawianie błędów — dotyczy działań ćwiczących ORAZ własnych działań prowadzącego.",
+      "trzy_postacie_korygowania": {
+        "synchroniczne": "Przy prostych błędach — prowadzący informuje W TRAKCIE wykonywania ćwiczenia",
+        "szybkie": "Prowadzący PRZERYWA zajęcia i ponownie instruuje ruch z akcentem na elementy wykonane błędnie",
+        "opoznione": "Gdy błąd wynika z niedomagań grup mięśniowych lub cech motorycznych. Przykład z materiału: jeśli biegacz za nisko unosi kolana, nie wystarczy powiedzieć „unoś wyżej\" — trzeba wzmocnić mięśnie brzucha i czworogłowe uda, co wymaga dłuższego działania"
+      },
+      "struktura_korekty": ["Stwierdzenie popełnienia błędu", "Ustalenie WSPÓLNIE z ćwiczącym miejsca błędu", "Ustalenie istoty błędu", "Ustalenie sposobu poprawy", "Udzielenie dodatkowych informacji", "Sprawdzenie poprawności wykonania"],
+      "ognisko_bledow": "Trudniejsze od wykrycia błędu jest ustalenie, KTÓRY błąd jest najistotniejszy — chodzi o określenie GŁÓWNEGO OGNISKA BŁĘDÓW. Wyeliminowanie ogniska likwiduje w dużym stopniu również błędy drugorzędne z nim związane.",
+      "warunek_relacyjny": "Korekta ma być stosowana tak, aby ćwiczący NIE STRACIŁ ZAUFANIA do prowadzącego ani wiary we własne siły. Materiał nazywa to sprawą subtelną, wymagającą dużej cierpliwości.",
+      "_powiazanie": "Zbieżne ze slajdem Žalgirisu BE MINDFUL WITH FEEDBACK — „challenged but capable, not defeated\"."
+    },
+    "7_zabezpieczajace": {
+      "istota": "Ubezpieczenie jako jedno z podstawowych zadań prowadzącego we wszystkich zajęciach ruchowych.",
+      "plan_alternatywny": "Gdy miejscem zajęć jest otwarta przestrzeń — zawsze przemyśleć wariant na wypadek deszczu. Ale dotyczy to też szczegółów: innego zadania lub pytań, gdy ćwiczący napotykają poważne trudności w zadaniu głównym. Przy metodzie ścisłej repertuarem alternatywnym są ĆWICZENIA SPECJALNE."
+    },
+    "_wniosek_dla_praktyki": "Siedem czynności to lista kontrolna do autoanalizy: po jednostce można sprawdzić, których czynności w ogóle nie wykonałem. Najczęściej pomijane w praktyce bywają motywujące (uznane za oczywiste) i naprowadzające (zastąpione gotową instrukcją)."
+  },
+
+  "metody_realizacji_zadan_ruchowych": {
+    "_zrodlo": "Systematyka S. Strzyżewskiego (1996), przytoczona w Górna-Łukasik & Garbaciak, rozdz. V",
+    "_os_podzialu": "Stopień OKREŚLENIA ZADANIA, a co za tym idzie — zakres samodzielności ćwiczącego. To inna oś niż drill types Žalgirisu (tam: zachowanie trenera) i niż siedem czynności (tam: rodzaj działania trenera).",
+
+    "trzy_typy_zadan": {
+      "scisle_okreslone": "Osiągnięcie celu wymaga od prowadzącego ustalenia programu: zadań pośrednich, operacji ruchowych, kroków metodycznych",
+      "czesciowo_okreslone": "Nie wymagają ścisłego sterowania zewnętrznego; zapewniają pewną swobodę i wywołują aktywność wewnętrzną, ale działanie jest wciąż POŚREDNIO KIEROWANE",
+      "problemowe": "Pełna samodzielność i możliwość twórczego działania — cel osiągany w sytuacji NIEPOSIADANIA wystarczających sposobów i środków"
+    },
+
+    "a_metody_reproduktywne": {
+      "_dla_zadan": "ściśle określonych",
+      "zadaniowa_scisla": "Prowadzący stawia w sytuacji zadaniowej ścisłej — ćwiczący odczuwa wewnętrzną potrzebę osiągnięcia ściśle określonego celu",
+      "nasladowcza_scisla": "Wzorzec ruchu podany do odtworzenia",
+      "programowanego_uczenia_sie": "Z góry ustalony program kroków metodycznych"
+    },
+    "b_metody_proaktywne": {
+      "_dla_zadan": "częściowo określonych",
+      "zabawowa_klasyczna": "Sytuacja zadaniowa przez podanie FABUŁY zabawy lub PRZEPISÓW gry. Zachowanie ćwiczących swobodne i samodzielne; jedynymi ograniczeniami są fabuła i przepisy",
+      "bezposredniej_celowosci_ruchu": "Prowadzący poleca wykonanie PROSTEGO zadania w odpowiednio dobranej pozycji wyjściowej. **Celem bezpośrednim dla ćwiczącego jest wykonanie zadania — właściwy cel zna TYLKO prowadzący.** (Np. zadanie pozornie zabawowe, którego rzeczywistym celem jest wzmocnienie konkretnej grupy mięśniowej.)",
+      "programowanego_usprawniania_sie": "Ćwiczący odczuwa potrzebę usprawnienia i podejmuje program działania; rolę REGULATORA pełni środowisko — teren, przyrządy, tablice orientacyjne (model „ścieżki zdrowia\")"
+    },
+    "c_metody_kreatywne": {
+      "_dla_zadan": "wymagających pełnej inwencji twórczej",
+      "problemowa": "Prowadzący stawia w sytuacji problemowej — takiej, z którą ćwiczący nie potrafi sobie poradzić posiadanymi środkami",
+      "ruchowej_ekspresji_tworczej": "Zadanie do samodzielnego, twórczego rozwiązania; KAŻDE rozwiązanie zademonstrowane przez ćwiczącego uważa się za poprawne. Zadania polegają na inscenizacji tematów ruchem i mimiką"
+    },
+    "zasada_wymiennosci": "Materiał podkreśla, że metody mogą być stosowane ZAMIENNIE — w zależności od wieku ćwiczących oraz od tego, jaki efekt WYCHOWAWCZY (obok dydaktycznego) zamierza się osiągnąć.",
+    "_ostrzezenie_przed_monometodycznoscia": {
+      "_zrodlo": "„7-2020 metody.pptx\"",
+      "teza": "NIE MA JEDNEJ IDEALNEJ METODY. Materiał nazywa błąd wprost: MONO-METODYCZNOŚĆ — przywiązanie do jednej metody niezależnie od sytuacji.",
+      "piec_kryteriow_doboru": ["wiek, możliwości i indywidualne cechy ćwiczących", "cele i zadania dydaktyczne", "warunki pracy — wielkość grupy, wyposażenie", "charakterystyczne właściwości przedmiotu (dyscypliny)", "doświadczenie prowadzącego"],
+      "_uwaga": "Piąte kryterium jest rzadko wymieniane, a istotne: metoda musi być w zasięgu prowadzącego. Metoda problemowa źle poprowadzona jest gorsza od dobrze poprowadzonej ścisłej."
+    },
+    "gry_dydaktyczne": {
+      "_zrodlo": "„7-2020 metody.pptx\"",
+      "podzial": {
+        "symulacyjne": "Odtwarzanie rzeczywistej sytuacji w warunkach kontrolowanych",
+        "psychologiczne": ["psychodrama", "inscenizacja", "metoda sytuacyjna", "metoda przypadków"],
+        "specjalistyczne_i_sportowe": "gry planszowe oraz gry sportowe"
+      },
+      "przyklady_zastosowan": "Materiał wymienia: ćwiczenie żołnierzy (gry wojenne), trening przedstawicieli biznesu (rozmowa z klientem, techniki sprzedaży), treningi pilotów i kosmonautów.",
+      "_przyklad_wprost_przenosny": {
+        "_waga": "Jeden z przykładów mapuje się bezpośrednio na analizę wideo.",
+        "opis_ze_zrodla": "Symulowanie gry mistrza szachowego w znanym meczu — uczący się porównuje WŁASNE odpowiedzi na posunięcia przeciwnika z odpowiedziami mistrza.",
+        "przelozenie_na_film_study": "To jest gotowa metodyka pracy z nagraniem: zatrzymać klip przed decyzją, poprosić zawodnika o wskazanie, co zrobi, odtworzyć dalej i porównać z decyzją zawodnika z nagrania. Baza ma dużo o wideo (Ulm, Žalgiris, M6), ale nie ma tej techniki nazwanej.",
+        "_powiazanie": "Realizuje zasadę operatywności wiedzy — zawodnik nie odtwarza rozwiązania, tylko je generuje i weryfikuje."
+      }
+    },
+    "_program_use": "Kandydat na pole „metoda realizacji\" w szablonie ćwiczenia. W zestawieniu z polem „typ ćwiczenia\" (Žalgiris) daje obraz, czy jednostka nie jest w całości reproduktywna — częsty błąd w treningu młodzieżowym."
+  },
+
+  "formy_organizacyjne_prowadzenia_zajec": {
+    "_zrodlo_dodane": "Notatki własne użytkownika z wykładów Dydaktyki przedmiotowej, AWF Katowice (plik „23.10.2021.docx\", zajęcia z 23.10.2021 i 06.11.2021). UWAGA: to surowe notatki wykładowe ze skrótami (N = nauczyciel, U = uczeń, um. = umiejętność) i literówkami — treść zredagowano, zachowując strukturę.",
+    "_waga": "CZWARTA, NIEZALEŻNA OŚ opisu treningu. Odpowiada na pytanie, którego nie zadaje żadna z pozostałych: JAK FIZYCZNIE ZORGANIZOWANY JEST PRZEPŁYW ĆWICZĄCYCH. Styl mówi o relacji, czynność o działaniu prowadzącego, metoda o swobodzie zawodnika — forma o rozmieszczeniu ciał w przestrzeni i rotacji.",
+    "_rozroznienie_podstawowe": "Materiał otwiera się rozróżnieniem: FORMA określa kształt lekcji, METODA — sposób realizacji zadania. To dwie różne rzeczy, często mylone.",
+
+    "frontalna": {
+      "opis": "Prowadzący stoi przed grupą, wszyscy są w jego polu widzenia i jednocześnie wykonują te same ćwiczenia",
+      "zalety": ["duża intensywność", "oddziaływanie na wszystkich ćwiczących jednocześnie"],
+      "wady": ["ograniczenie samodzielności", "brak dozowania indywidualnych obciążeń"]
+    },
+    "zespolowa_rownolegla": {
+      "opis": "Zespoły NIE zmieniają się przy poszczególnych stacjach lub przyrządach; możliwe wykonywanie przez wszystkich tego samego zadania"
+    },
+    "zespolowa_zmienna": {
+      "opis": "Zespoły ROTUJĄ między stacjami, zadania na stacjach są różne",
+      "wady": ["oczekiwanie w kolejce"],
+      "_program_use": "„Oczekiwanie w kolejce\" to konkretna, wykrywalna wada organizacyjna — przy planowaniu jednostki warto liczyć stosunek liczby ćwiczących do liczby stanowisk."
+    },
+    "zespolowa_z_dodatkowymi_zadaniami": {
+      "opis": "Wariant rozwiązujący wadę formy zmiennej — oczekujący mają przypisane zadanie dodatkowe",
+      "_uwaga": "To najprostsze lekarstwo na przestoje; w bazie odpowiada mu praktyka Hucińskiego, u którego niegrający zawodnicy prowadzą statystykę przyczyn (patrz licb_ocena_i_obserwacje.json)."
+    },
+    "stacyjna": {
+      "opis": "Ćwiczący pracują STRUMIENIOWO na wielu stacjach"
+    },
+    "obwod_cwiczebny": {
+      "opis": "Ćwiczący rozstawieni w małych grupach na wszystkich stanowiskach; określona liczba powtórzeń; zmiana stanowisk NA SYGNAŁ prowadzącego",
+      "cel": "Doskonalenie siły i wytrzymałości",
+      "_powiazanie": "To ta sama forma, którą Huciński i kurs LIC.B nazywają „obwodem technicznym / stacyjnym\" i czynią podstawą nauczania (5 faz nauczania, 5 obszarów doskonalenia). Tu jest ujęta jako jedna z wielu form, z wyraźnie wskazanym celem motorycznym."
+    },
+    "indywidualna": {
+      "opis": "Każdy ćwiczący wykonuje zadania oddzielnie — np. przy zastosowaniu metody ruchowej ekspresji twórczej"
+    },
+
+    "tor_przeszkod": {
+      "cel": "Utrwalanie umiejętności i nawyków lub kształtowanie zdolności motorycznych",
+      "uwagi_metodyczne": [
+        "Przeszkody możliwe do pokonania przez WSZYSTKICH uczestników",
+        "Przeszkody muszą być bezpieczne",
+        "Ćwiczący muszą być NAJPIERW zapoznani z przeszkodami"
+      ]
+    },
+
+    "formy_podzialu_grupy": {
+      "warianty": ["zastępy stałe", "zastępy sprawnościowe (jednorodny poziom)", "zastępy sprawnościowe zmienne (różny poziom aktywności i umiejętności)", "drużyny", "grupy", "pary"],
+      "_uwaga": "Rozróżnienie zastępów sprawnościowych STAŁYCH i ZMIENNYCH ma konsekwencje: stałe ułatwiają dozowanie, zmienne wymuszają kontakt zawodników o różnym poziomie — co jest warunkiem wzajemnego nauczania („lepszy uczy słabszego\") z metodyki Hucińskiego."
+    },
+
+    "formy_porzadkowe": {
+      "ustawienia_podstawowe": ["szereg", "dwuszereg", "rząd"],
+      "ustawienia_cwiczebne": ["luźna gromada", "półkole", "koło", "kolumna ćwiczebna"],
+      "pozostale": "odliczanie oraz zwroty — w miejscu i w ruchu"
+    },
+
+    "wybor_zastepowego": {
+      "_status": "Sześć kryteriów doboru osoby prowadzącej zastęp.",
+      "kryteria": [
+        "Charakter i sprawność",
+        "Umiejętność demonstrowania i korygowania",
+        "Wpływ wychowawczy na innych",
+        "Umiejętność udzielania pomocy i ochrony",
+        "Umiejętność obserwowania i oceniania",
+        "Umiejętność utrzymania porządku i stawiania wymagań"
+      ],
+      "_spor_z_hucinskim": {
+        "_waga": "To jest MIEJSCE SPORNE w tej bazie — dwa przeciwstawne stanowiska, których nie należy zlewać.",
+        "stanowisko_szkolne": "Prowadzący WYZNACZA zastępowego według listy kryteriów kompetencyjnych (powyżej).",
+        "stanowisko_hucinskiego": "„Nigdy nie wyznaczaj lidera — zespół sam go odkryje\" (book_imopeksis_hucinski.json). Wartość zawodnika w zespole jest taka, jak postrzegają go inni.",
+        "narzedzie_rozstrzygajace": "Socjometria (sociometry_team_cohesion.json) pokazuje GWIAZDY SOCJOMETRYCZNE — kogo grupa faktycznie wybrała. Zestawienie listy kryteriów z wynikiem socjogramu ujawnia, czy kandydat kompetencyjny pokrywa się z liderem nieformalnym.",
+        "_uwaga_praktyczna": "Rozbieżność między tymi dwoma nie jest błędem do usunięcia, tylko informacją: zawodnik kompetentny, ale bez poparcia grupy, i zawodnik popularny, ale bez kompetencji — to dwa różne problemy i dwie różne ścieżki rozwoju."
+      }
+    },
+
+    "uwagi_o_osnowie": {
+      "_zrodlo": "Notatki z 06.11.2021",
+      "czesc_wstepna": "Pierwsza lekcja cyklu powinna być opisana dokładnie i szczegółowo. W każdej kolejnej część wstępna może być TAKA SAMA pod względem zorganizowania grupy. W części wstępnej NIE stosuje się dozowania ani intensywności.",
+      "czesc_glowna": "Ćwiczenia mogą być powielone z lekcji poprzednich; przy trudnym elemencie można powtórzyć lekcję. Ewaluacja z uwagami, czego grupa nie potrafiła wykonać.",
+      "_powiazanie": "Zbieżne z zasadą niezmieniania ćwiczeń z LIC.B — ćwiczenie utrzymuje się, aż zawodnik przestaje się zastanawiać, jak je wykonać."
+    }
+  },
+
+  "narzedzia_poznawania_zawodnikow": {
+    "_zrodlo_dodane": "„PEDAGOGIKA.docx\" — opracowanie własne użytkownika (odpowiedzi na pytania z przedmiotu Pedagogika, AWF Katowice).",
+    "_po_co": "Baza stosuje obserwację jako podstawowe narzędzie (40 obserwacji przyczyn, arkusze meczowe, ocena talentu w OOM), ale nigdzie nie nazywa jej typów. Ta typologia porządkuje to, co już jest praktykowane.",
+    "typy_obserwacji": {
+      "luzna": "Swobodne zbieranie danych podczas wszelkich kontaktów. NIE jest nakierowana na cel — ustawiczne rejestrowanie bodźców dostarczanych przez podopiecznych.",
+      "poglebiona_celowa": "Różni się od luźnej WYRAŹNIE OKREŚLONYM CELEM. Daje dokładne i wartościowe informacje, ale ściśle związane z polem tematycznym. Może dotyczyć grupy.",
+      "znaczacych_wydarzen": "Konkretne, POWTARZAJĄCE SIĘ sytuacje.",
+      "skategoryzowana": {
+        "opis": "Interesujące obserwatora wydarzenia są UPRZEDNIO UJĘTE W KATEGORIE, a zadaniem obserwatora jest tylko stwierdzenie znakiem „V\", czy zjawisko z danej kategorii wystąpiło.",
+        "_kluczowe_rozpoznanie": "To jest DOKŁADNIE mechanizm 40 obserwacji przyczyn Hucińskiego (licb_ocena_i_obserwacje.json) oraz arkusza koncentracji uwagi wykonawczej. Warto go nazwać po imieniu: system, na którym opiera się cała diagnostyka meczowa w tej bazie, to obserwacja skategoryzowana."
+      }
+    },
+    "wywiad": {
+      "swobodny": "Bez planu — pytania zadawane spontanicznie, pozwala się rozmówcy swobodnie mówić",
+      "kierowany": "Prowadzący ma przygotowane projekty pytań",
+      "mieszany": "Pytania otwarte rozpoczynają temat, potem pytania szczegółowe; niekiedy rozmowa naprowadzająca na problem",
+      "_powiazanie": "Odpowiada rozróżnieniu z intel_background.json — wywiad kierowany to zestaw 15 pytań NBA, wywiad swobodny to rozmowa przy kawie z m6."
+    },
+    "ankieta": {
+      "co_pozwala_uzyskac": ["fakty realne", "ocenę zjawisk przeszłych lub obecnych (opinie)", "dezyderaty dotyczące przyszłości (dążenia, pragnienia)", "deklaracje przyszłego zachowania"],
+      "_uwaga": "Czwarty punkt — deklaracja przyszłego zachowania — jest najsłabszy diagnostycznie i warto o tym pamiętać przy ankietach motywacyjnych."
+    }
+  },
+
+  "bledy_wychowawcze_prowadzacego": {
+    "_zrodlo_dodane": "Notatki własne użytkownika z przedmiotu Pedagogika („PEDAGOGIKA-notatki..docx\"). Treść pokrywa się z prezentacją „Błędy Dydaktyka.ppt\", której nie udało się odczytać (binarny PowerPoint 97 — ekstrakcja dała wyłącznie nazwy czcionek i plików dźwiękowych).",
+    "_charakter": "Lista kontrolna „czego nie robić\" — lustrzane odbicie zasad z zalgiris_coaching_culture.json.",
+    "dwanascie_bledow": [
+      "Nieprzestrzeganie zasady indywidualizacji",
+      "Nieprzestrzeganie zasady obiektywizmu i bezstronności",
+      "Znikoma znajomość podopiecznych i ich sytuacji rodzinnej",
+      "Brak nawiązywania kontaktów z rodzicami",
+      "Niekonsekwencja w zakresie wymagań",
+      "Brak poszanowania godności osobistej",
+      "Nierówne postrzeganie podopiecznych",
+      "Postrzeganie dziecka jako słabego i gorszego od siebie",
+      "UPRZEDMIOTOWIENIE dziecka",
+      "Wpajanie przekonania o jego nieporadności",
+      "Niski poziom kultury etycznej prowadzącego",
+      "Niedostateczne przygotowanie do zawodu"
+    ],
+    "_powiazania_wewnetrzne": [
+      "Błąd 5 (niekonsekwencja) — Žalgiris team rules otwierają się od „be on time\" i „don't cheat, no shortcuts\", czyli od konsekwencji zasad",
+      "Błąd 9 (uprzedmiotowienie) — Strzyżewski definiuje rolę prowadzącego za Demelem jako „mądrego doradcy i przyjaciela\", nie instruktora; patrz uwaga o terminie „tworzywo\" w licb_planowanie_struktura_konspekty.json",
+      "Błąd 10 (wpajanie przekonania o nieporadności) — to bezpośrednia droga do niskiego poczucia własnej wartości, opisanego w player_motivation_and_selfworth.json",
+      "Błąd 12 — u Žalgirisu odpowiada mu zasada kongruencji: „nie możesz wymagać tego, czego sam nie robisz\""
+    ],
+    "bledy_rodzicow": {
+      "_kontekst": "Ta sama lista notatek zawiera osobny zestaw błędów po stronie rodziców — istotny w pracy z młodzieżą, bo trener rzadko ma na nie wpływ, ale musi je rozpoznawać.",
+      "lista": ["naśladowanie wzorów postępowania innych osób", "tworzenie własnej koncepcji wychowawczej w oderwaniu od dziecka", "nadkompensacja w zaspokajaniu potrzeb", "nadmierna uczuciowa koncentracja na dziecku", "WYGÓROWANE AMBICJE I ASPIRACJE RODZICÓW", "żywiołowe, nieprzemyślane postępowanie"],
+      "_uwaga": "Piąty punkt jest w sporcie młodzieżowym najczęstszy i najbardziej destrukcyjny — łączy się z materiałem o poczuciu własnej wartości (stawianie celów powyżej możliwości jako objaw)."
+    }
+  },
+
+  "wymiary_opisu_sytuacji_treningowej": {
+    "_idea": "Pięć niezależnych wymiarów opisu tej samej sytuacji treningowej. Każdy odpowiada na inne pytanie i żaden nie zastępuje pozostałych.",
+    "wymiar_1_styl": "JAK KIERUJĘ GRUPĄ — autokratycznie / demokratycznie / liberalnie (zmienne: poziom wytrenowania grupy, poziom zagrożenia)",
+    "wymiar_2_czynnosc": "CO WŁAŚNIE ROBIĘ — przygotowuję / motywuję / informuję / kontroluję / naprowadzam / koryguję / zabezpieczam",
+    "wymiar_3_metoda": "ILE SWOBODY MA ZAWODNIK — reproduktywnie / proaktywnie / kreatywnie",
+    "wymiar_4_forma": "JAK ZORGANIZOWANY JEST PRZEPŁYW — frontalnie / zespołowo równolegle / zespołowo zmiennie / stacyjnie / obwodowo / indywidualnie",
+    "wymiar_5_zalgiris": "KIEDY PRZERYWAM — teaching (przerywam i poprawiam) / learning (podpowiadam w biegu) / competing (milczę, omawiam po)",
+    "wymiar_6_droga_uczenia_sie": "KTÓRYM KANAŁEM ZAWODNIK PRZYSWAJA (Okoń) — przyswajanie / odkrywanie / przeżywanie / działanie. JEDYNY wymiar opisujący stronę UCZĄCEGO SIĘ, a nie prowadzącego ani konstrukcji zadania.",
+    "_nadrzedne_wobec_wszystkich": "Ponad tymi sześcioma wymiarami stoi dziewięć ZASAD NAUCZANIA (patrz sekcja zasady_nauczania) — one nie opisują wyboru, tylko granice, których nie wolno naruszyć niezależnie od wybranej kombinacji wymiarów.",
+    "_wniosek_o_wymiarach_3_i_5": "Skorelowane, ale nie tożsame: metoda opisuje KONSTRUKCJĘ zadania, drill type — ZACHOWANIE prowadzącego w jego trakcie. Można prowadzić zadanie reproduktywne w trybie competing (sprawdzian techniki na czas) i zadanie problemowe w trybie teaching (przerywanie, by naprowadzić).",
+    "_wniosek_o_wymiarze_4": "Forma jest najbardziej niezależna z całej piątki — tę samą metodę i ten sam drill type można zrealizować frontalnie albo obwodowo, z zupełnie różnym skutkiem dla intensywności i indywidualizacji. Forma frontalna maksymalizuje intensywność kosztem indywidualizacji; obwodowa odwrotnie.",
+    "_program_use": "Pięć pól w szablonie ćwiczenia daje pełny opis. Minimalny użyteczny zestaw to wymiary 3, 4 i 5 — one najbardziej wpływają na to, co realnie dzieje się na sali."
+  },
+
+  "powiazania": {
+    "zalgiris_coaching_culture.json": "GŁÓWNE POWIĄZANIE — drill types (teaching/learning/competing) to czwarty, komplementarny wymiar. Patrz sekcja trzy_siatki_razem.",
+    "imopeksis_methodology.json": "Dopasowanie trener↔zawodnik do faz lekcji wg DISC — style kierowania dokładają zmienną poziomu wytrenowania grupy.",
+    "book_imopeksis_hucinski.json": "Wizja coacha wg Whitmore'a („coach nie przekazuje wiedzy, lecz organizuje myślenie\") odpowiada metodom kreatywnym i czynnościom naprowadzającym.",
+    "licb_planowanie_struktura_konspekty.json": "Nauczanie/doskonalenie/trenowanie oraz 5 faz nauczania — metody realizacji zadań są warstwą pedagogiczną nad tą strukturą.",
+    "teaching_fundamentals.json": "Konspekty Libicha — punkty coachingowe to w istocie zapis czynności informujących i korekcyjnych.",
+    "training_plan_methodology.json": "Plik siostrzany z tej samej partii — metodyka planowania rocznego.",
+    "zalgiris_age_curriculum.json": "Curriculum U6-U18 — metoda zabawowa dominuje w U6-U8 („warm up games\" w każdej jednostce), metody kreatywne wchodzą wraz z read & react w U9-U10.",
+    "sociometry_team_cohesion.json": "MIEJSCE SPORNE — kryteria wyboru zastępowego (trener wyznacza) vs zasada Hucińskiego „nigdy nie wyznaczaj lidera\". Socjogram pokazuje, kogo grupa faktycznie wybrała; rozbieżność z listą kompetencyjną jest informacją, nie błędem.",
+    "licb_ocena_i_obserwacje.json": "Forma zespołowa z dodatkowymi zadaniami — u Hucińskiego niegrający zawodnicy prowadzą statystykę przyczyn, co jest praktyczną realizacją tej formy. Ponadto: 40 obserwacji przyczyn to OBSERWACJA SKATEGORYZOWANA wg typologii z tego pliku.",
+    "player_motivation_and_selfworth.json": "Macierz POTRAFI × CHCE rozstrzyga paradoks Wojtowicza (patrz style_kierowania). Materiały z tej samej partii AWF — Pedagogika.",
+    "intel_background.json": "Typy wywiadu — kierowany odpowiada zestawowi 15 pytań NBA, swobodny rozmowie nieformalnej z M6."
+  }
+}

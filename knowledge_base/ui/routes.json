@@ -1,0 +1,26 @@
+{
+  "_comment": "Mapa tras Flask — app.py (linie startowe tras)",
+  "program": {
+    "/":                      { "name": "Dashboard",              "line": 2832  },
+    "/upload":                { "name": "Upload meczów",          "line": 3570  },
+    "/historia":              { "name": "Historia meczów",        "line": 5573  },
+    "/mecz/<id>":             { "name": "Raport meczu",           "line": 5890  },
+    "/mecz/<id>/shooting-chart": { "name": "Shooting Chart",     "line": 9026  },
+    "/sezon":                 { "name": "Tabela sezonu",          "line": 9647  },
+    "/zawodnicy":             { "name": "Statystyki zawodników",  "line": 12406 },
+    "/zawodnik/<id>":         { "name": "Profil zawodnika",       "line": 16916 },
+    "/ustawienia":            { "name": "Ustawienia/drużyny",     "line": 19253 }
+  },
+  "portal": {
+    "/portal":                { "name": "Portal główna (Mecze + Statystyki)", "line": 25268 },
+    "/portal/mecz/<id>":      { "name": "Portal — mecz",                     "line": 26315 },
+    "/portal/zawodnik/<pid>": { "name": "Portal — zawodnik",                 "line": 28491 }
+  },
+  "export": {
+    "/mecz/<id>/export/xlsx": { "name": "Export XLSX meczu",     "line": 20193 },
+    "/mecz/<id>/export/pdf":  { "name": "Export PDF meczu",      "line": 20354 }
+  },
+  "koder": {
+    "/koder":                 { "name": "Koder — lista meczów",  "line": 29914 }
+  }
+}

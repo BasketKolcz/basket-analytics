@@ -1,0 +1,214 @@
+{
+  "_source": "Trzy materiały z przedmiotu Dydaktyka przedmiotowa, studia podyplomowe AWF Katowice: (1) „Plan roczny dla klasy z wychowania fizycznego. Sposoby opracowania.pdf\" — prezentacja metodyczna, 34 slajdy, dr Karolina Kostorz; (2) „przykład planu rocznego.pdf\" — wzór wypełnienia, 4 strony; (3) „Plan roczny klasy VIII Kosma Kołcz.docx\" — WŁASNA PRACA UŻYTKOWNIKA, przykład wykonania. Podstawa teoretyczna: S. Strzyżewski (1996, 2013). ROZSZERZONE o: „wychowanie-fizyczne-cz.-1.pdf\" (prezentacja „Planowanie pracy nauczyciela wychowania fizycznego\", 42 slajdy — wariant łańcucha prakseologicznego wg M. Demela) oraz notatki własne użytkownika z wykładów („23.10.2021.docx\", zajęcia 21.11.2021 — kryteria oceny wg doc. Skalika). ORAZ o „6-2020 planowanie.pptx\" i „7-2020 metody.pptx\" — Podstawy dydaktyki, dr Ewa Przybyła, AWF Katowice (operacjonalizacja celów z czasownikami, hierarchia celów, trzeci wariant łańcucha prakseologicznego, portfolio).",
+  "_comment": "METODYKA PLANOWANIA ROCZNEGO — jednostką planowania jest CYKL TEMATYCZNY (2-8 godzin), a punktem wyjścia BUDŻET GODZIN. Najcenniejszy element to czterowymiarowy opis celów cyklu: umiejętności / zdolności motoryczne / wiadomości / postawy. Baza miała dotąd curriculum (Žalgiris U6-U18) i rozkłady jednostki, ale nie miała warstwy pośredniej — jak zbudować cykl kilku lekcji służących temu samemu celowi.",
+  "_program_use": "Wzorzec dla ewentualnego modułu planowania: (a) budżet godzin jako tabela form aktywności × okresy, z automatyczną kontrolą sumy; (b) cykl tematyczny jako obiekt nadrzędny wobec pojedynczej jednostki; (c) czterokolumnowy opis celów cyklu jako struktura formularza. Ważna reguła walidacyjna: budżet ma pokazywać, czy plan nie jest ukierunkowany na JEDNĄ zdolność motoryczną.",
+  "_prawa_autorskie": "Materiały dydaktyczne AWF Katowice. Plik zawiera notatki strukturalne, nie przedruk. Praca własna użytkownika (plan klasy VIII) opisana jako przykład wykonania — bez przenoszenia treści dotyczących konkretnej szkoły i uczniów.",
+
+  "kategoria": "Metodyka planowania — cykl tematyczny i plan roczny",
+
+  "zalozenia_wyjsciowe": {
+    "brak_uniwersalnego_wzoru": "Sposób układania planu rocznego jest sprawą indywidualną prowadzącego — NIE ISTNIEJE jeden uniwersalny plan, może być wiele poprawnych rozwiązań.",
+    "korzystanie_z_cudzych_planow": "Przy sięganiu po gotowe plany publikowane w czasopismach i internecie należy sprawdzić zgodność z aktualną podstawą programową i programem obowiązującym w danej placówce.",
+    "warunek_wstepny": "Przed opracowaniem szczegółowych treści trzeba uwzględnić WYNIKI PRZEPROWADZONEJ DIAGNOZY. Plan bez diagnozy jest bezpodstawny.",
+    "_przelozenie_sportowe": "W akademii odpowiednikiem podstawy programowej jest filozofia gry klubu, a odpowiednikiem diagnozy — sprawdziany techniczne i obserwacje meczowe."
+  },
+
+  "jedenascie_cech_dobrego_planu": {
+    "lista": ["celowy", "wykonalny", "wewnętrznie zgodny", "maksymalnie operatywny", "plastyczny", "dostatecznie szczegółowy", "terminowy", "alternatywny", "kompletny", "optymalnie długodystansowy", "komunikatywny"],
+    "_relacja_do_lic_b": "Kurs LIC.B podaje SZEŚĆ cech planu (celowość, elastyczność, wewnętrzna zgodność, wykonalność, przejrzystość strukturalna, ekonomiczność — patrz licb_planowanie_struktura_konspekty.json). Listy nakładają się częściowo. Cztery cechy są tu NOWE i warte uwagi: **alternatywny** (przewiduje warianty na wypadek zmiany warunków), **optymalnie długodystansowy** (horyzont dobrany do celu, ani za krótki, ani za długi), **kompletny**, **terminowy**.",
+    "_uwaga": "Nie traktować jako listy konkurencyjnej wobec LIC.B, tylko jako jej rozszerzenie."
+  },
+
+  "cykl_tematyczny": {
+    "_status": "JEDNOSTKA PLANOWANIA — element, którego baza dotąd nie miała.",
+    "definicja": "Kilka następujących BEZPOŚREDNIO PO SOBIE lekcji służących osiąganiu TYCH SAMYCH celów.",
+    "dlugosc": "2 do 8 godzin (Strzyżewski 1996) — taki układ zapobiega chaotyczności przy realizacji programu.",
+    "po_co": "Opracowanie cykli systematyzuje pracę i umożliwia osiągnięcie faktycznych efektów — POD WARUNKIEM, że zaplanowanych zadań nie jest zbyt dużo w stosunku do przewidywanej liczby godzin.",
+    "temat_cyklu": {
+      "warianty_zapisu": [
+        "Nazwa dyscypliny lub formy aktywności realizowanej w cyklu",
+        "ZADANIE KONTROLNO-OCENIAJĄCE obowiązujące po danej liczbie godzin — wariant zalecany, gdy chcemy, by ćwiczący znali kryterium z góry",
+        "Główny cel wiążący wszystkie planowane zakresy"
+      ],
+      "jawnosc_planu": "Materiał zaleca przekazanie pierwszych trzech rubryk planu DO WIADOMOŚCI ĆWICZĄCYCH — np. wywieszenie skróconego planu przy sali lub publikacja na stronie.",
+      "_powiazanie": "To ta sama idea co „norma zadaniowa\" Hucińskiego i jawne kryteria ocen — zawodnik ma wiedzieć, wg czego będzie oceniany, ZANIM zacznie."
+    },
+    "zasada_spojnosci": "Wszystkie zadania w cyklu muszą być powiązane TEMATEM CYKLU, rozumianym jako wytyczony cel etapowy, z którym ćwiczący ma być zapoznany."
+  },
+
+  "cztery_zakresy_celow_cyklu": {
+    "_waga": "NAJCENNIEJSZY ELEMENT TEGO PLIKU — czterowymiarowy opis cyklu. Baza ma curriculum Žalgirisu z podziałem na umiejętności indywidualne i taktyczne, ale NIE MA osobno wiadomości i postaw.",
+    "_zasada": "Uszczegółowieniem tematu cyklu są cele wytyczone w czterech zakresach; realizowane w formie ćwiczeń, zadań, informacji lub przez CELOWE TWORZENIE SYTUACJI WYCHOWAWCZYCH.",
+
+    "1_umiejetnosci": {
+      "co_zapisujemy": "Ćwiczenia nauczane oraz ćwiczenia doskonalone i utrwalane, a także umiejętności ukierunkowane na przygotowanie do SAMODZIELNEJ PRACY."
+    },
+    "2_zdolnosci_motoryczne": {
+      "co_zapisujemy": "Wybrane zdolności (kondycyjne, koordynacyjne, kompleksowe, gibkość), którym poświęcamy szczególną uwagę w cyklu — przez zwiększenie liczby ćwiczeń i dobór odpowiednich metod."
+    },
+    "3_wiadomosci": {
+      "co_zapisujemy": "Nowe informacje integralnie związane z tematyką zajęć: przepisy, organizacja zajęć, sposób asekuracji, edukacja zdrowotna (odżywianie, czynny wypoczynek, wady postawy, higiena).",
+      "_wazne_rozroznienie": "Jako WIADOMOŚCI nie traktuje się czynności informujących dotyczących nauczanej techniki lub taktyki (np. zapoznanie z techniką rzutu z biegu) — to oczywistość wynikająca z procesu nauczania. Wiadomość to wiedza WYKRACZAJĄCA poza instruktaż bieżącego ruchu.",
+      "_dlaczego_to_istotne": "To rozróżnienie ratuje kolumnę „wiadomości\" przed zdegenerowaniem się w powtórzenie kolumny „umiejętności\" — częsty błąd w planach."
+    },
+    "4_postawy": {
+      "co_zapisujemy": "Pożądana postawa pierwotna lub wtórna kształtowana przez kilka kolejnych lekcji. Można też określić SKŁADOWE postawy: aspekt emocjonalny (np. zainteresowanie własnym poziomem sprawności), aspekt poznawczy (np. wiedza o wpływie aktywności na układ krążenia) albo pożądane zachowania (np. współpraca z partnerem)."
+    },
+    "zasada_konkretnosci": "Cele mają być formułowane KONKRETNIE, nie ogólnie. Materiał wskazuje sformułowania typu „nauczanie strzału do bramki\" czy „nauczanie odbicia sposobem górnym\" jako zbyt ogólne.",
+    "_relacja_do_zalgirisu": "Curriculum Žalgirisu operuje dwiema kolumnami (individual skills / tactical skills). Ta siatka jest szersza o WIADOMOŚCI i POSTAWY — czyli o to, co Žalgiris umieszcza gdzie indziej (team rules, mental performance), ale nie wiąże z konkretnym cyklem treningowym."
+  },
+
+  "budzet_godzin": {
+    "_status": "OBOWIĄZKOWY ETAP WSTĘPNY poprzedzający układanie planu.",
+    "definicja": "Zestawienie rodzajów aktywności fizycznej z liczbą godzin przeznaczonych na ich realizację w miesiącu, semestrze i roku.",
+    "dane_potrzebne": "Organizacja roku (dni wolne od zajęć) oraz liczba godzin ustalona na realizację zajęć.",
+    "punkt_wyjscia": "Za punkt wyjścia można przyjąć indywidualne i zespołowe rodzaje aktywności, DODATKOWO OKREŚLAJĄC, jakie zdolności motoryczne będą przy nich akcentowane.",
+    "funkcja_kontrolna": {
+      "_waga": "To jest właściwy powód, dla którego budżet godzin istnieje.",
+      "zasada": "Dzięki przypisaniu zdolności motorycznych do form aktywności prowadzący może w prosty sposób UPEWNIĆ SIĘ, ŻE PLAN NIE JEST UKIERUNKOWANY NA KSZTAŁTOWANIE JEDNEJ ZDOLNOŚCI, tylko rozłożony równomiernie.",
+      "_program_use": "Gotowa reguła walidacyjna: zsumować godziny wg akcentowanej zdolności motorycznej i pokazać rozkład. Wykrywa plan przeciążony np. wytrzymałością kosztem koordynacji."
+    },
+    "co_mozna_pominac": "W budżecie można pominąć umiejętności takie jak: samoocena rozwoju fizycznego, samoocena umiejętności, samoocena sprawności, organizacja miejsca zajęć, stosowanie różnorodnych form w zmiennych warunkach, samoochrona i asekuracja — te nabywa się W ŚCISŁYM ZWIĄZKU z różnymi formami aktywności. Wystarczy uwzględnić je w planie przy konkretnym rodzaju aktywności."
+  },
+
+  "przyklad_wykonania_plan_klasy_viii": {
+    "_zrodlo": "Plan roczny klasy VIII — własna praca użytkownika (Kosma Kołcz), studia podyplomowe AWF Katowice.",
+    "_status": "PRZYKŁAD STRUKTURY, nie materiał wzorcowy. Dotyczy klasy szkolnej, nie zespołu sportowego — przenosić z ostrożnością.",
+    "struktura_dokumentu": ["I. Diagnoza — metody (obserwacja, wywiad z nauczycielami i rodzicami, dokumentacja szkoły)", "II. Wyniki diagnozy — warunki pozaosobnicze (infrastruktura, stan magazynu sprzętu) i osobnicze (stan zdrowia, sprawność, szkolenie specjalistyczne, zainteresowania)", "III. Budżet godzin — formy aktywności × półrocza", "IV. Cykle tematyczne — tabela czterokolumnowa"],
+    "budzet_godzin_przyklad": {
+      "_uklad": "7 form aktywności × 2 półrocza, suma kontrolna 67 h + 67 h",
+      "obserwacja": "Formy są ROTOWANE między półroczami — np. siatkówka 16 h w I półroczu i 4 h w II, przy piłce ręcznej odwrotnie (4 h → 16 h). Koszykówka rozłożona równomiernie (10 h + 10 h). To praktyczna realizacja zasady równomiernego rozkładu z funkcji kontrolnej budżetu."
+    },
+    "tabela_cyklu": {
+      "kolumny": ["RODZAJ AKTYWNOŚCI (z liczbą godzin)", "UMIEJĘTNOŚCI", "WIEDZA", "ZDOLNOŚCI MOTORYCZNE", "POSTAWY"],
+      "przyklad_koszykowka_4h": [
+        {"umiejetnosci": "doskonali podania sprzed klatki piersiowej i jednorącz", "wiedza": "zna prawidłową technikę podania oraz zasady gry", "motoryka": "szybkość i siła górnych partii, czas reakcji, zwinność i chwytność dłoni", "postawy": "współpraca, zaangażowanie, wytrwałość"},
+        {"umiejetnosci": "doskonali kozłowanie i zmiany", "wiedza": "zna zasady poruszania się w koszykówce", "motoryka": "skoczność, zwinność, szybkość, czas reakcji", "postawy": "zdyscyplinowanie, zaangażowanie"},
+        {"umiejetnosci": "doskonali technikę rzutu", "wiedza": "zna punktację, wie jak wygląda prawidłowa pozycja rzutowa", "motoryka": "siła górnych partii, koordynacja oko-ręka", "postawy": "samodyscyplina, skupienie, wytrwałość"},
+        {"umiejetnosci": "uczy się poruszania po boisku w grze szkolnej", "wiedza": "uczy się „czytania gry\", ścięcia i obiegnięcia, potrafi sędziować mecz", "motoryka": "czas reakcji, szybkość, wytrzymałość", "postawy": "pomaga w prowadzeniu lekcji i sędziowaniu"}
+      ],
+      "_obserwacja": "Ostatni wiersz cyklu przenosi zawodnika w ROLĘ WSPÓŁPROWADZĄCEGO (sędziowanie, pomoc w prowadzeniu). To ta sama idea co u Hucińskiego — zawodnik staje się partnerem trenera, gdy dysponuje tą samą wiedzą."
+    },
+    "_wartosc": "Pokazuje, że czterowymiarowy opis cyklu jest wykonalny w praktyce i że mieści się w jednej tabeli."
+  },
+
+  "operacjonalizacja_celow": {
+    "_zrodlo_dodane": "„6-2020 planowanie.pptx\" — Podstawy dydaktyki, dr Ewa Przybyła, AWF Katowice.",
+    "_waga": "BRAKUJĄCE OGNIWO. Ten plik podaje wyżej CZTERY ZAKRESY celów cyklu (umiejętności / zdolności motoryczne / wiadomości / postawy), ale nie podawał TECHNIKI zamiany celu ogólnego na sprawdzalny. Tu jest.",
+
+    "trzy_pytania_planowania": ["1. Co chcemy osiągnąć?", "2. Co i jak zamierzamy zrobić — w jaki sposób chcemy osiągnąć cel?", "3. Jak sprawdzimy, czy osiągnęliśmy cel?"],
+    "_uwaga_o_pytaniu_trzecim": "Trzecie pytanie jest w praktyce najczęściej pomijane — plan powstaje bez kryterium sprawdzenia. Operacjonalizacja jest odpowiedzią właśnie na nie.",
+
+    "hierarchia_celow": {
+      "poziomy": ["ideał wychowanka", "naczelny cel edukacji", "cele ogólne", "cele kierunkowe i etapowe", "cele szczegółowe (OPERACYJNE)"],
+      "_przelozenie_sportowe": "W akademii: filozofia klubu („what defines a Zalgiris player\") → cel sezonu → cele etapowe rundy → cele cyklu tematycznego → cele operacyjne pojedynczej jednostki."
+    },
+
+    "czym_jest_operacjonalizacja": {
+      "definicja": "Wyrażenie celów w formie ZADAŃ, których rozwiązanie może być przedmiotem oceny opartej na WYMIERNYCH KRYTERIACH.",
+      "przyklad_ze_zrodla": {
+        "cel_glowny": "rozwijać aktywność fizyczną",
+        "cele_operacyjne": ["opanowanie informacji o aktywności fizycznej", "zdobycie umiejętności ruchowych", "podniesienie sprawności fizycznej", "uczestniczenie jako widz w formach kultury fizycznej", "udział w organizowaniu aktywności fizycznej"]
+      },
+      "_powiazanie": "Zasada konkretności zapisana wyżej w tym pliku („nauczanie strzału do bramki\" jako sformułowanie zbyt ogólne) to ta sama myśl — tu ma nazwę i procedurę."
+    },
+
+    "trzy_kategorie_celow_i_czasowniki": {
+      "_waga": "NAJCENNIEJSZY ELEMENT — czasowniki operacyjne pozwalające zapisać cel tak, by dało się go SPRAWDZIĆ.",
+      "poznawcze_wiadomosci": {
+        "co_obejmuja": "Zdobycie nowej wiedzy i jej zrozumienie",
+        "czasowniki": ["zna", "wie", "umie nazwać", "umie wytłumaczyć"]
+      },
+      "behawioralne_umiejetnosci": {
+        "co_obejmuja": "Wykonanie, ocena, zastosowanie",
+        "czasowniki": ["umie wykonać", "umie ocenić", "umie zastosować"]
+      },
+      "afektywne_postawy": {
+        "co_obejmuja": "Kształtowanie przekonań, opinii, poczucia odpowiedzialności, systemu wartości",
+        "czasowniki": ["inicjuje", "zachęca", "proponuje", "ustosunkowuje się do problemu", "akceptuje", "angażuje się"],
+        "_dlaczego_to_najwazniejsze": "Baza wielokrotnie mówi o POSTAWACH — pięć wartości Žalgirisu, kryteria oceny wg Skalika, kolumna POSTAWY w cyklu tematycznym, 11 team rules. Ale nigdzie nie podawała, JAK ZAPISAĆ POSTAWĘ, żeby dało się ją sprawdzić. „Inicjuje\", „zachęca\", „proponuje\" to zachowania OBSERWOWALNE — w odróżnieniu od „jest zaangażowany\" czy „szanuje kolegów\", których nie da się zweryfikować."
+      },
+      "_program_use": "Zestaw czasowników afektywnych to gotowa podpowiedź do pola „postawy\" w formularzu cyklu — zamiast pustego pola tekstowego lista czasowników do wyboru."
+    },
+
+    "struktura_konspektu": {
+      "_zrodlo": "Ten sam materiał — szablon konspektu jednostki",
+      "pola": ["Temat", "Klasa/grupa", "Miejsce zajęć", "Liczba ćwiczących", "Czas trwania", "Cele operacyjne w trzech kategoriach (poznawcze / behawioralne / afektywne)", "Środki dydaktyczne", "Tok lekcji"],
+      "_relacja_do_bazy": "Zbieżne ze strukturą konspektów Libicha (teaching_fundamentals.json) i z szablonem practice planning z coaching_notes.json — tu dochodzi jawny podział celów na trzy kategorie."
+    },
+
+    "portfolio": {
+      "_zrodlo": "„7-2020 metody.pptx\"",
+      "definicja": "Sposób dokumentowania własnej pracy — badań, obserwacji, wywiadów, projektów, przeprowadzonych ćwiczeń.",
+      "zawartosc": ["materiały na dany temat uznane za przydatne", "analiza treści", "prace potwierdzające wiedzę, umiejętności, możliwości, postawy, osiągnięcia i postępy", "dokumentacja działań: notatki, zdjęcia, esej, mapa myśli"],
+      "pytania_refleksyjne": ["Co zyskałem?", "Czego się dowiedziałem?", "Co odkryłem?", "Do jakich wniosków doszedłem?", "Co mnie zaskoczyło, a co utwierdziło w moich poglądach?", "Jakie podjąłem plany i zamierzenia?", "Dlaczego wybrałem dane materiały?"],
+      "_powiazanie": "Komplementarne wobec profilu 3+3 Žalgirisu (który jest oceną prowadzącego) i Dziennika Młodych Talentów (który jest rutyną). Portfolio jest formą pośrednią — dokumentacją prowadzoną przez samego zawodnika, z wymuszoną refleksją."
+    }
+  },
+
+  "lancuch_prakseologiczny_wariant_demela": {
+    "_zrodlo_dodane": "„wychowanie-fizyczne-cz.-1.pdf\" — prezentacja „Planowanie pracy nauczyciela wychowania fizycznego\" (42 slajdy), AWF Katowice. Wariant przypisany M. Demelowi.",
+    "_po_co": "Baza ma już łańcuch prakseologiczny w wersji Strzyżewskiego (licb_planowanie_struktura_konspekty.json). Wariant Demela różni się w dwóch miejscach i obie różnice są znaczące.",
+    "ogniwa_demela": ["1. UŚWIADOMIENIE CELU", "2. Diagnoza, prognoza", "3. Planowanie", "4. Realizacja", "5. OCENA I WNIOSKOWANIE PEDAGOGICZNE"],
+    "ogniwa_strzyzewskiego": ["1. Diagnoza i prognoza (wykrywanie potrzeb, generowanie motywacji)", "2. Programowanie", "3. Realizacja", "4. Ocena wyników (ewaluacja)"],
+    "dwie_roznice": {
+      "na_poczatku": "Demel stawia UŚWIADOMIENIE CELU PRZED diagnozą. U Strzyżewskiego cykl zaczyna się od diagnozy. Konsekwencja: u Demela najpierw wiadomo, po co w ogóle diagnozujemy — diagnoza jest podporządkowana celowi, a nie odwrotnie.",
+      "na_koncu": "Demel kończy na OCENIE I WNIOSKOWANIU PEDAGOGICZNYM, Strzyżewski na ocenie wyników. Konsekwencja: u Demela pętla domyka się WYCIĄGNIĘCIEM WNIOSKÓW, nie samym pomiarem — ocena bez wnioskowania nie zamyka cyklu."
+    },
+    "wariant_trzeci_pieciogniwowy": {
+      "_zrodlo": "„6-2020 planowanie.pptx\" — prakseologiczny model edukacji, przypisany S. Strzyżewskiemu",
+      "ogniwa": ["1. DIAGNOZA", "2. PROGNOZA", "3. PLANOWANIE", "4. REALIZACJA", "5. EWALUACJA"],
+      "roznica": "Rozdziela diagnozę i prognozę na OSOBNE ogniwa (u Strzyżewskiego w wersji z licb są połączone w jedno) i nazywa ostatnie ogniwo ewaluacją, a nie samą oceną wyników.",
+      "_podsumowanie_trzech_wariantow": "Baza ma teraz trzy zapisy tego samego modelu. Różnią się dwoma rozstrzygnięciami: (a) czy cykl zaczyna się od diagnozy, czy od uświadomienia celu — Demel stawia cel PRZED diagnozą; (b) czy kończy się pomiarem, czy wnioskowaniem — Demel domyka pętlę wnioskowaniem pedagogicznym. Wariant pięcioogniwowy jest najbardziej rozczłonkowany i przez to najwygodniejszy jako lista kontrolna."
+    },
+    "_ktory_wariant_stosowac": "Nie są konkurencyjne — Demel jest pełniejszy jako opis cyklu ciągłego (wnioski z oceny zasilają kolejne uświadomienie celu), wersja czteroogniwowa bardziej zwięzła jako opis pojedynczego przejścia, pięcioogniwowa najwygodniejsza jako checklist. Do planowania sezonu użyteczniejszy Demel.",
+    "_powiazanie": "Wniosek „ocena bez wnioskowania nie zamyka cyklu\" pokrywa się z zasadą Hucińskiego, że raport i plan ŻYJĄ i podlegają rewizji, oraz z okresowym przeglądem profilu zawodnika u Žalgirisu (3 mocne + 3 słabe + PRZEGLĄD)."
+  },
+
+  "kryteria_oceny_zawodnika": {
+    "_zrodlo_dodane": "Notatki własne użytkownika z wykładów Dydaktyki przedmiotowej, AWF Katowice (plik „23.10.2021.docx\", zajęcia z 21.11.2021: „Ewaluacja w procesie wychowania fizycznego. Kryteria oceny ucznia\"). Kryteria przypisane docentowi Skalikowi. Treść zredagowana z surowych notatek wykładowych.",
+    "_waga": "Baza ma bardzo dużo o DIAGNOZIE (sprawdziany techniczne, 40 obserwacji przyczyn, testy motoryczne, arkusze psychospołeczne), ale niewiele o tym, ZA CO WŁAŚCIWIE OCENIAĆ zawodnika. Te kryteria wychodzą daleko poza wynik sportowy i poza samą technikę.",
+
+    "1_umiejetnosci": {
+      "uzytkowo_sportowe": "Opanowanie techniki ruchu w różnych formach aktywności",
+      "organizacyjne": "Potrafi bezpiecznie zorganizować tor przeszkód, przeprowadzić zabawę, prawidłowo poprowadzić fragment rozgrzewki",
+      "asekuracji": "Umiejętność asekuracji przy różnych ćwiczeniach",
+      "_uwaga": "Dwa ostatnie zakresy są w skautingu praktycznie nieobecne, a opisują realną kompetencję — zawodnik, który potrafi poprowadzić fragment rozgrzewki, rozumie trening inaczej niż ten, który tylko go odbywa."
+    },
+    "2_wiedza": {
+      "zakresy": ["Funkcjonowanie organizmu podczas wysiłku", "Zasady zdrowego odżywiania", "BHP i przepisy gry — wiedza praktyczna"],
+      "zrodlo_wiedzy": "Zdobywana na zajęciach ORAZ samodzielnie",
+      "_powiazanie": "Odpowiada kolumnie WIADOMOŚCI z czterech zakresów celów cyklu (patrz wyżej w tym pliku)."
+    },
+    "3_zaangazowanie": {
+      "podstawa": "Rozróżnienie ćwiczący / niećwiczący",
+      "przejawy": [
+        "Chętny do współpracy z prowadzącym",
+        "Chce współpracować z kolegą — sprawniejszy fizycznie z mniej sprawnym",
+        "ZWOLNIONY Z WYSIŁKU pomaga w organizacji i przebiegu zajęć"
+      ],
+      "_dlaczego_to_wazne": "Trzeci punkt jest najciekawszy: kontuzjowany lub zwolniony zawodnik NADAL PODLEGA OCENIE — za wkład organizacyjny. To rozwiązuje realny problem, którego baza nie adresowała: co robić z zawodnikiem wyłączonym z treningu. Zbieżne z zasadą Žalgirisu „every individual of the team is equally important\"."
+    },
+    "4_aktywnosc_pozalekcyjna": {
+      "przejawy": ["Chęć reprezentowania w zawodach", "Pomoc w organizacji, protokołowaniu i sędziowaniu meczów"],
+      "_powiazanie": "Sędziowanie i protokołowanie pojawia się też w cyklu koszykarskim z planu klasy VIII (patrz wyżej) oraz w metodyce Hucińskiego jako droga do stania się partnerem trenera."
+    },
+    "zasada_naczelna": {
+      "cytat_zredagowany": "Ocena powinna stanowić wartość diagnostyczną ZARÓWNO DLA ZAWODNIKA, JAK I DLA PROWADZĄCEGO — służy wdrażaniu do samokontroli i samooceny.",
+      "_znaczenie": "Ocena nie jest werdyktem, tylko narzędziem diagnostycznym działającym w obie strony. To ta sama teza, która przewija się przez całą bazę: kolumna RÓŻNICA w arkuszu Hucińskiego (rozjazd samoocena↔ocena trenera), samoocena socjometryczna, samoocena w Indeksie Zuchory, profil 3+3 Žalgirisu."
+    },
+    "_ostrzezenie_przy_przenoszeniu": "Kryteria pochodzą z kontekstu szkolnego, gdzie ocenia się WSZYSTKICH uczniów niezależnie od poziomu. W zespole sportowym część kryteriów (zaangażowanie, aktywność pozalekcyjna) jest oczywistym warunkiem przynależności, a nie osią różnicowania. Przenosić jako listę kontrolną obszarów, nie jako gotową skalę ocen."
+  },
+
+  "co_swiadomie_pominieto": "Z materiałów źródłowych nie przeniesiono realiów polskiej szkoły: podstawy programowej, zasad zwalniania z zajęć, integracji międzyprzedmiotowej, współpracy z Radą Rodziców, a także wskazań do pracy z klasami I-IV i rozdziałów o specyfice zajęć dziewcząt w kontekście szkolnym. Z pracy własnej użytkownika pominięto dane dotyczące konkretnej szkoły i uczniów.",
+
+  "powiazania": {
+    "licb_planowanie_struktura_konspekty.json": "GŁÓWNE POWIĄZANIE — 6 cech planu z LIC.B vs 11 cech tutaj (rozszerzenie, nie konkurencja); rundy sezonu Hucińskiego to odpowiednik budżetu godzin w skali makro.",
+    "coaching_styles_and_actions.json": "Plik siostrzany — jak prowadzić zajęcia zaplanowane wg tej metodyki.",
+    "zalgiris_age_curriculum.json": "Curriculum U6-U18 i rozkłady jednostki — cykl tematyczny jest warstwą POŚREDNIĄ między celami rocznika a pojedynczą jednostką, której tam brakuje.",
+    "book_imopeksis_hucinski.json": "Rundy przygotowawcze, trzy normy, jawność kryteriów oceny („norma zadaniowa\") — zbieżne z zaleceniem przekazywania planu do wiadomości ćwiczących.",
+    "teaching_fundamentals.json": "Konspekty Libicha to poziom pojedynczej jednostki; cykl tematyczny spina kilka takich jednostek wspólnym celem.",
+    "motor_testing_battery.json": "Zdolności motoryczne akcentowane w budżecie godzin — testy dają narzędzie sprawdzenia, czy akcent przyniósł efekt.",
+    "imopeksis_methodology.json": "Fazy lekcji treningowej — metodyka planowania określa, ile cykli i w jakiej kolejności."
+  }
+}

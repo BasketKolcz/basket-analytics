@@ -13,7 +13,8 @@ services:
       - PORTAL_ONLY=${PORTAL_ONLY:-false}
       - PORT=5000
       - MATCH_FILES_DIR=/app/match_files
-    command: gunicorn app:app --bind 0.0.0.0:5000 --workers 1 --timeout 120 --reload
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
+    command: gunicorn app:app --bind 0.0.0.0:5000 --workers 2 --timeout 180 --reload
     depends_on:
       db:
         condition: service_healthy

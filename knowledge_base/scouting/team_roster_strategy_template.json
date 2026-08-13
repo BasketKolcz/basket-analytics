@@ -1,0 +1,159 @@
+{
+  "_source": "Next Draft Foundation — Szablon Projektu Kursowego",
+  "_comment": "Team Roster Strategy — plan budowy składu drużyny. Przykładowy materiał do projektu końcowego kursu. Forma dowolna. Najważniejsze: pokazuje sposób myślenia, decyzje, praktyczne użycie wiedzy z kursu.",
+  "_program_use": "Inspiracja do modułu 'Strategia Składu' lub rozszerzenia sekcji /roster/strategia w programie.",
+
+  "meta": {
+    "tytul": "Team Roster Strategy",
+    "podtytul": "Zbuduj plan składu. Dopasuj talent do stylu, budżetu i kultury klubu.",
+    "brand": "Next Draft Foundation",
+    "cytat_dolny": "Najlepszy skład to nie największe nazwiska, ale najlepsze dopasowanie do Twojej filozofii.",
+    "hasla_kluczowe": ["MĄDRA STRATEGIA", "WŁAŚCIWI LUDZIE", "WSPÓLNY CEL"]
+  },
+
+  "naglowek_formularza": {
+    "pola": [
+      { "id": "klub_organizacja",       "label": "Klub / Organizacja",         "typ": "text" },
+      { "id": "sezon_horyzont",         "label": "Sezon / Horyzont Planowania", "typ": "text" },
+      { "id": "data",                   "label": "Data",                        "typ": "date" }
+    ]
+  },
+
+  "sekcja_1_filozofia_tozsamosc": {
+    "nr": 1,
+    "id": "filozofia_tozsamosc",
+    "nazwa": "FILOZOFIA I TOŻSAMOŚĆ DRUŻYNY",
+    "pola": [
+      { "id": "nasza_filozofia",    "label": "NASZA FILOZOFIA",          "typ": "textarea" },
+      { "id": "styl_gry_offense",   "label": "STYL GRY (OFFENSE)",       "typ": "text"     },
+      { "id": "styl_gry_defense",   "label": "STYL GRY (DEFENSE)",       "typ": "text"     },
+      {
+        "id": "tempo_gry",
+        "label": "TEMPO GRY",
+        "typ": "select",
+        "opcje": ["WYSOKIE", "ŚREDNIE", "NISKIE"]
+      },
+      { "id": "wartosci_kultura",   "label": "NASZE WARTOŚCI I KULTURA", "typ": "textarea" },
+      { "id": "czego_nie_tolerujemy", "label": "CZEGO NIE TOLERUJEMY",  "typ": "textarea" }
+    ]
+  },
+
+  "sekcja_2_obecny_sklad": {
+    "nr": 2,
+    "id": "obecny_sklad",
+    "nazwa": "OBECNY SKŁAD",
+    "kolumny_tabeli": [
+      "POZYCJA", "ZAWODNIK", "WIEK", "KONTRAKT (DO)", "ROLA",
+      "OCENA (1-5)", "ZOSTAJE? (TAK/NIE)", "KOMENTARZ"
+    ],
+    "pozycje": ["PG", "SG", "SF", "PF", "C", "6TH MAN", "ROLE PLAYER 1", "ROLE PLAYER 2", "MŁODY (U23)"]
+  },
+
+  "sekcja_3_potrzeby_priorytety": {
+    "nr": 3,
+    "id": "potrzeby_priorytety",
+    "nazwa": "POTRZEBY I PRIORYTETY",
+    "najwieksze_potrzeby": {
+      "label": "NAJWIĘKSZE POTRZEBY",
+      "pola": [
+        { "id": "potrzeba_1", "label": "1.", "typ": "text" },
+        { "id": "potrzeba_2", "label": "2.", "typ": "text" },
+        { "id": "potrzeba_3", "label": "3.", "typ": "text" },
+        { "id": "potrzeba_4", "label": "4.", "typ": "text" }
+      ]
+    },
+    "priorytety_checklist": {
+      "label": "PRIORYTETY (1 = NAJWAŻNIEJSZE)",
+      "opcje": [
+        "SKUTECZNOŚĆ",
+        "OBRONA",
+        "DOŚWIADCZENIE",
+        "WIEK I POTENCJAŁ",
+        "CHARAKTER / KULTURA",
+        "ELASTYCZNOŚĆ SKŁADU",
+        "INNE"
+      ]
+    }
+  },
+
+  "sekcja_4_profile_poszukiwanych": {
+    "nr": 4,
+    "id": "profile_poszukiwanych",
+    "nazwa": "PROFILE POSZUKIWANYCH ZAWODNIKÓW",
+    "kolumny_tabeli": [
+      "POZYCJA", "TYP ZAWODNIKA (np. 3&D Wing, Playmaker)",
+      "MUST HAVE", "NICE TO HAVE", "DEAL BREAKERS", "BUDŻET (RANGE)"
+    ],
+    "pozycje": ["PG", "SG", "SF", "PF", "C"]
+  },
+
+  "sekcja_5_strategia_budowy_skladu": {
+    "nr": 5,
+    "id": "strategia_budowy",
+    "nazwa": "STRATEGIA BUDOWY SKŁADU",
+    "pola_ogolne": [
+      { "id": "miejsca_na_kontrakty",   "label": "Ile miejsc na kontrakty?",      "typ": "text" },
+      { "id": "gracze_do_podpisania",   "label": "Ile graczy chcemy podpisać?",   "typ": "text" },
+      { "id": "budzet_place_calkowity", "label": "Budżet na płace (całkowity)",   "typ": "text" },
+      { "id": "budzet_nowi",            "label": "Budżet na nowych zawodników",   "typ": "text" }
+    ],
+    "strategia_finansowa": {
+      "label": "STRATEGIA FINANSOWA",
+      "opcje": [
+        { "id": "fin_teraz",    "label": "KONKURENCJA TU I TERAZ" },
+        { "id": "fin_mlody",    "label": "ROZWÓJ I MŁODY RDZEŃ"   },
+        { "id": "fin_mieszana", "label": "MIESZANA"               }
+      ]
+    },
+    "podejscie_do_kontraktow": {
+      "label": "PODEJŚCIE DO KONTRAKTÓW",
+      "opcje": [
+        { "id": "kontr_krotkie",  "label": "KRÓTKIE (1+1)"      },
+        { "id": "kontr_srednie",  "label": "ŚREDNIE (2-3 LATA)"  },
+        { "id": "kontr_dlugie",   "label": "DŁUGIE (4+ LATA)"    }
+      ]
+    },
+    "kluczowe_zalozenia": { "id": "kluczowe_zalozenia", "label": "Inne kluczowe założenia / uwagi", "typ": "textarea" }
+  },
+
+  "sekcja_6_plan_dzialania": {
+    "nr": 6,
+    "id": "plan_dzialania",
+    "nazwa": "PLAN DZIAŁANIA",
+    "kolejne_kroki": {
+      "label": "KOLEJNE KROKI",
+      "pola": [
+        { "id": "krok_1", "label": "1.", "typ": "text" },
+        { "id": "krok_2", "label": "2.", "typ": "text" },
+        { "id": "krok_3", "label": "3.", "typ": "text" },
+        { "id": "krok_4", "label": "4.", "typ": "text" },
+        { "id": "krok_5", "label": "5.", "typ": "text" },
+        { "id": "krok_6", "label": "6.", "typ": "text" }
+      ]
+    },
+    "kryteria_decyzyjne": {
+      "label": "KRYTERIA DECYZYJNE",
+      "pole": { "typ": "bullet_list", "n": 4 }
+    },
+    "kto_podejmuje_decyzje": { "id": "kto_decyzje", "label": "KTO PODEJMUJE DECYZJE?", "typ": "text" }
+  },
+
+  "notatki_dodatkowe": {
+    "id": "notatki_dodatkowe",
+    "pole": { "typ": "textarea" }
+  },
+
+  "powiazane_pliki_knowledge_base": [
+    "lineup_building.json    — 4 cechy składu, pozycja≠funkcja, diagnoza, versatility",
+    "player_archetypes.json  — 7 archetypów i 6 pełnych profili ról",
+    "position_profiles.json  — priorytety scoutingowe per pozycja (PG/SG/SF/PF/C)",
+    "projection_fit.json     — fit>talent, analiza środowiska, 5 profili red flag",
+    "red_flags.json          — 6 red flagów scoutingowych przy rekrutacji"
+  ],
+
+  "uwagi_projektowe": [
+    "Forma projektu jest całkowicie dowolna: Word, PowerPoint, Excel, Notion, Canva lub inna.",
+    "Najważniejsze: projekt pokazuje sposób myślenia, proces podejmowania decyzji i praktyczne użycie wiedzy z kursu.",
+    "To jest przykładowy materiał — służy jako inspiracja i drogowskaz, nie jako obligatoryjny szablon."
+  ]
+}

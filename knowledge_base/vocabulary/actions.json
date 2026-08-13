@@ -1,0 +1,21 @@
+{
+  "_comment": "Kody akcji z arkusza Excel meczu (arkusz KODY)",
+  "excel_sheets": ["META", "KODY", "GTK Gliwice", "UKS...", "LEGENDA"],
+  "columns": {
+    "A": "Kwarta",
+    "B": "Czas (sekundy)",
+    "C": "Kod akcji",
+    "D": "Strefa",
+    "E-I": "Skład piątki (wypełnione tylko przy zmianach)",
+    "J": "Timeout",
+    "K": "Kończy akcję",
+    "L": "Asysta",
+    "M": "Zbiórka OFF",
+    "N": "Zbiórka DEF",
+    "O": "Przechwyt",
+    "P": "Blok"
+  },
+  "zones": {
+    "_comment": "Strefy boiska do shot chart / timing_stats"
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "_source": "Zdjęcia slajdów z prezentacji/wizyty w akademii Žalgirisu Kowno (BC Žalgiris, Litwa) — sezon 2025/26. Materiał fotograficzny: slajdy o strukturze zespołów Žalgiris-2 i Žalgiris-3, infrastrukturze (housing, sports & wellness), profilach zawodników, wartościach klubu, technologii KINEXON, kalendarzu turniejów, filozofii youth system legacy oraz statystyce absolwentów.",
+  "_comment": "KOMPLETNY MODEL AKADEMII czołowego klubu europejskiego (Euroliga). W odróżnieniu od materiałów kursowych i teoretycznych w tej bazie, to jest OPIS DZIAŁAJĄCEGO SYSTEMU — konkretne liczby: ilu zawodników, ilu trenerów, jakie warunki bytowe, jakie turnieje, gdzie trafiają absolwenci. Najcenniejszy punkt odniesienia dla pytania „jak wygląda profesjonalna akademia od środka\". UWAGA: dane odczytane ze zdjęć slajdów — możliwe drobne nieścisłości w liczbach, warto zweryfikować przed cytowaniem.",
+  "_program_use": "Benchmark organizacyjny i wzorzec dla modułu rozwoju zawodnika. Bezpośrednio wdrożeniowy element: PROFIL ZAWODNIKA w formacie 3 mocne strony + 3 słabe strony + plan działania + okresowy przegląd — to gotowa, minimalna struktura karty rozwojowej, prostsza niż rozbudowane szablony w tej bazie i przez to realistyczna do prowadzenia.",
+
+  "kategoria": "Model akademii klubu europejskiego — organizacja i rozwój",
+
+  "skala_akademii": {
+    "_zrodlo": "Slajd KIDS (druga partia zdjęć)",
+    "dzieci_lacznie": "około 1 000",
+    "dziewczeta": 150,
+    "grup_koszykarskich": 56,
+    "zespoly_w_lidze": "15 zespołów gra w mistrzostwach „School Children League\" — 1. dywizja",
+    "_wnioski": [
+      "Ok. 1000 dzieci w 56 grupach daje średnio ~18 zawodników na grupę",
+      "150 dziewcząt to ~15% wszystkich ćwiczących — osobna, ale mniejszościowa ścieżka",
+      "Piramida jest bardzo szeroka u podstawy (1000 dzieci) i bardzo wąska u szczytu (2×14 w zespołach rozwojowych) — to ~3% przechodzących do struktury przedprofesjonalnej"
+    ]
+  },
+
+  "sztab_trenerski_akademii": {
+    "_zrodlo": "Slajd COACHES (druga partia zdjęć)",
+    "obsada": "25 trenerów (nie wszyscy na pełny etat), 2 instruktorów oraz PSYCHOLOG",
+    "etaty": "16,5 pełnego etatu obsadzone",
+    "definicja_pelnego_etatu": "36 godzin akademickich tygodniowo = 18 JEDNOSTEK TRENINGOWYCH",
+    "rok_pracy": "Trenerzy pracują 10 miesięcy w roku i otrzymują 2 MIESIĄCE PŁATNEGO URLOPU",
+    "rotacja_grup": {
+      "zasada": "Trenerzy ROTUJĄ GRUPY CO DWA LATA (nazwane wprost „periodization system\")",
+      "_dlaczego_to_wazne": "To jedno z najciekawszych rozwiązań organizacyjnych w całym materiale. Rotacja co 2 lata oznacza, że: (a) żaden trener nie „zawłaszcza\" rocznika, (b) zawodnik przez całą drogę przez akademię przechodzi przez kilku różnych trenerów, (c) wiedza metodyczna krąży w klubie zamiast osiadać w jednej głowie, (d) słabsze grupy nie są skazane na jednego trenera przez 10 lat.",
+      "_ryzyko": "Kosztem jest ciągłość relacji trener-zawodnik. Klub najwyraźniej uznał, że korzyść z krążenia kompetencji przeważa."
+    },
+    "_wnioski": [
+      "25 osób na ~1000 dzieci = ~40 dzieci na trenera (ale przy niepełnych etatach faktyczne obciążenie liczy się przez 16,5 FTE)",
+      "18 jednostek treningowych tygodniowo jako definicja pełnego etatu to twarda, sprawdzalna miara — rzadkość",
+      "PSYCHOLOG w stałym sztabie akademii, nie doraźnie",
+      "2 miesiące płatnego urlopu — warunek zatrudnienia sprzyjający utrzymaniu kadry"
+    ],
+    "_uwaga_o_danych": "Slajd zawierał także dane kontaktowe konkretnych trenerów (e-mail, telefon). Świadomie ich nie zapisuję — to dane osobowe osób trzecich i nie mają wartości metodycznej."
+  },
+
+  "struktura_zespolow_rozwojowych": {
+    "_idea": "Dwa zespoły seniorskie w strukturze klubu, tworzące drabinę między akademią a pierwszą drużyną.",
+    "zalgiris_2": {
+      "liga": "2. dywizja",
+      "cel": "FINAL STEP BEFORE THE PRO'S — ostatni krok przed profesjonalną koszykówką",
+      "zawodnikow": 14,
+      "sztab": "5 trenerów koszykówki + 1 trener przygotowania motorycznego (S&C) + 1 fizjoterapeuta",
+      "wiek": "17-21 lat",
+      "focus": "COMPETE + DEVELOP INDIVIDUAL READINESS — rywalizacja plus rozwijanie indywidualnej gotowości"
+    },
+    "zalgiris_3": {
+      "liga": "3. dywizja",
+      "cel": "ENTRY TO MENS BASKETBALL — wejście do koszykówki męskiej",
+      "zawodnikow": 14,
+      "sztab": "3 trenerów koszykówki + 1 S&C + 1 fizjoterapeuta",
+      "wiek": "15-19 lat",
+      "focus": "PHYSICAL & TACTICAL ADAPTATION — adaptacja fizyczna i taktyczna"
+    },
+    "_wnioski": [
+      "Proporcja sztabu jest uderzająca: 5 trenerów na 14 zawodników w Žalgiris-2 (1 trener na ~3 zawodników) i 3 na 14 w Žalgiris-3",
+      "Każdy poziom ma WŁASNEGO S&C i WŁASNEGO fizjoterapeutę — nie są współdzieleni",
+      "Przedziały wiekowe NACHODZĄ NA SIEBIE (15-19 i 17-21) — zawodnik nie przechodzi wyżej z powodu wieku, tylko z powodu gotowości",
+      "Cele obu zespołów są sformułowane w kategoriach PRZEJŚCIA, nie wyniku sportowego — „ostatni krok przed zawodowstwem\", „wejście do koszykówki męskiej\""
+    ]
+  },
+
+  "infrastruktura": {
+    "housing": {
+      "pokoje": "8 pokoi (4 dwuosobowe / 4 jednoosobowe)",
+      "wyposazenie": ["prywatna łazienka i prysznic", "w pełni wyposażona kuchnia", "wspólna jadalnia", "pralnia", "stół do tenisa stołowego", "piłkarzyki", "posiłki 2 razy dziennie"],
+      "_uwaga": "Element często pomijany w rozmowach o akademiach — internat z częścią wspólną i rozrywką (ping-pong, piłkarzyki) to świadoma inwestycja w integrację i życie poza treningiem."
+    },
+    "sports_and_wellness": {
+      "elementy": ["boisko do koszykówki dostępne 24/7", "w pełni wyposażona siłownia 24/7", "odnowiona szatnia", "prysznice", "sauna", "gabinet medyczny", "zimna i ciepła wanna (cold tub & hot tub)"],
+      "_kluczowe": "DOSTĘP 24/7 do boiska i siłowni — infrastrukturalne umożliwienie zasady „extra work\" z warstwy mentalnej. Deklaracja o dodatkowej pracy jest pusta, jeśli sala jest zamknięta."
+    }
+  },
+
+  "profil_zawodnika": {
+    "_zrodlo": "Slajd PLAYERS PROFILES",
+    "zasada": "Każdy zawodnik ma indywidualny profil.",
+    "struktura": "Zidentyfikowane TRZY kluczowe mocne strony i TRZY słabe strony, wraz ze szczegółowym planem, jak dalej rozwijać mocne strony i redukować słabe.",
+    "cykl": "Profil jest OKRESOWO PRZEGLĄDANY I KOREGOWANY na podstawie postępu oraz wyznaczonych celów.",
+    "_dlaczego_to_dziala": "Ograniczenie do 3+3 wymusza priorytetyzację — inaczej niż rozbudowane arkusze, które w praktyce nikt nie aktualizuje. Symetria (rozwijaj mocne ORAZ redukuj słabe) chroni przed dwiema pułapkami: szlifowaniem tylko atutów i pracą wyłącznie nad deficytami.",
+    "_program_use": "Minimalna, realistyczna struktura karty rozwojowej zawodnika: 3 mocne + 3 słabe + plan + data ostatniego przeglądu. Porównaj z player_development_plan_template.json (5 sekcji) i BONUS #1 z M7 (7 sekcji) — wersja Žalgirisu jest najprostsza i najłatwiejsza do utrzymania."
+  },
+
+  "wartosci_klubu": {
+    "pytanie": "WHAT DEFINES A ZALGIRIS PLAYER? (Co definiuje zawodnika Žalgirisu?)",
+    "zasady": [
+      "RESPECTS COACHES AND PEERS — szanuje trenerów i kolegów",
+      "SUPPORTS TEAMMATES — wspiera kolegów z drużyny",
+      "SACRIFICES FOR THE TEAM — poświęca się dla zespołu",
+      "ACCEPTS FEEDBACK — przyjmuje informację zwrotną",
+      "CONFIDENT BUT NOT ARROGANT — pewny siebie, ale nie arogancki"
+    ],
+    "_obserwacja": "Wszystkie pięć kryteriów dotyczy CHARAKTERU I RELACJI, ani jedno umiejętności koszykarskiej. Definicja „zawodnika Žalgirisu\" jest definicją postawy. Zbieżne z tezą „charakter > talent\" z intel_background.json.",
+    "_powiazanie_z_feedbackiem": "„Accepts feedback\" jest wymagane od zawodnika, a osobny slajd (patrz kultura_informacji_zwrotnej) nakłada obowiązek na trenera — obie strony mają zobowiązanie."
+  },
+
+  "kultura_informacji_zwrotnej": {
+    "_zrodlo": "Slajd BE MINDFUL WITH FEEDBACK",
+    "teza": "Informacja zwrotna ma budować kompetencję. Ale źle podana, robi coś dokładnie odwrotnego.",
+    "trzy_bledy": [
+      "Jeśli feedback dotyczy WYŁĄCZNIE tego, co złe — zawodnicy czują, że zawodzą",
+      "Jeśli standardy są NIEMOŻLIWE do spełnienia — przestają próbować",
+      "Jeśli błędy są KARANE zamiast traktowane jako nauka — zawodnicy grają bezpiecznie i przestają się rozwijać"
+    ],
+    "dobry_feedback": "Równoważy szczerość z nadzieją i zaufaniem. Pokazuje, co wymaga pracy, ale też co się poprawia. Sprawia, że zawodnik czuje się WYZWANY, ALE ZDOLNY — nie pokonany.",
+    "narzedzie": "TRY THE FEEDBACK SANDWICH (kanapka informacji zwrotnej: pozytyw → korekta → pozytyw)",
+    "_powiazanie": "Trzeci błąd („karanie błędów\") to dokładnie mechanizm, przed którym ostrzega IMOPEKSIS — gra „na świadomości\" zamiast na podświadomości, wywołana presją i strachem przed karą."
+  },
+
+  "technologia_kinexon": {
+    "partner": "KINEXON — system trackingu i zarządzania obciążeniem",
+    "deklarowane_funkcje": [
+      "Podnosi wydolność zawodnika i zarządzanie obciążeniem na nowy poziom",
+      "Technologia integruje się z treningiem, umożliwiając precyzyjne i szyte na miarę programy",
+      "Zwiększa wydajność przy jednoczesnym zapewnieniu długoterminowego zdrowia i trwałości kariery"
+    ],
+    "_uwaga": "To warstwa, której polskie kluby zwykle nie mają — por. scout_workflow_m6.json o realiach polskich („przewagę ma ten lepiej zorganizowany\", nie ten z lepszym sprzętem). Wartość tej informacji to znajomość poziomu odniesienia, nie wezwanie do zakupu."
+  },
+
+  "kalendarz_turniejow": {
+    "_znaczenie": "Pokazuje, jak akademia buduje ekspozycję międzynarodową rocznik po roczniku.",
+    "2023_24": ["Bahamas", "Future Stars", "Forli U16", "GBA", "Barcelona U16", "ANGT Dubai", "Quai54 Paris"],
+    "2024_25": ["Portofino", "ANGT Ulm", "Torrent U18", "L'Hospitalet U18", "Madcup Madrid U16", "ANGT Finals Abu Dhabi"],
+    "2025_26": ["Bassano U19", "L'Hospitalet U18", "ANGT Abu Dhabi", "Madcup Madrid U16", "ANGT Athens Finals (ze znakami zapytania — cel, nie pewnik)"],
+    "_obserwacje": [
+      "ANGT (Adidas Next Generation Tournament — turniej młodzieżowy Euroligi) jest osią kalendarza w każdym sezonie",
+      "Powtarzalność turniejów rok do roku (L'Hospitalet, Madcup Madrid) buduje porównywalność wyników między rocznikami",
+      "Zapis „ANGT Athens Finals???\" pokazuje, że kalendarz zawiera CEL sportowy, nie tylko harmonogram"
+    ]
+  },
+
+  "youth_system_legacy": {
+    "cytat_glowny": "TROPHIES FADE; TALENTS THRIVE — OUR LEGACY IS THEIR SUCCESS. (Trofea blakną; talenty rozkwitają — naszym dziedzictwem jest ich sukces.)",
+    "teza": "Podważanie stygmatu, że wszystko w sporcie mierzy się wynikiem — wygranymi lub przegranymi.",
+    "dwa_wymiary": "Legacy ekosystemu Žalgirisu ORAZ legacy indywidualne zawodnika",
+    "_znaczenie": "Deklaracja, że miarą akademii jest los absolwentów, a nie puchary młodzieżowe. Zbieżne z „Nie rozwijaj gwiazd, rozwijaj profesjonalistów\" z m7_org_structure_coach_analysis.json."
+  },
+
+  "absolwenci_rozmieszczenie": {
+    "_zrodlo": "Slajd graficzny z logotypami rozgrywek i liczbami",
+    "_zastrzezenie": "Liczby odczytane ze zdjęcia grafiki; przypisanie liczby do konkretnej kategorii jest w kilku miejscach niepewne. Traktować jako rząd wielkości, nie dane twarde.",
+    "odczytane_kategorie": {
+      "LKL (liga litewska)": 34,
+      "NCAA": 23,
+      "FIBA (rozgrywki FIBA)": 20,
+      "EuroLeague": 8,
+      "NBA": 7,
+      "EuroCup": 7,
+      "inne": "kilka kategorii po 7-8"
+    },
+    "_wniosek": "Najliczniejsza ścieżka to LIGA KRAJOWA (34), nie NBA (7). Akademia produkuje przede wszystkim zawodowców na rynek lokalny i uczelnie amerykańskie — to realistyczny obraz tego, czym jest sukces systemu młodzieżowego."
+  },
+
+  "wnioski_dla_wlasnej_pracy": [
+    "Sztab: 1 trener na ~3 zawodników w zespole przedprofesjonalnym — punkt odniesienia dla oceny własnych zasobów",
+    "Wiek nie decyduje o awansie: nachodzące przedziały (15-19 / 17-21) oznaczają promocję według gotowości",
+    "Profil 3 mocne + 3 słabe + plan + okresowy przegląd jako minimalna, wykonalna karta rozwojowa",
+    "Definicja zawodnika klubu przez POSTAWĘ, nie umiejętności",
+    "Dostęp 24/7 do infrastruktury jako warunek wiarygodności hasła „extra work\"",
+    "Miarą akademii jest los absolwentów, nie trofea młodzieżowe"
+  ],
+
+  "powiazania": {
+    "zalgiris_playing_principles.json": "PLIK SIOSTRZANY — warstwa koszykarska (zasady obrony, ataku, low post, spacing, mental approach) z tej samej prezentacji.",
+    "zalgiris_age_curriculum.json": "Curriculum U6-U18: cele per rocznik + rozkłady jednostki treningowej + model „game to game\" zależny od liczby dni między meczami.",
+    "zalgiris_coaching_culture.json": "Metodyka prowadzenia treningu (drill types: teaching/learning/competing), team rules, mental performance, outcome vs process goals, kongruencja trenera.",
+    "m7_org_structure_coach_analysis.json": "Struktura organizacyjna klubu, skauting w akademii, „Nie rozwijaj gwiazd, rozwijaj profesjonalistów\" — Žalgiris jest tego działającym przykładem.",
+    "player_development_plan_template.json": "Szablon planu rozwoju (5 sekcji) — model Žalgirisu jest jego zminimalizowaną, praktyczną wersją (3+3).",
+    "intel_background.json": "„Charakter > talent\" — pięć wartości Žalgirisu to definicja charakteru wymaganego od zawodnika.",
+    "book_imopeksis_hucinski.json": "Kultura informacji zwrotnej i ostrzeżenie przed karaniem błędów pokrywają się z metodą IMOPEKSIS (zawodnik pod presją gra na świadomości = niższa skuteczność).",
+    "book_development_curriculum_jozak.json": "Pięć przesłanek rozwoju, w tym „jakość szkolenia\" i „rywalizacja\" — Žalgiris pokazuje je w liczbach (sztab, dywizje, turnieje).",
+    "mp_u19_scouting_corpus.json": "Poziom U19 w Polsce jako punkt odniesienia wobec litewskiego modelu."
+  }
+}

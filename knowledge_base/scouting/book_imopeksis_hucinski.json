@@ -1,0 +1,167 @@
+{
+  "_weryfikacja_zewnetrzna": {
+    "sila_dowodu": "niszowe",
+    "krytyka": "Fundament teoretyczny metody bez niezależnej walidacji empirycznej w literaturze międzynarodowej — jeden autor, lokalny/komercyjny obieg. Gotowe arkusze pomiarowe są cenne WARSZTATOWO, ale ich trafność psychometryczna nie została niezależnie potwierdzona.",
+    "szczegoly_i_zrodla": "Patrz contested_claims.json → tezy.imopeksis_jako_system."
+  },
+  "_source": "Prof. Tadeusz Huciński — „Innowacyjna, psychospołeczna metoda wzajemnych oddziaływań, doskonalenia i kształcenia zawodnika oraz zespołu w koszykówce — IMOPEKSIS\" (113 stron, PDF: Psychospołeczne_czynniki_decydujące_o_sukcesie_szkoleniowo-sportowym_w_koszykówce.pdf)",
+  "_comment": "KSIĄŻKA ŹRÓDŁOWA metody IMOPEKSIS — teoretyczny i praktyczny fundament dla imopeksis_methodology.json (który opisuje warstwę plakatową/obozową). Ta pozycja zawiera pełny wykład 8 czynników psychospołecznych ORAZ — co najcenniejsze — gotowe, policzalne ARKUSZE POMIAROWE (rejestracja odczuć przed/po meczu, arkusz koncentracji uwagi wykonawczej per kwarta/minuta). Autor: prof. Tadeusz Huciński (ten sam, który jest współautorem planszy „Podstawy nauczania koszykówki\" — Akademia EPS).",
+  "_program_use": "NAJWYŻSZY POTENCJAŁ WDROŻENIOWY ze wszystkich materiałów mentalnych. Dwa arkusze nadają się do bezpośredniej implementacji jako moduły programu: (1) „Arkusz rejestracji odczuć psychospołecznych\" — ankieta 5 czynników przed i po meczu, wypełniana równolegle przez trenera i zawodnika, z automatycznym liczeniem SUMY i RÓŻNICY (rozjazd percepcji trener↔zawodnik); (2) „Arkusz techniczno-taktycznej koncentracji uwagi wykonawczej\" — rejestracja minuta-po-minucie w kwarcie z systemem premii za serie i mnożnikami za końcówki. Oba dają szeregi czasowe per zawodnik/mecz — idealne do wykresów w profilu zawodnika (jak istniejące switchMetric).",
+
+  "kategoria": "Psychologia sportu / metodyka — źródło podstawowe IMOPEKSIS",
+
+  "teza_ksiazki": {
+    "problem": "Polski system kształcenia trenerów (AWF) uczy nauczać elementów technicznych („dwutaktu\"), ale nie daje praktycznych narzędzi psychologii sportu i coachingu. Trenerzy pytają: jak motywować? jak koncentrować? jak zarządzać emocjami? jak budować pewność siebie?",
+    "odpowiedz": "IMOPEKSIS — spójna metoda scalająca czynniki psychospołeczne w jeden system wdrożeniowy.",
+    "zasada_pareto_wg_autora": "IMOPEKSIS to 20% całej wiedzy coacha, któremu powinien poświęcić 80% czasu i zaangażowania. (Uwaga: to inne ujęcie Pareto niż plansza obozowa 5×20% — tu chodzi o alokację czasu rozwoju TRENERA.)",
+    "obalany_mit": "Że cechy psychospołeczne są niezmienne („jest jaki jest i już się nie zmieni\"). Autor rozdziela: cechy WRODZONE i praktycznie niezmienialne (inteligencja, temperament, naturalne uzdolnienia — nie inwestuj w nie czasu szkoleniowego) od cech KSZTAŁTOWALNYCH (koncentracja, motywacja, zarządzanie emocjami, pewność siebie — tu jest pole pracy).",
+    "prognoza": "Rywalizacja między trenerami przeniesie się z dostępu do ćwiczeń (dziś powszechnie dostępne) na umiejętność budowania spójnego, zmotywowanego zespołu."
+  },
+
+  "wizja_coacha": {
+    "cytat_whitmore": "„Trener-instruktor patrzy na swoich podopiecznych pod kątem błędów technicznych. Coach patrzy pod kątem skuteczności, z jaką jego podopieczni korzystają ze swojego organizmu.\" (John Whitmore)",
+    "kim_jest_coach": "Ekspert od integrowania i tworzenia wizji, mediator, tłumacz — najlepszy ekspert od kwestii międzyludzkich.",
+    "jak_pracuje": [
+      "Nie przekazuje wiedzy, lecz ORGANIZUJE MYŚLENIE — przez zadawanie pytań, stawianie wyzwań, inspirowanie",
+      "Buduje atmosferę autorefleksji i autoanalizy",
+      "Uczy podejmowania decyzji, daje autonomię działania",
+      "Słucha ze zrozumieniem, pełni rolę usługową wobec członków drużyny",
+      "Przewiduje błędy i tak ustawia zadania, by zmniejszyć ich prawdopodobieństwo",
+      "Skupia się na pozytywnych osiągnięciach i wskazywaniu drogi do kolejnych sukcesów",
+      "Tworzy sytuację, w której zawodnicy SAMI chcą poprawiać swoje umiejętności"
+    ]
+  },
+
+  "spis_tresci": [
+    "1. Wstęp",
+    "2. Intencje w nauczaniu techniki i taktyki",
+    "3. Równowaga motywacyjna (motywacja wewnętrzna, jej kształtowanie, motywacja zewnętrzna)",
+    "4. Pewność siebie (i jej kształtowanie)",
+    "5. Zarządzanie emocjami (podstawowe grupy emocji, metodologia, zarządzanie sobą, mechanizmy obronne i ich wykrywanie, sytuacje trudne, sytuacje konfliktu)",
+    "6. Koncentracja (i jej kształtowanie)",
+    "7. Spójność grupy (i jej kształtowanie)",
+    "8. Intuicja (i jej kształtowanie)",
+    "9. Wybrane mechanizmy psychospołeczne w pracy trenera",
+    "10. Metodologia rejestracji i pomiaru czynników psychospołecznych",
+    "11. Bibliografia"
+  ],
+
+  "narzedzia_pomiarowe": {
+    "_uwaga": "To najcenniejsza, wdrożeniowa część książki — konkretne arkusze z punktacją.",
+
+    "arkusz_odczuc_psychospolecznych": {
+      "nazwa": "Arkusz rejestracji odczuć psychospołecznych coacha i zawodników",
+      "kiedy": "Dwa wypełnienia: PRZED meczem i PO meczu (Tabela 1 i Tabela 2)",
+      "kto_wypelnia": "Równolegle zawodnik ORAZ trener — o tym samym zawodniku",
+      "mierzone_czynniki": ["Motywacja", "Pewność siebie", "Emocje", "Koncentracja", "Spójność grupy"],
+      "kolumny_wynikowe": ["SUMA", "RÓŻNICA"],
+      "interpretacja_roznicy": "RÓŻNICA = rozjazd między samooceną zawodnika a oceną trenera. Duża różnica sygnalizuje brak zrozumienia/komunikacji — to sam w sobie wskaźnik diagnostyczny.",
+      "skala_wynikow": {
+        "21-25": "bardzo dobrze",
+        "16-20": "dobrze",
+        "11-15": "dostateczny +",
+        "6-10": "dostateczne",
+        "0-5": "niedostateczne"
+      },
+      "_uwaga_skala": "W oryginale pierwszy próg zapisano jako „5-21\" — to ewidentna literówka; przy 5 czynnikach i skali 1-5 maksimum wynosi 25, stąd zakres 21-25."
+    },
+
+    "arkusz_koncentracji_uwagi": {
+      "nazwa": "Arkusz rejestracji techniczno-taktycznej koncentracji uwagi wykonawczej wg T. Hucińskiego",
+      "struktura": "Wiersze = zawodnicy (numery), kolumny = minuty 1-10 w obrębie kwarty; osobne arkusze/sekcje na 4 kwarty + SUMA",
+      "zasady_punktacji": [
+        "1. Zapis pozytywny = +1 pkt",
+        "2. Jeżeli zapisy pozytywne utrzymują się pod rząd, dodaje się punkty dodatkowe (2 min pod rząd = +2 pkt, 3 min = +3 pkt itd.)",
+        "3. Ostatnie 3 minuty w kwarcie liczone są podwójnie (×2)",
+        "4. Ostatnie 3 minuty w ostatniej kwarcie liczone są potrójnie (×3)",
+        "5. Za wszystkie zmiany wyniku z -3 do +3 dodajemy 1 pkt"
+      ],
+      "idea": "Premiuje CIĄGŁOŚĆ skupienia (serie) oraz koncentrację w momentach decydujących (końcówki kwart, końcówka meczu, wyrównana walka w przedziale ±3 pkt).",
+      "przyklad_z_ksiazki": "I kwarta meczu chłopców 10-12 lat: suma zespołu 41 pkt; zawodnik #5 = 15 pkt (najwyższy), #4 = 8 pkt, #8 = 8 pkt, #14 = 7 pkt, #11 = 3 pkt. Sumy per minuta: 11, 4, 13, 3, 0, 1, 3, 6, 2.",
+      "_program_use": "Bardzo dobrze mapuje się na istniejący model danych: zapis per zawodnik × kwarta × minuta = ten sam granulat co timing_stats. Możliwy nowy wykres w profilu zawodnika (metryka 'KUW') oraz zbiorczy wskaźnik zespołu per mecz."
+    },
+
+    "metoda_linia_pionowa_pozioma": {
+      "nazwa": "Metoda oceny treningu i walki sportowej w aspekcie własnego „ja\" i „ego\"",
+      "A_linia_pionowa": "Opinia/ocena zawodnika w stosunku do KONCEPCJI trenera i OSOBY trenera (akceptacja) — skala 1-10. Musi istnieć też akceptacja taktyki trenera.",
+      "B_linia_pozioma": "Akceptacja wewnątrz zespołu, między zawodnikami (autor odsyła do Extended DISC). Mierzy się stosunek EGO do EMPATII (% własnego ego do empatii).",
+      "zasada_dualizmu": "Zawodnik oddaje swoje „ego\" zespołowi, by w następnym kroku uzyskać WYŻSZY poziom własnego ego — ale z uznaniem zespołu (dualizm).",
+      "regula_skladu": "W każdej piątce musi być przewaga zawodników empatycznych nad egoistycznymi (proporcja 2-3). Wszystkie zmiany prowadzone w podobnym stosunku — „dualizm zespołowy\".",
+      "C_wypadkowa": "W pionie przewaga akceptacji, w poziomie przewaga empatii. Wartość dodatkowa powstaje, gdy i w A, i w B jest 3-2. Szukane odczucie: rezonans, przyjemność, satysfakcja.",
+      "D_obszar_techniczno_taktyczny": "Wybrane ćwiczenia i ich klasyfikacja, zbieżne z koncepcją gry i UZNANE PRZEZ ZESPÓŁ.",
+      "trzy_oceny_zespolu": ["Obserwacja społeczna", "Koncepcja gry — zadania meczowe", "Realizacja indywidualnych zadań technicznych"],
+      "_program_use": "Reguła składu (przewaga empatów 2-3 w piątce) to potencjalny walidator dla modułu lineup_stats / budowania piątek."
+    }
+  },
+
+  "mechanizmy_psychospoleczne_w_pracy_trenera": {
+    "hierarchia_i_chronologia": {
+      "hierarchia": "Porządek wynikający z ZAKRESU ODPOWIEDZIALNOŚCI graczy. Najlepiej gdy grupa sama ją wykształci wg mechanizmu: „moja wartość w zespole jest taka, jak postrzegają mnie inni zawodnicy\". Rola trenera = stworzyć środowisko umożliwiające powstanie ról o zdrowych podstawach.",
+      "chronologia": "Porządek wyznaczany przez długość stażu, osiągnięcia i doświadczenie. Przejaw dobrej chronologii: szacunek dla weteranów + zrozumienie młodych, że ciężka praca dziś zaprocentuje minutami w przyszłości.",
+      "zasada": "Oba porządki należy jasno określić i ODDZIELIĆ OD SIEBIE. Gdy są nieuściślone, w zespole pojawia się niezrozumienie, irytacja, złość i zniechęcenie."
+    },
+    "hierarchia_celow_druzyny": {
+      "1_cel_sportowy": "np. awans do ligi zawodowej",
+      "2_cele_szkoleniowe": [
+        "Cel szkoleniowy indywidualny",
+        "Cele szkoleniowe grupowe — ze względu na pozycję",
+        "Cele szkoleniowe grupowe — ze względu na grupę pozycji",
+        "Cele szkoleniowe grupowe — ze względu na skuteczność w sytuacjach ekstremalnych"
+      ],
+      "przyklad": "Start Gdynia — cel sportowy: awans do ligi zawodowej; cele szkoleniowe: selekcja zawodników podstawowych (z potencjałem na ligę zawodową) i selekcja/prowadzenie zawodników rezerwowych."
+    },
+    "praca_z_rezerwowymi": {
+      "teza": "Selekcję do drużyny ZACZYNA SIĘ od tych, którzy zawsze siedzą na ławce — to powinni być najbardziej psychospołecznie dojrzali zawodnicy.",
+      "zasady": [
+        "Trening indywidualny z rezerwowymi powinien prowadzić TRENER GŁÓWNY, a nie asystenci — wtedy tworzy się chemia",
+        "Rezerwowy musi zaakceptować swoją rolę, ale z GWARANCJĄ: jak będzie lepszy od podstawowego, to będzie grał",
+        "Gdy przegra rywalizację — jego wartość zostanie wykorzystana w inny sposób dla zespołu",
+        "Rezerwowi pełnią rolę sparingpartnerów i muszą stale mobilizować pierwszą piątkę do najwyższego wysiłku",
+        "Odpowiednie ustawianie par do rywalizacji: I etap w treningu, II etap podczas meczu",
+        "Muszą mieć pewność wynagrodzenia za wejście w projekt i realizację stawianych celów"
+      ],
+      "efekt": "Gdy każdy — od liderów przez zawodników zadaniowych po głębokich rezerwowych — zna i akceptuje swoją rolę oraz miejsce w hierarchii i chronologii, tworzy się szacunek do trenera."
+    },
+    "transition": "Przejście od jednego zadania do kolejnego uznawane jest we współczesnej koszykówce za czynnik decydujący o sukcesie. Poziom sprawności transition zależy od zarządzania mechanizmami psychospołecznymi — np. skuteczne przeniesienie koncentracji z przegranego 1na1 w obronie na kolejne zadanie.",
+    "obrona_strefowa_psychospolecznie": {
+      "idea": "Strefa wymusza u przeciwnika potencjał i umiejętności ZESPOŁOWE; podstawą jest rozbicie spójności grupy atakującej.",
+      "mechanizm": "W obronie indywidualnej kluczowe jest 1. i 2. podanie; w strefie — 3., 4. i 5. podanie. Broniąc strefą (Match Up) uzyskuje się kontrolę rytmu gry i przewagę taktyczną, wymuszając przypadkowe rozwiązania rzutowe.",
+      "manipulacja": "Strefę można ustawić tak, by piłka trafiała do lidera punktowego dopiero po 4-6 podaniu (np. kryjąc 3-5 podanie twarzą w twarz) — wymusza to niedoczas albo kieruje piłkę do zawodnika wybranego przez broniących.",
+      "efekt_psychologiczny": "Zawodnik otrzymujący piłkę późno często nie jest w rytmie, czuje się zmęczony lub jest pod presją. Im większa presja i odpowiedzialność, tym większe prawdopodobieństwo, że zagra NA ŚWIADOMOŚCI, a nie na podświadomości — czyli z niższą skutecznością."
+    }
+  },
+
+  "planowanie_sezonu_rundy": {
+    "idea": "Planowanie przygotowań wg rund określających priorytety. Pierwsze trzy rundy to okres wprowadzający i przygotowawczy; dopiero potem runda startowa.",
+    "runda_0": "Okres wprowadzający — makrocykl przygotowania zespołu pod kątem techniczno-taktyczno-psychospołecznym",
+    "runda_I": "Pierwszy okres przygotowawczy",
+    "runda_II": "Drugi okres przygotowawczy, bezpośrednie przygotowanie startowe",
+    "runda_III": "Runda startowa (playoff)",
+    "zasada_ignorowania_przeciwnika": "W rundach 0-II NIE interesuje nas, co gra przeciwnik. Świadomie wyrzuca się zmienną gry przeciwnika, aby zwiększyć koncentrację na nauczaniu WŁASNEJ koncepcji gry. Dopiero w rundzie startowej wprowadza się elementy „pod przeciwnika\" — i powinny one wypływać z wiedzy ZAWODNIKÓW, a nie trenera (zawodnicy sami oceniają, co muszą dodać).",
+    "prace_w_rundach_przygotowawczych": [
+      "1) Diagnoza umiejętności technicznych",
+      "2) Prognoza koncepcji taktycznej w stosunku do umiejętności technicznych",
+      "3) Diagnoza i prognoza cech psychospołecznych",
+      "4) Ocena treningu i walki sportowej w aspekcie własnego „ja\" i „ego\" oraz akceptacji i komunikacji (linia pozioma i pionowa)"
+    ],
+    "zadania_per_runda": {
+      "indywidualne": ["Obrona (nie przegranie 1na1, obrona ścięcia, obrona centra)", "Szybki atak (wyrzut, bieganie)", "Atak pozycyjny (trójkąty, zbiórka w ataku i piłki niczyje)"],
+      "zespolowe": ["Ilość szybkich ataków i ich skuteczność", "Zbiórki w ataku (ilość rzutów i procent zbiórek)", "Obrona (ilość obron)"]
+    },
+    "trzy_normy": {
+      "norma_indywidualna_i_zespolowa": "Prognozuje, jaki wynik powinien być osiągnięty w danej rundzie",
+      "norma_zadaniowa": "ŚWIADOMIE NIŻSZA niż oczekiwania trenera — aby zawodnik miał przyjemność z wykonania zadania i wziął odpowiedzialność na siebie od trenera. Zasada: „zawodnik ma mieć przyjemność z wykonanego zadania, a nie trener\".",
+      "norma_prognostyczna": "Prognoza postępu indywidualnego i zespołowego"
+    },
+    "_program_use": "Zaniżona „norma zadaniowa\" to ciekawa reguła dla modułu celów zawodnika — cel domyślny powinien być ustawiany PONIŻEJ oczekiwań, nie powyżej."
+  },
+
+  "powiazania": {
+    "imopeksis_methodology.json": "Ta książka jest ŹRÓDŁEM TEORETYCZNYM dla imopeksis_methodology.json (który opisuje warstwę plakatową, obozową i Dziennik Młodych Talentów). Uwaga terminologiczna: na okładce książki ostatnie S w akronimie rozwinięte jest jako SUKCES, na planszy obozowej jako SKUTECZNOŚĆ — obie formy występują w materiałach autora.",
+    "disc_profile_assessment.json": "Autor wprost odsyła do Extended DISC przy ocenie linii poziomej (akceptacja wewnątrz zespołu, ego vs empatia).",
+    "book_olimpizm_gotowosc_startowa.json": "Ten sam autor wiodący (Huciński) — monografia akademicka rozwijająca te same wątki (stan przedstartowy, koncentracja, spójność, rola trenera).",
+    "book_abc_osobowosci_disc.json": "Model DISC jako narzędzie diagnozy relacji w zespole.",
+    "teaching_fundamentals.json": "Rysunek 17 książki dotyczy metodyki nauczania umiejętności technicznych — wspólna oś z konspektami Libicha.",
+    "finxs_mental_assessment.json": "Alternatywne/komplementarne narzędzie psychometryczne (18 kompetencji) wobec 5-czynnikowego arkusza Hucińskiego."
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "_source": "Next Draft Foundation — Moduł 6 (transkrypty video, lektor: Rafał Jóć, International Scout Denver Nuggets)",
+  "_comment": "Unikalne insighty z transkryptów — liczby, cytaty, mechanizmy NIE zawarte w slajdach",
+
+  "kluczowa_liczba": {
+    "oglądanie_meczow": "30–40% pracy scouta",
+    "reszta": "zarządzanie informacją — filtrowanie, system, organizacja, komunikacja",
+    "cytat": "Wielu osób utożsamia sobie scouting z oglądaniem meczów, ale oglądanie meczów to jest może 30–40% tej pracy."
+  },
+
+  "skala_denver_nuggets": {
+    "front_office_total": "~40 osób",
+    "scouting_department": "~20 osób",
+    "komentarz": "Nie da się przenieść 1:1 na polskie warunki, ale trzeba się inspirować, uczyć, motywować na przykładzie najlepszych."
+  },
+
+  "nba_vs_europa_filozofia_rekrutacji": {
+    "nba_szuka": [
+      "upside — co gracz może osiągnąć",
+      "development — możliwości rozwoju",
+      "warunki fizyczne",
+      "ścieżka kariery (głównie draft)",
+      "talent jako decydujący czynnik"
+    ],
+    "europa_szuka": [
+      "funkcjonalność — czy działa teraz",
+      "gotowość do grania",
+      "wysokie IQ",
+      "adaptacja do nowego systemu",
+      "stabilność",
+      "fit do systemu"
+    ],
+    "kluczowa_roznica": {
+      "nba": "Brak relegacji → mniejsza desperacja, więcej miejsca na ryzyko (draft talent)",
+      "europa": "Relegacja → wyższy margines presji, mniejszy margines błędu → preferuje sprawdzonych, gotowych"
+    }
+  },
+
+  "dlaczego_przecietny_mecz": {
+    "zasada": "Oglądam najlepszy, najgorszy i przeciętny mecz zawodnika.",
+    "logika": {
+      "najlepszy": "pokazuje sufit — co gracz może osiągnąć",
+      "najgorszy": "mówi wiele o charakterze",
+      "przecietny": "TO CO NAJPEWNIEJ Z TEGO GRACZA UZYSKAM — realistyczna baza oczekiwań"
+    },
+    "cytat": "Chcę zobaczyć gracza w różnym kontekście — jego najlepszy, najgorszy mecz, ale też przeciętny, bo przeciętny to będzie to, co ja najpewniej z tego gracza uzyskam."
+  },
+
+  "dystans_po_live_scouting": {
+    "zasada": "Po ewaluacji na żywo: 2–3 dni, czasami tydzień dystansu przed finalną oceną.",
+    "dlaczego": "Emocje z obserwacji live mogą wypaczać obiektywną ocenę. Dystans pozwala wrócić do wideo z chłodną głową."
+  },
+
+  "cotygodniowy_rytm_rafala": {
+    "poniedzialek": "Box score z wszystkich lig → wyciąganie meczów do obejrzenia na dany tydzień",
+    "cel": "Systematyczne filtrowanie rynku bez przypadkowości — każdy mecz ma uzasadnienie"
+  },
+
+  "ile_meczow_widzialem": {
+    "zasada": "W bazie scoutingowej powinna być kolumna: ile meczów tego gracza zobaczyłem.",
+    "dlaczego": "Margines błędu — jeśli to są tylko highlights lub pojedynczy mecz, ocena jest niepewna. Pełen obraz = minimalizacja ryzyka."
+  },
+
+  "problem_instytucjonalny": {
+    "problem": "Dyrektor sportowy, scout, trener mogą odejść z klubu i zabrać ze sobą większość know-how i wiedzy.",
+    "rozwiazanie": "Baza scoutingowa — wiedza musi zostawać w klubie, nie w głowie pojedynczej osoby.",
+    "cytat": "Ten pracownik i ta wiedza powinny zostawać w klubie."
+  },
+
+  "listy_na_zadanie": {
+    "zasada": "O każdej porze dnia i nocy muszę mieć dostęp do list i być gotowy odpowiedzieć.",
+    "przyklad": "'Rafał, jakie są najlepsze defensive wings na poziomie BCL?' — mam odpowiedź od razu.",
+    "typy_list": [
+      "topowe prospekty NBA/kraj",
+      "targety pod drużynę (pozycja + rola + budżet)",
+      "sleeperzy — gracze z dużym potencjałem śledzone 2–3 sezony",
+      "wolni agenci",
+      "lista awaryjna (kontuzje, pilne transfery)"
+    ],
+    "o_sleeperach": "To jest największa wartość w scoutingu — obserwacja gracza przez 2–3 sezony. Nasza baza i nasze listy powinny ewoluować razem z nami."
+  },
+
+  "roi_wyjazdu_scoutingowego": {
+    "kluczowe_pytanie": "Czy ten wyjazd da mi przewagę informacyjną?",
+    "kontrast": "2 dni podróży na jeden mecz VS 4–5 meczów video w tym samym czasie — co daje więcej?",
+    "kiedy_warto_jechac": "Kiedy live scouting daje informacje których video nie pokaże: mowa ciała, koncentracja, wpływ na grę, networking po meczu.",
+    "cytat": "Jako scout NBA mógłbym spokojnie znaleźć pracę w biurze podróży — znaczący czas pochłania budowanie grafika, szukanie połączeń, maksymalne wykorzystanie każdego wyjazdu."
+  },
+
+  "wartosc_scouta_widoczna_przez_baze": {
+    "zasada": "Wartość i jakość scouta jest widoczna i można ją ocenić przez bazę danych jaką ma.",
+    "aplikacja": "Idziesz na rozmowę o pracę — najlepiej się pokazać przez bazę scoutingową.",
+    "portfolio": "Baza danych = portfolio scouta."
+  },
+
+  "nba_live_tracking_vs_europa": {
+    "nba_ma": "Modele predykcji + live tracking data (player movement w czasie rzeczywistym) + Second Spectrum — to poziom zaawansowania, który mówi co się wydarzy",
+    "europa": "Brak live tracking → więcej interpretacji danych, większe znaczenie kontekstu ligi i roli",
+    "implikacja": "W Europie analytics mają większe znaczenie dla scoutingu graczy i lineupy, ale nie zastąpią live scoutingu i video tak jak w NBA."
+  },
+
+  "kultura_dialogu_w_polskich_klubach": {
+    "czego_brakuje": "W Polsce jest bardzo mało kultury dialogu, rozmowy, organizacji spotkań scoutingowych.",
+    "co_budowac": [
+      "regularne spotkania scoutingowe (agenda, protokół)",
+      "kultura wspólnego celu — każda rola jest istotna",
+      "komunikacja trener↔scout↔analityk↔DS"
+    ],
+    "cytat": "Dlatego chcę wam pokazać konkretne przykłady jak z trenerami rozmawiać, jak rozmawiać z prezesem, jak rozmawiać z agentem, jak tworzyć w ogóle spotkania scoutingowe."
+  }
+}

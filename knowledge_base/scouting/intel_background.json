@@ -1,0 +1,1587 @@
+{
+  "_source": "Next Draft Foundation — Moduł 4",
+  "_comment": "Intel, background i research osobowości — niewidoczna warstwa scoutingu",
+  "_program_use": "Formularz intel scouta, sekcja CHARACTER w raporcie, pytania do środowiska zawodnika",
+
+  "wstep_m4": {
+    "_source": "Next Draft Foundation — Moduł 4, tekst wprowadzający",
+    "kontekst": "Sama ocena gry zawodnika często nie wystarcza. Bardzo duża część decyzji klubowych opiera się na informacjach o charakterze, etyce pracy, mentalności, relacjach z otoczeniem i funkcjonowaniu poza boiskiem.",
+    "czego_sie_dowiesz": [
+      "Czym jest intel i background w pracy skauta",
+      "Skąd pozyskiwać wartościowe informacje",
+      "Jak rozmawiać z trenerami, zawodnikami, agentami i osobami z otoczenia gracza",
+      "Jak odróżniać fakty od opinii",
+      "Jak weryfikować informacje z wielu źródeł",
+      "Jak intel wpływa na decyzje transferowe, draftowe i kontraktowe"
+    ],
+    "cwiczenie_intro": "Podczas oglądania meczu wybierz jednego zawodnika i przez kilka minut obserwuj wyłącznie jego zachowania poza statystykami. Nie oceniamy talentu ani produkcji — skupiamy się na Body Language / Communication / Emotional Reactions / Effort / Reakcjach po błędzie. To właśnie takie ćwiczenie wykonują scauci podczas pierwszych obserwacji i które pozwala zauważyć rzeczy niewidoczne w statystykach."
+  },
+
+  "networking_i_dyskrecja": {
+    "_source": "Next Draft Foundation — Moduł 4, Q&A Rafał Jujcz",
+    "zasada": "Otwartość rozmówców zależy od relacji i zaufania. Networking to ogromna część pracy skauta.",
+    "jak_budowac_relacje": [
+      "Regularnie odwiedzaj kluby",
+      "Utrzymuj kontakty z trenerami, agentami, zawodnikami i ludźmi wokół organizacji",
+      "Relacje buduje się latami — nie można ich skrócić"
+    ],
+    "dlaczego_dyskrecja_wazna": "Większość osób nie opowiada ważnych rzeczy pierwszej lepszej osobie. Kiedy ludzie wiedzą, kim jesteś, że potrafisz zachować dyskrecję i że zależy Ci na zrozumieniu sytuacji — a nie na szukaniu sensacji — rozmowy wyglądają zupełnie inaczej.",
+    "ryzyko_stronniczosci": "Zdarza się, że ktoś przedstawia zawodnika w niesprawiedliwy sposób lub próbuje przepchnąć własną narrację. Dlatego praktycznie nigdy nie opieramy się na jednym źródle.",
+    "cel_intelu": "Celem nie jest zebranie opinii. Celem jest zrozumienie prawdy. Im ważniejsza decyzja, tym więcej źródeł próbujemy zweryfikować."
+  },
+
+  "kontekst_zachowania_zawodnika": {
+    "_source": "Next Draft Foundation — Moduł 4, Q&A Rafał Jujcz",
+    "zasada": "Jednym z głównych zadań skauta jest poznanie pełnego kontekstu i zrozumienie DLACZEGO zawodnik zachowuje się w określony sposób.",
+    "pytania_diagnostyczne": [
+      "Czy to kwestia charakteru?",
+      "Czy wcześniejszych doświadczeń?",
+      "Czy środowiska rodzinnego?",
+      "Czy złych relacji z trenerami?",
+      "Czy po prostu braku dojrzałości?"
+    ],
+    "wazne": "Bardzo często odpowiedź nie jest czarno-biała. Kontekst definiuje ryzyko — nie samo zachowanie.",
+    "perspektywa_gm_vs_mlodziezowa": {
+      "gm_profesjonalny": "Ocenia potencjał zmiany I ryzyko. Podejmuje decyzje dotyczące inwestowania klubowych pieniędzy i budowania drużyny na sezon.",
+      "trener_mlodziezowy": "Zadaniem nie jest znalezienie gotowego zawodnika, lecz pomoc zawodnikowi stać się kimś, kim jeszcze nie jest. Znacznie większa odpowiedzialność za środowisko i rozwój.",
+      "wniosek": "Te same informacje mogą prowadzić do różnych decyzji w zależności od kontekstu i celu. GM budujący team na przyszły sezon może dojść do innych wniosków niż trener pracujący z zawodnikiem przez kolejne 5 lat."
+    }
+  },
+
+  "wstep": {
+    "temat_modulu": "Intel, background i jak robić research na temat osobowości zawodnika",
+    "najwiekszy_blad_poczatkujacych": {
+      "poczatkujacy_scout": [
+        "Ogląda głównie talent",
+        "Skupia się na skillu i statystykach",
+        "Ocenia 'co zawodnik robi'"
+      ],
+      "profesjonalna_organizacja_analizuje_takze": [
+        "Charakter",
+        "Codzienne nawyki",
+        "Coachability",
+        "Środowisko",
+        "Emocjonalna stabilność",
+        "Wiarygodność"
+      ],
+      "wynik": "Szersza perspektywa → lepsze decyzje → mniejsze ryzyko → większy sukces organizacji"
+    }
+  },
+
+  "background_vs_intel": {
+    "background": {
+      "definicja": "Kim zawodnik jest poza boiskiem — jego historia i otoczenie.",
+      "co_obejmuje": [
+        "Rodzina",
+        "Środowisko",
+        "Historia rozwoju",
+        "Codzienne nawyki",
+        "Reakcje na adversity",
+        "Sposób funkcjonowania poza boiskiem"
+      ]
+    },
+    "intel": {
+      "definicja": "Informacje, których nie widać w box score, highlights ani statystykach.",
+      "czego_nie_pokazuje_boxscore": [
+        "Prawdziwego charakteru",
+        "Jak funkcjonuje w środowisku",
+        "Jak reaguje na krytykę",
+        "Czy przychodzi na własną inicjatywę do hali",
+        "Jak wpływa na kulturę drużyny"
+      ]
+    },
+    "korzysc": "Pełniejszy obraz zawodnika → lepsze decyzje transferowe → mniejsze ryzyko → strategia oparta na faktach"
+  },
+
+  "dlaczego_intel_sie_oplaca": {
+    "kluczowy_wniosek": "Najdroższe błędy transferowe często nie są błędami oceny talentu — są błędami oceny charakteru.",
+    "zle_ocenione_cechy": [
+      "Professionalism",
+      "Ego",
+      "Coachability",
+      "Emotional profile"
+    ],
+    "co_moze_kosztowac_organizacje": [
+      "Pieniądze",
+      "Kulturę",
+      "Rozwój młodych zawodników",
+      "Wyniki sportowe"
+    ],
+    "bad_hire_kosztuje": ["Money", "Culture", "Results"],
+    "right_person_daje": ["Culture ✓", "Development ✓", "Success ✓"],
+    "korzysc_z_inwestycji_w_intel": [
+      "Mniejsze ryzyko, większe szanse na sukces",
+      "Lepsza ocena całego profilu zawodnika",
+      "Silniejsza organizacja",
+      "Lepsze wyniki teraz i w przyszłości"
+    ]
+  },
+
+  "scouting_report_intel_kategorie": {
+    "_comment": "Kategorie do oceny w sekcji Intel Raportu — każda z gwiazdkami 1-5",
+    "kategorie": [
+      { "id": "talent", "nazwa": "TALENT" },
+      { "id": "character", "nazwa": "CHARACTER" },
+      { "id": "work_ethic", "nazwa": "WORK ETHIC" },
+      { "id": "coachability", "nazwa": "COACHABILITY" },
+      { "id": "emotional_profile", "nazwa": "EMOTIONAL PROFILE" },
+      { "id": "leadership", "nazwa": "LEADERSHIP" }
+    ],
+    "final_assessment": "Ocena końcowa po zebraniu wszystkich danych intel"
+  },
+
+  "nba_scouting_questionnaire": {
+    "_comment": "Przykładowy zestaw pytań klubu NBA do środowiska zawodnika (trenerzy, asystenci, współzawodnicy)",
+    "cel": [
+      "Poznać prawdziwy charakter zawodnika",
+      "Ocenić ryzyko pozaboiskowe",
+      "Zrozumieć, jak funkcjonuje w środowisku",
+      "Sprawdzić jego dojrzałość i gotowość na wyższy poziom"
+    ],
+    "pytania": [
+      { "nr": 1,  "pytanie_en": "Tell me about his family." },
+      { "nr": 2,  "pytanie_en": "Has he ever been in any major trouble with the law?" },
+      { "nr": 3,  "pytanie_en": "Is he a coach killer behind the scenes?" },
+      { "nr": 4,  "pytanie_en": "Does he come in the gym on his own time or do you have to make him?" },
+      { "nr": 5,  "pytanie_en": "Has he ever been in any major trouble on campus?" },
+      { "nr": 6,  "pytanie_en": "Is he a high character kid?" },
+      { "nr": 7,  "pytanie_en": "Is he a good locker room guy?" },
+      { "nr": 8,  "pytanie_en": "When he walks in the gym, does everyone pick up their game?" },
+      { "nr": 9,  "pytanie_en": "Is he vocal on the floor?" },
+      { "nr": 10, "pytanie_en": "Do you think he's a leader?" },
+      { "nr": 11, "pytanie_en": "Tell me a funny story about him." },
+      { "nr": 12, "pytanie_en": "If we paid him millions of dollars, could we count on him to play through pain?" },
+      { "nr": 13, "pytanie_en": "Can you trust him behind the scenes to have coaches back when adversity hits?" },
+      { "nr": 14, "pytanie_en": "During the season, did he have 1 foot in and 1 foot out or both feet in?" },
+      { "nr": 15, "pytanie_en": "How does he take criticism?" }
+    ],
+    "uwaga": "To są przykładowe pytania — organizacje zadają setki pytań. Cel: dotrzeć do informacji, których nie da się zobaczyć na boisku.",
+    "do_kogo_pytania": "Trener, asystent, AAU coach, współzawodnik, osoba z środowiska (szatnia, kampus)"
+  },
+
+  "rodzina_i_srodowisko": {
+    "_source": "Next Draft Foundation — Moduł 4",
+    "zasada": "Środowisko kształtuje rozwój. Zrozum kontekst, oceń zawodnika.",
+    "pytania_kluczowe": [
+      "Kto ma wpływ na zawodnika?",
+      "Czy środowisko wspiera rozwój?",
+      "Czy generuje presję lub chaos?",
+      "Czy zawodnik ma stabilność?",
+      "Czy otoczenie pomaga czy przeszkadza?"
+    ],
+    "dwa_typy_srodowiska": {
+      "wsparcie": "Rodzina i otoczenie dają stabilność i motywację — zawodnik może skupić się na grze",
+      "przeszkody": "Środowisko generuje chaos, presję lub złe wpływy — ryzyko dla rozwoju i koncentracji"
+    },
+    "co_daje_analiza": [
+      "Pełniejszy obraz człowieka, nie tylko sportowca",
+      "Lepsze decyzje transferowe",
+      "Mniejsze ryzyko, większa przewaga",
+      "Strategia oparta na faktach"
+    ]
+  },
+
+  "historia_rozwoju": {
+    "_source": "Next Draft Foundation — Moduł 4",
+    "zasada": "Zrozum przeszłość, przewidź przyszłość. Każda historia to coś więcej niż statystyki.",
+    "co_scout_analizuje": [
+      "Drogę rozwoju",
+      "Zmiany klubów",
+      "Reakcje po problemach",
+      "Reakcje po sukcesie",
+      "Adaptację do nowych sytuacji"
+    ],
+    "kluczowe_pytanie": "Czy zawodnik rozwijał się MIMO adversity?",
+    "przykladowa_oś_czasu": [
+      { "wiek": "14 LAT", "zdarzenie": "Pierwszy klub. Dużo potencjału, brak pewności siebie." },
+      { "wiek": "16 LAT", "zdarzenie": "Zmiana klubu. Nowe środowisko, większa konkurencja." },
+      { "wiek": "17 LAT", "zdarzenie": "Kontuzja. Ciężki okres, pracuje nad sobą poza boiskiem." },
+      { "wiek": "18 LAT", "zdarzenie": "Duży sukces. Zachowuje pokorę, daje credit zespołowi." },
+      { "wiek": "19 LAT", "zdarzenie": "Nowe wyzwania. Szybko się adaptuje, bierze odpowiedzialność." }
+    ],
+    "cechy_widoczne_w_historii": ["Dojrzałość", "Wzrost", "Adaptacja", "Nauka", "Wytrwałość"],
+    "co_daje_analiza": [
+      "Zrozumienie drogi rozwoju",
+      "Identyfikacja wzorców zachowań",
+      "Ocena reakcji na trudności",
+      "Sprawdzenie adaptacji do zmian",
+      "Lepsze przewidywanie przyszłości"
+    ]
+  },
+
+  "relacje_z_trenerami_i_druzyna": {
+    "_source": "Next Draft Foundation — Moduł 4",
+    "zasada": "Charakter nie kłamie. Relacje mówią najwięcej.",
+    "organizacje_pytaja": [
+      "Czy trener chce z nim pracować?",
+      "Czy pomaga środowisku?",
+      "Czy akceptuje rolę?",
+      "Jak wpływa na szatnię?",
+      "Czy poprawia funkcjonowanie zespołu?"
+    ],
+    "pozytywne_sygnaly": [
+      "Trener chce z nim pracować",
+      "Pomaga środowisku",
+      "Akceptuje rolę",
+      "Pozytywnie wpływa na szatnię",
+      "Poprawia funkcjonowanie zespołu"
+    ],
+    "lancuch_wartosci": "Relacje budują zaufanie → zaufanie buduje kulturę → kultura buduje zwycięzców → zwycięzcy budują organizację"
+  },
+
+  "coachability": {
+    "_source": "Next Draft Foundation — Moduł 4",
+    "zasada": "Charakter widać w gotowości do nauki.",
+    "cytat": "Na talencie wygrasz mecz, na coachability wygrasz sezon.",
+    "kluczowe_pytanie": "Czy zawodnik CHCE być coached?",
+    "co_to_znaczy": [
+      "Reakcja na feedback",
+      "Willingness to learn",
+      "Adaptacja",
+      "Ego control",
+      "Granie w systemie",
+      "Otwartość na rozwój"
+    ],
+    "jak_wyglada_w_praktyce": [
+      "Otwarty na krytykę",
+      "Chce się doskonalić",
+      "Szybko wdraża uwagi",
+      "Stawia zespół ponad sobą",
+      "Nie szuka wymówek"
+    ]
+  },
+
+  "body_language": {
+    "_source": "Next Draft Foundation — Moduł 4",
+    "zasada": "Ciało nie kłamie. Obserwuj cały mecz, nie tylko akcje.",
+    "co_body_language_zdradza": [
+      "Poziom frustracji",
+      "Ego",
+      "Emocjonalną stabilność",
+      "Relacje z zespołem",
+      "Reakcję na adversity"
+    ],
+    "co_scout_obserwuje": [
+      "Reakcje po błędach",
+      "Zachowanie na ławce",
+      "Komunikację",
+      "Effort bez piłki"
+    ],
+    "wnioski": [
+      "Emocje pod kontrolą = gotowość na wyzwania",
+      "Charakter widać w detalach"
+    ]
+  },
+
+  "typy_zawodnikow_z_perspektywy_org": {
+    "_source": "Next Draft Foundation — Moduł 4",
+    "mantra": "Organizacje nie szukają największych gwiazd. Szukają najlepszych ludzi do wygrywania.",
+    "cytat": "Charakter buduje zwycięzców.",
+    "cel_organizacji": "Budować kulturę, wygrywać dzięki ludziom → dobre środowisko produkuje zwycięstwa = trwały sukces.",
+    "pozytywne_profile": [
+      {
+        "id": "team_glue",
+        "nazwa": "OSOBA ŁĄCZĄCA ZESPÓŁ",
+        "opis": "Stawia zespół na pierwszym miejscu. Robi 'małe rzeczy', które wygrywają."
+      },
+      {
+        "id": "relationship_builder",
+        "nazwa": "BUDOWNICZY RELACJI",
+        "opis": "Łączy ludzi. Buduje relacje. Tworzy pozytywną atmosferę."
+      },
+      {
+        "id": "emotional_stability",
+        "nazwa": "STABILNOŚĆ EMOCJONALNA",
+        "opis": "Zachowuje spokój pod presją. Nie daje się wyprowadzić z równowagi."
+      },
+      {
+        "id": "professional",
+        "nazwa": "PROFESJONALISTA W CODZIENNOŚCI",
+        "opis": "Skupiony, zdyscyplinowany, przygotowany. Nie generuje problemów. Wykonuje swoją pracę na najwyższym poziomie."
+      }
+    ],
+    "negatywne_profile": [
+      {
+        "id": "victim_mentality",
+        "nazwa": "MENTALNOŚĆ OFIARY",
+        "opis": "Czuje, że zasługuje. Oczekuje przywilejów. Trudny do zadowolenia."
+      },
+      {
+        "id": "energy_drainer",
+        "nazwa": "WYCZERPYWANIE ENERGII",
+        "opis": "Narzeka, obwinia innych. Zabiera energię z zespołu. Tworzy negatywne środowisko."
+      },
+      {
+        "id": "locker_room_risk",
+        "nazwa": "RYZYKO W SZATNI",
+        "opis": "Generuje konflikty. Dzieli zespół. Zagraża kulturze i atmosferze."
+      }
+    ],
+    "red_flags_charakterologiczne": [
+      "Mentalność ofiary",
+      "Brak samoświadomości",
+      "Skłonność do konfliktów",
+      "Poczucie wyższości",
+      "Niestabilność emocjonalna",
+      "Brak odpowiedzialności",
+      "EGO > WPŁYW"
+    ]
+  },
+
+  "incydent_vs_wzorzec": {
+    "_source": "Next Draft Foundation — Moduł 4",
+    "zasada": "Scout ocenia WZORCE, nie pojedyncze momenty.",
+    "kluczowe": "JEDNA SYTUACJA ≠ AUTOMATYCZNY RED FLAG.",
+    "najwiekszy_blad": "Ocena zawodnika po jednym incydencie.",
+    "co_scout_musi_ocenic": ["KONTEKST", "CZĘSTOTLIWOŚĆ", "POWTARZALNOŚĆ", "HISTORIĘ ZACHOWAŃ"],
+    "pojedynczy_incydent": {
+      "opis": "Zła reakcja. Jedna sytuacja ≠ red flag.",
+      "pytanie": "Co się działo wcześniej? Jak wyglądał cały mecz?"
+    },
+    "wzorzec": {
+      "opis": "Powtarzające się zachowania w czasie — to już wzorzec.",
+      "zasada": "WZORZEC > POJEDYNCZY INCYDENT — patrz na cały obraz."
+    }
+  },
+
+  "case_study_jimmy_butler": {
+    "_source": "Next Draft Foundation — Moduł 4",
+    "lekcja": "Ten sam zawodnik. Dwa środowiska. Dwa różne rezultaty.",
+    "kluczowe_pytanie": "Nie: 'Czy on ma talent?' Ale: 'CZY MOŻEMY Z NIM WYGRYWAĆ?'",
+    "minnesota_2017_2018": {
+      "problemy": [
+        "Brak jasnej struktury i kierunku",
+        "Niedojrzałe środowisko",
+        "Problemy z komunikacją i rolą",
+        "Brak zaufania i spójności"
+      ],
+      "wynik": "Konflikt, niepasujące środowisko, odejście"
+    },
+    "miami_2019_2025": {
+      "plusy": [
+        "Jasna rola i odpowiedzialność",
+        "Silne leadership (Pat Riley, Erik Spoelstra)",
+        "Kultura odpowiedzialności i profesjonalizmu",
+        "Zaufanie organizacji i kolegów z drużyny",
+        "Wpływ na kulturę, standardy i nastawienie"
+      ],
+      "wynik": "Lider zespołu, Finały NBA 2020, 2023, 2x Konferencja Finałowa"
+    },
+    "cytat_butlera": "W Miami wiem, czego się ode mnie oczekuje. Mogę być sobą, ale w systemie, który wymaga i pozwala mi wygrywać.",
+    "wnioski": [
+      "Środowisko ma ogromny wpływ na zawodnika",
+      "Jasna rola i zaufanie uwalniają pełny potencjał",
+      "Leadership i kultura minimalizują ryzyko",
+      "Ten sam charakter może być problemem w jednym miejscu i asetem w innym",
+      "Scouting to nie tylko ocena talentu — to ocena fitu, ryzyka i kontekstu"
+    ]
+  },
+
+  "wiarygodnosc_zrodla": {
+    "_source": "Next Draft Foundation — Moduł 4",
+    "mantra": "W intelu: źródło znaczy wszystko.",
+    "zasada": "Nie każda informacja ma taką samą wartość.",
+    "cytat": "Dobry scout zadaje pytania, nie tylko słucha.",
+    "pamietaj": "Lepiej jedna informacja od wiarygodnego źródła, niż dziesięć od przypadkowych osób.",
+    "pytania_o_zrodlo": [
+      "Skąd masz informację?",
+      "Skąd źródło ma tę informację?",
+      "Czy źródło zna zawodnika?",
+      "Czy miało codzienny kontakt?",
+      "Czy ma własny interes?",
+      "Czy mówi z doświadczenia?"
+    ]
+  },
+
+  "najlepsze_zrodla_informacji": {
+    "_source": "Next Draft Foundation — Moduł 4",
+    "cytat": "Dobry scout nie zbiera informacji. Dobry scout zna ich wartość.",
+    "hierarchia_zrodel": {
+      "najwyzsza_wartosc": [
+        "Head coach / assistant coach",
+        "Strength coach / staff",
+        "Teammate",
+        "Członkowie organizacji",
+        "Agent / otoczenie"
+      ],
+      "najnizsza_wartosc": "'Słyszałem, że...'"
+    },
+    "problem_z_intel_gathering": {
+      "kazde_zrodlo_ma": [
+        "Własne doświadczenia",
+        "Własne emocje",
+        "Własne uprzedzenia",
+        "Własny interes"
+      ],
+      "scout_musi": ["Filtrować", "Porównywać", "Weryfikować", "Szukać patternów"]
+    },
+    "intel_notes_kategorie": [
+      "Work Ethic",
+      "Communication",
+      "Competitiveness",
+      "Handle Adversity",
+      "Team Impact"
+    ],
+    "praktyczne_wskazowki": [
+      {
+        "nr": 1,
+        "zasada": "ZAWSZE PYTAJ O PRZYKŁADY",
+        "opis": "Proś o konkretne sytuacje, nie ogólne opinie. 'Opowiedz o sytuacji, w której to się wydarzyło.'"
+      },
+      {
+        "nr": 2,
+        "zasada": "ZBIERAJ Z RÓŻNYCH ŹRÓDEŁ",
+        "opis": "Porównuj informacje z wielu źródeł. Jeśli coś powtarza się niezależnie — to prawdopodobnie prawda."
+      },
+      {
+        "nr": 3,
+        "zasada": "ODDZIEL FAKTY OD OPINII",
+        "opis": "Fakty są obserwowalne. Opinie zawsze zawierają emocje i interpretacje."
+      }
+    ]
+  },
+
+  "symulacja_scoutingowa": {
+    "_source": "Next Draft Foundation — Moduł 4",
+    "lekcja": "Podobny talent, podobne statystyki — o wyborze decyduje charakter.",
+    "zawodnik_a": {
+      "cechy_pozytywne": ["Słucha i wdraża feedback", "Pozytywne środowisko", "Pozytywny body language", "Wysoki work ethic", "Godny zaufania, odpowiedzialny"],
+      "statystyki": { "PPG": 14.2, "RPG": 6.1, "APG": 3.3, "FGpct": 49, "3Ppct": 38 }
+    },
+    "zawodnik_b": {
+      "cechy_negatywne": ["Trudny do coachowania", "Niestabilne środowisko", "Negatywny body language", "Nieregularny work ethic", "Niska niezawodność, problemy z dyscypliną"],
+      "statystyki": { "PPG": 14.1, "RPG": 6.0, "APG": 3.4, "FGpct": 48, "3Ppct": 37 }
+    },
+    "wnioski": [
+      "Patrz dalej niż statystyki — charakter buduje karierę.",
+      "Wybieraj zawodników, którzy chcą być lepsi każdego dnia.",
+      "Lepszy profesjonalista = lepsza inwestycja."
+    ],
+    "pytanie_do_scouta": "Którego wybierasz i dlaczego?"
+  },
+
+  "5_filarow_intel_gathering": {
+    "_source": "Next Draft Foundation — Moduł 4",
+    "cytat": "Dobry scout nie zbiera informacji. Buduje pełny obraz zawodnika.",
+    "rownianie": "Lepsza informacja = lepsze decyzje = lepsza organizacja.",
+    "proces": ["OBSERWUJE", "WERYFIKUJE", "ROZUMIE KONTEKST", "DOSTRZEGA WZORCE", "PROGNOZUJE PRZYSZŁOŚĆ"],
+    "filary": [
+      {
+        "nr": 1, "nazwa": "OBSERWACJA",
+        "pytanie": "Co widzisz sam?",
+        "co_obserwowac": ["Zachowania", "Komunikację", "Reakcje", "Profesjonalizm", "Consistency"]
+      },
+      {
+        "nr": 2, "nazwa": "WERYFIKACJA",
+        "pytanie": "Kto to potwierdza?",
+        "jak": ["Ilu masz niezależnych rozmówców?", "Czy informacje się powtarzają?", "Czy źródła są wiarygodne?"]
+      },
+      {
+        "nr": 3, "nazwa": "KONTEKST",
+        "pytanie": "Dlaczego coś się wydarzyło?",
+        "jak": ["Jaka była sytuacja?", "Jaka była rola zawodnika?", "Co działo się wokół?"],
+        "ostrzezenie": "Bez kontekstu: łatwo o błędną ocenę."
+      },
+      {
+        "nr": 4, "nazwa": "ROZPOZNAWANIE WZORCÓW",
+        "opis": "Najważniejsza umiejętność scouta: rozpoznawanie powtarzalnych zachowań.",
+        "zasada": "Wzorzec > pojedynczy incydent."
+      },
+      {
+        "nr": 5, "nazwa": "PROGNOZA",
+        "pytanie": "Jak ten profil będzie wyglądał:",
+        "konteksty": ["Poziom wyżej", "Pod większą presją", "Przy większych oczekiwaniach", "W lepszej organizacji"]
+      }
+    ]
+  },
+
+  "bledy_intel_scoutow": {
+    "_source": "Next Draft Foundation — Moduł 4",
+    "cytat": "Dobry scout to nie ten, który ma zawsze rację, ale ten, który popełnia jak najmniej błędów.",
+    "bledy": [
+      { "nr": 1, "blad": "ZAKOCHANIE SIĘ W TALENCIE", "opis": "Talent to tylko część układanki. Charakter decyduje o wszystkim." },
+      { "nr": 2, "blad": "IGNOROWANIE RED FLAGS", "opis": "Red flags nie znikają. Z czasem tylko rosną." },
+      { "nr": 3, "blad": "BRAK WERYFIKACJI ŹRÓDEŁ", "opis": "Nie każda informacja ma taką samą wartość. Weryfikuj zawsze." },
+      { "nr": 4, "blad": "OCENIANIE PO JEDNYM MECZU", "opis": "Jeden mecz to za mało. Może być przypadek." },
+      { "nr": 5, "blad": "ZBYT SZYBKIE WNIOSKI", "opis": "Daj sobie czas. Zbieraj więcej danych. Nie spiesz się z oceną." },
+      { "nr": 6, "blad": "BRAK KONTEKSTU", "opis": "Bez kontekstu łatwo o błędną i niesprawiedliwą ocenę." }
+    ],
+    "jak_byc_lepszym": [
+      "Bądź obiektywny — twoje emocje to wróg dobrych decyzji.",
+      "Zadawaj pytania — im więcej wiesz, tym lepiej oceniasz.",
+      "Weryfikuj wszystko — zaufaj, ale sprawdzaj. Zawsze.",
+      "Szukaj wzorców — pattern > pojedynczy incydent."
+    ]
+  },
+
+  "zdobywanie_informacji_bez_siatki": {
+    "_source": "Next Draft Foundation — Moduł 4",
+    "mantra": "Dobry intel to nie znajomości. To ciekawość, konsekwencja i umiejętność łączenia kropek.",
+    "zasada": "Nie potrzebujesz dostępu. Potrzebujesz systemu. Zbieraj, analizuj, łącz kropki.",
+    "proces": ["SZUKAJ", "PYTAJ", "ZAPISUJ", "ŁĄCZ", "WERYFIKUJ", "DZIAŁAJ"],
+    "player_intel_checklist": ["CHARACTER", "WORK ETHIC", "COACHABILITY", "BODY LANGUAGE", "PROFESJONALIZM", "ŚRODOWISKO", "HISTORIA", "KONTEKST", "TRENDY"],
+    "metody": [
+      {
+        "nr": 1, "nazwa": "MEDIA SPOŁECZNOŚCIOWE",
+        "jak": ["Obserwuj zawodnika, jego zespół i otoczenie", "Zwracaj uwagę na komunikację, reakcje, interakcje, wartości", "Live'y, stories, komentarze — często mówią więcej niż słowa"]
+      },
+      {
+        "nr": 2, "nazwa": "RESEARCH ONLINE",
+        "jak": ["Szukaj wywiadów, artykułów, podcastów, filmów, blogów", "Sprawdzaj historię: szkoły, trenerzy, zmiany klubów, osiągnięcia", "Wykorzystuj: LinkedIn, YouTube, lokalne media, fora"]
+      },
+      {
+        "nr": 3, "nazwa": "ROZMAWIAJ Z DZIENNIKARZAMI",
+        "jak": ["Dziennikarze mają dostęp do informacji", "Bądź uprzejmy, konkretny i dobrze przygotowany", "Buduj relacje — szanuj ich czas i pracę"]
+      },
+      {
+        "nr": 4, "nazwa": "TEORIA 6 KONTAKTÓW ODDALENIA",
+        "jak": ["Każdy ma wspólnych znajomych", "Zapytaj w swoim otoczeniu: trenerów, zawodników, rodziców, agentów", "Jeden kontakt może otworzyć wiele drzwi", "Bądź aktywny w swojej społeczności"]
+      },
+      {
+        "nr": 5, "nazwa": "JEDŹ I BUDUJ SIATKĘ",
+        "jak": ["Bądź obecny tam, gdzie są inni scouci, trenerzy, dziennikarze", "Rozmawiaj, wymieniaj się spostrzeżeniami, buduj reputację", "Twoja obecność to Twoja wizytówka"]
+      },
+      {
+        "nr": 6, "nazwa": "RÓB PRZYPUSZCZENIA I WYCIĄGAJ WNIOSKI",
+        "jak": ["Obserwuj mecze: body language, reakcje na błędy, komunikację", "Słuchaj wywiadów — jak mówi o sobie, zespole, porażkach?", "Łącz fakty i obserwacje, twórz hipotezy. Nie oceniaj — analizuj."]
+      },
+      {
+        "nr": 7, "nazwa": "WYKORZYSTUJ STATYSTYKI",
+        "jak": ["Kontuzje — jak często, jak poważne, jak wracał?", "Consistency — forma w czasie, nie tylko pojedyncze mecze", "Reakcja na gorszy mecz — bounce back?", "Trend > pojedyncze liczby"]
+      }
+    ]
+  },
+
+  "praktyczne_lekcje_m4": {
+    "_source": "Next Draft Foundation — Moduł 4, slajd końcowy",
+    "cytat": "Dobry scout to nie ten, który wie więcej — ale ten, który rozumie więcej. Informacja to przewaga. Mądra decyzja to sukces.",
+    "jak_organizacje_zbieraja_intel": [
+      "WIELE ŹRÓDEŁ, NIE JEDNO — trenerzy, zawodnicy, staff, agenci, dziennikarze, własna obserwacja",
+      "SYSTEMATYCZNOŚĆ — proces, nie przypadek; każdy intel musi mieć kontekst i weryfikację",
+      "DOKUMENTUJ I PORÓWNUJ — notuj wszystko, porównuj informacje między źródłami i w czasie",
+      "BUDUJ RELACJE — zaufanie daje dostęp do lepszych informacji, ale buduje się je latami"
+    ],
+    "plotka_vs_wartosciowa_informacja": {
+      "plotka": ["Jedno źródło", "Brak konkretów", "Emocjonalne", "Nie do zweryfikowania", "'Słyszałem, że...'"],
+      "wartosciowa": ["Kilka niezależnych źródeł", "Konkretne przykłady", "Fakty, nie opinie", "Można zweryfikować", "Spójna z innymi danymi"],
+      "jak_rozroznic": [
+        "SPRAWDŹ ŹRÓDŁO — ilu niezależnych rozmówców to potwierdza?",
+        "SZUKAJ SPÓJNOŚCI — czy powtarza się w różnych miejscach i kontekstach?",
+        "WERYFIKUJ FAKTAMI — łącz kropki, nie opieraj się na jednym sygnale",
+        "DAJ SOBIE CZAS — wartościowy intel rzadko wymaga natychmiastowej decyzji"
+      ]
+    },
+    "najgrozniejsze_red_flags_charakteru": [
+      { "nazwa": "BRAK POKORY", "opis": "Trudno przyjmuje uwagi, wszystko wie najlepiej." },
+      { "nazwa": "NIETYKALNOŚĆ", "opis": "Spóźnienia, wymówki, niestabilne nawyki." },
+      { "nazwa": "ZŁA REAKCJA NA PORAŻKI", "opis": "Obwinia innych, nie bierze odpowiedzialności." },
+      { "nazwa": "PROBLEMY DYSPOZYCYJNE", "opis": "Wahania zaangażowania, brak energii." },
+      { "nazwa": "TOKSYCZNE ŚRODOWISKO", "opis": "Negatywny wpływ na zespół, konflikty, brak szacunku." }
+    ],
+    "red_flags_zasada": "Red flags nie zawsze przekreślają talent. Ale wpływają na ryzyko.",
+    "nba_vs_europa_intel": {
+      "nba": [
+        "Dane + analityka na maksimum — zaawansowane modele, ogromne bazy danych",
+        "Globalny zasięg — scauci na całym świecie, ogromny budżet na scouting",
+        "Indywidualny upside i potencjał — większa tolerancja na ryzyko, stawiają na sufit zawodnika"
+      ],
+      "europa": [
+        "Relacje i kontekst na pierwszym miejscu — zaufanie i reputacja mają ogromne znaczenie",
+        "Mniejsze ryzyko — większy nacisk na przewidywalność i gotowość do gry",
+        "Dopasowanie do systemu — jak pasuje do zespołu, kultury i stylu gry"
+      ]
+    }
+  },
+
+  "podsumowanie_m4": {
+    "_source": "Next Draft Foundation — Moduł 4, slajd podsumowujący",
+    "cytat": "Kontekst ma znaczenie. Kontekst to wszystko.",
+    "mantra_skauta": "Dobry skaut widzi więcej. Wie więcej. Rozumie więcej. Przewiduje więcej.",
+    "notatki_skauta_kategorie": ["CHARAKTER", "ETYKA PRACY", "MOWA CIAŁA", "COACHABILITY", "KONSEKWENCJA", "ŚRODOWISKO"],
+    "profil_zawodnika_sekcje": ["MOCNE STRONY", "OBSZARY DO POPRAWY", "POTENCJAŁ", "CZYNNIKI RYZYKA"],
+    "profesjonalny_skauting_to_takze": ["ZARZĄDZANIE RYZYKIEM", "ROZUMIENIE LUDZI", "ROZUMIENIE ŚRODOWISK", "ROZUMIENIE ZACHOWAŃ"],
+    "4_zasady": [
+      "SKAUT NIE OCENIA. SKAUT ROZUMIE.",
+      "SZUKAJ FAKTÓW. NIE HISTORII.",
+      "ZROZUM CZŁOWIEKA. ZROZUM PRZYSZŁOŚĆ.",
+      "INTEL TO PRZEWAGA. WIEDZA TO WYBÓR."
+    ]
+  },
+
+  "bonus_pytania_intel": {
+    "_source": "Next Draft Foundation — Moduł 4, materiał bonus",
+    "intro": "Zadawaj dobre pytania. Zbieraj prawdziwe informacje.",
+    "zasada_3xW": {
+      "WIDŹ": "Obserwuj z otwartą głową.",
+      "WERYFIKUJ": "Sprawdzaj u wielu źródeł.",
+      "WNIOSKUJ": "Łącz fakty, nie zakładaj."
+    },
+    "kogo_pytac": ["Trenerzy", "Asystenci", "Koledzy z drużyny", "Byli zawodnicy", "Dział scoutingu", "Fizjoterapeuci / Lekarze", "Nauczyciele", "Dziennikarze", "Agenci / Menedżerowie", "Ludzie z lokalnego środowiska"],
+    "pamietaj": [
+      "Nie szukaj sensacji. Szukaj prawdy.",
+      "Kontekst tworzy obraz.",
+      "Każdy zawodnik ma ryzyko. Twoim zadaniem jest je zrozumieć."
+    ],
+    "motto": "Dobre pytania tworzą lepszy intel. Lepszy intel tworzy lepsze decyzje.",
+    "kategorie_pytan": [
+      {
+        "id": "family_environment", "nazwa": "FAMILY / ENVIRONMENT",
+        "pytania": [
+          "Jak wygląda jego sytuacja rodzinna?",
+          "Kto ma na niego największy wpływ i dlaczego?",
+          "Jakie wartości wyniósł z domu?",
+          "Czy miał stabilne środowisko dorastania?",
+          "Czy w jego otoczeniu są osoby, które mogą być problemem lub wsparciem?"
+        ]
+      },
+      {
+        "id": "work_habits", "nazwa": "WORK HABITS",
+        "pytania": [
+          "Jak wygląda jego podejście do treningu?",
+          "Czy pracuje dodatkowo poza obowiązkowymi treningami?",
+          "Jak dba o swoje ciało, sen, dietę?",
+          "Czy jest zdyscyplinowany w codziennych nawykach?",
+          "Jak reaguje, gdy coś mu nie wychodzi?"
+        ]
+      },
+      {
+        "id": "coachability", "nazwa": "COACHABILITY",
+        "pytania": [
+          "Jak reaguje na feedback?",
+          "Czy przyjmuje uwagi od trenerów i kolegów z drużyny?",
+          "Czy potrafi zmieniać coś w swojej grze?",
+          "Czy ma ego, które utrudnia rozwój?",
+          "Czy sam prosi o rady i szuka informacji zwrotnej?"
+        ]
+      },
+      {
+        "id": "emotional_profile", "nazwa": "EMOTIONAL PROFILE",
+        "pytania": [
+          "Jak radzi sobie ze stresem i presją?",
+          "Jak reaguje na porażki, krytykę, błędy?",
+          "Czy jest stabilny emocjonalnie?",
+          "Czy łatwo się frustruje lub poddaje?",
+          "Czy ma 'mental toughness'?"
+        ]
+      },
+      {
+        "id": "leadership", "nazwa": "LEADERSHIP",
+        "pytania": [
+          "Czy przejmuje odpowiedzialność?",
+          "Czy inni mu ufają i za nim podążają?",
+          "Czy potrafi zmotywować zespół?",
+          "Jak zachowuje się w trudnych momentach?",
+          "Czy jego liderstwo jest naturalne, czy wymuszone?"
+        ]
+      },
+      {
+        "id": "body_language", "nazwa": "BODY LANGUAGE",
+        "pytania": [
+          "Jak porusza się po boisku i poza nim?",
+          "Czy jego mowa ciała zmienia się w zależności od sytuacji?",
+          "Czy wygląda na pewnego siebie, czy spiętego?",
+          "Jak reaguje na sukcesy i niepowodzenia?",
+          "Czy jego energia wpływa pozytywnie na innych?"
+        ]
+      },
+      {
+        "id": "risk_assessment", "nazwa": "RISK ASSESSMENT",
+        "pytania": [
+          "Czy są znane problemy dyscyplinarne lub incydenty?",
+          "Jakie miał kontuzje? Jakie? Jak często?",
+          "Czy istnieją obawy dotyczące jego zaangażowania lub motywacji?",
+          "Czy są sygnały o problemach poza boiskiem (finanse, towarzystwo, używki)?",
+          "Jakie jest ryzyko, że nie osiągnie swojego potencjału?"
+        ]
+      },
+      {
+        "id": "source_credibility", "nazwa": "SOURCE CREDIBILITY",
+        "pytania": [
+          "Skąd pochodzi ta informacja?",
+          "Czy źródło jest wiarygodne i ma bezpośredni kontakt z zawodnikiem?",
+          "Czy ta osoba ma jakiekolwiek uprzedzenia?",
+          "Czy informacja jest potwierdzona przez inne źródła?",
+          "Kiedy informacja została uzyskana?"
+        ]
+      },
+      {
+        "id": "overall_intel_summary", "nazwa": "OVERALL INTEL SUMMARY",
+        "pytania": [
+          "Jakie są mocne strony charakteru i mentalności zawodnika?",
+          "Jakie są największe znaki zapytania?",
+          "Jakie jest ogólne ryzyko — niskie, średnie, wysokie? Dlaczego?",
+          "Czy polecilibyśmy tego zawodnika naszej organizacji? Dlaczego tak / nie?",
+          "Co jeszcze powinniśmy monitorować?"
+        ]
+      }
+    ]
+  },
+
+  "template_intel_report": {
+    "_source": "Next Draft Foundation — Moduł 4, oficjalny formularz",
+    "motto": "Intel to nie dodatek. To przewaga.",
+    "naglowek": ["DATA", "SCOUT", "ZAWODNIK", "KLUB / ORGANIZACJA", "POZYCJA", "WIEK", "ZDJĘCIE ZAWODNIKA"],
+    "sekcje": [
+      { "nr": 1, "id": "family_environment", "nazwa": "FAMILY / ENVIRONMENT", "ocena": "1-5", "pytania_kluczowe": "Jakie jest otoczenie rodzinne i społeczne zawodnika? Kto ma na niego największy wpływ? Stabilność?" },
+      { "nr": 2, "id": "work_habits", "nazwa": "WORK HABITS", "ocena": "1-5", "pytania_kluczowe": "Jak wygląda jego etyka pracy? Trening indywidualny? Podejście do poprawy? Dyscyplina?" },
+      { "nr": 3, "id": "coachability", "nazwa": "COACHABILITY", "ocena": "1-5", "pytania_kluczowe": "Jak reaguje na feedback? Czy się uczy? Relacja z trenerami?" },
+      { "nr": 4, "id": "emotional_profile", "nazwa": "EMOTIONAL PROFILE", "ocena": "1-5", "pytania_kluczowe": "Jak radzi sobie ze stresem? Reakcje w trudnych sytuacjach? Poziom dojrzałości emocjonalnej?" },
+      { "nr": 5, "id": "leadership", "nazwa": "LEADERSHIP", "ocena": "1-5", "pytania_kluczowe": "Czy przejmuje odpowiedzialność? Wpływ na zespół? Komunikacja?" },
+      { "nr": 6, "id": "body_language", "nazwa": "BODY LANGUAGE", "ocena": "1-5", "pytania_kluczowe": "Jak prezentuje się na boisku i poza nim? Pewność siebie? Energia? Reakcje?" },
+      { "nr": 7, "id": "risk_assessment", "nazwa": "RISK ASSESSMENT", "ocena": "NISKI / ŚREDNI / WYSOKI", "pytania_kluczowe": "Jakie potencjalne ryzyka pozaboiskowe? Kontuzje? Zachowanie? Problemy?" },
+      { "nr": 8, "id": "source_credibility", "nazwa": "SOURCE CREDIBILITY", "ocena": "1-5 (1=niskie, 5=wysokie)", "pytania_kluczowe": "Kto dostarczył informacje? Jak wiarygodne jest źródło?" },
+      { "nr": 9, "id": "overall_intel_summary", "nazwa": "OVERALL INTEL SUMMARY", "ocena": "tekst", "pytania_kluczowe": "Najważniejsze wnioski i podsumowanie. Jakie są mocne strony? Ryzyka? Potencjał?" }
+    ],
+    "dodatkowe_zrodla_uwagi": "Lista bulletowa",
+    "decyzja_rekomendacja": ["MONITOROWAĆ", "ROZWAŻYĆ", "WYSOKI PRIORYTET", "NIE REKOMENDOWANY"],
+    "komentarz": "Pole tekstowe",
+    "podpis_scouta": "Pole podpisu"
+  },
+
+  "5_narzedzi_wdrozenia": {
+    "_source": "Slajdy warsztatowe — 5 narzędzi do wdrożenia od jutra",
+    "intro": "Praktyczne narzędzia, które można wdrożyć natychmiast — zarówno jako scout jak i trener/klub.",
+    "narzedzia": [
+      {
+        "nr": 1,
+        "nazwa": "Ocena meczu bez punktów",
+        "opis": "Oglądaj mecz skupiając się wyłącznie na zachowaniach, body language, reakcjach — NIE na statystykach i efektach akcji."
+      },
+      {
+        "nr": 2,
+        "nazwa": "Statystyka 'reakcja po błędzie'",
+        "opis": "Prowadź własną 'statystykę' — jak zawodnik reaguje po każdym błędzie? To jeden z najlepszych wskaźników charakteru i emocjonalnej stabilności."
+      },
+      {
+        "nr": 3,
+        "nazwa": "Video gry bez piłki",
+        "opis": "Oglądaj wideo skupiając się tylko na grze zawodnika gdy nie ma piłki — zaangażowanie, poruszanie, komunikacja, ustawienie."
+      },
+      {
+        "nr": 4,
+        "nazwa": "Rotacyjny lider końcówek",
+        "opis": "Obserwuj, kto staje się liderem drużyny w kluczowych momentach końcówek — to ujawnia prawdziwy charakter i wewnętrzną hierarchię."
+      },
+      {
+        "nr": 5,
+        "nazwa": "Rozmowa o roli co 6~8 tygodni",
+        "opis": "Regularna rozmowa z zawodnikiem o jego roli, oczekiwaniach i rozwoju — buduje zaufanie, zapobiega frustracji i zwiększa coachability."
+      }
+    ]
+  },
+
+  "buduj_coachability": {
+    "_source": "Slajdy warsztatowe — perspektywa trenera/organizacji",
+    "pytanie_kluczowe": "Co naprawdę widzi trener?",
+    "jak_budowac_coachability": [
+      "Chwal reakcję na feedback — nie tylko wynik",
+      "Modeluj otwartość — sam pytaj o feedback, pokazuj że nie wiesz wszystkiego",
+      "Zadawaj pytania zamiast tylko mówić — dialog buduje zaangażowanie"
+    ],
+    "definicja": "Coachability = zaufanie.",
+    "dla_scouta": "Oceniając coachability zawodnika, pytaj nie tylko 'czy słucha' — ale 'czy organizacja stworzyła środowisko, w którym można być coachable?'"
+  },
+
+  "swiadomosc_reputacji": {
+    "_source": "Slajdy warsztatowe — świadomość reputacji zawodnika",
+    "obraz": "Talent bez stabilności: DAJE UWAGĘ → NIE DAJE SZANS.",
+    "cwiczenie_miesieczne": "Raz w miesiącu zadaj sobie pytania:",
+    "pytania": [
+      "Jaką opinię budujemy jako drużyna?",
+      "Jaką opinię budujesz jako zawodnik?"
+    ],
+    "zasada": "Środowisko jest małe.",
+    "implikacja_dla_scouta": "Reputacja zawodnika to intel — informacje rozchodzą się w środowisku koszykarskim szybko. Zawodnik z dobrą reputacją to mniejsze ryzyko; zawodnik z 'etykietą' niesie ze sobą kontekst, który warto zweryfikować."
+  },
+
+  "case_study_talent_bez_stabilnosci": {
+    "_source": "Slajdy warsztatowe — Case Study #1",
+    "tytul": "Talent bez stabilności",
+    "obraz_koncepcji": {
+      "daje_uwage": "Talent + stabilność = dostaje szanse",
+      "nie_daje_szans": "Talent bez stabilności = blokuje własny rozwój"
+    },
+    "sytuacja": {
+      "poziom": "Zawodnik U19",
+      "profil_statystyczny": {
+        "ppg": 21,
+        "rola_w_druzynie": "Najlepszy scorer"
+      },
+      "profil_boiskowy": {
+        "mocne": ["Świetny 1v1"],
+        "slabe": ["Słaba obrona", "Reaguje frustracją po zmianie", "Spóźnia się 1-2 razy w miesiącu"]
+      }
+    },
+    "przy_przejsciu_do_seniorow": {
+      "minuty": "10-12 minut",
+      "rola_wymagana": ["Spacing", "Obrona", "Szybkie decyzje"]
+    },
+    "po_4_miesiacach": [
+      "Narzeka na brak minut",
+      "Mówi że 'nie jest wykorzystywany'"
+    ],
+    "problem": {
+      "brak_adaptacji_do_roli": true,
+      "brak_stabilnosci_emocjonalnej": true,
+      "brak_obrony_brak_zaufania": true
+    },
+    "pytania_do_analizy": [
+      "Co jest jego największym problemem — talent czy mentalność?",
+      "Co trener może zrobić?",
+      "Czy dawać mu więcej minut 'żeby się odblokował'?"
+    ],
+    "lekcja": "Talent nie przegrywa kariery. Przegrywa ją brak adaptacji.",
+    "dla_scouta": [
+      "Frustration po zmianie + spóźnienia = red flag charakterologiczny, nie jednostkowy incydent",
+      "Zawodnik nie akceptuje roli → ryzyko transferowe nawet przy wysokich statystykach",
+      "Pytaj: czy ten zawodnik buduje zaufanie gdy nie gra? Bo to on pokazuje charakter"
+    ]
+  },
+
+  "case_study_body_language_ktory_kosztuje": {
+    "_source": "Slajdy warsztatowe — Case Study #2",
+    "tytul": "Body language który kosztuje",
+    "kluczowe_wnioski": [
+      "Opinia idzie szybciej niż statystyka",
+      "'Trudny charakter' potrafi zamknąć drzwi",
+      "Body language jest sygnałem dla sztabu"
+    ],
+    "lekcja": "Jeden telefon może zadecydować o kontrakcie.",
+    "sytuacja": {
+      "profil": "Zawodnik senior. Statystyki solidne.",
+      "red_flags_body_language": [
+        "Machanie rękami po błędzie kolegi",
+        "Pretensje do sędziów",
+        "Brak powrotu po niecelnym rzucie",
+        "Zła reakcja na zmianę"
+      ],
+      "co_sie_dzieje": "Nowy klub dzwoni po opinię."
+    },
+    "pytania_do_analizy": [
+      "Co trener powie przez telefon?",
+      "Czy statystyki go uratują?",
+      "Czy zawodnik jest świadomy problemu?"
+    ],
+    "dla_scouta": [
+      "Statystyki solidne ≠ brak ryzyka. Body language to intel który poprzedza telefon.",
+      "Organizacje dzwonią po opinię PRZED podpisaniem — co trener powie?",
+      "Zawodnik może nie wiedzieć, że jego body language zamknął mu drzwi do kontraktu."
+    ]
+  },
+
+  "talent_vs_kariera": {
+    "_source": "Slajdy warsztatowe — filozofia kariery zawodnika",
+    "pytanie": "Co naprawdę decyduje o karierze zawodnika?",
+    "falszywe_odpowiedzi": ["Talent?", "Statystyki?", "Agent?", "Mentalność?", "Szczęście?"],
+    "prawda": "TALENT ≠ KARIERA",
+    "implikacja_dla_scouta": "Szukając zawodnika, nie szukaj tylko talentu — szukaj tego, co buduje długą karierę.",
+    "schody_kariery": {
+      "opis": "Cztery fundamenty długiej kariery — każdy musi stać na poprzednim:",
+      "poziomy_od_dolu": [
+        { "nr": 1, "en": "PROFESSIONALISM", "pl": "Profesjonalizm" },
+        { "nr": 2, "en": "DEFENSE", "pl": "Obrona i decyzje" },
+        { "nr": 3, "en": "STABILITY", "pl": "Stabilność emocjonalna" },
+        { "nr": 4, "en": "TRUST", "pl": "Zaufanie trenera" }
+      ],
+      "zasada": "Bez profesjonalizmu nie ma obrony. Bez obrony nie ma stabilności. Bez stabilności nie ma zaufania. Bez zaufania nie ma kariery.",
+      "co_daje_dluga_kariere": [
+        "Zaufanie trenera — bez niego nie ma minut",
+        "Stabilność emocjonalna — zawodnik nie składa się pod presją",
+        "Adaptacja do roli — akceptuje co drużyna potrzebuje",
+        "Obrona i decyzje — wartość niezależna od formy rzutowej",
+        "Profesjonalizm — fundament wszystkiego"
+      ]
+    }
+  },
+
+  "10_prawd_intro": {
+    "_source": "Slajdy warsztatowe — 10 prawd dla młodych zawodników",
+    "pytanie": "Jak uczyć młodych zawodników tych 10 prawd?",
+    "metoda": "Nie wykład. Systematyczna praca w treningu.",
+    "format": "Checklist dla trenerów — każda prawda to konkretne zachowanie do wyrobienia, nie teoria.",
+    "dla_scouta": "Te 10 prawd to też lista tego, czego scout szuka oceniając młodego zawodnika. Każda prawda to mierzalny sygnał charakteru."
+  },
+
+  "koryguj_body_language_natychmiast": {
+    "_source": "Slajdy warsztatowe — narzędzie trenerskie",
+    "zasada": "BODY > STATYSTYKI",
+    "co_korygowac_natychmiast": [
+      "Brak powrotu do obrony",
+      "Machanie rękami (po błędzie, po stracie)",
+      "Negatywna reakcja po błędzie"
+    ],
+    "jak_korygowac": "Nazwij mechanizm. Nie zawstydzaj.",
+    "body_language_pozytywny": ["Kontakt wzrokowy", "Komunikacja"],
+    "body_language_negatywny": ["Opuszcza głowę", "Wolny powrót do obrony"],
+    "dla_scouta": "Kiedy scout obserwuje młodego zawodnika, te same sygnały są kluczowe. Zawodnik, który wykazuje pozytywne body language mimo błędów, to wysokie coachability."
+  },
+
+  "prawda_1_talent_i_charakter": {
+    "_source": "Slajdy warsztatowe — Prawda #1 z 10 prawd",
+    "prawda": "Talent wystarcza tylko do pewnego poziomu.",
+    "mechanizm": {
+      "juniorzy": "Talent robi różnicę.",
+      "seniorzy": "Wszyscy są dobrzy. Różnicę robią decyzje i charakter."
+    },
+    "cytat_en": "Talent opens the door. Character keeps you inside.",
+    "cytat_pl": "Talent otwiera drzwi. Charakter decyduje, jak długo zostaniesz w środku.",
+    "dla_scouta": "Na poziomie juniorskim talent pozwala się wyróżnić. Na poziomie seniorskim talent to warunek wejścia — nie wystarczający. Scout musi oceniać charakter i decyzje, nie tylko skill."
+  },
+
+  "prawda_2_przewidywalnosc": {
+    "_source": "Slajdy warsztatowe — Prawda #2 z 10 prawd",
+    "prawda": "Trenerzy cenią przewidywalność bardziej niż 'flash'.",
+    "co_buduje_zaufanie_trenera": [
+      "Stała obrona — nie tylko gdy chce",
+      "Stałe rotacje — zawsze na właściwym miejscu",
+      "Stała energia — bez względu na wynik i minuty"
+    ],
+    "zasada": "Trener musi wiedzieć, czego się po Tobie spodziewać.",
+    "kontrast": {
+      "highlight": "Jeden dobry mecz, kilka słabych → brak zaufania",
+      "trust": "Stała jakość co mecz → trener wystawia, bo wie co dostanie"
+    },
+    "dla_scouta": "Oceniając zawodnika: czy jego praca na boisku jest przewidywalna? Czy obrona, rotacje i energia są spójne mecz po meczu? To jeden z najważniejszych wskaźników gotowości na wyższy poziom."
+  },
+
+  "prawda_3_gra_bez_pilki": {
+    "_source": "Slajdy warsztatowe — Prawda #3 z 10 prawd",
+    "prawda": "Gra bez piłki decyduje o minutach.",
+    "pytanie_retoryczne": "Ile czasu w meczu zawodnik ma piłkę?",
+    "co_decyduje_o_minutach": [
+      "Spacing — czy stoi w odpowiednim miejscu?",
+      "Cut — czy atakuje wolne przestrzenie?",
+      "Screening — czy stawia bloki na czas?",
+      "Komunikacja — czy mówi do kolegów?",
+      "Rotacje w obronie — czy jest na właściwej pozycji?"
+    ],
+    "koncepcja": "Value Without the Ball",
+    "dla_scouta": "Oceniaj zawodnika 80% czasu gdy NIE ma piłki. Zawodnik, który jest wartościowy bez piłki, jest wartościowy w każdym systemie i na każdym poziomie. To jeden z najważniejszych wskaźników readiness na wyższy poziom."
+  },
+
+  "prawda_4_reakcja_na_blad": {
+    "_source": "Slajdy warsztatowe — Prawda #4 z 10 prawd",
+    "prawda": "Body language wpływa na decyzje trenerów.",
+    "co_trener_obserwuje": [
+      "Reakcja na błąd",
+      "Reakcja na ławkę",
+      "Mowa ciała po zmianie"
+    ],
+    "kluczowy_insight": "BŁĄD ≠ PROBLEM. REAKCJA = PROBLEM.",
+    "cytat": "Trener szybciej wybaczy błąd niż złą reakcję na błąd.",
+    "dla_scouta": "Nie oceniaj błędu. Oceniaj reakcję na błąd. To jest test charakteru — nie skill."
+  },
+
+  "prawda_5_reputacja": {
+    "_source": "Slajdy warsztatowe — Prawda #5 z 10 prawd",
+    "prawda": "Reputacja istnieje.",
+    "kto_rozmawia": [
+      "Trenerzy rozmawiają",
+      "Skauci rozmawiają",
+      "Agenci rozmawiają"
+    ],
+    "zasada": "Jedna opinia może iść przez całą ligę.",
+    "cytat_en": "The league is small.",
+    "implikacja": "Incoming call: COACH — jeden telefon decyduje o kontrakcie. Reputacja buduje się latami, traci w chwilach.",
+    "dla_scouta": "Środowisko jest małe. Kiedy dzwonisz po intel — zapytaj więcej niż jedną osobę. Ale pamiętaj: jedna negatywna opinia od wiarygodnego źródła może wystarczyć."
+  },
+
+  "prawda_6_rola_vs_statystyki": {
+    "_source": "Slajdy warsztatowe — Prawda #6 z 10 prawd",
+    "prawda": "Rola > Statystyki.",
+    "mechanizm": {
+      "juniorzy": "Scorer w juniorach = 21 pkt, najlepszy w drużynie",
+      "seniorzy": "≠ scorer w seniorach — rola się zmienia"
+    },
+    "rownianie": {
+      "adaptacja_do_roli": "= minuty",
+      "walka_z_rola": "= ławka"
+    },
+    "cytat": "Najwięcej karier przegrywa się przez brak akceptacji roli.",
+    "obraz": "ADAPT OR SIT",
+    "dla_scouta": "Oceniaj role acceptance jako osobny filar charakteru. Zawodnik, który walczy z rolą, jest ryzykiem niezależnie od statystyk. Szukaj sygnałów: czy narzeka na minuty / mówi że 'nie jest wykorzystywany' / ma ego większe niż rola?"
+  },
+
+  "prawda_7_obrona_i_decyzje": {
+    "_source": "Slajdy warsztatowe — Prawda #7 z 10 prawd",
+    "prawda": "Obrona i decyzje to najpewniejsza waluta.",
+    "co_daje_minuty_niezaleznie_od_ligi": [
+      "Obrona",
+      "Decision making",
+      "Rozumienie gry"
+    ],
+    "cytat_en": "Defense & Decisions travel.",
+    "zasada": "To daje minuty niezależnie od ligi.",
+    "dla_scouta": "Zawodnik, który broni i podejmuje dobre decyzje, przeniesie się na każdy poziom. Zawodnik oparty tylko na atletyzmie i rzutach → ryzyko przy przejściu do lepszej ligi."
+  },
+
+  "prawda_8_profesjonalizm": {
+    "_source": "Slajdy warsztatowe — Prawda #8 z 10 prawd",
+    "prawda": "Profesjonalizm robi kariery.",
+    "co_sklada_sie_na_profesjonalizm": [
+      "Punktualność",
+      "Przygotowanie fizyczne",
+      "Regeneracja",
+      "Stabilność emocjonalna"
+    ],
+    "3_filary_be_coachable": [
+      "1. Be Coachable",
+      "2. Build Trust",
+      "3. Understand the Game"
+    ],
+    "cytat": "Profesjonalizm nie robi nagłówków, ale robi kontrakty.",
+    "dla_scouta": "Pytaj o punktualność, rutynę poza treningiem, sen, dietę — to są wskaźniki profesjonalizmu. Zawodnik, który nie dba o regenerację i przygotowanie fizyczne, to ryzyko długoterminowe."
+  },
+
+  "prawda_9_coachability": {
+    "_source": "Slajdy warsztatowe — Prawda #9 z 10 prawd",
+    "prawda": "Najlepsi są coachable.",
+    "cechy_coachable_zawodnika": [
+      "Słuchają",
+      "Adaptują się",
+      "Nie obrażają się",
+      "Chcą się uczyć"
+    ],
+    "definicja": "Coachability = zaufanie trenera.",
+    "pytanie_kluczowe_en": "Do you want to get better? Or feel better?",
+    "dla_scouta": "Zawodnik, który chce 'feel better' (unikać krytyki, chronić ego) jest trudny do prowadzenia. Zawodnik, który chce 'get better' (szuka feedbacku, adaptuje się) — to najcenniejszy profil."
+  },
+
+  "prawda_10_myslenie_dlugoterminowe": {
+    "_source": "Slajdy warsztatowe — Prawda #10 z 10 prawd",
+    "prawda": "Myślenie krótkoterminowe niszczy kariery.",
+    "zawodnik_mysli": [
+      "Następny mecz",
+      "Moje punkty"
+    ],
+    "klub_mysli": [
+      "Sezon",
+      "Stabilność",
+      "Zaufanie"
+    ],
+    "cytat_en": "The league is small.",
+    "dla_scouta": "Misalignment między tym co zawodnik chce (punkty/minuty teraz) a tym czego klub potrzebuje (stabilność/zaufanie przez sezon) to ukryte ryzyko transferowe. Pytaj: 'Jak zawodnik mówi o poprzednim klubie? O trenerze? O minutach?' — to ujawnia horyzont myślenia."
+  },
+
+  "refleksja_dla_trenerow": {
+    "_source": "Slajdy warsztatowe — podsumowanie serii 10 prawd",
+    "cytat": "JEŚLI ZAWODNIK NIE ROZUMIE TYCH PRAWD, TO DLATEGO, ŻE NIKT GO TEGO NIE NAUCZYŁ.",
+    "implikacja_dla_trenera": "Zamiast frustacji — edukacja. Zamiast kary — rozmowa. Zawodnik nie wie, bo nikt go tego nie nauczył.",
+    "dla_scouta": "Ten cytat redefiniuje ocenę charakteru u młodych zawodników. Brak tych nawyków to nie zawsze red flag — to brak edukacji. Scout powinien pytać: w jakim środowisku treningowym zawodnik dorósł?"
+  },
+
+  "piramida_kariery_zawodnika": {
+    "_source": "Slajdy warsztatowe — Talent to za mało",
+    "tytul": "Piramida Kariery Zawodnika",
+    "opis": "Większość buduje piramidę od złej strony — zaczynają od talentu, a fundament (profesjonalizm) zostawiają na końcu.",
+    "warstwy_od_dolu": [
+      { "nr": 1, "nazwa": "PROFESJONALIZM", "opis": "Fundament — bez niego wszystko się wali" },
+      { "nr": 2, "nazwa": "CHARAKTER / COACHABILITY", "opis": "Gotowość do uczenia się i do roli w zespole" },
+      { "nr": 3, "nazwa": "DECISION MAKING", "opis": "Podejmowanie decyzji pod presją" },
+      { "nr": 4, "nazwa": "GRA BEZ PIŁKI", "opis": "Spacing, cut, screening, rotacje — wartość bez piłki" },
+      { "nr": 5, "nazwa": "TALENT", "opis": "Wierzchołek — widoczny, ale nie fundamentalny" }
+    ],
+    "blad": "WIĘKSZOŚĆ BUDUJE PIRAMIDĘ OD ZŁEJ STRONY — zaczynają od talentu.",
+    "w_praktyce": [
+      "Oceniaj decyzje, nie tylko punkty",
+      "Chwal dobry wybór nawet przy niecelnym rzucie",
+      "Po akcji pytaj: 'Dlaczego?'"
+    ],
+    "cel": "Budować myślenie, nie ego.",
+    "dla_scouta": "Kiedy oceniasz zawodnika, idź piramidą od dołu: najpierw profesjonalizm i charakter, potem decision making, potem gra bez piłki — i dopiero na końcu talent. Większość scoutów ocenia odwrotnie."
+  },
+
+  "ucz_akceptacji_roli": {
+    "_source": "Slajdy warsztatowe — Ucz akceptacji roli",
+    "zasada": "ROLA > STATYSTYKI",
+    "cytat": "NIE KAŻDY KLOCEK JEST BOX SCORE.",
+    "4_role_w_druzynie": [
+      { "id": "defender", "nazwa": "DEFENDER" },
+      { "id": "spacer", "nazwa": "SPACER" },
+      { "id": "facilitator", "nazwa": "FACILITATOR" },
+      { "id": "finisher", "nazwa": "FINISHER" }
+    ],
+    "przyklady_akceptacji_roli": [
+      "Lider z limitem rzutów",
+      "Scorer jako facilitator",
+      "Role player zamyka mecz obroną"
+    ],
+    "definicja": "Rola = użyteczność.",
+    "dla_scouta": "Każdy zawodnik pełni jedną lub więcej z tych 4 ról. Scout ocenia: czy zawodnik zna swoją rolę i ją akceptuje? Zawodnik, który jest Defenderem ale chce być Finisherem = risk. Zawodnik, który jest Scorerem ale potrafi być Facilitatorem = asset."
+  },
+
+  "ucz_gry_bez_pilki": {
+    "_source": "Slajdy warsztatowe — narzędzie trenerskie",
+    "zasada": "80% WARTOŚCI ZAWODNIKA WIDAĆ BEZ PIŁKI.",
+    "cytat": "Minuty zaczynają się bez piłki.",
+    "jak_uczyc": [
+      "50% analizy video = akcje bez piłki",
+      "Punktuj spacing i komunikację — nie tylko rzuty",
+      "Nagradzaj dobrą rotację obronną"
+    ],
+    "elementy_gry_bez_pilki": ["CUT", "WEAK SIDE LIFT", "SPACING"],
+    "dla_scouta": "W analizie video: poświęć połowę czasu na obserwację zawodnika BEZ piłki. 80% wartości widać właśnie tam. Zawodnik, który jest wartościowy bez piłki, jest wartościowy w każdym systemie."
+  },
+
+  "ucz_myslenia_dlugoterminowego": {
+    "_source": "Slajdy warsztatowe — narzędzie trenerskie",
+    "zasada": "Kariera to proces.",
+    "cytat_en": "The league is small.",
+    "narzedzie_rozmowa_1na1": {
+      "format": "Rozmowa 1:1 z zawodnikiem",
+      "pytania": [
+        "Gdzie chcesz być za 3 lata?",
+        "Co dziś robisz, żeby tam być?"
+      ]
+    },
+    "dla_scouta": "Zapytaj zawodnika o jego wizję kariery. Zawodnik, który myśli sezonami i pracuje systematycznie na swój cel — to niskie ryzyko. Zawodnik skupiony tylko na najbliższym meczu i minutach — to sygnał krótkoterminowego myślenia."
+  },
+
+  "ucz_profesjonalizmu": {
+    "_source": "Slajdy warsztatowe — narzędzie trenerskie",
+    "zasada": "PROFESJONALIZM TO SYSTEM, NIE NASTRÓJ.",
+    "cytat": "Profesjonalizm musi być widoczny codziennie.",
+    "fundamenty_profesjonalizmu": [
+      "Punktualność",
+      "Przygotowanie",
+      "Regeneracja",
+      "Stabilność emocjonalna",
+      "Znajomość scoutingu"
+    ],
+    "uwaga": "Znajomość scoutingu jako element profesjonalizmu — zawodnik, który rozumie jak jest oceniany, lepiej rozumie swoją rolę i wartość.",
+    "dla_scouta": "Profesjonalizm to system, nie nastrój — pytaj o CODZIENNE nawyki, nie o pojedyncze mecze. Zawodnik profesjonalny jest przewidywalny, przygotowany i stabilny emocjonalnie każdego dnia."
+  },
+
+  "ucz_przewidywalnosci": {
+    "_source": "Slajdy warsztatowe — narzędzie trenerskie",
+    "zasada": "FLASH DAJE UWAGĘ. STABILNOŚĆ DAJE KONTRAKTY.",
+    "wykres_flash_vs_stabilnosc": {
+      "flash": "Szybki wzrost popularności/uwagi → potem spadek",
+      "stabilnosc_decyzje": "Stabilny wzrost długości kariery przez cały czas"
+    },
+    "jak_uczyc_przewidywalnosci": [
+      "Zatrzymuj trening przy braku rotacji",
+      "Punktuj koncentrację",
+      "Dawaj role w końcówkach treningu"
+    ],
+    "pytanie_kluczowe_do_zawodnika": "Czy mogę Ci zaufać przy +2?",
+    "dla_scouta": "Pytaj: 'Czy trener może liczyć na tego zawodnika w trudnym momencie?' To jest definicja przewidywalności. Flash to wyróżnienie na highlight reel. Stabilność to kontrakt na kolejny sezon."
+  },
+
+  "trzy_segmenty_talentu": {
+    "_source": "PZKosz Szkoła — Rafał Juć, Denver Nuggets (13 lat, mistrzostwo NBA 2023)",
+    "model": "Talent zawodnika dzielimy na 3 równe segmenty (33% każdy):",
+    "segmenty": [
+      { "id": "umiejetnosci", "nazwa": "Umiejętności koszykarskie", "procent": "~33%" },
+      { "id": "warunki_fizyczne", "nazwa": "Warunki fizyczne", "procent": "~33%" },
+      { "id": "mentalnosc", "nazwa": "Mentalność", "procent": "~33%" }
+    ],
+    "kluczowa_roznica": "Talent otwiera drzwi — ktoś cię dostrzega, ktoś widzi, to samo otwiera dla ciebie drzwi. Ale później, CO ZROBISZ z tym talentem, z swoją karierą? To kompletnie inne czynniki zdecydują.",
+    "mentalnosc_jako_talent": "Mentalność TO JEST talent. To nie jest coś oddzielnego — to 1/3 oceny zawodnika. Środowisko i trener odpowiadają za to, czy ten segment się rozwinął.",
+    "dla_scouta": "Oceniając zawodnika pytaj: co on robi z talentem? Czy inwestuje w siebie, czy polega wyłącznie na danym? Mentalność jest równie ważna jak skillset i fizyczność."
+  },
+
+  "hierarchia_obserwacji_scouta": {
+    "_source": "PZKosz Szkoła — Rafał Juć, Denver Nuggets",
+    "hierarchia": [
+      { "pozycja": 1, "obserwator": "Trener", "zasieg": "widzi wiele" },
+      { "pozycja": 2, "obserwator": "Szatnia trenera (system)", "zasieg": "widzi jeszcze więcej" },
+      { "pozycja": 3, "obserwator": "Scout", "zasieg": "widzi WSZYSTKO" }
+    ],
+    "cytat": "Trener widzi wiele. Szatnia trenera widzi jeszcze więcej. Scout widzi wszystko.",
+    "implikacja": "Zawodnik często nie zdaje sobie sprawy, że scout obserwuje go przez cały mecz — nie tylko w momentach z piłką. Zachowania na ławce, reakcje na zmianę, body language — wszystko jest widoczne.",
+    "dla_scouta": "Twoja przewaga to szeroka obserwacja. Nie skupiaj się na piłce — obserwuj całą drużynę i konkretnego zawodnika jednocześnie. Każde zachowanie poza piłką to informacja."
+  },
+
+  "statystyka_nieliniowego_rozwoju": {
+    "_source": "PZKosz Szkoła — Rafał Juć, Denver Nuggets",
+    "statystyka": "50% graczy NBA z Europy nie grało w swojej kadrze narodowej U18.",
+    "przyklady": ["Jokić nie grał w kadrze U18", "Nurkić nie grał w kadrze U18"],
+    "wniosek": "To, co się dzieje w wieku 16-18 lat, NIE ma znaczenia dla późniejszej kariery. Wczesny brak powołania do kadry NIE dyskwalifikuje zawodnika.",
+    "blad_rodzicow_i_trenerow": "Rodzice mówią: 'Mój syn się do U16 nie zakwalifikował — nie ma szans.' To jest błąd myślenia. Rozwój zawodnika nie jest liniowy — decyduje COŚ INNEGO niż wczesne dominowanie.",
+    "dla_scouta": "Nie odrzucaj zawodników, bo w młodzieżowym wieku nie imponowali. Śledzenie krzywej postępu jest ważniejsze niż snapshot wczesnej kariery. Szukaj trajektorii, nie poziomu absolutnego."
+  },
+
+  "waluta_wiedzy_po_karierze": {
+    "_source": "PZKosz Szkoła — Rafał Juć, Denver Nuggets",
+    "zasada": "Wartość zawodnika gdy gra = statystyki i centymetry. Wartość po karierze = wiedza.",
+    "cytat": "Im więcej wiesz, to jest twoja waluta. To jest twoja wartość. To jest twoja użyteczność, jaką ty przynosisz.",
+    "kontrast": {
+      "gracz": "Masz lepsze statystyki i jesteś większy → dostajesz większy kontrakt.",
+      "pracownik_koszykowki": "Im więcej wiesz → tym większa twoja wartość i użyteczność dla organizacji."
+    },
+    "implikacja": "Najlepszy czas na budowanie wiedzy (scouting, organizacje, relacje) to PODCZAS gry — nie po zakończeniu kariery. Każdy rok gry to dostęp, kontakty i znajomość środowiska od środka.",
+    "dla_zawodnika": "Buduj wiedzę o koszykówce jako systemie, nie tylko o własnej grze. Rozmawiaj z GMem, obserwuj asystenta, zapisuj treningi — to inwestycja na drugą karierę."
+  },
+
+  "komunikacja_jako_wskaznik_inteligencji": {
+    "_source": "PZKosz Szkoła — Rafał Juć, Denver Nuggets",
+    "statystyka_kontaktu_z_pilka": "Najlepsi gracze w meczu 40 minut mają piłkę w rękach 2-3 minuty. 30+ minut to gra bez piłki.",
+    "trzy_wskazniki_inteligencji_bez_pilki": [
+      { "dzialanie": "SPACING", "co_pokazuje": "Inteligencja — czytasz grę, wiesz co dzieje się dookoła" },
+      { "dzialanie": "CUTTING", "co_pokazuje": "Świadomość — czytasz grę, reagujesz na ruch partnerów" },
+      { "dzialanie": "KOMUNIKACJA", "co_pokazuje": "Leadership — wiesz co dzieje się na boisku i kierujesz innymi" }
+    ],
+    "wskaznik_walk_through": "99% wygrywa ta drużyna, która jest głośniejsza na walk-through. Dlaczego? Doskonała znajomość gameplanu — każda rotacja, każde przesunięcie krzyknięte. Nie po to, żeby się popisać. To jest trening mózgu: zawodnicy są cały czas zaangażowani i skupieni.",
+    "dla_scouta": "Obserwuj zawodnika bez piłki. Czy woła covery? Ostrzega kolegów? Reaguje na rotacje? Gra cicho i pasywnie? 80% wartości zawodnika widać bez piłki — komunikacja to jeden z kluczowych wskaźników."
+  },
+
+  "case_study_marcus_smart": {
+    "_source": "PZKosz Szkoła — Rafał Juć, Denver Nuggets",
+    "teza": "Użyteczność dla drużyny determinuje wartość rynkową — nie talent ofensywny ani statystyki.",
+    "porownanie_zawodnikow": [
+      {
+        "zawodnik": "Marcus Smart",
+        "talent_ofensywny": "Najmniejszy z trójki — 6-8 pkt/mecz",
+        "co_robi": "Obrona, hustle plays, energia, przechwyty — rzeczy niewidoczne w statystykach na pierwszy rzut oka",
+        "zarobki": "NAJWIĘKSZE z trójki (wieloletni kontrakt NBA)"
+      },
+      {
+        "zawodnik": "Miles Powell",
+        "talent_ofensywny": "Najlepszy ofensywnie — 25-30 pkt w college, dominował statystycznie",
+        "co_robi": "Imponujące statystyki ofensywne, niska wartość obronna",
+        "zarobki": "NAJMNIEJSZE — grał w NBA bardzo krótko"
+      },
+      {
+        "zawodnik": "Len Stomson",
+        "talent_ofensywny": "Ogromny — potencjał 'kolejnego LeBrona' w high school/college",
+        "co_robi": "Problematyczne body language — wybuchy emocji, fauluje po złej grze, kopie krzesło, macha rękami",
+        "zarobki": "Poniżej oczekiwań wynikających z talentu"
+      }
+    ],
+    "wniosek": "Highlight reel i punkty nie decydują o wartości rynkowej. Decyduje użyteczność dla drużyny — co zawodnik daje POZA statystykami.",
+    "dla_scouta": "Zawodnik z mniejszym talentem ofensywnym, ale wysoką użytecznością (obrona, hustle, przewidywalność, charakter) może być wart więcej niż scorer bez wpływu na wygrywanie. Szukaj wartości ukrytej."
+  },
+
+  "case_study_junior_bez_adaptacji": {
+    "_source": "PZKosz Szkoła — Rafał Juć, Denver Nuggets",
+    "profil": {
+      "poziom": "Junior U19 → przejście do seniorów",
+      "produkcja": "21 pkt, najlepszy scorer drużyny, dominował poziom młodzieżowy",
+      "problemy_juz_w_juniorach": ["Nie broni", "Frustruje się → jest zdejmowany przez trenera", "Spóźnia się na treningi", "Lekceważące podejście"]
+    },
+    "co_sie_stalo_w_seniorach": {
+      "minuty": "10-12 minut",
+      "rola_od_trenera": "Spacing, obrona, energia, szybkie decyzje",
+      "reakcja_zawodnika": "Narzeka że za mało minut, mówi że trener go 'nie wykorzystuje'",
+      "skutek": "Znika — przestaje bronić ('po co?'), siada z tyłu autokaru, ogląda seriale, brak leadership"
+    },
+    "diagnoza": "Problem = mentalność, nie talent. Nie potrafił zaadaptować się do nowej roli. Grał dobrze tylko na swoich warunkach.",
+    "waga_produkcja_vs_problemy": "Jeśli problemy przerosną produkcję — ciebie nie ma. Więcej produkcji pozwala tolerować więcej problemów — ale to ma granicę.",
+    "cytat_zagraj_5_minut": "Zagraj z kimś w jakąś grę 5 minut — to ci powie więcej niż godzina rozmowy na temat tej osoby.",
+    "dla_scouta": "Czerwona flaga: zawodnik dominuje niższy poziom, ale nie akceptuje ograniczonej roli na wyższym. Ryzyko = wysokie przy transferze w górę. Pytaj poprzednich trenerów o REAKCJĘ na zejście, nie o statystyki."
+  },
+
+  "case_study_locus_of_control": {
+    "_source": "PZKosz Szkoła — Rafał Juć, Denver Nuggets",
+    "pojecie": "Locus of Control — centrum kontroli wewnętrzne (ja odpowiadam za wynik) vs zewnętrzne (zawsze winni inni)",
+    "profil_red_flag": "Senior z dobrymi statystykami — przydatny, wartościowy, ale zawsze zewnętrzny locus.",
+    "typowe_wymowki_zewnetrzne": [
+      "On mi nie podał, on się nie przesunął, sędzia źle gwizdnął",
+      "'Ten sędzia mnie zawsze nienawidzi'",
+      "'Na tej hali kosze są za niskie'",
+      "'Autokar 12 godzin — tak nie można grać'",
+      "'Straszne mrozy — nie miałem rytmu'"
+    ],
+    "skutek_dla_zawodnika": "Żyje w bańce — każdy się boi mu coś powiedzieć. Sam wyklucza się z feedbacku i poprawy. Otoczenie machnęło ręką.",
+    "skutek_dla_trenera": "Trener nie może usiąść i powiedzieć mu najtrudniejszej prawdy. Trudny w pracy = mniejsze szanse, że klub zadzwoni po następnym kontrakcie.",
+    "reputacja_podrozuje": "Opinia o trudnym charakterze rozchodzi się DUŻO szybciej niż statystyki. Jeden telefon do byłego trenera — i klub rezygnuje mimo dobrych liczb.",
+    "wniosek": "Zewnętrzny locus of control = RED FLAG. Zawodnik nie może się poprawić, jeśli nie widzi własnych błędów. Każda drużyna w końcu rezygnuje z takiego zawodnika.",
+    "dla_scouta": "Pytaj poprzednich trenerów: 'Jak on reagował po złym meczu? Jak przyjmował feedback?' Odpowiedź da ci więcej niż statystyki z ostatnich 3 sezonów."
+  },
+
+  "case_study_spencer_jones": {
+    "_source": "PZKosz Szkoła — Rafał Juć, Denver Nuggets",
+    "zawodnik": "Spencer Jones (Denver Nuggets)",
+    "teza": "Adaptacja do roli — 3 kompletnie różne role w 5 latach kariery, każda na najwyższym poziomie.",
+    "timeline_rol": [
+      {
+        "etap": "High school",
+        "rola": "Wszechstronny zawodnik",
+        "szczegol": "Trener poprosił: NIE rzucaj za 3. Wykonał."
+      },
+      {
+        "etap": "Stanford (4 lata college)",
+        "rola": "SHOOTER — najlepszy shooter w historii Stanford",
+        "szczegol": "Drużyna potrzebowała shootera. 4 lata — najlepszy w historii uczelni."
+      },
+      {
+        "etap": "Denver Nuggets (NBA)",
+        "rola": "DEFENDER — broni najlepszych graczy rywali. Nie rzuca, nie atakuje.",
+        "szczegol": "Jokić rzuca — Jones ma tylko bronić i dawać spacing."
+      }
+    ],
+    "wniosek": "Nie chodzi o to, co lubisz robić. Chodzi o to, czego drużyna potrzebuje. Spencer Jones wygrał dzięki adaptacji.",
+    "kontrast": "Największy problem: zawodnik który może grać tylko na swoich warunkach. Ja będę grał dobrze jak będziecie dawać mi to co chcę — taki zawodnik nie ma miejsca na profesjonalnym poziomie.",
+    "dla_scouta": "Pytanie kluczowe przy ocenie: 'Czy ten zawodnik potrafi zagrać w różnych rolach z tym samym zaangażowaniem?' To jest pytanie o długość kariery."
+  },
+
+  "spojnosc_trenera": {
+    "_source": "PZKosz Szkoła — Rafał Juć, Denver Nuggets",
+    "zasada": "Drużyna traci szacunek do trenera nie dlatego że go nie lubi — ale dlatego że jest NIESPÓJNY: mówi jedno, robi drugie.",
+    "typowy_przyklad": "Trener deklaruje: 'Cenimy obronę i rotacje.' W zaciętej końcówce wpuszcza skorera który nie broni. Drużyna widzi: 'Po co mam bronić?' — system się sypie.",
+    "analogia_rodzica": "Jak dziecko płacze — możesz dać tablet żeby było cicho. Ale to błąd. Zagryź zęby, nie dawaj — to jest jego lekcja. Tak samo trener: musisz być spójny z filozofią, nawet gdy boli.",
+    "pytania_do_trenera": [
+      "Jak chcę grać? (wizja)",
+      "Jak to osiągnę? (konkretna metodologia, nie tylko słowa)"
+    ],
+    "diagnoza_przyklad": "Trener chce grać szybko, ale ma 5-6 weteranów którzy nie będą biegać. Sprzeczność wizji z personelem. Drużyna to czuje i przestaje wierzyć w system.",
+    "wniosek": "Szatnia zjada trenera nie przez brak sympatii — ale przez brak spójności filozofii i decyzji.",
+    "dla_gm_scouta": "Oceniając kandydata na trenera pytaj o metodologię. Nie 'co chcesz osiągnąć' ale 'jak konkretnie to zrobisz'. Wizja bez metodologii = ładna przemowa bez efektów."
+  },
+
+  "narzedzia_trenerskie_juc": {
+    "_source": "PZKosz Szkoła — Rafał Juć, Denver Nuggets",
+    "zasada": "Tych rzeczy (charakter, coachability, rola) trzeba UCZYĆ systemowo przez cały sezon — nie jedną przemową raz na rok.",
+    "kluczowa_technika": "Nie mów zawodnikowi CO ma robić — pytaj DLACZEGO tak zrobił. Niech sam dojdzie do wniosku. Dialog > monolog. 'Dlaczego tak zagrałeś? A myślisz że to dobre? Jak rywal na to zareaguje?' — nagle zawodnik odkrywa moc swoich decyzji.",
+    "narzedzia": [
+      {
+        "id": "ocena_hustle",
+        "nazwa": "Ocena meczu poza statystykami",
+        "opis": "Raz wyrzuć statystyki. Oceń: hustle plays, energia, ofensywne zbiorki, pomoc kolegi. Wyróżnij publicznie zawodnika który zrobił coś dla grupy mimo kontuzji, zmęczenia, małych minut."
+      },
+      {
+        "id": "analiza_bledow",
+        "nazwa": "Analiza reakcji po błędach",
+        "opis": "Obserwuj czy zawodnik nie popełni błędu drugi raz — to jest sygnał charakteru. Celowo twórz sytuacje problemowe na treningu i obserwuj jak reagują."
+      },
+      {
+        "id": "wideo_feedback",
+        "nazwa": "Analiza wideo z zawodnikiem",
+        "opis": "Zawodnik nie widzi siebie z zewnątrz. Nagraj i pokaż: jak wraca do obrony, jak stoi w spacing, czy pokazuje ręce do podania. Zawodnik który mówił 'zawsze biegam' — po filmie zobaczył że ani nie biegał ani nie pokazywał rąk."
+      },
+      {
+        "id": "close_games",
+        "nazwa": "Close games na treningu",
+        "opis": "Ostatnie 5 minut przy remisie (np. 77:77 na zegarze). Zawodnik uczy się zachowania pod presją. Mike Tenorek (sztab kadry) używał tego do decydowania komu zaufać w końcówce meczu."
+      },
+      {
+        "id": "zmiana_rol",
+        "nazwa": "Zmiana ról na treningu",
+        "opis": "Jedynka gra jako piątka i odwrotnie. Najlepszy gracz ma tylko bronić przez 5 minut bez rzucania. Zawodnicy doceniają kolegi i uczą się adaptacji. Standard we Francji i Serbii."
+      },
+      {
+        "id": "tablica_reputacji",
+        "nazwa": "Tablica reputacji drużyny",
+        "opis": "Pytaj na wyjeździe: 'Co mówią o nas w województwie? Co myślą sędziowie, osoba sprzątająca halę, zawodnicy innych drużyn o tobie?' Szok terapeutyczny budujący świadomość reputacji."
+      },
+      {
+        "id": "rozmowy_1na1",
+        "nazwa": "Rozmowy 1:1 z zawodnikiem",
+        "opis": "Minimum raz w sezonie, sam na sam. Tylko pytania: Po co grasz koszykówkę? Kto cię wozi na mecze? Co mówią ci rodzice? To pozwala zrozumieć środowisko i motywację."
+      },
+      {
+        "id": "kontakt_z_rodzinami",
+        "nazwa": "Kontakt z rodzinami",
+        "opis": "Denver Nuggets ma dedykowaną pozycję: Players and Family Relationships. Tłumaczą rodzinom wizję na zawodnika i oczekiwania. Inaczej rodzice mówią coś przeciwnego niż trener — zawodnik jest rozdwojony."
+      }
+    ]
+  },
+
+  "cwiczenie_praktyczne": {
+    "_source": "Next Draft Foundation — Moduł 4",
+    "instrukcja": "Podczas oglądania fragmentu meczu: NIE oceniamy talentu.",
+    "co_oceniamy_wylacznie": ["BODY LANGUAGE", "COMMUNICATION", "EMOTIONAL REACTIONS", "EFFORT", "REAKCJĘ PO BŁĘDZIE"],
+    "zasady": [
+      "Skup się na tym, co niewidoczne w statystykach",
+      "Obserwuj uważnie, notuj konkrety",
+      "Zwracaj uwagę na powtarzające się zachowania",
+      "Szczegóły dziś, lepsze decyzje jutro"
+    ]
+  },
+
+  "dyssonans_rodzinny": {
+    "_source": "Transkrypcja M4, lekcja 1 — Rafał Jujcz",
+    "metafora": "Trener spędza z zawodnikiem 1.5h dziennie na treningu. Potem zawodnik wraca do domu, gdzie przez 2-3h jest z rodziną. Dziecko bardziej słucha rówieśników niż rodzica — ten sam mechanizm działa w koszykówce.",
+    "przyklad_dyssonansu": {
+      "trener_mowi": "Wracaj do obrony. Podawaj. Rób małe drobne rzeczy.",
+      "rodzina_mowi": "Rzucaj. Punktuj. Liczymy na ciebie. Statystyki."
+    },
+    "skutek": "Zawodnik żyje w środowisku, które może podważać to, czego uczy się na treningu. Dlatego rodzina tak bardzo wpływa na efekty pracy trenerskiej.",
+    "dla_scouta": "Podpisując zawodnika, podpisujemy go z całym pakietem — łącznie z rodziną. To nie chodzi o szczegóły (zawód taty, zarobki mamy), ale o to: jakie te osoby mają podejście i jaki to ma wpływ na performance?"
+  },
+
+  "dziennikarz_jako_scout": {
+    "_source": "Transkrypcja M4, lekcja 2 — Rafał Jujcz",
+    "kontekst": "Rafał Jujcz ukończył studia dziennikarskie. Przyznaje, że wykształcenie dziennikarskie jest jednym z największych atutów w pracy scouta.",
+    "dlaczego_dziennikarstwo_pomaga": [
+      "Umiejętność zadawania właściwych pytań",
+      "Przygotowanie do wywiadu / rozmowy z trenerem",
+      "Research i weryfikacja informacji",
+      "Pisanie zwięzłych, użytecznych raportów"
+    ],
+    "trend_w_nba": "Organizacje NBA tworzą nowe stanowiska: Director of Research, Director of Intel — i zatrudniają dziennikarzy, bo mają skill research + pytania + dostęp do informacji.",
+    "wniosek": "Największe błędy w scautingu to nie błędy oceny koszykarskiej — to błędy weryfikacji intel i oceny charakteru. Dlatego research i wywiad są równie ważne jak oglądanie meczu."
+  },
+
+  "trenerzy_sa_subiektywni": {
+    "_source": "Transkrypcja M4, lekcja 3 — Rafał Jujcz",
+    "zasada": "Trenerzy są zbyt blisko zawodników, żeby być zawsze obiektywni. Każdy zawodnik zostawia na nich 'rany' — bo ta relacja jest zażyła, emocjonalna i kształtowana przez sukcesy i porażki.",
+    "mechanizm": "Trenerzy formułują bardzo subiektywne wnioski. Potrzebują czasu, żeby nabrać dystansu do zawodnika.",
+    "jak_to_wykorzystac_jako_scout": [
+      "Zawsze pytaj o konkretne sytuacje, nie ogólne oceny",
+      "Dawaj trenerowi czas — rozmowa tuż po rozstaniu bywa nieobiektywna",
+      "Porównuj z innymi źródłami — szukaj wzorców, nie pojedynczych opinii"
+    ],
+    "przyklad": "Dzwonię po Intel. Trener mówi: 'Wszystko super, super zawodnik, super chłopak.' Pytam: 'Czy byś go podpisał drugi raz?' — i WTEDY dostaję odpowiedź, której szukałem."
+  },
+
+  "drzewo_genealogiczne_trenerow": {
+    "_source": "Transkrypcja M4, lekcja 3 — Rafał Jujcz",
+    "co_to_jest": "Narzędzie praktyczne: zmapuj u jakich trenerów zawodnik grał przez całą karierę i wyciągnij wnioski o tym, jakiego coachingu szuka i co go ukształtowało.",
+    "jak_robic": [
+      "Zrób chronologiczną listę trenerów z każdego sezonu",
+      "Określ styl każdego trenera (agresywny/wymagający, relacyjny, systemowy, analityczny)",
+      "Sprawdź, kiedy zawodnik grał najlepiej — u jakiego typu trenera?"
+    ],
+    "przyklad": "Jeśli grał u trzech serbskich, agresywnych trenerów 'in your face', którzy wymagają energii i agresji fizycznej — to znaczy, że taki hard coaching mu odpowiada i zna ten język.",
+    "wniosek": "Scout rozumie przeszłość → może przewidzieć przyszłość. Jaki trener będzie dla tego zawodnika optymalny?"
+  },
+
+  "pytanie_czy_podpisalby_znow": {
+    "_source": "Transkrypcja M4, lekcja 3 — Rafał Jujcz",
+    "zasada": "Kluczowe pytanie, które daje więcej niż 'super chłopak'.",
+    "pytanie": "Czy byś go podpisał drugi raz?",
+    "dlaczego_dziala": "Trenerzy i dyrektorzy sportowi często z automatu mówią 'super zawodnik, super chłopak' — bo tak jest bezpiecznie. Gdy pytasz 'czy byś podpisał znowu?' — wtedy wychodzi prawda: 'Nie, bo trzeba mu poświęcać za dużo czasu, jest emocjonalny, ciężko przeżywa porażki.'",
+    "praktyka": "Zadawaj to pytanie ZAWSZE podczas rozmów z byłymi trenerami, GMs i asystentami. To najważniejsze pytanie intel."
+  },
+
+  "adaptacja_vs_strefa_komfortu": {
+    "_source": "Transkrypcja M4, lekcja 3 — Rafał Jujcz",
+    "zasada": "Historia zmian klubów zawodnika mówi wiele o jego elastyczności i open mindedness.",
+    "sygnaly_ostrzegawcze": [
+      "Przez całą karierę grał w tej samej lidze / tym samym mieście",
+      "Raz wyjechał za granicę i szybko wrócił 'do strefy komfortu'",
+      "Nie zaadaptował się do innego stylu ligi, trenera, kultury"
+    ],
+    "przyklad": "Zawodnik przez całą karierę w lidze niemieckiej, wokół Monachium. Raz pojechał do Polski — inna pogoda, inny styl ligi, inny trener — nie zaadaptował się i wrócił. To istotna informacja przy decyzji transferowej.",
+    "co_szukamy": "Zawodnik, który przeszedł przez różne środowiska, zaadaptował się i rozwijał — ma wyższy potential fit w nowej organizacji."
+  },
+
+  "emocjonalna_stabilnosc_comebacks": {
+    "_source": "Transkrypcja M4, lekcja 4 — Rafał Jujcz",
+    "zasada": "W nowoczesnej koszykówce drużyny wracają z -20. To się dzieje TYLKO wtedy, kiedy jest emocjonalna stabilność.",
+    "co_niszczy_comebeck": "Jeden zawodnik o złym usposobieniu może sprawić, że drużyna straci charakter, zaczyna się kłócić i nie jest monolitem.",
+    "dla_scouta": "Obserwuj jak zawodnik zachowuje się, kiedy drużyna przegrywa o 15. Nie obserwuj jak reaguje gdy wygrywa.",
+    "co_oceniac": ["Reakcja na stratę piłki", "Zachowanie po nieudanym ataku", "Komunikacja z kolegami podczas przegranej serii", "Mowa ciała na ławce przy dużej stracie"]
+  },
+
+  "kontekst_wyjasniony_przykladem": {
+    "_source": "Transkrypcja M4, lekcja 5 — Rafał Jujcz",
+    "zasada": "Zanim ocenisz zawodnika jako 'nieprofesjonalnego' — zapytaj dlaczego.",
+    "przyklad_rafala": [
+      "Oceniał zawodnika jako nieprofesjonalnego (przestał pracować, brak zaangażowania)",
+      "Nie wiedział, że klub mu NIE PŁACIŁ przez kilka miesięcy",
+      "Albo powiedzieli mu, że go za chwilę zwolnią — co wpłynęło na jego motywację"
+    ],
+    "drugi_przyklad": [
+      "Zawodnik nie słucha trenera, jest 'trudny w utrzymaniu'",
+      "Okazuje się, że trener go oszukał, nie był fair albo prowadzi go w agresywny sposób, który zawodnik odrzuca"
+    ],
+    "wniosek": "Nie oceniaj zawodnika po zachowaniu bez kontekstu. Musimy wiedzieć CO powoduje dane zachowanie, żeby ocenić czy to charakter czy sytuacja.",
+    "zasada_praktyczna": "Jeden incydent w jednym klubie ≠ wzorzec. Sprawdź, co się działo w tym samym czasie w klubie i wokół zawodnika."
+  },
+
+  "intel_wymaga_srodowiska": {
+    "_source": "Transkrypcja M4, lekcja 6 — Rafał Jujcz",
+    "zasada": "Intel jest ważny — ale kontekst jest WAŻNIEJSZY. Intel bez odpowiedniego środowiska organizacyjnego nie jest nic wart.",
+    "warunki_konieczne": [
+      "Jasna rola i odpowiedzialność zawodnika",
+      "Silne leadership (GM, trener, kultura)",
+      "Zaufanie organizacji i kolegów z drużyny",
+      "Dobra kultura odpowiedzialności i profesjonalizmu"
+    ],
+    "bez_tych_warunkow": "Nawet dobry intel nie uratuje złego transferu — bo charakter w jednym miejscu może być problemem, a w innym asetem.",
+    "przyklad": "Jimmy Butler — w Minnesocie destrukcja, w Miami buduje pozytywną kulturę. Te same cechy charakteru. Inne środowisko. Inny wynik.",
+    "pytanie_przed_transferem": "Nie tylko: 'czy ten zawodnik jest dobry?' Ale: 'Czy NASZA organizacja jest gotowa uwolnić jego potencjał?'"
+  },
+
+  "good_information_wins": {
+    "mantra": "W scautingu liczy się nie opinia. Liczy się KONKRET.",
+    "zasady": [
+      "Szczegół pokazuje prawdę. Ogólnik — nic nie znaczy.",
+      "Kontekst + przykład = zrozumienie charakteru.",
+      "Lepsze informacje = lepsze decyzje = wygrana organizacja."
+    ],
+    "ogolny_raport": {
+      "ocena": "ZA OGÓLNY. ZA MAŁO. ZA MAŁO SZCZEGÓŁÓW. Trudno wyciągnąć wnioski — nie pomaga w podjęciu decyzji.",
+      "przyklady_zle": {
+        "CHARACTER": "Good kid.",
+        "WORK_ETHIC": "Works hard.",
+        "COACHABILITY": "Coachable.",
+        "LOCKER_ROOM": "Good teammate.",
+        "MOTIVATION": "Wants to get better."
+      }
+    },
+    "szczegolowy_raport": {
+      "ocena": "KONKRET. SZCZEGÓŁOWY. UŻYTECZNY. Pokazuje prawdziwy obraz zawodnika — pomaga w podjęciu lepszych decyzji.",
+      "przyklady_dobrze": {
+        "CHARACTER": "High character. Always respectful to staff and teammates. Stayed after practice to help clean up without being asked. Known in the program as someone people trust.",
+        "WORK_ETHIC": "First in the gym, last to leave. Example: During July workouts, he came in on his own every morning at 6:30 AM for 3 weeks to work on his shooting. Sets goals and tracks progress.",
+        "COACHABILITY": "Constantly asks for feedback. Example: After being benched in a tournament, asked coach what he needed to do to help the team and came back better the next game.",
+        "LOCKER_ROOM": "Highly respected by teammates. Example: Teammates voted him a captain two years in a row. Often seen encouraging others and holding teammates accountable.",
+        "MOTIVATION": "Driven to be great. Example: Has a journal where he writes daily goals. Talks about playing in the NBA and is willing to do whatever it takes to get there."
+      }
+    },
+    "regula_konkretu": "Pisz: OPINIA + KONTEKST + KONKRETNY PRZYKŁAD. Sama opinia bez przykładu = ogólnik."
+  },
+
+  "szatnia_jako_zrodlo_intelu": {
+    "_source": "Next Draft Foundation — Call 2 Q&A (Rafał Jujcz + Michał Gabyński)",
+    "zasada": "Zawodnicy pytani o innych zawodników dają część prawdy — twoim zadaniem jest złożyć pełny obraz ze wszystkich opinii.",
+    "jak_denver_uzywa_zawodnikow": "Rafał rozdaje kwestionariusze zawodnikom i pyta ich: kto jest najlepszym szuterem w lidze? kto jest najsilniejszy na boisku? Inna perspektywa z boiska niż z kancelarii.",
+    "metody_pozyskiwania_z_szatni": [
+      "Kwestionariusze dla zawodników (Denver Nuggets)",
+      "Nieformalne rozmowy z kapitanami i weteranami przed podpisaniem",
+      "Pytania o konkretnych graczy: 'Kto jest najlepszy na twojej pozycji w tej lidze?'",
+      "Rozmowy z potencjalnymi nowymi kolegami jeśli dostępne"
+    ],
+    "dlaczego_zawodnik_wie_wiecej": [
+      "Zasłony stawia na nim, nie na mnie",
+      "Zna dynamikę szatni i atmosferę od środka",
+      "Widzi reakcje pod presją w warunkach meczowych, których kibic nie widzi",
+      "Chemistry — szatnia musi zaakceptować człowieka, żeby zaakceptować koszykarza"
+    ],
+    "zasady_korzystania_z_szatni": [
+      "PYTAJ — ale nie wierz we wszystko ślepo",
+      "WERYFIKUJ u drugiego, trzeciego, czwartego źródła",
+      "UWZGLĘDNIAJ KONTEKST — zawodnik może mieć prywatny interes w ocenie kolegi",
+      "ŁĄCZ perspektywę boiska z perspektywą trenerską i danymi"
+    ],
+    "pulapka": "Zawodnicy mogą być stronniczy (rywalizacja), niepełnie widzieć obraz (brak dostępu do wszystkich), albo powiedzieć tylko część prawdy.",
+    "przyklad_denver": "W Denver możemy pozwolić sobie na zawodników z niższym IQ koszykarskim — bo mamy Jokića, który ich wykreuje. Gracz nienadający się gdzie indziej, w naszym systemie się odnajdzie. Znajomość własnej szatni decyduje o tym, kogo możesz wziąć.",
+    "dla_scouta": "Szatnia to źródło intelu, ale wymaga wielokrotnej weryfikacji. Nawet jeden zawodnik nie powinien decydować — szukaj wzorców, nie jednostkowych opinii."
+  },
+
+  "prawo_weta": {
+    "_source": "Next Draft Foundation — Call 2 Q&A (Rafał Jujcz)",
+    "definicja": "Raz w off-season dyrektor sportowy lub scout może wystawić 'czerwoną kartkę' — kategoryczne nie wobec jednego konkretnego zawodnika, niezależnie od upierania się trenera.",
+    "jak_dziala": "Obie strony (trener + dyrektor/scout) wymieniają się propozycjami, rozmawiają, wymieniają — ale jest jeden moment w roku, gdy można powiedzieć 'za wszelką cenę tego zawodnika nie podpisujemy'.",
+    "kiedy_uzyc": [
+      "Fatalne informacje z intelu (zaufanie, profesjonalizm, locker room)",
+      "Absolutny brak fit ze stylem gry i filozofią",
+      "Informacje, których trener nie zna (off the record background)"
+    ],
+    "dlaczego_raz_w_roku": "Jeśli nadużyjesz prawa weta, tracisz relację z trenerem i jego zaufanie. Jeden głos rocznie — ważony i uzasadniony — ma realną siłę.",
+    "co_scout_robi_zamiast_weta": "Edukuje trenera, zadaje właściwe pytania, pokazuje kontrargumenty, prezentuje alternatywy. Weto to ostateczność — nie codzienne narzędzie.",
+    "dla_scouta": "Prawo weta to broń — używaj ją raz, z pełnym uzasadnieniem. Codzienna praca scouta to edukacja i dialog, nie autorytarne veto."
+  },
+
+  "komunikacja_przy_trade_rumors": {
+    "_source": "Next Draft Foundation — Call 2 Q&A (Rafał Jujcz — case Jaylen Brown/Boston)",
+    "zasada": "Bądź blisko, bądź szczery, bądź z agentem.",
+    "dlaczego_wazna_komunikacja": [
+      "Zawodnik, który nie wie co się dzieje z jego przyszłością, nie może się skupić na grze",
+      "Piramida potrzeb Maslowa — najpierw stabilizacja, potem performance",
+      "Niepewność o kontrakt przekłada się bezpośrednio na produkcję boiskową"
+    ],
+    "co_sie_NIE_powinno_zdarzyc": "Zawodnik dowiaduje się o swoim statusie z mediów społecznościowych, od osób trzecich — albo wprost nie dostaje żadnej informacji od klubu.",
+    "jak_to_robic_dobrze": [
+      "Regularna komunikacja z zawodnikiem — być blisko, być szczerym",
+      "Kontakt z agentem — tłumacz sytuację, bądź head of the curve",
+      "Nie kłamać — kłamstwo odkryte niszczy relację nieodwracalnie"
+    ],
+    "zmienna_ktora_decyduje": "Czy zawodnik CHCE odejść, czy klub go wymienia wbrew jego woli — zupełnie inna sytuacja psychologiczna i różne skutki dla locker room.",
+    "dla_scouta": "Zawodnik o niepewnym statusie transferowym to red flag dla jego performance — monitoruj jego grę i zachowanie podczas plotek. Klub, który nim zarządza, musi komunikować — inaczej strata jest podwójna: i gracz odchodzi i gra źle do czasu odejścia."
+  }
+}

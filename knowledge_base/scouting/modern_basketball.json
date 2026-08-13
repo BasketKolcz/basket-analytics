@@ -1,0 +1,298 @@
+{
+  "_source": "Next Draft Foundation — Moduł 3",
+  "_comment": "Filozofia nowoczesnej koszykówki — funkcja zamiast pozycji, co naprawdę liczy się dziś",
+  "_program_use": "Kontekst filozoficzny dla całego modułu scoutingowego. Tooltips, nagłówki, intro sekcji.",
+
+  "wstep_m3": {
+    "_source": "Next Draft Foundation — Moduł 3, tekst wprowadzający",
+    "kontekst": "Po M1 (obserwacja meczu) i M2 (wnioski i raporty) M3 skupia się na ocenie zawodnika przez rolę, wpływ na drużynę i dopasowanie do wyższego poziomu.",
+    "czego_sie_dowiesz": [
+      "Jak definiować archetyp zawodnika",
+      "Jak oceniać jego rolę ofensywną i defensywną",
+      "Czym są versatility, scalability i playoff viability",
+      "Jak analizować wpływ zawodnika na wygrywanie",
+      "Jak oceniać dopasowanie do konkretnych partnerów, ustawień i systemów gry",
+      "Dlaczego profesjonalny scouting polega na ocenie kontekstu, a nie tylko talentu czy statystyk"
+    ],
+    "blad_poczatkujacych": "Skupianie się wyłącznie na tym, co zawodnik robi z piłką.",
+    "4_kluczowe_pytania_m3": [
+      "Jaką rolę ten zawodnik może pełnić?",
+      "Obok jakich zawodników wygląda najlepiej?",
+      "Czy jego styl gry pomaga drużynie wygrywać?",
+      "Czy jego wartość utrzyma się po zmianie ligi, poziomu lub roli?"
+    ],
+    "praca_domowa_6_pytan": [
+      "Obok jakich zawodników wygląda najlepiej?",
+      "Jakie role może pełnić?",
+      "Jak wpływa na funkcjonowanie drużyny po obu stronach boiska?",
+      "Czy jego gra pomaga wygrywać?",
+      "Czy jego skillset skaluje się na wyższy poziom?",
+      "W jakim ustawieniu i systemie byłby najbardziej wartościowy?"
+    ],
+    "materialiy_dodatkowe": ["Case Study", "Arkusz Oceny Zawodnika przez Rolę"],
+    "cel_modulu": "Celem scoutingu nie jest znalezienie najbardziej utalentowanego zawodnika. Celem jest znalezienie zawodnika, który najlepiej pomoże drużynie wygrywać."
+  },
+
+  "nowoczesna_koszykowka": {
+    "definicja": "Nowoczesna koszykówka = Koszykówka Funkcji",
+    "cytat": "Modern basketball is less about positions and more about functions.",
+    "najwazniejsze_funkcje": [
+      "Tworzenie przewag",
+      "Spacing",
+      "Switchability",
+      "Decision Making",
+      "Versatility",
+      "Defensive Flexibility"
+    ],
+    "zasada": "Oceniamy zawodnika przez pryzmat funkcji, jaką pełni — nie numeru na koszulce."
+  },
+
+  "co_liczy_sie_dzis": {
+    "najwazniejsze_pytania": [
+      "Czy zawodnik podejmuje szybkie decyzje?",
+      "Czy pomaga dobrym graczom wyglądać jeszcze lepiej?",
+      "Czy jego styl gry pomaga wygrywać?",
+      "Czy można go targetować (wykorzystać defensywnie)?",
+      "Czy może zostać na boisku w playoff basketball?"
+    ],
+    "cytat": "Skupiamy się na funkcji i wpływie, nie na numerze pozycji.",
+    "framework_oceny": ["FUNCTION", "IMPACT", "WINNING"],
+    "player_roles": ["PRIMARY", "SECONDARY", "OPTIMUM ROLE"],
+    "game_impact_metryki": {
+      "offensive_impact": "+++",
+      "defensive_impact": "++",
+      "overall_impact": "+++"
+    }
+  },
+
+  "archetypy_framework": {
+    "nowoczesne_organizacje_mysla_przez": [
+      {
+        "id": "archetyp",
+        "nazwa": "ARCHETYP",
+        "pytanie": "Kim jest na boisku?"
+      },
+      {
+        "id": "rola",
+        "nazwa": "ROLA",
+        "pytanie": "Jaką rolę pełni w zespole?"
+      },
+      {
+        "id": "funkcja",
+        "nazwa": "FUNKCJA",
+        "pytanie": "Jaką funkcję realizuje?"
+      },
+      {
+        "id": "scalability",
+        "nazwa": "SCALABILITY",
+        "pytanie": "Jak jego gra skaluje się w różnych kontekstach?"
+      }
+    ],
+    "nie": "CZY TO PF?",
+    "ale": "JAK POMAGA WYGRYWAĆ?",
+    "klucz": "Nie chodzi o to, gdzie grał do tej pory, tylko CO ROBI NA BOISKU i jak to przekłada się na wygrywanie.",
+    "mantra": "Focus on Function. Not Labels.",
+    "notatki_scouta": ["Funkcja", "Wpływ", "Kontekst", "Dopasowanie"]
+  },
+
+  "case_study_framework": {
+    "_source": "Next Draft Foundation — Moduł 3",
+    "opis": "Kompleksowa ocena zawodnika w kontekście ról, dopasowania do systemu i potencjału na najwyższym poziomie.",
+    "cytat": "Nie chodzi o to, kim zawodnik jest dzisiaj. Chodzi o to, jak może pomóc w zwyciężaniu.",
+    "oceń_przez": [
+      { "id": "archetyp", "nazwa": "ARCHETYP" },
+      { "id": "role_ofensywne", "nazwa": "ROLE OFENSYWNE" },
+      { "id": "role_defensywne", "nazwa": "ROLE DEFENSYWNE" },
+      { "id": "versatility", "nazwa": "VERSATILITY" },
+      { "id": "scalability", "nazwa": "SCALABILITY" },
+      { "id": "playoff_viability", "nazwa": "PLAYOFF VIABILITY" }
+    ],
+    "pytania_scoutingowe": [
+      "Obok jakich zawodników wygląda najlepiej?",
+      "Jakie role może pełnić?",
+      "Czy można go targetować?",
+      "Czy jego styl gry pomaga wygrywać?",
+      "Czy jego skillset skaluje się na wyższy poziom?"
+    ],
+    "cel_scoutingu": "Celem nie jest znaleźć talent. Celem jest znaleźć zawodnika, który podniesie poziom drużyny."
+  },
+
+  "koszykowka_hybrydowa": {
+    "_source": "Transkrypcja M3, lekcja 1 — Rafał Jujcz",
+    "definicja": "Era koszykówki bez pozycji — gracze, których parametry fizyczne nie predysponują do klasycznych ról 1-5.",
+    "paradoks": "Jokić (center) był najlepiej podającym graczem NBA, Westbrook (PG) najlepiej zbierającym — te same tradycyjne pozycje, kompletnie inne funkcje.",
+    "metafora": "Koszykówka to niekończące się rozwiązywanie problemów.",
+    "nowoczesny_vs_stary_trener": {
+      "problem": "Drużyna ma za dużo strat",
+      "stary_trener": "Wstaw kolejnego rozgrywającego — mamy problem z rozgrywaniem",
+      "nowoczesny_trener": "Skąd wynikają straty? Może potrzebujemy short-roll big, który rozegra piłkę pod presją full-courtu",
+      "wniosek": "Ten sam problem, inna diagnoza, inne rozwiązanie — kontekst i archetype zawodnika mają kluczowe znaczenie"
+    },
+    "przyszlosc_koszykowki": "Koszykówka przyszłości należy do graczy, którzy szybko myślą, adaptują się do różnych ról, pomagają gwiazdom, zwiększają flexibility drużyny i pomagają wygrywać."
+  },
+
+  "platnosc_za_wszechstronnosc": {
+    "_source": "Transkrypcja M3, lekcja 5",
+    "kiedys": "Płacono za statystyki, punkty i wzrost.",
+    "dzis": "Największą wartość mają gracze wszechstronni.",
+    "powod": "Trener ma ograniczone timeouty — jego główne narzędzie wpływu na mecz to zmiany i line-upy. Im więcej kombinacji, tym większa przewaga taktyczna."
+  },
+
+  "8_cech_denver_nuggets": {
+    "_source": "Transkrypcja M3, lekcja 5 — konkretna lista Rafała Jujcza z Denver Nuggets",
+    "intro": "Z doświadczenia Rafała Jujcza w Denver Nuggets — 8 cech, których najlepsze organizacje aktywnie szukają:",
+    "cechy": [
+      { "nr": 1, "nazwa": "Shooting", "opis": "Rzucanie z różnych pozycji z wysoką skutecznością — największa i stale rosnąca wartość rynkowa" },
+      { "nr": 2, "nazwa": "Decision Making", "opis": "Dobre podejmowanie decyzji, zwłaszcza pod presją — inteligencja koszykarska" },
+      { "nr": 3, "nazwa": "Wszechstronność", "opis": "Wiele różnych ról na boisku — zwiększa wpływ i wartość dla line-upów" },
+      { "nr": 4, "nazwa": "Rozwój w wymagających środowiskach", "opis": "Jak zawodnik radzi sobie pod presją, z fizycznością, w lepszych ligach" },
+      { "nr": 5, "nazwa": "Processing Speed", "opis": "Szybkość czytania gry i reagowania zanim zrobi to przeciwnik" },
+      { "nr": 6, "nazwa": "Akceptacja roli", "opis": "Gotowość do przyjęcia roli pomagającej drużynie, nawet poświęcenie statystyk dla zespołu" },
+      { "nr": 7, "nazwa": "Mentalność zwycięzcy", "opis": "Chęć wygrywania, dawanie z siebie wszystko nawet kiedy nie idzie (0/5 za 3 ale wraca do obrony)" },
+      { "nr": 8, "nazwa": "Wysoki charakter", "opis": "Odpowiedzialność, dobra etyka pracy, pokora, wpływ na organizację" }
+    ],
+    "uwaga": "Nie znajdziemy idealnego zawodnika — ale musimy wiedzieć co szukać i jak to oceniać."
+  },
+
+  "budowanie_wokol_gwiazdy": {
+    "_source": "Transkrypcja M3, lekcja 6 — Denver Nuggets model",
+    "zasada": "Szukamy graczy, którzy pasują do naszego personelu, układów piątkowych i filozofii — nie odwrotnie.",
+    "przyklad_jokic": {
+      "gwiazda": "Nikola Jokić",
+      "styl_gry": "Short roll, drop, dużo podań, high IQ playmaking",
+      "jakiego_gracza_szukamy": [
+        "Ścinają i grają handoffy",
+        "Rzucają catch & shoot",
+        "Atletyczni, grają na linii podania",
+        "Mogą ratować Jokića — bronić przy obręczy",
+        "Silni fizycznie, mogą switchować"
+      ],
+      "obrona": "Jokić broni w dropie, więc potrzebujemy atletów, którzy grają na linii podania i fizycznych defensorów"
+    },
+    "wniosek": "Fit > Talent. Samo dodawanie talentu nie poprawi funkcjonowania drużyny — często wręcz może je osłabić."
+  },
+
+  "gracz_musi_byc_scautem": {
+    "_source": "Transkrypcja M3, lekcja 6",
+    "zasada": "Dobry zawodnik musi być scautem — musi wiedzieć co dzieje się na boisku.",
+    "praktycznie": "Gdy siedzisz na ławce — oglądaj, co się dzieje na boisku. Nie gadaj, nie odwracaj uwagi. To jest nauka i decyzje.",
+    "dla_trenera": "Dobry trener musi być scautem — musi rozumieć silne i słabe strony, role i archetypy swoich zawodników.",
+    "dla_scouta": "Scout musi rozumieć procesy budowania piątek — bez tego nie może dobrze rekomendować."
+  },
+
+  "najwazniejsze_wnioski_m3": {
+    "_source": "Next Draft Foundation — Moduł 3, slajd końcowy",
+    "wnioski": [
+      {
+        "nr": 1,
+        "tresc": "Nowoczesny scouting ocenia funkcję, nie numer pozycji."
+      },
+      {
+        "nr": 2,
+        "tresc": "Najbardziej wartościowi gracze są versatile, podejmują szybkie decyzje i pomagają drużynie funkcjonować."
+      },
+      {
+        "nr": 3,
+        "tresc": "Najlepsze organizacje szukają: scalability, versatility, shooting, decision making, high character."
+      }
+    ],
+    "cechy_szukane_przez_top_organizacje": [
+      "Scalability",
+      "Versatility",
+      "Shooting",
+      "Decision making",
+      "High character"
+    ],
+    "framework_scouta_5_krokow": [
+      "ZROZUMIEĆ FUNKCJĘ",
+      "OCENIAĆ DECYZJE",
+      "PATRZEĆ NA WPŁYW",
+      "MYŚLEĆ DŁUGOTERMINOWO",
+      "GRAĆ DLA ZESPOŁU"
+    ]
+  },
+
+  "archetyp_vs_pozycja": {
+    "_source": "Next Draft Foundation — slajd 'Archetyp > Pozycja'",
+    "tytul": "ARCHETYP > POZYCJA",
+    "blad_wiekszosci_trenerow": {
+      "blad": "Szukamy centra.",
+      "odpowiedz": "NIE.",
+      "zasada": "Nie chodzi o pozycję. Chodzi o to, CO dany zawodnik robi na parkiecie.",
+      "cytat": "Znajdź odpowiedniego człowieka do roli, nie wciskaj na siłę rolę w zawodnika."
+    },
+    "przyklad_center": {
+      "pozycja_tradycyjna": "CENTER",
+      "opis": "Zamiast szukać 'centra' — szukaj konkretnego archetypu centra:",
+      "role_zamiast_pozycji": [
+        {
+          "id": "rim_runner",
+          "nazwa": "RIM RUNNER",
+          "ikona": "run",
+          "opis": "Zawodnik, który biega po linii bramkowej, korzysta z pick-and-roll i kończy pod koszem. Kluczowa cecha: mobilność i timing cięcia."
+        },
+        {
+          "id": "stretch_5",
+          "nazwa": "STRETCH 5",
+          "ikona": "shooting",
+          "opis": "Center z wiarygodnym rzutem z dystansu — otwiera spacing dla całej drużyny. Kluczowa cecha: shooting touch z mid-range lub 3PT."
+        },
+        {
+          "id": "post_scorer",
+          "nazwa": "POST SCORER",
+          "ikona": "post",
+          "opis": "Tradycyjny center z zestawem ruchów w poście. Kluczowa cecha: footwork, touch i siła w malowanym."
+        },
+        {
+          "id": "hub_passer",
+          "nazwa": "HUB PASSER",
+          "ikona": "assist",
+          "opis": "Center jako punkt dystrybucji piłki — rozumie grę, tworzy przewagi podaniem. Kluczowa cecha: vision i basketball IQ."
+        },
+        {
+          "id": "switch_big",
+          "nazwa": "SWITCH BIG",
+          "ikona": "switch",
+          "opis": "Center zdolny do krycia na obwodzie, przełączania się na mniejszych graczy. Kluczowa cecha: footspeed i defensive versatility."
+        }
+      ]
+    },
+    "przyklad_sf": {
+      "pozycja_tradycyjna": "SF",
+      "opis": "Zamiast szukać 'small forwarda' — szukaj konkretnego archetypu skrzydłowego:",
+      "role_zamiast_pozycji": [
+        {
+          "id": "stopper",
+          "nazwa": "STOPPER",
+          "ikona": "shield",
+          "opis": "Specjalista defensywny — neutralizuje najlepszego zawodnika rywala. Kluczowa cecha: athletyzm obronny i intensywność."
+        },
+        {
+          "id": "movement_shooter",
+          "nazwa": "MOVEMENT SHOOTER",
+          "ikona": "shooting",
+          "opis": "Strzelec w ruchu — grozi rzutem ze spacingu lub po cięciach. Kluczowa cecha: shooting off movement i bez piłki."
+        },
+        {
+          "id": "transition_finisher",
+          "nazwa": "TRANSITION FINISHER",
+          "ikona": "fast",
+          "opis": "Dominuje w szybkich akcjach — atakuje kosz przed ustawieniem obrony. Kluczowa cecha: sprint, athletic finishing."
+        },
+        {
+          "id": "connector",
+          "nazwa": "CONNECTOR",
+          "ikona": "connect",
+          "opis": "Łącznik — dobra podaż, drive-and-kick, pomaga innym. Kluczowa cecha: decision-making i playmaking dla drugich."
+        },
+        {
+          "id": "shot_creator",
+          "nazwa": "SHOT CREATOR",
+          "ikona": "create",
+          "opis": "Twórca rzutów — potrafi samodzielnie stworzyć sobie sytuację rzutową. Kluczowa cecha: ball-handling + finishing."
+        }
+      ]
+    },
+    "zasada_praktyczna": "Przed rekrutacją: zamiast wpisywać pozycję, wpisz archetyp. Zamiast 'szukamy centra' → 'szukamy Rim Runnera z mobilnością na obwodzie'. To fundamentalnie zmienia, kogo szukasz i jak go oceniasz."
+  }
+}

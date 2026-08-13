@@ -1,0 +1,193 @@
+{
+  "_weryfikacja_zewnetrzna": {
+    "sila_dowodu": "kwestionowane",
+    "krytyka": "FinxS Sports to komercyjne rozwinięcie rodziny DISC/Extended DISC i dziedziczy te same zastrzeżenia — brak niezależnie zwalidowanej trafności predykcyjnej '18 kompetencji'. Traktować jako narzędzie autorefleksji i rozmowy trener↔zawodnik, nie jako pomiar przewidujący sukces.",
+    "szczegoly_i_zrodla": "Patrz contested_claims.json → tezy.disc_jako_narzedzie_diagnostyczne."
+  },
+  "_source": "FinxS Sports Competence Assessment — raporty 'Athlete' + 'Coach' (Athlete Samuel, FinxS Sports Team, data badania 02.12.2019 / wydruk 03.05.2019). Copyright 2011-19 FinxS Ltd. Materiał psychometryczny wykorzystany jako referencja narzędzia oceny mentalnej zawodnika.",
+  "_comment": "FinxS to psychometryczne narzędzie mierzące 18 niezależnych kompetencji sportowych (mentalnych). Żadna kompetencja nie jest 'lepsza' od innej — każda może być ścieżką do sukcesu; wysoki wynik = cecha naturalna (mniej energii, by ją wykorzystać), niski = wymaga świadomego wysiłku. Raport 'Athlete' opisuje kompetencje dla zawodnika (pytania do autorefleksji), raport 'Coach' dodaje warstwę techniczną: komponenty składowe, kompetencje wspierające (supporting) i zapobiegające ryzyku (preventing) oraz wskazówki dla trenera. Uzupełnia filar 'charakter' w player_evaluation.json oraz intel_background.json (charakter > talent).",
+  "_program_use": "Referencja przy budowie modułu oceny mentalnej / charakteru zawodnika w karcie scoutingowej. Framework 18 kompetencji może posłużyć jako checklist profilu psychologicznego, a 3 indeksy (Sports/Training/Competition) jako sposób agregacji samoświadomości zawodnika. Przykład 'Samuel' pokazuje jak interpretować kombinację skrajnych wyników (np. wysoki Extremism+Optimism+Impatience przy niskim Discipline+Preparation+Self-Care).",
+
+  "framework": {
+    "nazwa": "FinxS Sports Competence Assessment",
+    "co_mierzy": "18 niezależnych kompetencji sportowych (mentalnych) + 3 indeksy zbiorcze",
+    "skala": "0–100% dla każdej kompetencji. Wyższy wynik = cecha bardziej naturalna dla zawodnika (łatwiej ją wykorzystać). Zielony = mocna/naturalna, czerwony = wymaga świadomego wysiłku i energii.",
+    "zasada_kluczowa": "Żadna kompetencja nie jest z definicji lepsza od innej. Najbardziej naturalne kompetencje (najwyższe wyniki) to zwykle te, którymi zawodnik najłatwiej zdobędzie przewagę konkurencyjną.",
+    "dwa_raporty": {
+      "athlete": "Dla zawodnika — opis kompetencji + pytania do autorefleksji (samodzielnie lub z trenerem).",
+      "coach": "Dla trenera — dodatkowo: komponenty składowe każdej kompetencji (ocena GOOD/STRONG/MEDIOCRE/WEAK), kompetencje wspierające (supporting), kompetencje zapobiegające ryzyku (preventing) oraz wskazówki jak prowadzić danego zawodnika."
+    },
+    "uwaga_pronoun": "Raporty używają rodzajowo neutralnego 'they' — narzędzie nie zakłada płci zawodnika."
+  },
+
+  "kompetencje": [
+    {
+      "en": "Egoism",
+      "pl": "Egoizm / potrzeba bycia w centrum",
+      "wysoki": "Chce się wyróżniać, potrzebuje uwagi, lepiej działa jako centralna postać.",
+      "niski": "Nie potrzebuje eksponować siebie, rozumie potrzeby innych, potrafi czekać na swoją kolej, lepiej gra gdy nie jest w centrum uwagi, nie tworzy konfliktów z rywalami.",
+      "komponenty": ["Getting attention", "Being the best", "Focus on myself"]
+    },
+    {
+      "en": "Self-Care",
+      "pl": "Dbanie o siebie / prewencja",
+      "wysoki": "Świadomie dba o zdrowie, regenerację i ćwiczenia prewencyjne, unika ryzyka kontuzji.",
+      "niski": "Niecierpliwy w rozwoju, potrafi ryzykować długoterminowe zdrowie, mało skupiony na prewencji — chce spędzać maksimum czasu na właściwym treningu sportu.",
+      "komponenty": ["Ability to stop", "Conscientiousness", "Risk avoidance"]
+    },
+    {
+      "en": "Extremism",
+      "pl": "Ekstremizm / przekraczanie granic",
+      "wysoki": "Gotów iść tak daleko jak się da — i dalej. Lubi dłuższe godziny pracy, więcej powtórzeń niż inni; osiąganie i przekraczanie własnych granic to silny motywator.",
+      "niski": "Pracuje w rozsądnych granicach, nie dąży do skrajności wysiłkowej.",
+      "komponenty": ["More", "Never enough", "Exceeding limits"]
+    },
+    {
+      "en": "Perfectionism",
+      "pl": "Perfekcjonizm / dbałość o detal",
+      "wysoki": "Ma dbałość o szczegół, trzyma się procesu krok po kroku, systematyczny, nie 'idzie na skróty', wierzy że detal daje najlepszy efekt.",
+      "niski": "Bardziej impulsywny i spontaniczny w treningu, lubi różnorodność i eksperymenty, ufa temu jak się czuje podczas/po treningu bardziej niż realizacji całego planu.",
+      "komponenty": ["Never skipping", "Detail focus", "Getting it right"]
+    },
+    {
+      "en": "Competitive Power",
+      "pl": "Siła rywalizacji",
+      "wysoki": "Skupia całą uwagę na tym jak wygrać, nie odpuszcza na żadnym etapie, żąda rewanżu aż stanie na najwyższym podium; pokonanie rywala ważniejsze niż bycie najlepszym — czasem wygrać za wszelką cenę.",
+      "niski": "Lubi wygrywać, ale rozumie że nie zawsze to możliwe; dostrzega dobre elementy własnego występu nawet bez osiągnięcia celu, ceni sam sport i stabilny długoterminowy rozwój.",
+      "komponenty": ["Winning", "Anything to win", "Being first"]
+    },
+    {
+      "en": "Rhythm & Flow",
+      "pl": "Rytm i flow",
+      "wysoki": "Łatwo osiąga stan flow, żyje chwilą na treningu i w meczu, nie zwraca uwagi na nic poza własnym odczuciem — akcje bardziej się 'dzieją' niż są świadomie wykonywane.",
+      "niski": "Trudniej wchodzi w płynność, bardziej analizuje działania.",
+      "komponenty": ["Easy flow", "No thinking", "Rhythm"]
+    },
+    {
+      "en": "Goal Focus",
+      "pl": "Skupienie na celu",
+      "wysoki": "Zawsze wie 'dlaczego', każdy trening ma powód, stały fokus na celu; ocenia każdy aspekt życia przez pryzmat celu, akceptuje w otoczeniu tylko osoby pomagające go osiągnąć.",
+      "niski": "Mniej ukierunkowany, cele bardziej płynne.",
+      "komponenty": ["Goal awareness", "One goal", "Solely the goal"]
+    },
+    {
+      "en": "Repetitiveness",
+      "pl": "Powtarzalność",
+      "wysoki": "Ma cierpliwość do powtórzeń, skupia się na każdym powtórzeniu, wierzy że repetycja buduje najlepsze umiejętności i stabilny poziom.",
+      "niski": "Nie wierzy w nudne, powtarzalne treningi; chce sukcesu za pierwszym razem i gdy poczuje 'umiem to', jest gotów iść dalej; woli wiele różnych sposobów niż jeden.",
+      "komponenty": ["Liking repetitions", "Power of repetitions", "Just doing it"]
+    },
+    {
+      "en": "Momentary Concentration",
+      "pl": "Koncentracja chwilowa",
+      "wysoki": "Potrafi w pełni skupić umysł na następnym treningu/meczu, blokuje wszystko inne, nie daje się rozproszyć, nie denerwuje się.",
+      "niski": "Umysł łatwo dryfuje od myśli do myśli, czujny na otoczenie, często zaczyna niedostatecznie przygotowany, bywa że traci koncentrację.",
+      "komponenty": ["Blocking out", "Peace of mind", "Focus on the moment"]
+    },
+    {
+      "en": "Impatience",
+      "pl": "Niecierpliwość",
+      "wysoki": "Nie ma cierpliwości do czekania — gdy czegoś chce, bierze to natychmiast; nie czeka na swoją kolej, zabiega o uwagę trenera/sprzęt, nie toleruje zespołu/sztabu który nie daje mu tego czego potrzebuje od razu.",
+      "niski": "Cierpliwy, potrafi czekać na swój moment.",
+      "komponenty": ["No waiting", "Being first", "Now"]
+    },
+    {
+      "en": "Aggression",
+      "pl": "Agresja / gotowość do konfrontacji",
+      "wysoki": "Zawsze gotów rzucić wyzwanie, nie boi się nikogo — im silniejszy rywal/trudniejsza sytuacja, tym bardziej go to napędza; nie zawsze postrzegany jako miły.",
+      "niski": "Szanowany za dawanie przestrzeni innym, uprzejmy, nie okazuje nadmiernej agresji, utrzymuje panowanie nad sobą w opozycji.",
+      "komponenty": ["Ready to challenge", "Confronting", "Defending oneself"]
+    },
+    {
+      "en": "Enjoyment",
+      "pl": "Czerpanie radości / uspołecznienie",
+      "wysoki": "Ceni socjalizację i zabawę w sporcie, czerpie radość z procesu.",
+      "niski": "Nie ceni socjalizowania się, zwykle nieszczęśliwy do końca zawodów i dopóki wynik nie jest taki jak chciał; komunikuje tylko to co konieczne, potrafi wyrażać się w sposób bezpośredni i wymagający.",
+      "komponenty": ["Influencing others", "Power of play", "Having fun"]
+    },
+    {
+      "en": "Bouncing Back",
+      "pl": "Odbijanie się po porażce (resilience)",
+      "wysoki": "Nie wybiera łatwej drogi rozwijając umiejętność, nie akceptuje że coś jest nieosiągalne; gotów pracować długo, próbować różnych podejść, powtarzać aż będzie zadowolony; po porażce wraca silniejszy.",
+      "niski": "Rzadko ma upór by dalej dążyć do trudnych celów po niepowodzeniu; gdy coś nie wychodzi szybko traci motywację; trudno mu wstać silniejszym, akceptuje porażki.",
+      "komponenty": ["Motivation from failure", "Not giving up", "As many times as it takes"]
+    },
+    {
+      "en": "Discipline",
+      "pl": "Dyscyplina",
+      "wysoki": "Trzyma się planu bez wyjątków, robi to co trzeba niezależnie od nastroju.",
+      "niski": "Emocjonalny zawodnik — nastrój dnia decyduje jak ściśle realizuje plan; woli robić coś innego, jeśli zaplanowana aktywność nie wydaje się łatwa lub wymaga dodatkowego wysiłku.",
+      "komponenty": ["No exceptions", "Sticking to the plans", "Doing what is needed"]
+    },
+    {
+      "en": "Pressure Control",
+      "pl": "Kontrola presji",
+      "wysoki": "Potrafi występować na wysokim poziomie mimo presji/wysokich oczekiwań, często gra lepiej gdy stawka rośnie, zachowuje zimną krew.",
+      "niski": "Lepiej występuje w rutynowych zawodach niż w tych z dodatkową presją; utrzymuje przeciętny poziom stabilnie, woli by żaden moment nie był ważniejszy od innego.",
+      "komponenty": ["Keeping the cool", "Pressure performance", "External pressure"]
+    },
+    {
+      "en": "Preparation",
+      "pl": "Przygotowanie / rutyny",
+      "wysoki": "Perfekcyjne przygotowanie, rutyny przedmeczowe, przygotowuje się do wygranej.",
+      "niski": "Inne nastawienie w meczu i poza nim; bardziej wyluzowany przed treningiem niż zawodami, bywa spóźniony lub nieprzygotowany, niższy poziom dyscypliny gdy nie rywalizuje.",
+      "komponenty": ["Perfection in preparation", "Preparing to win", "Routines"]
+    },
+    {
+      "en": "Optimism",
+      "pl": "Optymizm",
+      "wysoki": "Silna wiara, także w trudnych czasach, że wyniknie z tego coś dobrego; nie traci nadziei, ufa że znajdzie sposób na pokonanie przeszkód.",
+      "niski": "Mniej ufny wobec przyszłości, szybciej traci nadzieję.",
+      "komponenty": ["Recovering", "Positive thinking", "Power of trust"]
+    },
+    {
+      "en": "Sensing Intelligence",
+      "pl": "Inteligencja sensoryczna / świadomość",
+      "wysoki": "Wrażliwy na bodźce wewnętrzne i zewnętrzne, świadomy jak wpływają na niego, potrafi wykorzystać zmysły i zrozumienie sytuacji na swoją korzyść.",
+      "niski": "Mniej wyczulony na bodźce i emocje w otoczeniu.",
+      "komponenty": ["Awareness of emotions", "Adjusting behavior", "Managing emotions"]
+    }
+  ],
+
+  "indeksy": {
+    "opis": "Trzy indeksy zbiorcze agregujące kompetencje. Sports Index typowo koreluje z wiekiem i doświadczeniem — bardzo młodzi zawodnicy mają często niższy Sports Index (brak perspektywy do obserwacji własnego zachowania). Niski indeks nie oznacza że zawodnik nie odniesie sukcesu, ale sukces jest łatwiejszy gdy zna się swoje mocne strony.",
+    "sports_index": "Ogólna miara jak dobrze zawodnik jest świadomy swoich mocnych stron i jak silne one są.",
+    "training_index": "Jak silne są kompetencje związane głównie ze środowiskiem TRENINGOWYM.",
+    "competition_index": "Jak silne są kompetencje związane głównie ze środowiskiem STARTOWYM/MECZOWYM."
+  },
+
+  "raport_coach_warstwa_techniczna": {
+    "komponenty_skladowe": "Każda kompetencja ma 3 komponenty ocenione w skali: STRONG > GOOD > MEDIOCRE > WEAK. Pokazują, które elementy danej kompetencji są mocne, a które słabe.",
+    "supporting_competences": "Dla słabych kompetencji raport wskazuje kompetencje WSPIERAJĄCE (o sile WEAK/MEDIUM/STRONG) — te, które mogą kompensować brak. Przykład (Samuel): dla niskiej Enjoyment (10%) wspierają Rhythm & Flow (STRONG), Optimism (STRONG), Sensing Intelligence (STRONG).",
+    "preventing_competences": "Kompetencje ZAPOBIEGAJĄCE ryzyku wynikającemu ze słabej kompetencji, z poziomem ryzyka (Prevents / Medium / No Risk). Przykład (Samuel): dla niskiej Self-Care (10%) — Extremism i Impatience oznaczone 'Prevents' (podwyższają ryzyko).",
+    "wskazowka_dla_trenera": "Raport coach zawiera też porady jak prowadzić danego zawodnika, by unikać wyzwań generowanych przez jego najsłabsze kompetencje."
+  },
+
+  "przyklad_samuel": {
+    "_uwaga": "Konkretny wynik badania (Athlete Samuel, 02.12.2019) — służy jako przykład interpretacji profilu, nie jako wzorzec.",
+    "wyniki_procentowe": {
+      "Egoism": 22, "Self-Care": 10, "Extremism": 95, "Perfectionism": 33,
+      "Competitive Power": 38, "Rhythm & Flow": 86, "Goal Focus": 76, "Repetitiveness": 48,
+      "Momentary Concentration": 48, "Impatience": 95, "Aggression": 57, "Enjoyment": 10,
+      "Bouncing Back": 67, "Discipline": 11, "Pressure Control": 48, "Preparation": 10,
+      "Optimism": 95, "Sensing Intelligence": 86
+    },
+    "indeksy": {
+      "sports_index": 911,
+      "training_index": 936,
+      "competition_index": 920
+    },
+    "profil_interpretacja": {
+      "mocne_naturalne": ["Extremism 95%", "Impatience 95%", "Optimism 95%", "Rhythm & Flow 86%", "Sensing Intelligence 86%", "Goal Focus 76%"],
+      "slabe_wymagajace_energii": ["Self-Care 10%", "Enjoyment 10%", "Preparation 10%", "Discipline 11%", "Egoism 22%"],
+      "sygnal": "Profil zawodnika napędzanego wewnętrznie (ekstremizm + optymizm + skupienie na celu + flow), który bierze co chce natychmiast (impatience), ale z ryzykiem: niska dyscyplina, przygotowanie i dbanie o siebie mogą sabotować długoterminowy rozwój i zdrowie. Rola trenera: budować rutyny/prewencję (obszary czerwone), a nie tłumić naturalną intensywność."
+    }
+  },
+
+  "powiazania": {
+    "player_evaluation.json": "Filar 'charakter' (mentalność, work ethic, coachability) — FinxS dostarcza ustrukturyzowanego frameworku 18 kompetencji do oceny tego filaru.",
+    "intel_background.json": "Zasada 'charakter > talent' i intel o zawodniku — profil FinxS to psychometryczne uzupełnienie wywiadu o zawodniku.",
+    "point_guard_traits.json": "Cechy PG (lider, emocjonalnie stały, silny psychicznie, 'motor') mapują się na kompetencje FinxS: Pressure Control, Optimism, Extremism, Competitive Power.",
+    "teaching_fundamentals.json": "Punkty coachingowe konspektów uwzględniają profil mentalny — dobór metody (powtórzenia vs różnorodność) zależny od Repetitiveness/Perfectionism zawodnika."
+  }
+}

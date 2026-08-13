@@ -1,0 +1,39 @@
+{
+  "_comment": "Schemat bazy danych PostgreSQL — basketkolcz",
+  "connection": {
+    "url": "postgresql://postgres:basketkolcz2025@db:5432/basketkolcz",
+    "driver": "psycopg2"
+  },
+  "tables": {
+    "matches": {
+      "cols": ["id", "data_meczu", "przeciwnik", "wynik_gtk", "wynik_opp", "sezon",
+               "team_name_a", "team_name_b", "file_path", "parser_version",
+               "bench_pts"]
+    },
+    "match_stats": {
+      "cols": ["match_id", "druzyna", "kwarta", "pts", "poss",
+               "p2m", "p2a", "p3m", "p3a", "ftm", "fta",
+               "br", "fd", "ast", "oreb", "dreb", "stl", "blk",
+               "d2m", "d2a", "przerw"]
+    },
+    "player_stats": {
+      "cols": ["match_id", "druzyna", "nr", "pts",
+               "p2m", "p2a", "p3m", "p3a", "ftm", "fta",
+               "ast", "oreb", "dreb", "stl", "blk", "br", "fd", "finishes"]
+    },
+    "timing_stats": {
+      "cols": ["match_id", "druzyna", "bucket", "kwarta",
+               "made2", "att2", "made3", "att3", "br", "ftm"]
+    },
+    "lineup_stats": {
+      "cols": ["match_id", "druzyna", "lineup", "poss", "pts", "..."]
+    },
+    "roster": {
+      "cols": ["id", "klub_id", "nr", "imie", "nazwisko", "pozycja", "aktywny", "sezon"]
+    }
+  },
+  "notes": {
+    "time": "Czas gry w sekundach — konwersja: min = pt_total / 60",
+    "br": "br = turnovers (straty) — uwaga: kolumna nazywa się 'br' nie 'to'"
+  }
+}

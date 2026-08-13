@@ -1,0 +1,142 @@
+{
+  "_source": "Next Draft Foundation — Moduł 6 (Case Study)",
+  "_comment": "Szablon Case Study: Scouting pod konkretną rolę — praca domowa M6",
+
+  "kluczowa_lekcja": "Scouting = rozwiązywanie problemów organizacji. Nie szukamy 'najlepszego zawodnika', ale zawodnika który w danych warunkach jest najlepszym rozwiązaniem konkretnego problemu.",
+
+  "definicja_zadania": "Znaleźć zawodnika pod określoną rolę, pracując na realnych ograniczeniach organizacji.",
+
+  "ograniczenia_do_uwzglednienia": {
+    "budzet": "Określone widełki finansowe — twarda granica",
+    "poziom_ligi": "Targetowane ligi i poziomy rozgrywkowe (np. PLK, 1.Liga, ligi zagraniczne)",
+    "styl_gry_trenera": "Pasowanie do systemu — tempo, spacing, obrona strefą/man",
+    "potrzeby_składu": "Luki w rosterze, chemia zespołu, pokrycie pozycji",
+    "cele_organizacji": "Krótkoterminowe (ten sezon) i długoterminowe (perspektywa 2-3 lat)"
+  },
+
+  "proces_6etapow": [
+    {
+      "etap": 1,
+      "nazwa": "DEFINICJA POTRZEBY",
+      "opis": "Jasno określona rola i oczekiwania",
+      "pytania_kluczowe": [
+        "Jaką konkretną lukę ma wypełnić ten zawodnik?",
+        "Co robi aktualny skład dobrze, a czego mu brakuje?",
+        "Jaki archetyp jest potrzebny (nie pozycja — archetyp)?",
+        "Jakie są mierzalne oczekiwania w tej roli?"
+      ]
+    },
+    {
+      "etap": 2,
+      "nazwa": "RESEARCH",
+      "opis": "Szeroki research rynków i dostępnych profili",
+      "dzialania": [
+        "Przegląd statystyk ligowych pod kątem roli",
+        "Rekomendacje od kontaktów (agenci, trenerzy, inni skauci)",
+        "Bazy danych zawodników (Eurobasket, InStat, BallinEurope)",
+        "Obserwacja ruchów rynkowych — kto jest dostępny?"
+      ]
+    },
+    {
+      "etap": 3,
+      "nazwa": "PRESELEKCJA",
+      "opis": "Long list → Short list",
+      "long_list": "15–30 kandydatów pasujących do profilu podstawowego",
+      "short_list": "3–7 zawodników po głębszej weryfikacji budżetu i dostępności",
+      "filtry_selekcji": ["budzet", "dostepnosc kontraktu", "wiek i timing", "gotowość do przyjazdu"]
+    },
+    {
+      "etap": 4,
+      "nazwa": "ANALIZA",
+      "opis": "Scouting reports, stats, fit, intel",
+      "elementy": [
+        "Film: minimum 3–5 meczów, najlepiej z różnych systemów",
+        "Statystyki: advanced stats + kontekst (rola w poprzednim klubie)",
+        "Fit: czy gra w tym systemie zadziała u nas?",
+        "Intel: rozmowy z agentami, byłymi trenerami, kolegami"
+      ],
+      "scouting_notes_checklist": [
+        "ROLE FIT — czy pasuje do konkretnej roli?",
+        "STATS — liczby w kontekście roli i systemu",
+        "STRENGTHS — 2–3 rzeczy w których jest dobry",
+        "WEAKNESSES — 2–3 rzeczy które mogą być problemem",
+        "CHARACTER — coachability, mentalność, szatnia",
+        "INJURY HISTORY — historia zdrowotna i ryzyko",
+        "CONTRACT STATUS — dostępność, klauzule, opcje",
+        "FINANCIAL RANGE — widełki i realny koszt",
+        "RECOMMENDATION — twoja ocena i rekomendacja"
+      ]
+    },
+    {
+      "etap": 5,
+      "nazwa": "REKOMENDACJA",
+      "opis": "Najlepsze opcje + uzasadnienie",
+      "format": {
+        "opcja_1": "Główna rekomendacja — najlepszy fit do roli i budżetu",
+        "opcja_2": "Alternatywa — inny profil lub niższy koszt",
+        "opcja_3": "Wildcard — ryzykowna opcja z wyższym potencjalnym upside"
+      },
+      "kazda_opcja_zawiera": [
+        "Dlaczego rozwiązuje konkretny problem organizacji",
+        "Fit do systemu trenera",
+        "Ryzyko i czerwone flagi",
+        "Alternatywa jeśli ta opcja odpadnie"
+      ]
+    }
+  ],
+
+  "przykladowe_zadania_m6": [
+    {
+      "klub": "Dziki Warszawa",
+      "potrzeba": "Następca Ody Oguamy",
+      "budzet_usd": "80000–100000",
+      "profil_archtypowy": "MOBILE BIG",
+      "kluczowe_cechy": ["ruchliwość", "switchability", "rim protection", "gra w wysokim tempie"],
+      "uwaga": "Dziki grają szybko — big który nie biega nie pasuje niezależnie od innych walorów"
+    },
+    {
+      "klub": "Legia Warszawa",
+      "potrzeba": "Następca Jayvona Gravesa",
+      "budzet_usd": "120000–140000",
+      "profil_archtypowy": "PHYSICAL COMBO / VERSATILE WING",
+      "kluczowe_cechy": ["spacing", "catch & shoot", "obrona kilku pozycji", "wszechstronność"],
+      "uwaga": "Legia potrzebuje zawodnika który może grać dwie role — nie wąskiego specialisty"
+    }
+  ],
+
+  "przykladowe_profile_rol_do_szukania": {
+    "backup_pg": {
+      "archetyp": "Backup Point Guard",
+      "kluczowe_cechy": ["organizator", "kontrola tempa", "decyzyjność"],
+      "nie_potrzebujemy": ["wysokiego usage", "izolacji", "pierwszej opcji"]
+    },
+    "shooting_wing": {
+      "archetyp": "Shooting Wing / 3&D",
+      "kluczowe_cechy": ["spacing", "catch & shoot", "defensive effort"],
+      "nie_potrzebujemy": ["kreowania akcji", "post gry", "dribble creation"]
+    },
+    "mobile_big": {
+      "archetyp": "Mobile Big / Modern Center",
+      "kluczowe_cechy": ["ruchliwość", "switchability", "rim protection"],
+      "nie_potrzebujemy": ["post scorera", "niskiego tempa", "pierwszej opcji w ataku"]
+    }
+  },
+
+  "bledy_do_unikniecia_w_case_study": [
+    "Szukanie najlepszego zawodnika zamiast najlepszego rozwiązania problemu",
+    "Ignorowanie budżetu — 'chciałbym X ale budżet nie pozwala' to nie rekomendacja",
+    "Brak uzasadnienia dlaczego ten zawodnik pasuje do TEGO systemu trenera",
+    "Pomijanie ograniczeń rynkowych — czy zawodnik faktycznie byłby dostępny?",
+    "Jedna opcja zamiast trzech — co jeśli top kandydat wybierze inny klub?"
+  ],
+
+  "cel_cwiczenia": "Zrozumienie że scouting to rozwiązywanie problemów organizacji — nie talent show. Zawodnik może być świetny, ale zły dla konkretnego klubu, systemu i momentu.",
+
+  "ocena_pracy_domowej": [
+    "Jasność definicji potrzeby (czy wiadomo co szukamy i dlaczego?)",
+    "Szerokość researchu (ile rynków, ile kandydatów rozpatrzyłeś?)",
+    "Głębokość analizy (film + stats + intel?)",
+    "Jakość uzasadnienia fit (dlaczego ten zawodnik rozwiązuje ten problem?)",
+    "Gotowość decyzyjna (czy rekomendacja jest użyteczna dla GM/trenera?)"
+  ]
+}

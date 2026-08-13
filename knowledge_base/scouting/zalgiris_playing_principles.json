@@ -1,0 +1,156 @@
+{
+  "_source": "Zdjęcia slajdów z prezentacji akademii Žalgirisu Kowno: MAIN DEFENSE PRINCIPLES (oznaczone „1.1\", dwa slajdy), MAIN OFFENSE PRINCIPLES (oznaczone „2\", trzy slajdy), LOW-POST DETAILS, SPACING TEACHING POINTS, MENTAL APPROACH.",
+  "_comment": "WARSTWA KOSZYKARSKA modelu Žalgirisu — kompletny zestaw zasad gry akademii klubu eurologowego. Numeracja slajdów (1.1 obrona, 2 atak) sugeruje, że OBRONA jest rozdziałem pierwszym — kolejność sama w sobie jest deklaracją priorytetu. Materiał wyjątkowo konkretny: zamiast haseł podaje progi liczbowe (8 sekund na atak szybki, 60% rzutów dużych w farbie, komunikat 3 razy przed zasłoną) oraz nazwane koncepty (yin-yang spacing, parking, dunker's spot blind zone).",
+  "_program_use": "Wzorzec zasad gry do modułu filozofii zespołu oraz źródło mierzalnych progów, które program mógłby raportować: udział rzutów dużych w farbie (cel 60%), czas dojścia do ataku szybkiego (8 s), liczba podań przed rzutem, udział layupów/wolnych/otwartych trójek w shot selection. To rzadki przypadek zasad sformułowanych tak, że dają się policzyć z danych meczowych.",
+
+  "kategoria": "Zasady gry klubu europejskiego — obrona, atak, detale techniczne",
+
+  "main_defense_principles": {
+    "_oznaczenie_slajdu": "1.1 — obrona jako rozdział pierwszy",
+    "discipline_and_effort": {
+      "no_gambling": "Bez ryzykownych zagrań, CHYBA ŻE są częścią systemu",
+      "transition": "Sprint w powrocie do obrony",
+      "fizycznosc": "Bądź twardy i fizyczny BEZ FAULOWANIA"
+    },
+    "full_court_pressure": {
+      "cel_na_piłce": "Zmuś prowadzącego do zmiany kierunku lub odwrócenia się plecami; odetnij łatwe podania wyjściowe (outlets)",
+      "pułapki": "Traps w ustawieniach 1-2-1-1, 2-2-1, run & jump — w celu wymuszenia strat",
+      "gdy_presja_zlamana": "Sprint z powrotem i recover, żeby chronić kosz"
+    },
+    "active_hands": {
+      "zasada": "Ręce aktywne w obronie — w ruchu, kontestujące rzuty",
+      "elementy": ["deflekcje podań", "blokowanie linii podań", "kreowanie strat"]
+    },
+    "pick_n_roll_coverages": {
+      "agresywne": ["HARD HEDGE", "BLITZ / TRAP", "SWITCH"],
+      "zachowawcze": ["WEAK (zmuszenie do słabszej ręki)", "UNDER"],
+      "jasne_odpowiedzialnosci": {
+        "obronca_prowadzacego": "FIGHT OVER lub UNDER",
+        "duzy": "STEP OUT, SWITCH, LINE"
+      },
+      "_uwaga": "Podział na agresywne i zachowawcze plus jednoznaczny przydział ról to dokładnie ten sam schemat, którego szuka się w raporcie przeciwnika (por. opponent_scouting_method.json — pytanie „P&R COVERAGE WITH 5 / WITH 4\")."
+    },
+    "closeouts": {
+      "technika": "SPRINT → krótkie, drobne kroki (short choppy steps)",
+      "kontest": "Wysoka ręka do kontestowania rzutu",
+      "balans": "Zachowaj równowagę — ŻADNYCH fly-by, Z WYJĄTKIEM gry przeciwko snajperom",
+      "_uwaga": "Wyjątek dla snajperów to ta sama logika co system gwiazdek Ulm: metoda dobiegu zależy od jakości rzutowej przeciwnika."
+    },
+    "rebounding": {
+      "zasada_naczelna": "OBRONA NIE JEST SKOŃCZONA, DOPÓKI PIŁKA NIE JEST ZABEZPIECZONA",
+      "sekwencja": "HIT → FIND MAN → BOX OUT → PURSUE THE BALL (uderz → znajdź zawodnika → zastaw → walcz o piłkę)",
+      "obowiazek": "Obwodowi też atakują zbiórkę, nie tylko duzi"
+    },
+    "communication": {
+      "obowiazkowe_komunikaty": ["BALL", "HELP", "SCREEN LEFT / RIGHT", "SWITCH"],
+      "jak": "Głośno, WCZEŚNIE, w sposób ciągły — TRZY RAZY PRZED ZASŁONĄ",
+      "_uwaga": "„3 razy przed zasłoną\" to skwantyfikowany standard komunikacji — rzadkość; zwykle mówi się po prostu „rozmawiajcie\"."
+    }
+  },
+
+  "main_offense_principles": {
+    "_oznaczenie_slajdu": "2",
+    "spacing": {
+      "balans": "Zwykle 4 OUT, 1 IN (lub 5 OUT, jeśli zawodnicy są bardziej obwodowi)",
+      "luki": "Utrzymuj odstępy między zawodnikami, żeby otwierać linie drivu i podania",
+      "blad": "Ucz ich, żeby NIE ZBIJALI SIĘ (bunch up) wokół piłki"
+    },
+    "ball_movement": {
+      "priorytet": "Szybkie podania PRZED kozłowaniem — cel: kilka podań przed rzutem",
+      "przemieszczanie": "Ruch piłki z boku na bok, żeby przesunąć obronę",
+      "zasada_kozla": "„ONE DRIBBLE TO ATTACK, TWO DRIBBLES TO SCORE, THREE DRIBBLES IS TROUBLE\" (jeden kozioł żeby zaatakować, dwa żeby zdobyć, trzy to już kłopot)",
+      "_program_use": "Ta zasada jest policzalna z danych kodowania akcji — liczba kozłów przed zakończeniem."
+    },
+    "player_movement": {
+      "backdoor": "Cięcia backdoor, gdy obrońcy przegrywają pozycję (overplay) lub stosują top lock",
+      "read_and_react": "Mentalność read-and-react: jeśli kolega driblingiem atakuje, przemieść się w wolną przestrzeń (relocate)"
+    },
+    "transition_offense": {
+      "limit_czasu": "8 SEKUND na atak (5 sekund na przekroczenie linii środkowej)",
+      "kiedy": "Push the ball po zbiórkach i stratach",
+      "pasy": "Fill lanes — RIM RUNNER, skrzydła szeroko, prowadzący swoim pasem",
+      "decyzja": "Szybkie podjęcie decyzji: layup, kick out albo płynne przejście w atak pozycyjny",
+      "kluczowe": "W transition PIERWSZE 3 KROKI SĄ DECYDUJĄCE"
+    },
+    "shot_selection": {
+      "priorytety": "Layupy, rzuty wolne i OTWARTE trójki",
+      "prog_dla_duzych": "Duzi — tylko 60% rzutów w farbie",
+      "nauczanie": "Ucz różnicy między DOBRYM rzutem a LEPSZYM rzutem",
+      "cierpliwosc": "„WE WANT THE BEST POSSIBLE SHOT, NOT THE FIRST AVAILABLE ONE\" (chcemy najlepszego możliwego rzutu, a nie pierwszego dostępnego)",
+      "_program_use": "Priorytety rzutowe i próg 60% dla dużych da się raportować wprost ze stref zakończenia akcji (por. game_coding_system_5x5.json)."
+    },
+    "offensive_rebounding": {
+      "zasada": "WSZYSCY atakują zbiórkę (tag-up) Z WYJĄTKIEM rzucającego",
+      "ramowanie": "Podkreślaj zbiórkę jako SZANSĘ NA ŁATWE PUNKTY",
+      "wykorzystanie": "Wykorzystuj warunki antropometryczne zawodników do dominacji na tablicy"
+    },
+    "flow_into_sets": {
+      "zasada": "Unikaj wyłącznie sztywnych zagrań. Ucz KONCEPCYJNEGO ataku (motion, wide, dribble-drive)",
+      "wyjatki": "Miej kilka ustrukturyzowanych setów (np. Iverson, stagger screens) pod najlepsze umiejętności zawodników lub sytuacje specjalne",
+      "_powiazanie": "Zbieżne z Messiną z coaching_notes.json: „koncepty > sekwencje\"."
+    }
+  },
+
+  "low_post_details": {
+    "_charakter": "Bardzo szczegółowy rozkład techniki gry na pozycji podkoszowej — poziom detalu rzadko spotykany w materiałach ogólnodostępnych.",
+    "early_physical_work": "Niska pozycja (low stance) + szeroka i aktywna zewnętrzna ręka prosząca o piłkę",
+    "face_up_routine": "Oczy i głowa w górze + zewnętrzna noga obrotowa (outside pivot foot) + zwód podaniem",
+    "wide_amplitude": "Zajmuj jak najwięcej przestrzeni",
+    "primary_protection_shield_and_target": "Praca biodrem i tylnym aktonem naramiennego (rear-delt) + niski kozioł",
+    "secondary_target": "Atakuj bark obrońcy",
+    "no_back_turning": "Nie odwracaj się plecami",
+    "unpredictability": "Mieszaj ruch boczny (lateral), ucieczkę biegiem (escape running) i bieg tyłem (backpedalling)",
+    "parking": "Komfortowe wypracowywanie pozycji w dużej fizyczności — biodrami, barkami i tylnym naramiennym — przy jednoczesnym pokrywaniu dużej przestrzeni dużymi krokami i żywym koźle",
+    "_uwaga_terminologiczna": "„PARKING\" i „WIDE AMPLITUDE\" to autorskie nazwy konceptów — warto je zapamiętać jako słownik tej szkoły."
+  },
+
+  "spacing_teaching_points": {
+    "no_jumping_nor_lateral_movement": "Bez skoków i ruchu bocznego — TYLKO bieg i sprint",
+    "hungry_hands": "Głodne ręce + idź po piłkę",
+    "dunkers_spot_blind_zone": "Martwa strefa w dunker's spot (pozycja pod koszem poza polem widzenia obrońcy)",
+    "yin_yang_spacing": "Ustawienie yin-yang — żeby odebrać obronie rim protection i wymusić zamieszanie (dwaj duzi krążą przeciwbieżnie wokół kosza, wymieniając się stronami przy penetracji prowadzącego)",
+    "no_driving_lane_clogging": "Nie zatykaj linii drivu",
+    "_uwaga": "Slajd zawiera trzy diagramy ilustrujące yin-yang: duzi (4/5) poruszają się po przeciwnych łukach wokół kosza w reakcji na kozłowanie prowadzącego (1), tak by rim protector nigdy nie miał stabilnej pozycji."
+  },
+
+  "mental_approach": {
+    "_charakter": "Dziesięć zasad mentalnych — sformułowanych jako hasła, nie akapity.",
+    "zasady": [
+      "PATIENCE — cierpliwość",
+      "SIMPLE & BORING IS GREATNESS — proste i nudne to jest wielkość",
+      "TOUGH TRAINING TURNS BOYS INTO MEN — twardy trening zmienia chłopców w mężczyzn",
+      "EMBRACE THE SUFFERING & ADVERSITY — przyjmij cierpienie i przeciwności",
+      "SUPPORT SYSTEM – POSITIVE BELIEF — system wsparcia, pozytywna wiara",
+      "POWER OF DOMINO EFFECT — siła efektu domina",
+      "NO MAGIC – JUST EXTRA WORK — żadnej magii, tylko dodatkowa praca",
+      "MORE SUCCESS – MORE EXTRA WORK — więcej sukcesu to więcej dodatkowej pracy",
+      "NEVER CHEAT THE GAME — nigdy nie oszukuj gry",
+      "WIN THE DAY TODAY — wygraj dzisiejszy dzień"
+    ],
+    "_napiecie_wewnetrzne": "Zestaw łączy retorykę twardości („tough training turns boys into men\", „embrace the suffering\") z warstwą wspierającą („support system – positive belief\") i kulturą feedbacku ze slajdu BE MINDFUL WITH FEEDBACK. To nie jest sprzeczność, ale warto zauważyć, że twarde hasła są tu ZRÓWNOWAŻONE mechanizmem wsparcia — samo „embrace the suffering\" bez tego byłoby czymś innym.",
+    "_powiazanie": "„No magic – just extra work\" ma pokrycie infrastrukturalne: boisko i siłownia dostępne 24/7 (patrz zalgiris_academy_model.json)."
+  },
+
+  "mierzalne_progi_do_raportowania": {
+    "_idea": "Rzadka cecha tego materiału — zasady podane w formie, którą da się policzyć z danych meczowych.",
+    "progi": [
+      {"zasada": "Atak szybki w 8 sekund (5 s do linii środkowej)", "jak_zmierzyc": "czas trwania akcji z kodowania posiadań"},
+      {"zasada": "Duzi: 60% rzutów w farbie", "jak_zmierzyc": "udział stref podkoszowych w rzutach zawodników na pozycji 4/5"},
+      {"zasada": "Kilka podań przed rzutem", "jak_zmierzyc": "liczba podań w posiadaniu"},
+      {"zasada": "Maksymalnie 2 kozły (3 to kłopot)", "jak_zmierzyc": "liczba kozłów przed zakończeniem akcji"},
+      {"zasada": "Priorytet: layupy, wolne, otwarte trójki", "jak_zmierzyc": "rozkład typów zakończeń akcji"},
+      {"zasada": "Wszyscy poza rzucającym atakują zbiórkę ofensywną", "jak_zmierzyc": "OREB zespołu, udział obwodowych"},
+      {"zasada": "Komunikat 3 razy przed zasłoną", "jak_zmierzyc": "tylko obserwacja — niepoliczalne ze statystyki"}
+    ]
+  },
+
+  "powiazania": {
+    "zalgiris_academy_model.json": "PLIK SIOSTRZANY — warstwa organizacyjna (struktura zespołów, infrastruktura, profile, wartości, absolwenci).",
+    "coaching_notes.json": "Messina („koncepty > sekwencje\", TIMING, SPACING), Obradović (obrona zasłon), Shivek (obrona nogami i rękami) — Žalgiris systematyzuje to samo w jeden dokument klubowy.",
+    "opponent_scouting_method.json": "Coverage'y PnR (hedge, blitz, switch, weak, under) i metody closeoutu to dokładnie te kategorie, które raport przeciwnika diagnozuje u rywala.",
+    "game_concepts.json": "Spacing, timing, shot selection — koncepty M2 w wersji operacyjnej z progami.",
+    "game_coding_system_5x5.json": "Progi liczbowe (8 s, 60% w farbie, liczba kozłów) dają się wyliczyć z tego systemu kodowania.",
+    "teaching_fundamentals.json": "LOW-POST DETAILS to ten sam poziom szczegółowości co punkty coachingowe w konspektach Libicha — porównywalna szkoła detalu.",
+    "book_imopeksis_hucinski.json": "Warstwa mentalna: „support system – positive belief\" i kultura feedbacku odpowiadają czynnikom pewności siebie i emocji."
+  }
+}

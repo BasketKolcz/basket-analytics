@@ -1,0 +1,211 @@
+{
+  "_source": "Next Draft Foundation — Moduł 3, PDF: red-flags",
+  "_comment": "6 red flagów scoutingowych — sygnały ostrzegawcze wskazujące na brak scalability / playoff viability",
+  "_program_use": "Walidacja oceny zawodnika w formularzu scoutingowym. Checklist 'czy widzę te sygnały?'. Tooltip ostrzeżenia przy niskich ocenach.",
+
+  "wprowadzenie": {
+    "teza": "Największym błędem w nowoczesnym scoutingu nie jest przeoczenie talentu. Największym błędem jest błędna projekcja wpływu zawodnika na wygrywanie.",
+    "problem": [
+      "Wielu graczy wygląda dobrze w highlightach",
+      "Wielu graczy wygląda dobrze w box score",
+      "Wielu graczy wygląda dobrze w słabszych ligach",
+      "Wielu graczy wygląda dobrze przy dużym usage"
+    ],
+    "pytanie_organizacji": "Czy jego gra przełoży się na wyższy poziom i pomaganie drużynie wygrywać?",
+    "co_liczy_sie": [
+      "scalability",
+      "decision making",
+      "versatility",
+      "playoff viability",
+      "impact basketball"
+    ]
+  },
+
+  "red_flags": [
+    {
+      "nr": 1,
+      "id": "dominance_without_efficiency",
+      "nazwa": "DOMINANCE WITHOUT EFFICIENCY",
+      "tagline": "Dużo piłki ≠ duży wpływ",
+      "opis": "Zawodnik dominuje grę (wysoki usage, dużo punktów, większość decyzji) — ale zatrzymuje piłkę, spowalnia ofensywę, generuje trudne rzuty i ogranicza innych.",
+      "red_flags": [
+        "Dużo izolacji",
+        "Trudne rzuty mimo dostępnych podań",
+        "Niska efektywność przy wysokim usage",
+        "Słaba gra bez piłki",
+        "Ograniczona adaptability",
+        "Ofensywa działa tylko pod niego"
+      ],
+      "pytanie_scouta": "Czy jego styl gry pomaga innym wyglądać lepiej?",
+      "co_robi_dobry_offensive_engine": [
+        "Poprawia spacing",
+        "Tworzy łatwe rzuty",
+        "Przyspiesza decyzje",
+        "Pomaga funkcjonować całej piątce"
+      ]
+    },
+    {
+      "nr": 2,
+      "id": "empty_stats",
+      "nazwa": "EMPTY STATS",
+      "tagline": "Statystyki bez realnego wpływu",
+      "opis": "Zawodnik zdobywa punkty, zbiera, ma usage — ale nie pomaga drużynie, nie podnosi jakości lineupu, nie wpływa na winning basketball.",
+      "typowe_sygnaly": [
+        "Dobre liczby w słabym zespole",
+        "Produkcja bez efektywności",
+        "Brak wpływu na spacing",
+        "Defensywne problemy ukrywane przez statystyki",
+        "Wysoki usage bez winning impact",
+        "Brak scalability"
+      ],
+      "pytanie_nba": "Czy jego gra skaluje się obok talentu?",
+      "co_sie_zmienia_na_wyzszym_poziomie": [
+        "Usage spada",
+        "Czasu na decyzję jest mniej",
+        "Spacing jest ważniejszy",
+        "Gra bez piłki staje się kluczowa"
+      ]
+    },
+    {
+      "nr": 3,
+      "id": "brak_scalability",
+      "nazwa": "BRAK SCALABILITY",
+      "tagline": "Jeden z największych red flagów",
+      "definicja": "Czy zawodnik może funkcjonować obok lepszych graczy?",
+      "opis": "Gracz jest skuteczny tylko gdy wszystko przechodzi przez niego, ma piłkę cały czas, może grać pod własny rytm, system jest budowany wyłącznie wokół niego.",
+      "objawy": [
+        "Brak gry bez piłki",
+        "Słaby shooting",
+        "Wolne decyzje",
+        "Brak versatility",
+        "Problemy defensywne",
+        "Potrzeba dominowania posiadania"
+      ],
+      "najbardziej_scalable_skills": [
+        "Shooting",
+        "Quick decisions",
+        "Connective passing",
+        "Defensive versatility",
+        "Movement without the ball",
+        "Role acceptance"
+      ],
+      "wniosek_nba": "Organizacje NBA często bardziej cenią elite role playera niż 'gwiazdę' bez scalability."
+    },
+    {
+      "nr": 4,
+      "id": "targetable_defender",
+      "nazwa": "TARGETABLE DEFENDER",
+      "tagline": "Czy można go zaatakować w playoff basketball?",
+      "opis": "W playoff przeciwnicy szukają mismatchy, polują na słabych defensorów, targetują brak mobility, wymuszają switchowanie.",
+      "red_flags": [
+        "Wolne nogi",
+        "Brak lateral quickness",
+        "Problemy ze zmianami krycia",
+        "Brak awareness",
+        "Słaba reakcja na spacing",
+        "Brak versatility defensywnej"
+      ],
+      "kluczowe": "W sezonie regularnym można ukrywać defensywne problemy. W playoff basketball — przeciwnicy będą atakować je w każdej akcji.",
+      "co_jest_kluczowe": [
+        "Playoff viability",
+        "Switchability",
+        "Defensive flexibility"
+      ]
+    },
+    {
+      "nr": 5,
+      "id": "low_processing_speed",
+      "nazwa": "LOW PROCESSING SPEED",
+      "tagline": "Talent bez szybkiego myślenia",
+      "opis": "Nowoczesna koszykówka premiuje szybkość decyzji, processing speed, feel for the game, anticipation — nie tylko athleticism.",
+      "pytanie": "Jak szybko zawodnik widzi i rozwiązuje sytuacje?",
+      "red_flags": [
+        "Spóźnione decyzje",
+        "Zatrzymywanie piłki",
+        "Wolny read pick & roll",
+        "Brak reakcji na rotacje",
+        "Problemy z advantage basketball",
+        "Granie 'sekundę za późno'"
+      ],
+      "co_robi_najlepszy_gracz": [
+        "Upraszcza grę",
+        "Przyspiesza ofensywę",
+        "Podejmuje szybkie decyzje",
+        "Pomaga flow ofensywy"
+      ],
+      "wniosek": "Processing speed często skaluje się lepiej niż surowy talent."
+    },
+    {
+      "nr": 6,
+      "id": "non_playoff_archetypes",
+      "nazwa": "NON-PLAYOFF ARCHETYPES",
+      "tagline": "Nie każdy profil przetrwa playoff basketball",
+      "opis": "Niektóre archetypy wyglądają dobrze w sezonie regularnym lub słabszych ligach — w playoff ich słabości są bezlitośnie eksponowane.",
+      "dlaczego_playoff_roznia_sie": [
+        "Spacing jest lepszy",
+        "Decyzje są szybsze",
+        "Przeciwnicy bardziej przygotowani",
+        "Słabości są bezlitośnie eksponowane"
+      ],
+      "archetypy_wysokiego_ryzyka": [
+        "Non-shooting guards",
+        "Undersized scorers bez defensywy",
+        "Bigs bez mobility",
+        "Zawodnicy wymagający ciągłej piłki",
+        "Gracze bez versatility",
+        "Defensywnie targetowalni scorerzy"
+      ],
+      "playoff_scalable_profile": [
+        "Versatile wings",
+        "Elite shooters",
+        "Connective players",
+        "Quick decision makers",
+        "Switchable defenders",
+        "High IQ role players"
+      ]
+    }
+  ],
+
+  "case_study_westbrook_lakers": {
+    "_source": "Transkrypcja M3, lekcja 5 — Russell Westbrook, Los Angeles Lakers",
+    "gracz": "Russell Westbrook",
+    "pozycja": "PG",
+    "zespol": "Los Angeles Lakers",
+    "na_papierze": {
+      "talenty": ["Świetny talent all-star", "Duży atletyzm", "Świetny playmaking", "Umiejętność kreowania przewag", "Presja na obręcz w tranzycji", "Potential triple double każdy mecz"]
+    },
+    "dlaczego_nie_wyszlo": [
+      "Styl gry ciężki do przeniesienia z jednego klubu do drugiego",
+      "Musiał funkcjonować w określonym układzie — wymagał piłki w rękach",
+      "Lakers nie mogli mu dać wystarczającego usage obok LeBrona i A.D.",
+      "Brak spacingu — rywal mógł go odpuszczać i skupiać się na LeBronie/Davis",
+      "Brak gry i wpływu bez piłki",
+      "Słaba obrona — mógł bronić tylko jedną pozycję",
+      "W playoff: ogromne problemy ze stratami, wymuszanie faulów, forowanie w tłum"
+    ],
+    "wnioski_scautingowe": [
+      "Błędna ocena zapotrzebowania archetypu — nie pasował do profilu drużyny",
+      "Nie dawał ani shootingu, ani ekstra roleplayera, ani obrony kilku pozycji",
+      "Samo dodawanie talentu nie poprawi funkcjonowania drużyny — często wręcz osłabi"
+    ],
+    "lekcja": "High Usage Guard (ball dominant) + gwiazdy z wysokim usage = konflikt, nie synergię. Sprawdzaj fit archetypu, nie tylko talent."
+  },
+
+  "najwazniejszy_wniosek": {
+    "scouting_odchodzi_od": [
+      "Samego talentu",
+      "Liczb",
+      "Highlightów",
+      "Pozycji"
+    ],
+    "scouting_idzie_ku": [
+      "Impact",
+      "Scalability",
+      "Versatility",
+      "Decision making",
+      "Playoff viability",
+      "Winning basketball"
+    ],
+    "pytanie_top_organizacji": "Czy ten zawodnik pomaga drużynie funkcjonować na najwyższym poziomie?"
+  }
+}

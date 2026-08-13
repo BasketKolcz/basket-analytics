@@ -1,0 +1,104 @@
+{
+  "_source": "„2. PODKARPACKIE.docx\" z folderu SCOUTING/OOM (sezon 2024/25) — własny raport skautingowy kadry województwa podkarpackiego na Ogólnopolską Olimpiadę Młodzieży. 15 zawodników, rocznik U14 (12-13 lat). Dokument zawiera 16 zdjęć zawodników.",
+  "_comment": "TRZECI GATUNEK raportu w tej bazie — IDENTYFIKACJA TALENTU (talent ID) na poziomie młodzieżowym. Różni się zasadniczo od dwóch poprzednich: (1) NIE MA ŻADNYCH DANYCH LICZBOWYCH — kolumny statystyczne zawierają odsyłacze do źródeł („STATYSTYKI OOM\", „LIGA U13\", „LIGA U15\") i nazwę klubu, nie liczby; (2) opisy są po POLSKU, nie po angielsku jak w 2LM i MP U19; (3) treść dotyczy POTENCJAŁU ROZWOJOWEGO, nie sposobu pokonania przeciwnika; (4) brak sekcji TEAM CHARACTERISTIC i leaderboardów.",
+  "_program_use": "OGRANICZONE — ten korpus NIE nadaje się do wyliczania norm liczbowych (brak danych). Jego wartość jest inna: (a) słownik kryteriów oceny talentu na poziomie U14, (b) materiał do WALIDACJI TRAFNOŚCI SKAUTINGU — 4 z 15 opisanych tu zawodników trafiło później do Kadry Polski U14, co pozwala skonfrontować ocenę z późniejszym wynikiem selekcji.",
+
+  "kategoria": "Korpus identyfikacji talentu (talent ID) — poziom młodzieżowy U14",
+
+  "zakres": {
+    "rozgrywki": "Ogólnopolska Olimpiada Młodzieży (OOM), sezon 2024/25",
+    "zespol": "Kadra województwa podkarpackiego",
+    "zawodnikow": 15,
+    "wiek": "14 zawodników po 13 lat, 1 zawodnik 12 lat",
+    "wzrost": "158-192 cm",
+    "pozycje": {"PF": 4, "PG": 3, "SF": 3, "SG": 3, "PG/SG": 1, "C": 1},
+    "kluby_macierzyste": {"PTG Sokół Łańcut": 5, "UKS Basket 15 Przemyśl": 4, "KK Stalowa Wola": 2, "MKSS Siarka Tarnobrzeg": 2, "KU AZS Politechnika Rzeszowska": 1},
+    "_uwaga": "Kadra wojewódzka złożona z zawodników 5 klubów — raport pełni funkcję przeglądu talentu regionu, nie przygotowania do konkretnego meczu."
+  },
+
+  "struktura_raportu": {
+    "naglowek": "PODKARPACKIE / PLAYERS CHARACTERISTIC — ten sam szablon co 2LM i MP U19",
+    "komorka_name": "Trójlinijkowa: „#nr POZYCJA\" ¶ „IMIĘ NAZWISKO\" ¶ „173CM/13YO\" — format zgodny z MP U19 (lepszy niż w 2LM)",
+    "kolumny_statystyczne": "PUSTE Z LICZB — zamiast wartości zawierają etykiety źródeł: „STATYSTYKI OOM\", „LIGA U13\", „LIGA U15\" oraz nazwę klubu macierzystego. To prawdopodobnie odsyłacze/hiperłącza do zewnętrznych baz statystycznych.",
+    "wiersz_opisu": "3-5 punktów opisu na zawodnika (łącznie 53 linie dla 15 zawodników)",
+    "brak_sekcji": "NIE MA sekcji TEAM CHARACTERISTIC ani 10 leaderboardów obecnych w raportach 2LM i MP U19 — raport kończy się na charakterystykach zawodników.",
+    "zdjecia": "16 obrazów osadzonych w dokumencie (zdjęcia zawodników) — stąd rozmiar pliku 865 KB przy niewielkiej ilości tekstu."
+  },
+
+  "kryteria_oceny_talentu": {
+    "_metoda": "Częstość pojęć w 53 liniach opisu — pokazuje, na co skaut faktycznie patrzy w tym wieku.",
+    "ranking_wymiarow": {
+      "motoryka": 12,
+      "obrona": 7,
+      "szybkość": 6,
+      "ręka_kończąca_i_preferowana_strona": "kończy 5, prawa 5, lewa 1",
+      "ballhandling": 4,
+      "zwinność": 4,
+      "cechy_fizyczne": 4,
+      "energia_i_agresywność": 3,
+      "kozłowanie_i_pivot": 4,
+      "rzut": 2,
+      "przegląd_parkietu_i_podania": 3,
+      "podejmowanie_decyzji": 1
+    },
+    "_ustalenie_kluczowe": "MOTORYKA jest zdecydowanie najczęstszym kryterium (12 wystąpień), a RZUT jednym z najrzadszych (2). To ODWROTNOŚĆ proporcji z korpusów seniorskiego i U19, gdzie etykieta SHOOTER była najczęstsza (37 wystąpień w 2LM).",
+    "typowe_sformulowania": [
+      "„Dobra motoryka – zwinny i sprawny, szybki pierwszy krok\"",
+      "„Dobry ballhanding – porusza się płynnie, koszykarsko\"",
+      "„Dobry przegląd parkietu – potrafi podać w tłoku, szybkie podanie na kontrę\"",
+      "„Preferuje prawą rękę jako kozłującą i wykańczającą\"",
+      "„Gra w dwie strony, ale kończy tylko prawą\"",
+      "„Maksymalnie wykorzystuje swoje warunki fizyczne, duże ciało i długie ręce – zbiórki i bloki\"",
+      "„Zapowiada się na klasycznego SG\" — jedyny wprost wyrażony sąd PROJEKCYJNY"
+    ],
+    "_charakter_ocen": "Oceny są opisowe i rozwojowe („zapowiada się na\", „maksymalnie wykorzystuje warunki\", „słabo pracuje na nogach\") — bez instrukcji taktycznych typu „shade him right\" czy „box him out\", które dominowały w raportach przeciwnika. To potwierdza inny cel dokumentu."
+  },
+
+  "wzorce_miedzypoziomowe": {
+    "_waga": "Zestawienie z korpusami 2LM i MP U19 daje pierwszy w tej bazie obraz TRZECH poziomów jednocześnie.",
+    "przesuniecie_kryteriow_oceny": {
+      "U14_OOM": "Dominuje MOTORYKA (12) — jak zawodnik się porusza. Rzut wspomniany 2 razy.",
+      "U19_i_2LM": "Dominuje RZUT — SHOOTER to najczęstsza etykieta (37 w 2LM), plus SPOT UP (21), PULL UP (14), CATCH AND SHOOT (6).",
+      "interpretacja": "Skaut ocenia w U14 POTENCJAŁ RUCHOWY, a u starszych UMIEJĘTNOŚĆ WYKONAWCZĄ. To nie niekonsekwencja, lecz świadome dopasowanie kryteriów do etapu rozwoju.",
+      "zgodnosc_z_teoria": "Idealnie pokrywa się z licb_teoria_metodyka.json: „drugie apogeum motoryczne — chłopcy 12-13 rok życia, niezwykła łatwość uczenia się ruchów\". Zawodnicy w tym raporcie mają DOKŁADNIE 12-13 lat, a skaut patrzy właśnie na motorykę. Teoria i praktyka warsztatu się tu spotykają."
+    },
+    "pozycje_podwojne_odwrotny_trend": {
+      "U14_OOM": "1 z 15 = 7% (tylko jeden PG/SG)",
+      "MP_U19": "15 z 38 = 39%",
+      "2LM": "~40%",
+      "interpretacja": "Im młodszy zawodnik, tym CZĘŚCIEJ przypisywana mu jedna, jednoznaczna pozycja. Hybrydowość rośnie z wiekiem i poziomem.",
+      "_ostrozna_uwaga": "Możliwe dwa wyjaśnienia i nie da się ich tu rozstrzygnąć: (a) zawodnicy faktycznie się uniwersalizują z wiekiem, albo (b) w U14 skaut przypisuje pozycję według wzrostu, bo role jeszcze się nie wykrystalizowały. Drugie wyjaśnienie jest bardziej prawdopodobne i zgodne z ostrzeżeniem „U14 ≠ najlepszy senior\" z m7_org_structure_coach_analysis.json."
+    }
+  },
+
+  "walidacja_trafnosci_skautingu": {
+    "_odkrycie": "Szablon „PLAYERS BLANK.docx\" (folder 2LM/PLAYERS) zawiera pozostałości po raporcie KADRA PL U14 — listę powołanych zawodników z adnotacjami o osiągnięciach. Zestawienie tej listy ze składem Podkarpackiego daje ślad LONGITUDINALNY.",
+    "przeciecie": "4 z 15 zawodników Podkarpackiego (27%) figuruje na liście Kadry Polski U14",
+    "zawodnicy": [
+      {"nazwisko": "ORZECHOWSKI KAROL", "nr": 16, "pozycja": "PF", "wzrost_cm": 188, "klub": "MKSS Siarka Tarnobrzeg", "adnotacja_kadra": "II miejsce OOM, PIERWSZA 5 OOM, Najlepszy Strzelec"},
+      {"nazwisko": "POMARENKO IGOR", "nr": 8, "pozycja": "PG/SG", "wzrost_cm": 180, "klub": "KK Stalowa Wola", "adnotacja_kadra": "II miejsce OOM, Pierwsza 5 OOM"},
+      {"nazwisko": "WIŚNIOWSKI TADEUSZ", "nr": 10, "pozycja": "PG", "wzrost_cm": 173, "klub": "PTG Sokół Łańcut", "adnotacja_kadra": "II miejsce OOM, Najlepszy przechwytujący"},
+      {"nazwisko": "WŁODARCZYK KRZYSZTOF", "nr": 15, "pozycja": "C", "wzrost_cm": 192, "klub": "PTG Sokół Łańcut / Siarka Tarnobrzeg", "adnotacja_kadra": "II miejsce OOM"}
+    ],
+    "wynik_zespolu": "Podkarpackie zajęło II MIEJSCE w OOM (wg adnotacji przy nazwiskach w liście kadry).",
+    "_wartosc_metodyczna": "To zalążek zbioru do WALIDACJI TRAFNOŚCI OCEN: mamy opis zawodnika sprzed selekcji i wiemy, kto przeszedł dalej. Przy uzupełnieniu o pozostałe województwa dałoby się sprawdzić, które sformułowania w opisach korelują z powołaniem do kadry — czyli zmierzyć, na ile własny warsztat skautingowy przewiduje selekcję.",
+    "_zastrzezenie": "Lista kadry pochodzi z POZOSTAŁOŚCI w szablonie, nie z dokumentu źródłowego kadry. Przed wyciąganiem wniosków warto potwierdzić ją oficjalnym składem."
+  },
+
+  "ograniczenia_i_stan_korpusu": {
+    "brak_danych_liczbowych": "KLUCZOWE OGRANICZENIE — nie da się z tego korpusu policzyć żadnych norm ani percentyli, tak jak zrobiono dla 2LM i MP U19. Kolumny statystyczne zawierają wyłącznie etykiety źródeł i nazwy klubów.",
+    "korpus_niekompletny": "W folderze OOM znajdują się TRZY raporty wojewódzkie — „1. LUBUSKIE.docx\", „2. PODKARPACKIE.docx\" (opracowany tutaj) i „3. PODLASKIE.docx\" — oraz „PODKARPACKIE OOM DYWIZJA B.pdf\". Opracowano tylko jeden. Uzupełnienie o pozostałe dwa dałoby ~45 zawodników i pozwoliłoby porównać kryteria oceny między województwami.",
+    "zrodla_statystyk_zewnetrzne": "Etykiety „STATYSTYKI OOM\", „LIGA U13\", „LIGA U15\" wskazują, że dane liczbowe istnieją, ale w zewnętrznych bazach. Ich pobranie uzupełniłoby korpus do poziomu porównywalnego z 2LM/U19.",
+    "powiazane_pliki_nieopracowane": "W katalogu SCOUTING są też: folder U13, „TEAMS.xlsx\" oraz „2LM PLAYERS UNDER 2007 R..xlsx\" — potencjalnie kolejne poziomy tej samej piramidy skautingowej."
+  },
+
+  "powiazania": {
+    "2lm_scouting_corpus.json": "Poziom seniorski tej samej piramidy; tam pełne dane liczbowe i normy.",
+    "mp_u19_scouting_corpus.json": "Poziom U19; wspólnie z tym plikiem daje obraz trzech poziomów (U14 → U19 → senior).",
+    "licb_teoria_metodyka.json": "„Drugie apogeum motoryczne, chłopcy 12-13 rok\" — teoretyczne uzasadnienie, dlaczego w tym wieku skaut patrzy przede wszystkim na motorykę.",
+    "m7_org_structure_coach_analysis.json": "Skauting w akademii: „NIE oceniaj kto najlepszy DZIŚ\", „U14 ≠ najlepszy senior\", „dominacja fizyczna = red flag\" — ten korpus jest praktycznym materiałem do tych tez.",
+    "book_development_curriculum_jozak.json": "Wiek biologiczny vs metrykalny i efekt względnego wieku — przy zawodnikach 12-13 lat to czynniki decydujące o obrazie z raportu.",
+    "imopeksis_methodology.json": "Ścieżka „Dookoła Sportu\" — etap 7-14 lat opisany jako etap TECHNIKI; raport pokazuje, co realnie ocenia się na jego końcu.",
+    "projection_fit.json": "Projekcja i pułapki oceny młodzieży; sformułowanie „zapowiada się na klasycznego SG\" to projekcja w czystej postaci."
+  }
+}

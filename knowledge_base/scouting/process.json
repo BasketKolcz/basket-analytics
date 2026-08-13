@@ -1,0 +1,44 @@
+{
+  "_source": "Next Draft Foundation — Moduł 1",
+  "_comment": "Procesy i checklisty scoutingowe",
+
+  "scouting_process_6step": [
+    "IDENTIFY — identyfikacja zawodnika",
+    "EVALUATE — ocena obecnego poziomu",
+    "PROJECT — projekcja przyszłej wartości",
+    "FIT — dopasowanie do organizacji",
+    "RISK MANAGEMENT — zarządzanie ryzykiem",
+    "DECISION SUPPORT — wsparcie procesu decyzyjnego"
+  ],
+
+  "international_scout_checklist_7step": [
+    "WATCH — obserwacja zawodnika",
+    "EVALUATE — ocena",
+    "ANALYZE — analiza",
+    "REPORT — przygotowanie raportu",
+    "COMMUNICATE — komunikacja z front office",
+    "FOLLOW UP — dalsze śledzenie",
+    "TRACK DEVELOPMENT — monitorowanie postępów"
+  ],
+
+  "decision_process_participants": [
+    "GM / Front Office",
+    "Head Coach i Sztab",
+    "Scouting",
+    "Analytics",
+    "Medical Staff",
+    "Ownership / Budżet"
+  ],
+
+  "player_evaluation_categories": [
+    "TALENT",
+    "CHARACTER",
+    "SKILL SET",
+    "BASKETBALL IQ",
+    "ROLE FIT",
+    "UPSIDE",
+    "RISK FACTORS"
+  ],
+
+  "note": "Scouting to tylko część większego procesu decyzyjnego organizacji"
+}

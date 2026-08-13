@@ -1,0 +1,23 @@
+{
+  "project": "BasketKołcz — Analize Platform",
+  "owner": "Kosma Kołcz · GTK Gliwice",
+  "updated": "2026-07-09",
+  "stack": {
+    "backend": "Python / Flask · app.py (~32500 linii)",
+    "database": "PostgreSQL 16 · Docker Compose",
+    "frontend": "Bootstrap 5 · Chart.js 4.4 · vanilla JS",
+    "server": "Gunicorn --reload · localhost:5000",
+    "preview": "Python http.server · port 8080 · .claude/serve.bat"
+  },
+  "modules": [
+    "vocabulary/stats.json",
+    "vocabulary/actions.json",
+    "schema/tables.json",
+    "schema/excel_format.json",
+    "ui/routes.json",
+    "ui/js_functions.json",
+    "ui/kpi_cards.json",
+    "templates/youtube_description.md",
+    "templates/scouting_card.md"
+  ]
+}

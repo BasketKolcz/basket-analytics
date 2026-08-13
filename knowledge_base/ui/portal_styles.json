@@ -1,0 +1,15 @@
+{
+  "_comment": "Style wierszy wyników w portalu — Mecze tab",
+  "badge": {
+    "bg":       "#e8ecf3",
+    "win_tc":   "#1a6b3c",
+    "loss_tc":  "#8b1a1a",
+    "note":     "Litera W/P ma kolor (zielony/czerwony), tło badge jest zawsze szare"
+  },
+  "row": {
+    "bg":       "#fff",
+    "border":   "#e8ecf3"
+  },
+  "portal_css_location": "_PORTAL_CSS blok ~linia 13565",
+  "portal_css_used_by": ["/portal", "/portal/mecz/<id>", "/portal/zawodnik/<pid>"]
+}

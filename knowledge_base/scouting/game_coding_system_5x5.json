@@ -1,0 +1,178 @@
+{
+  "_source": "Folder G:\\Mój dysk\\BASKET\\SCOUTING\\GAMEANALYZE EXEL. Pliki analizowane: „opis_zmiennych_koszykowka koszykówka_MARZEC 2023.docx\" (kodeks zmiennych — zasady kodowania), „usa_australia.xlsx\", „usa_francja.xlsx\", „usa_iran.xlsx\" (zakodowane mecze USA z IO Tokio 2020), „ANALIZA DO PRACY.xlsx\" (arkusz zbiorczy + wykresy), „arkusz_obserwacji_wzór_5x5 (1).xlsx\" (pusty szablon, arkusze „gtk\"/„gak\"), „przykładowy zapis_19.09.xlsx\" (australia/słowenia), folder „MP U17 2023\" (mecze GTK Gliwice). Plik „usa TOKIO2020 TEAM RESULTS.gsheet\" to tylko wskaźnik do Google Sheets — brak danych lokalnie.",
+  "_comment": "System kodowania meczu POSIADANIE-PO-POSIADANIU (5x5) używany przez użytkownika we własnym warsztacie analitycznym. KLUCZOWE USTALENIE: układ kolumn tego systemu jest niemal identyczny z formatem arkusza meczowego programu BasketKołcz (kolumny A-K pokrywają się w 100%), ale system jest PROSTSZY — nie ma kolumn L-P (asysta, zbiórka OFF/DEF, przechwyt, blok). To najprawdopodobniej wcześniejsza/pokrewna wersja tego samego formatu. Szablon ma arkusze „gtk\"/„gak\", a folder MP U17 2023 zawiera realne mecze GTK Gliwice — czyli to warsztat roboczy, nie materiał obcy.",
+  "_program_use": "Bezpośrednie znaczenie dla parsera i walidatora programu: (1) katalog 24 kodów zakończenia akcji i ich warianty rzutów wolnych to gotowa lista referencyjna dla walidacji kolumny „Kod akcji\"; (2) reguła spójności („suma czasów, kodów i stref musi być sobie równa\") to gotowy test walidacyjny do zaimplementowania; (3) reguła pomiaru czasu akcji z zegara 24 s (czas = 24 − stan zegara) definiuje semantykę kolumny czasu; (4) reguły przypisywania strefy przy stracie (BR) rozstrzygają przypadki brzegowe parsera. Analiza rzeczywistych danych ujawniła 5 zapisów niezgodnych z kodeksem — dowód, że walidator ma realną wartość.",
+
+  "kategoria": "Warsztat analityczny — system kodowania meczu 5x5",
+
+  "zasady_kodowania": {
+    "nazewnictwo": {
+      "plik": "Nazwa pliku = nazwy drużyn meczu, np. mecz USA vs Japonia → „usa_japonia.xlsx\"",
+      "arkusze": "Nazwy skoroszytów od nazw drużyn, czyli „usa\" i „japonia\"",
+      "zasada": "LICZYMY OBA ZESPOŁY W MECZU — każdy zespół ma własny arkusz z własnymi posiadaniami"
+    },
+    "uklad_kolumn": {
+      "A": "Numer kwarty — wpisywany wraz z GWIAZDKĄ dla zespołu, który rozpoczął (np. „1*\"). Numer wpisuje się tylko w pierwszym wierszu kwarty.",
+      "B": "Czas trwania akcji (tylko cyfra!)",
+      "C": "Kod zakończenia akcji (z listy kodów)",
+      "D": "Strefa zakończenia akcji (odczytywana z mapy stref)",
+      "E-I": "Zawodnik 1-5 — numery koszulek z „#\", wpisywane tylko przy zmianie składu",
+      "J": "Wzięty czas — przerwa na żądanie wzięta przez trenera",
+      "K": "Zawodnik kończący akcję (z „#\")"
+    },
+    "konwencja_srednika": {
+      "regula": "Przy dwóch i więcej akcjach W JEDNYM POSIADANIU czas, kody i strefy oddziela się ŚREDNIKAMI, bez spacji (np. „P;0/2;3\")",
+      "kontrola_spojnosci": "SUMA czasów, kodów i stref musi być sobie równa — czyli liczba elementów po podziale średnikiem musi się zgadzać w kolumnach B, C i D.",
+      "_program_use": "To gotowy, jednoznaczny test walidacyjny: len(split(B)) == len(split(C)) == len(split(D)).",
+      "przyklad_rzeczywisty": "Wiersz z pliku usa_australia: B=„8;5;1\", C=„0/3;0/3;BR\", D=„18;11;1\", K=„#7;#5;#13\" — trzy akcje w jednym posiadaniu, każda z własnym czasem, kodem, strefą i wykonawcą."
+    },
+    "zapis_zmian_skladu": "Numery zawodników wpisuje się dla posiadania; przy zmianie w obrębie kolejnych akcji stosuje się zapis pozycyjny — np. przy 3 akcjach w posiadaniu „#1,#1,#3\", albo przy zmianie po 2. akcji „#1,#2,#2\".",
+    "pomiar_czasu_akcji": {
+      "metoda": "Czas odczytywany z zegara 24 s metodą stop-klatki: czas trwania akcji = 24 − stan zegara w chwili zakończenia. Przykład: na zegarze 11 s → 24 − 11 = 13 s.",
+      "moment_zakonczenia": "Łapiemy moment opuszczenia piłki z ręki gracza rzucającego, przechwytu przez przeciwnika lub gwizdka sędziego.",
+      "_uwaga": "Kodeks w jednym miejscu mówi o rozdzielaniu czasów PRZECINKIEM, w innym (i w praktyce plików) — ŚREDNIKIEM. W rzeczywistych danych konsekwentnie użyto ŚREDNIKA.",
+      "_OSTRZEZENIE_RESET_14_SEKUND": {
+        "_status": "DODANE 22.07.2026 po weryfikacji wobec FIBA Official Rules 2024. Podważa poprawność wzoru opisanego wyżej.",
+        "problem": "Wzór „czas akcji = 24 − stan zegara\" zakłada, że każda akcja startuje z 24 sekund. To NIEPRAWDA. Zgodnie z Art. 29.2.2 przy wznowieniu w POLU ATAKU zegar akcji jest resetowany do **14 SEKUND** (gdy w chwili zatrzymania pokazywał 13 s lub mniej) albo kontynuuje od zatrzymanej wartości (gdy pokazywał 14 s lub więcej).",
+        "skutek_liczbowy": "Dla akcji rozpoczętej po resecie 14-sekundowym wzór zawyża czas trwania o **10 sekund**. Przykład: akcja trwała 6 s, na zegarze zostało 8 s → wzór daje 24 − 8 = 16 s zamiast 14 − 8 = 6 s.",
+        "kierunek_bledu": "Czasy akcji ZAWYŻONE → tempo gry ZANIŻONE, średnia długość akcji ZAWYŻONA.",
+        "co_z_danymi_w_bazie": "Zbiór z 3 meczów USA na IO Tokio 2020 (n=614 akcji, średnia 9,31 s) MOŻE być tym obciążony. Rozstrzygnięcie: maksimum w danych wynosi 23 s, a nie 24 — co sugeruje staranny odczyt, ale nie wyklucza problemu. Jeśli koder nie odnotowywał resetów, część krótkich akcji po faulu w polu ataku jest zapisana jako dłuższe niż w rzeczywistości.",
+        "jak_naprawic": [
+          "Wariant A (najprostszy): przy kodowaniu odnotowywać, z jakiej wartości startował zegar akcji (24 albo 14) — dodatkowa kolumna lub prefiks przy czasie",
+          "Wariant B (najpewniejszy): mierzyć czas akcji NIEZALEŻNIE od zegara akcji, stoperem od wejścia w posiadanie",
+          "Wariant C (retrospektywny): zidentyfikować akcje następujące bezpośrednio po faulu lub błędzie przeciwnika w polu ataku i zweryfikować je na nagraniu"
+        ],
+        "_uwaga_historyczna": "Reset 14-sekundowy obowiązuje w przepisach FIBA od 2018 roku, więc dotyczy WSZYSTKICH danych w tej bazie, łącznie z meczami z Tokio 2020 i MP U17 2023.",
+        "_zrodlo": "licb_przepisy_gry.json → parametry_liczbowe.zegar_akcji_24_14"
+      }
+    }
+  },
+
+  "katalog_kodow": {
+    "rzuty_z_gry": {
+      "2": "celny za 2",
+      "3": "celny za 3",
+      "0/2": "niecelny za 2",
+      "0/3": "niecelny za 3"
+    },
+    "and_one": {
+      "2+1": "dwa plus jeden z celnym osobistym",
+      "2+0": "dwa plus jeden z niecelnym osobistym",
+      "3+1": "trzy plus jeden z celnym osobistym",
+      "3+0": "trzy plus jeden z niecelnym osobistym"
+    },
+    "dobitki": {
+      "2D": "dobitka celna",
+      "0/2D": "dobitka niecelna"
+    },
+    "zakonczenia_bez_rzutu": {
+      "BR": "brak rzutu — wszystkie straty, 24 s itp.",
+      "P": "przerwanie akcji (zagranie nogą, nieudany przechwyt, przerwa w grze itp.)",
+      "F": "faul i piłka z boku"
+    },
+    "rzuty_wolne": {
+      "standardowe": ["0/2W", "1/2W", "2/2W", "0/3W", "1/3W", "2/3W", "3/3W"],
+      "z_limitu": ["0/2WL", "1/2WL", "2/2WL"],
+      "po_technicznym": ["0/1WT", "1/1WT"],
+      "dobitka_i_rzuty_wolne": ["0D0/2W", "0D1/2W", "0D2/2W", "2D0/1W", "2D1/1W"]
+    },
+    "faul_niesportowy": "Traktowany jako zwykły faul — wpisujemy liczbę osobistych (1/2W, 2/2W, 0/2W); wznowienie z autu liczone jako TO SAMO posiadanie, ale kolejna akcja."
+  },
+
+  "strefy": {
+    "zrodlo": "Odczytywane z MAPY STREF — miejsce ostatniego opuszczenia piłki z ręki zawodnika lub gwizdka sędziego. Np. akcja zakończona lub zatrzymana faulem w strefie 7 → wpisujemy 7.",
+    "_uwaga_brak_mapy": "Sama mapa stref NIE znajduje się w analizowanych plikach. W danych występują wartości 1-42. Do pełnej interpretacji stref potrzebna jest mapa źródłowa (por. court-fiba.html / shooting chart w programie).",
+    "reguly_strefy_przy_stracie_BR": [
+      "Piłka przejęta zawodnikowi w koźle lub trzymającemu piłkę → strefa = miejsce zmiany posiadania",
+      "Piłka wyszła na aut w trakcie podania (nikt z partnerów jej nie dotknął) → strefa = miejsce najbliższe wyjściu piłki na aut",
+      "Piłka wyszła na aut, ale odbiorca podania jej nie opanował → strefa = miejsce nieopanowania piłki (ostatni kontakt dłoni)",
+      "Piłka przechwycona przez obronę w trakcie podania → strefa = miejsce przechwycenia (wyraźne wejście w posiadanie)"
+    ],
+    "_program_use": "Te cztery reguły to dokładnie te przypadki brzegowe, w których parser/koder może się rozjechać — warto je pokazać jako podpowiedź w interfejsie kodowania."
+  },
+
+  "dane_rzeczywiste_tokio_2020": {
+    "opis": "Trzy zakodowane mecze USA z Igrzysk w Tokio 2020 (turniej olimpijski 2021).",
+    "wolumen_posiadan": {
+      "usa_francja": {"usa": 79, "francja": 75},
+      "usa_iran": {"usa": 83, "iran": 84},
+      "usa_australia": {"usa": 81, "australia": 79},
+      "_uwaga": "~75-84 posiadań na zespół na mecz — wartości zgodne z realiami koszykówki FIBA."
+    },
+    "czas_akcji": {
+      "n": 614,
+      "min_s": 0,
+      "max_s": 23,
+      "srednia_s": 9.31,
+      "_uwaga": "Średnia 9,31 s przy limicie 24 s. Maksimum 23 s (nie 24) potwierdza poprawność metody pomiaru."
+    },
+    "rozklad_kodow": {
+      "0/3": 112, "2": 105, "BR": 93, "0/2": 91, "3": 66, "F": 45, "P": 25,
+      "2/2W": 19, "1/2W": 12, "2+1": 8, "0/2D": 7, "2/2WL": 6, "2D": 5,
+      "1/2WL": 4, "2/3W": 3, "0/2W": 3, "0/2WL": 2, "1/1WT": 1
+    },
+    "rozklad_stref": {
+      "zakres": "1-42",
+      "dominanta": "Strefa 1 — 154 wystąpienia (zdecydowanie najczęstsza, najpewniej okolice kosza)",
+      "kolejne": "19 (54), 4 (38), 17 (38), 15 (33), 18 (26), 16 (24), 11 (23), 3 (23), 8 (22)"
+    }
+  },
+
+  "znaleziska_jakosci_danych": {
+    "_kontekst": "Weryfikacja 614 zakodowanych akcji względem kodeksu ujawniła 5 zapisów niezgodnych ze specyfikacją — po jednym wystąpieniu każdy.",
+    "niezgodnosci": [
+      {"zapis": "02D", "prawdopodobnie": "0/2D (dobitka niecelna)", "problem": "brak ukośnika"},
+      {"zapis": "1/1T", "prawdopodobnie": "1/1WT (rzut wolny po technicznym)", "problem": "brak litery W"},
+      {"zapis": "2/2", "prawdopodobnie": "2/2W (rzuty wolne)", "problem": "brak litery W"},
+      {"zapis": "2/2D", "prawdopodobnie": "niejednoznaczne — dobitka z rzutami wolnymi?", "problem": "kod spoza katalogu"},
+      {"zapis": "3D", "prawdopodobnie": "dobitka za 3?", "problem": "kod spoza katalogu — kodeks definiuje tylko 2D i 0/2D"}
+    ],
+    "wskaznik_bledow": "5 / 614 ≈ 0,8% akcji",
+    "_wniosek_dla_programu": "Nawet przy starannym, ręcznym kodowaniu przez jedną osobę pojawia się ~1% literówek w kodach. To mocny argument za walidacją kodów przy imporcie (whitelist kodów + test równej liczby elementów po średniku) — dokładnie takie błędy cicho psują agregaty."
+  },
+
+  "arkusz_analiza_do_pracy": {
+    "charakter": "Arkusz zbiorczy (Sheet1, 12×44) + arkusz „wykresy\" — warstwa badawcza nad zakodowanymi meczami. Nazwa sugeruje analizę na potrzeby pracy dyplomowej/naukowej.",
+    "jednostka_obserwacji": "Wiersz = drużyna w meczu (6 wierszy: usa/francja, usa/iran, usa/australia) z kolumną „kolejność meczu\" 1-3.",
+    "mierzone_zmienne": [
+      "tempo 1Q, tempo 3Q, tempo 4Q, średnie tempo akcji (sekundy na akcję)",
+      "suma punktów 1Q i 3Q",
+      "średnia punktów na akcję (1Q, 3Q, ogółem)",
+      "tempo akcji zakończonych rzutem za 3",
+      "oddane / celne / niecelne za 3 oraz skuteczność za 3",
+      "tempo średnie punktów",
+      "liczniki stref S.11-S.19 oraz S.32"
+    ],
+    "hipoteza_badawcza": "Układ danych (tempo vs punkty na akcję, zestawienie USA z każdym rywalem) wskazuje na badanie ZWIĄZKU MIĘDZY TEMPEM GRY A SKUTECZNOŚCIĄ. W danych widać wyraźny kontrast: USA grają szybciej (śr. tempo 6,7-9,5 s) niż rywale (10,7-11,5 s), przy wyższej średniej punktów na akcję.",
+    "_uwaga_stan_pliku": "Tabela podsumowująca w wierszach 11-12 (kolumny AC-AR) zwraca #DIV/0! — formuły odwołują się do pustych komórek. Warstwa zbiorcza jest niedokończona/zepsuta; same dane źródłowe w wierszach 2-7 są poprawne."
+  },
+
+  "relacja_do_formatu_programu": {
+    "_waga": "NAJWAŻNIEJSZE USTALENIE tego pliku.",
+    "zgodnosc_kolumn": "Kolumny A-K systemu 5x5 pokrywają się co do znaczenia i kolejności z formatem arkusza meczowego programu BasketKołcz (por. schema/excel_format.json): Kwarta | Czas(sek) | Kod akcji | Strefa | Skład piątki E-I | Timeout | Kończy akcję.",
+    "roznica": "Format programu ma DODATKOWO kolumny L-P: Asysta, Zbiórka OFF, Zbiórka DEF, Przechwyt, Blok. System 5x5 kończy się na kolumnie K.",
+    "wniosek": "System 5x5 to prostszy przodek/wariant formatu programu — skupiony wyłącznie na POSIADANIU i jego zakończeniu, bez atrybucji zdarzeń wspierających. Pliki z folderu MP U17 2023 (GTK Gliwice: ćwierćfinał z Kielcami, finał i analizy zaawansowane/PnR z Gdynią) są zakodowane w tym właśnie systemie.",
+    "konsekwencje_praktyczne": [
+      "Archiwalne mecze zakodowane w systemie 5x5 dają się zaimportować do programu — wystarczy mapowanie kolumn A-K i pozostawienie L-P pustych",
+      "Katalog kodów 5x5 (2, 3, 0/2, 0/3, BR, P, F, warianty W/WL/WT, dobitki) warto porównać ze słownikiem kodów programu (vocabulary/actions.json) i uzgodnić różnice",
+      "Kody rzutów wolnych w systemie 5x5 kodują OD RAZU wynik serii (np. 1/2W = 1 celny z 2) — to inna filozofia niż osobne zdarzenia ftm/fta i wymaga konwersji przy imporcie",
+      "Reguła „gwiazdka przy kwarcie oznacza zespół rozpoczynający\" to metadana, której program może użyć do ustalenia posiadania początkowego"
+    ]
+  },
+
+  "powiazania": {
+    "schema/excel_format.json": "GŁÓWNE powiązanie — porównanie układu kolumn; system 5x5 = A-K formatu programu.",
+    "vocabulary/actions.json": "Katalog 24 kodów zakończenia akcji do uzgodnienia ze słownikiem kodów programu.",
+    "schema/tables.json": "Posiadania (poss) w match_stats i strefy w timing_stats odpowiadają jednostkom tego systemu.",
+    "licb_ocena_i_obserwacje.json": "Inna warstwa obserwacji tej samej szkoły — tam 40 obserwacji przyczyn ±1 (jakość wykonania), tu kodowanie zakończeń posiadań (efekt). Systemy komplementarne, nie konkurencyjne.",
+    "book_imopeksis_hucinski.json": "Metodyka rejestracji Hucińskiego (arkusze per kwarta) to ta sama rodzina narzędzi obserwacyjnych.",
+    "game_concepts.json": "Tempo, punkty na posiadanie i strefy zakończenia to operacjonalizacja konceptów M2 (spacing, timing, winning impact)."
+  },
+
+  "pliki_powiazane_w_folderze": {
+    "arkusz_obserwacji_wzór_5x5 (1).xlsx": "PUSTY SZABLON systemu, arkusze nazwane „gtk\" i „gak\" — gotowy do kodowania meczów GTK Gliwice",
+    "przykładowy zapis_19.09.xlsx": "Przykład referencyjny (australia/słowenia) — wzorzec poprawnego zapisu",
+    "MP U17 2023/": "Realne mecze GTK Gliwice zakodowane tym systemem: gliwice_kielce ćwierćfinał, gliwice_gdynia finał (arkusz obs.), gliwice_gdynia zaawansowane, gliwice_gdynia zaawansowane PnR",
+    "usa TOKIO2020 TEAM RESULTS.gsheet": "Wskaźnik do arkusza Google (198 B) — dane NIE są dostępne lokalnie; wymaga otwarcia w Google Sheets"
+  }
+}

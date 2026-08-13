@@ -1,0 +1,147 @@
+{
+  "_source": "Next Draft Foundation — Szablon Projektu Kursowego",
+  "_comment": "Individual Player Development Plan. Przykładowy materiał do projektu końcowego kursu. Forma dowolna (Word/PPT/Excel/Notion/Canva). Najważniejsze: sposób myślenia, decyzje, praktyczne użycie wiedzy z kursu.",
+  "_program_use": "Baza do budowy modułu 'Plan Rozwoju Zawodnika' w sekcji /zawodnik lub /roster programu.",
+
+  "meta": {
+    "tytul": "Individual Player Development Plan",
+    "podtytul": "Plan. Pracuj. Mierz. Rozwijaj.",
+    "brand": "Next Draft Foundation",
+    "cytat_dolny": "Rozwój to proces. Codzienne małe kroki prowadzą do wielkich rezultatów."
+  },
+
+  "naglowek_formularza": {
+    "pola": [
+      { "id": "data_planu",       "label": "Data Planu",        "typ": "date" },
+      { "id": "zawodnik",         "label": "Zawodnik",          "typ": "text" },
+      { "id": "data_urodzenia",   "label": "Data Urodzenia",    "typ": "date" },
+      { "id": "trener_opracowal", "label": "Trener / Opracował","typ": "text" }
+    ]
+  },
+
+  "profil_zawodnika": {
+    "id": "profil",
+    "zdjecie": { "id": "zdjecie_zawodnika", "label": "Zdjęcie Zawodnika", "typ": "image" },
+    "dane": [
+      { "id": "pozycja",              "label": "Pozycja",                  "typ": "text" },
+      { "id": "wiek",                 "label": "Wiek",                     "typ": "number" },
+      { "id": "wzrost_waga",          "label": "Wzrost / Waga",            "typ": "text" },
+      { "id": "dominujaca_reka",      "label": "Dominująca Ręka",          "typ": "select", "opcje": ["Prawa", "Lewa", "Obie"] },
+      { "id": "obecny_klub_liga",     "label": "Obecny Klub / Liga",       "typ": "text" },
+      { "id": "staz_koszykarski",     "label": "Staż Koszykarski",         "typ": "text" },
+      { "id": "cele_krotkoterminowe", "label": "Cele Krótkoterminowe",     "typ": "text" },
+      { "id": "cele_dlugoterminowe",  "label": "Cele Długoterminowe",      "typ": "text" }
+    ]
+  },
+
+  "sekcja_1_obecny_status": {
+    "nr": 1,
+    "id": "obecny_status",
+    "ikona": "chart",
+    "nazwa": "OBECNY STATUS",
+    "mocne_strony": {
+      "id": "mocne_strony",
+      "label": "MOCNE STRONY",
+      "kolor_naglowka": "#1a6b3c",
+      "pole": { "typ": "bullet_list", "n": 4 }
+    },
+    "obszary_do_poprawy": {
+      "id": "obszary_do_poprawy",
+      "label": "OBSZARY DO POPRAWY",
+      "kolor_naglowka": "#e07b39",
+      "pole": { "typ": "bullet_list", "n": 4 }
+    },
+    "oceny_kategorii": {
+      "opis": "Oceny 1-5 gwiazdek",
+      "kategorie": [
+        { "id": "umiejetnosci_techniczne", "label": "UMIEJĘTNOŚCI TECHNICZNE", "skala": "1-5" },
+        { "id": "koszykarskie_iq",         "label": "KOSZYKARSKIE IQ",         "skala": "1-5" },
+        { "id": "atletyzm",                "label": "ATLETYZM",                "skala": "1-5" },
+        { "id": "mentalnosc_dojrzalosc",   "label": "MENTALNOŚĆ / DOJRZAŁOŚĆ", "skala": "1-5" },
+        { "id": "profesjonalizm",          "label": "PROFESJONALIZM",          "skala": "1-5" }
+      ]
+    },
+    "komentarz_ogolny": { "id": "komentarz_ogolny", "typ": "textarea" }
+  },
+
+  "sekcja_2_priorytety_rozwoju": {
+    "nr": 2,
+    "id": "priorytety_rozwoju",
+    "ikona": "target",
+    "nazwa": "PRIORYTETY ROZWOJU",
+    "zasada_wizualna": "SKUP SIĘ NA TYM, CO MA NAJWIĘKSZY WPŁYW NA TWÓJ ROZWÓJ I SUKCES DRUŻYNY.",
+    "priorytety": [
+      {
+        "nr": 1,
+        "id": "priorytet_1",
+        "kolor": "#e07b39",
+        "pola": [
+          { "id": "obszar_1",    "label": "OBSZAR",         "typ": "text" },
+          { "id": "dlaczego_1",  "label": "DLACZEGO TO WAŻNE?", "typ": "textarea" },
+          { "id": "cel_1",       "label": "CEL",            "typ": "text" }
+        ]
+      },
+      {
+        "nr": 2,
+        "id": "priorytet_2",
+        "kolor": "#e07b39",
+        "pola": [
+          { "id": "obszar_2",    "label": "OBSZAR",         "typ": "text" },
+          { "id": "dlaczego_2",  "label": "DLACZEGO TO WAŻNE?", "typ": "textarea" },
+          { "id": "cel_2",       "label": "CEL",            "typ": "text" }
+        ]
+      },
+      {
+        "nr": 3,
+        "id": "priorytet_3",
+        "kolor": "#e07b39",
+        "pola": [
+          { "id": "obszar_3",    "label": "OBSZAR",         "typ": "text" },
+          { "id": "dlaczego_3",  "label": "DLACZEGO TO WAŻNE?", "typ": "textarea" },
+          { "id": "cel_3",       "label": "CEL",            "typ": "text" }
+        ]
+      }
+    ]
+  },
+
+  "sekcja_3_plan_dzialania": {
+    "nr": 3,
+    "id": "plan_dzialania",
+    "ikona": "calendar",
+    "nazwa": "PLAN DZIAŁANIA",
+    "kolumny_tabeli": [
+      "OBSZAR", "CEL SZCZEGÓŁOWY", "KONKRETNE DZIAŁANIA / ĆWICZENIA",
+      "CZĘSTOTLIWOŚĆ", "ZASOBY / UWAGI", "MIERNIK SUKCESU", "TERMIN"
+    ],
+    "obszary": [
+      { "id": "technika",          "ikona": "basketball", "nazwa": "TECHNIKA" },
+      { "id": "taktyka_iq",        "ikona": "tactics",    "nazwa": "TAKTYKA / IQ" },
+      { "id": "atletyzm",          "ikona": "run",        "nazwa": "ATLETYZM" },
+      { "id": "mentalnosc",        "ikona": "brain",      "nazwa": "MENTALNOŚĆ" },
+      { "id": "nawyki_profesjonalizm", "ikona": "star",   "nazwa": "NAWYKI / PROFESJONALIZM" }
+    ]
+  },
+
+  "sekcja_4_monitoring_ewaluacja": {
+    "nr": 4,
+    "id": "monitoring_ewaluacja",
+    "ikona": "chart_up",
+    "nazwa": "MONITORING I EWALUACJA",
+    "kolumny_tabeli": ["DATA", "CO OCENIAMY?", "POSTĘP (1-10)", "KOMENTARZ"],
+    "wiersze": 5
+  },
+
+  "sekcja_5_notatki_dodatkowe": {
+    "nr": 5,
+    "id": "notatki_dodatkowe",
+    "ikona": "notes",
+    "nazwa": "NOTATKI DODATKOWE",
+    "pole": { "typ": "textarea", "linie": 6 }
+  },
+
+  "uwagi_projektowe": [
+    "Forma projektu jest całkowicie dowolna: Word, PowerPoint, Excel, Notion, Canva lub inna.",
+    "Najważniejsze: projekt pokazuje sposób myślenia, proces podejmowania decyzji i praktyczne użycie wiedzy z kursu.",
+    "To jest przykładowy materiał — służy jako inspiracja i drogowskaz, nie jako obligatoryjny szablon."
+  ]
+}

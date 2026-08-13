@@ -1,0 +1,61 @@
+{
+  "_source": "Notatki z lektury: „3-2-1… Zaprojektuj siebie! O relacjach, rozwoju i budowaniu mostów. STEAM – przepływ wartości – edukacja, człowiek, przyszłość”, red. dr Magdalena Christ, prof. UŚ, Uniwersytet Śląski, Katowice 2026, ISBN 978-83-226-4707-3, publikacja bezpłatna, 256 stron. Analiza własna użytkownika, 05.08.2026.",
+  "_comment": "SZCZEGÓŁOWE NOTATKI Z KSIĄŻKI — struktura, 27 esejów (sedno każdego), motywy przekrojowe, cytaty-zasady. Rama pojęciowa STEAM w osobnym pliku steam_edukacja_framework.json. Pozycja objęta prawem autorskim UŚ — plik zawiera notatki i parafrazy, NIE przedruki.",
+  "_program_use": "Rezerwuar idei i haseł do treści lekcji/kultury w platformie edukacyjnej (np. hasła motywacyjne, rutyna 3-2-1, przykłady interdyscyplinarności). Analiza wdrożeniowa: steam_imopeksis_platforma_analiza.json.",
+  "kategoria": "Notatki źródłowe — publikacja STEAM Uniwersytetu Śląskiego",
+
+  "o_publikacji": {
+    "typ": "Antologia inspiracyjno-popularyzatorska (zbiór esejów), nie podręcznik ani metaanaliza.",
+    "cel": "Pokazać STEAM jako sposób myślenia i budowania 'mostów'; zachęcić młodych (szkoła podstawowa/średnia) do ciekawości i świadomego 'projektowania siebie'.",
+    "autorzy": "27 esejów: mentorzy UŚ (na czele z Rektorem prof. R. Koziołkiem), doktoranci, studenci oraz uczennica liceum (program Uniwersytet Najlepszych UŚ).",
+    "klamra": "Rutyna '3-2-1 Most' (Harvard Project Zero) — każdy esej otwiera 3 skojarzenia / 2 pytania / 1 metafora. Poetycki wstęp: STEAM przez 4 żywioły.",
+    "konteksty_instytucjonalne": "Uniwersytet Najlepszych UŚ (tutoring dla klas 7-8 i szkół średnich), ISM (studia międzyobszarowe), program MOST/Śląski Most, Śląskie Interdyscyplinarne Centrum Chemii, Transform4Europe."
+  },
+
+  "motywy_przekrojowe": [
+    "CIEKAWOŚĆ jako wspólny mianownik wszystkich historii — 'dociekliwość poznawcza jako paliwo silnika motywacji'.",
+    "DROGA NIE BYŁA PLANEM — ciąg prób, błędów, przypadków (kilku autorów wprost: 'to nie był plan'); niejeden trafił na kierunek 'przez pomyłkę' lub wbrew oczekiwaniom.",
+    "MENTOR/NAUCZYCIEL zmienia bieg życia — powracający wątek 'polubiłem/am przedmiot dzięki jednej osobie'.",
+    "INTERDYSCYPLINARNOŚĆ — 'najciekawsze rzeczy dzieją się za płotem'; łączenie dziedzin daje odkrycia niemożliwe w jednej dyscyplinie.",
+    "EKSPERYMENT i doświadczanie zmysłowe > wkuwanie definicji; szkoła często gasiła ciekawość teorią.",
+    "AI jako tło epoki — pytanie 'będziesz UŻYTKOWNIKIEM czy PROJEKTANTEM?'; eksperyment potrzebny, by weryfikować scenariusze AI.",
+    "RELACJE i autentyczność w 'sztucznych' czasach; nauka i dydaktyka jako przestrzeń spotkania, nie indywidualnego wysiłku.",
+    "KOBIETY w STEM — kompetencje porównywalne z mężczyznami, ale często trzeba było o miejsce zawalczyć (przykłady: polarniczki, astronautki)."
+  ],
+
+  "eseje_sedno": {
+    "01_koziolek_sprawdz_czy_prawda": "Rektor UŚ. Warsztat stolarski dziadka uczył przez działanie i pytania 'dlaczego?' (świerk vs buk). Eksperyment = 'ciekawość wdrożona w sposób kontrolowany'; w erze AI to serce edukacji przyszłości — 'warsztat dziadka jest dla nauki tym, czym Wielki Zderzacz Hadronów'.",
+    "02_musiol_prawie_spalilem_piwnice": "Chemia. 'Uczeń problematyczny', zagrożenia z matematyki; uratowała pasja do chemii (pożar w piwnicy). Dziś projektuje leki i buduje Śląskie Interdyscyplinarne Centrum Chemii. Puenta: 'Nie musisz być idealny i wiedzieć wszystkiego — wystarczy być wystarczająco ciekawy, by sprawdzić, co dalej. Nie bój się próbować, bo ktoś (nawet Ty sam) nie widzi Cię w danym miejscu.'",
+    "03_cholewka_bawic_sie_nauka": "Fizyka medyczna, termowizja (onkologia, stomatologia, skoliozy, badania żyraf, medycyna sportu). Od niechęci do fizyki przez sport do popularyzacji nauki. 'Nauka jest wokół nas — trzeba umieć ją dostrzec, albo spotkać kogoś, kto pomoże.'",
+    "04_przybyla_kasperek_od_wzorow_do_ai": "Matematyka → informatyka → uczenie maszynowe/AI. Łączenie danych z różnych światów (fotowoltaika, EEG, edukacja). 'STEAM to nie zestaw przedmiotów, ale sposób myślenia — odwaga łączenia tego, co nie pasuje.'",
+    "05_klosinski_wyznanie_groznawcy": "Polonista badający gry (groznawstwo). Gra = najpełniejszy splot STEAM (programowanie, fizyka, AI, design, psychologia, historia, sztuka, narracja); iteracja i eksperyment. 'Przyszłość należy do tworów granicznych między humanistyką, naukami ścisłymi i sztuką.'",
+    "06_dawidowski_dlaczego_matematyka_trudna": "Matematyk 'przez pomyłkę komisji' (miał iść na socjologię). Popularyzacja (YouTube, Święto Liczby Pi). Matematyka klarowna i wieczna (Pitagoras), język nauki (modele epidemii). Portret dwóch uzdolnionych uczniów budujących 'mosty'.",
+    "07_skorupa_psycholozka_w_kosmosie": "Psychologia EKSTREMALNA (góry, stacje polarne ICE=isolated/confined/extreme, habitat Lunares, projekt AstroMentalHealth na ISS). 'Kosmos to nie tylko technologia — to człowiek.' PSYCHOLOGIA MA MIEJSCE W STEAM. 'Łącz pasje, nie szukaj jednej idealnej odpowiedzi.'",
+    "08_lipowczan_eksperymentuj": "Biolog/fizyk. Dziecięce eksperymenty (elektryka, chemia). 'Nauka to nie zbiór gotowych odpowiedzi, lecz PROCES oparty na próbach i błędach.' Interdyscyplinarność + lifelong learning; włączanie uczniów szkół podstawowych w realny obieg nauki. Hasło: 'Eksperymentuj — bo nauka zaczyna się od zadawania pytań.'",
+    "09_christ_architektka_mostow": "Redaktorka. Pedagogika przedszkolna/wczesnoszkolna jako naturalnie STEAM-owa (edukacja językowa/matematyczna/środowiskowa/ruchowa/artystyczna). Motywacja 3.0 Pinka (autonomia/mistrzostwo/cel), kompetencje 4K, design thinking, gamifikacja, Odyseja Umysłu (2x złoto finałów światowych). Motto Shawa: 'dlaczego?' i 'dlaczego nie?'. 'Mosty tworzą ludzie i ich wspólne działania.'",
+    "10_francikowski_od_swierszczy_do_mikrokontrolerow": "Biolog (świerszcz domowy jako model → neurobiologia, kognitywistyka). 'Wiedza to sieć powiązań, nie zbiór faktów.' Biolog musi rozumieć elektronikę, matematykę, inżynierię; druk 3D, AI. 'Najważniejsza kompetencja przyszłości to nie zapamiętywanie, lecz ciągłe uczenie się.'",
+    "11_27_pozostale": "Eseje 11-27 utrzymują ten sam schemat (osobista, nieliniowa droga + ciekawość + interdyscyplinarność + mentor + eksperyment). Tematy z tytułów: muzykoterapia (Knapik-Szweda), prawo bez nudy (Bryła/Marchaj), matematyka+biologia (Piekarska-Stachowiak), góralka i język migowy (Wojtas-Rduch), uczenie na 'porażce' i metkownica (Marekwia), anatomia ciekawości/podróżnik STEAM (Wahl), między linijką a partyturą (Nowak), psychofizjologia i podejrzliwość (Holvik), kariera naukowa przez śpiew (Jurasz), algorytm/AI i astronomia (Smyczek), przedszkolanka→inżynier (Korzon), 'po co żyć skoro mamy AI' (Książek), zachwyt eksperymentem (S. Piątek), gry w służbie rozwoju (Sojka), mikrofon obok pipety (Jędrasik), kierunek dający wybór (Badeja), ścieżkami pasji — esej uczennicy liceum (Kubok)."
+  },
+
+  "cytaty_zasady_dla_akademii": [
+    "„Buduj mosty, nie mury!”",
+    "„Nie musisz być idealny i wiedzieć wszystkiego — wystarczy, że jesteś wystarczająco ciekawy, żeby sprawdzić, co się stanie dalej. I zależy Ci, żeby zrobić to dobrze.”",
+    "„Nie bój się próbować nowych rzeczy tylko dlatego, że ktoś nie widzi Cię w jakimś miejscu. Nawet jeśli tym kimś jesteś Ty sam.”",
+    "„Eksperymentuj — bo nauka zaczyna się od zadawania pytań.”",
+    "„Przyszłość należy do tych, którzy mają odwagę eksperymentować.”",
+    "Shaw: „Ja marzę o tym, czego jeszcze nie było, i pytam: dlaczego nie?”",
+    "„Najważniejszą kompetencją przyszłości nie jest zapamiętywanie informacji, ale umiejętność ciągłego uczenia się.”"
+  ],
+
+  "_weryfikacja_zewnetrzna": {
+    "sila_dowodu": "publikacja inspiracyjna / popularyzatorska — nie źródło dowodów empirycznych",
+    "uwaga": "To zbiór osobistych narracji, nie badania. Wartość: motywacyjna, językowa (hasła), koncepcyjna (rutyna 3-2-1, żywioły). Twierdzenia o skuteczności STEAM traktować jako perspektywę autorów. Solidne idee (Dweck, Pink, 4K) opisane w steam_edukacja_framework.json."
+  },
+
+  "powiazania": {
+    "steam_edukacja_framework.json": "Rama pojęciowa STEAM.",
+    "steam_imopeksis_platforma_analiza.json": "Wdrożenie na platformie.",
+    "player_motivation_and_selfworth.json": "Motywacja wewnętrzna, atrybucja wysiłkowa — zbieżne z Dweck/Pink.",
+    "coaching_styles_and_actions.json": "Metody aktywne, gry dydaktyczne — pokrywają się z design thinking/gamifikacją."
+  }
+}

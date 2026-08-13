@@ -1,0 +1,243 @@
+{
+  "_source": "ŹRÓDŁO PODSTAWOWE (od aktualizacji 21.07.2026): **FIBA Official Basketball Rules 2024, v1.0a** — zatwierdzone przez FIBA Central Board (Mies, Szwajcaria, 26.04.2024), OBOWIĄZUJĄ OD 1 PAŹDZIERNIKA 2024 (105 stron, angielski). Oraz **FIBA Official Interpretations 2024 (OBRI), v1.0a** — 142 strony, 439 przykładów i 141 twierdzeń wyjaśniających. ŹRÓDŁA UZUPEŁNIAJĄCE: materiały Kursu Sędziowskiego ŚlZKosz 2025 (prezentacje Art. 1-10, 11-21, 22-28, 29-33, 40-47 oraz „Obowiązki sekretarza i zasady protokołowania meczu koszykówki 2024\" — Agata Zadrożna). ŹRÓDŁO PIERWOTNE (zdezaktualizowane): „CZ_S Przepisy i sędziowanie.doc\" z kursu LIC.B, WSS im. K. Górskiego w Łodzi.",
+  "_comment": "MAPA STRUKTURY przepisów + wyciąg PARAMETRÓW LICZBOWYCH istotnych dla modelu danych programu. NIE jest przedrukiem — po pełną treść sięgać do rulebooka FIBA 2024 i OBRI. Plik został ZWERYFIKOWANY wobec oficjalnego wydania 2024: patrz sekcja _historia_weryfikacji, gdzie odnotowano poprawione błędy i uzupełnione braki.",
+  "_program_use": "Referencja normatywna dla parsera i walidacji danych meczowych: struktura meczu, limity fauli, zasady zmian i przerw, definicje zdarzeń punktowanych, notacja protokołu. KRYTYCZNE dla programu: reguła resetu zegara akcji do 14 sekund (patrz zegar_akcji_24_14) — wpływa na liczenie posiadań i tempa w game_coding_system_5x5.json.",
+
+  "kategoria": "Przepisy gry i sędziowanie — zweryfikowane wobec FIBA 2024",
+  "_prawa_autorskie": "Przepisy gry i OBRI są dokumentami oficjalnymi FIBA, publicznie dostępnymi. Materiały kursowe ŚlZKosz i WSS w Łodzi objęte prawami autorskimi ich twórców. Plik zawiera indeks strukturalny, parametry liczbowe i opis notacji — bez przedruku treści przepisów ani kazusów OBRI.",
+
+  "_historia_weryfikacji": {
+    "data": "21.07.2026",
+    "podstawa": "FIBA Official Basketball Rules 2024 v1.0a (obowiązują od 1.10.2024) + OBRI 2024 v1.0a",
+    "_dlaczego": "Wcześniejsza wersja tego pliku opierała się WYŁĄCZNIE na materiale kursowym LIC.B nieznanej daty i zawierała ostrzeżenie o możliwej dezaktualizacji. Ostrzeżenie się potwierdziło.",
+    "bledy_poprawione": [
+      {
+        "parametr": "Termin zgłoszenia składu przez trenera",
+        "bylo": "20 minut przed meczem",
+        "jest": "40 minut przed meczem",
+        "zrodlo": "FIBA Official Rules 2024, Art. 7.1 — „At least 40 minutes before the game is scheduled to start, each head coach or the team's representative shall give the scorer a list with the names…\"",
+        "_uwaga": "Termin podpisu trenera (10 minut, Art. 7.2) pozostaje bez zmian. Materiał ŚlZKosz 2025 i prezentacja o protokołowaniu również podają 40 minut — zgodność potwierdzona w trzech niezależnych źródłach."
+      },
+      {
+        "parametr": "Limit przerw na żądanie",
+        "bylo": "„W każdej z trzech pierwszych kwart przyznaje się po określonej liczbie przerw\" — ujęcie KWARTALNE, nieprecyzyjne i błędne co do konstrukcji",
+        "jest": "Limit liczony na POŁOWY, nie na kwarty — patrz przerwy_na_zadanie",
+        "zrodlo": "FIBA Official Rules 2024, Art. 18.2.5"
+      }
+    ],
+    "braki_uzupelnione": ["reguła resetu zegara akcji do 14 sekund (Art. 29.2.2) — całkowicie nieobecna", "precyzyjny limit przerw na żądanie wraz z ograniczeniem w końcówce 4. kwarty", "sytuacja kary za faule drużyny — próg 4 fauli w kwarcie (Art. 41.1.1)", "notacja protokołu meczu i obowiązki sekretarza (Art. 48-49)", "konfiguracje obsady sędziowskiej wg poziomu rozgrywek"],
+    "_status": "Parametry w tym pliku są zgodne z wydaniem obowiązującym od 1.10.2024. Kolejna weryfikacja wskazana po ogłoszeniu następnej nowelizacji FIBA."
+  },
+
+  "mapa_struktury_dokumentu": {
+    "wymiary_i_wyposazenie": ["Boisko", "Sufit", "Oświetlenie", "Linie", "Odległość od przeszkód", "Linie rzutów wolnych i obszary ograniczone", "Koło środkowe", "Pole rzutów za trzy punkty", "Strefy ławek drużyn", "Usytuowanie stolika sędziowskiego", "Tablice i konstrukcje", "Kosze (obręcz i siatki)", "Piłki", "Wyposażenie techniczne", "Tablica wyników"],
+    "sedziowie_i_obsluga": ["Skład: sędzia główny, sędzia pomocniczy, sędziowie asystujący", "Sędziowie stolikowi: sekretarz, asystent sekretarza, mierzący czas, mierzący 24 s", "Komisarz", "Strój", "Obowiązki sędziego głównego", "Zakres i czas obowiązywania uprawnień", "Protesty", "Obowiązki mierzącego czas gry", "Obowiązki mierzącego 24 sekundy"],
+    "druzyny_i_role": ["Kapitan — uprawnienia i obowiązki", "Trener i asystent trenera — zgłaszanie składu, prośby o przerwy i zmiany"],
+    "struktura_gry": ["Czas gry, kwarty, dogrywki", "Rozpoczęcie i zakończenie kwarty/meczu", "Rzut sędziowski i naprzemienne posiadanie", "Piłka żywa i martwa", "Zmiana koszy"],
+    "gra": ["Jak gra się piłką", "Kontrola piłki (posiadanie zawodnika i drużyny)", "Akcja rzutowa", "Kosz zdobyty i jego wartość", "Wprowadzanie piłki spoza boiska", "Przerwy na żądanie", "Zmiany zawodników", "Przegrana walkowerem i wskutek braku zawodników"],
+    "bledy": ["Definicja i procedura", "Zawodnik/piłka poza boiskiem", "Kozłowanie", "Kroki i obrót", "3 sekundy", "Szczelnie kryty zawodnik (5 sekund)", "8 sekund / pole obrony i pole ataku", "Powrót piłki na pole obrony", "Nielegalne dotykanie piłki i ingerencja w lot piłki (goaltending)"],
+    "faule": ["Definicja faula", "Zasada cylindra", "Zasada pionowości", "Legalna pozycja obronna", "Krycie zawodnika z piłką i bez piłki", "Zawodnik w wyskoku", "Zasłony legalne i nielegalne", "Kontakt: blokowanie, szarżowanie, trzymanie, pchanie, nieprzepisowe użycie rąk, krycie od tyłu", "Gra środkowych", "Faul obustronny", "Faul niesportowy", "Faul dyskwalifikujący", "Faule techniczne zawodnika i trenera", "Opuszczenie strefy ławki / akty przemocy", "Sytuacje szczególne — kasowanie i kolejność kar"],
+    "rzuty_wolne": ["Definicja i blok rzutów wolnych", "Kto wykonuje", "Pozycja i procedura wykonania", "Ograniczenia dla zawodników w polu i poza nim"]
+  },
+
+  "parametry_liczbowe": {
+    "_uwaga": "Kluczowe dla walidacji danych meczowych w programie.",
+    "struktura_meczu": {
+      "kwarty": "4 kwarty po 10 minut",
+      "przerwy_miedzy_kwartami": "2 minuty (między 1-2, 3-4 oraz przed dogrywkami)",
+      "przerwa_polowa": "15 minut",
+      "dogrywka": "Przy remisie po 4. kwarcie — dogrywki; drużyny grają na te same kosze co w 4. kwarcie",
+      "zmiana_koszy": "Drużyny zmieniają kosze przed trzecią kwartą",
+      "minimum_zawodnikow": "Mecz nie może się rozpocząć, jeżeli jedna z drużyn nie ma pięciu zawodników gotowych do gry"
+    },
+    "limity_fauli": {
+      "faul_zawodnika": "5 fauli (osobistych i technicznych łącznie) — zawodnik musi opuścić grę",
+      "kara_za_faule_druzyny": "Drużyna podlega karze za faule drużyny po przekroczeniu limitu w kwarcie",
+      "faule_w_przerwach": "Traktowane jak faule popełnione w kolejnej kwarcie/dogrywce",
+      "faule_w_dogrywkach": "Traktowane jak faule w czwartej kwarcie"
+    },
+    "kary_za_faule": {
+      "faul_techniczny_zawodnika": "1 rzut wolny dla przeciwnika + wznowienie",
+      "faul_techniczny_trenera": "2 rzuty wolne dla przeciwnika + wznowienie",
+      "faul_niesportowy": "Rzut(y) wolny(e) + posiadanie piłki",
+      "faul_dyskwalifikujacy": "Rzut(y) wolny(e); winny odesłany do szatni"
+    },
+    "limity_czasowe_gry": {
+      "24_sekundy": "Czas na akcję; reguły kasowania i wznawiania opisane w obowiązkach mierzącego 24 s",
+      "3_sekundy": "Ograniczenie przebywania w obszarze ograniczonym",
+      "5_sekund_szczelnie_kryty": "Zawodnik szczelnie kryty musi podać, rzucić lub rozpocząć kozłowanie",
+      "5_sekund_rzut_wolny": "Wykonanie rzutu wolnego w ciągu 5 sekund od podania piłki przez sędziego",
+      "8_sekund": "Przeniesienie piłki z pola obrony na pole ataku"
+    },
+    "przerwy_na_zadanie": {
+      "_zweryfikowane": "FIBA Official Rules 2024, Art. 18",
+      "dlugosc": "1 minuta (Art. 18.2.1)",
+      "przyznawanie": "Prosić może trener główny lub pierwszy asystent trenera",
+      "limit_poprawiony": {
+        "_uwaga": "POPRAWKA — limit liczy się na POŁOWY, nie na kwarty. Wcześniejszy zapis w tym pliku był błędny.",
+        "pierwsza_polowa": "2 przerwy",
+        "druga_polowa": "3 przerwy, z czego MAKSYMALNIE 2 gdy zegar czasu gry wskazuje 2:00 minuty lub mniej w 4. kwarcie",
+        "dogrywka": "1 przerwa na każdą dogrywkę"
+      },
+      "okazja_do_przerwy": {
+        "zaczyna_sie": "dla OBU drużyn — gdy piłka staje się martwa, zegar czasu gry jest zatrzymany, a sędzia zakończył komunikację ze stolikiem; dla obu drużyn po celnym ostatnim rzucie wolnym; dla drużyny NIEZDOBYWAJĄCEJ punktów — gdy padnie kosz",
+        "konczy_sie": "gdy piłka jest w dyspozycji zawodnika do wprowadzenia lub do pierwszego rzutu wolnego"
+      },
+      "_program_use": "Reguła „max 2 przerwy w ostatnich 2 minutach 4. kwarty\" to gotowy walidator dla danych z końcówek meczu."
+    },
+
+    "zegar_akcji_24_14": {
+      "_status": "NOWY WPIS — reguła całkowicie nieobecna w poprzedniej wersji pliku. KRYTYCZNA dla liczenia posiadań.",
+      "_zrodlo": "FIBA Official Rules 2024, Art. 29",
+      "podstawa": "Drużyna po zdobyciu kontroli nad żywą piłką musi oddać rzut w ciągu 24 sekund. Aby rzut się liczył: piłka musi opuścić rękę(-ce) PRZED sygnałem ORAZ po opuszczeniu ręki dotknąć obręczy albo wpaść do kosza (Art. 29.1.1).",
+      "start_24_sekund": "Po rzucie sędziowskim na początku 1. kwarty lub po wprowadzeniu z linii środkowej na początku pozostałych kwart i dogrywek — zegar startuje z 24 sekund, niezależnie od tego, czy zawodnik zdobył kontrolę w polu obrony czy ataku (Art. 29.2.1)",
+      "reset_po_zatrzymaniu_gry": {
+        "_kiedy_dotyczy": "Gdy sędzia zatrzymuje grę za faul lub błąd (NIE za wybicie piłki na aut) drużyny NIEPOSIADAJĄCEJ piłki, albo z przyczyny przez nią spowodowanej, albo z przyczyny niezwiązanej z żadną z drużyn — a posiadanie zostaje przy tej samej drużynie",
+        "wprowadzenie_w_polu_obrony": "reset do 24 sekund",
+        "wprowadzenie_w_polu_ataku": {
+          "14_lub_wiecej_na_zegarze": "zegar NIE jest resetowany — kontynuuje od momentu zatrzymania",
+          "13_lub_mniej_na_zegarze": "reset do 14 SEKUND"
+        }
+      },
+      "sygnal_w_locie_pilki": {
+        "wpada_do_kosza": "brak błędu, sygnał zignorowany, kosz zaliczony",
+        "dotyka_obreczy_ale_nie_wpada": "brak błędu, sygnał zignorowany, gra toczy się dalej",
+        "chybia_obreczy": "BŁĄD — chyba że przeciwnicy natychmiast i wyraźnie zdobędą kontrolę nad piłką, wtedy sygnał zignorowany i gra trwa"
+      },
+      "swiatlo_na_tablicy": "Gdy tablica ma żółte oświetlenie na obwodzie u góry, sygnał świetlny MA PIERWSZEŃSTWO przed sygnałem dźwiękowym zegara akcji",
+      "_konsekwencja_dla_programu": {
+        "_waga": "NAJWAŻNIEJSZA UWAGA WDROŻENIOWA Z CAŁEGO PLIKU.",
+        "problem": "game_coding_system_5x5.json wylicza czas trwania akcji wzorem: 24 − stan zegara (odczyt stop-klatką). Przy akcji rozpoczętej po resecie do 14 sekund ten wzór daje wynik ZAWYŻONY O 10 SEKUND.",
+        "skutek": "Zaniżone tempo i zafałszowana średnia długość akcji w każdym meczu, w którym wystąpił reset 14-sekundowy — czyli praktycznie w każdym.",
+        "co_z_tym_zrobic": "Przy kodowaniu odnotowywać, czy akcja startowała z 24 czy z 14 sekund, albo mierzyć czas akcji niezależnie od zegara. Dane z 3 meczów USA Tokio 2020 w bazie (średnia 9,31 s, n=614) mogą być tym obciążone — patrz uwaga w game_coding_system_5x5.json."
+      }
+    },
+    "punktacja": {
+      "rzut_wolny": "1 punkt",
+      "rzut_z_gry_z_pola_2pkt": "2 punkty",
+      "rzut_z_pola_za_trzy": "3 punkty",
+      "kosz_samobojczy_przypadkowy": "Punkty przyznaje się kapitanowi drużyny przeciwnej",
+      "kosz_samobojczy_umyslny": "Jest to błąd — punktów nie zalicza się",
+      "pilka_wprowadzona_od_dolu": "Błąd"
+    },
+    "wymiary": {
+      "tablica": "1.80 m poziomo × 1.05 m pionowo",
+      "odleglosc_od_przeszkod": "Boisko oddalone co najmniej 2 metry od jakichkolwiek przeszkód"
+    },
+    "terminy_organizacyjne": {
+      "_zweryfikowane": "FIBA Official Rules 2024, Art. 7.1-7.2",
+      "zgloszenie_skladu": "**40 MINUT** przed planowanym rozpoczęciem meczu trener główny lub przedstawiciel drużyny przekazuje sekretarzowi listę nazwisk i numerów uprawnionych członków drużyny oraz nazwiska kapitana, trenera głównego i pierwszego asystenta (Art. 7.1). POPRAWKA — wcześniej w tym pliku było błędnie 20 minut.",
+      "wszyscy_wpisani_uprawnieni": "Wszyscy członkowie drużyny wpisani do protokołu są uprawnieni do gry, NAWET jeśli przybędą po rozpoczęciu meczu (Art. 7.1)",
+      "potwierdzenie_podpisem": "Co najmniej 10 minut przed meczem każdy trener potwierdza podpisem nazwiska i numery oraz WSKAZUJE 5 zawodników rozpoczynających. Trener drużyny „A\" podaje informację jako pierwszy (Art. 7.2)",
+      "przybycie_sedziow": "Uprawnienia sędziów działają od przybycia na boisko — co najmniej 20 minut przed rozpoczęciem",
+      "przybycie_sekretarza": "Wg materiałów ŚlZKosz: obecność w hali 45 minut przed planowaną godziną meczu (norma organizacyjna, nie przepis FIBA)"
+    },
+
+    "faule_druzyny_prog": {
+      "_zweryfikowane": "FIBA Official Rules 2024, Art. 41",
+      "definicja": "Faulem drużyny jest faul osobisty, techniczny, niesportowy lub dyskwalifikujący popełniony przez ZAWODNIKA",
+      "prog": "Drużyna jest w sytuacji kary za faule drużyny po popełnieniu **4 fauli drużyny w kwarcie** (Art. 41.1.1)",
+      "faule_w_przerwach": "Wszystkie faule popełnione w przerwie meczu traktuje się jako popełnione w NASTĘPNEJ kwarcie lub dogrywce (Art. 41.1.2)",
+      "faule_w_dogrywkach": "Wszystkie faule popełnione w każdej dogrywce traktuje się jako popełnione w 4. KWARCIE (Art. 41.1.3)",
+      "_program_use": "Próg 4 fauli w kwarcie i reguła przenoszenia z dogrywek to gotowe walidatory dla agregacji fauli per kwarta."
+    }
+  },
+
+  "kluczowe_definicje_dla_statystyk": {
+    "akcja_rzutowa": "Zaczyna się, gdy zawodnik rozpoczyna naturalny ruch rzutu; przy rzucie w wyskoku trwa do momentu opadnięcia. Istotne dla przyznawania fauli na rzucającym.",
+    "kosz_zdobyty": "Żywa piłka wpada z góry do kosza i pozostaje w nim lub przez niego przechodzi.",
+    "posiadanie_zawodnika": "Zawodnik posiada piłkę, gdy trzyma lub kozłuje żywą piłkę, lub jest mu ona podana do dyspozycji.",
+    "posiadanie_druzyny": "Trwa do momentu, aż przeciwnik wejdzie w posiadanie piłki — podstawa liczenia POSIADAŃ (poss) w tabeli match_stats.",
+    "kozlowanie": "Rozpoczyna się, gdy zawodnik po wejściu w posiadanie żywej piłki nadaje jej ruch. Kozłowanie kończy: rzut do kosza, dotknięcie piłki przez przeciwnika, podanie lub poprawa chwytu z dotknięciem innego zawodnika.",
+    "kroki": "Nielegalne poruszanie jedną lub obiema stopami w czasie posiadania żywej piłki na boisku.",
+    "pilka_zywa_martwa": "Katalog momentów, w których piłka staje się żywa i martwa — istotny dla zegara i dla rejestracji zdarzeń."
+  },
+
+  "protokolowanie_meczu": {
+    "_zrodlo": "„Obowiązki sekretarza i zasady protokołowania meczu koszykówki 2024\" — Agata Zadrożna, Kurs Sędziowski ŚlZKosz, Katowice 2025 (31 slajdów). Podstawa przepisowa: FIBA Art. 45, 48, 49.",
+    "_waga": "OFICJALNY SYSTEM NOTACJI ZDARZEŃ MECZOWYCH — bezpośrednio porównywalny z własnym systemem kodowania z game_coding_system_5x5.json, ale w wersji standardu związkowego. Zawiera reguły walidacyjne tej samej klasy co reguła średników w systemie 5x5.",
+
+    "obsada_sedziow_funkcyjnych": {
+      "_znaczenie": "Wyjaśnia, jakim standardem zbierane są dane w korpusach obecnych w tej bazie.",
+      "u13_u14_slzkosz": "2 sędziów funkcyjnych — sekretarz i mierzący czas gry",
+      "wyzsze_kategorie_do_3LM": "3 sędziów funkcyjnych — dochodzi mierzący czas akcji",
+      "rozgrywki_PZKosz": "4 sędziów funkcyjnych — sekretarz, ASYSTENT SEKRETARZA, mierzący czas gry, mierzący czas akcji. Dotyczy: 2LM, 1LM, PLK (męskie) oraz 1LK i PLKK (kobiece)",
+      "zasada": "Sekretarzem jest zawsze sędzia wymieniony w nominacji jako pierwszy",
+      "_konsekwencja_dla_bazy": "Korpus 2lm_players_2024_25.json pochodzi z rozgrywek protokołowanych przez PEŁNĄ, czteroosobową obsadę — najwyższy dostępny standard. Korpus OOM U14 (oom_talent_id_corpus.json) z obsady dwuosobowej, co współgra z brakiem danych liczbowych w tamtych raportach."
+    },
+
+    "kodowanie_kolorem": {
+      "_idea": "Kolor długopisu NIESIE INFORMACJĘ o tym, której części meczu dotyczy zapis — to nośnik danych, nie estetyka.",
+      "czerwony": "kwarty 1 i 3 — przebieg gry, wynik kwarty, przerwy na żądanie, rejestracja fauli; dodatkowo zaznaczenie pierwszej piątki",
+      "niebieski_lub_czarny": "kolor WIODĄCY — metryczka, składy, wszystko związane z rozpoczęciem i zakończeniem meczu ORAZ przebieg kwart 2 i 4",
+      "zielony": "dogrywka — przebieg, wynik, przerwy, faule",
+      "_analogia": "Odpowiednik kolumny „kwarta\" w formacie arkusza programu. W protokole papierowym rolę pola pełni kolor."
+    },
+
+    "notacja_zdarzen": {
+      "punkty": "Zapis chronologiczny w 4 kolumnach po 5 rubryk. Środkowa rubryka „M\" = minuta gry (liczona przez ODEJMOWANIE OD 10). Po obu stronach: pierwsza rubryka = numer zawodnika, druga = sumaryczna liczba punktów drużyny",
+      "rzut_za_3": "**Zakreślenie numeru zawodnika KÓŁKIEM**",
+      "rzuty_wolne": "Pionowa klamra obejmująca kolejne kwadraty (1, 2, 3) z wpisanym numerem zawodnika. Rzut NIECELNY = pozioma kreska w odpowiednim kwadracie",
+      "faul": {
+        "format": "`minuta` + indeks GÓRNY (rodzaj faula, jeśli inny niż zwykły) + indeks DOLNY (liczba przyznanych rzutów wolnych: 1, 2 lub 3)",
+        "przyklad": "`2U2` = faul w 2. minucie, niesportowy, 2 rzuty wolne",
+        "oznaczenia": {"T": "faul techniczny", "U": "faul niesportowy (unsportsmanlike)", "GD": "dyskwalifikacja do końca meczu"},
+        "eskalacja": "Drugi faul techniczny → zapis „T\" a następnie „GD\" w kolejnej rubryce. Analogicznie drugi niesportowy. Również jeden techniczny + jeden niesportowy → dyskwalifikacja",
+        "faule_druzyny": "Minutę popełnienia faula (BEZ indeksów) wpisuje się dodatkowo do rubryki fauli drużynowych danej kwarty — do osiągnięcia limitu 4"
+      },
+      "pierwsza_piatka": "Zaznaczenie „x\" w kolumnie „W\" — dla pierwszej piątki ZAKREŚLONE W KÓŁKO kolorem czerwonym; kolejne wejścia krzyżykiem w kolorze odpowiadającym kwarcie",
+      "odkreslenia": "Zakończenie kwarty — jedna gruba pozioma linia w kolorze kwarty. Po pierwszej połowie faule zawodników odkreśla się PIONOWĄ linią kolorem wiodącym (rozdzielenie kwart 1-2 od 3-4)"
+    },
+
+    "reguly_walidacyjne": {
+      "_waga": "Ta sama klasa reguł co „liczba czasów = liczba kodów = liczba stref\" w systemie 5x5 — nadają się do zaimplementowania wprost.",
+      "jeden_zapis_w_rzedzie": "W poziomym rzędzie może być dokonany TYLKO JEDEN zapis",
+      "nierozdzielanie_blokow": "NIE rozdziela się bloku rzutów osobistych ani akcji 2(3)+1 — muszą pozostać w jednym zapisie",
+      "korekta_pomylki": "Przekreśla się WSZYSTKIE linie z błędnym zapisem, a poprawny umieszcza w kolejnej wolnej linii (nie poprawia się w miejscu)",
+      "kolejnosc_zawodnikow": "Zawodników wpisuje się w kolejności OD NAJNIŻSZEGO DO NAJWYŻSZEGO numeru — nawet gdy wydruk z systemu ESOR podaje ich w innej kolejności",
+      "wykreslanie_pustych": "Gdy drużyna ma mniej niż 12 zawodników, wolne rubryki wykreśla się linią ciągłą od „Zdobyte punkty\" do ostatniej kratki fauli — niezwłocznie po podpisach trenerów"
+    },
+
+    "hierarchia_zrodel_i_naprawa_pomylek": {
+      "_waga": "Rozstrzygnięcie, które źródło wygrywa przy niezgodności — bezpośrednio przenośne na konflikt danych w programie.",
+      "pierwszenstwo": "W przypadku niezgodności między TABLICĄ WYNIKÓW a PROTOKOŁEM, której nie da się wyjaśnić — **PROTOKÓŁ MA PIERWSZEŃSTWO**, a tablica musi zostać skorygowana (Art. 48.3)",
+      "naprawa_wg_momentu": {
+        "w_czasie_gry": "Sekretarz czeka do pierwszej martwej piłki, zanim uruchomi sygnał dźwiękowy",
+        "po_koncowym_sygnale_przed_podpisem": "Pomyłkę należy naprawić, NAWET jeśli ma to wpływ na końcowy wynik meczu",
+        "po_podpisie_sedziego_glownego": "**Pomyłki nie można już naprawić.** Sędzia główny lub komisarz wysyła szczegółowy raport do organizatora rozgrywek"
+      },
+      "_analogia_programowa": "„Protokół ma pierwszeństwo przed tablicą\" to odpowiednik zasady jednego źródła prawdy. Moment podpisu = zamknięcie rekordu, po którym korekta wymaga osobnej ścieżki (raportu), a nie edycji."
+    },
+
+    "strzalka_naprzemiennego_posiadania": {
+      "ustawienie_poczatkowe": "Drużyna, która NIE wejdzie w posiadanie żywej piłki po rzucie sędziowskim, ma prawo do piłki przy pierwszej sytuacji naprzemiennego posiadania (Art. 12.5.2)",
+      "zmiana_kierunku": "Natychmiast po zakończeniu wprowadzania piłki przyznanej z naprzemiennego posiadania (Art. 12.5.4)",
+      "po_pierwszej_polowie": "Sekretarz przestawia strzałkę natychmiast po zakończeniu pierwszej połowy, bo drużyny zmieniają kosze (Art. 48.1)",
+      "pasarella": "Wg materiałów kursowych — kierunek strzałki zmienia się także po rozpoczęciu każdej pięciominutowej części gry"
+    }
+  },
+
+  "zbior_kazusow_obri": {
+    "_zrodlo": "FIBA Official Interpretations 2024 (OBRI), v1.0a — 142 strony",
+    "_czym_jest": "Oficjalny zbiór interpretacji: **439 przykładów** i **141 twierdzeń** rozstrzygających sytuacje sporne. Wydawany równolegle z rulebookiem i obowiązujący od tej samej daty.",
+    "format": {
+      "struktura": "Statement (twierdzenie zasady) → Example (opis sytuacji) → Interpretation (rozstrzygnięcie)",
+      "konwencja_zapisu": "„Team A\" = drużyna atakująca (początkowo), „Team B\" = broniąca. A1–A5 i B1–B5 to zawodnicy na boisku, A6–A12 i B6–B12 to zmiennicy",
+      "numeracja": "Artykuł-numer, np. „4-7\" = siódma pozycja w komentarzu do Art. 4",
+      "oznaczenia_zmian": "Żółty kolor w dokumencie oznacza treść zaktualizowaną względem wersji z 25.07.2024"
+    },
+    "_wartosc_dla_bazy": "NIE do przepisania — to biblioteka referencyjna. Wartość polega na FORMACIE: Statement → Example → Interpretation to gotowy, sprawdzony szablon dla ewentualnego własnego zbioru sytuacji spornych z meczów. To ta sama metoda przypadków, którą baza opisuje w coaching_styles_and_actions.json (gry dydaktyczne: metoda przypadków, metoda sytuacyjna).",
+    "_kiedy_siegac": "Gdy przepis podstawowy nie rozstrzyga sytuacji — OBRI zawiera warianty (a)/(b)/(c) tej samej sytuacji z różnymi rozstrzygnięciami."
+  },
+
+  "powiazania": {
+    "schema/excel_format.json": "Parametry struktury meczu (4×10 min, dogrywki) i definicja posiadania powinny być zgodne z formatem arkusza kodowania meczu.",
+    "schema/tables.json": "Tabela match_stats (kwarta, poss) i player_stats (faule/br, fd) odwzorowują pojęcia zdefiniowane w przepisach.",
+    "vocabulary/actions.json": "Definicje kozłowania, akcji rzutowej i posiadania doprecyzowują kody akcji.",
+    "licb_ocena_i_obserwacje.json": "Obserwacja „dobry faul / zły faul\" oraz „opóźnienie akcji, utrudnienie szybkiego wznowienia\" zakładają znajomość przepisów.",
+    "licb_egzamin_i_praktyki.json": "Przepisy są jednym z obszarów egzaminacyjnych kursu.",
+    "game_coding_system_5x5.json": "KRYTYCZNE — reguła resetu do 14 sekund podważa wzór „czas akcji = 24 − stan zegara\" stosowany w tamtym systemie kodowania. Patrz zegar_akcji_24_14._konsekwencja_dla_programu.",
+    "2lm_players_2024_25.json": "Rozgrywki 2LM protokołuje pełna, czteroosobowa obsada sędziów funkcyjnych — najwyższy standard zbierania danych. Patrz protokolowanie_meczu.obsada_sedziow_funkcyjnych.",
+    "coaching_styles_and_actions.json": "Format OBRI (Statement → Example → Interpretation) to metoda przypadków z taksonomii gier dydaktycznych."
+  }
+}

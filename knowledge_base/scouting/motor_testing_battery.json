@@ -1,0 +1,125 @@
+{
+  "_weryfikacja_zewnetrzna": {
+    "sila_dowodu": "kwestionowane (dot. testu Brace'a)",
+    "krytyka": "Trafność testów motor educability (w tym Iowa-Brace) w PRZEWIDYWANIU uczenia się ruchu NIE została ustalona: słaba struktura czynnikowa (~6,7% wariancji), korelacja ~0,30 z IQ. Kluczowa teza tego pliku — że Brace mierzy uzdolnienie 'niezależne od budowy ciała i dojrzałości' — to dokładnie to, czego literatura nie potwierdza. Normy z lat 40.-60. dodatkowo przestarzałe.",
+    "co_zostaje": "Użyteczność jako POMIAR WZGLĘDNY (test→retest u własnego zawodnika, rozkład we własnej grupie) — tak jak już zapisano w tym pliku. NIE jako obiektywny pomiar 'wrodzonego talentu'.",
+    "szczegoly_i_zrodla": "Patrz contested_claims.json → tezy.test_bracea_uzdolnienia_ruchowe."
+  },
+  "_source": "Cztery materiały z przedmiotu Dydaktyka przedmiotowa, studia podyplomowe AWF Katowice (prowadząca: dr Karolina Kostorz): „Test diagnostyczne.pptx\" (katalog testów sprawności i uzdolnień ruchowych), „Indeks sprawności fizycznej Zuchory.ppt\", „Próba Ruffiera.pptx\", „Test Montoya.pptx\".",
+  "_comment": "ZESTAW NARZĘDZI DO POMIARU MOTORYKI — wypełnia lukę widoczną w korpusie OOM. W oom_talent_id_corpus.json wyszło, że przy ocenie 12-13-latków MOTORYKA jest zdecydowanie najczęstszym kryterium (12 wzmianek wobec 2 dla rzutu), ale oceniana jest WYŁĄCZNIE OPISOWO („dobra motoryka, zwinny i sprawny\"). Baza nie miała żadnego instrumentu, żeby to zmierzyć. Najcenniejsza pozycja to TEST BRACE'A, mierzący uzdolnienia ruchowe niezależnie od dojrzałości fizycznej.",
+  "_program_use": "Kandydat na moduł diagnostyki motorycznej w karcie zawodnika: bateria prób z punktacją, wynik jako szereg czasowy (test → retest), porównanie z normami. Testy dobrano pod kątem wykonalności bez laboratorium — wszystkie wymagają najwyżej stopera, ławeczki i piłki lekarskiej. Uwaga: to przeciwieństwo modelu Žalgirisu z systemem KINEXON — tutaj chodzi o diagnostykę za zero złotych.",
+
+  "kategoria": "Diagnostyka motoryczna — testy sprawności i uzdolnień ruchowych",
+
+  "test_bracea": {
+    "_status": "NAJWAŻNIEJSZA POZYCJA W TYM PLIKU — jedyne narzędzie w całej bazie mierzące zdolność UCZENIA SIĘ RUCHU.",
+    "pelna_nazwa": "Test Uzdolnień Ruchowych Brace'a (w wersji rozwiniętej: test Iowa-Brace)",
+    "co_mierzy": "Wrodzone uzdolnienia ruchowe — z jaką łatwością badany wykonuje ruchy, których WCZEŚNIEJ NIE ZNAŁ.",
+    "zasada_konstrukcyjna": "Test zbudowano celowo z ĆWICZEŃ NOWYCH. Tylko dzięki temu można stwierdzić zdolność opanowania nieznanego wcześniej ruchu, a nie poziom wytrenowania (Denisiuk 1960).",
+    "dowod_trafnosci": "Po wyeliminowaniu wpływu wieku wyniki okazują się SŁABO skorelowane ze wzrostem, wagą, siłą i mocą badanego, a wyraźnie dodatnio skorelowane z osiągnięciami lekkoatletycznymi (Bielicki 1958). Czyli mierzy uzdolnienie, nie budowę ciała.",
+    "struktura": "21 ćwiczeń ułożonych w 6 grup po 10 ćwiczeń — osobne zestawy dla chłopców i dziewcząt, w podziale na szkołę podstawową oraz młodsze i starsze klasy szkoły średniej.",
+    "punktacja": {
+      "liczba_prob": "Każde ćwiczenie wolno wykonać najwyżej DWUKROTNIE",
+      "2_pkt": "Wykonane bezbłędnie za PIERWSZYM razem",
+      "1_pkt": "Błąd w pierwszej próbie, poprawne wykonanie przy powtórzeniu",
+      "0_pkt": "Obie próby nieudane",
+      "maksimum": "20 punktów (10 ćwiczeń × 2 pkt) = najwyższy poziom uzdolnień ruchowych"
+    },
+    "przyklady_prob": [
+      "Stanie na lewej nodze, skłon tułowia w przód, uniesienie prostej prawej nogi w tył, dotknięcie czołem podłogi i powrót do postawy bez utraty równowagi",
+      "Kucnięcie z piętami razem, ręce opuszczone między kolanami, dłonie okrążają kostki i stykają się palcami z przodu — utrzymać 5 sekund",
+      "Stanie na lewej nodze, podeszwa prawej stopy oparta o wewnętrzną stronę lewego kolana, dłonie na biodrach, OCZY ZAMKNIĘTE — utrzymać 10 sekund",
+      "Wyskok z wyrzutem nóg w przód i dotknięcie palcami rąk palców stóp przed lądowaniem, nogi możliwie proste",
+      "Klęk na obu kolanach, wymach ramionami i „zerwanie się na nogi\" BEZ podpierania się rękoma",
+      "Głęboki przysiad z naprzemiennym wyrzutem nóg w przód (ruch jak w tańcu kozaka), dwukrotnie",
+      "Przysiad na jednej nodze, druga wyciągnięta w przód bez dotykania podłoża, ręce na biodrach — 5 sekund, na obie nogi",
+      "Stanie na lewej nodze, chwyt palców prawej stopy lewą dłonią, wyskok jednonóż z przerzuceniem lewej nogi przez pętlę utworzoną przez rękę i nogę"
+    ],
+    "_kazda_proba_ma_zdefiniowane_bledy": "Materiał podaje dla każdej próby zamkniętą listę błędów dyskwalifikujących (np. „utracić równowagę\", „nie dotknąć obu dłoni\", „otworzyć oczy\") — ocena jest binarna i powtarzalna, bez miejsca na uznaniowość.",
+    "_dlaczego_to_wazne_dla_tej_bazy": "Baza wielokrotnie ostrzega: „dominacja fizyczna = red flag\" (m7), „U14 ≠ najlepszy senior\", „nie oceniaj kto najlepszy DZIŚ\". Brace jest odpowiedzią instrumentalną na te ostrzeżenia — mierzy potencjał uczenia się ruchu w oderwaniu od aktualnej przewagi fizycznej."
+  },
+
+  "indeks_sprawnosci_zuchory": {
+    "_zastrzezenie_o_zrodle": "UWAGA — plik źródłowy to binarny .ppt (PowerPoint 97), a w środowisku nie było konwertera (brak catppt i LibreOffice). Treść odzyskano bezpośrednio ze strumienia dokumentu: struktura prób i skala punktowa są pewne, ale OPISY POSZCZEGÓLNYCH PROGÓW PUNKTOWYCH SĄ NIEKOMPLETNE, a polskie znaki miejscami połamane. Przed praktycznym użyciem wyeksportować oryginał do .pptx lub PDF i uzupełnić.",
+    "autor": "Krzysztof Zuchora",
+    "idea_przewodnia": "„Samoocena jest podstawą poczucia własnej wartości\" — indeks zaprojektowany do SAMODZIELNEJ oceny przez ćwiczącego, bez sprzętu i bez nadzoru.",
+    "cel": "Jedną miarą ocenić indywidualny poziom sprawności fizycznej, bez potrzeby stosowania różnorodnych testów sprawnościowych.",
+    "szesc_prob": ["szybkość", "skoczność", "siła ramion", "gibkość", "wytrzymałość", "siła mięśni brzucha"],
+    "skala_punktowa": {
+      "1": "Minimalny", "2": "Dostateczny", "3": "Dobry",
+      "4": "Bardzo dobry", "5": "Wysoki", "6": "Wybitny",
+      "_maksimum": "6 prób × 6 pkt = 36 punktów"
+    },
+    "przyklady_prob": {
+      "szybkosc": "Bieg w miejscu przez 10 sekund z wysokim unoszeniem kolan i klaśnięciem pod uniesioną nogą — liczy się liczbę klaśnięć",
+      "sila_ramion": "Progresja zwisów i podciągnięć: zwis na wyprostowanych rękach 3 / 5 / 10 sek. → zwis na jednej ręce → podciągnięcie oburącz → podciągnięcie z wolnym opuszczeniem jednej ręki",
+      "wytrzymalosc": "Bieg w miejscu w określonym tempie lub bieg na odległość"
+    },
+    "_dlaczego_pasuje": "Filozofia samooceny jest zbieżna z całą osią tej bazy: sprawdziany Hucińskiego (zawodnik ocenia siebie, potem kolegę), Dziennik Młodych Talentów (samodzielna rubryka 3/2/1), profil zawodnika Žalgirisu (3 mocne + 3 słabe). Zuchora daje tę samą logikę dla sprawności fizycznej."
+  },
+
+  "proby_wydolnosciowe": {
+    "_kontekst": "Dwie terenowe próby wydolności tlenowej wymagające wyłącznie stopera i ławeczki. To biegun przeciwny do modelu Žalgirisu z systemem KINEXON — diagnostyka za zero złotych.",
+    "proba_ruffiera": {
+      "przebieg": "Pomiar tętna spoczynkowego (palpacyjnie) → 30 przysiadów w ciągu 1 minuty → pomiar tętna bezpośrednio po wysiłku → pomiar tętna po 1 minucie wypoczynku w siadzie",
+      "oznaczenia": {"IR": "wskaźnik Ruffiera", "P": "tętno spoczynkowe", "P1": "tętno bezpośrednio po wysiłku", "P2": "tętno po 1 minucie wypoczynku"},
+      "interpretacja": {"0": "bardzo dobra", "1-5": "dobra", "6-10": "średnia", "powyżej 10": "słaba"},
+      "_uwaga": "Im NIŻSZY wskaźnik, tym lepsza wydolność. Slajd źródłowy podawał etykiety i wartości w osobnych blokach — przypisanie odtworzono wg standardowej skali Ruffiera; warto zweryfikować."
+    },
+    "test_montoya": {
+      "pelna_nazwa": "Zmodyfikowana Próba Harwardzka (Test Montoya)",
+      "przebieg": "5 minut wchodzenia na ławeczkę gimnastyczną lub stopień o wysokości 30 cm w tempie 30 wejść na minutę → siad → pomiar tętna palpacyjnie po upływie 1 minuty",
+      "obliczenia": {"T": "czas próby w sekundach = 300", "wspolczynnik": "5,5 (stały)", "p": "zmierzone tętno"},
+      "interpretacja": {"powyżej 60": "bardzo wysoka", "50,1-60": "wysoka", "40,1-50": "średnia", "30,1-40": "niska", "poniżej 30": "upośledzona"},
+      "_uwaga": "Materiał podaje składowe wzoru, ale nie samą formułę w czytelnej postaci — przed użyciem sięgnąć do standardowego opisu próby harwardzkiej."
+    },
+    "_wartosc_dla_koszykowki": "Ograniczona jako narzędzie skautingowe — wydolność tlenowa słabo różnicuje koszykarzy. Sensowne raczej jako przesiew stanu wytrenowania na starcie okresu przygotowawczego i jako miara postępu w czasie."
+  },
+
+  "katalog_pozostalych_testow": {
+    "_status": "Tło referencyjne. Większość to standardowa diagnostyka WF o ograniczonej wartości różnicującej dla koszykówki — odnotowane dla kompletności.",
+    "test_starosty": {
+      "pelna_nazwa": "Test Globalnej Koordynacji Ruchowej (lata 70. XX w.)",
+      "przebieg": "Na specjalnej drewnianej platformie — wyskok z MAKSYMALNYM OBROTEM w prawo i w lewo; ocenia się wielkość obrotu",
+      "warianty": "Opisano wiele odmian z określonym kierunkiem obrotu, nogą odbijającą i ułożeniem kończyn górnych",
+      "zastosowanie": "Ze względu na wymagany poziom sprawności stosowany głównie w środowisku SPORTOWYM",
+      "_ocena": "Z całego katalogu najbliższy koszykówce — koordynacja globalna i kontrola ciała w powietrzu. Wymaga jednak specjalnej platformy."
+    },
+    "zestaw_makucha": {
+      "opis": "Zestaw sprawdzianów określających poziom zdolności motorycznych wg L. Makucha",
+      "proby": ["bieg na 30 m", "wieloskoki na jednej nodze", "wyskok dosiężny z miejsca z odbicia obunóż", "bieg krokiem skrzyżnym 2×20 m", "bieg po kopercie 5×3 m", "tor przeszkód 30 m", "rzut piłką lekarską", "bieg wahadłowy 6×30 m"],
+      "_ocena": "NAJBARDZIEJ KOSZYKARSKI z klasycznych zestawów — bieg po kopercie, krok skrzyżny i bieg wahadłowy to zwinność i zmiana kierunku, czyli dokładnie to, co różnicuje na parkiecie. Wyskok dosiężny mierzy moc w ruchu specyficznym dla koszykówki."
+    },
+    "test_denisiuka": {
+      "opis": "Test sprawności motorycznej wg Ludwika Denisiuka",
+      "skladowe": {"siła": "rzut piłką lekarską 2 kg w przód (dzieci 7-11 lat — 1 kg)", "moc": "skok dosiężny oraz skok w dal z miejsca", "szybkość": "bieg 30 m (7-9 lat) / 40 m (10-11 lat) / 60 m (starsi)", "zwinność": "bieg z przewrotem i obieganiem", "wytrzymałość": "bieg na 300 m; liczba przysiadów z wyrzutem nóg do podporu w 30 s (dziewczęta) / 60 s (chłopcy)"}
+    },
+    "miedzynarodowy_test_sprawnosci_fizycznej": {
+      "osiem_prob": ["bieg 50 m ze startu wysokiego (szybkość)", "skok w dal z miejsca (moc)", "bieg wytrzymałościowy: 1000 m mężczyźni/chłopcy 12+, 800 m kobiety/dziewczęta 12+, 600 m dzieci do 12 lat", "pomiar dynamometryczny siły dłoni", "podciąganie na drążku (chłopcy) lub zwis na ugiętych rękach (dziewczęta i chłopcy do 11 lat)", "bieg wahadłowy 4×10 m z przenoszeniem klocków", "skłony w przód z leżenia tyłem przez 30 s (siła mm. brzucha)", "skłon tułowia w przód (gibkość)"],
+      "_ocena": "Najbardziej znormalizowana bateria z całego zestawu — istnieją tabele norm. Bieg wahadłowy 4×10 m użyteczny."
+    },
+    "test_chrominskiego": {"proby": ["bieg 60 m ze startu niskiego", "rzut piłką lekarską 3 kg w tył ponad głową", "bieg 600 m (dziewczęta) / 1000 m (chłopcy)"]},
+    "test_coopera": {"opis": "Nieprzerwany bieg 12-minutowy — określenie maksymalnej wydolności tlenowej (VO2max)"}
+  },
+
+  "rekomendacja_wdrozeniowa": {
+    "priorytet_1": "TEST BRACE'A — jedyne narzędzie mierzące uzdolnienia ruchowe niezależnie od dojrzałości fizycznej. Bezpośrednio adresuje powtarzane w bazie ostrzeżenia o ocenianiu 12-14-latków.",
+    "priorytet_2": "ZESTAW MAKUCHA — próby zwinnościowe (koperta 5×3, krok skrzyżny, wahadłowy) i wyskok dosiężny są specyficzne dla koszykówki.",
+    "priorytet_3": "INDEKS ZUCHORY — zgodny filozofią samooceny, ale wymaga uzupełnienia źródła.",
+    "priorytet_4": "RUFFIER / MONTOYA — przesiew wydolności bez sprzętu, przydatny na starcie okresu przygotowawczego.",
+    "pominac": "Cooper, Chromiński i biegi długie — słabo różnicują koszykarzy i obciążają kalendarz testowy.",
+    "_uwaga_o_normach": "Żaden z tych testów nie ma w materiale źródłowym tabel norm dla populacji koszykarskiej. Wartość diagnostyczna bierze się tu głównie z PORÓWNANIA W CZASIE (test → retest) oraz z rozkładu wewnątrz własnej grupy — analogicznie do percentyli w korpusach 2LM i U19."
+  },
+
+  "powiazania": {
+    "oom_talent_id_corpus.json": "GŁÓWNE POWIĄZANIE — tam motoryka jest najczęstszym kryterium oceny 12-13-latków, ale wyłącznie opisowym. Ten plik dostarcza narzędzi pomiaru.",
+    "licb_teoria_metodyka.json": "Okresy rozwojowe i apogea motoryczności — wyjaśniają, dlaczego akurat w wieku 10-13 lat pomiar uzdolnień ruchowych ma największy sens.",
+    "m7_org_structure_coach_analysis.json": "„Dominacja fizyczna = red flag\", „U14 ≠ najlepszy senior\" — Brace jest instrumentalną odpowiedzią na te ostrzeżenia.",
+    "book_development_curriculum_jozak.json": "Wiek biologiczny vs metrykalny, efekt względnego wieku — testy uzdolnień ruchowych częściowo omijają ten problem.",
+    "zalgiris_age_curriculum.json": "Cele U6-U8 (bieg, zmiana kierunku, zmiana rytmu) i U9-U10 pokrywają się z tym, co mierzą te baterie.",
+    "zalgiris_academy_model.json": "KINEXON jako przeciwny biegun technologiczny — tutaj diagnostyka bez żadnego sprzętu.",
+    "projection_fit.json": "Rozwój fizyczny i potencjał ciała — pomiar uzdolnień ruchowych zasila projekcję.",
+    "sociometry_team_cohesion.json": "Plik siostrzany z tej samej partii materiałów AWF — diagnostyka relacji w zespole.",
+    "imopeksis_methodology.json": "Diagnoza 27 umiejętności technicznych — te testy są warstwą motoryczną pod nią."
+  }
+}

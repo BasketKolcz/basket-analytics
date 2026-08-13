@@ -1,0 +1,826 @@
+{
+  "_source": "Next Draft Foundation — Moduł 5",
+  "_comment": "Projekcja zawodnika pod trenera / system / drużynę. Fit jako kluczowy element decyzji transferowej.",
+  "_program_use": "Formularz oceny fit w profilu zawodnika (zakładka Ocena Trenera / Wzorce Rozwoju). Checklist 5 pytań projekcyjnych. Tooltip przy sekcji 'Perspektywa'.",
+
+  "filozofia": {
+    "blad_poczatkujacych": "Ocenianie zawodnika w oderwaniu od kontekstu.",
+    "pytanie_bledne": "Czy ten zawodnik jest dobry?",
+    "pytanie_profesjonalne": "Czy ten zawodnik będzie pomagał nam wygrywać właśnie u nas?",
+    "kluczowa_zasada": "Ten sam zawodnik może wyglądać znakomicie w jednym klubie, a przeciętnie w innym. Wszystko zależy od trenera, systemu gry, roli, otoczenia i sposobu wykorzystania jego mocnych stron.",
+    "cytaty": [
+      "Fit często jest ważniejszy niż sam talent.",
+      "System, trener i otoczenie mogą wydobyć najlepsze z zawodnika — albo całkowicie to ukryć.",
+      "To właśnie umiejętność projekcji odróżnia osoby, które potrafią opisywać zawodników, od tych, które realnie pomagają organizacjom podejmować lepsze decyzje."
+    ]
+  },
+
+  "5_pytan_projekcyjnych": [
+    {
+      "nr": 1,
+      "pytanie": "Czy jego mocne strony będą eksponowane?",
+      "podpytania": [
+        "Co robi najlepiej?",
+        "Czy nowy trener i system pozwolą wykorzystać te mocne strony?"
+      ],
+      "przyklad": "Movement shooter w systemie staggerów i handoffów",
+      "wniosek": "System podkreśla to, w czym jest najlepszy"
+    },
+    {
+      "nr": 2,
+      "pytanie": "Czy system ukryje jego słabości?",
+      "podpytania": [
+        "Jakie są jego największe ograniczenia?",
+        "Czy sposób gry drużyny może je zminimalizować?"
+      ],
+      "przyklad": "Słabszy lateralnie center w drop coverage",
+      "wniosek": "System może chronić jego ograniczenia"
+    },
+    {
+      "nr": 3,
+      "pytanie": "Czy trener ufa młodym?",
+      "podpytania": [
+        "Czy dostanie realne minuty?",
+        "Czy trener ma cierpliwość po błędach?",
+        "Development vs winning now — co jest priorytetem organizacji?"
+      ],
+      "wniosek": "Otoczenie wpływa na rozwój i pewność siebie"
+    },
+    {
+      "nr": 4,
+      "pytanie": "Czy będzie miał piłkę?",
+      "podpytania": [
+        "Secondary creator?",
+        "Connector?",
+        "Off-ball role?",
+        "Jak często będzie podejmował decyzje z piłką?"
+      ],
+      "wniosek": "Jaka będzie jego rola w akcjach z piłką?"
+    },
+    {
+      "nr": 5,
+      "pytanie": "Czy potrafi funkcjonować bez piłki?",
+      "podpytania": [
+        "Spacing — czy utrzymuje odpowiednią odległość i rozciąga grę?",
+        "Cutting — czy wykonuje cięcia bez piłki?",
+        "Screening — czy ustawia zasłony i otwiera przestrzeń?",
+        "Quick decisions — jak szybko podejmuje decyzję po otrzymaniu podania?"
+      ],
+      "wniosek": "Wartość bez piłki = przetrwanie w każdym systemie"
+    }
+  ],
+
+  "role_z_pilka": {
+    "primary_creator": "Główna opcja ofensywna — inicjuje akcje, ma piłkę w rękach najczęściej",
+    "secondary_creator": "Druga opcja — może tworzyć akcje gdy primary jest kryty",
+    "connector": "Łączy grę — podaje, decyduje szybko, nie dominuje posiadania",
+    "finisher": "Wykańcza akcje — skuteczny bez konieczności tworzenia własnej szansy"
+  },
+
+  "fit_vs_talent": {
+    "zasada": "Fit często decyduje o sukcesie bardziej niż sam talent",
+    "hierarchia": [
+      "BARDZIEJ NIŻ SAM TALENT",
+      "BARDZIEJ NIŻ STATYSTYKI",
+      "BARDZIEJ NIŻ HIGHLIGHTS"
+    ],
+    "pytanie_kluczowe": "Czy ten zawodnik będzie pomagał wygrywać w konkretnym systemie, z konkretnym trenerem i konkretną rolą?"
+  },
+
+  "red_flags_m5": {
+    "uwazaj_na": [
+      "Statystyki robione w ekstremalnym usage — czy przeniesie się przy niższym?",
+      "Graczy zależnych od jednego systemu — co gdy zmieni klub?",
+      "Zawodników bez scalable skill — czy robi coś wartościowego bez konieczności tworzenia?",
+      "Scorerów bez defense/playmaking — jedna wymiar to za mało",
+      "Zawodników bez gry bez piłki — nie przetrwają w systemach wymagających ruchu"
+    ]
+  },
+
+  "pytanie_scouta_m5": "Czy ten zawodnik będzie pomagał wygrywać właśnie u nas — z naszym trenerem, w naszym systemie, w tej konkretnej roli?",
+
+  "praca_domowa": {
+    "cel": "Analiza projekcyjna jednego zawodnika",
+    "kandydaci": [
+      "Zawodnik z poprzedniego sezonu",
+      "Zawodnik, który zmienił klub przed sezonem 2026/27",
+      "Zawodnik do rekomendacji do konkretnej drużyny"
+    ],
+    "szablon_analizy": [
+      "1. Czy jego atuty będą eksponowane? Co robi najlepiej? Czy system to wykorzysta?",
+      "2. Czy system ukryje słabości? Jakie ograniczenia? Czy styl gry je zminimalizuje?",
+      "3. Kontekst organizacyjny — trener ufa młodym? Development vs winning now?",
+      "4. Rola z piłką — primary/secondary/connector/finisher? Jak często będzie decydował?",
+      "5. Funkcjonowanie bez piłki — spacing, cutting, screening, quick decisions"
+    ]
+  },
+
+  "definicja_projekcji": {
+    "_comment": "Czym jest projection — fundament całego Modułu 5",
+    "cytat": "Scouting to nie fotografia. To prognoza.",
+    "co_to_jest": [
+      "nie tylko ocena 'jak dobry jest dziś'",
+      "przewidywanie przyszłej wersji zawodnika",
+      "przewidywanie zachowań pod presją",
+      "przewidywanie translacji na wyższy poziom"
+    ],
+    "kluczowe_pytania": [
+      "Co zostanie po zabraniu usage?",
+      "Co pomoże wygrywać?",
+      "Jak gracz zareaguje na trudniejsze środowisko?"
+    ]
+  },
+
+  "production_vs_projection": {
+    "_comment": "Kluczowe rozróżnienie — to co widzimy dziś vs to co się przeniesie",
+    "production": [
+      "punkty",
+      "statystyki",
+      "usage",
+      "obecna rola",
+      "dominacja na swoim poziomie"
+    ],
+    "projection": [
+      "cechy skalujące się poziom wyżej",
+      "decyzje",
+      "adaptability",
+      "IQ",
+      "defense",
+      "shooting",
+      "impact bez piłki"
+    ],
+    "cytat": "Nie każdy najlepszy junior zostaje najlepszym seniorem.",
+    "wniosek": "Różnica między tym, co widzimy dziś, a tym, co się przeniesie na wyższy poziom."
+  },
+
+  "cechy_skalowalne": {
+    "_comment": "10 cech najbardziej transferowalnych na wyższy poziom (NDF M5)",
+    "_program_use": "Checklist w ocenie skalowalności zawodnika. Tooltip w sekcji 'Scalability' i 'Playoff Viability' formularza. Zakładka Wzorce Rozwoju.",
+    "wniosek_glowny": "To, co naprawdę skaluje się poziom wyżej, to nie tylko talent, ale umiejętności pomagające wygrywać w każdych warunkach, w każdej roli i w każdym systemie.",
+    "klucz": "Im wyższy poziom, tym mniej liczy się 'co umiesz'. Tym bardziej liczy się 'jak szybko i stabilnie potrafisz to wykorzystać'.",
+    "wnioski_o_najlepszych": [
+      "Nie zawsze są najbardziej efektowni",
+      "Często są najbardziej funkcjonalni",
+      "Pomagają wygrywać bez dominowania piłki"
+    ],
+    "cechy": [
+      {
+        "nr": 1,
+        "nazwa": "IQ / Feel for the Game",
+        "kategoria": "transferowalne",
+        "elementy": ["rozumienie spacingu", "czytanie gry", "przewidywanie rotacji", "decyzje przed kontaktem z piłką", "awareness"],
+        "przyklad_iq": "Jeśli przeciwnik trafił ci 2 razy trójkę, czy do niego dojdziesz za trzecim razem?",
+        "iq_sabotaz": "Obrona celowo odpuszcza cię za 3 (bo jesteś słabym rzucającym). Czy gracz rozpozna pułapkę i nie strzela? Rozumienie własnych ograniczeń = wyższe IQ.",
+        "self_awareness": "Czy zna swoją rolę, wynik, sytuację meczu? Czy w trudnym momencie (-10) potrafi nie brać falochronu technicznego i skupić się na grze?"
+      },
+      {
+        "nr": 2,
+        "nazwa": "Szybkie Decyzje",
+        "kategoria": "transferowalne",
+        "elementy": ["0.5 basketball", "decyzje bez zatrzymania piłki", "processing speed", "reakcja pod presją"],
+        "point_5_basketball": "W momencie chwytu ty już podejmujesz decyzję. Nowoczesna koszykówka to nie czas na trzymanie piłki — to reakcja przed kontaktem."
+      },
+      {
+        "nr": 3,
+        "nazwa": "Shooting",
+        "kategoria": "transferowalne",
+        "elementy": ["szczególnie catch & shoot", "rzuty przy ograniczonym czasie", "shooting versatility", "spacing value"]
+      },
+      {
+        "nr": 4,
+        "nazwa": "Defense & Versatility",
+        "kategoria": "transferowalne",
+        "elementy": ["możliwość bronienia różnych matchupów", "switchability", "team defense", "communication"]
+      },
+      {
+        "nr": 5,
+        "nazwa": "Competitiveness",
+        "kategoria": "transferowalne",
+        "elementy": ["motor", "reakcja na adversity", "consistency", "gotowość do walki o rolę"]
+      },
+      {
+        "nr": 6,
+        "nazwa": "Adaptability",
+        "kategoria": "decydujace_o_karierze",
+        "elementy": ["akceptacja roli", "granie inaczej niż wcześniej", "funkcjonowanie bez piłki", "coachability"]
+      },
+      {
+        "nr": 7,
+        "nazwa": "Emotional Stability",
+        "kategoria": "decydujace_o_karierze",
+        "elementy": ["reakcja po błędzie", "body language", "stabilność emocjonalna", "odporność psychiczna"]
+      },
+      {
+        "nr": 8,
+        "nazwa": "Gra bez piłki",
+        "kategoria": "decydujace_o_karierze",
+        "elementy": ["spacing", "cutting", "timing", "screening", "helping winning"],
+        "nba_stat": "Topowi gracze NBA mają piłkę w rękach średnio 2.5–3 minuty z 48. Gracz z 30 minutami spędza 20+ minut BEZ piłki — musi w tym czasie mieć wartość.",
+        "wniosek_skalowania": "Jeśli gracz nie potrafi grać bez piłki, nie przetrwa na wyższym poziomie — to nie opinia, to matematyka."
+      },
+      {
+        "nr": 9,
+        "nazwa": "Professionalism",
+        "kategoria": "decydujace_o_karierze",
+        "elementy": ["przygotowanie", "rutyna", "odpowiedzialność", "praca poza treningiem"],
+        "metafora": "To nie jest Football Manager. Gracz musi 'kupić' trenera, kolegów i całą organizację. Jak podchodzi do swojej pracy — wiele mu powie, czy dostanie kolejne szanse.",
+        "ryzyko": "Jeden gorszy mecz, jedno spóźnienie, jeden nieprofesjonalny sygnał — organizacja to zapamiętuje."
+      },
+      {
+        "nr": 10,
+        "nazwa": "Processing Speed",
+        "kategoria": "decydujace_o_karierze",
+        "opis": "Jak szybko gracz widzi, analizuje, reaguje i podejmuje decyzję",
+        "elementy": ["widzi", "analizuje", "reaguje", "podejmuje decyzję"]
+      }
+    ]
+  },
+
+  "cechy_nie_skalowalne": {
+    "_comment": "5 cech które często TRACĄ wartość po awansie poziom wyżej — pułapki projekcji",
+    "blad_projekcji": "ocena 'jak dużo produkuje' zamiast 'jak jego gra będzie wyglądała po ograniczeniu roli'",
+    "kluczowe_pytanie_scouta": "Co zostanie z tego zawodnika, kiedy zabierzesz mu piłkę, usage i przewagę fizyczną?",
+    "cechy": [
+      {
+        "nr": 1,
+        "nazwa": "Trudne rzuty",
+        "elementy": ["contested mid-range", "pull-upy bez advantage", "low efficiency scoring"],
+        "problem": "Na wyższym poziomie obrońcy są więksi, szybsi i bardziej zdyscyplinowani"
+      },
+      {
+        "nr": 2,
+        "nazwa": "Dominacja fizyczna",
+        "elementy": ["przewaga siły w juniorach", "dominacja atletyczna", "granie tylko na przewadze fizycznej"],
+        "problem": "Na wyższym poziomie wszyscy są więksi i bardziej atletyczni"
+      },
+      {
+        "nr": 3,
+        "nazwa": "Wysoki usage",
+        "elementy": ["monopol na piłkę", "granie wszystkiego przez jednego zawodnika", "decyzje budowane wokół niego"],
+        "problem": "Wyżej: piłka szybciej zmienia strony, rola jest mniejsza, trzeba pomagać bez usage"
+      },
+      {
+        "nr": 4,
+        "nazwa": "Granie pod highlighty",
+        "elementy": ["trudne akcje", "overdribbling", "efektowność zamiast efektywności"],
+        "problem": "Highlight ≠ helping winning"
+      },
+      {
+        "nr": 5,
+        "nazwa": "Monopol na piłkę",
+        "elementy": ["brak gry bez piłki", "brak spacingu", "brak defensywnego impactu", "potrzeba ciągłego usage"],
+        "problem": "Im wyższy poziom, tym mniej zawodników może dominować piłkę"
+      }
+    ]
+  },
+
+  "tranzycja_junior_senior": {
+    "_comment": "Dlaczego wielu świetnych juniorów nie robi kariery — model porównawczy",
+    "klucz": "Im wyższy poziom, tym bardziej liczy się funkcjonowanie w strukturze.",
+    "w_juniorach": [
+      "jesteś gwiazdą",
+      "masz piłkę cały czas",
+      "grasz przez talent"
+    ],
+    "w_seniorach": [
+      "dostajesz rolę",
+      "musisz pomagać bez piłki",
+      "błędy kosztują minuty",
+      "decyzje muszą być szybsze",
+      "trener musi ci ufać"
+    ],
+    "czesto_przeoczane": "Często nie winię zawodnika. Wina często leży po stronie trenerów juniorskich — nigdy nie stworzyli środowiska ani coachingu, które przygotuje gracza do przejścia na poziom seniora. Potem jest bolesne zderzenie z rzeczywistością — gracz przegrywa karierę nie przez talent, a przez brak adaptacji.",
+    "dla_trenerow_juniorow": "Kluczowe pytanie: czy stworzyłem środowisko, w którym moi gracze uczą się akceptować rolę, grać bez piłki i budować zaufanie trenera?"
+  },
+
+  "adaptacja_tranzycja": {
+    "_comment": "Adaptacja = klucz do tranzycji junior→senior / liga→liga",
+    "zasada": "Talent otwiera drzwi. Adaptacja utrzymuje karierę.",
+    "pytania_adaptacji": [
+      "Czy zaakceptuje mniejszą rolę?",
+      "Czy pomoże bez piłki?",
+      "Czy potrafi grać prościej?",
+      "Czy umie reagować na adversity?",
+      "Czy chce się uczyć?"
+    ]
+  },
+
+  "jak_szukac_adaptability": {
+    "_comment": "Metody szukania adaptability i charakteru — nie widać w statystykach",
+    "wniosek": "Adaptability i charakter nie zawsze widać w statystykach. Ale to one decydują, kto zostanie na długo.",
+    "obserwuj": [
+      "mowę ciała",
+      "reakcję po zmianie",
+      "reakcję po błędzie",
+      "energię bez piłki",
+      "komunikację",
+      "zachowanie w przegranej"
+    ],
+    "rozmawiaj_z": {
+      "trener": "Najbliżej zawodnika, widzi go na co dzień — priorytet",
+      "fizjoterapeuta": "Jedyny członek sztabu, który ma FIZYCZNY KONTAKT z zawodnikiem. Ta nić porozumienia i zaufania dzieje się na innej płaszczyźnie niż z innymi — często najbardziej szczery i wartościowy rozmówca.",
+      "staff_asystenci": "Mogą być bardziej zdystansowani od presji wyników — scout, prezes, team manager",
+      "teammates": "Spędzają z zawodnikiem najwięcej czasu (szatnia, podróże, treningi) — znają go na dobre i złe"
+    },
+    "szukaj": [
+      "coachability",
+      "professionalism",
+      "emotional stability",
+      "self-awareness"
+    ]
+  },
+
+  "projekcja_srodowisko": {
+    "_comment": "Projekcja = przewidywanie środowiska — co scout musi przewidzieć przy awansie zawodnika",
+    "pytanie_kluczowe": "Czy ten zawodnik pomoże wygrywać, gdy nie będzie już gwiazdą?",
+    "scout_musi_przewidziec": [
+      "wyższe tempo",
+      "większy size",
+      "lepszy spacing",
+      "większą fizyczność",
+      "mniej czasu na decyzję",
+      "inną rolę",
+      "innego trenera",
+      "większą presję",
+      "innych przeciwników"
+    ]
+  },
+
+  "liga_liga_system_system": {
+    "_comment": "Co może zmieniać wartość zawodnika przy zmianie ligi lub systemu — NDF M5",
+    "zasada": "Ten sam zawodnik, inna wartość.",
+    "wniosek": "Scout musi patrzeć nie tylko na to, co jest teraz, ale co będzie dalej.",
+    "zmienne": [
+      "Tempo ligi",
+      "Spacing",
+      "Physicality",
+      "Pace & Space",
+      "System trenera",
+      "Defensywne wymagania",
+      "Usage"
+    ],
+    "przyklady": [
+      {
+        "typ": "Scorer w wolnej lidze",
+        "problem": "Wysokie statystyki, niski wpływ w szybszej i trudniejszej lidze"
+      },
+      {
+        "typ": "Stretch Big bez spacingu",
+        "problem": "Mniej miejsca w pomalowanym, mniejsza skuteczność"
+      },
+      {
+        "typ": "Guard bez rzutu",
+        "problem": "Łatwy do bronienia, ograniczony impact"
+      },
+      {
+        "typ": "Undersized Center",
+        "problem": "Problemy z fizycznością i obroną na wyższym poziomie"
+      }
+    ]
+  },
+
+  "rozwoj_fizyczny": {
+    "_comment": "Ocena fizyczna i projekcja ciała zawodnika — nie oceniaj obecnego ciała, projektuj przyszłe",
+    "zasada": "Nie oceniaj tylko obecnego ciała. Projektuj przyszłe ciało.",
+    "potencjal_definicja": "Potencjał = przyszła wersja ciebie. Każde ciało może się zmienić. Pytanie: w jakim kierunku i jak bardzo?",
+    "oceniaj": [
+      "Frame",
+      "Shoulders / Hips",
+      "Balans",
+      "Koordynację",
+      "Mobilność",
+      "Footspeed",
+      "Reakcję ciała",
+      "Możliwość dodania siły"
+    ],
+    "kluczowe_mierzalne": [
+      "Szerokość barków",
+      "Szerokość bioder",
+      "Długość kończyn",
+      "Stabilność i balans"
+    ],
+    "pytania_oceny": [
+      "Jakie są jego atuty fizyczne?",
+      "Jakie ma limity?",
+      "Jak może się rozwijać?"
+    ],
+    "pytania_projekcyjne": [
+      "Czy jego ciało pasuje do poziomu, na który idzie?",
+      "Ile siły może dodać bez utraty szybkości?",
+      "Czy jego ciało przetrwa kontakt i długi sezon?"
+    ],
+    "potencjal_zmian": [
+      "Większa siła",
+      "Lepsza stabilność",
+      "Szybszy",
+      "Bardziej wytrzymały",
+      "Odporny na kontakt",
+      "Tworzy przewagę"
+    ]
+  },
+
+  "case_studies_m5": {
+    "_comment": "Dwa case study z NDF M5 — przeciwstawne archetypy tranzycji",
+
+    "case_study_1": {
+      "tytul": "Talent bez stabilności",
+      "sytuacja": {
+        "statystyki": "21 pkt średnio w U19",
+        "profil": ["najlepszy scorer", "świetny 1v1", "słaba obrona", "frustracja po zmianie", "spóźnienia"]
+      },
+      "po_przejsciu_do_seniorow": {
+        "minuty": "10-12 minut",
+        "wymagana_rola": ["spacing", "defense", "szybkie decyzje"]
+      },
+      "po_4_miesiacach": [
+        "narzeka na minuty",
+        "mówi, że 'nie jest wykorzystywany'"
+      ],
+      "pytania_do_analizy": [
+        "Co jest największym problemem?",
+        "Talent czy mentalność?",
+        "Czy trener powinien dawać więcej minut?",
+        "Co trzeba zmienić?"
+      ],
+      "wniosek": "Talent nie przegrywa kariery. Przegrywa ją brak adaptacji."
+    },
+
+    "case_study_2": {
+      "tytul": "Role Player, który robi karierę",
+      "sytuacja": {
+        "statystyki": "8 pkt średnio",
+        "profil": [
+          "brak highlightów",
+          "świetna obrona",
+          "komunikacja",
+          "zawsze przygotowany",
+          "nie komentuje roli",
+          "regularnie gra końcówki"
+        ]
+      },
+      "pytania_do_analizy": [
+        "Dlaczego trener mu ufa?",
+        "Dlaczego jego kariera może być dłuższa?",
+        "Co naprawdę daje wartość?"
+      ],
+      "lekcja": [
+        "Przewidywalność",
+        "Role Acceptance",
+        "Trust",
+        "Helping Winning"
+      ],
+      "wniosek": "Zaufanie jest walutą kariery."
+    }
+  },
+
+  "analiza_stylu_trenera": {
+    "_comment": "4 wymiary analizy stylu trenera — NDF M5 Slajd: Projekcja pod trenera/system/drużynę",
+    "zasada": "Scout nie ocenia zawodnika 'w próżni'. Scout ocenia zawodnika w konkretnym środowisku.",
+    "wniosek": "Fit często decyduje o sukcesie bardziej niż sam talent.",
+    "wymiary": {
+      "1_defensive_scheme": {
+        "nazwa": "Defensive Scheme",
+        "schematy": ["switching", "drop", "aggressive hedge", "ICE", "zone heavy"],
+        "pytania_o_zawodnika": [
+          "czy zawodnik jest wystarczająco mobilny?",
+          "czy rozumie zasady schematu?",
+          "czy przetrwa atak na niego?",
+          "czy może bronić na wielu pozycjach?"
+        ]
+      },
+      "2_freedom_vs_structure": {
+        "nazwa": "Freedom vs Structure",
+        "freedom": ["czytanie gry", "improwizacja", "decyzje w locie", "wiele opcji w ataku"],
+        "structure": ["określone zagrania", "sztywne role", "mało miejsca na błędy", "ograniczona inicjatywa"],
+        "pytania_o_zawodnika": [
+          "czy zawodnik podejmuje dobre decyzje?",
+          "czy może tworzyć dla siebie i innych?",
+          "czy odnajdzie się w systemie opartym na spacingu?",
+          "czy zaakceptuje swoją rolę?"
+        ]
+      },
+      "3_pick_and_roll_frequency": {
+        "nazwa": "Pick & Roll Frequency",
+        "pytania_ogolne": ["ile decyzji w P&R?", "kto tworzy przewagi?", "czy zawodnik będzie eksponowany?"],
+        "typy_systemow": ["Ball Handler P&R", "Dribble Handoff", "Stagger Screen"],
+        "pytania_o_zawodnika": [
+          "czy zawodnik dobrze czyta P&R?",
+          "czy gra jako ball handler, roller, czy spacer?",
+          "czy będzie miał piłkę w swoich rękach?",
+          "czy system wykorzysta jego mocne strony?"
+        ]
+      },
+      "4_switchability_requirements": {
+        "nazwa": "Switchability Requirements",
+        "pytania_ogolne": ["ilu pozycji musi bronić?", "czy przetrwa mismatch hunting?", "czy system ukryje jego słabości?"],
+        "poziomy_wymagan": {
+          "niskie": "1-1 pozycje",
+          "srednie": "1-3 pozycje",
+          "wysokie": "1-5 pozycji"
+        },
+        "co_sprawdzic": [
+          "lateralat i szybkość nóg",
+          "siła i wytrzymałość",
+          "IQ defensywne i komunikacja",
+          "czy przetrwa w playoffach?"
+        ]
+      }
+    },
+    "5_pytan_scouta": [
+      "Czy jego mocne strony będą eksponowane?",
+      "Czy system ukryje jego słabości?",
+      "Czy trener ufa młodym?",
+      "Czy będzie miał piłkę?",
+      "Czy potrafi funkcjonować bez niej?"
+    ]
+  },
+
+  "analiza_srodowiska": {
+    "_comment": "4 wymiary analizy środowiska zawodnika — NDF M5 Slajd: System A vs System B + Analizuj środowisko",
+    "zasada": "System, trener i drużyna mogą multiplikować mocne strony zawodnika – lub je marnować.",
+    "ten_sam_zawodnik_moze": [
+      "wyglądać świetnie w jednym systemie",
+      "wyglądać przeciętnie w innym",
+      "mieć dużą rolę w jednej drużynie",
+      "nie funkcjonować w drugiej"
+    ],
+    "system_a_vs_b": {
+      "system_a": {
+        "opis": "Szybkie tempo, dużo przestrzeni",
+        "efekty": ["dużo posiadań", "eksponuje mocne strony", "duża rola"]
+      },
+      "system_b": {
+        "opis": "Wolne tempo, mało miejsca",
+        "efekty": ["mało posiadań", "ukrywa mocne strony", "ograniczona rola"]
+      }
+    },
+    "wymiary": {
+      "tempo_gry": {
+        "elementy": ["szybkie transition vs halfcourt", "liczba posiadań", "tempo decyzji"],
+        "szybkie_tempo": "więcej okazji w ataku",
+        "wolne_tempo": "mniej okazji w ataku"
+      },
+      "spacing": {
+        "pytania": ["ile miejsca dostaje?", "czy lineup tworzy driving lanes?", "czy obrona może pomagać z jego pozycji?"],
+        "dobry_spacing": "więcej przestrzeni do gry",
+        "zly_spacing": "mniej miejsca, trudniej atakować"
+      },
+      "usage": {
+        "pytania": ["ile będzie miał piłki?", "czy jego wartość zależy od usage?", "czy potrafi pomagać bez piłki?"],
+        "zrownowazony": "wartość niezależna od posiadania piłki",
+        "wysokie_usage": "duża zależność od piłki"
+      },
+      "role_expectations": {
+        "typy_rol": ["scorer", "creator", "defender", "spacer", "connector"],
+        "wniosek": "Jasna rola = lepsze dopasowanie = większa szansa na sukces"
+      }
+    }
+  },
+
+  "praktyczne_przyklady_srodowiska": {
+    "_comment": "4 archetypy — ten sam zawodnik, różne środowiska, różne wyniki — NDF M5",
+    "zasada": "Ten sam zawodnik = różne środowiska = różne wyniki.",
+    "wniosek": "System, trener i otoczenie mogą wydobyć najlepsze z zawodnika – albo całkowicie to ukryć.",
+    "przyklady": [
+      {
+        "typ": "Guard bez rzutu",
+        "kontekst": "może wyglądać dobrze w Europie z dużą piłką; problem w NBA/EuroLeague spacingu",
+        "dobre_srodowisko": {
+          "gdzie": "Europa — duża piłka",
+          "dlaczego_dziala": ["dużo posiadania piłki", "mniej spacingu = mniej karany", "może kreować przewagi", "duża rola w ataku"]
+        },
+        "trudne_srodowisko": {
+          "gdzie": "NBA/EuroLeague",
+          "dlaczego_nie_dziala": ["spacing = brak miejsca", "obrona pomaga z jego pozycji", "łatwy do zamykania w P&R", "mniejszy impact"]
+        },
+        "klucz": "Bez rzutu trudno przetrwać w środowisku z dużym spacingiem."
+      },
+      {
+        "typ": "Stretch Big",
+        "kontekst": "dużo lepszy w systemie 5-out; mniej efektywny w cramped spacing",
+        "dobre_srodowisko": {
+          "gdzie": "System 5-out",
+          "dlaczego_dziala": ["dużo miejsca do rzutu", "otwarte driving lanes", "może rozciągać obronę", "wysoka efektywność"]
+        },
+        "trudne_srodowisko": {
+          "gdzie": "Cramped spacing",
+          "dlaczego_nie_dziala": ["brak miejsca na rzuty", "trudniej o pozycję", "obrona może pomagać", "niska skuteczność"]
+        },
+        "klucz": "Jego wartość rośnie, gdy system tworzy mu przestrzeń."
+      },
+      {
+        "typ": "High Usage Scorer",
+        "kontekst": "świetny w słabszym zespole; mniej efektywny obok lepszych graczy",
+        "dobre_srodowisko": {
+          "gdzie": "Słabszy zespół",
+          "dlaczego_dziala": ["dużo piłki", "dużo rzutów", "wolność gry", "buduje statystyki"]
+        },
+        "trudne_srodowisko": {
+          "gdzie": "Obok gwiazd",
+          "dlaczego_nie_dziala": ["mniej piłki", "mniej rzutów", "mniejszy usage", "trudniej o rytm i impact"]
+        },
+        "klucz": "Nie każdy scorer będzie skuteczny bez dużej roli i piłki."
+      },
+      {
+        "typ": "Undersized Center",
+        "kontekst": "może dominować w niższej lidze; problem przy switchingu i size wyżej",
+        "dobre_srodowisko": {
+          "gdzie": "Niższa liga",
+          "dlaczego_dziala": ["przewaga atletyczna", "dominuje w pomalowanym", "kontroluje deskę", "duży impact"]
+        },
+        "trudne_srodowisko": {
+          "gdzie": "Wyższy poziom",
+          "dlaczego_nie_dziala": ["łatwy do switchowania", "problem z większymi graczami", "narażony w pick & roll", "traci wpływ na grę"]
+        },
+        "klucz": "Wzrost i mobilność to dziś minimum, żeby przetrwać na wyższym poziomie."
+      }
+    ]
+  },
+
+  "cwiczenia_scouta_m5": {
+    "_comment": "Praktyczne ćwiczenia mentalne dla rozwijającego się scouta — NDF M5 transkrypt",
+    "cel": "Przyspieszyć umiejętność projekcji przez pracę na realnych przykładach",
+    "cwiczenia": [
+      {
+        "nazwa": "Jeden dzień, trzy poziomy",
+        "opis": "Jednego dnia obejrzyj mecz juniorów, mecz NBA i mecz polskiej ligi. Zwróć uwagę na tempo decyzji, size, spacing, rytm gry. To wysiłek mentalny, który kalibruje twoją projekcję.",
+        "pytanie": "Jak ten sam typ zawodnika wyglądałby na każdym z tych poziomów?"
+      },
+      {
+        "nazwa": "Śledź transfer",
+        "opis": "Wybierz zawodnika, który zmienił klub. Śledź: jak zmieniła się jego rola, minuty, line-upy w których gra, statystyki. To realny case study środowisko A → środowisko B.",
+        "pytanie": "Przewidziałbyś to PRZED transferem?"
+      },
+      {
+        "nazwa": "Wybierz swój klub",
+        "opis": "Wybierz jeden klub (lokalny, ulubiony, NBA). Słuchaj wywiadów z trenerem, czytaj rozmowy z prezesem. Zrozum: jak chcą grać, jaki jest system, jakie role są potrzebne. Dopiero wtedy oceniaj zawodników pod ten klub.",
+        "cel_cwiczenia": "Bez znajomości systemu docelowego nie ma prawdziwej projekcji fit."
+      }
+    ],
+    "cytat_rafala": "Projekcja przyspiesza, kiedy pracujesz w realnym klubie i masz umiejętność patrzenia z perspektywy organizacji — trudniej zrobić to jako obserwator z zewnątrz."
+  },
+
+  "profile_red_flags_m5": {
+    "_comment": "5 profili które najczęściej NIE robią kariery — NDF M5",
+    "zasada": "Talent otwiera drzwi. Umiejętności skalujące i zrozumienie gry decydują o tym, czy zostajesz.",
+    "co_dziala_na_kazdym_poziomie": ["Shooting", "Decision Making", "Mobility", "Team Play", "Defense", "Adaptability", "Work Ethic"],
+    "pamietaj": "Systemy się zmieniają. Zasady koszykówki pozostają te same.",
+    "profile": [
+      {
+        "typ": "Scorer bez rzutu",
+        "problemy": ["łatwo go bronić i zepchnąć z gry", "niski spacing – nie pasuje do systemów", "ogranicza team offense", "nie przetrwa na wyższym poziomie"],
+        "czesto_konczy_jako": "krótka kariera / niższe ligi"
+      },
+      {
+        "typ": "PG bez Decision Making",
+        "problemy": ["wolne decyzje = strata przewagi", "nie czyta gry, łatwo go zmanipulować", "wysoki turnover rate", "nie podnosi poziomu zespołu"],
+        "czesto_konczy_jako": "rezerwowy PG / zmiana pozycji"
+      },
+      {
+        "typ": "Center bez Mobility",
+        "problemy": ["nie przetrwa w switchingu", "problem w P&R i obronie przestrzeni", "łatwy target w nowoczesnej grze", "ogranicza defensywne schematy"],
+        "czesto_konczy_jako": "gracz sytuacyjny / niższe ligi"
+      },
+      {
+        "typ": "High Usage Player",
+        "problemy": ["statystyki napompowane piłką", "trudności z realną rolą w zespole", "spada efektywność bez piłki", "często konflikt z team offense"],
+        "czesto_konczy_jako": "trudności z odnalezieniem roli"
+      },
+      {
+        "typ": "Athlete Without Feel",
+        "problemy": ["brak kontroli nad grą", "nie czyta sytuacji, gra reakcjami", "ograniczony wpływ w kluczowych momentach", "trudno zbudować na nim system"],
+        "czesto_konczy_jako": "highlight reels / brak stabilnej kariery"
+      }
+    ]
+  },
+
+  "5_pytan_scouta_szczegoly": {
+    "_comment": "Rozszerzone 5 pytań scouta z przykładami + praktyczne red flags — NDF M5",
+    "zasada": "Ten sam zawodnik może wyglądać świetnie w jednym systemie i przeciętnie w innym.",
+    "pytania": [
+      {
+        "nr": 1,
+        "pytanie": "Czy jego mocne strony będą eksponowane?",
+        "przyklad": "movement shooter w systemie staggerów i handoffów",
+        "wniosek": "System podkreśla to, w czym jest najlepszy"
+      },
+      {
+        "nr": 2,
+        "pytanie": "Czy system ukryje jego słabości?",
+        "przyklad": "słabszy lateralnie center w drop coverage",
+        "wniosek": "System może chronić jego ograniczenia"
+      },
+      {
+        "nr": 3,
+        "pytanie": "Czy trener ufa młodym?",
+        "szczegoly": ["realne minuty?", "cierpliwość po błędach?", "development vs winning now?"],
+        "wniosek": "Otoczenie wpływa na rozwój i pewność siebie"
+      },
+      {
+        "nr": 4,
+        "pytanie": "Czy będzie miał piłkę?",
+        "szczegoly": ["secondary creator?", "connector?", "off-ball role?"],
+        "wniosek": "Jaka będzie jego rola w akcjach z piłką?"
+      },
+      {
+        "nr": 5,
+        "pytanie": "Czy potrafi funkcjonować bez niej?",
+        "szczegoly": ["spacing", "cutting", "screening", "quick decisions"],
+        "wniosek": "Wartość bez piłki = przetrwanie w każdym systemie"
+      }
+    ],
+    "praktyczne_red_flags": [
+      "statystyki robione w ekstremalnym usage",
+      "graczy zależnych od jednego systemu",
+      "zawodników bez scalable skill",
+      "scorerów bez defense/playmaking",
+      "zawodników bez gry bez piłki"
+    ],
+    "fit_decyduje": ["bardziej niż sam talent", "bardziej niż statystyki", "bardziej niż highlighty"],
+    "kluczowe_pytanie": "Czy ten zawodnik będzie pomagał wygrywać w konkretnym systemie, z konkretnym trenerem i konkretną rolą?"
+  },
+
+  "lekcje_modulu_m5": {
+    "_comment": "Najważniejsze lekcje Modułu 5 — slajd podsumowujący — NDF M5",
+    "definicja_m5": "Projection = przewidywanie przyszłości zawodnika",
+    "lekcje": [
+      {
+        "nr": 1,
+        "tytul": "Production ≠ Projection",
+        "zasada": "Statystyki nie są projekcją.",
+        "skauci_oceniaja": ["co przełoży się poziom wyżej", "co zostanie po ograniczeniu roli", "jak zawodnik pomoże wygrywać"]
+      },
+      {
+        "nr": 2,
+        "tytul": "Co skaluje się najlepiej?",
+        "najbardziej_skaluje": ["IQ / feel for the game", "szybkie decyzje", "shooting", "adaptability", "defense & versatility", "gra bez piłki", "professionalism"],
+        "najmniej_skaluje": ["dominacja fizyczna", "trudne rzuty", "wysoki usage", "highlight basketball"]
+      },
+      {
+        "nr": 3,
+        "tytul": "Adaptacja często decyduje o karierze",
+        "model": "Talent otwiera drzwi → Adaptacja utrzymuje na poziomie",
+        "kluczowe_pytania": ["Czy zaakceptuje rolę?", "Czy pomoże bez piłki?", "Czy trener będzie mu ufał?"]
+      },
+      {
+        "nr": 4,
+        "tytul": "Fit ma ogromne znaczenie",
+        "ten_sam_zawodnik": ["wyglądać świetnie w jednym systemie", "wyglądać przeciętnie w innym"],
+        "skauci_analizuja": ["styl trenera", "spacing", "tempo gry", "defensive scheme", "role expectations", "usage"]
+      },
+      {
+        "nr": 5,
+        "tytul": "Projekcja = przewidywanie środowiska",
+        "skauci_nie_oceniaja": "tylko talentu",
+        "skauci_oceniaja": ["talent", "rolę", "system", "mentalność", "przyszłe środowisko"]
+      }
+    ],
+    "najlepsi_skauci_przewiduja": ["zachowania", "adaptację", "decyzje", "wpływ na winning"],
+    "kluczowe_pytanie_skauta": "Czy ten zawodnik będzie pomagał wygrywać, kiedy przestanie być gwiazdą?"
+  },
+
+  "_program_checklist": {
+    "gdzie_uzywac": [
+      "Zakładka 'Ocena Trenera' → sekcja Perspektywa",
+      "Zakładka 'Wzorce Rozwoju' → Plan Rozwoju",
+      "Raport ewaluacyjny → Perspektywa i Podobieństwo",
+      "Formularz scoutingowy → Scalability / Playoff Viability",
+      "Tooltip przy metrykach skalowalności — cechy_skalowalne[1-10]",
+      "Checklist Production vs Projection przy ocenie juniorów",
+      "Ostrzeżenie: cechy_nie_skalowalne — co nie przeniesie się wyżej",
+      "Sekcja Tranzycja: tranzycja_junior_senior — model porównawczy",
+      "Intel gathering: jak_szukac_adaptability — obserwuj/rozmawiaj/szukaj",
+      "Środowisko: projekcja_srodowisko — 9 elementów do przewidzenia",
+      "Case Studies: case_studies_m5 — talent bez stabilności vs role player",
+      "Styl trenera: analiza_stylu_trenera — 4 wymiary (defensive scheme / freedom vs structure / P&R / switchability)",
+      "Środowisko: analiza_srodowiska — System A vs B, 4 wymiary (tempo/spacing/usage/role expectations)",
+      "Przykłady praktyczne: praktyczne_przyklady_srodowiska — 4 archetypy + dobre/trudne środowisko"
+    ],
+    "5_pytan_skrot": [
+      "Atuty eksponowane?",
+      "Słabości ukryte?",
+      "Trener ufa?",
+      "Rola z piłką?",
+      "Wartość bez piłki?"
+    ],
+    "10_cech_skrot": [
+      "IQ / Feel for the Game",
+      "Szybkie decyzje (0.5 basketball)",
+      "Shooting (catch & shoot)",
+      "Defense & Versatility",
+      "Competitiveness",
+      "Adaptability",
+      "Emotional Stability",
+      "Gra bez piłki",
+      "Professionalism",
+      "Processing Speed"
+    ],
+    "5_pulapek_projekcji": [
+      "Trudne rzuty (low efficiency scoring)",
+      "Dominacja fizyczna (nie skaluje się)",
+      "Wysoki usage (rola się zmniejszy)",
+      "Granie pod highlighty (highlight ≠ winning)",
+      "Monopol na piłkę (brak gry bez piłki)"
+    ]
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "_source": "Next Draft Foundation — Moduł 5 BONUS",
+  "_comment": "50 pytań scouta przed podpisaniem zawodnika — Scout Questions Pack",
+  "_program_use": "Due diligence, formularz scoutingowy, raport ewaluacyjny — pełna lista kontrolna przed decyzją transferową",
+
+  "zasada": "Najlepsi skauci nie szukają perfekcji. Szukają zawodników, którzy pomogą wygrywać – teraz i w przyszłości.",
+
+  "kategorie": [
+    {
+      "nr": 1,
+      "nazwa": "Ogólna projekcja",
+      "pytania": [
+        {"nr": 1, "pytanie": "Jaki jest jego najwyższy realistyczny sufit?"},
+        {"nr": 2, "pytanie": "Jaki jest jego najbardziej prawdopodobny scenariusz?"},
+        {"nr": 3, "pytanie": "Jaki jest jego najniższy scenariusz?"},
+        {"nr": 4, "pytanie": "Na jakim poziomie będzie za 2 lata?"},
+        {"nr": 5, "pytanie": "Na jakim poziomie będzie za 5 lat?"}
+      ]
+    },
+    {
+      "nr": 2,
+      "nazwa": "IQ i podejmowanie decyzji",
+      "pytania": [
+        {"nr": 6, "pytanie": "Jak szybko czyta grę?"},
+        {"nr": 7, "pytanie": "Czy rozumie zasady i koncepcje?"},
+        {"nr": 8, "pytanie": "Czy podejmuje dobre decyzje pod presją?"},
+        {"nr": 9, "pytanie": "Czy robi właściwe rzeczy bez piłki?"},
+        {"nr": 10, "pytanie": "Czy jego IQ przełoży się poziom wyżej?"}
+      ]
+    },
+    {
+      "nr": 3,
+      "nazwa": "Fizyczność i athleticyzm",
+      "pytania": [
+        {"nr": 11, "pytanie": "Czy jego atletyzm się wyróżnia?"},
+        {"nr": 12, "pytanie": "Czy jego atletyzm się skaluje na wyższy poziom?"},
+        {"nr": 13, "pytanie": "Czy ma idealne wymiary na swoją pozycję?"},
+        {"nr": 14, "pytanie": "Czy jego ciało jest gotowe na wyższy poziom?"},
+        {"nr": 15, "pytanie": "Czy jest podatny na kontuzje?"}
+      ]
+    },
+    {
+      "nr": 4,
+      "nazwa": "Skills — atak",
+      "pytania": [
+        {"nr": 16, "pytanie": "Czy jego podstawowe umiejętności są skalowalne?"},
+        {"nr": 17, "pytanie": "Czy jego rzut przełoży się poziom wyżej?"},
+        {"nr": 18, "pytanie": "Czy potrafi stworzyć sobie pozycję?"},
+        {"nr": 19, "pytanie": "Czy potrafi grać w pick & roll?"},
+        {"nr": 20, "pytanie": "Czy potrafi grać w różnych rolach w ataku?"}
+      ]
+    },
+    {
+      "nr": 5,
+      "nazwa": "Skills — obrona",
+      "pytania": [
+        {"nr": 21, "pytanie": "Czy potrafi bronić 1 na 1?"},
+        {"nr": 22, "pytanie": "Czy może bronić wielu pozycji?"},
+        {"nr": 23, "pytanie": "Czy jego nogi pozwolą mu przetrwać?"},
+        {"nr": 24, "pytanie": "Czy ma dobry instynkt defensywny?"},
+        {"nr": 25, "pytanie": "Czy jego obrona się skaluje?"}
+      ]
+    },
+    {
+      "nr": 6,
+      "nazwa": "Mentalność i charakter",
+      "pytania": [
+        {"nr": 26, "pytanie": "Czy ma odpowiednią etykę pracy?"},
+        {"nr": 27, "pytanie": "Czy jest konkurencyjny?"},
+        {"nr": 28, "pytanie": "Czy radzi sobie z krytyką?"},
+        {"nr": 29, "pytanie": "Czy jest coachable?"},
+        {"nr": 30, "pytanie": "Czy chce się rozwijać?"}
+      ]
+    },
+    {
+      "nr": 7,
+      "nazwa": "Adaptacja i elastyczność",
+      "pytania": [
+        {"nr": 31, "pytanie": "Czy potrafi grać prościej?"},
+        {"nr": 32, "pytanie": "Czy potrafi dostosować się do różnych systemów?"},
+        {"nr": 33, "pytanie": "Czy zaakceptuje mniejszą rolę?"},
+        {"nr": 34, "pytanie": "Czy jego styl gry jest elastyczny?"},
+        {"nr": 35, "pytanie": "Czy potrafi funkcjonować w różnych lineupach?"}
+      ]
+    },
+    {
+      "nr": 8,
+      "nazwa": "Fit — system / trener",
+      "pytania": [
+        {"nr": 36, "pytanie": "Czy jego mocne strony będą eksponowane?"},
+        {"nr": 37, "pytanie": "Czy system ukryje jego słabości?"},
+        {"nr": 38, "pytanie": "Czy pasuje do stylu gry drużyny?"},
+        {"nr": 39, "pytanie": "Czy trener ufa młodym?"},
+        {"nr": 40, "pytanie": "Czy będzie miał szansę na minuty?"}
+      ]
+    },
+    {
+      "nr": 9,
+      "nazwa": "Produkcja i statystyki",
+      "pytania": [
+        {"nr": 41, "pytanie": "Czy jego statystyki są powtarzalne?"},
+        {"nr": 42, "pytanie": "Czy grał w odpowiednim poziomie konkurencji?"},
+        {"nr": 43, "pytanie": "Czy jego liczby są efektem roli/systemu?"},
+        {"nr": 44, "pytanie": "Czy był efektywny w ograniczonej roli?"},
+        {"nr": 45, "pytanie": "Czy był clutch w ważnych momentach?"}
+      ]
+    },
+    {
+      "nr": 10,
+      "nazwa": "Ostatni filtr",
+      "pytania": [
+        {"nr": 46, "pytanie": "Czy ten zawodnik pomoże wygrywać?"},
+        {"nr": 47, "pytanie": "Czy będzie pozytywnym wpływem na szatnię?"},
+        {"nr": 48, "pytanie": "Czy widzisz go w swojej organizacji?"},
+        {"nr": 49, "pytanie": "Czy podpiszesz go dzisiaj, wiedząc to, co wiesz?"},
+        {"nr": 50, "pytanie": "Czy jest warty ryzyka?"}
+      ]
+    }
+  ]
+}
