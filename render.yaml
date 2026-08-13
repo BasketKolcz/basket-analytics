@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: basket-analytics
+    runtime: docker
+    plan: starter
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: PORTAL_LOGIN
+        sync: false          # set manually in Render dashboard
+      - key: PORTAL_PASS
+        sync: false          # set manually in Render dashboard
+      - key: PORTAL_ONLY
+        value: "true"
+      - key: SESSION_COOKIE_SECURE
+        value: "true"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: basket-analytics-db
+          property: connectionString
+      - key: MATCH_FILES_DIR
+        value: /data/match_files
+    disk:
+      name: match-files
+      mountPath: /data/match_files
+      sizeGB: 1
+
+databases:
+  - name: basket-analytics-db
+    databaseName: basketkolcz
+    user: basketkolcz
+    plan: basic-256mb
