@@ -24,7 +24,7 @@ primary_region = "fra"                # Frankfurt; nearest available Fly region 
 
 [[vm]]
   size   = "shared-cpu-1x"
-  memory = "256mb"
+  memory = "1024mb"
 
 [[mounts]]
   source       = "match_files"
