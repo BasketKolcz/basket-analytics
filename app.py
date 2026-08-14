@@ -38,9 +38,11 @@ def _portal_only():
     p = request.path
     if p == "/portal" or p.startswith("/portal/") or p.startswith("/static/") or p == "/favicon.ico":
         return
-    # Widoki /sezon* w trybie osadzenia (embed=1) są renderowane wewnątrz portalu
-    # (Mapa Rzutów / Sieć Asyst / Zbiórka / Akcje) — bez nawigacji programu, sam odczyt.
-    if p.startswith("/sezon") and request.args.get("embed") == "1":
+    # Widoki /sezon* i /zawodnicy* w trybie osadzenia (embed=1) są renderowane
+    # wewnątrz portalu (Mapa Rzutów / Sieć Asyst / Zbiórka / Akcje) — bez
+    # nawigacji programu, sam odczyt (patrz też: wyjątek z login_required
+    # przy embed=1 w tych samych trasach, poniżej w pliku).
+    if (p.startswith("/sezon") or p.startswith("/zawodnicy")) and request.args.get("embed") == "1":
         return
     return Response("Forbidden", 403)
 
@@ -19168,9 +19170,12 @@ def load_all_action_log(match_id):
 
 
 @app.route("/sezon/akcje")
-@login_required
 def sezon_akcje():
-    """Tabela wszystkich akcji sezonu — pełna filtracja per kolumna."""
+    """Tabela wszystkich akcji sezonu — pełna filtracja per kolumna.
+    W trybie embed=1 (osadzenie w portalu, zakładka Akcje) logowanie nie jest
+    wymagane — to sam odczyt, bez akcji administracyjnych, tak jak /sezon."""
+    if request.args.get("embed") != "1" and not session.get("logged_in"):
+        return redirect(url_for("landing"))
     embed = request.args.get("embed") == "1"
 
     season  = get_setting("current_season")  or ""
@@ -19525,8 +19530,11 @@ def sezon_akcje():
 # ══════════════════════════════════════════════════════════════════════════════
 
 @app.route("/zawodnicy")
-@login_required
 def zawodnicy():
+    # W trybie embed=1 (osadzenie w portalu) logowanie nie jest wymagane —
+    # sam odczyt, bez akcji administracyjnych, tak jak /sezon.
+    if request.args.get("embed") != "1" and not session.get("logged_in"):
+        return redirect(url_for("landing"))
     embed          = request.args.get("embed") == "1"
     sezon_filter   = request.args.get("sezon", get_setting("current_season") or "")
     team_id_filter = request.args.get("team_id", "")
@@ -20014,10 +20022,13 @@ window.addEventListener('DOMContentLoaded', () => { sortZaw(4); });
 
 
 @app.route("/zawodnicy/siec-asyst")
-@login_required
 def zawodnicy_siec_asyst():
     """Sieć asyst — wizualizacja force-directed (vis-network) wszystkich par asyst
-    między zawodnikami w kontekście (klub+sezon+druzyna). Agregacja całego sezonu."""
+    między zawodnikami w kontekście (klub+sezon+druzyna). Agregacja całego sezonu.
+    W trybie embed=1 (osadzenie w portalu) logowanie nie jest wymagane — sam
+    odczyt, bez akcji administracyjnych, tak jak /sezon."""
+    if request.args.get("embed") != "1" and not session.get("logged_in"):
+        return redirect(url_for("landing"))
     import os as _os
     import re as _re_a
     from collections import defaultdict as _dd
