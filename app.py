@@ -43,18 +43,19 @@ def _portal_only():
 import functools, hashlib, unicodedata, base64
 
 # ── Dane użytkownika (hashed password) ────────────────────────────────────────
-USERS = {
-    "kosma.kolcz@gmail.com": {
-        "name": "Kosma Kołcz",
-        "password_hash": hashlib.sha256("88614855_Basket".encode()).hexdigest(),
-    }
-}
+# Program nie ma logowania — dostęp jest otwarty dla każdego, kto dosięgnie
+# tego adresu. Dekorator zostaje jako pojedynczy punkt, w którym można je
+# przywrócić: wystarczy odtworzyć sprawdzanie sesji poniżej.
+#
+# UWAGA: docker-compose wystawia port na wszystkich interfejsach ("5000:5000"),
+# więc aplikacja jest widoczna w sieci lokalnej. Aby ograniczyć ją do tego
+# komputera, zmień mapowanie na "127.0.0.1:5000:5000".
+#
+# Portal zawodnika (/portal) ma własne, niezależne logowanie i działa dalej.
 
 def login_required(f):
     @functools.wraps(f)
     def decorated(*args, **kwargs):
-        if not session.get("logged_in"):
-            return redirect(url_for("landing"))
         return f(*args, **kwargs)
     return decorated
 
@@ -243,25 +244,15 @@ def player_dashboard():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
-    error = None
-    if request.method == "POST":
-        email    = request.form.get("email", "").strip().lower()
-        password = request.form.get("password", "")
-        user = USERS.get(email)
-        if user and user["password_hash"] == hashlib.sha256(password.encode()).hexdigest():
-            session.permanent = True
-            session["logged_in"] = True
-            session["user_name"] = user["name"]
-            session["user_email"] = email
-            next_url = request.args.get("next") or url_for("index")
-            return redirect(next_url)
-        error = "Nieprawidłowy login lub hasło."
-    return render_template_string(LOGIN_HTML, error=error)
+    """Logowanie zniesione — trasa zostaje, żeby stare zakładki nie dawały 404."""
+    return redirect(request.args.get("next") or url_for("index"))
+
 
 @app.route("/logout")
 def logout():
+    """Nie ma z czego się wylogowywać; czyścimy sesję dla porządku."""
     session.clear()
-    return redirect(url_for("login"))
+    return redirect(url_for("index"))
 
 
 LANDING_HTML = """<!DOCTYPE html>
@@ -1056,13 +1047,17 @@ def migrate_persons_phase2():
         n_c = cur.rowcount
         db.commit()
 
-        cur.execute("SELECT COUNT(*) AS c FROM player_stats WHERE player_id IS NOT NULL AND druzyna='gtk'")
-        n_with_pid = cur.fetchone()["c"]
-        cur.execute("SELECT COUNT(*) AS c FROM player_stats WHERE person_id IS NOT NULL AND druzyna='gtk'")
-        n_with_personid = cur.fetchone()["c"]
-        print(f"[migrate_persons_phase2] person_id_added={n_a} player_id_relinked={n_b} nr_fallback={n_c} "
-              f"final: gtk_with_player_id={n_with_pid} gtk_with_person_id={n_with_personid}", flush=True)
-        set_setting("persons_migration_phase2_done", "1")
+        # Cisza, gdy nie bylo czego naprawiac — init_db() woła tę funkcję przy
+        # każdym żądaniu, więc bezwarunkowy log zasypywał wszystko inne.
+        if n_a or n_b or n_c:
+            cur.execute("SELECT COUNT(*) AS c FROM player_stats WHERE player_id IS NOT NULL AND druzyna='gtk'")
+            n_with_pid = cur.fetchone()["c"]
+            cur.execute("SELECT COUNT(*) AS c FROM player_stats WHERE person_id IS NOT NULL AND druzyna='gtk'")
+            n_with_personid = cur.fetchone()["c"]
+            print(f"[migrate_persons_phase2] person_id_added={n_a} player_id_relinked={n_b} nr_fallback={n_c} "
+                  f"final: gtk_with_player_id={n_with_pid} gtk_with_person_id={n_with_personid}", flush=True)
+        if get_setting("persons_migration_phase2_done") != "1":
+            set_setting("persons_migration_phase2_done", "1")
     except Exception as e:
         try: db.rollback()
         except: pass
@@ -1127,7 +1122,8 @@ def migrate_lineup_person_ids():
             updated += 1
 
         db.commit()
-        print(f"[migrate_lineup_person_ids] updated={updated}/{len(rows)} lineup rows", flush=True)
+        if updated:
+            print(f"[migrate_lineup_person_ids] updated={updated}/{len(rows)} lineup rows", flush=True)
     except Exception as e:
         try: db.rollback()
         except: pass
@@ -1335,6 +1331,34 @@ def get_portal_context():
     sezon = get_setting("portal_sezon")   or ""
     druz  = get_setting("portal_druzyna") or ""
     return klub, sezon, druz
+
+
+def ctx_widoku():
+    """Kontekst klub/sezon/drużyna dla widoku statystyk.
+
+    Jawne parametry URL (`ctx_klub`, `ctx_sezon`, `ctx_druzyna`) mają
+    pierwszeństwo przed kontekstem programu. Dzięki temu widok osadzony
+    w portalu pokazuje drużynę wybraną w portalu, niezależnie od tego,
+    co jest otwarte w programie.
+
+    Obecność choćby jednego z parametrów wyłącza fallback dla całej trójki —
+    inaczej dałoby się zmieszać dwa różne konteksty w jednym widoku.
+    """
+    _k = request.args.get("ctx_klub")
+    _s = request.args.get("ctx_sezon")
+    _d = request.args.get("ctx_druzyna")
+    if _k is not None or _s is not None or _d is not None:
+        return (_k or "").strip(), (_s or "").strip(), (_d or "").strip()
+    return (get_setting("current_klub") or "",
+            get_setting("current_season") or "",
+            get_setting("current_druzyna") or "")
+
+
+def ctx_query(klub, sezon, druzyna, sep="&"):
+    """Kontekst jako fragment query stringa — do osadzania w URL-ach iframe."""
+    return sep + urlencode({"ctx_klub": klub or "",
+                            "ctx_sezon": sezon or "",
+                            "ctx_druzyna": druzyna or ""})
 
 
 def get_team_short_name(klub=None):
@@ -12191,18 +12215,10 @@ def sezon():
     # sekcję bez nawigacji — używa go pulpit portalu. Zamiast powielać kilkaset
     # linii wyliczeń, portal pokazuje dokładnie to, co program.
     _emb_sekcja = request.args.get("sekcja", "") if request.args.get("embed") == "1" else ""
-    if _emb_sekcja:
-        # sekcja osadzona — wystarczy logowanie do programu ALBO do portalu
-        if not session.get("logged_in") and not session.get("portal_logged_in"):
-            return redirect(url_for("landing"))
-    elif not session.get("logged_in"):
-        return redirect(url_for("landing"))
     try: init_db()
     except: pass
-    # Sezon i kontekst WYŁĄCZNIE z sidebara — brak override przez URL
-    ctx_klub    = get_setting("current_klub") or ""
-    ctx_sezon   = get_setting("current_season") or ""
-    ctx_druzyna = get_setting("current_druzyna") or ""
+    # Kontekst: jawne ctx_* z URL (portal) > kontekst programu (sidebar)
+    ctx_klub, ctx_sezon, ctx_druzyna = ctx_widoku()
     sezon_filter   = ctx_sezon
     team_id_filter = ""
     # Tryb raportu (Faza 4G): /sezon?raport=1 — print-friendly layout
@@ -15373,14 +15389,13 @@ def sezon():
       var tP=z.tAtt>0?(z.tMade/z.tAtt*100).toFixed(1)+'%':'&#8212;';
       var tC=_fgC(z.tAtt>0?z.tMade/z.tAtt*100:0);
       var bBg=z.type==='2PT'?'#2563b0':'#7c3aed';
-      var maxP=Math.max.apply(null,pl.map(function(p){{return p.att?p.made/p.att*100:0;}}));if(maxP<=0)maxP=1;
       var rows=pl.map(function(p,i){{
         var pct=p.att?p.made/p.att*100:0;var pS=p.att?pct.toFixed(1)+'%':'&#8212;';
-        var c=_fgC(pct);var bW=Math.round(pct/maxP*100);
-        return'<div style="display:flex;align-items:center;gap:5px;padding:3px 0;border-bottom:0.5px solid #f4f6fb">'
+        var c=_fgC(pct);
+        var nm=String(p.name||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+        return'<div style="display:flex;align-items:center;gap:6px;padding:3px 0;border-bottom:0.5px solid #f4f6fb">'
           +'<div style="width:16px;height:16px;border-radius:50%;background:'+rBg[i]+';color:'+rC[i]+';display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:900;flex-shrink:0">'+(i+1)+'</div>'
-          +'<span style="font-size:11px;font-weight:500;color:#333;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+p.name+'</span>'
-          +'<div style="width:44px;background:#eceef4;border-radius:3px;height:5px;flex-shrink:0"><div style="height:100%;border-radius:3px;background:'+c+';width:'+bW+'%"></div></div>'
+          +'<span title="'+nm+'" style="font-size:11px;font-weight:500;color:#333;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+nm+'</span>'
           +'<span style="font-size:10px;font-weight:700;min-width:33px;text-align:right;color:'+c+'">'+pS+'</span>'
           +'<span style="font-size:9px;color:#aaa;min-width:28px;text-align:right">'+p.made+'/'+p.att+'</span>'
           +'</div>';
@@ -18770,7 +18785,7 @@ window.filterTOHalf = function(half){{
 
 <div class="tab-pane fade" id="sSiecAsyst">
   <div class="card mt-1"><div class="card-body p-3">
-    <iframe id="siecAsystFrame" data-src="/zawodnicy/siec-asyst?embed=1"
+    <iframe id="siecAsystFrame" data-src="/zawodnicy/siec-asyst?embed=1{ctx_query(ctx_klub, ctx_sezon, ctx_druzyna, '&amp;')}"
             style="width:100%;height:660px;border:none;display:block;border-radius:6px"
             title="Sieć asyst sezonu"></iframe>
   </div></div>
@@ -18982,7 +18997,7 @@ document.addEventListener('shown.bs.tab', function(e) {{
                     f'{_top_players_zone_html}')
         elif _emb_sekcja == "asysty":
             _sek = ('<div class="card mt-1"><div class="card-body p-3">'
-                    '<iframe src="/zawodnicy/siec-asyst?embed=1" '
+                    f'<iframe src="/zawodnicy/siec-asyst?embed=1{ctx_query(ctx_klub, ctx_sezon, ctx_druzyna, "&amp;")}" '
                     'style="width:100%;height:660px;border:none;display:block;border-radius:6px" '
                     'title="Sieć asyst sezonu"></iframe></div></div>'
                     f'{_ast_stats_html}')
@@ -19997,9 +20012,7 @@ def zawodnicy_siec_asyst():
     import re as _re_a
     from collections import defaultdict as _dd
 
-    ctx_klub    = get_setting("current_klub") or ""
-    ctx_sezon   = get_setting("current_season") or ""
-    ctx_druzyna = get_setting("current_druzyna") or ""
+    ctx_klub, ctx_sezon, ctx_druzyna = ctx_widoku()
 
     db = get_db(); cur = db.cursor()
     team_id = None
@@ -20351,8 +20364,8 @@ def zawodnicy_siec_asyst():
 <div style="position:relative">
   <div id="netwrap" style="background:#fafbfd;border:1px solid #e8ecf3;border-radius:10px;height:{_netwrap_h};min-height:520px"></div>
   <div style="position:absolute;top:10px;right:10px;display:flex;flex-direction:column;gap:4px;z-index:10">
-    <button onclick="try{{window._network.moveTo({{scale:window._network.getScale()*1.3}})}}catch(e){{}}" title="Powiększ" style="width:32px;height:32px;border:1px solid #d0d7e3;background:#fff;border-radius:6px;font-size:18px;cursor:pointer;color:#1a2b4a;line-height:1;font-weight:600;box-shadow:0 1px 3px rgba(0,0,0,.08)">+</button>
-    <button onclick="try{{window._network.moveTo({{scale:window._network.getScale()*0.77}})}}catch(e){{}}" title="Pomniejsz" style="width:32px;height:32px;border:1px solid #d0d7e3;background:#fff;border-radius:6px;font-size:18px;cursor:pointer;color:#1a2b4a;line-height:1;font-weight:600;box-shadow:0 1px 3px rgba(0,0,0,.08)">−</button>
+    <button onclick="try{{window._netRuch&&window._netRuch();window._network.moveTo({{scale:window._network.getScale()*1.3}})}}catch(e){{}}" title="Powiększ" style="width:32px;height:32px;border:1px solid #d0d7e3;background:#fff;border-radius:6px;font-size:18px;cursor:pointer;color:#1a2b4a;line-height:1;font-weight:600;box-shadow:0 1px 3px rgba(0,0,0,.08)">+</button>
+    <button onclick="try{{window._netRuch&&window._netRuch();window._network.moveTo({{scale:window._network.getScale()*0.77}})}}catch(e){{}}" title="Pomniejsz" style="width:32px;height:32px;border:1px solid #d0d7e3;background:#fff;border-radius:6px;font-size:18px;cursor:pointer;color:#1a2b4a;line-height:1;font-weight:600;box-shadow:0 1px 3px rgba(0,0,0,.08)">−</button>
   </div>
 </div>
 <div style="margin-top:8px;font-size:.7rem;color:#aaa">
@@ -20417,9 +20430,25 @@ def zawodnicy_siec_asyst():
   window._network = network;
   window._allEdges = allEdges;
 
+  // Widok startowy: cała sieć w kadrze z zapasem, zamiast wejścia "w środek".
+  // Gdy użytkownik sam przybliży lub przesunie — automat milknie na dobre.
+  var _ruchUzytkownika = false;
+  window._netRuch = function(){ _ruchUzytkownika = true; };
+  container.addEventListener('wheel', window._netRuch, { passive: true });
+  network.on('dragStart', window._netRuch);
+  function dopasujWidok(){
+    if (_ruchUzytkownika) return;
+    try {
+      network.fit({ animation: false });
+    } catch(e) {}
+  }
+  try { network.moveTo({ scale: 0.5, animation: false }); } catch(e) {}
+  [400, 1200, 2500, 4500].forEach(function(ms){ setTimeout(dopasujWidok, ms); });
+
   // Animacja przez 7s lub do najechania myszką na bańkę
   var _physicsTimer = setTimeout(function(){
     try { network.setOptions({ physics: false }); } catch(e) {}
+    dopasujWidok();
   }, 7000);
   network.on('hoverNode', function(){
     clearTimeout(_physicsTimer);
@@ -35958,51 +35987,96 @@ body{{background:linear-gradient(135deg,#dde6f5,#e8eef8,#d8e4f2);display:flex;
                   if _klub_logo else "")
 
 
-    # ── Podsekcje pulpitu: Mapa Rzutów, Sieć Asyst, Zbiórka ──────────────────
+    # ── Zakładki analityczne: Mapa Rzutów, Sieć Asyst, Zbiórka ───────────────
     # Każda pokazuje odpowiednią sekcję /sezon w trybie osadzonym: identyczny
-    # wygląd jak w programie, bez powielania wyliczeń. Sekcje rozwijają się
-    # na żądanie — ramka ładuje się dopiero po pierwszym otwarciu.
-    def _pt_sekcja(kod, tytul, podtytul, wys):
-        return (
-            f'<details class="pt-sek" style="margin-top:16px;border:1px solid #e3e8f0;'
-            f'border-radius:12px;background:#fff;overflow:hidden">'
-            f'<summary style="list-style:none;cursor:pointer;padding:13px 18px;display:flex;'
-            f'align-items:center;gap:10px;user-select:none">'
-            f'<span style="font-size:.86rem;font-weight:800;color:#1a2b4a;letter-spacing:-.01em">{tytul}</span>'
-            f'<span style="font-size:.68rem;color:#9ca3af">{podtytul}</span>'
-            f'<span class="pt-sek-arr" style="margin-left:auto;color:#c8cfda;font-size:.7rem;transition:transform .2s">&#9660;</span>'
-            f'</summary>'
-            f'<div style="border-top:1px solid #eef1f7">'
-            f'<iframe data-sek="{kod}" loading="lazy" '
-            f'style="width:100%;height:{wys}px;border:none;display:block" '
-            f'title="{tytul}"></iframe>'
-            f'</div></details>'
-        )
-
-    _pt_sekcje_html = ""
+    # wygląd jak w programie, bez powielania wyliczeń. Ramka ładuje się dopiero
+    # przy pierwszym wejściu w zakładkę — Mapa Rzutów waży ~180 KB.
+    _PT_ZAKLADKI = [
+        ("shooting", "🎯", "Mapa Rzutów", 1250),
+        ("asysty",   "🔗", "Sieć Asyst",  1150),
+        ("zbiorka",  "🏀", "Zbiórka",     1000),
+    ]
+    # Zakładki w górnym pasku, obok Statystyk Indywidualnych.
+    # Ramka NIE ma stałej wysokości — dopasowuje się do treści, żeby nie było
+    # paska przewijania wewnątrz przewijanej strony.
+    _pt_taby_html = ""
+    _pt_panele_html = ""
+    # Kontekst portalu wędruje do ramek jawnie — osadzony widok NIE zaglada
+    # do kontekstu programu (current_*), bo w portalu jest on bez znaczenia.
+    _pt_ctx_q = urlencode({"ctx_klub": ctx_klub or "", "ctx_sezon": sezon or "",
+                           "ctx_druzyna": ctx_druzyna or ""}).replace("&", "&amp;")
     if results:
-        _pt_sekcje_html = (
-            '<div style="margin-top:26px">'
-            + _pt_sekcja("shooting", "Mapa Rzutów",
-                         "rozkład i skuteczność rzutów w sezonie", 1250)
-            + _pt_sekcja("asysty", "Sieć Asyst",
-                         "kto komu podaje — powiązania w zespole", 1150)
-            + _pt_sekcja("zbiorka", "Zbiórka",
-                         "walka o piłkę w ataku i w obronie", 1000)
-            + '</div>'
-            + '<style>'
-            '.pt-sek summary::-webkit-details-marker{display:none}'
-            '.pt-sek[open] .pt-sek-arr{transform:rotate(180deg)}'
-            '.pt-sek summary:hover{background:#fbfcfe}'
-            '</style>'
+        for _kod, _ikona, _tytul, _wys in _PT_ZAKLADKI:
+            _pt_taby_html += (
+                f'<button class="d-tab" id="dtab-{_kod}" onclick="dShow(\'{_kod}\',this)">'
+                f'{_ikona} {_tytul}</button>'
+            )
+            _pt_panele_html += (
+                f'<div id="dpane-{_kod}" class="dpane">'
+                f'<iframe data-sek="{_kod}" data-ctx="{_pt_ctx_q}" scrolling="no" '
+                f'style="width:100%;height:400px;border:none;display:block;overflow:hidden" '
+                f'title="{_tytul}"></iframe></div>'
+            )
+        _pt_panele_html += (
             '<script>'
             '(function(){'
-            'document.querySelectorAll(".pt-sek").forEach(function(d){'
-            'd.addEventListener("toggle",function(){'
-            'if(!d.open)return;'
-            'var f=d.querySelector("iframe");'
-            'if(f&&!f.src)f.src="/sezon?embed=1&sekcja="+f.dataset.sek;'
-            '});});'
+            'function dopasuj(f){'
+            'try{'
+            'if(!f.clientWidth) return;'
+            'var d=f.contentDocument; if(!d||!d.body) return;'
+            # Mierzymy kontener tresci, NIE body: body rozciaga sie do wysokosci
+            # ramki, wiec pomiar z niego oddawalby wlasna wysokosc i ramka
+            # roslaby w kolko, zostawiajac pusta przestrzen pod trescia.
+            'var el=d.querySelector(".main-content"), h=0;'
+            'if(el){'
+            'var st=d.defaultView.getComputedStyle(d.body);'
+            'h=Math.ceil(el.getBoundingClientRect().bottom'
+            '+(parseFloat(st.marginBottom)||0)+(parseFloat(st.paddingBottom)||0));'
+            '}else{'
+            'var poprz=f.style.height; f.style.height="0px";'
+            'h=d.documentElement.scrollHeight; f.style.height=poprz;'
+            '}'
+            # Prog 2 px: bez niego ResizeObserver i pomiar gonilyby sie nawzajem.
+            'if(h>0 && Math.abs(h-f.clientHeight)>2) f.style.height=h+"px";'
+            '}catch(e){}'
+            '}'
+            'function obserwuj(f){'
+            'if(f.dataset.obserwowane) return;'
+            'try{'
+            'var d=f.contentDocument; if(!d||!d.body) return;'
+            'f.dataset.obserwowane="1";'
+            'if(window.ResizeObserver){'
+            'new ResizeObserver(function(){dopasuj(f);}).observe(d.body);'
+            '}'
+            'd.defaultView.addEventListener("resize",function(){dopasuj(f);});'
+            '}catch(e){}'
+            '}'
+            'function podepnij(f){'
+            'if(f.dataset.podpiete) return; f.dataset.podpiete="1";'
+            'var stabilne=0;'
+            'var it=setInterval(function(){'
+            'var przed=f.clientHeight;'
+            'dopasuj(f); obserwuj(f);'
+            'var gotowe=false;'
+            'try{ var d=f.contentDocument; gotowe=!!(d&&d.readyState==="complete"&&d.querySelector(".main-content")); }catch(e){}'
+            'if(gotowe&&Math.abs(f.clientHeight-przed)<=2) stabilne++; else stabilne=0;'
+            'if(stabilne>=8) clearInterval(it);'
+            '},250);'
+            'setTimeout(function(){clearInterval(it);},30000);'
+            'f.addEventListener("load",function(){ dopasuj(f); obserwuj(f); });'
+            '}'
+            'document.addEventListener("click",function(e){'
+            'var b=e.target.closest?e.target.closest(".d-tab"):null; if(!b||!b.id) return;'
+            'var p=document.getElementById("dpane-"+b.id.replace("dtab-",""));'
+            'if(!p) return;'
+            'var f=p.querySelector("iframe[data-sek]"); if(!f) return;'
+            'podepnij(f);'
+            'if(!f.getAttribute("src")) f.src="/sezon?embed=1&sekcja="+f.dataset.sek'            '+(f.dataset.ctx?"&"+f.dataset.ctx:"");'
+            'else dopasuj(f);'
+            '});'
+            'window.addEventListener("resize",function(){'
+            'document.querySelectorAll("iframe[data-sek]").forEach(dopasuj);'
+            '});'
             '})();'
             '</script>'
         )
@@ -36054,7 +36128,6 @@ body{{background:linear-gradient(135deg,#dde6f5,#e8eef8,#d8e4f2);display:flex;
   {'<div style="flex:2;min-width:0"><div class="lp5-eyebrow">' + TP('best_lineup_season') + '</div>' + _best5_html + '</div>' if _best5_html else ''}
   {'<div style="flex:3;min-width:0"><div class="ldr-eyebrow">' + TP('season_leaders') + '</div>' + _ldr_html + '</div>' if _ldr_html else ''}
 </div>
-{_pt_sekcje_html}
 """
 
     # ── Statystyki drużynowe (duel panels) ──────────────────────────────────
@@ -36968,8 +37041,8 @@ body{{background:#f0f2f7;margin:0}}
       <div class="druz-subnav">
         <button class="d-tab active" id="dtab-pulpit" onclick="dShow(\'pulpit\',this)">📊 ''' + TP('dashboard') + f'''</button>
         <button class="d-tab" id="dtab-mecze" onclick="dShow(\'mecze\',this)">🏆 ''' + TP('matches') + f'''</button>
-        <button class="d-tab" id="dtab-statystyki" onclick="dShow(\'statystyki\',this)">👤 ''' + TP('stats') + f'''</button>
-      </div>''' + f'<div id="dpane-pulpit" class="dpane active">{dash_html}</div><div id="dpane-mecze" class="dpane">{team_html}</div><div id="dpane-statystyki" class="dpane">{players_html}</div>'
+        <button class="d-tab" id="dtab-statystyki" onclick="dShow(\'statystyki\',this)">👤 ''' + TP('stats') + f'''</button>''' + _pt_taby_html + '''
+      </div>''' + f'<div id="dpane-pulpit" class="dpane active">{dash_html}</div><div id="dpane-mecze" class="dpane">{team_html}</div><div id="dpane-statystyki" class="dpane">{players_html}</div>' + _pt_panele_html
 if ctx_druzyna else
 ('<!-- TEAM PICKER -->' + _team_picker_html
 if _p_klub else
@@ -40199,7 +40272,7 @@ def portal_zawodnik(pid):
 
     # Pobierz kontekst portalu (klub, sezon, drużyna) — NIE z programu
     _pz_klub, _pz_sezon, _pz_druz = get_portal_context()
-    sezon_filter = request.args.get("sezon", _pz_sezon or get_setting("current_season") or "")
+    sezon_filter = request.args.get("sezon", _pz_sezon or "")
     db = get_db(); cur = db.cursor()
 
     # Resolwuj team_id(s) dla kontekstu portalu
