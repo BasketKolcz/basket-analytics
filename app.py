@@ -38,6 +38,10 @@ def _portal_only():
     p = request.path
     if p == "/portal" or p.startswith("/portal/") or p.startswith("/static/") or p == "/favicon.ico":
         return
+    # Widoki /sezon* w trybie osadzenia (embed=1) są renderowane wewnątrz portalu
+    # (Mapa Rzutów / Sieć Asyst / Zbiórka / Akcje) — bez nawigacji programu, sam odczyt.
+    if p.startswith("/sezon") and request.args.get("embed") == "1":
+        return
     return Response("Forbidden", 403)
 
 import functools, hashlib, unicodedata, base64
@@ -51981,11 +51985,13 @@ document.querySelectorAll('.pm-wyl').forEach(function(td){{
 
         try:
             cur.execute("""
-                SELECT ts.data, ts.czesc, ts.dzien_wolny,
+                SELECT ts.id, ts.data, ts.czesc, ts.dzien_wolny,
+                       COALESCE(ts.godzina,'') AS godzina,
                        COALESCE(SUM(d.min),0) AS sum_min
                 FROM training_sessions ts LEFT JOIN training_drills d ON d.session_id=ts.id
                 WHERE ts.team_id=%s AND ts.data BETWEEN %s AND %s
-                GROUP BY ts.data, ts.czesc, ts.dzien_wolny ORDER BY ts.data
+                GROUP BY ts.id, ts.data, ts.czesc, ts.dzien_wolny, ts.godzina
+                ORDER BY ts.data, NULLIF(COALESCE(ts.godzina,''),'') ASC NULLS LAST, ts.czesc
             """, (team_id, first, last))
             ses_by_day = {}
             for s in cur.fetchall():
@@ -52012,13 +52018,26 @@ document.querySelectorAll('.pm-wyl').forEach(function(td){{
             mec = mec_by_day.get(day, [])
             cell_bg = "#f0f4ff" if is_today else "#fafafa"
             cell_border = "2px solid #1a2b4a" if is_today else "1px solid #e8ecf3"
-            cell_html = f'<div style="min-height:64px;border:{cell_border};border-radius:8px;background:{cell_bg};padding:6px;font-size:10px">'
+            _iso = d.isoformat()
+            # Pusta część komórki zakłada sesję na ten dzień; kafelek otwiera istniejącą.
+            cell_html = (f'<div onclick="kalNowa(\'{_iso}\')" title="Kliknij, aby doda\u0107 sesj\u0119 {_iso}" '
+                         f'style="min-height:64px;border:{cell_border};border-radius:8px;background:{cell_bg};'
+                         f'padding:6px;font-size:10px;cursor:pointer;transition:box-shadow .12s" '
+                         f'onmouseover="this.style.boxShadow=\'inset 0 0 0 2px #c7d4f5\'" '
+                         f'onmouseout="this.style.boxShadow=\'none\'">')
             cell_html += f'<div style="font-weight:{"700" if is_today else "500"};color:{"#1a2b4a" if is_today else "#374151"};margin-bottom:3px">{day}</div>'
             for s in ses:
-                if s["dzien_wolny"]: cell_html += '<div style="background:#f5f5f5;border-radius:3px;padding:1px 4px;color:#9ca3af;font-size:9px;margin-bottom:1px">DF</div>'
+                _link = f"/klub/{team_id}/zarzadzanie/trening/sesja/{s['id']}"
+                _go = f'onclick="event.stopPropagation();location.href=\'{_link}\'"'
+                if s["dzien_wolny"]:
+                    cell_html += (f'<div {_go} style="background:#f5f5f5;border-radius:3px;padding:1px 4px;'
+                                  f'color:#9ca3af;font-size:9px;margin-bottom:1px">DF</div>')
                 else:
                     cz = f" {s['czesc']}" if s["czesc"] else ""
-                    cell_html += f'<div style="background:#dbeafe;border-radius:3px;padding:1px 4px;color:#1e40af;font-size:9px;margin-bottom:1px">\U0001f3cb{cz} {s["sum_min"]}min</div>'
+                    _gz = f' {s["godzina"]}' if s.get("godzina") else ""
+                    cell_html += (f'<div {_go} style="background:#dbeafe;border-radius:3px;padding:1px 4px;'
+                                  f'color:#1e40af;font-size:9px;margin-bottom:1px">'
+                                  f'\U0001f3cb{cz}{_gz} {s["sum_min"]}min</div>')
             for m in mec:
                 wg=int(m["wynik_gtk"] or 0); wo=int(m["wynik_opp"] or 0); win=wg>wo
                 cell_html += f'<div style="background:{"#e8f5ee" if win else "#fdf0f0"};border-radius:3px;padding:1px 4px;color:{"#1a6b3c" if win else "#8b1a1a"};font-size:9px;margin-bottom:1px">\U0001f3c0 {wg}\u2013{wo}</div>'
