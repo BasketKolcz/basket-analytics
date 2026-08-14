@@ -15745,6 +15745,12 @@ def sezon():
                                            if m.get("id") and (m["id"],"all","atk") in _se_match_svgs])
 
     _season_shot_html = f"""
+<style>
+/* Poniżej ~640px: 3 boiska pod sobą zamiast obok siebie — bez przewijania w bok. */
+@media(max-width:640px){{
+  .se-court-grid{{grid-template-columns:1fr!important;min-width:0!important}}
+}}
+</style>
 <div id="se-shooting-grid">
   <!-- Header: Suma/Średnia toggle -->
   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:6px">
@@ -15756,7 +15762,7 @@ def sezon():
   </div>
   <!-- 3 boiska w jednym rzędzie — 10% większe niż karta, poziomy scroll na małych ekranach -->
   <div style="overflow-x:auto;overflow-y:visible;margin-bottom:16px">
-  <div style="display:grid;grid-template-columns:46% 27% 27%;width:100%;min-width:860px;gap:8px;align-items:start">
+  <div class="se-court-grid" style="display:grid;grid-template-columns:46% 27% 27%;width:100%;min-width:860px;gap:8px;align-items:start">
     <!-- FG% (połowa ataku) -->
     <div>
       <div style="font-size:10px;font-weight:700;color:#1a2b4a;text-align:center;margin-bottom:4px">FG% — Atak</div>
@@ -34980,6 +34986,17 @@ _PORTAL_TOPBAR_CSS = """
   border:none;background:transparent;font-family:inherit;transition:.15s;
   color:rgba(255,255,255,.38);display:flex;align-items:center;gap:3px}
 .pt-lang-btn.act{background:rgba(255,255,255,.14);color:#fff}
+@media(max-width:768px){
+  .pt-edu{display:none}
+}
+@media(max-width:480px){
+  .pt-topbar{padding:0 10px;flex-wrap:wrap;height:auto;min-height:58px}
+  .pt-brand{display:none}
+  .pt-logo{margin-right:12px}
+  .pt-btn{padding:6px 10px;font-size:.68rem}
+  .pt-lang-btn{padding:2px 6px;font-size:.62rem}
+  .pt-sep{margin:0 1px}
+}
 """
 
 def _portal_topbar_html(back_btn_html="", active_tab=""):
@@ -36955,12 +36972,25 @@ body{{background:#f0f2f7;margin:0}}
 .pt-pane{{display:none}}
 .pt-pane.active{{display:block}}
 .druz-subnav{{display:flex;gap:2px;background:#e8ecf3;border-radius:10px;
-  padding:3px;width:fit-content;margin-bottom:16px}}
+  padding:3px;width:fit-content;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;
+  margin-bottom:16px}}
 .d-tab{{padding:7px 18px;border-radius:8px;font-size:.75rem;font-weight:600;
-  color:#6b7280;cursor:pointer;border:none;background:transparent;
+  color:#6b7280;cursor:pointer;border:none;background:transparent;flex-shrink:0;
   font-family:inherit;transition:.15s}}
 .d-tab.active{{background:#fff;color:#1a2b4a;box-shadow:0 1px 4px rgba(0,0,0,.08)}}
 .d-tab:not(.active):hover{{color:#1a2b4a}}
+@media(max-width:768px){{
+  .pt-edu{{display:none}}
+}}
+@media(max-width:480px){{
+  .pt-topbar{{padding:0 10px;flex-wrap:wrap;height:auto;min-height:58px}}
+  .pt-brand{{display:none}}
+  .pt-logo{{margin-right:12px}}
+  .pt-btn{{padding:6px 10px;font-size:.68rem}}
+  .pt-lang-btn{{padding:2px 6px;font-size:.62rem}}
+  .pt-sep{{margin:0 1px}}
+  .d-tab{{padding:6px 12px;font-size:.68rem}}
+}}
 .dpane{{display:none}}
 .dpane.active{{display:block}}
 .tc-detail-hero{{background:linear-gradient(135deg,#1a2b4a,#253d66);border-radius:14px;
