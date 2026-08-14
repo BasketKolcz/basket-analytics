@@ -24923,7 +24923,7 @@ def profil_zawodnika(roster_id):
           {"<span style='font-size:9px;color:rgba(255,255,255,.5);line-height:1'>#</span><span style='font-size:20px;font-weight:700;color:#fff;line-height:1.1'>" + nr_display + "</span>" if nr_display else "<span style='font-size:20px;font-weight:700;color:#fff'>" + initials + "</span>"}
         </div>
         <div>
-          <div style="font-size:20px;font-weight:700;color:#1a2b4a">{_anon(zawodnik['imie'])} {_anon(zawodnik['nazwisko'])}</div>
+          <div style="font-size:20px;font-weight:700;color:#1a2b4a">{zawodnik['imie']} {zawodnik['nazwisko']}</div>
           <div style="font-size:.82rem;color:#888;margin-top:2px">{gtk_name}</div>
           <div style="margin-top:6px">
             <span class="badge" style="background:{"#e8f5e9;color:#1a5c2a" if zawodnik.get('aktywny', True) else "#ffebee;color:#8b1a1a"}">{"Aktywny" if zawodnik.get('aktywny', True) else "Nieaktywny"}</span>
@@ -34926,12 +34926,6 @@ def _portal_duel_row(lbl, vg, vo, higher_is_better=True, neutral=False):
             f'<div><div class="dr-lbl">{lbl}</div>{bar}</div>'
             f'<div class="dr-o{ol}" style="color:{co};font-weight:{wo}">{vo}</div></div>')
 
-def _anon(name):
-    if not name:
-        return name
-    return " ".join(w[0].upper() + "***" if w and w[0].isalpha() else w for w in str(name).split())
-
-
 def _portal_eff_row(lbl, vg, vo):
     # jak wyżej — gw/fg/fo są używane po bloku, więc muszą istnieć zawsze
     fg = fo = 0.0
@@ -37618,7 +37612,7 @@ def portal_mecz(match_id):
                     min_s = "—"; min_dv = "0"
             imie, nazwisko = nr_to_name_map.get(nr, ("", ""))
             if nazwisko or imie:
-                name_s = f"#{nr} {_anon(imie)} {_anon(nazwisko)}"
+                name_s = f"#{nr} {imie} {nazwisko}"
             else:
                 name_s = nr_name_map.get(str(nr), f"#{nr}")
             bg = '#f8f9ff' if idx_p % 2 == 0 else '#fff'
@@ -40518,7 +40512,7 @@ def portal_zawodnik(pid):
         page = f"""<!DOCTYPE html>
 <html lang="pl"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{_anon(zawodnik['imie'])} {_anon(zawodnik['nazwisko'])} — Portal</title>
+<title>{zawodnik['imie']} {zawodnik['nazwisko']} — Portal</title>
 {_PORTAL_CSS}
 </head><body>
 <nav class="topbar">
@@ -41140,7 +41134,7 @@ _pUpdate();
     page = f"""<!DOCTYPE html>
 <html lang="pl"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{_anon(zawodnik['imie'])} {_anon(zawodnik['nazwisko'])} — Portal BasketKołcz</title>
+<title>{zawodnik['imie']} {zawodnik['nazwisko']} — Portal BasketKołcz</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 {_PORTAL_CSS}
@@ -41208,7 +41202,7 @@ _pUpdate();
           {"<span style='font-size:9px;color:rgba(255,255,255,.5);line-height:1'>#</span><span style='font-size:20px;font-weight:700;color:#fff;line-height:1.1'>" + nr_display + "</span>" if nr_display else "<span style='font-size:20px;font-weight:700;color:#fff'>" + initials + "</span>"}
         </div>
         <div>
-          <div style="font-size:20px;font-weight:700;color:#1a2b4a">{_anon(zawodnik['imie'])} {_anon(zawodnik['nazwisko'])}</div>
+          <div style="font-size:20px;font-weight:700;color:#1a2b4a">{zawodnik['imie']} {zawodnik['nazwisko']}</div>
           <div style="font-size:.82rem;color:#888;margin-top:2px">{gtk_name}</div>
           <div style="margin-top:6px">
             <span class="badge" style="background:{'#e8f5e9;color:#1a5c2a' if zawodnik.get('aktywny', True) else '#ffebee;color:#8b1a1a'}">{('Aktywny' if get_portal_lang()=='pl' else 'Active') if zawodnik.get('aktywny', True) else ('Nieaktywny' if get_portal_lang()=='pl' else 'Inactive')}</span>
