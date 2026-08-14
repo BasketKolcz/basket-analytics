@@ -35026,7 +35026,7 @@ _PORTAL_TOPBAR_CSS = """
   transition:.15s;white-space:nowrap;cursor:pointer}
 .pt-back-center:hover{background:rgba(255,255,255,.17);color:#fff}
 .pt-right{display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0}
-.pt-edu{display:flex;align-items:center;gap:6px;background:#f97316;color:#fff;
+.pt-edu{display:none;align-items:center;gap:6px;background:#f97316;color:#fff;
   border:none;border-radius:8px;padding:6px 12px;font-size:.73rem;font-weight:700;
   font-family:inherit;cursor:pointer;text-decoration:none;white-space:nowrap;transition:.15s}
 .pt-edu:hover{opacity:.88}
@@ -35037,9 +35037,6 @@ _PORTAL_TOPBAR_CSS = """
   border:none;background:transparent;font-family:inherit;transition:.15s;
   color:rgba(255,255,255,.38);display:flex;align-items:center;gap:3px}
 .pt-lang-btn.act{background:rgba(255,255,255,.14);color:#fff}
-@media(max-width:768px){
-  .pt-edu{display:none}
-}
 @media(max-width:480px){
   .pt-topbar{padding:0 10px;flex-wrap:wrap;height:auto;min-height:58px}
   .pt-brand{display:none}
@@ -37008,7 +37005,7 @@ body{{background:#f0f2f7;margin:0}}
 .pt-btn:hover{{color:#fff;background:rgba(255,255,255,.09)}}
 .pt-btn.active{{color:#c9a340;background:rgba(201,163,64,.15)}}
 .pt-right{{display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0}}
-.pt-edu{{display:flex;align-items:center;gap:6px;background:#f97316;color:#fff;
+.pt-edu{{display:none;align-items:center;gap:6px;background:#f97316;color:#fff;
   border:none;border-radius:8px;padding:6px 12px;font-size:.73rem;font-weight:700;
   font-family:inherit;cursor:pointer;text-decoration:none;white-space:nowrap;transition:.15s}}
 .pt-edu:hover{{opacity:.88}}
@@ -37030,9 +37027,6 @@ body{{background:#f0f2f7;margin:0}}
   font-family:inherit;transition:.15s}}
 .d-tab.active{{background:#fff;color:#1a2b4a;box-shadow:0 1px 4px rgba(0,0,0,.08)}}
 .d-tab:not(.active):hover{{color:#1a2b4a}}
-@media(max-width:768px){{
-  .pt-edu{{display:none}}
-}}
 @media(max-width:480px){{
   .pt-topbar{{padding:0 10px;flex-wrap:wrap;height:auto;min-height:58px}}
   .pt-brand{{display:none}}
