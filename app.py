@@ -16,6 +16,32 @@ PARSER_VERSION  = 1   # Inkrementuj przy każdej zmianie logiki parsowania
 MATCH_FILES_DIR = os.environ.get("MATCH_FILES_DIR", "/app/match_files")
 os.makedirs(MATCH_FILES_DIR, exist_ok=True)
 
+# ══════════════════════════════════════════════════════════════════════════════
+# CACHE ANALITYK OSADZONYCH W PORTALU (Mapa Rzutów / Sieć Asyst / Zbiórka)
+# ══════════════════════════════════════════════════════════════════════════════
+# Te widoki liczą po kilkadziesiąt zapytań SQL (a Sieć Asyst dodatkowo parsuje
+# wszystkie pliki Excel sezonu) na KAŻDE wejście. Dane są historyczne i zmieniają
+# się rzadko (nowy mecz raz na tydzień), więc prosty cache czasowy w pamięci
+# procesu eliminuje powtórne liczenie tego samego kontekstu. TTL zamiast
+# precyzyjnej inwalidacji — prościej i bezpieczniej: najwyżej 10 minut
+# opóźnienia zanim nowo dodany mecz się pojawi w tych widokach.
+import time as _time_mod
+_ANALYTICS_CACHE = {}
+_ANALYTICS_CACHE_TTL = 600  # 10 minut
+
+def _ac_get(key):
+    entry = _ANALYTICS_CACHE.get(key)
+    if not entry:
+        return None
+    ts, val = entry
+    if _time_mod.time() - ts > _ANALYTICS_CACHE_TTL:
+        _ANALYTICS_CACHE.pop(key, None)
+        return None
+    return val
+
+def _ac_set(key, val):
+    _ANALYTICS_CACHE[key] = (_time_mod.time(), val)
+
 
 app = Flask(__name__)
 
@@ -12225,6 +12251,15 @@ def sezon():
     except: pass
     # Kontekst: jawne ctx_* z URL (portal) > kontekst programu (sidebar)
     ctx_klub, ctx_sezon, ctx_druzyna = ctx_widoku()
+
+    # Cache osadzonych sekcji (Mapa Rzutów / Sieć Asyst / Zbiórka) — patrz
+    # komentarz przy _ANALYTICS_CACHE. Trafienie pomija całą resztę funkcji
+    # (kilkadziesiąt zapytań SQL) i zwraca gotowy HTML natychmiast.
+    _ac_key = ("sezon", _emb_sekcja, ctx_klub, ctx_sezon, ctx_druzyna)
+    if _emb_sekcja:
+        _cached_html = _ac_get(_ac_key)
+        if _cached_html is not None:
+            return html_response(_cached_html)
     sezon_filter   = ctx_sezon
     team_id_filter = ""
     # Tryb raportu (Faza 4G): /sezon?raport=1 — print-friendly layout
@@ -19017,7 +19052,9 @@ document.addEventListener('shown.bs.tab', function(e) {{
             _sek = _zbiork_html
         else:
             _sek = '<div style="padding:30px;text-align:center;color:#9ca3af">Nieznana sekcja</div>'
-        return html_response(base_embed(_sek, scripts))
+        _resp_html = base_embed(_sek, scripts)
+        _ac_set(_ac_key, _resp_html)
+        return html_response(_resp_html)
 
     return html_response(base(content, scripts, active="season"))
 
@@ -20035,6 +20072,14 @@ def zawodnicy_siec_asyst():
 
     ctx_klub, ctx_sezon, ctx_druzyna = ctx_widoku()
 
+    # Cache — patrz komentarz przy _ANALYTICS_CACHE. Ta funkcja dodatkowo
+    # parsuje WSZYSTKIE pliki Excel sezonu, więc cache daje tu największy zysk.
+    _ac_embed = (request.args.get("embed") == "1")
+    _ac_key = ("siec_asyst", _ac_embed, ctx_klub, ctx_sezon, ctx_druzyna)
+    _ac_cached = _ac_get(_ac_key)
+    if _ac_cached is not None:
+        return _ac_cached if _ac_embed else html_response(base(_ac_cached, active="players"))
+
     db = get_db(); cur = db.cursor()
     team_id = None
     if ctx_klub and ctx_sezon and ctx_druzyna:
@@ -20433,16 +20478,16 @@ def zawodnicy_siec_asyst():
     physics: {
       enabled: true,
       forceAtlas2Based: {
-        gravitationalConstant: -240,
-        centralGravity: 0.005,
-        springLength: 280,
-        springConstant: 0.04,
-        damping: 0.4,
+        gravitationalConstant: -900,
+        centralGravity: 0.004,
+        springLength: 340,
+        springConstant: 0.025,
+        damping: 0.55,
         avoidOverlap: 1.0
       },
       maxVelocity: 50,
       solver: 'forceAtlas2Based',
-      stabilization: { enabled: false }
+      stabilization: { enabled: true, iterations: 300, fit: true }
     },
     interaction: { hover: true, tooltipDelay: 100, navigationButtons: false, keyboard: true, zoomSpeed: 0.067 }
   };
@@ -20515,6 +20560,7 @@ def zawodnicy_siec_asyst():
 </script>
 """
     script = script.replace("__NODES__", nodes_js).replace("__EDGES__", edges_js)
+    _ac_set(_ac_key, content_top + script)
     if embed:
         return content_top + script
     return html_response(base(content_top + script, active="players"))
