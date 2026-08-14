@@ -35047,7 +35047,8 @@ _PORTAL_TOPBAR_CSS = """
   .pt-back-center{position:static;transform:none;flex:1 0 100%;
     display:flex;justify-content:center;margin:6px 0 0}
   .mh-rozg,.mh-rk{display:none}
-  .mh-msc{flex:0 0 34px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .mh-msc{flex:0 0 14px!important;padding:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .mh-date{display:none}
 }
 """
 
@@ -36299,7 +36300,7 @@ body{{background:linear-gradient(135deg,#dde6f5,#e8eef8,#d8e4f2);display:flex;
   onmouseout="this.style.boxShadow='';this.style.transform=''">
   <div style="width:24px;height:24px;border-radius:6px;background:{badge_bg};display:flex;
     align-items:center;justify-content:center;font-size:.7rem;font-weight:800;color:{badge_tc};flex-shrink:0">{badge_txt}</div>
-  <div style="flex:0 0 82px;font-size:.75rem;color:#6b7280">{dat_s}</div>
+  <div class="mh-date" style="flex:0 0 82px;font-size:.75rem;color:#6b7280">{dat_s}</div>
   {'<div class="mh-rozg" style="flex:0 0 90px;font-size:.68rem;color:#9ca3af;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + rozg + '</div>' if rozg else '<div class="mh-rozg" style="flex:0 0 90px"></div>'}
   {'<div class="mh-rk" style="flex:0 0 70px;font-size:.68rem;color:#6b7280;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + rk_s + '</div>' if rk_s else '<div class="mh-rk" style="flex:0 0 70px"></div>'}
   <div class="mh-msc" style="flex:0 0 54px;font-size:.7rem;font-weight:600;color:{place_c}">{msc_lbl}</div>
@@ -37042,7 +37043,8 @@ body{{background:#f0f2f7;margin:0}}
   .pt-back-center{{position:static;transform:none;flex:1 0 100%;
     display:flex;justify-content:center;margin:6px 0 0}}
   .mh-rozg,.mh-rk{{display:none}}
-  .mh-msc{{flex:0 0 34px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
+  .mh-msc{{flex:0 0 14px!important;padding:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
+  .mh-date{{display:none}}
 }}
 .dpane{{display:none}}
 .dpane.active{{display:block}}
