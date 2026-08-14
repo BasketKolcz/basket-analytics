@@ -35044,6 +35044,9 @@ _PORTAL_TOPBAR_CSS = """
   .pt-btn{padding:6px 10px;font-size:.68rem}
   .pt-lang-btn{padding:2px 6px;font-size:.62rem}
   .pt-sep{margin:0 1px}
+  .pt-back-center{position:static;transform:none;flex:1 0 100%;
+    display:flex;justify-content:center;margin:6px 0 0}
+  .mh-rozg,.mh-rk{display:none}
 }
 """
 
@@ -36296,10 +36299,10 @@ body{{background:linear-gradient(135deg,#dde6f5,#e8eef8,#d8e4f2);display:flex;
   <div style="width:24px;height:24px;border-radius:6px;background:{badge_bg};display:flex;
     align-items:center;justify-content:center;font-size:.7rem;font-weight:800;color:{badge_tc};flex-shrink:0">{badge_txt}</div>
   <div style="flex:0 0 82px;font-size:.75rem;color:#6b7280">{dat_s}</div>
-  {'<div style="flex:0 0 90px;font-size:.68rem;color:#9ca3af;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + rozg + '</div>' if rozg else '<div style="flex:0 0 90px"></div>'}
-  {'<div style="flex:0 0 70px;font-size:.68rem;color:#6b7280;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + rk_s + '</div>' if rk_s else '<div style="flex:0 0 70px"></div>'}
+  {'<div class="mh-rozg" style="flex:0 0 90px;font-size:.68rem;color:#9ca3af;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + rozg + '</div>' if rozg else '<div class="mh-rozg" style="flex:0 0 90px"></div>'}
+  {'<div class="mh-rk" style="flex:0 0 70px;font-size:.68rem;color:#6b7280;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + rk_s + '</div>' if rk_s else '<div class="mh-rk" style="flex:0 0 70px"></div>'}
   <div style="flex:0 0 54px;font-size:.7rem;font-weight:600;color:{place_c}">{msc_lbl}</div>
-  <div style="flex:1;font-size:.85rem;font-weight:700;color:#1a2b4a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">
+  <div style="flex:1;min-width:0;font-size:.85rem;font-weight:700;color:#1a2b4a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">
     vs. {am.get('przeciwnik','?')}</div>
   <div style="flex:0 0 52px;text-align:right;font-size:.92rem;font-weight:800;color:#1a2b4a">{wynik_s}</div>
   <div style="flex:0 0 20px;text-align:right;color:#9ca3af;font-size:.85rem">›</div>
@@ -37035,6 +37038,9 @@ body{{background:#f0f2f7;margin:0}}
   .pt-lang-btn{{padding:2px 6px;font-size:.62rem}}
   .pt-sep{{margin:0 1px}}
   .d-tab{{padding:6px 12px;font-size:.68rem}}
+  .pt-back-center{{position:static;transform:none;flex:1 0 100%;
+    display:flex;justify-content:center;margin:6px 0 0}}
+  .mh-rozg,.mh-rk{{display:none}}
 }}
 .dpane{{display:none}}
 .dpane.active{{display:block}}
