@@ -34642,10 +34642,6 @@ body{font-family:'Inter',sans-serif;background:#f0f2f7;color:#111827;min-height:
 .tb-btn.active{color:#c9a340;background:rgba(201,163,64,.15)}
 .tb-right{display:flex;align-items:center;gap:8px}
 .tb-name{font-size:.78rem;font-weight:600;color:rgba(255,255,255,.7)}
-.tb-logout{font-size:.7rem;color:rgba(255,255,255,.45);cursor:pointer;background:none;
-  border:1px solid rgba(255,255,255,.2);border-radius:6px;padding:4px 10px;font-family:inherit;
-  text-decoration:none;transition:all .15s}
-.tb-logout:hover{color:#fff;border-color:rgba(255,255,255,.5)}
 .tb-selector{position:relative}
 .tb-sel-btn{display:flex;align-items:center;gap:6px;padding:5px 10px;border-radius:8px;
   border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);cursor:pointer;
@@ -34678,7 +34674,6 @@ body{font-family:'Inter',sans-serif;background:#f0f2f7;color:#111827;min-height:
   .tb-logo-text{display:none}
   .tb-logo-icon{width:30px;height:30px}
   .tb-btn{padding:5px 10px;font-size:.7rem}
-  .tb-logout{font-size:.65rem;padding:3px 8px}
   .tb-name{display:none}
   .tb-selector .tb-sel-btn{min-width:80px;padding:4px 8px}
   .tb-sel-value{font-size:.68rem}
@@ -34921,6 +34916,11 @@ body{font-family:'Inter',sans-serif;background:#f0f2f7;color:#111827;min-height:
 .pshot-crt.pshot-on{background:#1a2b4a;border-color:#1a2b4a;color:#fff}
 @keyframes pshotFlipIn{0%{transform:rotateX(-90deg);opacity:0}60%{transform:rotateX(8deg);opacity:1}80%{transform:rotateX(-3deg)}100%{transform:rotateX(0deg);opacity:1}}
 .pshot-flip{animation:pshotFlipIn .36s cubic-bezier(.22,1,.36,1) forwards}
+@media(max-width:768px){
+  .pshot-layout{flex-direction:column}
+  .pshot-court-wrap{width:100%!important}
+  .pshot-side-wrap{padding-left:0!important;margin-top:10px}
+}
 /* Akademia CTA button w sidebarze */
 .sb-ak-wrap{padding:6px 8px}
 .sb-ak-link{display:flex;align-items:center;gap:9px;width:100%;padding:10px 12px;
@@ -37434,15 +37434,15 @@ def portal_mecz(match_id):
         reb = (suma.get("oreb",0) or 0) + (suma.get("dreb",0) or 0)
         ast = suma.get("ast",0) or 0
         drtg_val = opp_kpi["ortg"] if opp_kpi else "—"
-        ks  = 'background:#f4f6fb;border-radius:8px;padding:14px 12px;text-align:center'
-        kv  = 'font-size:22px;font-weight:500;color:#1a2b4a'
-        kl  = 'font-size:10px;color:#999;text-transform:uppercase;letter-spacing:.5px;margin-top:2px'
-        ka  = 'background:#E6F1FB;border-radius:8px;padding:14px 12px;text-align:center'
-        kav = 'font-size:22px;font-weight:500;color:#0C447C'
-        kal = 'font-size:10px;color:#185FA5;text-transform:uppercase;letter-spacing:.5px;margin-top:2px'
-        kd  = 'background:#FBF0EE;border-radius:8px;padding:14px 12px;text-align:center'
-        kdv = 'font-size:22px;font-weight:500;color:#7C1C0C'
-        kdl = 'font-size:10px;color:#A32D2D;text-transform:uppercase;letter-spacing:.5px;margin-top:2px'
+        ks  = 'background:#f4f6fb;border-radius:8px;padding:12px 10px;text-align:center'
+        kv  = 'font-size:19px;font-weight:500;color:#1a2b4a'
+        kl  = 'font-size:9px;color:#999;text-transform:uppercase;letter-spacing:.5px;margin-top:2px'
+        ka  = 'background:#E6F1FB;border-radius:8px;padding:12px 10px;text-align:center'
+        kav = 'font-size:19px;font-weight:500;color:#0C447C'
+        kal = 'font-size:9px;color:#185FA5;text-transform:uppercase;letter-spacing:.5px;margin-top:2px'
+        kd  = 'background:#FBF0EE;border-radius:8px;padding:12px 10px;text-align:center'
+        kdv = 'font-size:19px;font-weight:500;color:#7C1C0C'
+        kdl = 'font-size:9px;color:#A32D2D;text-transform:uppercase;letter-spacing:.5px;margin-top:2px'
         def pct_bar(val_str):
             try: v = float(str(val_str).replace("%",""))
             except: v = 0
@@ -37474,14 +37474,14 @@ def portal_mecz(match_id):
   <div style="{ka}"><div style="{kav}">{kpi["ts"]}</div><div style="{kal}">TS%</div></div>
 </div>'''
         r3 = f'''<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-bottom:8px">
-  <div style="{ks};display:flex;align-items:center;padding:12px">
-    <div><div style="{kl}">2PT%</div><div style="{kv};font-size:18px">{kpi["p2_pct"]}</div></div>
+  <div style="{ks};display:flex;align-items:center;padding:10px">
+    <div><div style="{kl}">2PT%</div><div style="{kv};font-size:16px">{kpi["p2_pct"]}</div></div>
     {pct_bar(kpi["p2_pct"])}</div>
-  <div style="{ks};display:flex;align-items:center;padding:12px">
-    <div><div style="{kl}">3PT%</div><div style="{kv};font-size:18px">{kpi["p3_pct"]}</div></div>
+  <div style="{ks};display:flex;align-items:center;padding:10px">
+    <div><div style="{kl}">3PT%</div><div style="{kv};font-size:16px">{kpi["p3_pct"]}</div></div>
     {pct_bar(kpi["p3_pct"])}</div>
-  <div style="{ks};display:flex;align-items:center;padding:12px">
-    <div><div style="{kl}">FT%</div><div style="{kv};font-size:18px">{kpi["ft_pct"]}</div></div>
+  <div style="{ks};display:flex;align-items:center;padding:10px">
+    <div><div style="{kl}">FT%</div><div style="{kv};font-size:16px">{kpi["ft_pct"]}</div></div>
     {pct_bar(kpi["ft_pct"])}</div>
 </div>'''
         return r1 + r2 + r3
@@ -39160,23 +39160,23 @@ def portal_mecz(match_id):
     <span style="font-size:11px;color:#aaa">{"Ostatnie 3 min Q4" if get_portal_lang()=='pl' else 'Last 3 min Q4'}</span>
     <span style="margin-left:auto;background:{wc_bg2};color:{wc_col2};padding:2px 10px;border-radius:20px;font-size:11px;font-weight:600">{wc}{' w clutch' if get_portal_lang()=='pl' else ' in clutch'}</span>
   </div>
-  <div style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:18px 16px;gap:12px;border-bottom:0.5px solid #eceef2">
-    <div style="text-align:right">
-      <div style="font-size:11px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">{gtk_name}</div>
-      <div style="font-size:48px;font-weight:800;color:{score_c_g};line-height:1">{c["pts_g"]}</div>
-      <div style="font-size:11px;color:#aaa;margin-top:5px">ORtg <span style="color:#555;font-weight:600">{ortg_gs}</span></div>
+  <div style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:18px 12px;gap:8px;border-bottom:0.5px solid #eceef2">
+    <div style="min-width:0;overflow:hidden;text-align:right">
+      <div style="font-size:10px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;overflow-wrap:break-word">{gtk_name}</div>
+      <div style="font-size:40px;font-weight:800;color:{score_c_g};line-height:1">{c["pts_g"]}</div>
+      <div style="font-size:10px;color:#aaa;margin-top:5px">ORtg <span style="color:#555;font-weight:600">{ortg_gs}</span></div>
     </div>
-    <div style="text-align:center;padding:0 8px">
+    <div style="text-align:center;padding:0 4px">
       <div style="font-size:11px;color:#bbb;font-weight:400;margin-bottom:8px">vs</div>
-      <div style="background:#f4f6fb;border-radius:8px;padding:6px 12px;border:0.5px solid #e3e8f0">
+      <div style="background:#f4f6fb;border-radius:8px;padding:6px 10px;border:0.5px solid #e3e8f0">
         <div style="font-size:9px;color:#aaa;text-transform:uppercase;letter-spacing:.4px">NETrtg</div>
         <div style="font-size:18px;font-weight:800;color:{net_color}">{net_gs}</div>
       </div>
     </div>
-    <div style="text-align:left">
-      <div style="font-size:11px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">{name_opp}</div>
-      <div style="font-size:48px;font-weight:800;color:{score_c_o};line-height:1">{c["pts_o"]}</div>
-      <div style="font-size:11px;color:#aaa;margin-top:5px">ORtg <span style="color:#555;font-weight:600">{ortg_os}</span></div>
+    <div style="min-width:0;overflow:hidden;text-align:left">
+      <div style="font-size:10px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;overflow-wrap:break-word">{name_opp}</div>
+      <div style="font-size:40px;font-weight:800;color:{score_c_o};line-height:1">{c["pts_o"]}</div>
+      <div style="font-size:10px;color:#aaa;margin-top:5px">ORtg <span style="color:#555;font-weight:600">{ortg_os}</span></div>
     </div>
   </div>
   <div style="display:flex;gap:6px;padding:10px 16px;border-bottom:0.5px solid #eceef2;background:#fafbfd">{eff_strip}</div>
@@ -39609,15 +39609,16 @@ def portal_mecz(match_id):
                     f'</div></div>')
 
     content = f"""
-<div class="hero mb-3">
+<div class="hero mb-3" style="overflow:hidden">
   {_meta_html}
-  <div style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px">
-    <div style="text-align:center"><div style="font-size:1.45rem;font-weight:700;opacity:.95;letter-spacing:.2px">{gtk_name}</div><div style="font-size:2rem;font-weight:700">{m['wynik_gtk']}</div></div>
-    <div style="text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px">
+  <div style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px">
+    <div style="min-width:0;overflow:hidden;text-align:center"><div style="font-size:1.05rem;font-weight:700;opacity:.95;letter-spacing:.2px;overflow-wrap:break-word">{gtk_name}</div></div>
+    <div style="text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px">
       {badge}
-      <div style="display:flex;justify-content:center;gap:10px;border-top:1px solid rgba(255,255,255,.15);padding-top:8px;width:100%">{q_scores}</div>
+      <div style="font-size:1.6rem;font-weight:800;letter-spacing:.5px;white-space:nowrap">{m['wynik_gtk']} : {m['wynik_opp']}</div>
+      <div style="display:flex;justify-content:center;gap:8px;border-top:1px solid rgba(255,255,255,.15);padding-top:8px;width:100%">{q_scores}</div>
     </div>
-    <div style="text-align:center"><div style="font-size:1.45rem;font-weight:700;opacity:.95;letter-spacing:.2px">{name_opp}</div><div style="font-size:2rem;font-weight:700">{m['wynik_opp']}</div></div>
+    <div style="min-width:0;overflow:hidden;text-align:center"><div style="font-size:1.05rem;font-weight:700;opacity:.95;letter-spacing:.2px;overflow-wrap:break-word">{name_opp}</div></div>
   </div>
 </div>
 
@@ -39698,10 +39699,10 @@ def portal_mecz(match_id):
         <div id="pshot-legend" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px"></div>
 
         <!-- Boisko + panele -->
-        <div style="display:flex;align-items:flex-start;flex:1">
+        <div class="pshot-layout" style="display:flex;align-items:flex-start;flex:1">
 
           <!-- Boisko (75%) — wszystkie SVG team i zawodnik × ctx × court -->
-          <div style="width:75%;flex-shrink:0;perspective:1400px">
+          <div class="pshot-court-wrap" style="width:75%;flex-shrink:0;perspective:1400px">
             {''.join(
               f'<div id="pshot-{druz}-{ctx}-{court}" class="pshot-pane" style="display:{"block" if druz=="gtk" and ctx=="all" and court=="atk" else "none"};transform-origin:center top">'
               + (f'{_psvgs[(druz,ctx,court)]}' if _psvgs.get((druz,ctx,court)) else ('<div style="color:#aaa;font-size:13px;padding:20px 0">' + ("No data — re-upload the match." if get_portal_lang()=="en" else "Brak danych — wgraj mecz ponownie.") + '</div>'))
@@ -39717,7 +39718,7 @@ def portal_mecz(match_id):
           </div>
 
           <!-- Drużyna + Filtr (25%) -->
-          <div style="flex:1;padding-left:10px;display:flex;flex-direction:column;gap:8px;align-self:stretch">
+          <div class="pshot-side-wrap" style="flex:1;padding-left:10px;display:flex;flex-direction:column;gap:8px;align-self:stretch">
 
             <!-- Drużyna card -->
             <div class="sc-card" style="margin-bottom:0;padding:11px 12px">
@@ -40163,16 +40164,9 @@ function sortPTable(tid, col) {{
 .pill-bad{{background:#ffebee;color:#A32D2D}}
 .pill-neu{{background:#f0f4ff;color:#1a2b4a}}
 </style>
+<style>{_PORTAL_TOPBAR_CSS}</style>
 </head><body style="background:#f0f2f7;min-height:100vh">
-<nav class="topbar">
-  <div class="tb-logo"><div class="tb-logo-icon"><img src="/static/img/app_logo.png" onerror="this.parentElement.innerHTML='🏀'"></div><div class="tb-logo-text">Basket<span>Kołcz</span></div></div>
-  <div class="tb-nav"><a href="/portal?tab=dash" style="text-decoration:none"><button class="tb-btn">← {TP('back')}</button></a></div>
-  <div class="tb-right" style="display:flex;align-items:center;gap:10px">
-    {portal_lang_switcher_html()}
-    <a class="tb-logout" href="/portal/logout">{TP('logout')}</a>
-  </div>
-</nav>
-{portal_lang_switcher_mobile_html()}
+{_portal_topbar_html(back_btn_html=True)}
 <div style="padding:clamp(10px,3vw,20px);max-width:1200px;margin:0 auto">
   {content}
 </div>
@@ -40322,7 +40316,6 @@ body{{font-family:'Inter',sans-serif;background:#0f1e35;min-height:100vh;padding
   </div>
   <div class="tb-right" style="display:flex;align-items:center;gap:10px">
     {portal_lang_switcher_html()}
-    <a class="tb-logout" href="#">{TP('logout')}</a>
   </div>
 </div>
 {portal_lang_switcher_mobile_html()}
@@ -40571,19 +40564,9 @@ def portal_zawodnik(pid):
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{zawodnik['imie']} {zawodnik['nazwisko']} — Portal</title>
 {_PORTAL_CSS}
+<style>{_PORTAL_TOPBAR_CSS}</style>
 </head><body>
-<nav class="topbar">
-  <div class="tb-logo"><div class="tb-logo-icon"><img src="/static/img/app_logo.png" onerror="this.parentElement.innerHTML='🏀'"></div><div class="tb-logo-text">Basket<span>Kołcz</span></div></div>
-  <div class="tb-nav">
-    <button class="tb-btn" onclick="history.back()">← {TP('back')}</button>
-  </div>
-  <div class="tb-right" style="display:flex;align-items:center;gap:10px">
-    {portal_lang_switcher_html()}
-    <a href="/portal/akademia{"?pid=" + str(pid) if pid else ""}" style="display:flex;align-items:center;gap:5px;padding:6px 12px;background:rgba(249,115,22,.12);border:1px solid rgba(249,115,22,.35);border-radius:7px;text-decoration:none;color:#f97316;font-size:.75rem;font-weight:700">📚 Akademia</a>
-    <a class="tb-logout" href="/portal/logout">{TP('logout')}</a>
-  </div>
-</nav>
-{portal_lang_switcher_mobile_html()}
+{_portal_topbar_html(back_btn_html=True)}
 <div style="padding:24px;max-width:1100px;margin:0 auto">
   <div style="background:#fff;border:1px solid #e8ecf3;border-radius:12px;padding:40px;text-align:center;color:#9ca3af">
     {TP('no_data')} ({TP('season_filter')} {sezon_filter}).
