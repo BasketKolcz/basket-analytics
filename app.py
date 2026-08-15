@@ -14535,7 +14535,7 @@ def sezon():
                 f'<div style="margin-bottom:10px">'
                 f'<div style="display:flex;justify-content:space-between;font-size:11px;font-weight:600;margin-bottom:3px">'
                 f'<span style="color:{clr_gtk}">{lbl}: {gtk_v}</span>'
-                f'<span style="color:#8896aa">Rywal: {opp_v}</span></div>'
+                f'<span style="color:#8896aa">Opponent: {opp_v}</span></div>'
                 f'<div style="display:flex;height:8px;border-radius:4px;overflow:hidden">'
                 f'<div style="width:{pct_g}%;background:{clr_gtk}"></div>'
                 f'<div style="width:{pct_o}%;background:{clr_opp}"></div></div>'
@@ -14601,7 +14601,7 @@ def sezon():
                 '<table style="width:100%;border-collapse:collapse">'
                 '<thead><tr>'
                 '<th style="font-size:9px;font-weight:700;color:#8896aa;letter-spacing:.06em;text-transform:uppercase;padding:2px 4px;width:22px;text-align:center">#</th>'
-                '<th style="font-size:9px;font-weight:700;color:#8896aa;letter-spacing:.06em;text-transform:uppercase;padding:2px 4px">Zawodnik</th>'
+                '<th style="font-size:9px;font-weight:700;color:#8896aa;letter-spacing:.06em;text-transform:uppercase;padding:2px 4px">Player</th>'
                 '<th style="font-size:9px;font-weight:700;color:#e09000;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;text-align:right;width:44px">OREB</th>'
                 '<th style="font-size:9px;font-weight:700;color:#2563b0;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;text-align:right;width:44px">DREB</th>'
                 '<th style="font-size:9px;font-weight:700;color:#1a2b4a;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;text-align:right;width:60px">REB/g</th>'
@@ -14634,7 +14634,7 @@ def sezon():
         _z_ldr_reb_card = (
             '<div class="card mb-3" style="overflow:hidden;height:100%">'
             '<div style="background:#1a2b4a;color:#fff;padding:7px 10px;display:flex;align-items:center">'
-            '<span style="font-size:11px;font-weight:600;flex:1">TOP zawodnicy — Zbiórki</span>'
+            '<span style="font-size:11px;font-weight:600;flex:1">TOP Players — Rebounds</span>'
             '<span style="font-size:9px;color:#c8d4e8">'
             '<span style="color:#e09000;font-weight:700">■</span> OREB &nbsp;'
             '<span style="color:#89a8d0;font-weight:700">■</span> DREB'
@@ -14665,22 +14665,22 @@ def sezon():
         _z_lineup_reb_card = (
             '<div class="card mb-3" style="overflow:hidden;height:100%">'
             '<div style="background:#1a2b4a;color:#fff;padding:7px 10px">'
-            '<span style="font-size:11px;font-weight:600">TOP piątki — OREB/100 pos.</span>'
+            '<span style="font-size:11px;font-weight:600">TOP Lineups — OREB/100 poss.</span>'
             '</div>'
             '<div style="padding:6px 10px 8px">'
             + (
                 '<table style="width:100%;border-collapse:collapse">'
                 '<thead><tr>'
                 '<th style="font-size:9px;font-weight:700;color:#8896aa;text-transform:uppercase;letter-spacing:.05em;padding:2px 4px;width:22px;text-align:center">#</th>'
-                '<th style="font-size:9px;font-weight:700;color:#8896aa;text-transform:uppercase;letter-spacing:.05em;padding:2px 4px">Skład</th>'
-                '<th style="font-size:9px;font-weight:700;color:#8896aa;text-transform:uppercase;letter-spacing:.05em;padding:2px 5px;text-align:right">Pos</th>'
+                '<th style="font-size:9px;font-weight:700;color:#8896aa;text-transform:uppercase;letter-spacing:.05em;padding:2px 4px">Lineup</th>'
+                '<th style="font-size:9px;font-weight:700;color:#8896aa;text-transform:uppercase;letter-spacing:.05em;padding:2px 5px;text-align:right">Poss</th>'
                 '<th style="font-size:9px;font-weight:700;color:#e09000;text-transform:uppercase;letter-spacing:.05em;padding:2px 5px;text-align:right">OR/100</th>'
                 '<th style="font-size:9px;font-weight:700;color:#1a2b4a;text-transform:uppercase;letter-spacing:.05em;padding:2px 5px;text-align:right">REB/100</th>'
                 '</tr></thead><tbody>'
                 + "".join(_z_lu_row(i, lr) for i, lr in enumerate(_z_lineup_reb5))
                 + '</tbody></table>'
                 if _z_lineup_reb5
-                else '<div style="font-size:11px;color:#aaa;text-align:center;padding:16px">Brak danych (min. 10 posiadań)</div>'
+                else '<div style="font-size:11px;color:#aaa;text-align:center;padding:16px">No data (min. 10 possessions)</div>'
             )
             + '</div></div>'
         )
@@ -14712,22 +14712,22 @@ def sezon():
         _z_clutch_card = (
             f'<div class="card mb-3"><div class="card-body p-3">'
             f'<div class="d-flex justify-content-between align-items-center mb-3">'
-            f'<div style="font-size:.65rem;font-weight:700;color:#8896aa;text-transform:uppercase;letter-spacing:.08em">Zbiórki Q4 — ostatnie 3 min</div>'
-            f'<span style="font-size:10px;color:#aaa">≈3/8 posiadań Q4 · {_z_cn} meczów</span>'
+            f'<div style="font-size:.65rem;font-weight:700;color:#8896aa;text-transform:uppercase;letter-spacing:.08em">Q4 Rebounds — last 3 min</div>'
+            f'<span style="font-size:10px;color:#aaa">≈3/8 of Q4 possessions · {_z_cn} games</span>'
             f'</div>'
             f'<div class="row g-2 row-cols-2 row-cols-md-4 mb-2">'
-            f'<div class="col">{_z_kpi(_z_cl_og, "OREB / mecz", "off.", "#e09000")}</div>'
-            f'<div class="col">{_z_kpi(_z_cl_dg, "DREB / mecz", "def.", "#2563b0")}</div>'
-            f'<div class="col">{_z_kpi(_z_cl_reb_g, "REB / mecz", gtk_name + " total")}</div>'
-            f'<div class="col">{_z_kpi(_z_cl_margin_s, "Margines", "vs Rywal", _z_cl_margin_c)}</div>'
+            f'<div class="col">{_z_kpi(_z_cl_og, "OREB / game", "off.", "#e09000")}</div>'
+            f'<div class="col">{_z_kpi(_z_cl_dg, "DREB / game", "def.", "#2563b0")}</div>'
+            f'<div class="col">{_z_kpi(_z_cl_reb_g, "REB / game", gtk_name + " total")}</div>'
+            f'<div class="col">{_z_kpi(_z_cl_margin_s, "Margin", "vs Opponent", _z_cl_margin_c)}</div>'
             f'</div>'
             f'<div class="row g-3 mt-1">'
             f'<div class="col-md-6">'
-            f'<div style="font-size:10px;font-weight:700;color:#1a2b4a;margin-bottom:6px;text-transform:uppercase;letter-spacing:.05em">Zbiórka w ataku</div>'
+            f'<div style="font-size:10px;font-weight:700;color:#1a2b4a;margin-bottom:6px;text-transform:uppercase;letter-spacing:.05em">Offensive Rebounding</div>'
             f'{_z_duel(gtk_name, _z_cl_og, _z_cl_oo, "#e09000")}'
             f'</div>'
             f'<div class="col-md-6">'
-            f'<div style="font-size:10px;font-weight:700;color:#1a2b4a;margin-bottom:6px;text-transform:uppercase;letter-spacing:.05em">Zbiórka w obronie</div>'
+            f'<div style="font-size:10px;font-weight:700;color:#1a2b4a;margin-bottom:6px;text-transform:uppercase;letter-spacing:.05em">Defensive Rebounding</div>'
             f'{_z_duel(gtk_name, _z_cl_dg, _z_cl_do, "#2563b0")}'
             f'</div>'
             f'</div>'
@@ -14736,26 +14736,26 @@ def sezon():
                 f'<button class="btn btn-link p-0" style="font-size:10px;font-weight:700;color:#8896aa;'
                 f'text-transform:uppercase;letter-spacing:.06em;text-decoration:none" '
                 f'data-bs-toggle="collapse" data-bs-target="#zCloseGame" aria-expanded="false">'
-                f'▸ Mecze wyrównane — ostatnie 5 min, różnica ≤5 pkt ({_z_n_close} meczów)'
+                f'▸ Close games — last 5 min, margin ≤5 pts ({_z_n_close} games)'
                 f'</button>'
                 f'<div class="collapse" id="zCloseGame" style="margin-top:10px">'
                 f'<div class="row g-2 row-cols-2 row-cols-md-4 mb-2">'
-                f'<div class="col">{_z_kpi(_z_cl5_og, "OREB / mecz", "off.", "#e09000")}</div>'
-                f'<div class="col">{_z_kpi(_z_cl5_dg, "DREB / mecz", "def.", "#2563b0")}</div>'
-                f'<div class="col">{_z_kpi(_z_cl5_mg, "REB / mecz", gtk_name + " total")}</div>'
-                f'<div class="col">{_z_kpi(_z_cl5_ms, "Margines", "vs Rywal", _z_cl5_mc)}</div>'
+                f'<div class="col">{_z_kpi(_z_cl5_og, "OREB / game", "off.", "#e09000")}</div>'
+                f'<div class="col">{_z_kpi(_z_cl5_dg, "DREB / game", "def.", "#2563b0")}</div>'
+                f'<div class="col">{_z_kpi(_z_cl5_mg, "REB / game", gtk_name + " total")}</div>'
+                f'<div class="col">{_z_kpi(_z_cl5_ms, "Margin", "vs Opponent", _z_cl5_mc)}</div>'
                 f'</div>'
                 f'<div class="row g-3">'
                 f'<div class="col-md-6">'
-                f'<div style="font-size:10px;font-weight:700;color:#1a2b4a;margin-bottom:6px;text-transform:uppercase;letter-spacing:.05em">Zbiórka w ataku</div>'
+                f'<div style="font-size:10px;font-weight:700;color:#1a2b4a;margin-bottom:6px;text-transform:uppercase;letter-spacing:.05em">Offensive Rebounding</div>'
                 f'{_z_duel(gtk_name, _z_cl5_og, _z_cl5_oo, "#e09000")}'
                 f'</div>'
                 f'<div class="col-md-6">'
-                f'<div style="font-size:10px;font-weight:700;color:#1a2b4a;margin-bottom:6px;text-transform:uppercase;letter-spacing:.05em">Zbiórka w obronie</div>'
+                f'<div style="font-size:10px;font-weight:700;color:#1a2b4a;margin-bottom:6px;text-transform:uppercase;letter-spacing:.05em">Defensive Rebounding</div>'
                 f'{_z_duel(gtk_name, _z_cl5_dg, _z_cl5_do, "#2563b0")}'
                 f'</div>'
                 f'</div>'
-                f'<div style="font-size:9px;color:#aaa;margin-top:6px">≈5/8 posiadań Q4 · mecze: różnica ≤5 pkt w ost. 5 min</div>'
+                f'<div style="font-size:9px;color:#aaa;margin-top:6px">≈5/8 of Q4 possessions · games: margin ≤5 pts in last 5 min</div>'
                 f'</div></div>'
                 if _z_n_close > 0 else ''
             )
@@ -14784,15 +14784,15 @@ def sezon():
 
         def _z_d2_player_rows(rows):
             if not rows:
-                return '<div style="font-size:11px;color:#aaa;text-align:center;padding:10px">Brak danych — re-upload meczów wymagany</div>'
+                return '<div style="font-size:11px;color:#aaa;text-align:center;padding:10px">No data — match re-upload required</div>'
             mv = max(r.get("d2a_sum", 0) for r in rows) or 1
             h = (
                 '<table style="width:100%;border-collapse:collapse">'
                 '<thead><tr>'
                 '<th style="font-size:9px;font-weight:700;color:#8896aa;letter-spacing:.06em;text-transform:uppercase;padding:2px 4px;width:22px;text-align:center">#</th>'
-                '<th style="font-size:9px;font-weight:700;color:#8896aa;letter-spacing:.06em;text-transform:uppercase;padding:2px 4px">Zawodnik</th>'
-                '<th style="font-size:9px;font-weight:700;color:#e09000;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;text-align:right;width:36px">CEL</th>'
-                '<th style="font-size:9px;font-weight:700;color:#8896aa;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;text-align:right;width:36px">ODD</th>'
+                '<th style="font-size:9px;font-weight:700;color:#8896aa;letter-spacing:.06em;text-transform:uppercase;padding:2px 4px">Player</th>'
+                '<th style="font-size:9px;font-weight:700;color:#e09000;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;text-align:right;width:36px">MADE</th>'
+                '<th style="font-size:9px;font-weight:700;color:#8896aa;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;text-align:right;width:36px">ATT</th>'
                 '<th style="font-size:9px;font-weight:700;color:#1a2b4a;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;text-align:right;width:44px">%</th>'
                 '</tr></thead><tbody>'
             )
@@ -14823,40 +14823,40 @@ def sezon():
 
         _z_dob_card = (
             f'<div class="card mb-3"><div class="card-body p-3">'
-            f'<div style="font-size:.65rem;font-weight:700;color:#8896aa;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px">Dobitki (put-backs)</div>'
+            f'<div style="font-size:.65rem;font-weight:700;color:#8896aa;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px">Put-backs</div>'
             f'<div class="row g-3">'
             f'<div class="col-md-6">'
             f'<table style="width:100%;border-collapse:collapse">'
             f'<thead><tr>'
             f'<th style="font-size:9px;font-weight:700;color:#8896aa;text-transform:uppercase;letter-spacing:.06em;padding:3px 6px;border-bottom:1.5px solid #e8ecf3"></th>'
             f'<th style="font-size:9px;font-weight:700;color:#1a2b4a;text-transform:uppercase;letter-spacing:.06em;padding:3px 6px;text-align:right;border-bottom:1.5px solid #e8ecf3">{gtk_name}</th>'
-            f'<th style="font-size:9px;font-weight:700;color:#8896aa;text-transform:uppercase;letter-spacing:.06em;padding:3px 6px;text-align:right;border-bottom:1.5px solid #e8ecf3">Przeciwnik</th>'
+            f'<th style="font-size:9px;font-weight:700;color:#8896aa;text-transform:uppercase;letter-spacing:.06em;padding:3px 6px;text-align:right;border-bottom:1.5px solid #e8ecf3">Opponent</th>'
             f'</tr></thead>'
             f'<tbody>'
             f'<tr>'
-            f'<td style="font-size:10px;font-weight:600;color:#555;padding:5px 6px;border-bottom:0.5px solid #f4f6fb">Celne</td>'
+            f'<td style="font-size:10px;font-weight:600;color:#555;padding:5px 6px;border-bottom:0.5px solid #f4f6fb">Made</td>'
             f'<td style="font-size:13px;font-weight:800;color:{_z_d2pct_c};text-align:right;padding:5px 6px;border-bottom:0.5px solid #f4f6fb">{_z_d2mpg}</td>'
             f'<td style="font-size:13px;font-weight:700;color:#8896aa;text-align:right;padding:5px 6px;border-bottom:0.5px solid #f4f6fb">{_z_d2mpg_o}</td>'
             f'</tr>'
             f'<tr>'
-            f'<td style="font-size:10px;font-weight:600;color:#555;padding:5px 6px;border-bottom:0.5px solid #f4f6fb">Oddane</td>'
+            f'<td style="font-size:10px;font-weight:600;color:#555;padding:5px 6px;border-bottom:0.5px solid #f4f6fb">Attempted</td>'
             f'<td style="font-size:13px;font-weight:800;color:#1a2b4a;text-align:right;padding:5px 6px;border-bottom:0.5px solid #f4f6fb">{_z_d2apg}</td>'
             f'<td style="font-size:13px;font-weight:700;color:#8896aa;text-align:right;padding:5px 6px;border-bottom:0.5px solid #f4f6fb">{_z_d2apg_o}</td>'
             f'</tr>'
             f'<tr>'
-            f'<td style="font-size:10px;font-weight:600;color:#555;padding:5px 6px;border-bottom:0.5px solid #f4f6fb">Celność</td>'
+            f'<td style="font-size:10px;font-weight:600;color:#555;padding:5px 6px;border-bottom:0.5px solid #f4f6fb">Accuracy</td>'
             f'<td style="font-size:13px;font-weight:800;color:{_z_d2pct_c};text-align:right;padding:5px 6px;border-bottom:0.5px solid #f4f6fb">{_z_d2pct_g}%</td>'
             f'<td style="font-size:13px;font-weight:700;color:{_z_d2pct_oc};text-align:right;padding:5px 6px;border-bottom:0.5px solid #f4f6fb">{_z_d2pct_o}%</td>'
             f'</tr>'
             f'<tr>'
-            f'<td style="font-size:10px;font-weight:600;color:#555;padding:5px 6px">Suma (cel/odd)</td>'
+            f'<td style="font-size:10px;font-weight:600;color:#555;padding:5px 6px">Total (made/att)</td>'
             f'<td style="font-size:10px;font-weight:600;color:#555;text-align:right;padding:5px 6px">{_z_d2m_g}/{_z_d2a_g}</td>'
             f'<td style="font-size:10px;font-weight:600;color:#8896aa;text-align:right;padding:5px 6px">{_z_d2m_o}/{_z_d2a_o}</td>'
             f'</tr>'
             f'</tbody></table>'
             f'</div>'
             f'<div class="col-md-6">'
-            f'<div style="font-size:10px;font-weight:700;color:#1a2b4a;margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em">Zawodnicy — Dobitki</div>'
+            f'<div style="font-size:10px;font-weight:700;color:#1a2b4a;margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em">Players — Put-backs</div>'
             + _z_d2_player_rows(_z_ldr_d2)
             + f'</div>'
             f'</div>'
@@ -14879,14 +14879,14 @@ def sezon():
              "opp_pg": round(v["reb_opp"] / v["g"], 1),
              "margin": round((v["reb_gtk"] - v["reb_opp"]) / v["g"], 1)}
             for k, v in _z_matchup_by_opp.items()
-        ], key=lambda x: x["margin"])[:5]  # ascending: najgorsze pierwsze
+        ], key=lambda x: x["margin"])[:5]  # ascending: worst first
 
         def _z_matchup_row_html(r):
             m = r["margin"]
             ms = f"+{m}" if m > 0 else str(m)
             mc = "#1a6b3c" if m > 2 else ("#c0392b" if m < -2 else "#b07000")
             even_badge = (' <span style="font-size:8px;background:#fef3c7;color:#b07000;'
-                          'border-radius:3px;padding:1px 4px;font-weight:700">wyrównane</span>'
+                          'border-radius:3px;padding:1px 4px;font-weight:700">even</span>'
                           if abs(m) <= 2 else "")
             return (
                 f'<tr style="border-top:0.5px solid #f4f6fb">'
@@ -14904,25 +14904,25 @@ def sezon():
             '<table style="width:100%;border-collapse:collapse">'
             '<thead><tr>'
             '<th style="font-size:9px;font-weight:700;color:#8896aa;text-transform:uppercase;'
-            'letter-spacing:.06em;padding:3px 6px;border-bottom:1.5px solid #e8ecf3">Rywal</th>'
+            'letter-spacing:.06em;padding:3px 6px;border-bottom:1.5px solid #e8ecf3">Opponent</th>'
             '<th style="font-size:9px;font-weight:700;color:#8896aa;text-transform:uppercase;'
             'letter-spacing:.06em;padding:3px 6px;text-align:center;border-bottom:1.5px solid #e8ecf3">G</th>'
             '<th style="font-size:9px;font-weight:700;color:#1a2b4a;text-transform:uppercase;'
             f'letter-spacing:.06em;padding:3px 6px;text-align:right;border-bottom:1.5px solid #e8ecf3">{gtk_name}</th>'
             '<th style="font-size:9px;font-weight:700;color:#8896aa;text-transform:uppercase;'
-            'letter-spacing:.06em;padding:3px 6px;text-align:right;border-bottom:1.5px solid #e8ecf3">Rywal</th>'
+            'letter-spacing:.06em;padding:3px 6px;text-align:right;border-bottom:1.5px solid #e8ecf3">Opponent</th>'
             '<th style="font-size:9px;font-weight:700;color:#555;text-transform:uppercase;'
             'letter-spacing:.06em;padding:3px 6px;text-align:right;border-bottom:1.5px solid #e8ecf3">±</th>'
             '</tr></thead><tbody>'
             + "".join(_z_matchup_row_html(r) for r in _z_matchup_rows)
             + '</tbody></table>'
-        ) if _z_matchup_rows else '<div style="font-size:11px;color:#aaa;padding:10px">Brak danych</div>'
+        ) if _z_matchup_rows else '<div style="font-size:11px;color:#aaa;padding:10px">No data</div>'
 
         _z_matchup_card = (
             f'<div class="card mb-3"><div class="card-body p-3">'
             f'<div style="font-size:.65rem;font-weight:700;color:#8896aa;text-transform:uppercase;'
-            f'letter-spacing:.08em;margin-bottom:10px">Zbiórkowy pojedynek z rywalami '
-            f'<span style="font-weight:400;color:#aaa;font-size:.6rem">(REB/mecz · sort: najgorsze pierwsze)</span></div>'
+            f'letter-spacing:.08em;margin-bottom:10px">Rebound Battle vs Opponents '
+            f'<span style="font-weight:400;color:#aaa;font-size:.6rem">(REB/game · sorted: worst first)</span></div>'
             + _z_matchup_table
             + f'</div></div>'
         )
@@ -14935,13 +14935,13 @@ def sezon():
         _z_miss3_pct = round(_z_miss3 / _z_miss_tot * 100)
 
         _Z_NAMES = {
-            1: "Strefa ograniczona", 2: "Blok prawy",       3: "Blok lewy",
-            4: "Klucz — środek",     5: "Mid-range lewy",   6: "Mid-range prawy",
-            7: "Kąt lewy",           8: "Kąt prawy",        9: "Skrzydło lewe",
-            10: "Skrzydło prawe",    11: "Łuk lewy",        12: "Front Top",
-            13: "Łuk prawy",         14: "Głęboki kąt lewy",15: "Logo",
-            16: "Głęboki kąt prawy", 17: "Krótki kąt lewy", 18: "Krótki kąt prawy",
-            19: "Szczyt klucza",
+            1: "Restriced Arena",    2: "Right Block",      3: "Left Block",
+            4: "Middle Paint",       5: "Left Mid. Range",  6: "Right Mid. Range",
+            7: "Left Corner",        8: "Right Corner",     9: "Left Wing",
+            10: "Right Wing",        11: "Left Deep Wing",  12: "Front Top",
+            13: "Right Deep Wing",   14: "Left Deep Corner",15: "Logo",
+            16: "Right Deep Corner", 17: "Left Short Corner",18: "Right Short Corner",
+            19: "Top Of The Key",
         }
         _Z_PT = {z: ("2PT" if z <= 6 else "3PT") for z in _Z_NAMES}
         _z_zone_miss = sorted([
@@ -14971,8 +14971,8 @@ def sezon():
         _z_zone_card = (
             f'<div class="card mb-3"><div class="card-body p-3">'
             f'<div style="font-size:.65rem;font-weight:700;color:#8896aa;text-transform:uppercase;'
-            f'letter-spacing:.08em;margin-bottom:10px">Źródło zbiórek — pudła per strefa'
-            f' <span style="font-weight:400;font-size:.55rem;color:#aaa">(szanse OREB)</span></div>'
+            f'letter-spacing:.08em;margin-bottom:10px">Rebound Source — Misses by Zone'
+            f' <span style="font-weight:400;font-size:.55rem;color:#aaa">(OREB chances)</span></div>'
             f'<div class="row g-3">'
             f'<div class="col-md-4">'
             f'<div style="font-size:10px;font-weight:700;color:#1a2b4a;margin-bottom:8px;'
@@ -14980,27 +14980,27 @@ def sezon():
             f'<div style="margin-bottom:6px">'
             f'<div style="display:flex;justify-content:space-between;font-size:10px;color:#555;margin-bottom:2px">'
             f'<span style="color:#1a6b3c;font-weight:700">2PT</span>'
-            f'<span>{_z_miss2} pudła &nbsp; <strong>{_z_miss2_pct}%</strong></span></div>'
+            f'<span>{_z_miss2} misses &nbsp; <strong>{_z_miss2_pct}%</strong></span></div>'
             f'<div style="background:#eceef4;border-radius:3px;height:8px">'
             f'<div style="height:100%;border-radius:3px;background:#1a6b3c;width:{_z_miss2_pct}%"></div></div></div>'
             f'<div>'
             f'<div style="display:flex;justify-content:space-between;font-size:10px;color:#555;margin-bottom:2px">'
             f'<span style="color:#2563b0;font-weight:700">3PT</span>'
-            f'<span>{_z_miss3} pudła &nbsp; <strong>{_z_miss3_pct}%</strong></span></div>'
+            f'<span>{_z_miss3} misses &nbsp; <strong>{_z_miss3_pct}%</strong></span></div>'
             f'<div style="background:#eceef4;border-radius:3px;height:8px">'
             f'<div style="height:100%;border-radius:3px;background:#2563b0;width:{_z_miss3_pct}%"></div></div></div>'
-            f'<div style="margin-top:10px;font-size:9px;color:#aaa">Pudła = potencjalne szanse OREB</div>'
+            f'<div style="margin-top:10px;font-size:9px;color:#aaa">Misses = potential OREB chances</div>'
             f'</div>'
             f'<div class="col-md-8">'
             f'<div style="font-size:10px;font-weight:700;color:#1a2b4a;margin-bottom:8px;'
-            f'text-transform:uppercase;letter-spacing:.05em">Top strefy (wg liczby pudeł)</div>'
+            f'text-transform:uppercase;letter-spacing:.05em">Top Zones (by miss count)</div>'
             + "".join(_z_zone_row(r) for r in _z_zone_miss)
             + f'</div>'
             f'</div>'
             f'</div></div>'
         )
 
-        # ── Rywal — pudła per strefa (DREB opportunities) ─────────────────────
+        # ── Opponent — Misses by Zone (DREB opportunities) ─────────────────────
         _z_miss2_o = int(opp_tot.get("p2a", 0) or 0) - int(opp_tot.get("p2m", 0) or 0)
         _z_miss3_o = int(opp_tot.get("p3a", 0) or 0) - int(opp_tot.get("p3m", 0) or 0)
         _z_miss_tot_o = max(_z_miss2_o + _z_miss3_o, 1)
@@ -15035,8 +15035,8 @@ def sezon():
         _z_zone_card_opp = (
             f'<div class="card mb-3"><div class="card-body p-3">'
             f'<div style="font-size:.65rem;font-weight:700;color:#c0392b;text-transform:uppercase;'
-            f'letter-spacing:.08em;margin-bottom:10px">Rywal — pudła per strefa'
-            f' <span style="font-weight:400;font-size:.55rem;color:#aaa">(szanse DREB)</span></div>'
+            f'letter-spacing:.08em;margin-bottom:10px">Opponent — Misses by Zone'
+            f' <span style="font-weight:400;font-size:.55rem;color:#aaa">(DREB chances)</span></div>'
             f'<div class="row g-3">'
             f'<div class="col-md-4">'
             f'<div style="font-size:10px;font-weight:700;color:#1a2b4a;margin-bottom:8px;'
@@ -15044,22 +15044,22 @@ def sezon():
             f'<div style="margin-bottom:6px">'
             f'<div style="display:flex;justify-content:space-between;font-size:10px;color:#555;margin-bottom:2px">'
             f'<span style="color:#c0392b;font-weight:700">2PT</span>'
-            f'<span>{_z_miss2_o} pudła &nbsp; <strong>{_z_miss2_pct_o}%</strong></span></div>'
+            f'<span>{_z_miss2_o} misses &nbsp; <strong>{_z_miss2_pct_o}%</strong></span></div>'
             f'<div style="background:#eceef4;border-radius:3px;height:8px">'
             f'<div style="height:100%;border-radius:3px;background:#c0392b;width:{_z_miss2_pct_o}%"></div></div></div>'
             f'<div>'
             f'<div style="display:flex;justify-content:space-between;font-size:10px;color:#555;margin-bottom:2px">'
             f'<span style="color:#a52020;font-weight:700">3PT</span>'
-            f'<span>{_z_miss3_o} pudła &nbsp; <strong>{_z_miss3_pct_o}%</strong></span></div>'
+            f'<span>{_z_miss3_o} misses &nbsp; <strong>{_z_miss3_pct_o}%</strong></span></div>'
             f'<div style="background:#eceef4;border-radius:3px;height:8px">'
             f'<div style="height:100%;border-radius:3px;background:#a52020;width:{_z_miss3_pct_o}%"></div></div></div>'
-            f'<div style="margin-top:10px;font-size:9px;color:#aaa">Pudła rywala = potencjalne szanse DREB</div>'
+            f'<div style="margin-top:10px;font-size:9px;color:#aaa">Opponent misses = potential DREB chances</div>'
             f'</div>'
             f'<div class="col-md-8">'
             f'<div style="font-size:10px;font-weight:700;color:#1a2b4a;margin-bottom:8px;'
-            f'text-transform:uppercase;letter-spacing:.05em">Top strefy (wg liczby pudeł)</div>'
+            f'text-transform:uppercase;letter-spacing:.05em">Top Zones (by miss count)</div>'
             + ("".join(_z_zone_row_o(r) for r in _z_zone_miss_o)
-               if _z_zone_miss_o else '<div style="font-size:11px;color:#aaa;padding:10px">Brak danych</div>')
+               if _z_zone_miss_o else '<div style="font-size:11px;color:#aaa;padding:10px">No data</div>')
             + f'</div>'
             f'</div>'
             f'</div></div>'
@@ -15068,33 +15068,33 @@ def sezon():
         _zbiork_html = (
             f'<div class="card mt-1 mb-3"><div class="card-body p-3">'
             f'<div class="d-flex justify-content-between align-items-center mb-3">'
-            f'<div style="font-size:.65rem;font-weight:700;color:#8896aa;text-transform:uppercase;letter-spacing:.08em">Zbiórki sezonu</div>'
-            f'<div style="font-size:11px;color:#8896aa">{n_matches} meczów</div>'
+            f'<div style="font-size:.65rem;font-weight:700;color:#8896aa;text-transform:uppercase;letter-spacing:.08em">Season Rebounds</div>'
+            f'<div style="font-size:11px;color:#8896aa">{n_matches} games</div>'
             f'</div>'
             f'<div class="row g-2 row-cols-2 row-cols-md-5 mb-3">'
-            f'<div class="col">{_z_kpi(_z_gtk_opg, "OREB / mecz", "off. rebound")}</div>'
-            f'<div class="col">{_z_kpi(_z_gtk_dpg, "DREB / mecz", "def. rebound")}</div>'
-            f'<div class="col">{_z_kpi(f"{_z_orb_pct}%", "ORB%", "wyk. na ataku", _z_orb_c)}</div>'
-            f'<div class="col">{_z_kpi(f"{_z_drb_pct}%", "DRB%", "wyk. na obronie", _z_drb_c)}</div>'
-            f'<div class="col">{_z_kpi(_z_margin_s, "Margines", "REB / mecz", _z_margin_c)}</div>'
+            f'<div class="col">{_z_kpi(_z_gtk_opg, "OREB / game", "off. rebound")}</div>'
+            f'<div class="col">{_z_kpi(_z_gtk_dpg, "DREB / game", "def. rebound")}</div>'
+            f'<div class="col">{_z_kpi(f"{_z_orb_pct}%", "ORB%", "off. rate", _z_orb_c)}</div>'
+            f'<div class="col">{_z_kpi(f"{_z_drb_pct}%", "DRB%", "def. rate", _z_drb_c)}</div>'
+            f'<div class="col">{_z_kpi(_z_margin_s, "Margin", "REB / game", _z_margin_c)}</div>'
             f'</div>'
             f'<div class="row g-3">'
             f'<div class="col-md-6">'
-            f'<div style="font-size:10px;font-weight:700;color:#1a2b4a;margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em">Zbiórka w ataku</div>'
+            f'<div style="font-size:10px;font-weight:700;color:#1a2b4a;margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em">Offensive Rebounding</div>'
             f'{_z_duel(gtk_name, _z_gtk_opg, _z_opp_opg, "#e09000")}'
-            f'<div style="font-size:9px;color:#aaa;margin-top:4px">suma: {gtk_name} {_z_gtk_oreb} &nbsp;·&nbsp; Rywal {_z_opp_oreb}</div>'
+            f'<div style="font-size:9px;color:#aaa;margin-top:4px">total: {gtk_name} {_z_gtk_oreb} &nbsp;·&nbsp; Opponent {_z_opp_oreb}</div>'
             f'</div>'
             f'<div class="col-md-6">'
-            f'<div style="font-size:10px;font-weight:700;color:#1a2b4a;margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em">Zbiórka w obronie</div>'
+            f'<div style="font-size:10px;font-weight:700;color:#1a2b4a;margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em">Defensive Rebounding</div>'
             f'{_z_duel(gtk_name, _z_gtk_dpg, _z_opp_opg, "#2563b0")}'
-            f'<div style="font-size:9px;color:#aaa;margin-top:4px">suma: {gtk_name} {_z_gtk_dreb} &nbsp;·&nbsp; Rywal {_z_opp_oreb}</div>'
+            f'<div style="font-size:9px;color:#aaa;margin-top:4px">total: {gtk_name} {_z_gtk_dreb} &nbsp;·&nbsp; Opponent {_z_opp_oreb}</div>'
             f'</div>'
             f'</div>'
             f'<div style="border-top:1px solid #e8ecf3;margin-top:12px;padding-top:10px">'
             f'<button class="btn btn-link p-0" style="font-size:10px;font-weight:700;color:#8896aa;'
             f'text-transform:uppercase;letter-spacing:.06em;text-decoration:none" '
             f'data-bs-toggle="collapse" data-bs-target="#zRebMatchup" aria-expanded="false">'
-            f'▸ Pojedynek z rywalami (5 najtrudniejszych)'
+            f'▸ Matchup vs Opponents (5 toughest)'
             f'</button>'
             f'<div class="collapse" id="zRebMatchup" style="margin-top:8px">'
             + _z_matchup_table
