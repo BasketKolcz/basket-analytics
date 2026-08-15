@@ -35142,7 +35142,7 @@ body{{background:linear-gradient(135deg,#dde6f5,#e8eef8,#d8e4f2);display:flex;
     # ── Reset drużyny → wróć do wyboru drużyny w danym klubie ─────────────────
     if request.args.get("reset_druzyna"):
         set_setting("portal_druzyna", "")
-        return redirect(url_for("portal"))
+        return redirect(url_for("portal") + "?fresh=1")
 
     # ── Reset klubu → wróć do grida wszystkich klubów ──────────────────────────
     if request.args.get("reset_klub"):
@@ -35174,13 +35174,20 @@ body{{background:linear-gradient(135deg,#dde6f5,#e8eef8,#d8e4f2);display:flex;
             if _q_sezon:   set_setting("portal_sezon",   _q_sezon)
             if _q_druzyna: set_setting("portal_druzyna", _q_druzyna)
         # Redirect na czysty URL żeby przy refresh nie wymuszać ponownie tego samego kontekstu
-        if _q_druzyna:
-            return redirect(url_for("portal") + "?fresh=1")
-        return redirect(url_for("portal"))
+        return redirect(url_for("portal") + "?fresh=1")
 
     # ── Pobierz dane z bazy ─────────────────────────────────────────────────
     import json as _pj
     _p_klub, _p_sezon, _p_druz = get_portal_context()
+
+    # Pierwsze wejście w tej sesji przeglądarki (nie kontynuacja nawigacji z ?fresh=1)
+    # zawsze pokazuje grid wyboru klubów — niezależnie od globalnie zapamiętanego
+    # klubu/drużyny (te ustawienia są wspólne dla WSZYSTKICH odwiedzających, więc
+    # bez tego pierwszy widok każdego nowego gościa zależałby od tego, co ostatnio
+    # oglądał ktoś inny).
+    if not session.get("portal_seen") and not request.args.get("fresh"):
+        _p_klub, _p_sezon, _p_druz = "", "", ""
+    session["portal_seen"] = True
 
     db = get_db(); cur = db.cursor()
 
