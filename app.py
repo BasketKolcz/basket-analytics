@@ -35025,6 +35025,7 @@ _PORTAL_TOPBAR_CSS = """
   border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);
   transition:.15s;white-space:nowrap;cursor:pointer}
 .pt-back-center:hover{background:rgba(255,255,255,.17);color:#fff}
+.pt-row-break{flex-basis:0;width:0;height:0;overflow:hidden}
 .pt-right{display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0}
 .pt-edu{display:none;align-items:center;gap:6px;background:#f97316;color:#fff;
   border:none;border-radius:8px;padding:6px 12px;font-size:.73rem;font-weight:700;
@@ -35044,8 +35045,8 @@ _PORTAL_TOPBAR_CSS = """
   .pt-btn{padding:6px 10px;font-size:.68rem}
   .pt-lang-btn{padding:2px 6px;font-size:.62rem}
   .pt-sep{margin:0 1px}
-  .pt-back-center{position:static;transform:none;flex:1 0 100%;
-    display:flex;justify-content:center;margin:6px 0 0}
+  .pt-back-center{position:static;transform:none;margin:6px 0 0;font-size:.68rem;padding:5px 10px}
+  .pt-row-break{flex-basis:100%}
   .mh-rozg,.mh-rk{display:none}
   .mh-msc{flex:0 0 14px!important;padding:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .mh-date{display:none}
@@ -35069,6 +35070,7 @@ def _portal_topbar_html(back_btn_html="", active_tab=""):
     <a href="/portal" style="text-decoration:none"><button class="pt-btn {dr_act}">🏀 {_tp('teams')}</button></a>
     <a href="/portal" style="text-decoration:none"><button class="pt-btn {zw_act}">👥 {_tp('players')}</button></a>
   </div>
+  <div class="pt-row-break"></div>
   {f'<button class="pt-back-center" onclick="history.back()">← {_tp("back")}</button>' if back_btn_html is True else (back_btn_html or '')}
   <div class="pt-right">
     <a href="/portal/akademia" class="pt-edu">📚 Platforma Edukacyjna</a>
@@ -36997,6 +36999,7 @@ body{{background:#f0f2f7;margin:0}}
   border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);
   transition:.15s;white-space:nowrap}}
 .pt-back-center:hover{{background:rgba(255,255,255,.17);color:#fff}}
+.pt-row-break{{flex-basis:0;width:0;height:0;overflow:hidden}}
 .pt-logo{{display:flex;align-items:center;gap:10px;flex-shrink:0;margin-right:24px;
   text-decoration:none;cursor:pointer}}
 .pt-logo-icon{{width:34px;height:34px;border-radius:8px;background:rgba(201,163,64,.18);
@@ -37043,8 +37046,8 @@ body{{background:#f0f2f7;margin:0}}
   .pt-lang-btn{{padding:2px 6px;font-size:.62rem}}
   .pt-sep{{margin:0 1px}}
   .d-tab{{padding:6px 12px;font-size:.68rem}}
-  .pt-back-center{{position:static;transform:none;flex:1 0 100%;
-    display:flex;justify-content:center;margin:6px 0 0}}
+  .pt-back-center{{position:static;transform:none;margin:6px 0 0;font-size:.68rem;padding:5px 10px}}
+  .pt-row-break{{flex-basis:100%}}
   .mh-rozg,.mh-rk{{display:none}}
   .mh-msc{{flex:0 0 14px!important;padding:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
   .mh-date{{display:none}}
@@ -37105,6 +37108,7 @@ body{{background:#f0f2f7;margin:0}}
         👥 {TP('players')}
       </button>
     </div>
+    <div class="pt-row-break"></div>
     {f'<a class="pt-back-center" href="{_back_href}">← {TP("back")}</a>' if ctx_druzyna else (f'<a class="pt-back-center" href="/portal?reset_klub=1">← {TP("back")}</a>' if _p_klub else '')}
     <div class="pt-right">
       <a href="/portal/akademia" class="pt-edu">📚 Platforma Edukacyjna</a>
