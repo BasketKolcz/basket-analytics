@@ -36073,9 +36073,9 @@ body{{background:linear-gradient(135deg,#dde6f5,#e8eef8,#d8e4f2);display:flex;
     # wygląd jak w programie, bez powielania wyliczeń. Ramka ładuje się dopiero
     # przy pierwszym wejściu w zakładkę — Mapa Rzutów waży ~180 KB.
     _PT_ZAKLADKI = [
-        ("shooting", "🎯", "Mapa Rzutów", 1250),
-        ("asysty",   "🔗", "Sieć Asyst",  1150),
-        ("zbiorka",  "🏀", "Zbiórka",     1000),
+        ("shooting", "🎯", "Shot Chart",     1250),
+        ("asysty",   "🔗", "Assist Network", 1150),
+        ("zbiorka",  "🏀", "Rebounds",       1000),
     ]
     # Zakładki w górnym pasku, obok Statystyk Indywidualnych.
     # Ramka NIE ma stałej wysokości — dopasowuje się do treści, żeby nie było
@@ -36781,9 +36781,6 @@ body{{background:linear-gradient(135deg,#dde6f5,#e8eef8,#d8e4f2);display:flex;
     _lib_content = _sections_html if _all_persons else '<div style="text-align:center;padding:60px;color:#9ca3af">Brak zawodników w bazie</div>'
 
     player_lib_html = f"""<style>
-.lib-wrap{{padding:24px 28px}}
-.lib-title{{font-size:1.55rem;font-weight:800;color:#111827;letter-spacing:-.02em;
-  padding-bottom:14px;border-bottom:2px solid #e8ecf3;margin-bottom:0}}
 .lib-alpha-bar{{background:#f4f5f7;border-bottom:1px solid #e8ecf3;
   padding:10px 28px;display:flex;flex-wrap:wrap;gap:2px;align-items:center;
   position:sticky;top:0;z-index:10}}
@@ -36795,14 +36792,13 @@ body{{background:linear-gradient(135deg,#dde6f5,#e8eef8,#d8e4f2);display:flex;
 .lib-grp{{padding:0 28px}}
 .lib-grp-sep{{height:1px;background:#e8ecf3}}
 .lib-grp-row{{display:flex;align-items:flex-start;gap:0;padding:22px 0 14px}}
-.lib-big-lt{{font-size:2.2rem;font-weight:900;color:#e05b28;min-width:160px;
-  line-height:1;padding-top:4px;flex-shrink:0}}
+.lib-big-lt{{font-size:2.42rem;font-weight:900;color:#e05b28;min-width:160px;
+  text-align:center;line-height:1;padding-top:4px;flex-shrink:0}}
 .lib-names-grid{{flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:0}}
 .lib-col div{{margin-bottom:7px}}
 .lib-pl-lnk{{color:#1a2b4a;text-decoration:none;font-size:.88rem;font-weight:400;line-height:1.5}}
 .lib-pl-lnk:hover{{color:#c9a340;text-decoration:underline}}
 </style>
-<div class="lib-wrap"><div class="lib-title">zawodnicy</div></div>
 <div class="lib-alpha-bar">{_alpha_bar_html}</div>
 <div>{_lib_content}</div>"""
 
