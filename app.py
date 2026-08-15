@@ -35862,13 +35862,13 @@ body{{background:linear-gradient(135deg,#dde6f5,#e8eef8,#d8e4f2);display:flex;
                         f'display:flex;flex-direction:column;align-items:center;text-align:center;'
                         f'position:relative;overflow:hidden">'
                         f'<div style="position:absolute;inset:0;background:{_PDM_GLW[_lj]};pointer-events:none"></div>'
-                        f'<div style="position:absolute;right:7px;top:4px;font-size:{"2.8rem" if _is1 else "2.4rem"};'
+                        f'<div style="position:absolute;right:7px;top:4px;font-size:{"2.6rem" if _is1 else "2.2rem"};'
                         f'font-weight:900;line-height:1;color:{_PDM_RNK[_lj]};user-select:none">{_lj+1}</div>'
-                        f'<div style="font-size:{"12px" if _is1 else "11px"};font-weight:700;color:#1a2b4a;'
+                        f'<div style="font-size:{"10.5px" if _is1 else "9.5px"};font-weight:700;color:#1a2b4a;'
                         f'line-height:1.3;margin-bottom:8px;position:relative">{_lnm}</div>'
-                        f'<div style="font-size:{"1.65rem" if _is1 else "1.3rem"};font-weight:900;'
+                        f'<div style="font-size:{"1.45rem" if _is1 else "1.15rem"};font-weight:900;'
                         f'font-variant-numeric:tabular-nums;color:{_PDM_VC[_lj]};line-height:1;position:relative">{_lvs}</div>'
-                        f'<div style="font-size:10px;color:#9ca3af;font-weight:500;margin-top:3px;position:relative">{_lb}</div>'
+                        f'<div style="font-size:9px;color:#9ca3af;font-weight:500;margin-top:3px;position:relative">{_lb}</div>'
                         f'</div>'
                     )
                 # 2 | 1 | 3 — podium order
