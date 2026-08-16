@@ -57,6 +57,10 @@ app.config["SESSION_COOKIE_NAME"] = "basketkolcz_session"
 app.config["PERMANENT_SESSION_LIFETIME"] = 86400 * 30  # 30 dni
 app.config["MAX_CONTENT_LENGTH"] = 16 * 1024 * 1024
 
+@app.route("/favicon.ico")
+def favicon():
+    return send_file(os.path.join(app.root_path, "static", "favicon.ico"), mimetype="image/vnd.microsoft.icon")
+
 @app.before_request
 def _portal_only():
     if os.environ.get("PORTAL_ONLY", "").lower() != "true":
