@@ -797,6 +797,11 @@ def init_db():
         "ALTER TABLE zone_shots_team ADD COLUMN IF NOT EXISTS press INTEGER DEFAULT 0",
         "ALTER TABLE zone_shots_team ADD COLUMN IF NOT EXISTS p3m   INTEGER DEFAULT 0",
         "ALTER TABLE zone_shots_team ADD COLUMN IF NOT EXISTS p3a   INTEGER DEFAULT 0",
+        # Wedlug ktorej mapy zapisano numer strefy w tym wierszu. Znacznik siedzi
+        # na wierszu, a nie jest wyliczany z sezonu ani z `coding_level`: oba sa
+        # edytowalne, a mapa, wedlug ktorej cos raz zapisano, juz sie nie zmieni.
+        "ALTER TABLE shot_zones      ADD COLUMN IF NOT EXISTS zone_map TEXT DEFAULT ''",
+        "ALTER TABLE zone_shots_team ADD COLUMN IF NOT EXISTS zone_map TEXT DEFAULT ''",
         # Tabela team-level (agregat drużyny)
         """CREATE TABLE IF NOT EXISTS zone_shots_team (
             id       SERIAL PRIMARY KEY,
@@ -1027,6 +1032,8 @@ def init_db():
     migrate_lineup_person_ids()
     # Sync rywali: backfill person_id + team_id dla opp_players (idempotentna)
     migrate_opp_sync()
+    # Oznaczenie starych rzutow mapa v1 (jednorazowe)
+    backfill_zone_map()
 
 
 def migrate_persons_phase2():
@@ -1098,6 +1105,30 @@ def migrate_persons_phase2():
         try: db.rollback()
         except: pass
         print(f"[migrate_persons_phase2] error: {e}", flush=True)
+    finally:
+        cur.close()
+
+
+def backfill_zone_map():
+    """Jednorazowo oznacza istniejace wiersze rzutow jako mape v1.
+
+    Wszystko, co bylo w bazie przed przebudowa, pochodzi z mapy 36-strefowej
+    i z sezonow, ktore sa juz zamkniete. Uruchamia sie raz — pilnuje tego wpis
+    `zone_map_backfill` w settings, zeby nie stemplowac przy kazdym zadaniu.
+    """
+    if get_setting("zone_map_backfill") == "1":
+        return
+    db = get_db(); cur = db.cursor()
+    try:
+        for tab in ("shot_zones", "zone_shots_team"):
+            cur.execute(f"UPDATE {tab} SET zone_map=%s WHERE COALESCE(zone_map,'')=''",
+                        (MAPA_V1,))
+        db.commit()
+        set_setting("zone_map_backfill", "1")
+    except Exception as e:
+        try: db.rollback()
+        except: pass
+        print(f"[backfill_zone_map] error: {e}", flush=True)
     finally:
         cur.close()
 
@@ -1282,10 +1313,154 @@ def set_setting(key, value):
 # brało nowy arkusz za drużynę.
 ARKUSZE_POMOCNICZE = {"META", "KODY", "LEGENDA", "SKŁADY", "SKLADY", "STREFY"}
 
+# ── Mapa stref ────────────────────────────────────────────────────────────────
+# Granica atak/obrona i punktacja wynikaja z arkusza STREFY szablonu v5.
+# Wczesniej te same liczby byly wpisane na sztywno w kilkudziesieciu miejscach,
+# wiec kazda zmiana mapy oznaczala obchodzenie ich po kolei — a przeoczone
+# miejsce nie zglaszalo bledu, tylko po cichu pokazywalo inne liczby.
+#
+# v1 (sezony 2024/2025 i 2025/2026): 36 stref, atak 1-19, obrona 20-36.
+# v2 (od 2026/2027):                 49 stref, atak 1-25, obrona 26-49.
+MAPA_V1, MAPA_V2 = "v1", "v2"
+
+STREFA_ATAK_MAX = 25      # 1..25 to atak
+STREFA_MAX      = 49      # 26..49 to obrona
+# Punktacja uklada sie w dwa bloki: atak 1-13 za 2, reszta za 3. Cala obrona
+# jest za 3, bo rzut oddany z pola obrony zawsze pada zza luku.
+STREFA_2PT_MAX  = 13
+
+
+def strefa_ataku(z):
+    return isinstance(z, int) and 1 <= z <= STREFA_ATAK_MAX
+
+
+def strefa_obrony(z):
+    return isinstance(z, int) and STREFA_ATAK_MAX < z <= STREFA_MAX
+
+
+def strefa_za_trzy(z):
+    """Czy rzut z tej strefy jest za 3 punkty."""
+    return isinstance(z, int) and STREFA_2PT_MAX < z <= STREFA_MAX
+
+
+def strefy_2pt():
+    return set(range(1, STREFA_2PT_MAX + 1))
+
+
+def strefy_3pt():
+    return set(range(STREFA_2PT_MAX + 1, STREFA_MAX + 1))
+
 
 def arkusze_druzyn(wb):
     """Arkusze z akcjami, w kolejności z pliku: [drużyna A, drużyna B]."""
     return [s for s in wb.sheetnames if s.upper() not in ARKUSZE_POMOCNICZE]
+
+
+# ── Timeouty szablonu v5 ──────────────────────────────────────────────────────
+# W szablonie v5 jedna komorka wiersza opisuje kilka akcji ("0/2;3"), a kolumna J
+# jest pozycyjna: "0;T" znaczy "timeout przed druga akcja tego wiersza". Czytniki
+# portalu chodzily po wierszach i widzialy tylko goly znak T, wiec gubily timeouty
+# zapisane pozycyjnie, a okno "5 nastepnych akcji" skladaly z surowych komorek.
+# Tu wiersze rozpada sie na pojedyncze akcje (kolejnosc arkusza = kolejnosc
+# chronologiczna druzyny), a timeout dostaje kotwice: pierwsza akcje po przerwie
+# w tej samej kwarcie. Pola sa czytane tak jak w parserze meczu, zeby zdarzenia
+# zgadzaly sie z tabela match_timeouts.
+_TO_ZNAKI = ("T", "TAK", "1", "TRUE")
+_TO_PUSTE = "—"
+
+
+def szablon_v5(wb):
+    """Pliki szablonu v5 maja arkusze SKŁADY/STREFY, starsze ich nie mają."""
+    return any(s.upper() in ("SKŁADY", "SKLADY", "STREFY") for s in wb.sheetnames)
+
+
+def to_wiersze(ws):
+    """[(nr wiersza w Excelu, komórki)] — wiersze, które czyta parser (A..D niepuste)."""
+    out = []
+    for xr, rv in enumerate(ws.iter_rows(min_row=2, values_only=True), start=2):
+        rv = list(rv) + [None] * (16 - len(rv))
+        if any(v is not None for v in rv[:4]):
+            out.append((xr, rv))
+    return out
+
+
+def to_splaszcz(wiersze):
+    """Arkusz jednej drużyny -> {"akcje", "zdarzenia", "suma_kwart"}.
+
+    akcja:     q, row, code, t0 (sekundy zegara drużyny od początku kwarty), i
+    zdarzenie: q, row, pos, t_raw (sekundy zegara), czas_sek (jak w match_timeouts),
+               anchor (indeks pierwszej akcji po przerwie w tej samej kwarcie albo None)
+    """
+    akcje, zdarzenia, suma = [], [], {}
+    kw = 1
+    for xr, w in wiersze:
+        if w[0] is not None:
+            try:
+                kw = int(str(w[0]).strip().replace("*", "").strip())
+            except Exception:
+                kw = 1
+        raw_b = str(w[1]) if w[1] is not None else ""
+        raw_c = str(w[2]) if w[2] is not None else ""
+        raw_j = str(w[9]).strip().upper() if w[9] is not None else ""
+        kody = [c.strip().upper() for c in raw_c.split(";") if c.strip()]
+        czasy = []
+        for ts in raw_b.replace(";", ",").split(","):
+            try:
+                czasy.append(float(ts.strip()))
+            except Exception:
+                pass
+        dl = sum(czasy)
+        if dl > 0:
+            suma[kw] = suma.get(kw, 0.0) + dl
+        start = suma.get(kw, 0.0) - dl
+        pierwsza = len(akcje)
+        for ai, kod in enumerate(kody):
+            akcje.append({"i": len(akcje), "q": kw, "row": xr, "code": kod,
+                          "t0": start + sum(czasy[:ai])})
+        # J jest pozycyjne i nie jest kompaktowane (pusty token zajmuje miejsce)
+        toks = [t.strip().upper() for t in raw_j.replace(",", ";").split(";")]
+        for p, t in enumerate(toks):
+            if t in _TO_ZNAKI:
+                zdarzenia.append({"q": kw, "row": xr, "pos": p,
+                                  "t_raw": start + sum(czasy[:p]),
+                                  "anchor": pierwsza + min(p, len(kody))})
+    for zd in zdarzenia:
+        a = zd["anchor"]
+        if not (a < len(akcje) and akcje[a]["q"] == zd["q"]):
+            zd["anchor"] = None      # przerwa po ostatniej akcji kwarty
+        razem = suma.get(zd["q"], 0)
+        zd["czas_sek"] = (max(0, round(600.0 - min(600.0, (zd["t_raw"] / razem) * 600.0)))
+                          if razem > 0 else 0)
+    return {"akcje": akcje, "zdarzenia": zdarzenia, "suma_kwart": suma}
+
+
+def to_okno(plaska, kotwica, kw, n=5):
+    """n kodów od kotwicy (kotwica = kod nr 1), do końca kwarty, dopełnione '—'."""
+    kody = []
+    if kotwica is not None:
+        for a in plaska["akcje"][kotwica:kotwica + n]:
+            if a["q"] != kw:
+                break
+            kody.append(a["code"])
+    return kody + [_TO_PUSTE] * (n - len(kody))
+
+
+def to_kotwica_rywala(zd, wlasna, rywala):
+    """Pierwsza akcja rywala po tym samym momencie kwarty (indeks albo None).
+
+    Zegary obu arkuszy nie muszą się zgadzać co do sekundy, więc moment liczy się
+    jako ułamek kwarty: czas timeoutu / suma czasów kwarty w arkuszu drużyny."""
+    kw = zd["q"]
+    razem_w = wlasna["suma_kwart"].get(kw, 0.0)
+    razem_r = rywala["suma_kwart"].get(kw, 0.0)
+    if razem_w <= 0 or razem_r <= 0:
+        return None
+    f = zd["t_raw"] / razem_w
+    for a in rywala["akcje"]:
+        if a["q"] == kw and a["t0"] / razem_r >= f - 1e-9:
+            return a["i"]
+    return None
+# ── koniec: timeouty szablonu v5 ──────────────────────────────────────────────
 
 
 _TRAINING_CATALOG_SEED = [
@@ -11263,7 +11438,363 @@ def _zone_box_style(pct, att):
         return "rgba(255,235,238,0.95)", "#e53935", "#b71c1c"
 
 
-def _build_full_court_svg(zone_data, ctx="all"):
+# Ksztalty 25 stref polowy boiska (viewBox 490x460, kosz u gory w (245,67)).
+# Zrodlo geometrii: mapa rzutowa Kodera; numeracja i nazwy: arkusz STREFY
+# szablonu v5. Format krotki identyczny jak w mapie v1, zeby rysowanie
+# wykresu bylo wspolne dla obu map.
+ATK_ZONES_V2 = {
+     1: ('rect', 171,  20, 148,  87, 245,  63, "At the Rim", 2),
+     2: ('rect', 319,  20,  62,  87, 350,  63, "Low Post", 2),
+     3: ('rect', 109,  20,  62,  87, 140,  63, "Low Post", 2),
+     4: ('rect', 171, 107, 148,  87, 245, 150, "Floater Zone", 2),
+     5: ('rect',  47,  20,  62,  87,  78,  63, "Short Corner", 2),
+     6: ('rect', 381,  20,  62,  87, 412,  63, "Short Corner", 2),
+     7: ('path', "M 109,107 A 202,202 0 0,0 171,194 L 171,107 Z",
+        148, 135, "High Post", 2),
+     8: ('path', "M 381,107 A 202,202 0 0,1 319,194 L 319,107 Z",
+        342, 135, "High Post", 2),
+     9: ('path', "M 47,107 L 109,107 A 202,202 0 0,0 171,194 L 88,194 A 202,202 0 0,1 47,107 Z",
+         97, 160, "Mid-Range", 2),
+    10: ('path', "M 443,107 L 381,107 A 202,202 0 0,1 319,194 L 402,194 A 202,202 0 0,0 443,107 Z",
+        393, 160, "Mid-Range", 2),
+    11: ('path', "M 88,194 L 171,194 L 171,255 A 202,202 0 0,1 88,194 Z",
+        118, 222, "Elbow Extended", 2),
+    12: ('path', "M 402,194 L 319,194 L 319,255 A 202,202 0 0,0 402,194 Z",
+        372, 222, "Elbow Extended", 2),
+    13: ('path', "M 171,194 L 319,194 L 319,255 A 202,202 0 0,1 171,255 Z",
+        245, 222, "Free Throw Line", 2),
+    14: ('rect', 443,  20,  27,  87, 457,  63, "Corner", 3),
+    15: ('rect',  20,  20,  27,  87,  33,  63, "Corner", 3),
+    16: ('path', "M 470,107 L 443,107 A 202,202 0 0,1 402,194 L 470,194 Z",
+        455, 155, "Low Wing", 3),
+    17: ('path', "M 20,107 L 47,107 A 202,202 0 0,0 88,194 L 20,194 Z",
+         38, 158, "Low Wing", 3),
+    18: ('path', "M 470,194 L 402,194 A 202,202 0 0,1 319,255 L 470,255 Z",
+        398, 240, "Wing", 3),
+    19: ('path', "M 20,194 L 88,194 A 202,202 0 0,0 171,255 L 20,255 Z",
+         62, 240, "Wing", 3),
+    20: ('path', "M 171,255 A 202,202 0 0,0 319,255 L 319,355 L 171,355 Z",
+        245, 308, "Top of the Key", 3),
+    21: ('rect',  20, 255, 151, 100,  95, 313, "Deep Wing", 3),
+    22: ('rect', 319, 255, 151, 100, 394, 313, "Deep Wing", 3),
+    23: ('rect',  20, 355, 151,  85,  95, 397, "Transition Pull", 3),
+    24: ('rect', 319, 355, 151,  85, 394, 397, "Transition Pull", 3),
+    25: ('rect', 171, 355, 148,  85, 245, 397, "Logo", 3),
+}
+
+# Polowa obrony ma wlasny podzial, grubszy od rzutowego: to mapa strat,
+# przechwytow i pressingu, a nie rzutow (w danych v1 padly tam 3 rzuty wobec
+# 221 przechwytow i 374 strat). Numer czyta sie stojac przodem do kosza, wiec
+# nieparzyste leza po lewej, parzyste po prawej — tak samo jak w ataku. Stref
+# obrony nie nazywamy, identyfikuje je numer.
+#
+# Rzedy: 42-49 przy linii koncowej, 36-41 trumna z bokami, 30-35 okolice luku,
+# 26-29 pas przy linii srodkowej. Granice ida po liniach boiska; tylko y=320
+# (10 m od linii koncowej) i cwiartki pasa 132.5/357.5 sa nowe.
+DEF_ZONES_V2 = {
+    # ── Rzad 1: linia koncowa, y=20..107 ────────────────────────────────────
+    43: ('rect',  20,  20,  27,  87,  33,  63, "Strefa 43", 3),
+    45: ('rect',  47,  20,  62,  87,  78,  63, "Strefa 45", 3),
+    47: ('rect', 109,  20,  62,  87, 140,  63, "Strefa 47", 3),
+    49: ('rect', 171,  20,  74,  87, 208,  63, "Strefa 49", 3),
+    48: ('rect', 245,  20,  74,  87, 282,  63, "Strefa 48", 3),
+    46: ('rect', 319,  20,  62,  87, 350,  63, "Strefa 46", 3),
+    44: ('rect', 381,  20,  62,  87, 412,  63, "Strefa 44", 3),
+    42: ('rect', 443,  20,  27,  87, 457,  63, "Strefa 42", 3),
+    # ── Rzad 2: trumna i boki, y=107..194. Luk dzieli boki od srodka ────────
+    37: ('path', "M 20,107 L 47,107 A 202,202 0 0,0 88,194 L 20,194 Z",
+         38, 158, "Strefa 37", 3),
+    39: ('path', "M 47,107 L 171,107 L 171,194 L 88,194 A 202,202 0 0,1 47,107 Z",
+        128, 155, "Strefa 39", 3),
+    41: ('rect', 171, 107,  74,  87, 208, 150, "Strefa 41", 3),
+    40: ('rect', 245, 107,  74,  87, 282, 150, "Strefa 40", 3),
+    38: ('path', "M 443,107 L 319,107 L 319,194 L 402,194 A 202,202 0 0,0 443,107 Z",
+        362, 155, "Strefa 38", 3),
+    36: ('path', "M 470,107 L 443,107 A 202,202 0 0,1 402,194 L 470,194 Z",
+        452, 158, "Strefa 36", 3),
+    # ── Rzad 3: okolice luku, y=194..320. Granica 31/30 to sam luk 3PT,
+    #    a pionowy podzial 31|33 i 32|30 zaczyna sie dopiero na luku (y=216.4) ─
+    31: ('path', "M 20,194 L 88,194 A 202,202 0 0,0 109,216.4 L 109,320 L 20,320 Z",
+         62, 270, "Strefa 31", 3),
+    35: ('path', "M 88,194 L 245,194 L 245,269 A 202,202 0 0,1 88,194 Z",
+        178, 220, "Strefa 35", 3),
+    33: ('path', "M 109,216.4 A 202,202 0 0,0 245,269 L 245,320 L 109,320 Z",
+        176, 300, "Strefa 33", 3),
+    34: ('path', "M 402,194 L 245,194 L 245,269 A 202,202 0 0,0 402,194 Z",
+        312, 220, "Strefa 34", 3),
+    32: ('path', "M 381,216.4 A 202,202 0 0,1 245,269 L 245,320 L 381,320 Z",
+        314, 300, "Strefa 32", 3),
+    30: ('path', "M 470,194 L 402,194 A 202,202 0 0,1 381,216.4 L 381,320 L 470,320 Z",
+        428, 270, "Strefa 30", 3),
+    # ── Rzad 4: pas przy linii srodkowej, y=320..440, cwiartki po 3.75 m ────
+    27: ('rect',  20, 320, 112.5, 120,  76, 386, "Strefa 27", 3),
+    29: ('rect', 132.5, 320, 112.5, 120, 189, 386, "Strefa 29", 3),
+    28: ('rect', 245, 320, 112.5, 120, 301, 386, "Strefa 28", 3),
+    26: ('rect', 357.5, 320, 112.5, 120, 414, 386, "Strefa 26", 3),
+}
+
+# Linie boiska dla mapy v2 (viewBox 490x460, kosz u gory). Wspolrzedne z mapy
+# rzutowej, paleta i grubosci przeniesione 1:1 z wykresu v1 — zmienia sie
+# geometria, nie wyglad raportu.
+_COURT_LINES_V2 = (
+    '<rect x="20" y="20" width="450" height="420" fill="none" stroke="#777" stroke-width="2.5"/>'
+    '<line x1="20" y1="20" x2="470" y2="20" stroke="#555" stroke-width="3.5"/>'
+    # klucz + linia rzutow wolnych
+    '<rect x="171" y="20" width="148" height="174" fill="none" stroke="#666" stroke-width="2"/>'
+    '<line x1="171" y1="194" x2="319" y2="194" stroke="#666" stroke-width="2"/>'
+    # kolo rzutow wolnych: pelne od strony srodka, przerywane od strony kosza
+    '<path d="M 191,194 A 54,54 0 0,0 299,194" fill="none" stroke="#666" stroke-width="2"/>'
+    '<path d="M 191,194 A 54,54 0 0,1 299,194" fill="none" stroke="#666" stroke-width="1.8"'
+    ' stroke-dasharray="10,7"/>'
+    # naroznikowe odcinki 3PT i luk
+    '<line x1="47" y1="20" x2="47" y2="107" stroke="#666" stroke-width="2"/>'
+    '<line x1="443" y1="20" x2="443" y2="107" stroke="#666" stroke-width="2"/>'
+    '<path d="M 47,107 A 202,202 0 0,0 443,107" fill="none" stroke="#666" stroke-width="2.2"/>'
+    # polkole pod koszem, tablica, obrecz
+    '<path d="M 207,67 A 38,38 0 0,0 283,67" fill="none" stroke="#888" stroke-width="1.5"/>'
+    '<line x1="218" y1="56" x2="272" y2="56" stroke="#555" stroke-width="3"/>'
+    '<circle cx="245" cy="67" r="10" fill="none" stroke="#e07000" stroke-width="3"/>'
+    # linia srodkowa u dolu panelu
+    '<line x1="20" y1="440" x2="470" y2="440" stroke="#888" stroke-width="1.5"'
+    ' stroke-dasharray="15,10"/>'
+)
+
+# Wymiary panelu wykresu dla kazdej mapy: (viewBox, szerokosc, wysokosc,
+# ramka wnetrza). v1 rysuje polowe boiska w 940x880, v2 w 490x460.
+WYMIARY_MAPY = {
+    MAPA_V1: ("0 0 940 880", 940, 880, (20, 20, 900, 840)),
+    MAPA_V2: ("0 0 490 460", 490, 460, (20, 20, 450, 420)),
+}
+
+
+# Rozmiary napisow podane sa w jednostkach viewBoxa. Mapa v2 ma go o polowe
+# mniejszego niz v1, wiec te same liczby daja napisy dwa razy wieksze — stad
+# przelicznik. Dzieki niemu raport wyglada tak samo przy obu mapach.
+SKALA_NAPISOW = {MAPA_V1: 1.0, MAPA_V2: 490 / 940}
+
+# Strefy zbyt waskie na dwuwierszowy napis — tekst mniejszy i obrocony.
+# W mapie v2 sa to paski naroznikowe: 14 i 15 w ataku, 42 i 43 w obronie.
+STREFY_WASKIE = {MAPA_V1: {7, 8}, MAPA_V2: {7, 8, 14, 15, 42, 43}}
+
+
+def zakres_stref(court_type, mapa):
+    """Numery stref pokazywane w tabeli pod wykresem."""
+    if mapa == MAPA_V2:
+        return range(STREFA_ATAK_MAX + 1, STREFA_MAX + 1) if court_type == "defense"             else range(1, STREFA_ATAK_MAX + 1)
+    return range(20, 37) if court_type == "defense" else range(1, 20)
+
+
+def opis_strefy(z, mapa):
+    """(nazwa, punkty) strefy. Dla mapy v2 nazwa idzie z arkusza STREFY szablonu,
+    a wpadka na tabele ksztaltow, gdy szablonu jeszcze nie wgrano."""
+    if mapa == MAPA_V2:
+        krotka = ATK_ZONES_V2.get(z) or DEF_ZONES_V2.get(z)
+        if krotka is None:
+            return f"Strefa {z}", (3 if strefa_za_trzy(z) else 2)
+        wbud = krotka[7] if krotka[0] == 'rect' else krotka[4]
+        return nazwa_strefy(z, wbud), (3 if strefa_za_trzy(z) else 2)
+    meta = ZONE_META.get(z, {})
+    return meta.get("name", f"Z{z}"), meta.get("pts", 2)
+
+
+def granice_stref(mapa):
+    """(atak_od, atak_do, obrona_od, obrona_do) dla danej mapy."""
+    if mapa == MAPA_V2:
+        return 1, STREFA_ATAK_MAX, STREFA_ATAK_MAX + 1, STREFA_MAX
+    return 1, 19, 20, 36
+
+
+def strefa_ataku_w(z, mapa):
+    """Czy numer strefy nalezy do polowy ataku w podanej mapie.
+
+    Wersje bezargumentowe (strefa_ataku/strefa_obrony) znaja tylko granice v2 i
+    sluza parserowi, ktory zapisuje wylacznie nowa mape. Kod wyswietlajacy czyta
+    tez stare mecze, wiec musi pytac o granice tej mapy, ktora dany mecz zapisano
+    — w v1 strefa 20 to obrona, w v2 wciaz atak.
+    """
+    a_od, a_do, _, _ = granice_stref(mapa)
+    try:
+        z = int(z)
+    except (TypeError, ValueError):
+        return False
+    return a_od <= z <= a_do
+
+
+def strefa_obrony_w(z, mapa):
+    _, _, d_od, d_do = granice_stref(mapa)
+    try:
+        z = int(z)
+    except (TypeError, ValueError):
+        return False
+    return d_od <= z <= d_do
+
+
+# Kategorie stref dla tabel "TOP RZUCAJACY ZAWODNICY". Etykiety zostaja te same
+# w obu mapach, zmieniaja sie numery: v1 ma 19 stref ataku, v2 ma 25.
+KATEGORIE_STREF = {
+    MAPA_V1: [
+        ("2PT",          [1, 2, 3, 4, 5, 6]),
+        ("3PT",          [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]),
+        ("IN THE PAINT", [1, 4]),
+        ("MID. RANGE",   [2, 3, 5, 6, 17, 18, 19]),
+        ("3PT SPOT",     [7, 8, 9, 10, 12]),
+        ("DEEP 3PT",     [11, 13, 14, 15, 16]),
+    ],
+    MAPA_V2: [
+        ("2PT",          [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]),
+        ("3PT",          [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]),
+        ("IN THE PAINT", [1, 2, 3, 4]),
+        ("MID. RANGE",   [5, 6, 7, 8, 9, 10, 11, 12, 13]),
+        ("3PT SPOT",     [14, 15, 16, 17, 18, 19, 20]),
+        ("DEEP 3PT",     [21, 22, 23, 24, 25]),
+    ],
+}
+
+
+def kategorie_stref(mapa):
+    return KATEGORIE_STREF.get(mapa, KATEGORIE_STREF[MAPA_V1])
+
+
+def mapa_meczow(match_ids):
+    """Mapa stref dla zbioru meczow — po znaczniku na ich wierszach rzutow.
+
+    Uzywana przez agregaty, ktore nie maja jednego sezonu: kariera zawodnika i
+    porownania. Zbior mieszany dostaje mape najswiezszego meczu; taki agregat i
+    tak trzeba bedzie kiedys rozdzielic, bo dwoch map nie da sie narysowac naraz.
+    """
+    if not match_ids:
+        return MAPA_V1
+    db = get_db(); cur = db.cursor()
+    try:
+        cur.execute("""SELECT COALESCE(zst.zone_map,'') AS m
+                       FROM zone_shots_team zst JOIN matches m ON m.id = zst.match_id
+                       WHERE zst.match_id = ANY(%s) AND COALESCE(zst.zone_map,'') <> ''
+                       ORDER BY m.data_meczu DESC LIMIT 1""", (list(match_ids),))
+        r = cur.fetchone()
+        return (r["m"] if r and r["m"] else MAPA_V1)
+    except Exception:
+        try: db.rollback()
+        except: pass
+        return MAPA_V1
+    finally:
+        cur.close()
+
+
+def mecze_wg_mapy(match_ids):
+    """Dzieli mecze na grupy wg mapy stref — najswiezsza mapa pierwsza.
+
+    Agregat obejmujacy dwie mapy nie ma sensu: ten sam numer strefy opisuje
+    w nich inne miejsce boiska. Zamiast sumowac, rozdzielamy i rysujemy jedna.
+    Zwraca [(mapa, [match_id, ...]), ...]; mecz bez wierszy stref trafia do v1,
+    tak samo jak w mapa_meczu.
+    """
+    if not match_ids:
+        return []
+    db = get_db(); cur = db.cursor()
+    try:
+        cur.execute("""SELECT zst.match_id AS mid, COALESCE(zst.zone_map,'') AS m,
+                              MAX(m.data_meczu) AS d
+                       FROM zone_shots_team zst JOIN matches m ON m.id = zst.match_id
+                       WHERE zst.match_id = ANY(%s)
+                       GROUP BY zst.match_id, COALESCE(zst.zone_map,'')""",
+                    (list(match_ids),))
+        wg, naj = {}, {}
+        for r in cur.fetchall():
+            mp = r["m"] or MAPA_V1
+            wg.setdefault(mp, set()).add(r["mid"])
+            d = str(r["d"] or "")
+            if d > naj.get(mp, ""):
+                naj[mp] = d
+        znane = {mid for s in wg.values() for mid in s}
+        brak = [mid for mid in match_ids if mid not in znane]
+        if brak:
+            wg.setdefault(MAPA_V1, set()).update(brak)
+        return [(mp, sorted(ids)) for mp, ids in
+                sorted(wg.items(), key=lambda kv: naj.get(kv[0], ""), reverse=True)]
+    except Exception:
+        try: db.rollback()
+        except: pass
+        return [(MAPA_V1, list(match_ids))]
+    finally:
+        cur.close()
+
+
+def mapa_sezonu(sezon):
+    """Mapa stref obowiazujaca w sezonie — po znaczniku na wierszach jego meczow.
+
+    Sezony sa jednorodne: stare zamkniete maja mape v1, nowe v2. Gdyby kiedys
+    zrobil sie mieszany, wygrywa pierwszy napotkany znacznik — a agregat i tak
+    trzeba bedzie wtedy rozdzielic.
+    """
+    if not sezon:
+        return MAPA_V1
+    db = get_db(); cur = db.cursor()
+    try:
+        cur.execute("""SELECT COALESCE(zst.zone_map,'') AS m
+                       FROM zone_shots_team zst JOIN matches m ON m.id = zst.match_id
+                       WHERE m.sezon=%s AND COALESCE(zst.zone_map,'') <> '' LIMIT 1""",
+                    (sezon,))
+        r = cur.fetchone()
+        return (r["m"] if r and r["m"] else MAPA_V1)
+    except Exception:
+        try: db.rollback()
+        except: pass
+        return MAPA_V1
+    finally:
+        cur.close()
+
+
+def mapa_meczu(match_id):
+    """Ktora mapa stref obowiazuje w tym meczu — po znaczniku na wierszach rzutow.
+
+    Znacznik siedzi na wierszu, wiec mecz sam mowi, czym go narysowac. Mecz bez
+    zapisanych rzutow dostaje mape v1: cala historia w bazie jest w tej mapie,
+    a pusty wykres i tak wyglada tak samo.
+    """
+    db = get_db(); cur = db.cursor()
+    try:
+        for tab in ("shot_zones", "zone_shots_team"):
+            cur.execute(f"""SELECT COALESCE(zone_map,'') AS m FROM {tab}
+                            WHERE match_id=%s AND COALESCE(zone_map,'') <> '' LIMIT 1""",
+                        (match_id,))
+            r = cur.fetchone()
+            if r and r["m"]:
+                return r["m"]
+        return MAPA_V1
+    except Exception:
+        try: db.rollback()
+        except: pass
+        return MAPA_V1
+    finally:
+        cur.close()
+
+
+def skala_napisow(mapa):
+    return SKALA_NAPISOW.get(mapa, 1.0)
+
+
+def strefa_waska(z, mapa):
+    return z in STREFY_WASKIE.get(mapa, {7, 8})
+
+
+def wymiary_mapy(mapa):
+    return WYMIARY_MAPY.get(mapa, WYMIARY_MAPY[MAPA_V1])
+
+
+def nazwa_strefy(nr, domyslna=""):
+    """Nazwa strefy z arkusza STREFY wgranego szablonu; szablon jest zrodlem.
+
+    Bez wgranego szablonu wraca nazwa wbudowana w tabele ksztaltow.
+    """
+    try:
+        mapa = json.loads(get_setting("mapa_stref_v2") or "{}")
+    except (TypeError, ValueError):
+        return domyslna
+    wpis = mapa.get(str(nr)) or {}
+    return (wpis.get("nazwa") or "").strip() or domyslna
+
+
+def _build_full_court_svg(zone_data, ctx="all", mapa=MAPA_V1):
     """SVG boiska FIBA (połowa, kosz na górze).
     ViewBox: 0 0 940 880. Baseline: y=20. Kosz: (470,115). Klucz: x=323-617.
     Łuk 3PT: r=396, center=(470,115). 19 stref ataku (1-19).
@@ -11315,6 +11846,9 @@ def _build_full_court_svg(zone_data, ctx="all"):
             if _v > _ctx_max_atk:
                 _ctx_max_atk = _v
 
+    if mapa == MAPA_V2:
+        ATK_ZONES = ATK_ZONES_V2
+
     zone_els = []
     for z, zone_def in ATK_ZONES.items():
         shape = zone_def[0]
@@ -11339,9 +11873,10 @@ def _build_full_court_svg(zone_data, ctx="all"):
             return f"{n:.1f}"
 
         # Wąskie strefy narożnikowe (7, 8) — mniejszy font, obrócone
-        narrow = z in (7, 8)
-        fs1 = 22 if not narrow else 16
-        fs2 = 18 if not narrow else 13
+        _sk = skala_napisow(mapa)
+        narrow = strefa_waska(z, mapa)
+        fs1 = round((22 if not narrow else 16) * _sk, 1)
+        fs2 = round((18 if not narrow else 13) * _sk, 1)
 
         pct_txt = f"{pct*100:.0f}%" if pct is not None else "—"
         ma_txt  = f"{_fmt_n(made)}/{_fmt_n(att)}"
@@ -11387,7 +11922,7 @@ def _build_full_court_svg(zone_data, ctx="all"):
         else:
             # Tryb STL/TO/BR — jedna wartość wycentrowana, tło strefy kolorowane wg przedziału
             if _ctx_val > 0 and _stl_tcol:
-                _fs = 22 if not narrow else 15
+                _fs = round((22 if not narrow else 15) * _sk, 1)
                 texts = (
                     f'<text x="{lx}" y="{ly}" text-anchor="middle" dominant-baseline="middle"'
                     f' font-size="{_fs}" font-weight="900" font-family="Arial,sans-serif"'
@@ -11426,23 +11961,27 @@ def _build_full_court_svg(zone_data, ctx="all"):
   <line x1="448" y1="60" x2="492" y2="60" stroke="#555" stroke-width="3"/>
   <circle cx="470" cy="115" r="45" fill="none" stroke="#e07000" stroke-width="3"/>"""
 
+    if mapa == MAPA_V2:
+        court_lines = _COURT_LINES_V2
+    _vb, _sw, _sh, (_rx, _ry, _rw, _rh) = wymiary_mapy(mapa)
+
     return (
-        '<svg viewBox="0 0 940 880" xmlns="http://www.w3.org/2000/svg"'
+        f'<svg viewBox="{_vb}" xmlns="http://www.w3.org/2000/svg"'
         ' style="width:100%;display:block;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.13)">'
         '<style>'
         '.zg path,.zg rect{cursor:pointer;transition:opacity .18s,filter .18s;opacity:.78}'
         '.zg:hover path,.zg:hover rect{opacity:1;filter:brightness(1.08) drop-shadow(0 0 4px rgba(0,0,0,.45))}'
         '.zg text{pointer-events:none}'
         '</style>'
-        '<rect width="940" height="880" fill="#fff" rx="10"/>'
-        '<rect x="20" y="20" width="900" height="840" fill="#fff" rx="2"/>'
+        f'<rect width="{_sw}" height="{_sh}" fill="#fff" rx="10"/>'
+        f'<rect x="{_rx}" y="{_ry}" width="{_rw}" height="{_rh}" fill="#fff" rx="2"/>'
         + zones_html
         + court_lines
         + '</svg>'
     )
 
 
-def _build_defense_court_svg(zone_data, ctx="all"):
+def _build_defense_court_svg(zone_data, ctx="all", mapa=MAPA_V1):
     """SVG boiska FIBA — POŁOWA OBRONY (kosz na dole, linia końcowa y=860).
     ViewBox: 0 0 940 880. Kosz: (470, 765). Klucz: x=323-617, y=512-860.
     Łuk 3PT: r=396, środek=(470,765). 17 stref obrony (20-36).
@@ -11486,9 +12025,24 @@ def _build_defense_court_svg(zone_data, ctx="all"):
             if _v > _ctx_max_def:
                 _ctx_max_def = _v
 
+    if mapa == MAPA_V2:
+        DEF_ZONES = DEF_ZONES_V2
+
+    _sk = skala_napisow(mapa)
+
     zone_els = []
     for z, zone_def in DEF_ZONES.items():
-        _, rx, ry, rw, rh, lx, ly, name, pts_type = zone_def
+        # Mapa v1 ma same prostokaty, v2 takze luki przy linii 3PT. Ksztalt
+        # rozpoznajemy po pierwszym polu krotki — tak samo jak w wykresie ataku.
+        if zone_def[0] == 'rect':
+            _, rx, ry, rw, rh, lx, ly, name, pts_type = zone_def
+            _ksztalt_tpl = (f'<rect x="{rx}" y="{ry}" width="{rw}" height="{rh}" '
+                            f'fill="{{fill}}" stroke="{{stroke}}" stroke-width="1" '
+                            f'stroke-dasharray="5,3"/>')
+        else:
+            _, _path_d, lx, ly, name, pts_type = zone_def
+            _ksztalt_tpl = (f'<path d="{_path_d}" fill="{{fill}}" stroke="{{stroke}}" '
+                            f'stroke-width="1" stroke-dasharray="5,3"/>')
         zd    = zone_data.get(z, {"made": 0, "att": 0})
         made  = float(zd.get("made",  0) or 0)
         att   = float(zd.get("att",   0) or 0)
@@ -11512,16 +12066,16 @@ def _build_defense_court_svg(zone_data, ctx="all"):
             fill, stroke, _stl_tcol = _zone_stl_style(_ctx_val, _ctx_max_def)
             tooltip  = f'<title>Z{z} {name}: {_ctx_lbl} {_fmt_n(_ctx_val)}</title>'
 
-        shape_el = f'<rect x="{rx}" y="{ry}" width="{rw}" height="{rh}" fill="{fill}" stroke="{stroke}" stroke-width="1" stroke-dasharray="5,3"/>'
+        shape_el = _ksztalt_tpl.format(fill=fill, stroke=stroke)
 
         if ctx == "all":
             # Tryb FG% — tylko made/att i procent, bez STL/BR/TO
             if att > 0:
                 texts = (
                     f'<text x="{lx}" y="{ly-10}" text-anchor="middle" dominant-baseline="middle"'
-                    f' font-size="22" font-weight="800" font-family="Arial,sans-serif" fill="#2b4a6b">{ma_txt}</text>'
+                    f' font-size="{round(22 * _sk, 1)}" font-weight="800" font-family="Arial,sans-serif" fill="#2b4a6b">{ma_txt}</text>'
                     f'<text x="{lx}" y="{ly+10}" text-anchor="middle" dominant-baseline="middle"'
-                    f' font-size="18" font-weight="600" font-family="Arial,sans-serif" fill="#3a5a80">{pct_txt}</text>'
+                    f' font-size="{round(18 * _sk, 1)}" font-weight="600" font-family="Arial,sans-serif" fill="#3a5a80">{pct_txt}</text>'
                 )
             else:
                 texts = ""
@@ -11530,7 +12084,7 @@ def _build_defense_court_svg(zone_data, ctx="all"):
             if _ctx_val > 0 and _stl_tcol:
                 texts = (
                     f'<text x="{lx}" y="{ly}" text-anchor="middle" dominant-baseline="middle"'
-                    f' font-size="22" font-weight="900" font-family="Arial,sans-serif"'
+                    f' font-size="{round(22 * _sk, 1)}" font-weight="900" font-family="Arial,sans-serif"'
                     f' fill="{_stl_tcol}">{_fmt_n(_ctx_val)}</text>'
                 )
             else:
@@ -11564,16 +12118,20 @@ def _build_defense_court_svg(zone_data, ctx="all"):
   <line x1="448" y1="820" x2="492" y2="820" stroke="#555" stroke-width="3"/>
   <circle cx="470" cy="765" r="45" fill="none" stroke="#e07000" stroke-width="3"/>"""
 
+    if mapa == MAPA_V2:
+        court_lines = _COURT_LINES_V2
+    _vb, _sw, _sh, (_rx, _ry, _rw, _rh) = wymiary_mapy(mapa)
+
     return (
-        '<svg viewBox="0 0 940 880" xmlns="http://www.w3.org/2000/svg"'
+        f'<svg viewBox="{_vb}" xmlns="http://www.w3.org/2000/svg"'
         ' style="width:100%;display:block;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.13)">'
         '<style>'
-        '.zg rect{cursor:pointer;transition:opacity .18s,filter .18s;opacity:.82}'
-        '.zg:hover rect{opacity:1;filter:brightness(1.06) drop-shadow(0 0 4px rgba(0,0,0,.35))}'
+        '.zg path,.zg rect{cursor:pointer;transition:opacity .18s,filter .18s;opacity:.82}'
+        '.zg:hover path,.zg:hover rect{opacity:1;filter:brightness(1.06) drop-shadow(0 0 4px rgba(0,0,0,.35))}'
         '.zg text{pointer-events:none}'
         '</style>'
-        '<rect width="940" height="880" fill="#fff" rx="10"/>'
-        '<rect x="20" y="20" width="900" height="840" fill="#f4f7fb" rx="2"/>'
+        f'<rect width="{_sw}" height="{_sh}" fill="#fff" rx="10"/>'
+        f'<rect x="{_rx}" y="{_ry}" width="{_rw}" height="{_rh}" fill="#f4f7fb" rx="2"/>'
         + zones_html
         + court_lines
         + '</svg>'
@@ -13250,9 +13808,14 @@ def sezon():
         _to_matches = []
 
     # ── Zone shots sezonu ────────────────────────────────────────────────────────
-    _season_zones_gtk = {}   # GTK atak (zone 1-19, druzyna='gtk')
-    _season_zones_opp = {}   # OPP atak (zone 1-19, druzyna='opp')
-    _season_zones_def = {}   # GTK obrona (zone 20-34, druzyna='gtk')
+    # Zakresy stref bierzemy z mapy sezonu — v1 ma atak 1-19 i obrone 20-36,
+    # v2 atak 1-25 i obrone 26-49. Bez tego agregat sezonu 2026/2027 pokazalby
+    # tylko czesc stref, i to nie tych co trzeba.
+    _mapa_s = mapa_sezonu(sezon_filter)
+    _atk_od, _atk_do, _def_od, _def_do = granice_stref(_mapa_s)
+    _season_zones_gtk = {}   # nasz atak (druzyna='gtk')
+    _season_zones_opp = {}   # atak rywala (druzyna='opp')
+    _season_zones_def = {}   # nasza obrona (druzyna='gtk')
     _zone_sql_cols = ("SUM(zst.made) AS made, SUM(zst.att) AS att,"
                      " COALESCE(SUM(zst.stl),0) AS stl,"
                      " COALESCE(SUM(zst.br),0)  AS br,"
@@ -13268,7 +13831,7 @@ def sezon():
             SELECT zst.zone_id, {_zone_sql_cols}
             FROM zone_shots_team zst
             JOIN matches m ON zst.match_id = m.id
-            WHERE m.sezon=%s AND zst.druzyna='gtk' AND zst.zone_id BETWEEN 1 AND 19{_team_cond}
+            WHERE m.sezon=%s AND zst.druzyna='gtk' AND zst.zone_id BETWEEN {_atk_od} AND {_atk_do}{_team_cond}
             GROUP BY zst.zone_id
         """, _team_params_gtk)
         for r in cur.fetchall():
@@ -13280,7 +13843,7 @@ def sezon():
             SELECT zst.zone_id, {_zone_sql_cols}
             FROM zone_shots_team zst
             JOIN matches m ON zst.match_id = m.id
-            WHERE m.sezon=%s AND zst.druzyna='opp' AND zst.zone_id BETWEEN 1 AND 19{_team_cond}
+            WHERE m.sezon=%s AND zst.druzyna='opp' AND zst.zone_id BETWEEN {_atk_od} AND {_atk_do}{_team_cond}
             GROUP BY zst.zone_id
         """, _team_params_gtk)
         for r in cur.fetchall():
@@ -13292,7 +13855,7 @@ def sezon():
             SELECT zst.zone_id, {_zone_sql_cols}
             FROM zone_shots_team zst
             JOIN matches m ON zst.match_id = m.id
-            WHERE m.sezon=%s AND zst.druzyna='gtk' AND zst.zone_id BETWEEN 20 AND 36{_team_cond}
+            WHERE m.sezon=%s AND zst.druzyna='gtk' AND zst.zone_id BETWEEN {_def_od} AND {_def_do}{_team_cond}
             GROUP BY zst.zone_id
         """, _team_params_gtk)
         for r in cur.fetchall():
@@ -13341,9 +13904,9 @@ def sezon():
                     "p3a":   int(r["p3a"]   or 0),
                 }
                 _z = int(r["zone"])
-                if 1 <= _z <= 19:
+                if strefa_ataku_w(_z, _mapa_s):
                     _shot_match_zones[_mid]["atk"][_z] = _e
-                elif 20 <= _z <= 36:
+                elif strefa_obrony_w(_z, _mapa_s):
                     _shot_match_zones[_mid]["def"][_z] = _e
 
             # Totals per mecz — z match_stats
@@ -13414,7 +13977,7 @@ def sezon():
                                               AND ps.nr = sz.nr
                                               AND ps.druzyna = sz.druzyna
                     WHERE sz.match_id IN ({_phm2}) AND sz.druzyna='gtk'
-                      AND sz.zone BETWEEN 1 AND 19
+                      AND sz.zone BETWEEN {_atk_od} AND {_atk_do}
                     GROUP BY ps.person_id, sz.zone
                     HAVING SUM(sz.att) > 0
                     ORDER BY sz.zone,
@@ -13430,14 +13993,7 @@ def sezon():
                         "att":  int(_pzr["att"]  or 0),
                     })
                 # ── TOP RZUCAJĄCY ZAWODNICY — kategorie stref ─────────────────────────
-                _ts_zone_cats = [
-                    ("2PT",          [1,2,3,4,5,6]),
-                    ("3PT",          [7,8,9,10,11,12,13,14,15,16,17,18,19]),
-                    ("IN THE PAINT", [1,4]),
-                    ("MID. RANGE",   [2,3,5,6,17,18,19]),
-                    ("3PT SPOT",     [7,8,9,10,12]),
-                    ("DEEP 3PT",     [11,13,14,15,16]),
-                ]
+                _ts_zone_cats = kategorie_stref(_mapa_s)
                 for _ts_nm, _ts_zones in _ts_zone_cats:
                     cur.execute(f"""
                         SELECT ps.person_id,
@@ -14964,6 +15520,12 @@ def sezon():
             19: "Top Of The Key",
         }
         _Z_PT = {z: ("2PT" if z <= 6 else "3PT") for z in _Z_NAMES}
+        if _mapa_s == MAPA_V2:
+            # Mapa v2 (od 2026/2027): słownik v1 wyżej opisuje INNE miejsca boiska i inną
+            # punktację (v2: 2PT to strefy 1-13). Nazwy i punkty biorę z opis_strefy, a numer
+            # strefy dokładam do nazwy, bo w v2 nazwy powtarzają się parami lewa/prawa.
+            _Z_NAMES = {z: f"Z{z} {opis_strefy(z, MAPA_V2)[0]}" for z in range(_atk_od, _atk_do + 1)}
+            _Z_PT = {z: ("3PT" if opis_strefy(z, MAPA_V2)[1] == 3 else "2PT") for z in _Z_NAMES}
         _z_zone_miss = sorted([
             {"z": z, "name": _Z_NAMES.get(z, f"Z{z}"), "pt": _Z_PT.get(z, "2PT"),
              "att": d.get("att", 0), "miss": d.get("att", 0) - d.get("made", 0)}
@@ -15129,12 +15691,12 @@ def sezon():
         _zbiork_html = ""
 
     # ── Season Shooting Chart ─────────────────────────────────────────────────
-    _svg_gtk_season = _build_full_court_svg(_season_zones_gtk)
-    _svg_opp_season = _build_full_court_svg(_season_zones_opp)
+    _svg_gtk_season = _build_full_court_svg(_season_zones_gtk, "all", _mapa_s)
+    _svg_opp_season = _build_full_court_svg(_season_zones_opp, "all", _mapa_s)
     # Obrona: jeśli strefy 20-36 puste (mecze nie re-wgrane), fallback = OPP atak
     _def_has_data   = any(v.get("att", 0) > 0 for v in _season_zones_def.values())
-    _svg_def_season = (_build_defense_court_svg(_season_zones_def)
-                       if _def_has_data else _build_full_court_svg(_season_zones_opp))
+    _svg_def_season = (_build_defense_court_svg(_season_zones_def, "all", _mapa_s)
+                       if _def_has_data else _build_full_court_svg(_season_zones_opp, "all", _mapa_s))
     _def_fallback_note = ("" if _def_has_data else
         '<div style="font-size:10px;color:#b07000;background:#fff8e1;border-radius:6px;'
         'padding:5px 10px;margin-top:6px">⚠ Brak danych stref obrony (20-36) — '
@@ -15188,6 +15750,14 @@ def sezon():
         34:"Left Deep Corner",     35:"Logo",               36:"Right Deep Corner",
     }
     _SZ_DEF_PTS = {z: (3 if z >= 31 else 2) for z in range(20, 37)}
+
+    # Mapa v2 ma inne numery, nazwy i punktacje — tabele pod wykresami musza
+    # pokazywac to samo co wykres. Nazwy ida z arkusza STREFY szablonu.
+    if _mapa_s == MAPA_V2:
+        _SZ_ATK_NAMES = {z: opis_strefy(z, MAPA_V2)[0] for z in range(_atk_od, _atk_do + 1)}
+        _SZ_ATK_PTS   = {z: opis_strefy(z, MAPA_V2)[1] for z in range(_atk_od, _atk_do + 1)}
+        _SZ_DEF_NAMES = {z: opis_strefy(z, MAPA_V2)[0] for z in range(_def_od, _def_do + 1)}
+        _SZ_DEF_PTS   = {z: opis_strefy(z, MAPA_V2)[1] for z in range(_def_od, _def_do + 1)}
 
     def _build_season_zone_tbl(zdata, names, pts_map, is_def=False):
         """Tabela stref: Strefa | Typ | M/A | FG% | Pkt | % prób | TO | BR"""
@@ -15300,7 +15870,10 @@ def sezon():
         _ha = int(_hd.get("att", 0) or 0)
         if _ha < 5: continue
         _hm = int(_hd.get("made", 0) or 0)
-        _hc_zones.append((_hz, _hm / _ha, _SZ_ATK_NAMES.get(_hz, f"Z{_hz}"), _hm, _ha))
+        _hc_nm = _SZ_ATK_NAMES.get(_hz, f"Z{_hz}")
+        if _mapa_s == MAPA_V2:
+            _hc_nm = f"Z{_hz} {_hc_nm}"   # w v2 nazwy powtarzają się parami lewa/prawa
+        _hc_zones.append((_hz, _hm / _ha, _hc_nm, _hm, _ha))
     _hc_zones.sort(key=lambda x: x[1], reverse=True)
     _top3_zones = _hc_zones[:3]
     _low3_zones = list(reversed(_hc_zones[-3:])) if len(_hc_zones) >= 3 else list(reversed(_hc_zones))
@@ -15560,19 +16133,29 @@ def sezon():
     # ── Pre-build SVG-y dla nowej wersji Shooting Chart (sumy + średnie) ──────
     _se_svgs = {}     # {(ctx, court): svg}
     for _ctx in ("all","stl","br","press"):
-        _se_svgs[(_ctx,"atk")] = _build_full_court_svg(_season_zones_gtk, _ctx)
-        _se_svgs[(_ctx,"def")] = _build_defense_court_svg(_season_zones_def, _ctx)
+        _se_svgs[(_ctx,"atk")] = _build_full_court_svg(_season_zones_gtk, _ctx, _mapa_s)
+        _se_svgs[(_ctx,"def")] = _build_defense_court_svg(_season_zones_def, _ctx, _mapa_s)
+
+    def _polowa_boiska(svg, etykieta):
+        """Jedna polowa z podpisem. Obie rysuja sie koszem do gory, bo tak
+        czyta sie numer strefy — bez podpisu czytalo sie to jak jedno boisko."""
+        if not svg:
+            return ""
+        return ('<div style="margin-bottom:8px">'
+                '<div style="font-size:9px;font-weight:700;color:#7b8698;text-align:center;'
+                'letter-spacing:.5px;text-transform:uppercase;margin-bottom:3px">'
+                f'{etykieta}</div>{svg}</div>')
 
     _se_svgs_avg = {}   # {(ctx, court): svg — wartości avg}
     for _ctx in ("all","stl","br","press"):
-        _se_svgs_avg[(_ctx,"atk")] = _build_full_court_svg(_season_zones_gtk_avg, _ctx)
-        _se_svgs_avg[(_ctx,"def")] = _build_defense_court_svg(_season_zones_def_avg, _ctx)
+        _se_svgs_avg[(_ctx,"atk")] = _build_full_court_svg(_season_zones_gtk_avg, _ctx, _mapa_s)
+        _se_svgs_avg[(_ctx,"def")] = _build_defense_court_svg(_season_zones_def_avg, _ctx, _mapa_s)
 
     _se_match_svgs = {}  # {(mid, ctx, court): svg}
     for _mid_z, _zd in _shot_match_zones.items():
         for _ctx in ("all","stl","br","press"):
-            _se_match_svgs[(_mid_z,_ctx,"atk")] = _build_full_court_svg(_zd["atk"], _ctx)
-            _se_match_svgs[(_mid_z,_ctx,"def")] = _build_defense_court_svg(_zd["def"], _ctx)
+            _se_match_svgs[(_mid_z,_ctx,"atk")] = _build_full_court_svg(_zd["atk"], _ctx, _mapa_s)
+            _se_match_svgs[(_mid_z,_ctx,"def")] = _build_defense_court_svg(_zd["def"], _ctx, _mapa_s)
 
     # ── Wiersze tabeli — FG% (M/A, %) ─────────────────────────────────────────
     def _f1a(v): return f"{v:.1f}" if v != int(v) else str(int(v))
@@ -15803,9 +16386,18 @@ def sezon():
 
     _season_shot_html = f"""
 <style>
-/* Poniżej ~640px: 3 boiska pod sobą zamiast obok siebie — bez przewijania w bok. */
+/* Siatka zwęża się razem z kartą. Gdy zrobi się ciasno, układ się przełamuje:
+   najpierw mapa ataku na całą szerokość i dwie obronne pod nią obok siebie,
+   a poniżej 640px wszystko jedno pod drugim. Dzięki temu boiska nigdy nie
+   schodzą do rozmiaru, w którym liczby w strefach przestają być czytelne —
+   i nigdy nie trzeba przewijać strony w bok. */
+@media(max-width:1100px){{
+  .se-court-grid{{grid-template-columns:1fr 1fr!important}}
+  .se-court-grid > div:first-child{{grid-column:1 / -1}}
+}}
 @media(max-width:640px){{
-  .se-court-grid{{grid-template-columns:1fr!important;min-width:0!important}}
+  .se-court-grid{{grid-template-columns:1fr!important}}
+  .se-court-grid > div:first-child{{grid-column:auto}}
 }}
 </style>
 <div id="se-shooting-grid">
@@ -15817,9 +16409,10 @@ def sezon():
       <button class="semode" data-mode="avg" onclick="seSwitchMode('avg')">Średnia / mecz</button>
     </div>
   </div>
-  <!-- 3 boiska w jednym rzędzie — 10% większe niż karta, poziomy scroll na małych ekranach -->
+  <!-- 3 boiska w jednym rzędzie. Kolumny w `fr`, bo procenty sumujące się do
+       100% plus przerwy siatki zawsze wystawały poza kartę o szerokość przerw. -->
   <div style="overflow-x:auto;overflow-y:visible;margin-bottom:16px">
-  <div class="se-court-grid" style="display:grid;grid-template-columns:46% 27% 27%;width:100%;min-width:860px;gap:8px;align-items:start">
+  <div class="se-court-grid" style="display:grid;grid-template-columns:46fr 27fr 27fr;width:100%;gap:8px;align-items:start">
     <!-- FG% (połowa ataku) -->
     <div>
       <div style="font-size:10px;font-weight:700;color:#1a2b4a;text-align:center;margin-bottom:4px">FG% — Atak</div>
@@ -15840,8 +16433,8 @@ def sezon():
         <span style="display:inline-flex;align-items:center;gap:3px;font-size:9px"><span style="width:12px;height:8px;background:#757575;border-radius:2px;display:inline-block"></span><b>3–5</b></span>
         <span style="display:inline-flex;align-items:center;gap:3px;font-size:9px"><span style="width:12px;height:8px;background:#c62828;border-radius:2px;display:inline-block"></span><b>6+</b></span>
       </div>
-      <div class="court-sum">{_se_svgs.get(("stl","atk"), "")}{_se_svgs.get(("stl","def"), "")}</div>
-      <div class="court-avg" style="display:none">{_se_svgs_avg.get(("stl","atk"), "")}{_se_svgs_avg.get(("stl","def"), "")}</div>
+      <div class="court-sum">{_polowa_boiska(_se_svgs.get(("stl","atk"), ""), "Atak")}{_polowa_boiska(_se_svgs.get(("stl","def"), ""), "W\u0142asna po\u0142owa")}</div>
+      <div class="court-avg" style="display:none">{_polowa_boiska(_se_svgs_avg.get(("stl","atk"), ""), "Atak")}{_polowa_boiska(_se_svgs_avg.get(("stl","def"), ""), "W\u0142asna po\u0142owa")}</div>
     </div>
     <!-- TO (całe boisko: atak + obrona) -->
     <div>
@@ -15851,8 +16444,8 @@ def sezon():
         <span style="display:inline-flex;align-items:center;gap:3px;font-size:9px"><span style="width:12px;height:8px;background:#757575;border-radius:2px;display:inline-block"></span><b>3–5</b></span>
         <span style="display:inline-flex;align-items:center;gap:3px;font-size:9px"><span style="width:12px;height:8px;background:#c62828;border-radius:2px;display:inline-block"></span><b>6+</b></span>
       </div>
-      <div class="court-sum">{_se_svgs.get(("br","atk"), "")}{_se_svgs.get(("br","def"), "")}</div>
-      <div class="court-avg" style="display:none">{_se_svgs_avg.get(("br","atk"), "")}{_se_svgs_avg.get(("br","def"), "")}</div>
+      <div class="court-sum">{_polowa_boiska(_se_svgs.get(("br","atk"), ""), "Atak")}{_polowa_boiska(_se_svgs.get(("br","def"), ""), "W\u0142asna po\u0142owa")}</div>
+      <div class="court-avg" style="display:none">{_polowa_boiska(_se_svgs_avg.get(("br","atk"), ""), "Atak")}{_polowa_boiska(_se_svgs_avg.get(("br","def"), ""), "W\u0142asna po\u0142owa")}</div>
     </div>
   </div>
   </div>
@@ -23571,7 +24164,12 @@ def _career_zawodnik_view(person_id, zawodnik, _request, db, cur, is_portal=Fals
 
     # Klucz: "career" (wszystkie) + compound "sez|klub|druzyna" per drużyna
     # Oddzielne klucze gdy zawodnik grał w kilku drużynach w tym samym sezonie
-    _matches_by_sezon = {"career": match_ids}
+    # Kariera rysuje sie jedna mapa, wiec obejmuje mecze tylko tej mapy.
+    # Klucze sezonowe sa jednorodne z natury i zostaja nietkniete.
+    _grupy_mapy = mecze_wg_mapy(match_ids)
+    _mids_kariera = _grupy_mapy[0][1] if _grupy_mapy else list(match_ids)
+    _kariera_pominieto = len(match_ids) - len(_mids_kariera)
+    _matches_by_sezon = {"career": _mids_kariera}
     for r in mecze:
         sez   = r.get("sezon","")
         club  = (r.get("club_name")  or "").strip()
@@ -23594,6 +24192,7 @@ def _career_zawodnik_view(person_id, zawodnik, _request, db, cur, is_portal=Fals
             WHERE sz.match_id IN ({_ph}) AND sz.druzyna='gtk' AND ps.person_id=%s
             GROUP BY sz.zone
         """, _mids + [person_id])
+        _mapa_sez = mapa_meczow(_mids)
         _atk, _def = {}, {}
         for r in cur.fetchall():
             _z = int(r["zone"])
@@ -23606,9 +24205,10 @@ def _career_zawodnik_view(person_id, zawodnik, _request, db, cur, is_portal=Fals
                 "p3m":   int(r["p3m"]   or 0),
                 "p3a":   int(r["p3a"]   or 0),
             }
-            if 1 <= _z <= 19:    _atk[_z] = _entry
-            elif 20 <= _z <= 36: _def[_z] = _entry
-        _zone_data[_sez_key] = {"atk": _atk, "def": _def, "n": len(_mids)}
+            if   strefa_ataku_w(_z, _mapa_sez):  _atk[_z] = _entry
+            elif strefa_obrony_w(_z, _mapa_sez): _def[_z] = _entry
+        _zone_data[_sez_key] = {"atk": _atk, "def": _def, "n": len(_mids),
+                                "mapa": _mapa_sez}
 
     # Dla zachowania starych zmiennych (rekordy + tabela): używamy career
     _zd_atk_sum = _zone_data.get("career",{}).get("atk", {})
@@ -23628,11 +24228,12 @@ def _career_zawodnik_view(person_id, zawodnik, _request, db, cur, is_portal=Fals
         _n = _zd["n"]
         _atk = _zd["atk"]; _def = _zd["def"]
         _atk_avg = _avg_zone(_atk, _n); _def_avg = _avg_zone(_def, _n)
+        _mapa_zd = _zd.get("mapa", MAPA_V1)
         for _ctx in ("all","stl","br","press"):
-            _sc_svgs[(_sez_key,_ctx,"atk","sum")] = _build_full_court_svg(_atk, _ctx)
-            _sc_svgs[(_sez_key,_ctx,"def","sum")] = _build_defense_court_svg(_def, _ctx)
-            _sc_svgs[(_sez_key,_ctx,"atk","avg")] = _build_full_court_svg(_atk_avg, _ctx)
-            _sc_svgs[(_sez_key,_ctx,"def","avg")] = _build_defense_court_svg(_def_avg, _ctx)
+            _sc_svgs[(_sez_key,_ctx,"atk","sum")] = _build_full_court_svg(_atk, _ctx, _mapa_zd)
+            _sc_svgs[(_sez_key,_ctx,"def","sum")] = _build_defense_court_svg(_def, _ctx, _mapa_zd)
+            _sc_svgs[(_sez_key,_ctx,"atk","avg")] = _build_full_court_svg(_atk_avg, _ctx, _mapa_zd)
+            _sc_svgs[(_sez_key,_ctx,"def","avg")] = _build_defense_court_svg(_def_avg, _ctx, _mapa_zd)
 
     _sc_panes = []
     # ID format: scsvg-{sezon_safe}-{ctx}-{crt}-{mode}
@@ -23650,6 +24251,19 @@ def _career_zawodnik_view(person_id, zawodnik, _request, db, cur, is_portal=Fals
                         f'style="display:{_vis}">{_sc_svgs.get((_sez_key,_ctx,_crt,_mode),"")}</div>'
                     )
     _sc_panes_html = "".join(_sc_panes)
+
+    # Mecze na starszej mapie nie wchodza do kariery — mowimy o tym wprost,
+    # zamiast pokazywac niepelna sume bez slowa wyjasnienia.
+    _kariera_nota = ""
+    if _kariera_pominieto:
+        _kariera_nota = (
+            '<div style="margin-top:8px;font-size:11px;color:#7a5200;background:#fff8e1;'
+            'border:1px solid #f0e0b0;border-radius:7px;padding:7px 10px">'
+            f'Wykres kariery obejmuje {len(_mids_kariera)} '
+            f'{"mecz" if len(_mids_kariera) == 1 else "mecz\u00f3w"} z bie\u017c\u0105cej mapy stref. '
+            f'Pomini\u0119to {_kariera_pominieto} z wcze\u015bniejszej mapy \u2014 ten sam numer '
+            f'oznacza w niej inne miejsce boiska, wi\u0119c sumowanie da\u0142oby b\u0142\u0105d. '
+            f'Wybierz sezon, \u017ceby zobaczy\u0107 tamte mecze.</div>')
 
     # ─ Tabela meczów (z prawej) — FG% lub STL/TO/BR (suma/średnia) ─
     # Suma: faktyczne wartości; Średnia: dzielone przez liczbę meczów
@@ -24157,6 +24771,7 @@ def _career_zawodnik_view(person_id, zawodnik, _request, db, cur, is_portal=Fals
         <div id="sc-legend" style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid #f0f3f7;min-height:21px"></div>
         <!-- Boisko z animacją -->
         <div style="perspective:1400px">{_sc_panes_html}</div>
+        {_kariera_nota}
       </div>
       <!-- Prawa kolumna: filtr ctx + tabela -->
       <div class="col-lg-6">
@@ -35361,7 +35976,7 @@ body{{background:linear-gradient(135deg,#dde6f5,#e8eef8,#d8e4f2);display:flex;
                    COALESCE((SELECT SUM(poss) FROM match_stats WHERE match_id=m.id AND druzyna='gtk'),0) AS poss_gtk,
                    COALESCE((SELECT SUM(poss) FROM match_stats WHERE match_id=m.id AND druzyna='opp'),0) AS poss_opp
             FROM matches m WHERE m.sezon=%s{_cond_simple.replace(' AND team_id=', ' AND m.team_id=')}
-            ORDER BY m.data_meczu DESC LIMIT 20
+            ORDER BY m.data_meczu DESC, m.id DESC LIMIT 20
         """, _pg)
         recent = cur.fetchall()
     except Exception:
@@ -36043,7 +36658,17 @@ body{{background:linear-gradient(135deg,#dde6f5,#e8eef8,#d8e4f2);display:flex;
   if(!strip) return;
   var paused=false, raf=null, pos=0, speed=0.45;
   var half=0;
-  function setHalf(){ half=strip.scrollWidth/2; }
+  // Zapetlenie polega na doklejeniu kopii kart: skrypt wraca na poczatek po
+  // dojechaniu do polowy szerokosci. Kopia ma sens tylko wtedy, gdy karty nie
+  // miesza sie w pasku — inaczej staje obok oryginalu i udaje kolejny mecz.
+  function trzebaPrzewijac(){ return strip.scrollWidth > strip.clientWidth + 8; }
+  function schowajSterowanie(){
+    ['mc-arr-l','mc-arr-r'].forEach(function(id){
+      var el=document.getElementById(id); if(el) el.style.display='none';
+    });
+    var w=strip.parentElement;
+    if(w) w.querySelectorAll('.mc-fade-l,.mc-fade-r').forEach(function(el){ el.style.display='none'; });
+  }
   function frame(){
     if(!paused){
       pos+=speed;
@@ -36063,7 +36688,12 @@ body{{background:linear-gradient(135deg,#dde6f5,#e8eef8,#d8e4f2);display:flex;
   };
   strip.addEventListener('mouseenter',mcPause);
   strip.addEventListener('mouseleave',mcResume);
-  setTimeout(function(){ setHalf(); raf=requestAnimationFrame(frame); },120);
+  setTimeout(function(){
+    if(!trzebaPrzewijac()){ schowajSterowanie(); return; }
+    strip.insertAdjacentHTML('beforeend', strip.innerHTML);
+    half=strip.scrollWidth/2;
+    raf=requestAnimationFrame(frame);
+  },120);
 })();
 </script>"""
 
@@ -36075,7 +36705,7 @@ body{{background:linear-gradient(135deg,#dde6f5,#e8eef8,#d8e4f2);display:flex;
             + '<div class="mc-fade-r"></div>'
             + '<button class="mc-arr" id="mc-arr-l" onclick="mcArrow(-1)">&#8249;</button>'
             + '<div class="mc-strip" id="mc-strip">'
-            + _mc_cards + _mc_cards
+            + _mc_cards
             + '</div>'
             + '<button class="mc-arr" id="mc-arr-r" onclick="mcArrow(1)">&#8250;</button>'
             + '</div>'
@@ -37408,20 +38038,21 @@ def portal_mecz(match_id):
     _PCTX = {"all": "FG%", "stl": "STL", "br": "TO", "press": "Break Plays"}
 
     # Team SVGs — 2 drużyny × 4 filtry × 2 boiska (atk/def)
+    _mapa_pm = mapa_meczu(match_id)
     _psvgs = {}   # {(druzyna, ctx, court): svg_html}
     for _ctx in _PCTX:
         for _druz, _raw in [("gtk", _raw_gtk), ("opp", _raw_opp)]:
             _fd = _portal_filter_zones(_raw, _ctx)
-            _psvgs[(_druz, _ctx, "atk")] = _build_full_court_svg(_fd, _ctx)
-            _psvgs[(_druz, _ctx, "def")] = _build_defense_court_svg(_fd, _ctx)
+            _psvgs[(_druz, _ctx, "atk")] = _build_full_court_svg(_fd, _ctx, _mapa_pm)
+            _psvgs[(_druz, _ctx, "def")] = _build_defense_court_svg(_fd, _ctx, _mapa_pm)
 
     # Player SVGs — nr × 4 filtry × 2 boiska
     _psvgs_pl = {}   # {(nr, ctx, court): svg_html}
     for _nr, _zdata in _player_zones_gtk.items():
         for _ctx in _PCTX:
             _fd = _portal_filter_zones(_zdata, _ctx)
-            _psvgs_pl[(_nr, _ctx, "atk")] = _build_full_court_svg(_fd, _ctx)
-            _psvgs_pl[(_nr, _ctx, "def")] = _build_defense_court_svg(_fd, _ctx)
+            _psvgs_pl[(_nr, _ctx, "atk")] = _build_full_court_svg(_fd, _ctx, _mapa_pm)
+            _psvgs_pl[(_nr, _ctx, "def")] = _build_defense_court_svg(_fd, _ctx, _mapa_pm)
 
     # Lista zawodników GTK posortowana po nr
     _gtk_nrs = sorted(_player_zones_gtk.keys())
@@ -38288,6 +38919,7 @@ def portal_mecz(match_id):
 
         sheets_all_p = {0: {}, 1: {}}
         sheets_tos_p = {0: {}, 1: {}}
+        _flatKp = {}     # szablon v5: arkusz rozbity na akcje (patrz to_splaszcz)
         try:
             import os as _osKp; import openpyxl as _opxKp
             _epathp = (m.get("file_path") or "") if (m.get("file_path") and _osKp.path.exists(m.get("file_path",""))) \
@@ -38302,6 +38934,9 @@ def portal_mecz(match_id):
                         if any(v is not None for v in _rv):
                             _rows.append(list(_rv))
                     _sheetsKp[_si] = _rows
+                if szablon_v5(_wbKp):
+                    for _si in (0, 1):
+                        _flatKp[_si] = to_splaszcz(to_wiersze(_wbKp[_snKp[_si]]) if _si < len(_snKp) else [])
                 _wbKp.close()
                 def _is_to_p(row):
                     if len(row) <= 9: return False
@@ -38332,10 +38967,23 @@ def portal_mecz(match_id):
                             q_tos_p.setdefault(qn, []).append((elapsed_B, codes))
                     sheets_all_p[sidx] = q_all_p
                     sheets_tos_p[sidx] = q_tos_p
+                if _flatKp:
+                    for sidx in [0, 1]:
+                        sheets_tos_p[sidx] = {}
+                        for _zd in _flatKp[sidx]["zdarzenia"]:
+                            sheets_tos_p[sidx].setdefault(_zd["q"], []).append(
+                                (_zd["t_raw"], to_okno(_flatKp[sidx], _zd["anchor"], _zd["q"])))
         except Exception as _eeKp:
             print(f"[key_moments_table portal] excel: {_eeKp}", flush=True)
 
         def get_codes_p(sidx_own, sidx_target, qn, idx_own):
+            if _flatKp:
+                _evs = [z for z in _flatKp[sidx_own]["zdarzenia"] if z["q"] == qn]
+                if idx_own >= len(_evs): return []
+                if sidx_target == sidx_own:
+                    return to_okno(_flatKp[sidx_own], _evs[idx_own]["anchor"], qn)
+                _k = to_kotwica_rywala(_evs[idx_own], _flatKp[sidx_own], _flatKp[sidx_target])
+                return to_okno(_flatKp[sidx_target], _k, qn) if _k is not None else []
             tos_own = sheets_tos_p.get(sidx_own, {}).get(qn, [])
             if idx_own >= len(tos_own): return []
             own_elapsed, own_codes = tos_own[idx_own]
@@ -38493,10 +39141,12 @@ def portal_mecz(match_id):
         _mz_c2h2p = {k: _MzCntP() for k in _mz_c2p}
         _mz_gtnp = sum(len(v) for v in sheets_tos_p.get(0, {}).values())
         _mz_otnp = sum(len(v) for v in sheets_tos_p.get(1, {}).values())
+        # v5: okno zaczyna sie od akcji po przerwie; stary szablon: od wiersza z T, wiec pierwsza akcja to [1]
+        _own_ixp = 0 if _flatKp else 1
         for _qn2p, _tl2p in sheets_tos_p.get(0, {}).items():
             _hf2p = "h1" if _qn2p <= 2 else "h2"
             for _ix2p, (_e2p, _c52p) in enumerate(_tl2p):
-                _l1p = _mz_nc2p(_c52p[1] if len(_c52p) > 1 else None)
+                _l1p = _mz_nc2p(_c52p[_own_ixp] if len(_c52p) > _own_ixp else None)
                 if _l1p:
                     _mz_c2p["gtk_to_gtk"][_l1p] += 1
                     (_mz_c2h1p if _hf2p == "h1" else _mz_c2h2p)["gtk_to_gtk"][_l1p] += 1
@@ -38508,7 +39158,7 @@ def portal_mecz(match_id):
         for _qn2p, _tl2p in sheets_tos_p.get(1, {}).items():
             _hf2p = "h1" if _qn2p <= 2 else "h2"
             for _ix2p, (_e2p, _c52p) in enumerate(_tl2p):
-                _l1p = _mz_nc2p(_c52p[1] if len(_c52p) > 1 else None)
+                _l1p = _mz_nc2p(_c52p[_own_ixp] if len(_c52p) > _own_ixp else None)
                 if _l1p:
                     _mz_c2p["opp_to_opp"][_l1p] += 1
                     (_mz_c2h1p if _hf2p == "h1" else _mz_c2h2p)["opp_to_opp"][_l1p] += 1
@@ -40674,8 +41324,9 @@ def portal_zawodnik(pid):
         _db2 = get_db(); _cur2 = _db2.cursor()
         _match_ids = [r["match_id"] for r in mecze_stats]
         _nrs       = list(set(int(r["nr"]) for r in mecze_stats if r.get("nr")))
-        _zone_data_atk = {}  # strefy 1-19 per gracz (agregat sezonu)
-        _zone_data_def = {}  # strefy 20-36 team-level (agregat sezonu, mecze gracza)
+        _mapa_pz = mapa_meczow(_match_ids)
+        _zone_data_atk = {}  # strefy ataku per gracz (agregat sezonu)
+        _zone_data_def = {}  # strefy obrony (agregat sezonu, mecze gracza)
         if _match_ids:
             _ph_m = ",".join(["%s"]*len(_match_ids))
             # Atak (strefy 1-19) + Obrona (strefy 20-36) — join przez player_stats
@@ -40698,26 +41349,26 @@ def portal_zawodnik(pid):
                     "br":    int(_r["br"]    or 0),
                     "press": int(_r["press"] or 0),
                 }
-                if 1 <= _z <= 19:
+                if strefa_ataku_w(_z, _mapa_pz):
                     _zone_data_atk[_z] = _entry
-                elif 20 <= _z <= 36:
+                elif strefa_obrony_w(_z, _mapa_pz):
                     _zone_data_def[_z] = _entry
         _cur2.close()
 
         # Buduj 8 SVG dla sezonu — zawsze pełne boisko (puste = bez markerów)
         for _ctx in ("all","stl","br","press"):
-            portal_zone_svgs[(_ctx,"atk")] = _build_full_court_svg(_zone_data_atk, _ctx)
-            portal_zone_svgs[(_ctx,"def")] = _build_defense_court_svg(_zone_data_def, _ctx)
+            portal_zone_svgs[(_ctx,"atk")] = _build_full_court_svg(_zone_data_atk, _ctx, _mapa_pz)
+            portal_zone_svgs[(_ctx,"def")] = _build_defense_court_svg(_zone_data_def, _ctx, _mapa_pz)
 
         # Tabela stref (zostaje jak była — FG%)
         portal_zone_table = ""
         if _zone_data_atk:
             _zt_rows = ""
-            for _z in range(1, 20):
+            for _z in zakres_stref("attack", _mapa_pz):
                 _zd = _zone_data_atk.get(_z, {"made":0,"att":0})
                 if _zd["att"] == 0: continue
-                _name = ZONE_META.get(_z, {}).get("name", f"Z{_z}")
-                _pts_t = "3PT" if ZONE_META.get(_z, {}).get("pts", 2) == 3 else "2PT"
+                _name, _pkt_pz = opis_strefy(_z, _mapa_pz)
+                _pts_t = "3PT" if _pkt_pz == 3 else "2PT"
                 _pct = f"{_zd['made']/_zd['att']*100:.1f}%" if _zd["att"] else "—"
                 _p = _zd["made"]/_zd["att"] if _zd["att"] else 0
                 _rs = ("background:rgba(27,138,78,.12)" if _p >= 0.90
@@ -40753,6 +41404,7 @@ def portal_zawodnik(pid):
             _mid = _mr["match_id"]
             _mnr = int(_mr.get("nr") or 0)
             if not _mnr: continue
+            _mapa_pm3 = mapa_meczu(_mid)
             _db3 = get_db(); _cur3 = _db3.cursor()
             # Atak (1-19) + Obrona (20-36) — wszystko per gracz z shot_zones
             _cur3.execute("""SELECT zone, SUM(made) AS made, SUM(att) AS att,
@@ -40772,9 +41424,9 @@ def portal_zawodnik(pid):
                     "br":    int(_r3["br"]    or 0),
                     "press": int(_r3["press"] or 0),
                 }
-                if 1 <= _z3 <= 19:
+                if strefa_ataku_w(_z3, _mapa_pm3):
                     _mzd_atk[_z3] = _entry3
-                elif 20 <= _z3 <= 36:
+                elif strefa_obrony_w(_z3, _mapa_pm3):
                     _mzd_def[_z3] = _entry3
                 _m_stl   += _entry3["stl"]
                 _m_br    += _entry3["br"]
@@ -40784,8 +41436,8 @@ def portal_zawodnik(pid):
             # Zawsze buduj oba boiska — puste dane = boisko bez markerów
             if _mzd_atk or _mzd_def:
                 for _ctx in ("all","stl","br","press"):
-                    portal_match_svgs[(_mid,_ctx,"atk")] = _build_full_court_svg(_mzd_atk, _ctx)
-                    portal_match_svgs[(_mid,_ctx,"def")] = _build_defense_court_svg(_mzd_def, _ctx)
+                    portal_match_svgs[(_mid,_ctx,"atk")] = _build_full_court_svg(_mzd_atk, _ctx, _mapa_pm3)
+                    portal_match_svgs[(_mid,_ctx,"def")] = _build_defense_court_svg(_mzd_def, _ctx, _mapa_pm3)
     except Exception:
         pass
 
