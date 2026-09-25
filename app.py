@@ -1272,6 +1272,22 @@ def set_setting(key, value):
     db.commit()
     cur.close()
 
+# ══════════════════════════════════════════════════════════════════════════════
+# SZABLON MECZOWY: ARKUSZE POMOCNICZE
+# ══════════════════════════════════════════════════════════════════════════════
+
+# Arkusze pomocnicze szablonu. Wszystko poza nimi to arkusz z akcjami jednej
+# drużyny. Lista była wpisana na sztywno w kilkunastu miejscach — dołożenie
+# arkusza do szablonu wymagało poprawki w każdym z nich, a przeoczone miejsce
+# brało nowy arkusz za drużynę.
+ARKUSZE_POMOCNICZE = {"META", "KODY", "LEGENDA", "SKŁADY", "SKLADY", "STREFY"}
+
+
+def arkusze_druzyn(wb):
+    """Arkusze z akcjami, w kolejności z pliku: [drużyna A, drużyna B]."""
+    return [s for s in wb.sheetnames if s.upper() not in ARKUSZE_POMOCNICZE]
+
+
 _TRAINING_CATALOG_SEED = [
     ("Technical","Dribbling","Offense",""),("Technical","Passing","Offense",""),
     ("Technical","Shooting","Offense",""),("Technical","Finishing","Offense",""),
@@ -2441,7 +2457,7 @@ def calc_play_time(match_id):
         # Używaj normalnego trybu (nie read_only) — read_only z values_only=True
         # nie działa poprawnie we wszystkich wersjach openpyxl
         wb = _opx.load_workbook(path, data_only=True)
-        _sheets_data = [s for s in wb.sheetnames if s.upper() not in ("META","KODY","LEGENDA")]
+        _sheets_data = arkusze_druzyn(wb)
         if len(_sheets_data) < 2:
             wb.close(); return {}
         name_a, name_b = _sheets_data[0], _sheets_data[1]
@@ -2494,7 +2510,7 @@ def load_player_action_log(match_id, nr):
     try:
         import openpyxl as _opx
         wb = _opx.load_workbook(path, data_only=True)
-        sheets = [s for s in wb.sheetnames if s.upper() not in ("META","KODY","LEGENDA")]
+        sheets = arkusze_druzyn(wb)
         if not sheets:
             wb.close(); return []
         ws = wb[sheets[0]]  # GTK
@@ -17195,7 +17211,7 @@ _seApplyMode();
                 continue
             try:
                 _twb  = _opxl_to.load_workbook(_tpath, data_only=True)
-                _tsns = [s for s in _twb.sheetnames if s.upper() not in ("META","KODY","LEGENDA")]
+                _tsns = arkusze_druzyn(_twb)
                 _tsheets = {}
                 for _tsi, _tsn in enumerate(_tsns[:2]):
                     _trows = [list(rv) for rv in _twb[_tsn].iter_rows(min_row=2, values_only=True)
@@ -19112,7 +19128,7 @@ def load_all_action_log(match_id):
     try:
         import openpyxl as _opx
         wb = _opx.load_workbook(path, data_only=True)
-        sheets = [s for s in wb.sheetnames if s.upper() not in ("META","KODY","LEGENDA")]
+        sheets = arkusze_druzyn(wb)
         if not sheets: wb.close(); return []
         rows  = [tuple(_val(c) for c in r) for r in wb[sheets[0]].iter_rows(min_row=2)]
         rows_b= [tuple(_val(c) for c in r) for r in wb[sheets[1]].iter_rows(min_row=2)] if len(sheets)>=2 else []
@@ -20217,7 +20233,7 @@ def zawodnicy_siec_asyst():
             continue
         try:
             wb = _opx.load_workbook(path, data_only=True)
-            sheets = [s for s in wb.sheetnames if s.upper() not in ("META","KODY","LEGENDA")]
+            sheets = arkusze_druzyn(wb)
             if not sheets:
                 wb.close(); n_files_error += 1; continue
             ws = wb[sheets[0]]   # GTK
@@ -38278,7 +38294,7 @@ def portal_mecz(match_id):
                       else _osKp.path.join(MATCH_FILES_DIR, f"{match_id}.xlsx")
             if _osKp.path.exists(_epathp):
                 _wbKp = _opxKp.load_workbook(_epathp, data_only=True)
-                _snKp = [s for s in _wbKp.sheetnames if s.upper() not in ("META","KODY","LEGENDA")]
+                _snKp = arkusze_druzyn(_wbKp)
                 _sheetsKp = {}
                 for _si, _sn in enumerate(_snKp[:2]):
                     _rows = []
