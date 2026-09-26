@@ -650,6 +650,7 @@ def init_db():
         "ALTER TABLE matches ADD COLUMN IF NOT EXISTS runda VARCHAR(50) DEFAULT ''",
         "ALTER TABLE matches ADD COLUMN IF NOT EXISTS kolejka VARCHAR(50) DEFAULT ''",
         "ALTER TABLE matches ADD COLUMN IF NOT EXISTS miejsce VARCHAR(20) DEFAULT ''",
+        "ALTER TABLE matches ADD COLUMN IF NOT EXISTS video_url TEXT DEFAULT ''",
         "ALTER TABLE player_stats ADD COLUMN IF NOT EXISTS roster_id INTEGER REFERENCES roster(id) ON DELETE SET NULL",
         "ALTER TABLE player_stats ADD COLUMN IF NOT EXISTS stl INTEGER DEFAULT 0",
         "ALTER TABLE player_stats ADD COLUMN IF NOT EXISTS blk INTEGER DEFAULT 0",
@@ -1636,6 +1637,45 @@ def skrot_druzyny(nazwa):
     if len(slowa[0]) >= 3:
         return slowa[0][:3].upper()
     return "".join(s[0] for s in slowa[:3]).upper()
+
+
+_YT_ID_RE = re.compile(r"^[A-Za-z0-9_-]{11}$")
+
+# Ikona YouTube rysowana w kodzie, nie pobierana z sieci: strona nie czeka na
+# obcy serwer i nie zdradza mu, kto oglada mecz. Trojkat ma kolor plyty.
+_YT_IKONA = (
+    '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
+    '<path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 '
+    '31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 '
+    '9.4-.5a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8z"/>'
+    '<path d="M9.6 15.6 15.8 12 9.6 8.4z" fill="#10161f"/></svg>')
+
+
+def youtube_id(wklejone):
+    """Wyciaga 11-znakowy identyfikator filmu z tego, co wkleil uzytkownik.
+
+    Zwraca pusty napis, gdy nie rozpoznano — wtedy nic nie zapisujemy i nic
+    nie pokazujemy. Obsluzone formy: youtu.be/<id>, watch?v=<id>, /live/<id>,
+    /shorts/<id>, /embed/<id> oraz sam identyfikator. Ogony w rodzaju ?t=90,
+    &si=..., &list=... sa pomijane, bo szukamy tylko identyfikatora.
+    """
+    s = (wklejone or "").strip()
+    if not s:
+        return ""
+    if _YT_ID_RE.match(s):
+        return s
+    for wzor in (r"youtu\.be/([A-Za-z0-9_-]{11})",
+                 r"[?&]v=([A-Za-z0-9_-]{11})",
+                 r"youtube\.com/(?:live|shorts|embed)/([A-Za-z0-9_-]{11})"):
+        dop = re.search(wzor, s)
+        if dop:
+            return dop.group(1)
+    return ""
+
+
+def youtube_adres(identyfikator):
+    """Kanoniczny adres filmu albo pusty napis."""
+    return f"https://www.youtube.com/watch?v={identyfikator}" if identyfikator else ""
 
 
 def klub_meczu(m):
@@ -40597,6 +40637,14 @@ def portal_mecz(match_id):
         + '</b>'
         for i, p in enumerate(_meta_parts))
 
+    # Odnosnik do nagrania — tylko gdy mecz ma rozpoznany film.
+    _yt_id   = youtube_id(m.get("video_url"))
+    _yt_opis = "Watch game" if _is_en_badge else "Obejrzyj mecz"
+    _yt_html = (
+        f'<a class="mb-yt" href="{youtube_adres(_yt_id)}" target="_blank" '
+        f'rel="noopener noreferrer" title="{_yt_opis}" aria-label="{_yt_opis}">'
+        f'{_YT_IKONA}<span>{_yt_opis}</span></a>') if _yt_id else ''
+
     _qs_html = ""
     for _i, (_qn, _qg, _qo) in enumerate(_kwarty_belki):
         _lbl = ((f"Q{_qn}" if _qn <= 4 else f"OT{_qn - 4}") if _is_en_badge
@@ -40643,7 +40691,8 @@ def portal_mecz(match_id):
         '<div class="mb-scw"><div class="mb-sc">'
         f'<span class="{"mb-hi" if _wyn_g >= _wyn_o else "mb-lo"}">{_wyn_g}</span>'
         '<span class="mb-cl">:</span>'
-        f'<span class="{"mb-hi" if _wyn_o >= _wyn_g else "mb-lo"}">{_wyn_o}</span></div></div>'
+        f'<span class="{"mb-hi" if _wyn_o >= _wyn_g else "mb-lo"}">{_wyn_o}</span></div>'
+        + _yt_html + '</div>'
         f'<div class="mb-team mb-team--b">{_tekst_belki(name_opp)}{_kafel_opp}</div>'
         '</div>'
         + (f'<div class="mb-qs" style="--qn:{len(_kwarty_belki)}">{_qs_html}</div>'
@@ -41493,6 +41542,21 @@ function sortPTable(tid, col) {{
 .mb-sc .mb-lo{{color:rgba(255,255,255,.66)}}
 .mb-sc .mb-cl{{font-size:.5em;color:rgba(255,255,255,.38);transform:translateY(-.08em)}}
 
+/* Odnosnik do nagrania. Czerwien YouTube tylko na znaczku — podpis zostaje
+   jasny, zeby kontrast do ciemnej plyty nie spadl ponizej progu. Obszar
+   klikalny ma ponad 40 px wysokosci, zeby dalo sie w niego trafic kciukiem. */
+.mb-yt{{display:inline-flex;align-items:center;gap:8px;margin-top:2px;padding:7px 13px;
+  border-radius:999px;text-decoration:none;color:#ff3d3d;
+  background:rgba(255,255,255,.05);box-shadow:inset 0 0 0 1px rgba(255,255,255,.10);
+  transition:transform .12s ease,color .12s ease,background .12s ease}}
+.mb-yt svg{{width:26px;height:26px;fill:currentColor;display:block;flex:0 0 auto}}
+.mb-yt span{{font-family:ui-monospace,"Segoe UI Mono",Menlo,Consolas,monospace;
+  font-size:.62rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+  color:#d6e0ec;white-space:nowrap}}
+.mb-yt:hover,.mb-yt:focus-visible{{color:#ff0000;background:rgba(255,255,255,.09);transform:scale(1.03)}}
+.mb-yt:hover span,.mb-yt:focus-visible span{{color:#fff}}
+.mb-yt:focus-visible{{outline:2px solid #fff;outline-offset:3px}}
+
 .mb-qs{{position:relative;z-index:2;display:grid;grid-template-columns:repeat(var(--qn,4),minmax(0,1fr));
   border-top:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.025)}}
 .mb-q{{position:relative;padding:9px 4px 11px;text-align:center;
@@ -41541,6 +41605,9 @@ function sortPTable(tid, col) {{
   .mb-rule,.mb-team--b .mb-rule{{margin-left:auto;margin-right:auto;width:26px}}
   .mb-midrow{{padding:11px var(--mb-pad) 0}}
   .mb-tag{{font-size:.55rem;letter-spacing:.09em}}
+  .mb-yt{{padding:9px 11px;gap:6px}}
+  .mb-yt svg{{width:22px;height:22px}}
+  .mb-yt span{{font-size:.56rem;letter-spacing:.09em}}
   .mb-fv{{font-size:.85rem}}
 }}
 .badge-win{{background:#c8f7c5;color:#1a5c2a;border-radius:20px;font-weight:700;display:inline-block}}
