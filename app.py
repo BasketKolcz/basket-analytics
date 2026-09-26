@@ -40625,7 +40625,6 @@ def portal_mecz(match_id):
         'chg':   "Lead changes"  if _is_en_badge else "Zmiany prowadzenia",
         'run':   "Longest run"   if _is_en_badge else "Najdłuższa seria",
         'time':  "Time in lead"  if _is_en_badge else "Czas na prowadzeniu",
-        'brk':   "TURNING POINT" if _is_en_badge else "PRZEŁOM",
         'pts':   "pts"           if _is_en_badge else "pkt",
     }
 
@@ -40652,9 +40651,7 @@ def portal_mecz(match_id):
         _sum = max(1, _qg + _qo)
         _qs_html += (
             f'<div class="mb-q{" mb-q--key" if _przelom == _i else ""}">'
-            + (f'<div class="mb-kl">{_et["brk"]}</div>' if _przelom == _i
-               else '<div class="mb-kl" style="visibility:hidden">&nbsp;</div>')
-            + f'<div class="mb-ql">{_lbl}</div>'
+            f'<div class="mb-ql">{_lbl}</div>'
             f'<div class="mb-qv"><span class="mb-a{" mb-w" if _qg > _qo else ""}">{_qg}</span>'
             f'<span class="mb-s">:</span>'
             f'<span class="mb-b{" mb-w" if _qo > _qg else ""}">{_qo}</span></div>'
@@ -41564,8 +41561,6 @@ function sortPTable(tid, col) {{
 .mb-q:first-child{{border-left:0}}
 .mb-q--key{{background:rgba(255,255,255,.06)}}
 .mb-q--key::before{{content:"";position:absolute;left:0;right:0;top:-1px;height:2px;background:var(--kacc)}}
-.mb-kl{{font:800 .5rem/1 ui-monospace,"Segoe UI Mono",Menlo,Consolas,monospace;letter-spacing:.13em;
-  color:var(--kacc);margin-bottom:5px}}
 .mb-ql{{font:700 .56rem/1 ui-monospace,"Segoe UI Mono",Menlo,Consolas,monospace;letter-spacing:.17em;color:#96a7bb}}
 .mb-qv{{margin-top:6px;font-family:ui-monospace,"Segoe UI Mono",Menlo,Consolas,monospace;font-weight:800;
   font-size:clamp(.8rem,2.2vw,1.05rem);white-space:nowrap;color:rgba(255,255,255,.62)}}
