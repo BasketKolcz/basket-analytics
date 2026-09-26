@@ -66,7 +66,7 @@ def _portal_only():
     if os.environ.get("PORTAL_ONLY", "").lower() != "true":
         return
     p = request.path
-    if p == "/portal" or p.startswith("/portal/") or p.startswith("/static/") or p == "/favicon.ico":
+    if p == "/portal" or p.startswith("/portal/") or p.startswith("/static/") or p.startswith("/logo/") or p == "/favicon.ico":
         return
     # Widoki /sezon* i /zawodnicy* w trybie osadzenia (embed=1) są renderowane
     # wewnątrz portalu (Mapa Rzutów / Sieć Asyst / Zbiórka / Akcje) — bez
@@ -227,6 +227,10 @@ def _min_str_to_sec(s):
 @app.before_request
 def keep_session_alive():
     """Odświeżaj sesję przy każdym żądaniu — zapobiega wylogowaniu."""
+    # Logo idzie z dobowa pamiecia podreczna. Ciasteczko sesji zmieniajace sie co
+    # sekunde (i Vary: Cookie) uniewazniloby ja przy kazdym zadaniu.
+    if request.path.startswith("/logo/"):
+        return
     session.modified = True
     if session.get("logged_in"):
         session.permanent = True
@@ -1285,6 +1289,503 @@ def _ensure_db_initialized():
             _db_ready = True
         except Exception:
             pass
+
+
+def logo_url(safe_klub):
+    """Adres logo klubu albo pusty napis, gdy klub go nie ma.
+
+    `safe_klub` to nazwa po zamianie spacji na podkreslenia — dokladnie taka,
+    jaka stoi w kluczu `logo_<nazwa>` w settings. Dlugosc i skrot liczy baza,
+    zeby nie ciagnac 1,5 MB base64 wylacznie dla stwierdzenia, ze logo istnieje.
+
+    Do adresu dochodzi `?v=<skrot tresci>`: obraz idzie z dobowa pamiecia
+    podreczna, wiec bez tego po podmianie logo przegladarka trzymalaby stare.
+    """
+    from urllib.parse import quote as _q
+    safe = (safe_klub or "").strip()
+    if not safe:
+        return ""
+    db = get_db(); cur = db.cursor()
+    try:
+        cur.execute("SELECT length(value) AS n, substr(md5(value),1,8) AS h "
+                    "FROM settings WHERE key=%s", (f"logo_{safe}",))
+        r = cur.fetchone()
+        if not (r and (r["n"] or 0) > 32):
+            return ""
+        return f"/logo/{_q(safe, safe='')}?v={r['h']}"
+    except Exception:
+        try: db.rollback()
+        except Exception: pass
+        return ""
+    finally:
+        cur.close()
+
+
+def slug_druzyny(nazwa):
+    """Klucz logo z nazwy druzyny: bez ogonkow, male litery, myslniki.
+
+    Nazwy rywali przychodza z plikow meczowych i roznie sie je zapisuje, wiec
+    klucz musi znosic ogonki, wielkosc liter i interpunkcje.
+    """
+    zam = str.maketrans({
+        "ł": "l", "Ł": "L", "ą": "a", "Ą": "A", "ć": "c", "Ć": "C",
+        "ę": "e", "Ę": "E", "ń": "n", "Ń": "N", "ó": "o", "Ó": "O",
+        "ś": "s", "Ś": "S", "ź": "z", "Ź": "Z", "ż": "z", "Ż": "Z"})
+    t = unicodedata.normalize("NFKD", str(nazwa or "").translate(zam))
+    t = "".join(c for c in t if not unicodedata.combining(c)).lower()
+    return re.sub(r"[^a-z0-9]+", "-", t).strip("-")[:60]
+
+
+_BARWY_BELKI_JS = """
+// Barwy klubowe z herbu dla belki wyniku meczu.
+//
+// Serwer renderuje belke w barwach domyslnych portalu i to jest stan poprawny sam
+// w sobie — ten skrypt tylko go podmienia, gdy uda sie odczytac barwy z herbow.
+// Dzieki temu brak JS, brak herbu albo zablokowane plotno nie psuja niczego.
+//
+// Dwie decyzje wynikajace z tego, jak wygladaja realne herby:
+// 1. Piksele niemal biale, niemal czarne i szare odrzucamy. Herb klubowy prawie
+//    zawsze ma bialy kontur i czarny obrys — bez tego filtru kazdy klub dostalby
+//    ten sam bialy kolor.
+// 2. Kolory zliczamy po odcieniu (HSL), nie w siatce RGB. Ten sam pomarancz w
+//    cieniu i w swietle to dla kibica jeden kolor klubu, a w siatce RGB wpada do
+//    dwoch kubelkow i przegrywa z tlem.
+(function () {
+  function rgb2hsl(r, g, b) {
+    r /= 255; g /= 255; b /= 255;
+    var mx = Math.max(r, g, b), mn = Math.min(r, g, b), d = mx - mn;
+    var h = 0, s = 0, l = (mx + mn) / 2;
+    if (d) {
+      s = l > 0.5 ? d / (2 - mx - mn) : d / (mx + mn);
+      if (mx === r) h = ((g - b) / d + (g < b ? 6 : 0));
+      else if (mx === g) h = ((b - r) / d + 2);
+      else h = ((r - g) / d + 4);
+      h *= 60;
+    }
+    return [h, s, l];
+  }
+  function hex(r, g, b) {
+    return '#' + [r, g, b].map(function (v) {
+      return Math.max(0, Math.min(255, Math.round(v))).toString(16).padStart(2, '0');
+    }).join('');
+  }
+  function naRgb(h) {
+    h = h.replace('#', '');
+    if (h.length === 3) h = h[0] + h[0] + h[1] + h[1] + h[2] + h[2];
+    return [parseInt(h.slice(0, 2), 16), parseInt(h.slice(2, 4), 16), parseInt(h.slice(4, 6), 16)];
+  }
+  function jasnosc(h) {
+    var c = naRgb(h).map(function (v) {
+      v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+    });
+    return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2];
+  }
+  function zmieszaj(a, b, k) {
+    var x = naRgb(a), y = naRgb(b);
+    return hex(x[0] + (y[0] - x[0]) * k, x[1] + (y[1] - x[1]) * k, x[2] + (y[2] - x[2]) * k);
+  }
+  function rgba(h, a) { var c = naRgb(h); return 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',' + a + ')'; }
+
+  // Akcent czytelny na ciemnej plycie: jasniejszy z dwoch kolorow herbu,
+  // rozjasniany dopoki nie da rady odciac sie od tla.
+  function naCiemnym(c1, c2) {
+    var w = jasnosc(c1) >= jasnosc(c2) ? c1 : c2, i = 0;
+    while (jasnosc(w) < 0.22 && i < 8) { w = zmieszaj(w, '#ffffff', 0.18); i++; }
+    return w;
+  }
+  function czytelny(c) {
+    var w = c, i = 0;
+    while (jasnosc(w) < 0.22 && i < 8) { w = zmieszaj(w, '#ffffff', 0.18); i++; }
+    return w;
+  }
+  function odcien(h) { var c = naRgb(h); return rgb2hsl(c[0], c[1], c[2])[0]; }
+  function bliskie(x, y) {
+    var d = Math.abs(odcien(x) - odcien(y));
+    return Math.min(d, 360 - d) < 35;
+  }
+  // Dwa kluby w zblizonych barwach to nie wyjatek, tylko norma (zolto-czerwone
+  // wojewodztwa, pomaranczowo-granatowe kluby). Gdy odcienie sie zlewaja,
+  // rywal dostaje kolejnego kandydata z wlasnego herbu, a w ostatecznosci
+  // neutralny blekit — strony musza sie roznic.
+  function rozdziel(accA, b) {
+    if (!accA || !b) return null;
+    var kandydaci = [czytelny(b.w), czytelny(b.a), '#8fb3de'];
+    for (var i = 0; i < kandydaci.length; i++) {
+      if (!bliskie(accA, kandydaci[i])) return kandydaci[i];
+    }
+    return '#8fb3de';
+  }
+
+  function zHerbu(img) {
+    var MAX = 128;
+    var sw = img.naturalWidth || img.width, sh = img.naturalHeight || img.height;
+    if (!sw || !sh) return null;
+    var s = Math.min(1, MAX / Math.max(sw, sh));
+    var c = document.createElement('canvas');
+    c.width = Math.max(1, Math.round(sw * s));
+    c.height = Math.max(1, Math.round(sh * s));
+    var ctx = c.getContext('2d', {willReadFrequently: true});
+    ctx.drawImage(img, 0, 0, c.width, c.height);
+    var d;
+    try { d = ctx.getImageData(0, 0, c.width, c.height).data; } catch (e) { return null; }
+
+    var kosze = {}, n = 0;
+    for (var i = 0; i < d.length; i += 4) {
+      if (d[i + 3] < 128) continue;
+      var hsl = rgb2hsl(d[i], d[i + 1], d[i + 2]);
+      if (hsl[1] < 0.18) continue;
+      if (hsl[2] < 0.10 || hsl[2] > 0.93) continue;
+      var k = Math.round(hsl[0] / 15) * 15;
+      var v = kosze[k] || (kosze[k] = {n: 0, r: 0, g: 0, b: 0});
+      v.n++; v.r += d[i]; v.g += d[i + 1]; v.b += d[i + 2]; n++;
+    }
+    if (!n) return null;
+
+    var lista = Object.keys(kosze).map(function (k) {
+      var v = kosze[k];
+      return {odcien: +k, n: v.n, r: v.r / v.n, g: v.g / v.n, b: v.b / v.n};
+    }).sort(function (a, b) { return b.n - a.n; });
+
+    var wiod = lista[0], akc = null;
+    for (var j = 1; j < lista.length; j++) {
+      var dh = Math.abs(lista[j].odcien - wiod.odcien);
+      if (Math.min(dh, 360 - dh) >= 40 && lista[j].n > n * 0.04) { akc = lista[j]; break; }
+    }
+    if (!akc) akc = wiod;
+    return {w: hex(wiod.r, wiod.g, wiod.b), a: hex(akc.r, akc.g, akc.b)};
+  }
+
+  // Adres herbu niesie odcisk tresci (?v=...), wiec po podmianie logo klucz sam
+  // sie zmienia i stara barwa nie zostaje w pamieci.
+  function zPamieci(url) {
+    try { var s = localStorage.getItem('bh:' + url); return s ? JSON.parse(s) : null; }
+    catch (e) { return null; }
+  }
+  function doPamieci(url, v) {
+    try { localStorage.setItem('bh:' + url, JSON.stringify(v)); } catch (e) {}
+  }
+
+  function barwy(img) {
+    if (!img || !img.getAttribute) return Promise.resolve(null);
+    var url = img.getAttribute('src') || '';
+    if (!url) return Promise.resolve(null);
+    var z = zPamieci(url);
+    if (z && z.w && z.a) return Promise.resolve(z);
+    return new Promise(function (ok) {
+      function licz() {
+        var v = zHerbu(img);
+        if (v) doPamieci(url, v);
+        ok(v);
+      }
+      if (img.complete && img.naturalWidth) licz();
+      else {
+        img.addEventListener('load', licz, {once: true});
+        img.addEventListener('error', function () { ok(null); }, {once: true});
+      }
+    });
+  }
+
+  function ubarw(plyta) {
+    var ia = plyta.querySelector('.mb-team--a .mb-tile img');
+    var ib = plyta.querySelector('.mb-team--b .mb-tile img');
+    Promise.all([barwy(ia), barwy(ib)]).then(function (r) {
+      var a = r[0], b = r[1];
+      if (!a && !b) return;
+      var accA = a ? naCiemnym(a.w, a.a) : null;
+      var accB = b ? naCiemnym(b.w, b.a) : null;
+      if (accA && accB && bliskie(accA, accB)) accB = rozdziel(accA, b);
+      // Gdy jedna druzyna nie ma herbu, druga i tak dostaje swoja barwe —
+      // brakujaca strona zostaje przy domyslnej z serwera.
+      if (accA) plyta.style.setProperty('--a-acc', accA);
+      if (accB) plyta.style.setProperty('--b-acc', accB);
+
+      var wyg = plyta.getAttribute('data-win');
+      var gotA = accA || getComputedStyle(plyta).getPropertyValue('--a-acc').trim();
+      var gotB = accB || getComputedStyle(plyta).getPropertyValue('--b-acc').trim();
+      if (gotA) plyta.style.setProperty('--ga', rgba(gotA, wyg === 'b' ? 0.10 : 0.17));
+      if (gotB) plyta.style.setProperty('--gb', rgba(gotB, wyg === 'a' ? 0.10 : 0.17));
+      var zw = wyg === 'b' ? gotB : gotA;
+      if (zw) plyta.style.setProperty('--accw', rgba(zw, 0.42));
+      var kk = plyta.getAttribute('data-kacc');
+      if (kk === 'a' && gotA) plyta.style.setProperty('--kacc', gotA);
+      if (kk === 'b' && gotB) plyta.style.setProperty('--kacc', gotB);
+    });
+  }
+
+  function start() {
+    var p = document.querySelectorAll('.mb-plate');
+    for (var i = 0; i < p.length; i++) ubarw(p[i]);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+  else start();
+})();
+"""
+
+
+DL_KWARTY_SEK   = 600   # regulaminowa kwarta
+DL_DOGRYWKI_SEK = 300
+
+
+def _sekunda_meczu(kwarta, czas_sek):
+    """Czas od poczatku meczu w sekundach.
+
+    W `score_flow` kolumna `czas_sek` to czas POZOSTALY w kwarcie (zegar
+    odlicza w dol), wiec zeby liczyc, jak dlugo ktos prowadzil, trzeba ja
+    odwrocic i dolozyc kwarty wczesniejsze.
+    """
+    kwarta = int(kwarta or 1)
+    przed = sum(DL_KWARTY_SEK if k <= 4 else DL_DOGRYWKI_SEK for k in range(1, kwarta))
+    dlugosc = DL_KWARTY_SEK if kwarta <= 4 else DL_DOGRYWKI_SEK
+    return przed + max(0, dlugosc - int(czas_sek or 0))
+
+
+def fakty_przebiegu(wiersze):
+    """Cztery liczby z przebiegu meczu albo None, gdy przebiegu nie ma.
+
+    Zwraca: najwieksze prowadzenie (i czyje), liczbe zmian prowadzenia,
+    najdluzsza serie (i czyja) oraz czas na prowadzeniu (i czyj).
+    """
+    punkty = []
+    for r in wiersze or []:
+        try:
+            k = int(r["kwarta"]); g = int(r["pts_gtk"] or 0); o = int(r["pts_opp"] or 0)
+        except (KeyError, TypeError, ValueError):
+            continue
+        if k < 1:
+            continue
+        punkty.append((_sekunda_meczu(k, r.get("czas_sek")), g, o, k))
+    if len(punkty) < 2:
+        return None
+    punkty.sort(key=lambda p: p[0])
+    koniec = _sekunda_meczu(max(p[3] for p in punkty), 0)
+
+    maks_my = maks_ich = 0
+    zmiany = 0
+    znak = 0
+    czas_my = czas_ich = 0
+    seria_my = seria_ich = 0
+    naj_my = naj_ich = 0
+    poprz_g = poprz_o = 0
+
+    for i, (t, g, o, _k) in enumerate(punkty):
+        marza = g - o
+        maks_my = max(maks_my, marza)
+        maks_ich = max(maks_ich, -marza)
+
+        z = 1 if marza > 0 else (-1 if marza < 0 else 0)
+        if z and znak and z != znak:
+            zmiany += 1
+        if z:
+            znak = z
+
+        nastepny = punkty[i + 1][0] if i + 1 < len(punkty) else koniec
+        odcinek = max(0, nastepny - t)
+        if z > 0:
+            czas_my += odcinek
+        elif z < 0:
+            czas_ich += odcinek
+
+        # Seria = punkty zdobyte bez odpowiedzi. Gdy w jednym kroku rosna obie
+        # druzyny (zdarza sie przy danych zagregowanych), seria jest przerwana
+        # po obu stronach — inaczej obie rosłyby jednoczesnie.
+        d_g = g - poprz_g
+        d_o = o - poprz_o
+        if d_g > 0 and d_o == 0:
+            seria_my += d_g; seria_ich = 0; naj_my = max(naj_my, seria_my)
+        elif d_o > 0 and d_g == 0:
+            seria_ich += d_o; seria_my = 0; naj_ich = max(naj_ich, seria_ich)
+        elif d_g > 0 and d_o > 0:
+            seria_my = seria_ich = 0
+        poprz_g, poprz_o = g, o
+
+    def _mmss(s):
+        s = max(0, int(round(s)))
+        return f"{s // 60}:{s % 60:02d}"
+
+    return {
+        "prowadzenie":      max(maks_my, maks_ich),
+        "prowadzenie_nasz": maks_my >= maks_ich,
+        "zmiany":           zmiany,
+        "seria":            max(naj_my, naj_ich),
+        "seria_nasz":       naj_my >= naj_ich,
+        "czas":             _mmss(max(czas_my, czas_ich)),
+        "czas_nasz":        czas_my >= czas_ich,
+    }
+
+
+def kwarta_przelomowa(kwarty):
+    """Indeks kwarty rozstrzygajacej albo None.
+
+    Etykieta ma cos znaczyc, wiec nie zaznaczamy nic, gdy najwieksza roznica
+    kwarty jest mniejsza niz 6 punktow albo gdy dwie kwarty maja ja taka sama.
+    """
+    if len(kwarty) < 2:
+        return None
+    roznice = [abs(g - o) for _q, g, o in kwarty]
+    naj = max(roznice)
+    if naj < 6 or roznice.count(naj) > 1:
+        return None
+    return roznice.index(naj)
+
+
+def skrot_druzyny(nazwa):
+    """Trzyliterowy skrot nazwy — kafel dla druzyny bez herbu."""
+    slowa = [s for s in re.split(r"[^0-9A-Za-z\u00c0-\u024f]+", str(nazwa or "")) if s]
+    if not slowa:
+        return "?"
+    if len(slowa[0]) >= 3:
+        return slowa[0][:3].upper()
+    return "".join(s[0] for s in slowa[:3]).upper()
+
+
+def klub_meczu(m):
+    """Nazwa klubu, do ktorego nalezy druzyna z tego meczu (albo pusty napis).
+
+    Droga przez baze: matches.team_id -> teams -> seasons -> clubs. Mecze
+    wgrane bez przypisania do druzyny (team_id NULL) nie maja klubu.
+
+    Bierzemy wlasny kursor, a nie ten z miejsca wywolania: strony meczu
+    zamykaja swoj kursor duzo wczesniej niz buduja naglowek.
+    """
+    tid = m.get("team_id") if hasattr(m, "get") else None
+    if not tid:
+        return ""
+    db = get_db(); cur = db.cursor()
+    try:
+        cur.execute("""SELECT c.name AS nazwa
+                       FROM teams t
+                       JOIN seasons s ON s.id = t.season_id
+                       JOIN clubs   c ON c.id = s.club_id
+                       WHERE t.id = %s""", (tid,))
+        r = cur.fetchone()
+        return ((r["nazwa"] if r else "") or "").strip()
+    except Exception:
+        try: db.rollback()
+        except Exception: pass
+        return ""
+    finally:
+        cur.close()
+
+
+def logo_url_druzyny(nazwa, klub=""):
+    """Adres logo druzyny — najpierw nasz klub, potem alias, potem rywal.
+
+    Nasze kluby maja logo pod wlasna nazwa (wgrywane w Ustawieniach i w
+    Druzynach) i ta sciezka zostaje nietknieta. Rywale siedza pod kluczem
+    `logo_rywal_<slug>`, a `logo_alias_<slug>` pozwala wskazac cudze logo,
+    gdy ta sama druzyna wystepuje w meczach pod dwoma zapisami.
+    """
+    nazwa = (nazwa or "").strip()
+    if not nazwa and not klub:
+        return ""
+    if nazwa:
+        adres = logo_url(nazwa.replace(" ", "_").replace("/", "-"))
+        if adres:
+            return adres
+    # Druzyna w pliku meczowym bywa nazwana inaczej niz klub ("Śląskie" przy
+    # klubie "Kadra Śląska"), a logo wgrywa sie dla klubu.
+    if klub:
+        adres = logo_url(klub.strip().replace(" ", "_").replace("/", "-"))
+        if adres:
+            return adres
+    if not nazwa:
+        return ""
+    s = slug_druzyny(nazwa)
+    if not s:
+        return ""
+    cel = (get_setting(f"logo_alias_{s}") or "").strip()
+    if cel and cel != s:
+        s = cel
+    return logo_url(f"rywal_{s}")
+
+
+def logo_url_app():
+    """Adres logo aplikacji (sidebar) albo pusty napis."""
+    db = get_db(); cur = db.cursor()
+    try:
+        cur.execute("SELECT length(value) AS n, substr(md5(value),1,8) AS h "
+                    "FROM settings WHERE key='app_logo_b64'")
+        r = cur.fetchone()
+        if not (r and (r["n"] or 0) > 32):
+            return ""
+        return f"/logo/@app?v={r['h']}"
+    except Exception:
+        try: db.rollback()
+        except Exception: pass
+        return ""
+    finally:
+        cur.close()
+
+
+@app.route("/logo/<path:klucz>")
+def logo_obrazek(klucz):
+    """Logo jako obrazek pod adresem — z ETagiem i pamiecia podreczna.
+
+    Klucz "@app" to logo aplikacji, kazdy inny to nazwa klubu w formie
+    zapisanej w settings. Obraz trzymamy dalej w bazie: na produkcji (Fly)
+    trwaly jest tylko wolumen, wiec plik zapisany obok kodu znikalby przy
+    kazdym wdrozeniu, a baza jest w kopii zapasowej.
+    """
+    if "\x00" in klucz:
+        return Response("Brak logo", status=404, mimetype="text/plain; charset=utf-8")
+    zapis = get_setting("app_logo_b64" if klucz == "@app" else f"logo_{klucz}") or ""
+    # Tylko rastry: SVG serwowany spod adresu aplikacji wykonalby skrypt w jej
+    # domenie, a ta trasa jest publiczna.
+    m = re.match(r"data:(image/(?:png|jpeg|webp|gif));base64,(.+)$", zapis, re.S)
+    if not m:
+        return Response("Brak logo", status=404, mimetype="text/plain; charset=utf-8")
+    try:
+        dane = base64.b64decode(m.group(2))
+    except Exception:
+        return Response("Uszkodzone logo", status=404, mimetype="text/plain; charset=utf-8")
+    etag = '"' + hashlib.md5(dane).hexdigest() + '"'
+    naglowki = {"ETag": etag, "Cache-Control": "public, max-age=86400",
+                "X-Content-Type-Options": "nosniff"}
+    if request.headers.get("If-None-Match") == etag:
+        return Response(status=304, headers=naglowki)
+    return Response(dane, mimetype=m.group(1), headers=naglowki)
+
+
+def kadra_dnp(mecz, druzyna, obecne_nry):
+    """Zawodnicy z kadry meczowej, ktorzy nie maja wiersza w player_stats.
+
+    Kadra siedzi w matches.roster_a_json / roster_b_json, wiec czytamy ja
+    z juz pobranego wiersza meczu — funkcje renderujace wolane sa po cur.close()
+    i nie moga odpytac bazy.
+
+    Brak kadry (pliki v3 bez arkusza SKLADY) daje pusta liste. Nie wiemy wtedy,
+    kogo zabraklo, wiec nie zmyslamy DNP — kadra nieznana to nie kadra pusta.
+    """
+    kol = "roster_a_json" if druzyna == "gtk" else "roster_b_json"
+    try:
+        kadra = json.loads((mecz or {}).get(kol) or "[]")
+    except (TypeError, ValueError, AttributeError):
+        return []
+    if not isinstance(kadra, list):
+        return []
+
+    byli = set()
+    for n in (obecne_nry or []):
+        try:
+            byli.add(int(n))
+        except (TypeError, ValueError):
+            pass
+
+    brak = []
+    for wpis in kadra:
+        if not isinstance(wpis, dict):
+            continue
+        try:
+            nr = int(wpis.get("nr"))
+        except (TypeError, ValueError, OverflowError):
+            continue
+        if nr in byli:
+            continue
+        brak.append({"nr": nr,
+                     "name": str(wpis.get("name") or "").strip(),
+                     "uwagi": str(wpis.get("uwagi") or "").strip()})
+    brak.sort(key=lambda z: z["nr"])
+    return brak
 
 
 def get_setting(key):
@@ -36259,6 +36760,12 @@ body{{background:linear-gradient(135deg,#dde6f5,#e8eef8,#d8e4f2);display:flex;
         net_v = _lu_net(_lu_net_best)
         net_s = f"+{net_v:.1f}" if net_v > 0 else f"{net_v:.1f}"
         a_net = _lineup_agg.get(_lu_net_best, {})
+        # Bez piatek obronnych (gtk_def) _lu_net zwraca sam atak, bo drtg=0.
+        # Wtedy slajd pokazuje ORtg pod wlasna nazwa zamiast udawac NET RTG —
+        # inaczej ta sama liczba wystepuje raz jako ORtg, raz jako NET, przy
+        # jawnie pustym DRtg. Dotyczy sezonow bez zapisu piatek obronnych.
+        _net_obr = _lineup_opp_agg.get(_lu_net_best) or {}
+        _ma_drtg = bool(int(_net_obr.get("poss_opp") or _net_obr.get("poss") or 0))
         p3a_p3  = _lineup_agg.get(_lu_p3_best, {})
         p3pct_s = f"{int(p3a_p3.get('p3m',0))}/{int(p3a_p3.get('p3a',0))}"
         a_ft  = _lineup_agg.get(_lu_ft_best, {})
@@ -36272,8 +36779,13 @@ body{{background:linear-gradient(135deg,#dde6f5,#e8eef8,#d8e4f2);display:flex;
         ppp_v = int(a_ppp.get("pts",0))/max(int(a_ppp.get("poss",1)),1)
 
         _slides = (
-            _lu_slide(0, "NET RTG", net_s,
-                      f"ORtg {_ortg_s(_lu_net_best)} · DRtg {_drtg_s(_lu_net_best)} · {int(a_net.get('poss',0))} pos",
+            _lu_slide(0,
+                      "NET RTG" if _ma_drtg else "ORTG",
+                      net_s if _ma_drtg else _ortg_s(_lu_net_best),
+                      (f"ORtg {_ortg_s(_lu_net_best)} · DRtg {_drtg_s(_lu_net_best)} · {int(a_net.get('poss',0))} pos"
+                       if _ma_drtg else
+                       f"{int(a_net.get('poss',0))} pos · "
+                       + ("no defensive data" if get_portal_lang() == "en" else "brak danych obrony")),
                       _lu_net_best, "#1a2b4a") +
             _lu_slide(1, "FT%", f"{_lu_ftpct(_lu_ft_best):.1f}%",
                       ft_s,
@@ -36715,7 +37227,7 @@ body{{background:linear-gradient(135deg,#dde6f5,#e8eef8,#d8e4f2);display:flex;
         mc_html = f'<div style="color:#9ca3af;font-size:.82rem;padding:12px">{TP("no_matches")}</div>'
 
     _safe_klub = ctx_klub.replace(" ", "_").replace("/", "-")
-    _klub_logo = get_setting(f"logo_{_safe_klub}") or ""
+    _klub_logo = logo_url(_safe_klub)
     _logo_html = (f'<img src="{_klub_logo}" style="height:80px;width:80px;object-fit:contain;flex-shrink:0">'
                   if _klub_logo else "")
 
@@ -37176,7 +37688,7 @@ body{{background:linear-gradient(135deg,#dde6f5,#e8eef8,#d8e4f2);display:flex;
 
     # ── Złóż stronę ──────────────────────────────────────────────────────────
     # Sidebar logo: use app logo from DB (app_logo_b64), fallback to "BK"
-    _app_logo_uri = get_setting("app_logo_b64") or ""
+    _app_logo_uri = logo_url_app()
     _logo_html = (f'<img src="{_app_logo_uri}" alt="BasketKołcz" style="width:100%;height:100%;object-fit:cover;border-radius:10px">'
                   if _app_logo_uri else '<span class="sb-logo-fallback">BK</span>')
 
@@ -37244,7 +37756,7 @@ body{{background:linear-gradient(135deg,#dde6f5,#e8eef8,#d8e4f2);display:flex;
         _season_range = f"{_sorted_seasons[-1]}–{_latest_s}" if _multi_season else _latest_s
         # Logo klubu
         _safe_kn = _tkl_name.replace(" ","_").replace("/","-")
-        _klogo = get_setting(f"logo_{_safe_kn}") or ""
+        _klogo = logo_url(_safe_kn)
         if _klogo:
             _img_html = f'<img src="{_klogo}" alt="{_tkl_name}">'
         else:
@@ -37289,9 +37801,9 @@ body{{background:linear-gradient(135deg,#dde6f5,#e8eef8,#d8e4f2);display:flex;
     # ── Widok wyboru drużyny w klubie (klub wybrany JAWNIE, drużyna nie) ────────
     if _p_klub and not ctx_druzyna and _ak:
         _pk_safe = ctx_klub.replace(" ", "_").replace("/", "-")
-        _pk_logo = get_setting(f"logo_{_pk_safe}") or ""
+        _pk_logo = logo_url(_pk_safe)
         _pk_logo_html = (
-            f'<img src="{_pk_logo}" alt="{ctx_klub}" style="width:100%;height:100%;object-fit:cover;border-radius:10px">'
+            f'<img src="{_pk_logo}" alt="{ctx_klub}" style="width:100%;height:100%;object-fit:contain;padding:4px;border-radius:10px">'
             if _pk_logo else f'<div class="kc-img-ph" style="font-size:1.6rem">{ctx_klub[:3].upper()}</div>'
         )
         _pk_sezony = _ak.get("sezony", {})
@@ -37323,9 +37835,9 @@ body{{background:linear-gradient(135deg,#dde6f5,#e8eef8,#d8e4f2);display:flex;
 
     # Widok szczegółowy wybranej drużyny (z powrotem) — logo klubu
     _klub_logo_safe = ctx_klub.replace(" ", "_").replace("/", "-") if ctx_klub else ""
-    _klub_logo_uri  = get_setting(f"logo_{_klub_logo_safe}") or "" if _klub_logo_safe else ""
+    _klub_logo_uri  = logo_url(_klub_logo_safe) if _klub_logo_safe else ""
     _team_detail_logo = (
-        f'<img src="{_klub_logo_uri}" alt="{ctx_klub}" style="width:100%;height:100%;object-fit:cover;border-radius:10px">'
+        f'<img src="{_klub_logo_uri}" alt="{ctx_klub}" style="width:100%;height:100%;object-fit:contain;padding:4px;border-radius:10px">'
         if _klub_logo_uri else f'<span class="sb-logo-fallback">{ctx_klub[:3].upper() if ctx_klub else "BK"}</span>'
     )
     _net_c2 = "#22c55e" if (wins - losses) >= 0 else "#ef4444"
@@ -37707,10 +38219,13 @@ body{{background:#f0f2f7;margin:0}}
 .tc-detail-hero{{background:linear-gradient(135deg,#1a2b4a,#253d66);border-radius:14px;
   padding:20px 24px;display:flex;align-items:center;justify-content:center;gap:16px;
   margin-bottom:14px;box-shadow:0 4px 18px rgba(26,43,74,.2);flex-wrap:wrap}}
-.tdh-logo{{width:50px;height:50px;border-radius:11px;background:rgba(201,163,64,.14);
+.tdh-logo{{width:clamp(60px,9vw,86px);height:clamp(60px,9vw,86px);border-radius:14px;
+  background:rgba(201,163,64,.14);
   border:1.5px solid rgba(201,163,64,.28);display:flex;align-items:center;
   justify-content:center;overflow:hidden;flex-shrink:0}}
-.tdh-logo img{{width:100%;height:100%;object-fit:cover;border-radius:10px}}
+/* contain, nie cover: cover przycinal niekwadratowe godlo do kwadratu, a im
+   wiekszy kafel, tym bardziej bylo to widoczne. */
+.tdh-logo img{{width:100%;height:100%;object-fit:contain;padding:4px;border-radius:10px}}
 .tdh-logo .sb-logo-fallback{{color:#c9a340;font-weight:900;font-size:12px}}
 .tdh-name{{font-size:1.2rem;font-weight:900;color:#fff;letter-spacing:-.02em}}
 .tdh-sub{{font-size:.7rem;color:rgba(255,255,255,.38);margin-top:2px}}
@@ -38344,6 +38859,26 @@ def portal_mecz(match_id):
                 f'<td {td} data-v="{usg_v if usg_v is not None else -1}">{usg_s}</td>'
                 f'<td {td} {"class=\"mgood\" " if fin>=10 else ""}data-v="{fin}">{fin}</td>'
                 f'</tr>')
+
+        # Kadra bez wiersza — DNP na dole tabeli. Portalowy sorter tlumaczy brak
+        # data-v na 0, wiec podajemy -1 jawnie, inaczej DNP weszloby nad
+        # sentynele w kolumnach eFG/TS/USG.
+        from html import escape as _esc_dnp
+        for _di, _dz in enumerate(kadra_dnp(m, druzyna, sorted_nrs)):
+            bg = '#f8f9ff' if (len(sorted_nrs) + _di) % 2 == 0 else '#fff'
+            _td = (f'style="text-align:center;padding:7px 4px;color:#9ca3af;'
+                   f'border-bottom:0.5px solid #eceef2;background:{bg}"')
+            _tdl = (f'style="text-align:left;padding:7px 8px;color:#9ca3af;'
+                    f'border-bottom:0.5px solid #eceef2;background:{bg};'
+                    f'font-size:11px;font-weight:500;white-space:nowrap"')
+            _td_min = (f'style="text-align:center;padding:7px 4px;color:#9ca3af;'
+                       f'border-bottom:0.5px solid #eceef2;background:{bg};'
+                       f'font-weight:600;letter-spacing:.3px"')
+            rows += (f'<tr data-dnp="1"><td {_tdl}>#{_dz["nr"]} {_esc_dnp(_dz["name"])}</td>'
+                     f'<td {_td_min} data-v="-1">DNP</td>'
+                     + f'<td {_td} data-v="-1">—</td>' * 19
+                     + '</tr>')
+
         if not rows:
             rows = '<tr><td colspan="21" style="text-align:center;color:#9ca3af;padding:16px">Brak danych</td></tr>'
         TH  = 'background:#1a2b4a;color:#fff;font-size:10px;font-weight:500;padding:8px 6px;text-align:center;white-space:nowrap;vertical-align:middle;border-bottom:0.5px solid rgba(255,255,255,.15)'
@@ -39985,22 +40520,32 @@ def portal_mecz(match_id):
     cmp_js = _json.dumps([{"lbl":l,"g":str(g),"o":str(o),"low":low,"gq":gq,"oq":oq}
                           for l,g,o,low,gq,oq in cmp_list])
 
+    # Logo obu drużyn nad nazwami. Brak logo daje kółko z inicjałami, żeby
+    # belka wyglądała tak samo niezależnie od tego, czy logo wgrano.
+    _klub_meczu = klub_meczu(m)
+
+    import html as _hm
+
+    def _kafel_belki(nazwa, klub=""):
+        """Kafel herbu. Skrot nazwy lezy pod spodem, wiec gdy obrazek nie
+        dojdzie, `onerror` go zdejmuje i zostaja litery — bez migotania."""
+        adres = logo_url_druzyny(nazwa, klub)
+        skrot = skrot_druzyny(nazwa)
+        if adres:
+            return (f'<div class="mb-tile"><span class="mb-ini">{skrot}</span>'
+                    f'<img src="{adres}" alt="" onerror="this.remove()"></div>')
+        return f'<div class="mb-tile"><span class="mb-ini">{skrot}</span></div>'
+
+    def _tekst_belki(nazwa):
+        return (f'<div class="mb-tx"><div class="mb-nm">{_hm.escape(nazwa or "")}</div>'
+                f'<div class="mb-cd">{skrot_druzyny(nazwa)}</div>'
+                f'<div class="mb-rule"></div></div>')
+
+    # Klub podajemy tylko dla naszej strony — rywal ma wlasne logo albo zadne.
+    _kafel_gtk = _kafel_belki(gtk_name, _klub_meczu)
+    _kafel_opp = _kafel_belki(name_opp)
+
     _is_en_badge = (get_portal_lang() == 'en')
-    _lbl_win  = "WIN"  if _is_en_badge else "WYGRANA"
-    _lbl_loss = "LOSS" if _is_en_badge else "PRZEGRANA"
-    _lbl_draw = "DRAW" if _is_en_badge else "REMIS"
-    badge = (f'<span class="badge-win" style="font-size:.9rem;padding:6px 14px">{_lbl_win}</span>'
-             if m['wynik_gtk']>m['wynik_opp'] else
-             f'<span class="badge-loss" style="font-size:.9rem;padding:6px 14px">{_lbl_loss}</span>'
-             if m['wynik_gtk']<m['wynik_opp'] else
-             f'<span class="badge-draw" style="font-size:.9rem;padding:6px 14px">{_lbl_draw}</span>')
-
-    q_scores = "".join(
-        f'<div style="text-align:center"><div style="font-size:8px;opacity:.55;letter-spacing:.5px;margin-bottom:3px">{q}Q</div>'
-        f'<div style="background:rgba(255,255,255,.13);border-radius:6px;padding:4px 12px;font-size:13px;font-weight:700;letter-spacing:1px">'
-        f'{pts_q_gtk[q-1]} : {pts_q_opp[q-1]}</div></div>'
-        for q in [1,2,3,4])
-
     # Meta-info: kategoria | kolejka/runda | data (nad badge'em wyniku)
     _kat = (m.get('rozgrywki') or '').strip()
     _koj = str(m.get('kolejka') or '').strip()
@@ -40011,11 +40556,100 @@ def portal_mecz(match_id):
         _kr = _koj or _rnd
     _dat_h = fmt_date_portal(m.get('data_meczu')) if m.get('data_meczu') else ''
     _meta_parts = [p for p in [_kat, _kr, _dat_h] if p]
-    _meta_html = (
-        '<div style="text-align:center;font-size:.72rem;opacity:.7;letter-spacing:.5px;'
-        'text-transform:uppercase;margin-bottom:10px;color:rgba(255,255,255,.85)">'
-        + ' &nbsp;|&nbsp; '.join(_meta_parts) + '</div>'
-    ) if _meta_parts else ''
+    # ── Belka wyniku: tablica hali ──────────────────────────────────────────
+    # Opis meczu idzie nad wynik, rozstrzygniecie pod wynik. Kwarty biore z
+    # match_stats, a nie ze sztywnej listy 1-4, zeby dogrywka pokazala sie sama.
+    _kw_nr = sorted({int(r["kwarta"]) for r in all_stats
+                     if r.get("kwarta") is not None and 1 <= int(r["kwarta"]) <= 8})
+    _kwarty_belki = [
+        (q,
+         next((int(r["pts"] or 0) for r in all_stats
+               if r["druzyna"] == "gtk" and int(r["kwarta"] or 0) == q), 0),
+         next((int(r["pts"] or 0) for r in all_stats
+               if r["druzyna"] == "opp" and int(r["kwarta"] or 0) == q), 0))
+        for q in _kw_nr]
+
+    _wyn_g = int(m['wynik_gtk'] or 0)
+    _wyn_o = int(m['wynik_opp'] or 0)
+    _res = 'a' if _wyn_g > _wyn_o else ('b' if _wyn_g < _wyn_o else 'draw')
+
+    _przelom = kwarta_przelomowa(_kwarty_belki)
+    _kacc = ''
+    if _przelom is not None:
+        _kacc = 'a' if _kwarty_belki[_przelom][1] >= _kwarty_belki[_przelom][2] else 'b'
+
+    _fakty = fakty_przebiegu(flow_rows)
+
+    _et = {
+        'lead':  "Biggest lead"  if _is_en_badge else "Najw. prowadzenie",
+        'chg':   "Lead changes"  if _is_en_badge else "Zmiany prowadzenia",
+        'run':   "Longest run"   if _is_en_badge else "Najdłuższa seria",
+        'time':  "Time in lead"  if _is_en_badge else "Czas na prowadzeniu",
+        'brk':   "TURNING POINT" if _is_en_badge else "PRZEŁOM",
+        'pts':   "pts"           if _is_en_badge else "pkt",
+    }
+
+    # Opis lamie sie wylacznie miedzy czlonami: separator siedzi w tym samym
+    # nierozrywalnym elemencie co czlon poprzedzajacy, wiec nigdy nie zaczyna linii.
+    _tag_html = "".join(
+        f'<b>{_hm.escape(p)}'
+        + ('<span>&middot;</span>' if i < len(_meta_parts) - 1 else '')
+        + '</b>'
+        for i, p in enumerate(_meta_parts))
+
+    _qs_html = ""
+    for _i, (_qn, _qg, _qo) in enumerate(_kwarty_belki):
+        _lbl = ((f"Q{_qn}" if _qn <= 4 else f"OT{_qn - 4}") if _is_en_badge
+                else (f"K{_qn}" if _qn <= 4 else f"D{_qn - 4}"))
+        _sum = max(1, _qg + _qo)
+        _qs_html += (
+            f'<div class="mb-q{" mb-q--key" if _przelom == _i else ""}">'
+            + (f'<div class="mb-kl">{_et["brk"]}</div>' if _przelom == _i
+               else '<div class="mb-kl" style="visibility:hidden">&nbsp;</div>')
+            + f'<div class="mb-ql">{_lbl}</div>'
+            f'<div class="mb-qv"><span class="mb-a{" mb-w" if _qg > _qo else ""}">{_qg}</span>'
+            f'<span class="mb-s">:</span>'
+            f'<span class="mb-b{" mb-w" if _qo > _qg else ""}">{_qo}</span></div>'
+            f'<div class="mb-qbar"><span class="mb-a" style="width:{_qg / _sum * 100:.1f}%"></span>'
+            f'<span class="mb-b" style="width:{_qo / _sum * 100:.1f}%"></span></div></div>')
+
+    if _fakty:
+        _sk_g = skrot_druzyny(gtk_name)
+        _sk_o = skrot_druzyny(name_opp)
+
+        def _fakt(klucz, wartosc, kto=None, dopisek=""):
+            _ogon = (f'<small>{dopisek}{_sk_g if kto else _sk_o}</small>'
+                     if kto is not None else '')
+            return (f'<div class="mb-f"><div class="mb-fk">{klucz}</div>'
+                    f'<div class="mb-fv">{wartosc}{_ogon}</div></div>')
+
+        _fakty_html = (
+            '<div class="mb-facts">'
+            + _fakt(_et['lead'], f'+{_fakty["prowadzenie"]}', _fakty["prowadzenie_nasz"])
+            + _fakt(_et['chg'], _fakty["zmiany"])
+            + _fakt(_et['run'], _fakty["seria"], _fakty["seria_nasz"], f'{_et["pts"]} ')
+            + _fakt(_et['time'], _fakty["czas"], _fakty["czas_nasz"])
+            + '</div>')
+    else:
+        _fakty_html = ''
+
+    _belka_html = (
+        f'<div class="mb-plate mb-3" data-win="{_res}" data-kacc="{_kacc}">'
+        '<div class="mb-glow"></div><div class="mb-bezel"></div>'
+        + (f'<div class="mb-midrow"><div class="mb-tag">{_tag_html}</div></div>'
+           if _tag_html else '')
+        + '<div class="mb-main">'
+        f'<div class="mb-team mb-team--a">{_kafel_gtk}{_tekst_belki(gtk_name)}</div>'
+        '<div class="mb-scw"><div class="mb-sc">'
+        f'<span class="{"mb-hi" if _wyn_g >= _wyn_o else "mb-lo"}">{_wyn_g}</span>'
+        '<span class="mb-cl">:</span>'
+        f'<span class="{"mb-hi" if _wyn_o >= _wyn_g else "mb-lo"}">{_wyn_o}</span></div></div>'
+        f'<div class="mb-team mb-team--b">{_tekst_belki(name_opp)}{_kafel_opp}</div>'
+        '</div>'
+        + (f'<div class="mb-qs" style="--qn:{len(_kwarty_belki)}">{_qs_html}</div>'
+           if _kwarty_belki else '')
+        + _fakty_html
+        + '</div>')
 
     def _make_rf_html_p():
         try:
@@ -40279,18 +40913,8 @@ def portal_mecz(match_id):
                     f'</div></div>')
 
     content = f"""
-<div class="hero mb-3" style="overflow:hidden">
-  {_meta_html}
-  <div style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px">
-    <div style="min-width:0;overflow:hidden;text-align:center"><div style="font-size:1.05rem;font-weight:700;opacity:.95;letter-spacing:.2px;overflow-wrap:break-word">{gtk_name}</div></div>
-    <div style="text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px">
-      {badge}
-      <div style="font-size:1.6rem;font-weight:800;letter-spacing:.5px;white-space:nowrap">{m['wynik_gtk']} : {m['wynik_opp']}</div>
-      <div style="display:flex;justify-content:center;gap:8px;border-top:1px solid rgba(255,255,255,.15);padding-top:8px;width:100%">{q_scores}</div>
-    </div>
-    <div style="min-width:0;overflow:hidden;text-align:center"><div style="font-size:1.05rem;font-weight:700;opacity:.95;letter-spacing:.2px;overflow-wrap:break-word">{name_opp}</div></div>
-  </div>
-</div>
+{_belka_html}
+<script>{_BARWY_BELKI_JS}</script>
 
 <ul class="nav nav-tabs mb-2" id="mainTabs">
   <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tabGTK">{gtk_name}</button></li>
@@ -40314,7 +40938,7 @@ def portal_mecz(match_id):
   </div>
   <div id="gpane-gtk_q" style="display:block"><div class="card mt-1"><div class="card-body" style="padding:0">{q_table('gtk')}</div></div></div>
   <div id="gpane-gtk_p" style="display:none"><div class="card mt-1"><div class="card-body" style="padding:0">{p_table('gtk')}</div></div></div>
-  <div id="gpane-gtk_l" style="display:none">{_make_pipi_html()}<div class="card mt-1"><div class="card-body" style="padding:0">{lineup_table()}</div></div></div>
+  <div id="gpane-gtk_l" style="display:none">{_make_pipi_html()}{('<div class="card mt-1"><div class="card-body" style="padding:0">' + lineup_table() + '</div></div>') if (all_lineups or all_lineups_def) else ''}</div>
   <div id="gpane-gtk_t" style="display:none"><div class="card mt-1"><div class="card-body p-2">{tim_table('gtk')}{_make_mz_timing_extra_html()}</div></div></div>
 </div>
 
@@ -40775,6 +41399,8 @@ function sortPTable(tid, col) {{
   _ptSort[tid] = {{col:col, asc:asc}};
   var rows = Array.from(tbody.querySelectorAll('tr'));
   rows.sort(function(a, b) {{
+    var ad = a.dataset.dnp ? 1 : 0, bd = b.dataset.dnp ? 1 : 0;
+    if (ad !== bd) return ad - bd;
     var ac = a.children[col], bc = b.children[col];
     var av = parseFloat((ac && ac.dataset.v) || 0) || 0;
     var bv = parseFloat((bc && bc.dataset.v) || 0) || 0;
@@ -40807,6 +41433,116 @@ function sortPTable(tid, col) {{
 {_PORTAL_CSS}
 <style>
 .hero{{background:linear-gradient(135deg,#1a2b4a,#253d66);border-radius:14px;padding:20px 24px;color:#fff;box-shadow:0 4px 18px rgba(26,43,74,.18)}}
+/* ── Belka wyniku: tablica hali ───────────────────────────────────────────
+   Barwy klubowe (--a-acc, --b-acc) i pochodne od nich (--ga, --gb, --accw,
+   --kacc) podmienia skrypt po wyciagnieciu ich z herbow. Wartosci ponizej to
+   stan poprawny sam w sobie: bez JS, bez herbu albo przy zablokowanym plotnie
+   belka wyglada dobrze, tylko w barwach portalu. */
+.mb-plate{{
+  --a-acc:#efa63a; --b-acc:#8fb3de;
+  --ga:rgba(239,166,58,.17); --gb:rgba(143,179,222,.10);
+  --accw:rgba(239,166,58,.42); --kacc:#efa63a;
+  --mb-pad:18px; --mb-tile:64px;
+  position:relative;overflow:hidden;border-radius:16px;color:#fff;isolation:isolate;
+  background:linear-gradient(180deg,#161f2d 0%,#0a0e15 58%,#0c1119 100%);
+  box-shadow:0 14px 34px rgba(16,26,42,.22), inset 0 0 0 1px rgba(255,255,255,.085);
+  font-variant-numeric:tabular-nums;
+}}
+/* Poswiata w barwach obu herbow. Gradient, nie wykres — nic nie koduje. */
+.mb-glow{{position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(72% 130% at 0% 0%, var(--ga), transparent 62%),
+             radial-gradient(72% 130% at 100% 0%, var(--gb), transparent 62%)}}
+.mb-bezel{{position:absolute;inset:7px;z-index:4;border:1px solid rgba(255,255,255,.055);
+  border-radius:10px;pointer-events:none}}
+
+.mb-midrow{{position:relative;z-index:2;display:flex;justify-content:center;padding:15px var(--mb-pad) 0}}
+.mb-tag{{display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;text-align:center;
+  font-size:.66rem;font-weight:600;letter-spacing:.16em;line-height:1.5;text-transform:uppercase;
+  color:#a8b8cb;font-family:ui-monospace,"Segoe UI Mono",Menlo,Consolas,monospace}}
+.mb-tag b{{white-space:nowrap;font-weight:600}}
+.mb-tag span{{color:rgba(255,255,255,.28);margin:0 .45em}}
+
+.mb-main{{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
+  align-items:center;gap:clamp(8px,2vw,22px);padding:11px var(--mb-pad) 18px}}
+.mb-team{{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:12px;min-width:0}}
+.mb-team--b{{grid-template-columns:minmax(0,1fr) auto}}
+.mb-team--b .mb-tx{{text-align:right}}
+.mb-tx{{min-width:0}}
+.mb-nm{{font-weight:800;font-size:clamp(.82rem,1.9vw,1.08rem);line-height:1.18;letter-spacing:-.01em;
+  overflow-wrap:anywhere}}
+.mb-cd{{margin-top:5px;font:700 .6rem/1 ui-monospace,"Segoe UI Mono",Menlo,Consolas,monospace;
+  letter-spacing:.15em;color:#a2b3c7}}
+.mb-rule{{margin-top:8px;height:3px;width:34px;border-radius:2px}}
+.mb-team--a .mb-rule{{background:var(--a-acc)}}
+.mb-team--b .mb-rule{{background:var(--b-acc);margin-left:auto}}
+
+.mb-tile{{position:relative;width:var(--mb-tile);height:var(--mb-tile);flex:0 0 auto;border-radius:12px;
+  overflow:hidden;display:grid;place-items:center;
+  background:linear-gradient(150deg,rgba(255,255,255,.14),rgba(255,255,255,.05));
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.16)}}
+.mb-ini{{font-size:clamp(17px,2.2vw,22px);font-weight:800;letter-spacing:.02em;color:#fff;
+  text-shadow:0 1px 3px rgba(0,0,0,.45)}}
+.mb-tile img{{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:6px;
+  background:#f3f6fa;display:block}}
+
+.mb-scw{{display:grid;justify-items:center;gap:9px;min-width:0}}
+.mb-sc{{display:flex;align-items:center;justify-content:center;gap:clamp(5px,1.2vw,13px);
+  font-family:ui-monospace,"Segoe UI Mono",Menlo,Consolas,monospace;font-weight:800;line-height:.92;
+  font-size:clamp(2.1rem,8.4vw,4.1rem);letter-spacing:-.035em}}
+.mb-sc .mb-hi{{color:#fff;text-shadow:0 0 28px var(--accw)}}
+.mb-sc .mb-lo{{color:rgba(255,255,255,.66)}}
+.mb-sc .mb-cl{{font-size:.5em;color:rgba(255,255,255,.38);transform:translateY(-.08em)}}
+
+.mb-qs{{position:relative;z-index:2;display:grid;grid-template-columns:repeat(var(--qn,4),minmax(0,1fr));
+  border-top:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.025)}}
+.mb-q{{position:relative;padding:9px 4px 11px;text-align:center;
+  border-left:1px solid rgba(255,255,255,.07);min-width:0}}
+.mb-q:first-child{{border-left:0}}
+.mb-q--key{{background:rgba(255,255,255,.06)}}
+.mb-q--key::before{{content:"";position:absolute;left:0;right:0;top:-1px;height:2px;background:var(--kacc)}}
+.mb-kl{{font:800 .5rem/1 ui-monospace,"Segoe UI Mono",Menlo,Consolas,monospace;letter-spacing:.13em;
+  color:var(--kacc);margin-bottom:5px}}
+.mb-ql{{font:700 .56rem/1 ui-monospace,"Segoe UI Mono",Menlo,Consolas,monospace;letter-spacing:.17em;color:#96a7bb}}
+.mb-qv{{margin-top:6px;font-family:ui-monospace,"Segoe UI Mono",Menlo,Consolas,monospace;font-weight:800;
+  font-size:clamp(.8rem,2.2vw,1.05rem);white-space:nowrap;color:rgba(255,255,255,.62)}}
+.mb-qv .mb-s{{color:rgba(255,255,255,.34);margin:0 .12em}}
+.mb-qv .mb-a.mb-w{{color:var(--a-acc)}}
+.mb-qv .mb-b.mb-w{{color:var(--b-acc)}}
+.mb-qbar{{margin:8px auto 0;height:3px;width:74%;display:flex;border-radius:2px;overflow:hidden;
+  background:rgba(255,255,255,.1)}}
+.mb-qbar span{{display:block;height:100%}}
+.mb-qbar .mb-a{{background:var(--a-acc)}}
+.mb-qbar .mb-b{{background:var(--b-acc)}}
+
+.mb-facts{{position:relative;z-index:2;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  border-top:1px solid rgba(255,255,255,.10)}}
+.mb-f{{padding:10px 12px 12px;border-left:1px solid rgba(255,255,255,.07);min-width:0}}
+.mb-f:first-child{{border-left:0;padding-left:var(--mb-pad)}}
+.mb-f:last-child{{padding-right:var(--mb-pad)}}
+.mb-fk{{font:700 .55rem/1.3 ui-monospace,"Segoe UI Mono",Menlo,Consolas,monospace;letter-spacing:.12em;
+  text-transform:uppercase;color:#96a7bb}}
+.mb-fv{{margin-top:6px;font-family:ui-monospace,"Segoe UI Mono",Menlo,Consolas,monospace;font-weight:800;
+  font-size:.92rem;color:#fff;overflow-wrap:anywhere}}
+.mb-fv small{{font-size:.72em;font-weight:700;color:#a2b3c7;margin-left:5px;letter-spacing:.06em}}
+
+@media(max-width:768px){{
+  .mb-plate{{--mb-tile:54px;--mb-pad:14px}}
+  .mb-cd{{display:none}}
+  .mb-midrow{{padding-top:12px}}
+  .mb-tag{{font-size:.6rem;letter-spacing:.12em}}
+}}
+@media(max-width:560px){{
+  .mb-plate{{--mb-tile:44px;--mb-pad:12px}}
+  .mb-main{{gap:9px;padding:9px var(--mb-pad) 15px}}
+  .mb-team,.mb-team--b{{grid-template-columns:minmax(0,1fr);justify-items:center;gap:8px}}
+  .mb-team--b .mb-tile{{order:1}}
+  .mb-team--b .mb-tx{{order:2}}
+  .mb-tx,.mb-team--b .mb-tx{{text-align:center}}
+  .mb-rule,.mb-team--b .mb-rule{{margin-left:auto;margin-right:auto;width:26px}}
+  .mb-midrow{{padding:11px var(--mb-pad) 0}}
+  .mb-tag{{font-size:.55rem;letter-spacing:.09em}}
+  .mb-fv{{font-size:.85rem}}
+}}
 .badge-win{{background:#c8f7c5;color:#1a5c2a;border-radius:20px;font-weight:700;display:inline-block}}
 .badge-loss{{background:#ffd5d5;color:#8b1a1a;border-radius:20px;font-weight:700;display:inline-block}}
 .badge-draw{{background:#fff3cd;color:#856404;border-radius:20px;font-weight:700;display:inline-block}}
@@ -46015,7 +46751,7 @@ def portal_akademia(tab="start"):
             cur.execute("""
                 SELECT ps.* FROM player_stats ps
                 JOIN matches m ON ps.match_id=m.id
-                WHERE ps.roster_id=%s
+                WHERE ps.roster_id=%s AND ps.druzyna='gtk'
                   AND m.sezon=(SELECT sezon FROM matches ORDER BY data_meczu DESC LIMIT 1)
             """, (pid,))
             srows = cur.fetchall()
